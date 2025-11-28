@@ -74,7 +74,7 @@ return {
 			},
 			size = {
 				x = 200,
-				y = 400
+				y = 500
 			},
 			colors = {
 				background = {
@@ -220,6 +220,15 @@ return {
 						{
 							id = "tools_nav",
 							title = "nav",
+							class = "KEButton"
+						},
+						{
+							class = "KESep",
+							title = "Toggles"
+						},
+						{
+							id = "tg_safe_frame",
+							title = "Toggle safe frame",
 							class = "KEButton"
 						}
 					}
@@ -741,7 +750,7 @@ return {
 			},
 			size = {
 				x = 200,
-				y = 400
+				y = 450
 			},
 			colors = {
 				background = {
@@ -920,6 +929,21 @@ return {
 							}
 						},
 						{
+							style = "horizontal",
+							class = "KELayout",
+							children = {
+								{
+									id = "paint_flag_flying_nw",
+									class = "KEButton",
+									title = "flying-nw",
+									size = {
+										x = 88,
+										y = 20
+									}
+								}
+							}
+						},
+						{
 							class = "KESep",
 							title = "Brush size"
 						},
@@ -985,7 +1009,7 @@ return {
 			},
 			size = {
 				x = 200,
-				y = 380
+				y = 440
 			},
 			colors = {
 				background = {
@@ -1053,6 +1077,17 @@ return {
 					pos = v(10, 30),
 					children = {
 						{
+							class = "KESep",
+							title = "mode override"
+						},
+						{
+							id = "nav_mode_override_active",
+							class = "KEPropBool",
+							value = true,
+							title = "mode mesh",
+							inactive_title = "use default mesh"
+						},
+						{
 							id = "nav_sel_id",
 							title = "selected id",
 							class = "KEProp",
@@ -1097,6 +1132,11 @@ return {
 							title = "actions"
 						},
 						{
+							id = "nav_adds_missing_numbers",
+							title = "adds missing numbers",
+							class = "KEButton"
+						},
+						{
 							id = "nav_nearest_sel",
 							title = "nearest selected",
 							class = "KEButton"
@@ -1113,7 +1153,7 @@ return {
 						},
 						{
 							id = "nav_renumber_holders",
-							title = "renumber",
+							title = "renumber (WARN!)",
 							class = "KEButton"
 						}
 					}

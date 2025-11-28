@@ -7,6 +7,7 @@ local deco_fn = require("map_decos_functions")
 local ani_paths = require("data.map_animations_paths")
 local ani_paths2 = require("data.map_animations_paths2")
 local i18n = require("i18n")
+require("gg_views")
 
 local function CJK(default, zh, ja, kr)
 	return i18n.cjk(i18n, default, zh, ja, kr)

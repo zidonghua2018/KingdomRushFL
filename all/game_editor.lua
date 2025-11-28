@@ -9,19 +9,36 @@ require("klua.dump")
 local km = require("klua.macros")
 local signal = require("hump.signal")
 local V = require("hump.vector-light")
-local E = require("entity_db")
-local A = require("animation_db")
-local U = require("utils")
-local RU = require("render_utils")
+local F = require("klove.font_db")
+
+local simulation, A
+local serpent = require("serpent")
 local I = require("klove.image_db")
 local E = require("entity_db")
-local F = require("klove.font_db")
+local U = require("utils")
+local RU = require("render_utils")
+local E = require("entity_db")
 local P = require("path_db")
 local SU = require("screen_utils")
 local GR = require("grid_db")
 local LU = require("level_utils")
-local simulation = require("simulation")
-require("gg_views")
+local sys = require("systems")
+
+local IS_KR5 = KR_GAME == "kr5"
+
+if IS_KR5 then
+	simulation = require("klove.simulation")
+	A = require("klove.animation_db")
+else
+	simulation = require("simulation")
+	A = require("animation_db")
+end
+
+local EXO
+
+if IS_KR5 then
+	EXO = require("exoskeleton")
+end
 
 if DEBUG then
 	package.loaded.game_editor_gui = nil
@@ -36,14 +53,13 @@ require("constants")
 BATCH_SIZE = 1000
 DEFAULT_PATH_WIDTH = 40
 editor = {}
+
 editor.required_textures = {
+	"go_decals",
 	"go_towers_1",
-	"go_towers_2",
-	-- "go_decals",
-	-- "go_special_towers",
-	-- "go_stages_common",
-	-- "go_editor"
+	"go_editor"
 }
+
 editor.ref_h = REF_H
 editor.ref_w = REF_W
 editor.ref_res = TEXTURE_SIZE_ALIAS.ipad
@@ -53,11 +69,102 @@ editor.simulation_systems = {
 	"render"
 }
 
+function editor:save_data(data, name)
+	local fn = KR_FULLPATH_BASE .. "/" .. KR_PATH_GAME .. "/data/levels/" .. name .. "_data.lua"
+
+	local function custom_sort(k, o)
+		local function sort_table(a, b)
+			if a == "template" then
+				return true
+			elseif b == "template" then
+				return false
+			elseif type(a) == "number" and type(b) == "number" then
+				if type(o[a]) == "table" and type(o[b]) == "table" and o[a].template and o[b].template then
+					if o[a].template == o[b].template and o[a].pos and o[b].pos then
+						if o[a].pos.y == o[b].pos.y then
+							if o[a].pos.x == o[b].pos.x then
+								if o[a]["editor.game_mode"] and o[b]["editor.game_mode"] then
+									return o[a]["editor.game_mode"] < o[b]["editor.game_mode"]
+								elseif o[a]["tunnel.name"] and o[b]["tunnel.name"] then
+									return o[a]["tunnel.name"] < o[b]["tunnel.name"]
+								else
+									return o[a].pos.x < o[b].pos.x
+								end
+							else
+								return o[a].pos.x < o[b].pos.x
+							end
+						else
+							return o[a].pos.y < o[b].pos.y
+						end
+					else
+						return o[a].template < o[b].template
+					end
+				else
+					return a < b
+				end
+			else
+				return tostring(a) < tostring(b)
+			end
+		end
+
+		table.sort(k, sort_table)
+	end
+
+	local str = serpent.block(data, {
+		indent = "    ",
+		comment = false,
+		sortkeys = custom_sort,
+		keyignore = {
+			_idx = true,
+			_id = true,
+			_before_ov = true,
+			locations = true,
+			frames = true
+		}
+	})
+	local out = "return " .. str .. "\n"
+	local f = io.open(fn, "w")
+
+	f:write(out)
+	f:flush()
+	f:close()
+end
+
+function editor:save_curves(name)
+	local fn = KR_FULLPATH_BASE .. "/" .. KR_PATH_GAME .. "/data/levels/" .. name .. "_paths.lua"
+	local t = {
+		connections = P.path_connections,
+		curves = P.path_curves,
+		paths = P:generate_paths(),
+		active = P.active_paths
+	}
+	local str = serpent.block(t, {
+		indent = "    ",
+		comment = false,
+		sortkeys = true,
+		keyignore = {
+			beziers = true
+		}
+	})
+	local out = "return " .. str .. "\n"
+	local dir = fn:match("(.+)/[^/]+$")
+	if dir then
+		os.execute("mkdir \"" .. dir .. "\"")
+	end
+
+	local f = io.open(fn, "w")
+
+	f:write(out)
+	f:flush()
+	f:close()
+end
+
 function editor:init(screen_w, screen_h, done_callback)
 	self.screen_w = screen_w
 	self.screen_h = screen_h
 	self.done_callback = done_callback
-	self.game_scale = self.ref_h / TEXTURE_SIZE_ALIAS[self.args.texture_size]
+	-- self.game_scale = self.ref_h / TEXTURE_SIZE_ALIAS[self.args.texture_size]
+	self.game_scale = self.ref_h / TEXTURE_SIZE_ALIAS["ipad"]
 	self.game_scale = self.game_scale / (tsf and tsf.game_editor or 1)
 	self.game_ref_origin = V.v((screen_w - self.ref_w * self.game_scale) / 2, (screen_h - self.ref_h * self.game_scale) / 2)
 
@@ -65,7 +172,13 @@ function editor:init(screen_w, screen_h, done_callback)
 
 	self.store = {}
 
-	simulation:init(self.store, self.simulation_systems)
+	local systems
+	if IS_KR5 then
+		systems = sys
+	else
+		systems = self.simulation_systems
+	end
+	simulation:init(self.store, systems, self.simulation_systems, TICK_LENGTH)
 
 	self.simulation = simulation
 	self.undo_stack = {}
@@ -130,8 +243,7 @@ function editor:wheelmoved(dx, dy)
 end
 
 function editor:draw()
-	local frame_draw_params = RU.frame_draw_params
-	local draw_frames_range = RU.draw_frames_range
+	love.graphics.print("Memory: " .. collectgarbage("count") .. " KB", 10, 10)
 	local rox, roy = self.game_ref_origin.x, self.game_ref_origin.y
 	local gs = self.game_scale
 	local last_idx
@@ -331,11 +443,11 @@ function editor:draw()
 					G.setColor(0, 0, 200, 200)
 				end
 
-				G.rectangle("fill", e.pos.x - 1, e.pos.y - 4, 2, 8)
-				G.rectangle("fill", e.pos.x - 4, e.pos.y - 1, 8, 2)
+				G.rectangle("fill", e.pos.x - 2, e.pos.y - 8, 4, 16)
+				G.rectangle("fill", e.pos.x - 8, e.pos.y - 2, 16, 4)
 
-				if self.entities_selected and table.contains(self.entities_selected, e.id) and e.render and e.render.frames and e.render.frames[1] then
-					local f = e.render.frames[1]
+				if self.entities_selected and table.contains(self.entities_selected, e.id) and e.render and e.render.sprites and e.render.sprites[1] then
+					local f = e.render.sprites[1]
 
 					if f.ss then
 						local w, h = f.ss.size[1] * f.ss.ref_scale, f.ss.size[2] * f.ss.ref_scale
@@ -363,7 +475,7 @@ function editor:draw()
 		G.setCanvas(self.nav_canvas)
 
 		if self.store.level.nav_mesh then
-			local sel_h_id = self.nav_entity_selected and tonumber(self.nav_entity_selected.tower.holder_id)
+			local sel_h_id = self.nav_entity_selected and tonumber(self.nav_entity_selected.ui.nav_mesh_id)
 			local fnt = G.getFont()
 
 			G.setFont(F:f("DroidSansMono", 24))
@@ -371,21 +483,21 @@ function editor:draw()
 			local towers = {}
 
 			for _, e in pairs(self.store.entities) do
-				if e.tower and e.tower.holder_id then
-					towers[tonumber(e.tower.holder_id)] = e
+				if e.ui and e.ui.nav_mesh_id then
+					towers[tonumber(e.ui.nav_mesh_id)] = e
 
 					local has_edges = false
 
-					for _, v in pairs(self.store.level.nav_mesh[tonumber(e.tower.holder_id)] or {}) do
+					for _, v in pairs(self.store.level.nav_mesh[tonumber(e.ui.nav_mesh_id)] or {}) do
 						if v ~= nil then
 							has_edges = true
 						end
 					end
 
 					G.setColor(0, 0, 0, 255)
-					G.print(e.tower.holder_id, e.pos.x + 5, e.pos.y + 18, 0, 1, -1)
+					G.print(e.ui.nav_mesh_id, e.pos.x + 5, e.pos.y + 18, 0, 1, -1)
 
-					if tonumber(e.tower.holder_id) == sel_h_id then
+					if tonumber(e.ui.nav_mesh_id) == sel_h_id then
 						G.setColor(255, 255, 0, 255)
 					elseif has_edges then
 						G.setColor(160, 160, 255, 255)
@@ -393,7 +505,7 @@ function editor:draw()
 						G.setColor(60, 60, 60, 255)
 					end
 
-					G.print(e.tower.holder_id, e.pos.x + 5 - 1, e.pos.y + 18 + 1, 0, 1, -1)
+					G.print(e.ui.nav_mesh_id, e.pos.x + 5 - 1, e.pos.y + 18 + 1, 0, 1, -1)
 				end
 			end
 
@@ -498,7 +610,7 @@ function editor:draw()
 	G.translate(rox, roy)
 	G.scale(gs, gs)
 
-	last_idx = draw_frames_range(self.store.render_frames, 1, Z_GUI - 1)
+	last_idx = RU.draw_frames_range(self.store.render_frames, 1, Z_GUI - 1)
 
 	G.pop()
 
@@ -587,15 +699,19 @@ function editor:level_save(idx, mode)
 	end
 
 	local s = self.store
+	local ss
 
 	s.level_idx = idx
 	s.level_name = "level" .. string.format("%02i", idx)
 
 	log.debug("saving level %s", idx)
-	P:save_curves(s.level_name)
+	self:save_curves(s.level_name)
 	GR:save(s.level_name)
 	self:serialize_level(s)
-	LU.save_data(s, s.level_name)
+
+	ss = table.deepclone(s.level.data)
+
+	self:save_data(ss, s.level_name)
 end
 
 function editor:level_load(idx, mode)
@@ -604,7 +720,13 @@ function editor:level_load(idx, mode)
 	self.undo_active = false
 	self.store = {}
 
-	simulation:init(self.store, self.simulation_systems)
+	local systems
+	if IS_KR5 then
+		systems = sys
+	else
+		systems = self.simulation_systems
+	end
+	simulation:init(self.store, systems, self.simulation_systems, TICK_LENGTH)
 
 	self.simulation = simulation
 
@@ -620,7 +742,13 @@ function editor:level_load(idx, mode)
 	s.level = LU.load_level(s, s.level_name, true)
 
 	director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
-	LU.insert_entities(self.store, s.level.data.entities_list, true)
+    if s.level.data then
+    	LU.insert_entities(self.store, s.level.data.entities_list, true)
+    end
+
+	if IS_KR5 then
+		EXO:load(s.level.data.required_exoskeletons)
+	end
 
 	self.entities_dirty = true
 
@@ -650,6 +778,9 @@ function editor:level_load(idx, mode)
 
 	if not s.level.nav_mesh then
 		s.level.nav_mesh = {}
+        if not s.level.data then
+            s.level.data = {}
+        end
 		s.level.data.nav_mesh = s.level.nav_mesh
 	end
 
@@ -658,7 +789,10 @@ function editor:level_load(idx, mode)
 	self.nav_dirty = true
 	self.undo_stack = {}
 	self.undo_active = true
-
+    if s.level.load then
+        P.add_invalid_range = function()end
+        s.level:load(s)
+    end
 	self.gui:level_loaded(idx)
 end
 
@@ -714,6 +848,18 @@ function editor:serialize_level(store)
 				table.insert(list, se)
 
 				list._idx[e.id] = se
+			end
+		end
+	end
+
+	local data = store.level.data
+
+	if data._before_ov then
+		for k, v in pairs(data._before_ov) do
+			if v == NULL then
+				data[k] = nil
+			else
+				data[k] = table.deepclone(v)
 			end
 		end
 	end
@@ -1143,17 +1289,23 @@ function editor:set_path_active(pi, value)
 end
 
 function editor:sanitize_nav_mesh(nav_mesh)
+	for _, e in pairs(self.store.entities) do
+		if e and e.tower and e.tower.holder_id and e.ui and not e.ui.nav_mesh_id then
+			e.ui.nav_mesh_id = e.tower.holder_id
+		end
+	end
+
 	local hids = {}
 
 	for _, e in pairs(self.store.entities) do
-		if e.tower and e.tower.holder_id then
-			local hid = e.tower.holder_id
+		if e.ui and e.ui.nav_mesh_id then
+			local hid = e.ui.nav_mesh_id
 
 			if tonumber(hid) == 0 then
 				log.error("WARNING: tower[%s] holder_id cannot be 0!!", e.id)
 			end
 
-			table.insert(hids, tonumber(e.tower.holder_id))
+			table.insert(hids, tonumber(e.ui.nav_mesh_id))
 		end
 	end
 
