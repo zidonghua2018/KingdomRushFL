@@ -4,6 +4,8 @@ if arg[2] == "debug" then
 	LLDEBUGGER.start()
 end
 
+local G = love.graphics
+
 require("main_globals")
 
 local base_dir = love.filesystem.getSourceBaseDirectory()
@@ -123,7 +125,8 @@ local function load_director()
 	local aw, ah = love.graphics.getDimensions()
 
 	if aw and ah and (aw ~= main.params.width or ah ~= main.params.height) then
-		log.debug("patching width/height from %s,%s, to %s,%s dpi scale:%s", main.params.width, main.params.height, aw, ah, love.window.getPixelScale())
+		log.debug("patching width/height from %s,%s, to %s,%s dpi scale:%s", main.params.width, main.params.height, aw,
+			ah, love.window.getPixelScale())
 
 		main.params.width, main.params.height = aw, ah
 	end
@@ -597,11 +600,15 @@ local function crash_report(str)
 end
 
 function love.errhand(msg)
+	local error_canvas = G.newCanvas(G.getWidth(), G.getHeight())
+	local last_canvas = G.getCanvas()
+	G.setCanvas(error_canvas)
+
 	local last_log_msg = log.last_log_msgs and table.concat(log.last_log_msgs, "")
 
 	msg = tostring(msg)
 
-	local stack_msg = get_error_stack(msg, 2)
+	local stack_msg = debug.traceback("Error: " .. tostring(msg), 3):gsub("\n[^\n]+$", "")
 
 	stack_msg = (stack_msg or "") .. "\n" .. last_log_msg
 
@@ -610,11 +617,11 @@ function love.errhand(msg)
 	close_log()
 	pcall(crash_report, stack_msg)
 
-	if not love.window or not love.graphics or not love.event then
+	if not love.window or not G or not love.event then
 		return
 	end
 
-	if not love.graphics.isCreated() or not love.window.isOpen() then
+	if not G.isCreated() or not love.window.isOpen() then
 		local success, status = pcall(love.window.setMode, 800, 600)
 
 		if not success or not status then
@@ -642,9 +649,10 @@ function love.errhand(msg)
 		love.audio.stop()
 	end
 
-	love.graphics.reset()
+	G.reset()
 
-	local font = love.graphics.setNewFont(math.floor(love.window.toPixels(15)))
+	local font = G.setNewFont(math.floor(love.window.toPixels(15)))
+	local cn_font = G.setNewFont("all-desktop/assets/fonts/msyh.ttf", math.floor(love.window.toPixels(16)))
 
 	love.graphics.setBackgroundColor(89, 157, 220)
 	love.graphics.setColor(255, 255, 255, 255)
@@ -655,8 +663,27 @@ function love.errhand(msg)
 	love.graphics.origin()
 
 	local err = {}
+	local tip = {}
+	local tip_trigger_errors = {
+		-- ["Texture expected, got nil"] = "你在老本体上放了新版本补丁，请先安装新的本体。\n"
+	}
+	local has_tip
 
-	table.insert(err, "Error\n")
+	table.insert(tip, string.format("Version %s: Tip\n", KR_FL_VERSION))
+
+	for e, v in pairs(tip_trigger_errors) do
+		if string.find(msg, e, 1, true) then
+			table.insert(tip, "提示: " .. v)
+			has_tip = true
+		end
+	end
+
+	if has_tip then
+		table.insert(err, "\n\n\n\n\n\n\nError\n")
+	else
+		table.insert(err, "\n\n\n\n\nError\n")
+	end
+
 	table.insert(err, msg .. "\n\n")
 
 	for l in string.gmatch(trace, "(.-)\n") do
@@ -667,6 +694,14 @@ function love.errhand(msg)
 		end
 	end
 
+	if has_tip then
+		table.insert(tip,
+			"发生错误！ 请将本界面与游戏画面反馈，并简要描述发生了什么。\n")
+	elseif not has_tip then
+		table.insert(tip,
+			"发生错误！ 请将本界面与游戏画面反馈，并简要描述发生了什么。\n")
+	end
+
 	if love.nx then
 		table.insert(err, "\n\nFree memory:" .. love.nx.allocGetTotalFreeSize() .. "\n")
 	end
@@ -674,31 +709,48 @@ function love.errhand(msg)
 	table.insert(err, "\n\nLast error msgs\n")
 	table.insert(err, last_log_msg)
 
+	local pt = table.concat(tip, "\n")
+
+	pt = string.gsub(pt, "\t", "")
+	pt = string.gsub(pt, "%[string \"(.-)\"%]", "%1")
+
 	local p = table.concat(err, "\n")
 
 	p = string.gsub(p, "\t", "")
 	p = string.gsub(p, "%[string \"(.-)\"%]", "%1")
 
-	local function draw()
-		local pos = love.window.toPixels(70)
+	local pos = love.window.toPixels(70)
 
-		love.graphics.clear(love.graphics.getBackgroundColor())
-		love.graphics.printf(p, pos, pos, love.graphics.getWidth() - pos)
-		love.graphics.present()
+	G.setFont(font)
+	G.clear(G.getBackgroundColor())
+	G.printf(p, pos, pos, G.getWidth() - pos)
+
+	G.setFont(cn_font)
+	G.printf(pt, pos, pos, G.getWidth() - pos)
+
+	G.present()
+
+	love.graphics.print("Memory: " .. collectgarbage("count") .. " KB", 10, 10)
+	local function draw()
+		G.present()
 	end
 
 	if LLDEBUGGER then
 		LLDEBUGGER.start()
 	end
 
-    while true do
-        love.event.pump()
+	while true do
+		love.event.pump()
 
 		for e, a, b, c in love.event.poll() do
 			if e == "quit" then
 				return
-			elseif e == "keypressed" and a == "escape" then
-				return
+			elseif e == "keypressed" then
+				if a == "escape" then
+					return
+				else
+					return
+				end
 			elseif e == "touchpressed" then
 				local name = love.window.getTitle()
 
@@ -706,10 +758,7 @@ function love.errhand(msg)
 					name = "Game"
 				end
 
-				local buttons = {
-					"OK",
-					"Cancel"
-				}
+				local buttons = { "OK", "Cancel" }
 				local pressed = love.window.showMessageBox("Quit " .. name .. "?", "", buttons)
 
 				if pressed == 1 then
@@ -721,7 +770,7 @@ function love.errhand(msg)
 		draw()
 
 		if love.timer then
-			love.timer.sleep(0.1)
+			love.timer.sleep(3)
 		end
 	end
 end
