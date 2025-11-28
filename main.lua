@@ -1,0 +1,719 @@
+﻿-- chunkname: @./main.lua
+
+require("main_globals")
+
+local base_dir = love.filesystem.getSourceBaseDirectory()
+local work_dir = love.filesystem.getWorkingDirectory()
+local ppref
+
+if love.filesystem.isFused() then
+	ppref = ""
+elseif KR_PLATFORM == "android" then
+	ppref = base_dir .. "/lovegame/"
+else
+	ppref = base_dir ~= work_dir and "" or "src/"
+end
+
+local additional_paths = {
+	string.format("%s%s-%s/?.lua", ppref, KR_GAME, KR_TARGET),
+	string.format("%s%s/?.lua", ppref, KR_GAME),
+	string.format("%sall-%s/?.lua", ppref, KR_TARGET),
+	string.format("%sall/?.lua", ppref),
+	string.format("%slib/?.lua", ppref),
+	string.format("%slib/?/init.lua", ppref)
+}
+
+package.path = package.path .. ";" .. table.concat(additional_paths, ";")
+
+love.filesystem.setRequirePath("?.lua;?/init.lua" .. ";" .. table.concat(additional_paths, ";"))
+
+KR_FULLPATH_BASE = base_dir .. "/src"
+
+local prefix_dir = ""
+
+KR_PATH_ALL = string.format("%s%s", prefix_dir, "all")
+KR_PATH_ALL_TARGET = string.format("%s%s-%s", prefix_dir, "all", KR_TARGET)
+KR_PATH_GAME = string.format("%s%s", prefix_dir, KR_GAME)
+KR_PATH_GAME_TARGET = string.format("%s%s-%s", prefix_dir, KR_GAME, KR_TARGET)
+
+local log = require("klua.log")
+
+require("klua.table")
+require("klua.dump")
+require("version")
+require("constants")
+
+if version.build == "RELEASE" then
+	DEBUG = nil
+	log.level = log.ERROR_LEVEL
+
+	local ok, l = pcall(require, "log_levels_release")
+
+	log.default_level_by_name = ok and l or {}
+else
+	DEBUG = true
+	log.level = log.INFO_LEVEL
+
+	local ok, l = pcall(require, "log_levels_debug")
+
+	log.default_level_by_name = ok and l or {}
+end
+
+log.use_print = KR_PLATFORM == "android"
+
+local features = require("features")
+local storage = require("storage")
+local F = require("klove.font_db")
+F:init()
+local MU = require("main_utils")
+local i18n = require("i18n")
+
+main = {}
+main.handler = nil
+main.profiler = nil
+main.profiler_displayed = false
+main.draw_stats = nil
+main.draw_stats_displayed = false
+main.log_output = nil
+
+function main:set_locale(locale)
+	i18n.load_locale(locale)
+
+	if DEBUG then
+		package.loaded["data.font_subst"] = nil
+	end
+
+	local fs = require("data.font_subst")
+
+	for _, v in pairs(fs.global) do
+		F:set_font_subst(unpack(v))
+	end
+
+	local locale_subst = fs[locale] or fs.default
+
+	for _, v in pairs(locale_subst) do
+		F:set_font_subst(unpack(v))
+	end
+end
+
+local function close_log()
+	if main.log_output then
+		log.error("<< closing >>")
+		io.stderr:write("Closing log file\n")
+		io.flush()
+		main.log_output:close()
+		io.stderr:write("Bye\n")
+	end
+end
+
+local function load_director()
+	love.window.setMode(main.params.width, main.params.height, {
+		fullscreentype = "exclusive",
+		centered = false,
+		fullscreen = main.params.fullscreen,
+		vsync = main.params.vsync,
+		msaa = main.params.msaa,
+		highdpi = main.params.highdpi
+	})
+
+	local aw, ah = love.graphics.getDimensions()
+
+	if aw and ah and (aw ~= main.params.width or ah ~= main.params.height) then
+		log.debug("patching width/height from %s,%s, to %s,%s dpi scale:%s", main.params.width, main.params.height, aw, ah, love.window.getPixelScale())
+
+		main.params.width, main.params.height = aw, ah
+	end
+
+	if main.params.wpos then
+		local x, y = unpack(main.params.wpos)
+
+		love.window.setPosition(x or 1, y or 1)
+	end
+
+	local director = require("director")
+
+	director:init(main.params)
+
+	main.handler = director
+end
+
+local function load_app_settings()
+	local I = require("klove.image_db")
+	local settings = require("screen_settings")
+	local w, h = 400, 500
+
+	for _, t in pairs(settings.required_textures) do
+		I:load_atlas(1, KR_PATH_GAME_TARGET .. "/assets/images/fullhd", t)
+	end
+
+	local function done_cb()
+		storage:save_settings(main.params)
+
+		main.handler = nil
+
+		for _, t in pairs(settings.required_textures) do
+			I:unload_atlas(t, 1)
+		end
+
+		load_director()
+	end
+
+	settings:init(w, h, main.params, done_cb)
+
+	main.handler = settings
+
+	love.window.setMode(w, h, {
+		centered = true,
+		vsync = false
+	})
+end
+
+function love.load(arg)
+	love.filesystem.setIdentity(version.identity)
+
+	local save_dir = "fl_save"
+	if not love.filesystem.isDirectory(save_dir) then
+		if not love.filesystem.createDirectory(save_dir) then
+			log.error("error creating save_dir: %s", save_dir)
+		end
+	end
+	if love.filesystem.isFused() then
+		if not love.filesystem.mount(base_dir, "/", true) then
+			log.error("error mounting assets base_dir: %s", base_dir)
+		end
+		--[[for _, n in pairs({
+            KR_PATH_ALL_TARGET,
+            KR_PATH_GAME_TARGET
+        }) do
+            local fn = string.format("%s.dat", n)
+            local dn = string.format("%s", n)
+
+            log.debug("mounting %s -> %s", fn, dn)
+
+            if not love.filesystem.mount(fn, dn, true) then
+                log.error("error mounting assets file: %s", fn)
+
+                return
+            end
+        end]]
+	end
+
+	main.params = storage:load_settings()
+
+	MU.basic_init()
+
+	if DEBUG and love.filesystem.isFile("args.lua") then
+		print("WARNING: Reading parameters from args.lua. Overrides all cmdline arguments")
+
+		arg = require("args")
+	end
+
+	MU.parse_args(arg, main.params)
+	MU.default_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
+	MU.apply_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
+
+	if main.params.log_level then
+		log.level = tonumber(main.params.log_level)
+	end
+
+	main.log_output = MU.redirect_output(main.params)
+
+	if main.log_output then
+		log.error(MU.get_version_info(version))
+		log.error(MU.get_graphics_features())
+	end
+
+	MU.start_debugger(main.params)
+
+	if DEBUG then
+		log.info(MU.get_debug_info(main.params))
+	end
+
+	F:init(KR_PATH_ALL_TARGET .. "/assets/fonts")
+	F:load()
+	main:set_locale(main.params.locale)
+	love.window.setTitle(string.format(_("GAME_TITLE_" .. string.upper(KR_GAME)), KR_FL_VERSION))
+
+	local icon = KR_PATH_GAME_TARGET .. "/assets/icons/icon256.png"
+
+	if love.filesystem.isFile(icon) then
+		love.window.setIcon(love.image.newImageData(icon))
+	end
+
+	if not main.params.skip_settings_dialog then
+		load_app_settings()
+	else
+		load_director()
+	end
+
+	if main.params.profiler then
+		main.profiler = require("profiler")
+	end
+
+	if main.params.draw_stats then
+		main.draw_stats = require("draw_stats")
+		main.draw_stats_displayed = true
+
+		main.draw_stats:init(main.params.width, main.params.height)
+	end
+
+	if DEBUG then
+		require("debug_tools")
+
+		if main.params.localuser then
+			log.error("---- LOADING LOCALUSER -----")
+			require("localuser")
+		end
+	end
+
+	if main.params.custom_script then
+		log.error("---- LOADING CUSTOM SCRIPT %s ----", main.params.custom_script)
+		require(main.params.custom_script)
+
+		if custom_script.init then
+			custom_script:init()
+		end
+	end
+end
+
+function love.update(dt)
+	if DEBUG and not main.params.debug and main.params.repl then
+		repl_t()
+	end
+
+	storage:update(dt)
+	main.handler:update(dt)
+
+	if DEBUG and main.params.localuser and localuser_update then
+		localuser_update(dt)
+	end
+
+	if custom_script and custom_script.update then
+		custom_script:update(dt)
+	end
+end
+
+function love.draw()
+	main.handler:draw()
+
+	if main.profiler and main.profiler_displayed then
+		main.profiler.draw(main.params.width, main.params.height, F:f("DroidSansMono", 14))
+	end
+
+	if main.draw_stats and main.draw_stats_displayed then
+		main.draw_stats:draw(main.params.width, main.params.height)
+	end
+end
+
+function love.keypressed(key, scancode, isrepeat)
+	if main.profiler then
+		if key == "f1" then
+			main.profiler.start()
+		elseif key == "f2" then
+			main.profiler.stop()
+		elseif key == "f3" then
+			main.profiler_displayed = not main.profiler_displayed
+		elseif key == "f4" then
+			main.profiler.flag_l2_shown = not main.profiler.flag_l2_shown
+			main.profiler.flag_dirty = true
+		end
+	end
+
+	if main.draw_stats and key == "f" then
+		main.draw_stats_displayed = not main.draw_stats_displayed
+	end
+
+	if custom_script and custom_script.keypressed then
+		custom_script:keypressed(key, isrepeat)
+	end
+
+	main.handler:keypressed(key, isrepeat)
+end
+
+function love.keyreleased(key, scancode)
+	main.handler:keyreleased(key)
+end
+
+function love.textinput(t)
+	if main.handler.textinput then
+		main.handler:textinput(t)
+	end
+end
+
+function love.mousepressed(x, y, button, istouch)
+	main.handler:mousepressed(x, y, button, istouch)
+end
+
+function love.mousereleased(x, y, button, istouch)
+	main.handler:mousereleased(x, y, button, istouch)
+end
+
+function love.wheelmoved(dx, dy)
+	if main.handler.wheelmoved then
+		main.handler:wheelmoved(dx, dy, button)
+	end
+end
+
+function love.touchpressed(id, x, y, dx, dy, pressure)
+	if main.handler.touchpressed then
+		main.handler:touchpressed(id, x, y, dx, dy, pressure)
+	end
+end
+
+function love.touchreleased(id, x, y, dx, dy, pressure)
+	if main.handler.touchreleased then
+		main.handler:touchreleased(id, x, y, dx, dy, pressure)
+	end
+end
+
+function love.touchmoved(id, x, y, dx, dy, pressure)
+	if main.handler.touchmoved then
+		main.handler:touchmoved(id, x, y, dx, dy, pressure)
+	end
+end
+
+function love.gamepadaxis(joystick, axis, value)
+	if main.handler.gamepadaxis then
+		main.handler:gamepadaxis(joystick, axis, value)
+	end
+end
+
+function love.gamepadpressed(joystick, button)
+	if custom_script and custom_script.gamepadpressed then
+		custom_script:gamepadpressed(joystick, button)
+	end
+
+	if main.handler.gamepadpressed then
+		main.handler:gamepadpressed(joystick, button)
+	end
+end
+
+function love.gamepadreleased(joystick, button)
+	if main.handler.gamepadreleased then
+		main.handler:gamepadreleased(joystick, button)
+	end
+end
+
+function love.joystickpressed(joystick, button)
+	if main.handler.joystickpressed then
+		main.handler:joystickpressed(joystick, button)
+	end
+end
+
+function love.joystickreleased(joystick, button)
+	if main.handler.joystickreleased then
+		main.handler:joystickreleased(joystick, button)
+	end
+end
+
+function love.joystickadded(joystick)
+	if main.handler.joystickadded then
+		main.handler:joystickadded(joystick)
+	end
+end
+
+function love.joystickremoved(joystick)
+	if main.handler.joystickremoved then
+		main.handler:joystickremoved(joystick)
+	end
+end
+
+function love.resize(w, h)
+	if main.handler.resize then
+		main.handler:resize(w, h)
+	end
+end
+
+function love.focus(focus)
+	if main.handler.focus then
+		main.handler:focus(focus)
+	end
+end
+
+function love.run()
+	if love.math then
+		love.math.setRandomSeed(os.time())
+
+		for i = 1, 3 do
+			love.math.random()
+		end
+	end
+
+	if love.load then
+		love.load(arg)
+	end
+
+	if love.timer then
+		love.timer.step()
+	end
+
+	local dt = 0
+	local updatei, updatef, presi, presf, drawi, drawf
+	local nx, nx_on = love.nx
+
+	while true do
+		if main.profiler and nx and nx.isProfiling() then
+			nx_on = true
+		end
+
+		if nx_on then
+			nx.profilerHeartbeat()
+		end
+
+		if love.event then
+			love.event.pump()
+
+			for e, a, b, c, d in love.event.poll() do
+				if e == "quit" and (not love.quit or not love.quit()) then
+					return
+				end
+
+				love.handlers[e](a, b, c, d)
+			end
+		end
+
+		if love.timer then
+			love.timer.step()
+
+			dt = love.timer.getDelta()
+		end
+
+		if main.draw_stats then
+			updatei = love.timer.getTime()
+		end
+
+		if nx_on then
+			nx.profilerEnterCodeBlock("update")
+		end
+
+		if love.update then
+			love.update(dt)
+		end
+
+		if nx_on then
+			nx.profilerExitCodeBlock("update")
+		end
+
+		if main.draw_stats then
+			updatef = love.timer.getTime()
+
+			main.draw_stats:update_lap(dt, updatei, updatef)
+		end
+
+		if love.window and love.graphics and love.window.isCreated() then
+			if nx_on then
+				nx.profilerEnterCodeBlock("clear")
+			end
+
+			love.graphics.clear()
+			love.graphics.origin()
+
+			if nx_on then
+				nx.profilerExitCodeBlock("clear")
+			end
+
+			if love.draw then
+				if main.draw_stats then
+					drawi = love.timer.getTime()
+				end
+
+				if nx_on then
+					nx.profilerEnterCodeBlock("draw")
+				end
+
+				love.draw()
+
+				if nx_on then
+					nx.profilerExitCodeBlock("draw")
+				end
+
+				if main.draw_stats then
+					drawf = love.timer.getTime()
+
+					main.draw_stats:draw_lap(drawi, drawf)
+				end
+			end
+
+			collectgarbage("step")
+
+			if main.draw_stats then
+				presi = love.timer.getTime()
+			end
+
+			if nx_on then
+				nx.profilerEnterCodeBlock("present")
+			end
+
+			love.graphics.present()
+
+			if nx_on then
+				nx.profilerExitCodeBlock("present")
+			end
+
+			if main.draw_stats then
+				presf = love.timer.getTime()
+
+				main.draw_stats:present_lap(presi, presf)
+			end
+
+			if main.handler.limit_fps then
+				if nx_on then
+					nx.profilerEnterCodeBlock("limit_fps")
+				end
+
+				main.handler:limit_fps()
+
+				if nx_on then
+					nx.profilerExitCodeBlock("limit_fps")
+				end
+			end
+		end
+
+		if love.timer then
+			love.timer.sleep(0.001)
+		end
+	end
+end
+
+function love.quit()
+	log.info("Quitting...")
+	close_log()
+end
+
+local function get_error_stack(msg, layer)
+	return (debug.traceback("Error: " .. tostring(msg), 1 + (layer or 1)):gsub("\n[^\n]+$", ""))
+end
+
+local function crash_report(str)
+	if KR_PLATFORM == "android" then
+		local jnia = require("jni_android")
+
+		jnia.crashlytics_log_and_crash(str)
+	end
+end
+
+function love.errhand(msg)
+	local last_log_msg = log.last_log_msgs and table.concat(log.last_log_msgs, "")
+
+	msg = tostring(msg)
+
+	local stack_msg = get_error_stack(msg, 2)
+
+	stack_msg = (stack_msg or "") .. "\n" .. last_log_msg
+
+	print(stack_msg)
+	log.error(stack_msg)
+	close_log()
+	pcall(crash_report, stack_msg)
+
+	if not love.window or not love.graphics or not love.event then
+		return
+	end
+
+	if not love.graphics.isCreated() or not love.window.isOpen() then
+		local success, status = pcall(love.window.setMode, 800, 600)
+
+		if not success or not status then
+			return
+		end
+	end
+
+	if love.mouse then
+		love.mouse.setVisible(true)
+		love.mouse.setGrabbed(false)
+		love.mouse.setRelativeMode(false)
+
+		if love.mouse.hasCursor() then
+			love.mouse.setCursor()
+		end
+	end
+
+	if love.joystick then
+		for i, v in ipairs(love.joystick.getJoysticks()) do
+			v:setVibration()
+		end
+	end
+
+	if love.audio then
+		love.audio.stop()
+	end
+
+	love.graphics.reset()
+
+	local font = love.graphics.setNewFont(math.floor(love.window.toPixels(15)))
+
+	love.graphics.setBackgroundColor(89, 157, 220)
+	love.graphics.setColor(255, 255, 255, 255)
+
+	local trace = debug.traceback()
+
+	love.graphics.clear(love.graphics.getBackgroundColor())
+	love.graphics.origin()
+
+	local err = {}
+
+	table.insert(err, "Error\n")
+	table.insert(err, msg .. "\n\n")
+
+	for l in string.gmatch(trace, "(.-)\n") do
+		if not string.match(l, "boot.lua") then
+			l = string.gsub(l, "stack traceback:", "Traceback\n")
+
+			table.insert(err, l)
+		end
+	end
+
+	if love.nx then
+		table.insert(err, "\n\nFree memory:" .. love.nx.allocGetTotalFreeSize() .. "\n")
+	end
+
+	table.insert(err, "\n\nLast error msgs\n")
+	table.insert(err, last_log_msg)
+
+	local p = table.concat(err, "\n")
+
+	p = string.gsub(p, "\t", "")
+	p = string.gsub(p, "%[string \"(.-)\"%]", "%1")
+
+	local function draw()
+		local pos = love.window.toPixels(70)
+
+		love.graphics.clear(love.graphics.getBackgroundColor())
+		love.graphics.printf(p, pos, pos, love.graphics.getWidth() - pos)
+		love.graphics.present()
+	end
+
+	while true do
+		love.event.pump()
+
+		for e, a, b, c in love.event.poll() do
+			if e == "quit" then
+				return
+			elseif e == "keypressed" and a == "escape" then
+				return
+			elseif e == "touchpressed" then
+				local name = love.window.getTitle()
+
+				if #name == 0 or name == "Untitled" then
+					name = "Game"
+				end
+
+				local buttons = {
+					"OK",
+					"Cancel"
+				}
+				local pressed = love.window.showMessageBox("Quit " .. name .. "?", "", buttons)
+
+				if pressed == 1 then
+					return
+				end
+			end
+		end
+
+		draw()
+
+		if love.timer then
+			love.timer.sleep(0.1)
+		end
+	end
+end

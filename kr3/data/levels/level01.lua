@@ -1,0 +1,111 @@
+﻿-- chunkname: @./kr3/data/levels/level01.lua
+
+local log = require("klua.log"):new("level01")
+local signal = require("hump.signal")
+local E = require("entity_db")
+local S = require("sound_db")
+local U = require("utils")
+local LU = require("level_utils")
+local V = require("klua.vector")
+local P = require("path_db")
+
+local storage = require("storage")
+local user_data = storage:load_slot()
+require("constants")
+
+local function fts(v)
+	return v / FPS
+end
+
+local level = {}
+
+function level:update(store)
+	if store.level_mode == GAME_MODE_CAMPAIGN then
+		self.manual_hero_insertion = true
+
+		signal.emit("show-balloon", "TB_START")
+		signal.emit("show-balloon", "TB_BUILD")
+		signal.emit("wave-notification", "view", "TUTORIAL_1")
+
+		if store.selected_hero and store.selected_hero ~= "hero_elves_archer" then
+			map_data = require("data.map_data")
+			local hero_data = map_data.hero_data
+			if (not user_data.liuhui_hero) or (not user_data.liuhui_hero.usedoublehero) then
+				LU.insert_hero(store)
+			else
+				name1 = hero_data[user_data.liuhui_hero.herolist[1]].name
+				name2 = hero_data[user_data.liuhui_hero.herolist[2]].name
+				LU.insert_double_hero(store, name1, name2)
+			end
+		elseif user_data.liuhui_hero.usedoublehero then
+			map_data = require("data.map_data")
+			local hero_data = map_data.hero_data
+			if (not user_data.liuhui_hero) or (not user_data.liuhui_hero.usedoublehero) then
+				LU.insert_hero(store)
+			else
+				name1 = hero_data[user_data.liuhui_hero.herolist[1]].name
+				name2 = hero_data[user_data.liuhui_hero.herolist[2]].name
+				LU.insert_double_hero(store, name1, name2)
+			end
+		end
+
+		while store.wave_group_number < 1 do
+			coroutine.yield()
+		end
+
+		self.show_next_wave_balloon = true
+
+		while store.wave_group_number < 2 do
+			coroutine.yield()
+		end
+
+		signal.emit("wave-notification", "view", "POWER_REINFORCEMENT")
+
+		while store.wave_group_number < 3 do
+			coroutine.yield()
+		end
+
+		signal.emit("wave-notification", "view", "POWER_THUNDERBOLT")
+
+		while store.wave_group_number < 5 do
+			coroutine.yield()
+		end
+
+		if store.selected_hero and not user_data.liuhui_hero.usedoublehero and store.selected_hero == "hero_elves_archer" then
+			signal.emit("wave-notification", "view", "TIP_HEROES")
+
+			while store.paused do
+				coroutine.yield()
+			end
+
+			log.debug("-- Move hero to the left of the screen")
+
+			local dp = store.level.locations.exits[1].pos
+			local hero = LU.insert_hero(store)
+
+			hero.pos = V.v(-REF_OX - 50, dp.y)
+			hero.nav_rally.center = V.v(dp.x, dp.y)
+			hero.nav_rally.pos = V.vclone(hero.nav_rally.center)
+		end
+
+		while store.wave_group_number < 6 do
+			coroutine.yield()
+		end
+
+		if store.selected_hero and store.selected_hero == "hero_elves_archer" then
+			signal.emit("wave-notification", "view", "POWER_HERO")
+		elseif user_data.liuhui_hero.usedoublehero then
+			signal.emit("wave-notification", "view", "POWER_HERO")
+		else
+			signal.emit("unlock-user-power", 3)
+		end
+
+		while not store.waves_finished or LU.has_alive_enemies(store) do
+			coroutine.yield()
+		end
+
+		log.debug("-- WON")
+	end
+end
+
+return level

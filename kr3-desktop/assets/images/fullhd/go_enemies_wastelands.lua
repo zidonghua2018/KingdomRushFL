@@ -1,0 +1,8514 @@
+﻿-- chunkname: @./_assets/kr1-desktop/images/fullhd/go_enemies_wastelands.lua
+
+return {
+	demonDeath_big_0001 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			78,
+			66
+		},
+		trim = {
+			9,
+			8,
+			11,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			208,
+			58,
+			56
+		},
+		alias = {}
+	},
+	demonDeath_big_0002 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			78,
+			66
+		},
+		trim = {
+			9,
+			8,
+			11,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			270,
+			58,
+			56
+		},
+		alias = {}
+	},
+	demonDeath_big_0003 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			78,
+			66
+		},
+		trim = {
+			5,
+			6,
+			8,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			921,
+			773,
+			65,
+			54
+		},
+		alias = {}
+	},
+	demonDeath_big_0004 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			78,
+			66
+		},
+		trim = {
+			5,
+			6,
+			8,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			777,
+			848,
+			65,
+			54
+		},
+		alias = {}
+	},
+	demonDeath_big_0005 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			78,
+			66
+		},
+		trim = {
+			4,
+			5,
+			4,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			854,
+			717,
+			70,
+			50
+		},
+		alias = {}
+	},
+	demonDeath_big_0006 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			78,
+			66
+		},
+		trim = {
+			4,
+			5,
+			4,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			930,
+			717,
+			70,
+			50
+		},
+		alias = {}
+	},
+	demonDeath_big_0007 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			78,
+			66
+		},
+		trim = {
+			2,
+			4,
+			2,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			702,
+			113,
+			74,
+			52
+		},
+		alias = {}
+	},
+	demonDeath_big_0008 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			78,
+			66
+		},
+		trim = {
+			2,
+			4,
+			2,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			862,
+			113,
+			74,
+			49
+		},
+		alias = {}
+	},
+	demonDeath_big_0009 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			78,
+			66
+		},
+		trim = {
+			2,
+			5,
+			2,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			59,
+			74,
+			48
+		},
+		alias = {}
+	},
+	demonDeath_big_0010 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			78,
+			66
+		},
+		trim = {
+			2,
+			5,
+			2,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			383,
+			59,
+			74,
+			46
+		},
+		alias = {}
+	},
+	demonDeath_big_0011 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			78,
+			66
+		},
+		trim = {
+			9,
+			9,
+			11,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			433,
+			58,
+			42
+		},
+		alias = {}
+	},
+	demonDeath_big_0012 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			78,
+			66
+		},
+		trim = {
+			17,
+			9,
+			17,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			935,
+			44,
+			37
+		},
+		alias = {}
+	},
+	demonDeath_small_0001 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			58,
+			48
+		},
+		trim = {
+			6,
+			6,
+			8,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			839,
+			44,
+			42
+		},
+		alias = {}
+	},
+	demonDeath_small_0002 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			58,
+			48
+		},
+		trim = {
+			6,
+			6,
+			8,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			887,
+			44,
+			42
+		},
+		alias = {}
+	},
+	demonDeath_small_0003 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			58,
+			48
+		},
+		trim = {
+			3,
+			4,
+			5,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			974,
+			366,
+			50,
+			41
+		},
+		alias = {}
+	},
+	demonDeath_small_0004 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			58,
+			48
+		},
+		trim = {
+			3,
+			4,
+			5,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			863,
+			69,
+			50,
+			41
+		},
+		alias = {}
+	},
+	demonDeath_small_0005 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			58,
+			48
+		},
+		trim = {
+			2,
+			3,
+			2,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			511,
+			69,
+			54,
+			39
+		},
+		alias = {}
+	},
+	demonDeath_small_0006 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			58,
+			48
+		},
+		trim = {
+			2,
+			3,
+			2,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			571,
+			69,
+			54,
+			39
+		},
+		alias = {}
+	},
+	demonDeath_small_0007 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			58,
+			48
+		},
+		trim = {
+			1,
+			3,
+			1,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			326,
+			69,
+			56,
+			39
+		},
+		alias = {}
+	},
+	demonDeath_small_0008 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			58,
+			48
+		},
+		trim = {
+			1,
+			3,
+			1,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			388,
+			69,
+			56,
+			37
+		},
+		alias = {}
+	},
+	demonDeath_small_0009 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			58,
+			48
+		},
+		trim = {
+			0,
+			3,
+			1,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			201,
+			69,
+			57,
+			37
+		},
+		alias = {}
+	},
+	demonDeath_small_0010 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			58,
+			48
+		},
+		trim = {
+			0,
+			3,
+			1,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			848,
+			988,
+			57,
+			36
+		},
+		alias = {}
+	},
+	demonDeath_small_0011 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			58,
+			48
+		},
+		trim = {
+			6,
+			7,
+			8,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			990,
+			44,
+			32
+		},
+		alias = {}
+	},
+	demonDeath_small_0012 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			58,
+			48
+		},
+		trim = {
+			12,
+			7,
+			12,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			294,
+			990,
+			34,
+			28
+		},
+		alias = {}
+	},
+	demonEvil_0001 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			18,
+			10,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			602,
+			376,
+			27,
+			35
+		},
+		alias = {
+			"demonEvil_0002"
+		}
+	},
+	demonEvil_0003 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			16,
+			6,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			935,
+			313,
+			29,
+			39
+		},
+		alias = {
+			"demonEvil_0004"
+		}
+	},
+	demonEvil_0005 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			16,
+			5,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			829,
+			313,
+			30,
+			40
+		},
+		alias = {
+			"demonEvil_0006"
+		}
+	},
+	demonEvil_0007 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			15,
+			5,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			992,
+			773,
+			31,
+			40
+		},
+		alias = {}
+	},
+	demonEvil_0008 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			15,
+			7,
+			18,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			466,
+			29,
+			38
+		},
+		alias = {
+			"demonEvil_0009"
+		}
+	},
+	demonEvil_0010 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			15,
+			12,
+			18,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			761,
+			29,
+			33
+		},
+		alias = {
+			"demonEvil_0011"
+		}
+	},
+	demonEvil_0012 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			15,
+			10,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			206,
+			986,
+			30,
+			35
+		},
+		alias = {
+			"demonEvil_0013"
+		}
+	},
+	demonEvil_0014 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			16,
+			6,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			970,
+			313,
+			29,
+			39
+		},
+		alias = {
+			"demonEvil_0015"
+		}
+	},
+	demonEvil_0016 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			5,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			865,
+			313,
+			29,
+			40
+		},
+		alias = {
+			"demonEvil_0017"
+		}
+	},
+	demonEvil_0018 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			5,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			900,
+			313,
+			29,
+			40
+		},
+		alias = {}
+	},
+	demonEvil_0019 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			18,
+			7,
+			18,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			400,
+			598,
+			26,
+			38
+		},
+		alias = {
+			"demonEvil_0020"
+		}
+	},
+	demonEvil_0021 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			12,
+			18,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			635,
+			376,
+			27,
+			33
+		},
+		alias = {
+			"demonEvil_0022"
+		}
+	},
+	demonEvil_0023 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			9,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			597,
+			29,
+			36
+		},
+		alias = {
+			"demonEvil_0024"
+		}
+	},
+	demonEvil_0025 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			6,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			376,
+			29,
+			39
+		},
+		alias = {
+			"demonEvil_0026"
+		}
+	},
+	demonEvil_0027 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			6,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			800,
+			28,
+			39
+		},
+		alias = {
+			"demonEvil_0028"
+		}
+	},
+	demonEvil_0029 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			7,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			890,
+			28,
+			38
+		},
+		alias = {}
+	},
+	demonEvil_0030 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			8,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			554,
+			29,
+			37
+		},
+		alias = {
+			"demonEvil_0031"
+		}
+	},
+	demonEvil_0032 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			11,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			681,
+			29,
+			34
+		},
+		alias = {
+			"demonEvil_0033"
+		}
+	},
+	demonEvil_0034 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			9,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			639,
+			29,
+			36
+		},
+		alias = {
+			"demonEvil_0035"
+		}
+	},
+	demonEvil_0036 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			6,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			421,
+			29,
+			39
+		},
+		alias = {
+			"demonEvil_0037"
+		}
+	},
+	demonEvil_0038 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			6,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			845,
+			28,
+			39
+		},
+		alias = {
+			"demonEvil_0039"
+		}
+	},
+	demonEvil_0040 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			7,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			934,
+			28,
+			38
+		},
+		alias = {}
+	},
+	demonEvil_0041 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			7,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			510,
+			29,
+			38
+		},
+		alias = {
+			"demonEvil_0042"
+		}
+	},
+	demonEvil_0043 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			11,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			721,
+			29,
+			34
+		},
+		alias = {
+			"demonEvil_0044"
+		}
+	},
+	demonEvil_0045 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			18,
+			11,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			468,
+			376,
+			28,
+			34
+		},
+		alias = {
+			"demonEvil_0046"
+		}
+	},
+	demonEvil_0047 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			18,
+			9,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			400,
+			376,
+			28,
+			36
+		},
+		alias = {
+			"demonEvil_0048"
+		}
+	},
+	demonEvil_0049 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			18,
+			7,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			400,
+			554,
+			27,
+			38
+		},
+		alias = {
+			"demonEvil_0050"
+		}
+	},
+	demonEvil_0051 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			18,
+			6,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			400,
+			464,
+			27,
+			39
+		},
+		alias = {}
+	},
+	demonEvil_0052 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			9,
+			18,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			536,
+			376,
+			27,
+			36
+		},
+		alias = {
+			"demonEvil_0053"
+		}
+	},
+	demonEvil_0054 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			13,
+			18,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			995,
+			328,
+			27,
+			32
+		},
+		alias = {
+			"demonEvil_0055"
+		}
+	},
+	demonEvil_0056 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			11,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			502,
+			376,
+			28,
+			34
+		},
+		alias = {
+			"demonEvil_0057"
+		}
+	},
+	demonEvil_0058 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			7,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			978,
+			28,
+			38
+		},
+		alias = {
+			"demonEvil_0059"
+		}
+	},
+	demonEvil_0060 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			6,
+			18,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			400,
+			509,
+			27,
+			39
+		},
+		alias = {
+			"demonEvil_0061"
+		}
+	},
+	demonEvil_0062 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			18,
+			5,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			400,
+			418,
+			27,
+			40
+		},
+		alias = {}
+	},
+	demonEvil_0063 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			18,
+			9,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			376,
+			27,
+			36
+		},
+		alias = {
+			"demonEvil_0064"
+		}
+	},
+	demonEvil_0065 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			18,
+			13,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			668,
+			376,
+			27,
+			32
+		},
+		alias = {
+			"demonEvil_0066"
+		}
+	},
+	demonEvil_0067 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			10,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			434,
+			376,
+			28,
+			35
+		},
+		alias = {
+			"demonEvil_0068"
+		}
+	},
+	demonEvil_0069 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			11,
+			9,
+			18,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			991,
+			244,
+			33,
+			36
+		},
+		alias = {
+			"demonEvil_0070",
+			"demonEvil_0071",
+			"demonEvil_0072"
+		}
+	},
+	demonEvil_0073 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			19,
+			10,
+			2,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			988,
+			41,
+			35
+		},
+		alias = {
+			"demonEvil_0074",
+			"demonEvil_0075",
+			"demonEvil_0076"
+		}
+	},
+	demonEvil_0077 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			9,
+			10,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			788,
+			313,
+			35,
+			44
+		},
+		alias = {}
+	},
+	demonEvil_0078 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			9,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			988,
+			848,
+			35,
+			45
+		},
+		alias = {}
+	},
+	demonEvil_0079 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			16,
+			3,
+			7,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			659,
+			313,
+			39,
+			51
+		},
+		alias = {
+			"demonEvil_0080"
+		}
+	},
+	demonEvil_0081 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			13,
+			1,
+			6,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			561,
+			313,
+			43,
+			53
+		},
+		alias = {
+			"demonEvil_0082"
+		}
+	},
+	demonEvil_0083 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			13,
+			4,
+			6,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			610,
+			313,
+			43,
+			50
+		},
+		alias = {}
+	},
+	demonEvil_0084 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			12,
+			4,
+			3,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			856,
+			116,
+			47,
+			50
+		},
+		alias = {}
+	},
+	demonEvil_0085 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			12,
+			1,
+			3,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			803,
+			116,
+			47,
+			53
+		},
+		alias = {}
+	},
+	demonEvil_0086 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			18,
+			1,
+			7,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			987,
+			971,
+			37,
+			53
+		},
+		alias = {}
+	},
+	demonEvil_0087 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			18,
+			3,
+			7,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			704,
+			313,
+			37,
+			51
+		},
+		alias = {
+			"demonEvil_0088",
+			"demonEvil_0089",
+			"demonEvil_0090",
+			"demonEvil_0091",
+			"demonEvil_0092",
+			"demonEvil_0093",
+			"demonEvil_0094",
+			"demonEvil_0095"
+		}
+	},
+	demonEvil_0096 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			18,
+			0,
+			7,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			987,
+			911,
+			37,
+			54
+		},
+		alias = {
+			"demonEvil_0097"
+		}
+	},
+	demonEvil_0098 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			9,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			747,
+			313,
+			35,
+			45
+		},
+		alias = {}
+	},
+	demonEvil_0099 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			17,
+			9,
+			16,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			995,
+			279,
+			29,
+			43
+		},
+		alias = {}
+	},
+	demonFlying_0001 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			26,
+			36,
+			30,
+			44
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			444,
+			116,
+			54,
+			56
+		},
+		alias = {
+			"demonFlying_0002"
+		}
+	},
+	demonFlying_0003 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			29,
+			34,
+			30,
+			43
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			434,
+			179,
+			51,
+			59
+		},
+		alias = {
+			"demonFlying_0004"
+		}
+	},
+	demonFlying_0005 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			18,
+			32,
+			30,
+			53
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			489,
+			6,
+			62,
+			51
+		},
+		alias = {
+			"demonFlying_0006"
+		}
+	},
+	demonFlying_0007 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			15,
+			14,
+			31,
+			52
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			848,
+			848,
+			64,
+			70
+		},
+		alias = {
+			"demonFlying_0008"
+		}
+	},
+	demonFlying_0009 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			22,
+			1,
+			32,
+			50
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			116,
+			56,
+			85
+		},
+		alias = {
+			"demonFlying_0010"
+		}
+	},
+	demonFlying_0011 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			27,
+			0,
+			32,
+			49
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			538,
+			51,
+			87
+		},
+		alias = {
+			"demonFlying_0012"
+		}
+	},
+	demonFlying_0013 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			22,
+			18,
+			32,
+			52
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			283,
+			56,
+			66
+		},
+		alias = {
+			"demonFlying_0014"
+		}
+	},
+	demonFlying_0015 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			23,
+			37,
+			23,
+			41
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			848,
+			924,
+			64,
+			58
+		},
+		alias = {
+			"demonFlying_0016"
+		}
+	},
+	demonFlying_0017 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			27,
+			35,
+			26,
+			40
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			553,
+			57,
+			61
+		},
+		alias = {
+			"demonFlying_0018"
+		}
+	},
+	demonFlying_0019 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			15,
+			35,
+			15,
+			52
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			530,
+			113,
+			80,
+			49
+		},
+		alias = {
+			"demonFlying_0020"
+		}
+	},
+	demonFlying_0021 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			12,
+			17,
+			12,
+			50
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			113,
+			86,
+			69
+		},
+		alias = {
+			"demonFlying_0022"
+		}
+	},
+	demonFlying_0023 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			19,
+			4,
+			18,
+			49
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			698,
+			717,
+			73,
+			83
+		},
+		alias = {
+			"demonFlying_0024"
+		}
+	},
+	demonFlying_0025 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			24,
+			3,
+			24,
+			48
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			69,
+			62,
+			85
+		},
+		alias = {
+			"demonFlying_0026"
+		}
+	},
+	demonFlying_0027 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			19,
+			21,
+			18,
+			50
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			870,
+			545,
+			73,
+			65
+		},
+		alias = {
+			"demonFlying_0028"
+		}
+	},
+	demonFlying_0029 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			23,
+			38,
+			23,
+			41
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			918,
+			848,
+			64,
+			57
+		},
+		alias = {
+			"demonFlying_0030"
+		}
+	},
+	demonFlying_0031 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			27,
+			36,
+			26,
+			40
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			754,
+			57,
+			60
+		},
+		alias = {
+			"demonFlying_0032"
+		}
+	},
+	demonFlying_0033 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			15,
+			35,
+			15,
+			52
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			616,
+			113,
+			80,
+			49
+		},
+		alias = {
+			"demonFlying_0034"
+		}
+	},
+	demonFlying_0035 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			12,
+			17,
+			12,
+			50
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			438,
+			113,
+			86,
+			69
+		},
+		alias = {
+			"demonFlying_0036"
+		}
+	},
+	demonFlying_0037 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			19,
+			4,
+			18,
+			49
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			698,
+			806,
+			73,
+			83
+		},
+		alias = {
+			"demonFlying_0038"
+		}
+	},
+	demonFlying_0039 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			24,
+			3,
+			24,
+			48
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			160,
+			62,
+			85
+		},
+		alias = {
+			"demonFlying_0040"
+		}
+	},
+	demonFlying_0041 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			19,
+			21,
+			18,
+			50
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			949,
+			545,
+			73,
+			65
+		},
+		alias = {
+			"demonFlying_0042"
+		}
+	},
+	demonFlying_0043 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			26,
+			32,
+			27,
+			48
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			820,
+			57,
+			56
+		},
+		alias = {}
+	},
+	demonFlying_0044 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			26,
+			32,
+			27,
+			48
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			882,
+			57,
+			56
+		},
+		alias = {}
+	},
+	demonFlying_0045 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			22,
+			30,
+			23,
+			52
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			777,
+			908,
+			65,
+			54
+		},
+		alias = {}
+	},
+	demonFlying_0046 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			22,
+			30,
+			23,
+			52
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			777,
+			968,
+			65,
+			54
+		},
+		alias = {}
+	},
+	demonFlying_0047 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			20,
+			29,
+			19,
+			57
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			698,
+			974,
+			71,
+			50
+		},
+		alias = {}
+	},
+	demonFlying_0048 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			20,
+			29,
+			19,
+			57
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			777,
+			717,
+			71,
+			50
+		},
+		alias = {}
+	},
+	demonFlying_0049 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			19,
+			28,
+			17,
+			56
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			782,
+			113,
+			74,
+			52
+		},
+		alias = {}
+	},
+	demonFlying_0050 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			19,
+			28,
+			17,
+			59
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			942,
+			113,
+			74,
+			49
+		},
+		alias = {}
+	},
+	demonFlying_0051 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			18,
+			29,
+			17,
+			59
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			141,
+			59,
+			75,
+			48
+		},
+		alias = {}
+	},
+	demonFlying_0052 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			18,
+			29,
+			17,
+			60
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			222,
+			59,
+			75,
+			47
+		},
+		alias = {}
+	},
+	demonFlying_0053 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			26,
+			33,
+			26,
+			60
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			384,
+			58,
+			43
+		},
+		alias = {}
+	},
+	demonFlying_0054 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			110,
+			136
+		},
+		trim = {
+			34,
+			33,
+			32,
+			66
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			978,
+			44,
+			37
+		},
+		alias = {}
+	},
+	demonMage_0001 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			18,
+			13,
+			20,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			909,
+			179,
+			44,
+			59
+		},
+		alias = {
+			"demonMage_0002"
+		}
+	},
+	demonMage_0003 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			16,
+			8,
+			19,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			802,
+			47,
+			64
+		},
+		alias = {
+			"demonMage_0004"
+		}
+	},
+	demonMage_0005 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			16,
+			6,
+			18,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			844,
+			48,
+			66
+		},
+		alias = {
+			"demonMage_0006"
+		}
+	},
+	demonMage_0007 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			15,
+			6,
+			18,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			700,
+			49,
+			66
+		},
+		alias = {}
+	},
+	demonMage_0008 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			16,
+			8,
+			18,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			387,
+			48,
+			64
+		},
+		alias = {
+			"demonMage_0009"
+		}
+	},
+	demonMage_0010 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			17,
+			13,
+			18,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			491,
+			179,
+			47,
+			59
+		},
+		alias = {
+			"demonMage_0011"
+		}
+	},
+	demonMage_0012 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			18,
+			12,
+			20,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			590,
+			44,
+			60
+		},
+		alias = {
+			"demonMage_0013"
+		}
+	},
+	demonMage_0014 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			16,
+			8,
+			19,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			872,
+			47,
+			64
+		},
+		alias = {
+			"demonMage_0015"
+		}
+	},
+	demonMage_0016 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			16,
+			6,
+			18,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			916,
+			48,
+			66
+		},
+		alias = {
+			"demonMage_0017"
+		}
+	},
+	demonMage_0018 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			15,
+			6,
+			18,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			772,
+			49,
+			66
+		},
+		alias = {}
+	},
+	demonMage_0019 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			16,
+			9,
+			18,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			457,
+			48,
+			63
+		},
+		alias = {
+			"demonMage_0020"
+		}
+	},
+	demonMage_0021 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			17,
+			14,
+			18,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			544,
+			179,
+			47,
+			58
+		},
+		alias = {
+			"demonMage_0022"
+		}
+	},
+	demonMage_0023 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			20,
+			15,
+			19,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			313,
+			43,
+			57
+		},
+		alias = {
+			"demonMage_0024"
+		}
+	},
+	demonMage_0025 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			18,
+			11,
+			18,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			472,
+			244,
+			46,
+			61
+		},
+		alias = {
+			"demonMage_0026"
+		}
+	},
+	demonMage_0027 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			18,
+			9,
+			17,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			942,
+			47,
+			63
+		},
+		alias = {
+			"demonMage_0028"
+		}
+	},
+	demonMage_0029 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			18,
+			9,
+			17,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			244,
+			47,
+			63
+		},
+		alias = {}
+	},
+	demonMage_0030 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			18,
+			12,
+			18,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			732,
+			244,
+			46,
+			60
+		},
+		alias = {
+			"demonMage_0031"
+		}
+	},
+	demonMage_0032 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			19,
+			17,
+			19,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			959,
+			179,
+			44,
+			55
+		},
+		alias = {
+			"demonMage_0033"
+		}
+	},
+	demonMage_0034 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			20,
+			15,
+			19,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			414,
+			313,
+			43,
+			57
+		},
+		alias = {
+			"demonMage_0035"
+		}
+	},
+	demonMage_0036 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			18,
+			11,
+			18,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			524,
+			244,
+			46,
+			61
+		},
+		alias = {
+			"demonMage_0037"
+		}
+	},
+	demonMage_0038 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			18,
+			9,
+			17,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			366,
+			244,
+			47,
+			63
+		},
+		alias = {
+			"demonMage_0039"
+		}
+	},
+	demonMage_0040 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			18,
+			9,
+			17,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			419,
+			244,
+			47,
+			63
+		},
+		alias = {}
+	},
+	demonMage_0041 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			18,
+			12,
+			18,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			784,
+			244,
+			46,
+			60
+		},
+		alias = {
+			"demonMage_0042"
+		}
+	},
+	demonMage_0043 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			19,
+			17,
+			19,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			656,
+			44,
+			55
+		},
+		alias = {
+			"demonMage_0044"
+		}
+	},
+	demonMage_0045 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			19,
+			15,
+			20,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			463,
+			313,
+			43,
+			57
+		},
+		alias = {
+			"demonMage_0046"
+		}
+	},
+	demonMage_0047 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			17,
+			11,
+			19,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			576,
+			244,
+			46,
+			61
+		},
+		alias = {
+			"demonMage_0048"
+		}
+	},
+	demonMage_0049 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			16,
+			9,
+			18,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			526,
+			48,
+			63
+		},
+		alias = {
+			"demonMage_0050"
+		}
+	},
+	demonMage_0051 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			16,
+			9,
+			18,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			595,
+			48,
+			63
+		},
+		alias = {}
+	},
+	demonMage_0052 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			17,
+			12,
+			19,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			836,
+			244,
+			46,
+			60
+		},
+		alias = {
+			"demonMage_0053"
+		}
+	},
+	demonMage_0054 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			18,
+			17,
+			20,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			717,
+			44,
+			55
+		},
+		alias = {
+			"demonMage_0055"
+		}
+	},
+	demonMage_0056 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			19,
+			15,
+			20,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			512,
+			313,
+			43,
+			57
+		},
+		alias = {
+			"demonMage_0057"
+		}
+	},
+	demonMage_0058 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			17,
+			11,
+			19,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			628,
+			244,
+			46,
+			61
+		},
+		alias = {
+			"demonMage_0059"
+		}
+	},
+	demonMage_0060 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			16,
+			9,
+			18,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			664,
+			48,
+			63
+		},
+		alias = {
+			"demonMage_0061"
+		}
+	},
+	demonMage_0062 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			16,
+			9,
+			18,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			733,
+			48,
+			63
+		},
+		alias = {}
+	},
+	demonMage_0063 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			17,
+			12,
+			19,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			888,
+			244,
+			46,
+			60
+		},
+		alias = {
+			"demonMage_0064"
+		}
+	},
+	demonMage_0065 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			18,
+			17,
+			20,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			778,
+			44,
+			55
+		},
+		alias = {
+			"demonMage_0066"
+		}
+	},
+	demonMage_0067 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			19,
+			11,
+			19,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			523,
+			44,
+			61
+		},
+		alias = {
+			"demonMage_0068",
+			"demonMage_0069",
+			"demonMage_0086",
+			"demonMage_0087",
+			"demonMage_0088",
+			"demonMage_0089",
+			"demonMage_0114"
+		}
+	},
+	demonMage_0070 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			11,
+			13,
+			17,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			179,
+			54,
+			59
+		},
+		alias = {
+			"demonMage_0071"
+		}
+	},
+	demonMage_0072 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			8,
+			14,
+			15,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			695,
+			59,
+			58
+		},
+		alias = {
+			"demonMage_0073"
+		}
+	},
+	demonMage_0074 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			8,
+			15,
+			15,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			826,
+			6,
+			59,
+			57
+		},
+		alias = {
+			"demonMage_0075"
+		}
+	},
+	demonMage_0076 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			23,
+			10,
+			14,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			940,
+			244,
+			45,
+			62
+		},
+		alias = {}
+	},
+	demonMage_0077 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			23,
+			10,
+			14,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			385,
+			45,
+			62
+		},
+		alias = {}
+	},
+	demonMage_0078 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			23,
+			14,
+			7,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			260,
+			179,
+			52,
+			58
+		},
+		alias = {}
+	},
+	demonMage_0079 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			23,
+			14,
+			7,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			318,
+			179,
+			52,
+			58
+		},
+		alias = {}
+	},
+	demonMage_0080 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			23,
+			11,
+			2,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			620,
+			57,
+			61
+		},
+		alias = {}
+	},
+	demonMage_0081 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			23,
+			11,
+			2,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			687,
+			57,
+			61
+		},
+		alias = {}
+	},
+	demonMage_0082 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			23,
+			12,
+			1,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			962,
+			58,
+			60
+		},
+		alias = {}
+	},
+	demonMage_0083 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			23,
+			12,
+			1,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			142,
+			58,
+			60
+		},
+		alias = {}
+	},
+	demonMage_0084 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			23,
+			12,
+			3,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			568,
+			56,
+			60
+		},
+		alias = {}
+	},
+	demonMage_0085 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			23,
+			12,
+			3,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			634,
+			56,
+			60
+		},
+		alias = {}
+	},
+	demonMage_0090 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			14,
+			14,
+			16,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			376,
+			179,
+			52,
+			58
+		},
+		alias = {
+			"demonMage_0091"
+		}
+	},
+	demonMage_0092 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			12,
+			15,
+			15,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			116,
+			55,
+			57
+		},
+		alias = {
+			"demonMage_0093"
+		}
+	},
+	demonMage_0094 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			11,
+			16,
+			14,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			944,
+			57,
+			56
+		},
+		alias = {
+			"demonMage_0095"
+		}
+	},
+	demonMage_0096 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			9,
+			16,
+			14,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			891,
+			6,
+			59,
+			56
+		},
+		alias = {
+			"demonMage_0097"
+		}
+	},
+	demonMage_0098 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			11,
+			8,
+			16,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			780,
+			55,
+			64
+		},
+		alias = {}
+	},
+	demonMage_0099 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			11,
+			8,
+			16,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			850,
+			55,
+			64
+		},
+		alias = {}
+	},
+	demonMage_0100 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			11,
+			8,
+			16,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			920,
+			55,
+			64
+		},
+		alias = {}
+	},
+	demonMage_0101 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			10,
+			8,
+			16,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			498,
+			56,
+			64
+		},
+		alias = {}
+	},
+	demonMage_0102 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			9,
+			7,
+			17,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			427,
+			56,
+			65
+		},
+		alias = {}
+	},
+	demonMage_0103 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			9,
+			6,
+			17,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			355,
+			56,
+			66
+		},
+		alias = {}
+	},
+	demonMage_0104 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			8,
+			6,
+			17,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			481,
+			57,
+			66
+		},
+		alias = {}
+	},
+	demonMage_0105 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			7,
+			5,
+			17,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			889,
+			58,
+			67
+		},
+		alias = {}
+	},
+	demonMage_0106 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			7,
+			5,
+			17,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			69,
+			58,
+			67
+		},
+		alias = {}
+	},
+	demonMage_0107 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			6,
+			4,
+			17,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			621,
+			59,
+			68
+		},
+		alias = {}
+	},
+	demonMage_0108 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			6,
+			3,
+			17,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			546,
+			59,
+			69
+		},
+		alias = {}
+	},
+	demonMage_0109 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			5,
+			3,
+			17,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			399,
+			60,
+			69
+		},
+		alias = {}
+	},
+	demonMage_0110 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			12,
+			9,
+			17,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			971,
+			455,
+			53,
+			63
+		},
+		alias = {}
+	},
+	demonMage_0111 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			12,
+			9,
+			17,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			244,
+			53,
+			63
+		},
+		alias = {}
+	},
+	demonMage_0112 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			12,
+			9,
+			19,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			631,
+			51,
+			63
+		},
+		alias = {}
+	},
+	demonMage_0113 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			17,
+			11,
+			19,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			680,
+			244,
+			46,
+			61
+		},
+		alias = {}
+	},
+	demonMage_0115 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			17,
+			11,
+			17,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			316,
+			48,
+			65
+		},
+		alias = {}
+	},
+	demonMage_0116 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			17,
+			11,
+			17,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			244,
+			48,
+			66
+		},
+		alias = {}
+	},
+	demonMage_0117 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			14,
+			7,
+			12,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			207,
+			56,
+			70
+		},
+		alias = {
+			"demonMage_0118"
+		}
+	},
+	demonMage_0119 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			11,
+			5,
+			11,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			321,
+			60,
+			72
+		},
+		alias = {
+			"demonMage_0120"
+		}
+	},
+	demonMage_0121 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			11,
+			11,
+			11,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			474,
+			60,
+			66
+		},
+		alias = {}
+	},
+	demonMage_0122 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			9,
+			11,
+			7,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			849,
+			773,
+			66,
+			66
+		},
+		alias = {}
+	},
+	demonMage_0123 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			9,
+			8,
+			7,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			777,
+			773,
+			66,
+			69
+		},
+		alias = {}
+	},
+	demonMage_0124 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			17,
+			8,
+			13,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			390,
+			52,
+			69
+		},
+		alias = {}
+	},
+	demonMage_0125 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			17,
+			10,
+			13,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			465,
+			52,
+			67
+		},
+		alias = {
+			"demonMage_0126",
+			"demonMage_0127",
+			"demonMage_0128",
+			"demonMage_0129",
+			"demonMage_0130",
+			"demonMage_0131",
+			"demonMage_0132",
+			"demonMage_0133"
+		}
+	},
+	demonMage_0134 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			17,
+			6,
+			13,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			313,
+			52,
+			71
+		},
+		alias = {
+			"demonMage_0135"
+		}
+	},
+	demonMage_0136 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			19,
+			11,
+			17,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			313,
+			46,
+			66
+		},
+		alias = {}
+	},
+	demonMage_0137 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			80
+		},
+		trim = {
+			19,
+			11,
+			19,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			453,
+			44,
+			64
+		},
+		alias = {}
+	},
+	demonWolf_0001 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			10,
+			10,
+			17,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			383,
+			116,
+			55,
+			42
+		},
+		alias = {
+			"demonWolf_0002"
+		}
+	},
+	demonWolf_0003 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			12,
+			4,
+			11,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			759,
+			59,
+			48
+		},
+		alias = {}
+	},
+	demonWolf_0004 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			16,
+			3,
+			7,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			956,
+			6,
+			59,
+			49
+		},
+		alias = {}
+	},
+	demonWolf_0005 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			13,
+			4,
+			7,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			557,
+			6,
+			62,
+			48
+		},
+		alias = {}
+	},
+	demonWolf_0006 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			14,
+			8,
+			8,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			760,
+			6,
+			60,
+			44
+		},
+		alias = {}
+	},
+	demonWolf_0007 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			17,
+			11,
+			8,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			69,
+			57,
+			41
+		},
+		alias = {}
+	},
+	demonWolf_0008 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			17,
+			12,
+			12,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			631,
+			69,
+			53,
+			40
+		},
+		alias = {}
+	},
+	demonWolf_0009 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			18,
+			14,
+			15,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			919,
+			69,
+			49,
+			38
+		},
+		alias = {}
+	},
+	demonWolf_0010 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			17,
+			13,
+			13,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			690,
+			69,
+			52,
+			39
+		},
+		alias = {}
+	},
+	demonWolf_0011 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			18,
+			12,
+			18,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			753,
+			179,
+			46,
+			42
+		},
+		alias = {
+			"demonWolf_0012"
+		}
+	},
+	demonWolf_0013 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			18,
+			7,
+			18,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			909,
+			116,
+			46,
+			45
+		},
+		alias = {
+			"demonWolf_0014"
+		}
+	},
+	demonWolf_0015 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			18,
+			8,
+			18,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			597,
+			179,
+			46,
+			44
+		},
+		alias = {
+			"demonWolf_0016"
+		}
+	},
+	demonWolf_0017 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			18,
+			9,
+			18,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			701,
+			179,
+			46,
+			43
+		},
+		alias = {
+			"demonWolf_0018"
+		}
+	},
+	demonWolf_0019 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			18,
+			18,
+			18,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			990,
+			46,
+			34
+		},
+		alias = {
+			"demonWolf_0020"
+		}
+	},
+	demonWolf_0021 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			18,
+			18,
+			18,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			974,
+			413,
+			46,
+			34
+		},
+		alias = {
+			"demonWolf_0022"
+		}
+	},
+	demonWolf_0023 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			18,
+			14,
+			18,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			857,
+			179,
+			46,
+			38
+		},
+		alias = {
+			"demonWolf_0024"
+		}
+	},
+	demonWolf_0025 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			18,
+			8,
+			18,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			649,
+			179,
+			46,
+			44
+		},
+		alias = {
+			"demonWolf_0026"
+		}
+	},
+	demonWolf_0027 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			18,
+			7,
+			18,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			961,
+			116,
+			46,
+			45
+		},
+		alias = {
+			"demonWolf_0028"
+		}
+	},
+	demonWolf_0029 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			18,
+			12,
+			18,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			805,
+			179,
+			46,
+			40
+		},
+		alias = {
+			"demonWolf_0030"
+		}
+	},
+	demonWolf_0031 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			9,
+			13,
+			10,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			282,
+			6,
+			63,
+			39
+		},
+		alias = {}
+	},
+	demonWolf_0032 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			5,
+			14,
+			13,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			682,
+			59,
+			64,
+			38
+		},
+		alias = {}
+	},
+	demonWolf_0033 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			4,
+			14,
+			14,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			752,
+			59,
+			64,
+			38
+		},
+		alias = {}
+	},
+	demonWolf_0034 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			3,
+			15,
+			15,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			822,
+			59,
+			64,
+			37
+		},
+		alias = {
+			"demonWolf_0035"
+		}
+	},
+	demonWolf_0036 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			10,
+			12,
+			11,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			693,
+			6,
+			61,
+			40
+		},
+		alias = {
+			"demonWolf_0037"
+		}
+	},
+	demonWolf_0038 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			12,
+			11,
+			8,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			625,
+			6,
+			62,
+			41
+		},
+		alias = {}
+	},
+	demonWolf_0039 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			16,
+			13,
+			3,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			351,
+			6,
+			63,
+			39
+		},
+		alias = {
+			"demonWolf_0040"
+		}
+	},
+	demonWolf_0041 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			15,
+			15,
+			5,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			986,
+			62,
+			37
+		},
+		alias = {
+			"demonWolf_0042"
+		}
+	},
+	demonWolf_0043 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			13,
+			13,
+			6,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			420,
+			6,
+			63,
+			39
+		},
+		alias = {}
+	},
+	demonWolf_0044 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			10,
+			13,
+			7,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			540,
+			59,
+			65,
+			39
+		},
+		alias = {
+			"demonWolf_0045"
+		}
+	},
+	demonWolf_0046 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			9,
+			13,
+			10,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			961,
+			59,
+			63,
+			42
+		},
+		alias = {}
+	},
+	demonWolf_0047 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			9,
+			13,
+			10,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			75,
+			6,
+			63,
+			42
+		},
+		alias = {}
+	},
+	demonWolf_0048 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			8,
+			10,
+			16,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			332,
+			58,
+			46
+		},
+		alias = {
+			"demonWolf_0049"
+		}
+	},
+	demonWolf_0050 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			10,
+			5,
+			18,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			504,
+			116,
+			54,
+			51
+		},
+		alias = {
+			"demonWolf_0051"
+		}
+	},
+	demonWolf_0052 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			12,
+			11,
+			16,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			684,
+			116,
+			54,
+			46
+		},
+		alias = {}
+	},
+	demonWolf_0053 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			12,
+			11,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			322,
+			116,
+			55,
+			46
+		},
+		alias = {}
+	},
+	demonWolf_0054 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			12,
+			8,
+			15,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			261,
+			116,
+			55,
+			48
+		},
+		alias = {}
+	},
+	demonWolf_0055 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			12,
+			8,
+			17,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			744,
+			116,
+			53,
+			48
+		},
+		alias = {}
+	},
+	demonWolf_0056 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			11,
+			9,
+			17,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			624,
+			116,
+			54,
+			47
+		},
+		alias = {
+			"demonWolf_0057",
+			"demonWolf_0058",
+			"demonWolf_0059",
+			"demonWolf_0060",
+			"demonWolf_0061",
+			"demonWolf_0062",
+			"demonWolf_0063",
+			"demonWolf_0064"
+		}
+	},
+	demonWolf_0065 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			11,
+			6,
+			17,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			564,
+			116,
+			54,
+			50
+		},
+		alias = {
+			"demonWolf_0066"
+		}
+	},
+	demonWolf_0067 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			9,
+			13,
+			10,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			144,
+			6,
+			63,
+			42
+		},
+		alias = {}
+	},
+	demonWolf_0068 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			82,
+			58
+		},
+		trim = {
+			9,
+			13,
+			10,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			213,
+			6,
+			63,
+			41
+		},
+		alias = {}
+	},
+	lavaElemental_0001 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			21,
+			31,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			816,
+			88,
+			81
+		},
+		alias = {
+			"lavaElemental_0002"
+		}
+	},
+	lavaElemental_0003 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			36,
+			18,
+			33,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			338,
+			915,
+			85,
+			84
+		},
+		alias = {}
+	},
+	lavaElemental_0004 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			17,
+			34,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			338,
+			824,
+			85,
+			85
+		},
+		alias = {
+			"lavaElemental_0005"
+		}
+	},
+	lavaElemental_0006 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			15,
+			35,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			431,
+			844,
+			84,
+			87
+		},
+		alias = {}
+	},
+	lavaElemental_0007 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			34,
+			13,
+			37,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			521,
+			630,
+			83,
+			89
+		},
+		alias = {
+			"lavaElemental_0008"
+		}
+	},
+	lavaElemental_0009 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			15,
+			38,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			611,
+			624,
+			81,
+			87
+		},
+		alias = {}
+	},
+	lavaElemental_0010 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			16,
+			34,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			338,
+			732,
+			85,
+			86
+		},
+		alias = {
+			"lavaElemental_0011"
+		}
+	},
+	lavaElemental_0012 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			36,
+			18,
+			40,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			782,
+			624,
+			78,
+			84
+		},
+		alias = {}
+	},
+	lavaElemental_0013 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			36,
+			19,
+			33,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			431,
+			366,
+			85,
+			83
+		},
+		alias = {
+			"lavaElemental_0014"
+		}
+	},
+	lavaElemental_0015 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			36,
+			17,
+			39,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			611,
+			913,
+			79,
+			85
+		},
+		alias = {}
+	},
+	lavaElemental_0016 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			36,
+			16,
+			38,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			611,
+			821,
+			80,
+			86
+		},
+		alias = {
+			"lavaElemental_0017"
+		}
+	},
+	lavaElemental_0018 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			37,
+			13,
+			33,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			431,
+			654,
+			84,
+			89
+		},
+		alias = {}
+	},
+	lavaElemental_0019 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			37,
+			12,
+			33,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			431,
+			558,
+			84,
+			90
+		},
+		alias = {
+			"lavaElemental_0020"
+		}
+	},
+	lavaElemental_0021 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			37,
+			13,
+			35,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			521,
+			823,
+			82,
+			89
+		},
+		alias = {}
+	},
+	lavaElemental_0022 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			37,
+			14,
+			35,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			521,
+			918,
+			82,
+			88
+		},
+		alias = {
+			"lavaElemental_0023"
+		}
+	},
+	lavaElemental_0024 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			17,
+			32,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			338,
+			366,
+			87,
+			85
+		},
+		alias = {}
+	},
+	lavaElemental_0025 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			18,
+			31,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			550,
+			88,
+			84
+		},
+		alias = {}
+	},
+	lavaElemental_0026 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			31,
+			22,
+			35,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			432,
+			279,
+			88,
+			80
+		},
+		alias = {
+			"lavaElemental_0027"
+		}
+	},
+	lavaElemental_0028 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			30,
+			21,
+			33,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			729,
+			189,
+			91,
+			81
+		},
+		alias = {
+			"lavaElemental_0029"
+		}
+	},
+	lavaElemental_0030 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			29,
+			18,
+			32,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			896,
+			93,
+			84
+		},
+		alias = {
+			"lavaElemental_0031"
+		}
+	},
+	lavaElemental_0032 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			31,
+			19,
+			33,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			826,
+			189,
+			90,
+			83
+		},
+		alias = {
+			"lavaElemental_0033"
+		}
+	},
+	lavaElemental_0034 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			32,
+			22,
+			34,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			526,
+			279,
+			88,
+			80
+		},
+		alias = {
+			"lavaElemental_0035"
+		}
+	},
+	lavaElemental_0036 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			33,
+			23,
+			34,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			338,
+			457,
+			87,
+			79
+		},
+		alias = {
+			"lavaElemental_0037"
+		}
+	},
+	lavaElemental_0038 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			32,
+			22,
+			34,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			620,
+			279,
+			88,
+			80
+		},
+		alias = {
+			"lavaElemental_0039"
+		}
+	},
+	lavaElemental_0040 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			31,
+			21,
+			33,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			279,
+			90,
+			81
+		},
+		alias = {
+			"lavaElemental_0041"
+		}
+	},
+	lavaElemental_0042 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			29,
+			18,
+			32,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			189,
+			93,
+			84
+		},
+		alias = {
+			"lavaElemental_0043"
+		}
+	},
+	lavaElemental_0044 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			30,
+			19,
+			33,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			535,
+			189,
+			91,
+			83
+		},
+		alias = {
+			"lavaElemental_0045"
+		}
+	},
+	lavaElemental_0046 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			31,
+			22,
+			35,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			714,
+			279,
+			88,
+			80
+		},
+		alias = {
+			"lavaElemental_0047"
+		}
+	},
+	lavaElemental_0048 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			32,
+			22,
+			35,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			902,
+			279,
+			87,
+			80
+		},
+		alias = {
+			"lavaElemental_0049"
+		}
+	},
+	lavaElemental_0050 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			31,
+			22,
+			35,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			808,
+			279,
+			88,
+			80
+		},
+		alias = {
+			"lavaElemental_0051"
+		}
+	},
+	lavaElemental_0052 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			30,
+			21,
+			35,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			463,
+			89,
+			81
+		},
+		alias = {
+			"lavaElemental_0053"
+		}
+	},
+	lavaElemental_0054 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			30,
+			18,
+			33,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			341,
+			189,
+			91,
+			84
+		},
+		alias = {
+			"lavaElemental_0055"
+		}
+	},
+	lavaElemental_0056 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			29,
+			16,
+			32,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			712,
+			93,
+			86
+		},
+		alias = {
+			"lavaElemental_0057"
+		}
+	},
+	lavaElemental_0058 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			31,
+			19,
+			33,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			922,
+			189,
+			90,
+			83
+		},
+		alias = {
+			"lavaElemental_0059"
+		}
+	},
+	lavaElemental_0060 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			32,
+			20,
+			34,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			640,
+			88,
+			82
+		},
+		alias = {
+			"lavaElemental_0061"
+		}
+	},
+	lavaElemental_0062 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			32,
+			21,
+			34,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			903,
+			88,
+			81
+		},
+		alias = {
+			"lavaElemental_0063"
+		}
+	},
+	lavaElemental_0064 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			32,
+			20,
+			34,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			728,
+			88,
+			82
+		},
+		alias = {
+			"lavaElemental_0065"
+		}
+	},
+	lavaElemental_0066 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			30,
+			18,
+			33,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			438,
+			189,
+			91,
+			84
+		},
+		alias = {
+			"lavaElemental_0067"
+		}
+	},
+	lavaElemental_0068 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			29,
+			16,
+			32,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			804,
+			93,
+			86
+		},
+		alias = {
+			"lavaElemental_0069"
+		}
+	},
+	lavaElemental_0070 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			30,
+			20,
+			33,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			632,
+			189,
+			91,
+			82
+		},
+		alias = {
+			"lavaElemental_0071"
+		}
+	},
+	lavaElemental_0072 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			31,
+			21,
+			35,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			338,
+			279,
+			88,
+			81
+		},
+		alias = {}
+	},
+	lavaElemental_0073 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			20,
+			35,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			791,
+			455,
+			84,
+			82
+		},
+		alias = {
+			"lavaElemental_0074",
+			"lavaElemental_0075",
+			"lavaElemental_0102",
+			"lavaElemental_0125"
+		}
+	},
+	lavaElemental_0076 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			32,
+			21,
+			28,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			452,
+			94,
+			81
+		},
+		alias = {}
+	},
+	lavaElemental_0077 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			30,
+			22,
+			27,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			366,
+			97,
+			80
+		},
+		alias = {}
+	},
+	lavaElemental_0078 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			29,
+			22,
+			31,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			626,
+			94,
+			80
+		},
+		alias = {}
+	},
+	lavaElemental_0079 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			27,
+			10,
+			45,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			521,
+			725,
+			82,
+			92
+		},
+		alias = {
+			"lavaElemental_0080"
+		}
+	},
+	lavaElemental_0081 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			26,
+			4,
+			48,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			611,
+			717,
+			80,
+			98
+		},
+		alias = {
+			"lavaElemental_0082"
+		}
+	},
+	lavaElemental_0083 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			22,
+			5,
+			48,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			431,
+			455,
+			84,
+			97
+		},
+		alias = {
+			"lavaElemental_0084"
+		}
+	},
+	lavaElemental_0085 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			20,
+			5,
+			48,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			338,
+			542,
+			86,
+			97
+		},
+		alias = {
+			"lavaElemental_0086"
+		}
+	},
+	lavaElemental_0087 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			49,
+			25,
+			11,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			539,
+			94,
+			81
+		},
+		alias = {
+			"lavaElemental_0088"
+		}
+	},
+	lavaElemental_0089 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			49,
+			38,
+			8,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			243,
+			113,
+			97,
+			68
+		},
+		alias = {
+			"lavaElemental_0090"
+		}
+	},
+	lavaElemental_0091 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			49,
+			32,
+			7,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			189,
+			98,
+			74
+		},
+		alias = {
+			"lavaElemental_0092"
+		}
+	},
+	lavaElemental_0093 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			49,
+			36,
+			6,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			113,
+			99,
+			70
+		},
+		alias = {
+			"lavaElemental_0094",
+			"lavaElemental_0095",
+			"lavaElemental_0096",
+			"lavaElemental_0097",
+			"lavaElemental_0098",
+			"lavaElemental_0099"
+		}
+	},
+	lavaElemental_0100 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			49,
+			23,
+			29,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			866,
+			624,
+			76,
+			79
+		},
+		alias = {
+			"lavaElemental_0101"
+		}
+	},
+	lavaElemental_0103 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			20,
+			35,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			881,
+			455,
+			84,
+			82
+		},
+		alias = {}
+	},
+	lavaElemental_0104 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			20,
+			35,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			704,
+			366,
+			84,
+			83
+		},
+		alias = {
+			"lavaElemental_0124"
+		}
+	},
+	lavaElemental_0105 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			20,
+			35,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			794,
+			366,
+			84,
+			83
+		},
+		alias = {
+			"lavaElemental_0106"
+		}
+	},
+	lavaElemental_0107 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			20,
+			35,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			431,
+			937,
+			84,
+			84
+		},
+		alias = {
+			"lavaElemental_0108"
+		}
+	},
+	lavaElemental_0109 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			20,
+			35,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			884,
+			366,
+			84,
+			83
+		},
+		alias = {
+			"lavaElemental_0110"
+		}
+	},
+	lavaElemental_0111 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			20,
+			35,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			611,
+			455,
+			84,
+			83
+		},
+		alias = {
+			"lavaElemental_0112"
+		}
+	},
+	lavaElemental_0113 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			20,
+			35,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			701,
+			455,
+			84,
+			83
+		},
+		alias = {
+			"lavaElemental_0114",
+			"lavaElemental_0115",
+			"lavaElemental_0116",
+			"lavaElemental_0117",
+			"lavaElemental_0118",
+			"lavaElemental_0119",
+			"lavaElemental_0120",
+			"lavaElemental_0121"
+		}
+	},
+	lavaElemental_0122 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			20,
+			35,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			521,
+			455,
+			84,
+			84
+		},
+		alias = {
+			"lavaElemental_0123"
+		}
+	},
+	lavaElemental_0126 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			41,
+			15,
+			39,
+			21
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			948,
+			624,
+			74,
+			84
+		},
+		alias = {}
+	},
+	lavaElemental_0127 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			39,
+			12,
+			37,
+			21
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			698,
+			624,
+			78,
+			87
+		},
+		alias = {}
+	},
+	lavaElemental_0128 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			36,
+			10,
+			34,
+			21
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			431,
+			749,
+			84,
+			89
+		},
+		alias = {}
+	},
+	lavaElemental_0129 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			34,
+			8,
+			31,
+			21
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			366,
+			89,
+			91
+		},
+		alias = {}
+	},
+	lavaElemental_0130 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			29,
+			9,
+			28,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			269,
+			97,
+			91
+		},
+		alias = {}
+	},
+	lavaElemental_0131 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			29,
+			18,
+			26,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			932,
+			99,
+			82
+		},
+		alias = {}
+	},
+	lavaElemental_0132 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			27,
+			16,
+			24,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			838,
+			103,
+			88
+		},
+		alias = {}
+	},
+	lavaElemental_0133 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			27,
+			16,
+			22,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			734,
+			105,
+			98
+		},
+		alias = {}
+	},
+	lavaElemental_0134 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			25,
+			16,
+			20,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			633,
+			109,
+			95
+		},
+		alias = {}
+	},
+	lavaElemental_0135 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			23,
+			16,
+			17,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			529,
+			114,
+			98
+		},
+		alias = {}
+	},
+	lavaElemental_0136 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			22,
+			16,
+			16,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			426,
+			116,
+			97
+		},
+		alias = {}
+	},
+	lavaElemental_0137 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			21,
+			16,
+			15,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			324,
+			118,
+			96
+		},
+		alias = {}
+	},
+	lavaElemental_0138 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			19,
+			15,
+			13,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			218,
+			122,
+			100
+		},
+		alias = {}
+	},
+	lavaElemental_0139 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			17,
+			15,
+			11,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			113,
+			126,
+			99
+		},
+		alias = {}
+	},
+	lavaElemental_0140 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			16,
+			68,
+			9,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			59,
+			129,
+			48
+		},
+		alias = {}
+	},
+	lavaElemental_0141 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			15,
+			68,
+			8,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			863,
+			6,
+			131,
+			47
+		},
+		alias = {}
+	},
+	lavaElemental_0142 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			14,
+			69,
+			7,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			724,
+			6,
+			133,
+			46
+		},
+		alias = {}
+	},
+	lavaElemental_0143 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			13,
+			69,
+			5,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			582,
+			6,
+			136,
+			46
+		},
+		alias = {}
+	},
+	lavaElemental_0144 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			12,
+			70,
+			4,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			6,
+			138,
+			47
+		},
+		alias = {}
+	},
+	lavaElemental_0145 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			12,
+			70,
+			4,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			150,
+			6,
+			138,
+			47
+		},
+		alias = {}
+	},
+	lavaElemental_0146 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			12,
+			71,
+			4,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			294,
+			6,
+			138,
+			46
+		},
+		alias = {}
+	},
+	lavaElemental_0147 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			12,
+			71,
+			4,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			438,
+			6,
+			138,
+			46
+		},
+		alias = {
+			"lavaElemental_0148",
+			"lavaElemental_0149",
+			"lavaElemental_0150",
+			"lavaElemental_0151",
+			"lavaElemental_0152",
+			"lavaElemental_0153",
+			"lavaElemental_0154",
+			"lavaElemental_0155"
+		}
+	},
+	lavaElemental_0156 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			44,
+			79,
+			39,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			463,
+			59,
+			71,
+			31
+		},
+		alias = {}
+	},
+	lavaElemental_0157 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			46,
+			70,
+			43,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			611,
+			59,
+			65,
+			37
+		},
+		alias = {
+			"lavaElemental_0158"
+		}
+	},
+	lavaElemental_0159 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			48,
+			57,
+			43,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			892,
+			59,
+			63,
+			46
+		},
+		alias = {
+			"lavaElemental_0160"
+		}
+	},
+	lavaElemental_0161 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			47,
+			45,
+			44,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			6,
+			63,
+			57
+		},
+		alias = {
+			"lavaElemental_0162"
+		}
+	},
+	lavaElemental_0163 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			48,
+			37,
+			44,
+			19
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			251,
+			62,
+			64
+		},
+		alias = {
+			"lavaElemental_0164"
+		}
+	},
+	lavaElemental_0165 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			50,
+			30,
+			46,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			813,
+			58,
+			70
+		},
+		alias = {
+			"lavaElemental_0166"
+		}
+	},
+	lavaElemental_0167 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			51,
+			27,
+			48,
+			19
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			700,
+			55,
+			74
+		},
+		alias = {
+			"lavaElemental_0168"
+		}
+	},
+	lavaElemental_0169 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			46,
+			28,
+			45,
+			19
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			918,
+			911,
+			63,
+			73
+		},
+		alias = {
+			"lavaElemental_0170"
+		}
+	},
+	lavaElemental_0171 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			42,
+			28,
+			40,
+			19
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			698,
+			895,
+			72,
+			73
+		},
+		alias = {
+			"lavaElemental_0172"
+		}
+	},
+	lavaElemental_0173 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			38,
+			28,
+			38,
+			19
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			786,
+			545,
+			78,
+			73
+		},
+		alias = {
+			"lavaElemental_0174"
+		}
+	},
+	lavaElemental_0175 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			38,
+			28,
+			35,
+			19
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			699,
+			545,
+			81,
+			73
+		},
+		alias = {}
+	},
+	lavaElemental_0176 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			38,
+			28,
+			34,
+			19
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			611,
+			545,
+			82,
+			73
+		},
+		alias = {}
+	},
+	lavaElemental_0177 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			20,
+			34,
+			19
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			522,
+			366,
+			85,
+			81
+		},
+		alias = {}
+	},
+	lavaElemental_0178 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			20,
+			34,
+			19
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			613,
+			366,
+			85,
+			81
+		},
+		alias = {}
+	},
+	lavaElemental_0179 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			20,
+			33,
+			19
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			338,
+			645,
+			86,
+			81
+		},
+		alias = {}
+	},
+	lavaElemental_0180 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			154,
+			120
+		},
+		trim = {
+			35,
+			20,
+			35,
+			21
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			521,
+			545,
+			84,
+			79
+		},
+		alias = {
+			"lavaElemental_0181",
+			"lavaElemental_0182"
+		}
+	},
+	shield_small_0001 = {
+		a_name = "go_enemies_wastelands-1.png",
+		size = {
+			58,
+			46
+		},
+		trim = {
+			7,
+			5,
+			6,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			918,
+			990,
+			45,
+			33
+		},
+		alias = {
+			"shield_small_0011"
+		}
+	},
+	shield_small_0002 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			58,
+			46
+		},
+		trim = {
+			5,
+			3,
+			4,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			974,
+			69,
+			49,
+			37
+		},
+		alias = {
+			"shield_small_0010"
+		}
+	},
+	shield_small_0003 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			58,
+			46
+		},
+		trim = {
+			4,
+			3,
+			3,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			806,
+			69,
+			51,
+			37
+		},
+		alias = {
+			"shield_small_0009"
+		}
+	},
+	shield_small_0004 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			58,
+			46
+		},
+		trim = {
+			3,
+			3,
+			3,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			748,
+			69,
+			52,
+			37
+		},
+		alias = {
+			"shield_small_0008"
+		}
+	},
+	shield_small_0005 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			58,
+			46
+		},
+		trim = {
+			2,
+			1,
+			1,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			450,
+			69,
+			55,
+			41
+		},
+		alias = {
+			"shield_small_0007"
+		}
+	},
+	shield_small_0006 = {
+		a_name = "go_enemies_wastelands-2.png",
+		size = {
+			58,
+			46
+		},
+		trim = {
+			1,
+			1,
+			1,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			264,
+			69,
+			56,
+			41
+		},
+		alias = {}
+	}
+}
