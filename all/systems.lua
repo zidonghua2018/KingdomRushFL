@@ -1832,10 +1832,8 @@ function sys.main_script:on_update(dt, ts, store)
 			if s.co then
 				local success, error = coroutine.resume(s.co, e, store, s)
 
-				if coroutine.status(s.co) == "dead" or error ~= nil then
-					if error ~= nil then
-						log.error("Error running coro: %s", debug.traceback(s.co, error))
-					end
+				if coroutine.status(s.co) == "dead" and not success and error ~= nil or (not success and error ~= nil) then
+					log.error("Error running coro: %s", debug.traceback(s.co, error))
 
 					s.co = nil
 				end

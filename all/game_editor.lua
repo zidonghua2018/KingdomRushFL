@@ -21,6 +21,7 @@ local SU = require("screen_utils")
 local GR = require("grid_db")
 local LU = require("level_utils")
 local simulation = require("simulation")
+require("gg_views")
 
 if DEBUG then
 	package.loaded.game_editor_gui = nil

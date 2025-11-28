@@ -1,4 +1,8 @@
 ﻿-- chunkname: @./main.lua
+if arg[2] == "debug" then
+	LLDEBUGGER = require("lldebugger")
+	LLDEBUGGER.start()
+end
 
 require("main_globals")
 
@@ -683,8 +687,12 @@ function love.errhand(msg)
 		love.graphics.present()
 	end
 
-	while true do
-		love.event.pump()
+	if LLDEBUGGER then
+		LLDEBUGGER.start()
+	end
+
+    while true do
+        love.event.pump()
 
 		for e, a, b, c in love.event.poll() do
 			if e == "quit" then
