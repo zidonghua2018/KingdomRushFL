@@ -761,11 +761,11 @@ local function patch_cricket_ui(game_gui)
 
     function game_gui:keypressed(key, isrepeat)
         original_key_pressed(self, key, isrepeat)
-        if key == "z" then
+        if key == SELF_DEFINED_KEY_OPEN_MENU then
             self.criketmenu:show()
-        elseif key == "x" then
+        elseif key == SELF_DEFINED_KEY_COLSE_MENU then
             self.criketmenu:hide()
-        elseif key == "c" then
+        elseif key == SELF_DEFINED_KEY_SWITCH_MENU then
             self.criketmenu.replace = not self.criketmenu.replace
         end
     end

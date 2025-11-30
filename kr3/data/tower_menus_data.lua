@@ -3012,8 +3012,8 @@ return {
 				halo = "glow_ico_main",
 				image = "main_icons_0005",
 				place = 5,
-				tt_title = _("TOWER_DARK_ARMY_MELTING_FURNACE_LEVEL4_DESCRIPTION"),
-				tt_desc = _("TOWER_BLAZING_WATCHER_LVL4_DESCRIPTION")
+				tt_title = _("TOWER_DARK_ARMY_MELTING_FURNACE_LEVEL4_NAME"),
+				tt_desc = _("TOWER_DARK_ARMY_MELTING_FURNACE_LEVEL4_DESCRIPTION")
 			},
 			{
 				check = "ico_sell_0002",

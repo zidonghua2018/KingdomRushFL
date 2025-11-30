@@ -255,18 +255,18 @@ function game:update(dt)
 		self:update_debug(dt)
 	end
 
-	if love.keyboard.isDown("q") then
+	if love.keyboard.isDown(SELF_DEFINED_KEY_1_12X) then
 		if self.upd == 12 then
 			self.simulation:update(dt)
 			self.upd = 0
 		else
 			self.upd = self.upd + 1
 		end
-	elseif love.keyboard.isDown("e") then
+	elseif love.keyboard.isDown(SELF_DEFINED_KEY_3X) then
 		for i = 1, 3 do
 			self.simulation:update(dt)
 		end
-	elseif love.keyboard.isDown("r") then
+	elseif love.keyboard.isDown(SELF_DEFINED_KEY_12X) then
 		for i = 1, 12 do
 			self.simulation:update(dt)
 		end

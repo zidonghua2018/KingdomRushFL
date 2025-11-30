@@ -7598,7 +7598,7 @@ function scripts.mod_polymorph.insert(this, store, script)
 	e.pos = V.vclone(target.pos)
 	e.nav_path = table.deepclone(target.nav_path)
 
-	if pm.transfer_lives_cost_factor and target and e and e.enemy then
+	if pm.transfer_lives_cost_factor and target and target.enemy and e and e.enemy then
 		e.enemy.lives_cost = math.floor(target.enemy.lives_cost * pm.transfer_lives_cost_factor)
 	end
 
@@ -7606,12 +7606,12 @@ function scripts.mod_polymorph.insert(this, store, script)
 		e.enemy.gold = math.floor(target_gold * pm.transfer_gold_factor)
 	end
 
-	if pm.transfer_health_factor and target and e and e.enemy then
+	if pm.transfer_health_factor and target and target.health and e and e.health then
 		e.health.hp_max = math.floor(target.health.hp_max * pm.transfer_health_factor)
 		e.health.hp = math.floor(target.health.hp * pm.transfer_health_factor)
 	end
 
-	if pm.transfer_speed_factor and target and e and e.enemy then
+	if pm.transfer_speed_factor and target and target.motion and e and e.motion then
 		e.motion.max_speed = target.motion.max_speed * pm.transfer_speed_factor
 
 		local has, mods = U.has_modifier_types(store, target, MOD_TYPE_FAST, MOD_TYPE_SLOW)

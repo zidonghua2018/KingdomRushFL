@@ -1477,7 +1477,9 @@ function scripts.mod_barbarian_net.insert(this, store, script)
 
 	log.paranoid("mod_barbarian_net.insert (%s)-%s for (%s)-%s", this.id, this.template_name, target.id, target.template_name)
 
-	target.motion.max_speed = target.motion.max_speed * this.slow.factor[level]
+	if target.motion then
+		target.motion.max_speed = target.motion.max_speed * this.slow.factor[level]
+	end
 	this.modifier.ts = store.tick_ts
 	
 	if target.render.sprites[1].prefix == "enemy_rocketeer" then
