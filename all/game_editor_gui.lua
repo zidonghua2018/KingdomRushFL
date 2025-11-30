@@ -1,4 +1,4 @@
-﻿-- chunkname: @./all/game_editor_gui.lua
+-- chunkname: @./all/game_editor_gui.lua
 local log = require("klua.log"):new("game_editor_gui")
 
 local ism
@@ -6,10 +6,12 @@ local km = require("klua.macros")
 require("klua.table")
 require("klove.kui")
 local kui_db = require("klove.kui_db")
+local serpent = require("serpent")
 local F = require("klove.font_db")
 local I = require("klove.image_db")
 local SU = require("screen_utils")
 local LU = require("level_utils")
+local NOL = require("klua.nolfs")
 local E = require("entity_db")
 local U = require("utils")
 local V = require("klua.vector")
@@ -30,7 +32,11 @@ else
 end
 
 if DEBUG then
-	package.loaded.game_editor_classes = nil
+	if IS_KR5 then
+		package.loaded.kviews_game_editor = nil
+	else
+		package.loaded.game_editor_classes = nil
+	end
 end
 require("game_editor_classes")
 local NODE_SELECTION_WINDOW = 8
@@ -42,23 +48,6 @@ gui.required_textures = {}
 
 local function wid(id)
 	return gui.window:get_child_by_id(id)
-end
-
----计算两个坐标之差的绝对值是否小于给定值
----@param axi1 table 坐标1
----@param axi2 table 坐标2
----@param range number? 值（可选，默认 550）
----@return boolean
-function gui.are_axes_in_range(axi1, axi2, range)
-	range = range or 550
-	local vx = math.abs(axi1.x - axi2.x)
-	local vy = math.abs(axi1.y - axi2.y)
-
-	if vx < range and vy < range then
-		return true
-	elseif vx == 0 and vy == 0 then
-		return nil, "is_0"
-	end
 end
 
 function gui:init(w, h, editor)
@@ -74,7 +63,8 @@ function gui:init(w, h, editor)
 		"entities",
 		"paths",
 		"grid",
-		"nav"
+		"nav",
+		"particles"
 	}
 	self.settings = {}
 	self.settings.grid = {}
@@ -82,7 +72,11 @@ function gui:init(w, h, editor)
 	self.settings.grid.paint = TERRAIN_NONE
 	self.tool_shortcuts = {}
 
-	local tt = kui_db:get_table("game_editor_gui")
+	local ctx = {}
+
+	ctx.PROP_W = KE_CONST.PROP_W
+
+	local tt = kui_db:get_table("game_editor_gui", ctx)
 	local window = KWindow:new_from_table(tt)
 
 	window.scale = {
@@ -361,9 +355,62 @@ function gui:init(w, h, editor)
 	wid("nav_adds_missing_numbers").on_click = function(this)
 		gui.adds_missing_numbers()
 	end
+	wid("ps_create").on_click = function(this)
+		gui:create_particle()
+	end
+	wid("ps_remove").on_click = function(this)
+		gui:remove_particle()
+	end
+	wid("ps_copy").on_click = function(this)
+		gui:copy_particle()
+	end
+	wid("ps_paste").on_click = function(this)
+		gui:paste_particle()
+	end
+
+	for _, c in pairs(wid("particles_data"):flatten(function(v)
+		return v.prop_name
+	end)) do
+		function c.on_change(this)
+			gui:update_particle_data(this)
+		end
+	end
+
+	wid("ps_stats").update = function(this, dt)
+		if self.editor.particle_selected then
+			local count = #self.editor.particle_selected.particle_system.particles
+
+			this.text = string.format("count:%s", count)
+
+			if count > 200 then
+				this.colors.background = {
+					255,
+					0,
+					0,
+					255
+				}
+			elseif count > 100 then
+				this.colors.background = {
+					255,
+					255,
+					0,
+					255
+				}
+			else
+				this.colors.background = {
+					0,
+					0,
+					0,
+					0
+				}
+			end
+		else
+			this.text = ""
+		end
+	end
 	wid("tools_level_name").value = 1
 
-	wid("tools_level_name"):update()
+	wid("tools_level_name"):update(0)
 	wid("entities_insert_template"):set_value("tower_holder")
 end
 
@@ -386,7 +433,7 @@ function gui:keypressed(key, isrepeat)
 end
 
 function gui:keyreleased(key)
-	if self.window:keyreleased(key, isrepeat) then
+	if self.window:keyreleased(key) then
 		return
 	elseif self.tool_shortcuts then
 		local shortcuts = self.tool_shortcuts[self.active_tool]
@@ -403,6 +450,15 @@ end
 
 function gui:mousepressed(x, y, button)
 	self.window:mousepressed(x, y, button)
+
+	if button == 2 then
+		if self.editor.entities_selected then
+			self:select_entity()
+		end
+		if self.path_nodes_selected then
+			self:select_node()
+		end
+	end
 end
 
 function gui:mousereleased(x, y, button)
@@ -465,6 +521,8 @@ function gui:hide_tool(name)
 		self.editor.nav_visible = nil
 		self.editor.nav_dirty = nil
 		self.editor.nav_entity_selected = nil
+	elseif name == "particles" then
+		self.editor.particles_visible = nil
 	end
 
 	self.active_tool = nil
@@ -498,6 +556,11 @@ function gui:show_tool(name)
 	elseif name == "nav" then
 		self.editor.nav_visible = true
 		self.editor.nav_dirty = true
+	elseif name == "particles" then
+		self.editor.particles_visible = true
+
+		self:update_particles_list()
+		self:update_particle_images()
 	end
 end
 
@@ -568,6 +631,10 @@ function gui:click_tool(btn, x, y)
 		local cb = self.select_entity_nav
 
 		self:entities_select(wx, wy, cb, 24)
+	elseif self.active_tool == "particles" then
+		local cb = self.select_entity_particle
+
+		self:entities_select(wx, wy, cb, 24)
 	end
 end
 
@@ -612,6 +679,10 @@ function gui:move_tool(x, y, down)
 	elseif self.active_tool == "paths" then
 		if down and self.path_nodes_selected then
 			self:path_nodes_move(wx, wy)
+		end
+	elseif self.active_tool == "particles" then
+		if down and self.editor.particle_selected then
+			self:particle_move(wx, wy)
 		end
 	else
 		self.editor.tool_pointer.tool = nil
@@ -660,7 +731,7 @@ function gui:toggle_grid_paint_flag(flag)
 		[TERRAIN_NOWALK] = "nowalk",
 		[TERRAIN_FAERIE] = "faerie",
 		[TERRAIN_ICE] = "ice",
-		-- [TERRAIN_FLYING_NOWALK] = "flying_nw"
+		[TERRAIN_FLYING_NOWALK] = "flying_nw"
 	}
 
 	for k, n in pairs(buttons) do
@@ -712,7 +783,7 @@ function gui:grid_paint(wx, wy, btn)
 end
 
 function gui:update_grid_prop(prop_view)
-	prop_name = prop_view.prop_name
+	local prop_name = prop_view.prop_name
 
 	if prop_name == "grid_size" then
 		GR:set_grid_size(prop_view.value.x, prop_view.value.y)
@@ -803,15 +874,15 @@ function gui:select_entity(e)
 
 		if e.editor and e.editor.props then
 			for _, prop in pairs(e.editor.props) do
-				local prop_name, prop_type, prop_custom = unpack(prop)
+				local prop_name, prop_type, prop_custom, prop_range = unpack(prop)
 				local v
 
 				if prop_type == PT_STRING then
 					v = KEProp:new(prop_name, get_prop(e, prop_name))
 				elseif prop_type == PT_COORDS then
-					v = KEPropCoords:new(prop_name, get_prop(e, prop_name))
+					v = KEPropCoords:new(prop_name, get_prop(e, prop_name), prop_custom, prop_range)
 				elseif prop_type == PT_NUMBER then
-					v = KEPropNum:new(prop_name, get_prop(e, prop_name), prop_custom)
+					v = KEPropNum:new(prop_name, get_prop(e, prop_name), prop_custom, prop_range)
 				else
 					log.error("Property:%s unknown property type: %s", prop_name, prop_type)
 				end
@@ -869,25 +940,12 @@ function gui:update_entity_prop(prop_view)
 	local prop_value = prop_view.value
 	local picker = wid("picker")
 
-	if not self._last_prop_value then
-		self._last_prop_value = {
-			x = prop_value.x,
-			y = prop_value.y
-		}
-	end
-
 	if prop_type == PT_COORDS then
-		local state, reason = self.are_axes_in_range(prop_value, self._last_prop_value)
-
-		if state then
+		if prop_value.x and prop_value.y then
 			self.editor:undo_push_entity(picker.tracking, e.id, prop_name .. ".x", get_prop(e, prop_name .. ".x"), prop_name .. ".y", get_prop(e, prop_name .. ".y"))
 			set_prop(e, prop_name .. ".x", prop_value.x)
 			set_prop(e, prop_name .. ".y", prop_value.y)
-
-			self._last_prop_value.x = prop_value.x
-			self._last_prop_value.y = prop_value.y
 		end
-
 	else
 		self.editor:undo_push_entity(picker.tracking, e.id, prop_name, get_prop(e, prop_name), picker.tracking)
 		set_prop(e, prop_name, prop_value)
@@ -1009,9 +1067,9 @@ function gui:duplicate_entity()
 
 	local de = E:create_entity(e.template_name)
 
-	de.pos = V.v(e.pos.x, e.pos.y - 50)
+	de.pos = V.v(e.pos.x, e.pos.y)
 
-	if e.editor and e.editor.props then
+	if e.editor then
 		for _, item in pairs(e.editor.props) do
 			local k, kt = unpack(item)
 
@@ -1138,7 +1196,7 @@ function gui:select_node(pi, ni, add)
 
 		self:show_path_node()
 
-		-- self.editor.path_selected = nil
+		self.editor.path_selected = nil
 
 		-- self:select_list_path()
 	end
@@ -1149,11 +1207,8 @@ end
 function gui:path_nodes_select(x, y, w, h)
 	log.debug("x:%s,y%s,w:%s,h:%s", x, y, w, h)
 
-	local multi = true
-
 	if not w or not h then
-		multi = false
-		w, h = NODE_SELECTION_WINDOW * 2, NODE_SELECTION_WINDOW * 2
+		w, h = NODE_SELECTION_WINDOW, NODE_SELECTION_WINDOW
 		x, y = x - w / 2, y - h / 2
 	end
 
@@ -1480,7 +1535,7 @@ function gui:select_entity_nav(e, es)
 
 		wid("nav_sel_id"):set_value(e.id)
 
-		lt_hid = tonumber(e.ui.nav_mesh_id)
+		local lt_hid = tonumber(e.ui.nav_mesh_id)
 
 		wid("nav_holder_id"):set_value(lt_hid)
 
@@ -1654,6 +1709,367 @@ function gui.adds_missing_numbers()
 	end
 
 	gui.editor.nav_dirty = true
+end
+
+function gui:update_particles_list()
+	local list = wid("ps_list")
+
+	list:clear_rows()
+
+	local systems = table.filter(gui.editor.store.entities, function(_, v)
+		return v.template_name == "ps_editor"
+	end)
+
+	for i, ps in ipairs(systems) do
+		local l = KLabel:new(V.v(list.size.x, 20))
+
+		l.text_align = "left"
+		l.text = ps.id
+
+		function l.on_click()
+			self:select_particle(ps.id)
+		end
+
+		list:add_row(l)
+	end
+end
+
+function gui:update_particle_images()
+	local ilist = wid("ps_images")
+
+	ilist:clear_rows()
+
+	if not self.editor.custom_images_path then
+		return
+	end
+
+	local is_animated = wid("ps_animated").value
+	local image_files = NOL.ls(self.editor.custom_images_path, {
+		".png$",
+		".PNG$"
+	})
+
+	if is_animated then
+		local anis = {}
+
+		for _, f in pairs(image_files) do
+			local name, frame = string.match(f, "(.+)_(%d%d%d%d)%.")
+
+			if name and frame then
+				local fn = tonumber(frame)
+
+				anis[name] = anis[name] or {
+					to = 1,
+					from = 1,
+					prefix = name
+				}
+
+				if fn < anis[name].from then
+					anis[name].from = fn
+				end
+
+				if fn > anis[name].to then
+					anis[name].to = fn
+				end
+			end
+		end
+
+		for k, v in pairs(anis) do
+			log.info("loading custom animation %s : %s", k, getdump(v))
+
+			A.db[k] = v
+		end
+
+		local keys = table.keys(anis)
+
+		table.sort(keys)
+
+		for _, k in pairs(keys) do
+			local v = anis[k]
+			local l = KLabel:new(V.v(ilist.size.x, 20))
+
+			l.text_align = "left"
+			l.text = k
+			l.font_size = KE_CONST.font_size - 2
+			l.font_name = KE_CONST.font_name
+			l.text_offset.y = 0.25 * l.font_size
+
+			function l.on_click()
+				self:select_particle_image(k)
+			end
+
+			ilist:add_row(l)
+		end
+	else
+		for _, f in pairs(image_files) do
+			local name = string.gsub(f, ".png$", "")
+			local l = KLabel:new(V.v(ilist.size.x, 20))
+
+			l.text_align = "left"
+			l.text = name
+			l.font_size = KE_CONST.font_size - 2
+			l.font_name = KE_CONST.font_name
+			l.text_offset.y = 0.25 * l.font_size
+
+			function l.on_click()
+				local add = love.keyboard.isDown("lctrl", "rctrl")
+
+				self:select_particle_image(name, add)
+			end
+
+			ilist:add_row(l)
+		end
+	end
+end
+
+function gui:create_particle()
+	local pst = E:get_template("ps_editor")
+
+	if not pst then
+		local tt = E:register_t("ps_editor")
+
+		E:add_comps(tt, "pos", "particle_system")
+
+		tt.particle_system.name = "waveflag_path_arrow"
+		tt.particle_system.animated = false
+		tt.particle_system.emission_rate = 20
+		tt.particle_system.particle_lifetime = {
+			1,
+			2
+		}
+		tt.particle_system.z = Z_OBJECTS_SKY
+		tt.particle_system.emit_speed = {
+			50,
+			100
+		}
+		tt.particle_system.emit_spread = math.pi / 4
+	end
+
+	local e = E:create_entity("ps_editor")
+
+	e.pos.x, e.pos.y = REF_W / 2, REF_H / 2 - 50
+
+	LU.queue_insert(self.editor.store, e)
+	self.editor.simulation:update(0.03333333333333333)
+	self:update_particles_list()
+	self:update_particle_images()
+	self:select_particle(e.id)
+
+	return e
+end
+
+function gui:remove_particle()
+	local e = self.editor.particle_selected
+
+	if not e then
+		return
+	end
+
+	LU.queue_remove(self.editor.store, e)
+	self.editor.simulation:update(0.03333333333333333)
+	self:update_particles_list()
+	self:update_particle_images()
+end
+
+function gui:select_particle(entity_id)
+	local e = self.editor.store.entities[entity_id]
+
+	if not e then
+		self.editor.particle_selected = nil
+
+		wid("ps_list"):deselect()
+
+		return
+	end
+
+	self.editor.particle_selected = e
+
+	wid("ps_list"):select(entity_id)
+
+	local ps = e.particle_system
+
+	for _, c in pairs(wid("particles_data"):flatten(function(v)
+		return v.prop_name
+	end)) do
+		if ps[c.prop_name] then
+			c:set_value(ps[c.prop_name], true)
+		end
+	end
+
+	local ilist = wid("ps_images")
+
+	ilist:select()
+
+	if ps.names then
+		for _, n in pairs(ps.names) do
+			wid("ps_images"):select(n, true)
+		end
+	else
+		wid("ps_images"):select(ps.name, add)
+	end
+end
+
+function gui:update_particle_data(v)
+	local e = self.editor.particle_selected
+
+	if not e then
+		return
+	end
+
+	local ps = e.particle_system
+
+	ps.duration_ts = nil
+	ps.emit_duration_ts = nil
+
+	local value = v.value
+
+	if v.nil_value and table.equals(v.nil_value, v.value) then
+		value = nil
+	end
+
+	if v:isInstanceOf(KEPropPair) then
+		ps[v.prop_name] = value and table.deepclone(value)
+	elseif v:isInstanceOf(KEPropCoords) then
+		ps[v.prop_name] = value and table.deepclone(value)
+	else
+		ps[v.prop_name] = value
+	end
+
+	if v.prop_name == "animated" then
+		gui:update_particle_images()
+	end
+end
+
+function gui:select_particle_image(name, add)
+	local e = self.editor.particle_selected
+
+	if not e then
+		return
+	end
+
+	local ps = e.particle_system
+
+	if add then
+		if not ps.names then
+			ps.names = {}
+
+			if ps.name then
+				table.insert(ps.names, ps.name)
+
+				ps.name = nil
+			end
+		end
+
+		table.insert(ps.names, name)
+	else
+		ps.name = name
+		ps.names = nil
+		ps.name_idx = nil
+	end
+
+	local list = wid("ps_images")
+
+	list:select(name, add)
+end
+
+function gui:copy_particle(name)
+	local e = self.editor.particle_selected
+
+	if not e then
+		return
+	end
+
+	local ps = e.particle_system
+	local psc = E:get_component("particle_system")
+	local out = {}
+	local keys = table.keys(ps)
+
+	table.sort(keys)
+
+	for _, k in pairs(keys) do
+		if not table.contains(self.editor.ignored_particle_system_keys, k) and not table.equals(ps[k], psc[k]) then
+			local left = "tt.particle_system." .. k .. " = "
+			local right = serpent.line(ps[k], {
+				comment = false
+			})
+
+			table.insert(out, left .. right)
+		end
+	end
+
+	local s = table.concat(out, "\n")
+
+	log.debug("copying to clipboard:\n%s", s)
+	love.system.setClipboardText(s)
+end
+
+function gui:paste_particle(name)
+	local e = self.editor.particle_selected
+
+	e = e or self:create_particle()
+
+	local ps = e.particle_system
+	local s = love.system.getClipboardText()
+
+	log.debug("getting from clipboard:\n%s", s)
+
+	s = "tt = {};tt.particle_system={};" .. s .. ";return tt;"
+
+	local chunk, err = loadstring(s)
+
+	if not chunk then
+		log.error("error in pasted data: %s", err)
+
+		return
+	end
+
+	local env = {}
+
+	setfenv(chunk, env)
+
+	local ok, result = pcall(chunk)
+
+	if not ok then
+		log.error("error in pasted data: %s", tostring(result))
+
+		return
+	end
+
+	for k, v in pairs(result.particle_system) do
+		if not table.contains(self.editor.ignored_particle_system_keys, k) then
+			ps[k] = v
+		end
+	end
+
+	self:select_particle(e.id)
+end
+
+function gui:select_entity_particle(e, es)
+	if not e or not e.particle_system then
+		for _, ee in pairs(es) do
+			if ee and ee.particle_system then
+				e = ee
+			end
+		end
+	end
+
+	if e then
+		self:select_particle(e.id)
+	else
+		self:select_particle(nil)
+	end
+
+	self.editor.nav_dirty = true
+end
+
+function gui:particle_move(wx, wy)
+	local e = self.editor.particle_selected
+
+	if not e then
+		return
+	end
+
+	e.pos.x, e.pos.y = wx, wy
 end
 
 return gui

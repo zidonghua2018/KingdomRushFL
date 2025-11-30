@@ -159,6 +159,30 @@ function editor:save_curves(name)
 	f:close()
 end
 
+function editor:save_grid(name)
+	local fn = KR_FULLPATH_BASE .. "/" .. KR_PATH_GAME .. "/data/levels/" .. name .. "_grid.lua"
+
+	local t = {
+		ox = GR.ox,
+		oy = GR.oy,
+		grid = GR.grid
+	}
+	local str = serpent.block(t, {
+		indent = "    ",
+		comment = false,
+		sortkeys = true,
+		keyignore = {
+			beziers = true
+		}
+	})
+
+	local out = "return " .. str .. "\n"
+	local f = io.open(fn, "w")
+	f:write(out)
+	f:flush()
+	f:close()
+end
+
 function editor:init(screen_w, screen_h, done_callback)
 	self.screen_w = screen_w
 	self.screen_h = screen_h
@@ -706,7 +730,7 @@ function editor:level_save(idx, mode)
 
 	log.debug("saving level %s", idx)
 	self:save_curves(s.level_name)
-	GR:save(s.level_name)
+	self:save_grid(s.level_name)
 	self:serialize_level(s)
 
 	ss = table.deepclone(s.level.data)
@@ -730,7 +754,11 @@ function editor:level_load(idx, mode)
 
 	self.simulation = simulation
 
-	A:load()
+	if IS_KR5 then
+		A:load(I.last_preloaded_group_names)
+	else
+		A:load()
+	end
 	E:load()
 
 	local s = self.store
