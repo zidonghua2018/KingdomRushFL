@@ -3625,6 +3625,40 @@ return {
 				"druids",
 			},
 		},
+---重生		
+		[73] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {
+				"barracks",
+				"artillery",
+				"mages"
+			}
+		},
+		[74] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {
+				"archers",
+				"artillery",
+				"mages"
+			}
+		},
+		[75] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {
+				"archers",
+				"barracks",
+			}
+		},
+---				
 		--5代
 		[101] = {
 			upgrades = {
@@ -9119,7 +9153,41 @@ return {
 			fns = {
 				unlock = deco_fn.path_open.unlock
 			}
+		},
+---重生
+		{
+			layer = 1,
+			hidden = true,
+			id = "md_path_74",
+			image = "map_path_30_0033",
+			trigger_level = 30,
+			pos = v(765, 687),
+			animations = {
+				to = 33,
+				prefix = "map_path_30",
+				from = 1
+			},
+			fns = {
+				unlock = deco_fn.path_open.unlock
+			}
+		},
+		{
+			layer = 1,
+			hidden = true,
+			id = "md_path_75",
+			image = "map_path_31_0041",
+			trigger_level = 31,
+			pos = v(839, 863),
+			animations = {
+				to = 41,
+				prefix = "map_path_31",
+				from = 1
+			},
+			fns = {
+				unlock = deco_fn.path_open.unlock
+			}
 		}
+---				
 	},
 	--2代
 	map_animations2 = {

@@ -33,6 +33,13 @@ d.item_props = {
 		src = "screen_kr1_end",
 		type = "screen",
 	},
+---重生
+	kr1_fa = {
+		src = "screen_kr1_fa",
+		next = "map",
+		type = "screen"
+	},
+---		
 	kr2_end = {
 		next = "map",
 		src = "screen_kr2_end",
@@ -258,6 +265,17 @@ d.loading_image_name = {
 			70,
 		},
 	},
+---重生
+	{
+		"loading_fa",
+		{
+			73,
+			74,
+			75,
+		},
+	},
+	default = "loading_grass",	
+---	
 	{
 		"loading_images_desktop_1",
 		{
