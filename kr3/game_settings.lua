@@ -42,10 +42,10 @@ GS.main_campaign_levels5 = 116
 GS.last_level = 22
 GS.last_level3 = 22
 GS.last_level2 = 44
-GS.last_level1 = 72
+GS.last_level1 = 75---重生--72
 GS.last_level5 = 135
 GS.jnum1 = 44
-GS.max_level1 = 28
+GS.max_level1 = 31---重生--28
 GS.jnum2 = 22
 GS.max_level2 = 22
 GS.jnum3 = 0
@@ -1406,6 +1406,41 @@ GS.encyclopedia_enemies = {
 		always_shown = false,
 		name = "enemy_bone_carrier"
 	},
+	---重生
+	{
+		name = "enemy_hobgoblin_small"
+	},
+	{
+		name = "enemy_cursed_shaman"
+	},
+	{
+		name = "enemy_hobgoblin_shield"
+	},
+	{
+		name = "enemy_hobgoblin_rider"
+	},
+	{
+		name = "enemy_goblin_spear"
+	},
+	{
+		name = "enemy_goblin_balloon"
+	},
+	{
+		name = "enemy_cursed_golem"
+	},
+	{
+		name = "enemy_cursed_shard"
+	},
+	{
+		name = "enemy_hobgoblin_miniboss"
+	},
+	{
+		name = "eb_hobgoblin"
+	},
+	{
+		name = "enemy_goblin_platform"
+	},
+	---			
 }
 
 GS.towers_required_exoskeletons = {
