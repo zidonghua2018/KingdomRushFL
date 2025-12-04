@@ -495,6 +495,29 @@ local groups = {
 			"MusicBossFight1",
 		},
 	},
+---重生
+	music_stage73 = {
+		sounds = {
+			"MusicBattlePrep_73",
+			"MusicBattle_73",
+			"MusicBossFight"
+		}
+	},
+	music_stage74 = {
+		sounds = {
+			"MusicBattlePrep_74",
+			"MusicBattle_74",
+			"MusicBossFight"
+		}
+	},
+	music_stage75 = {
+		sounds = {
+			"MusicBattlePrep_75",
+			"MusicBattle_75",
+			"MusicBossFight"
+		}
+	},		
+---		
 	music_stage85 = {sounds={ 'MusicBattlePrep_85', 'MusicBattle_85', }},
     
 	hero_alleria_g3 = {
@@ -2112,6 +2135,90 @@ local sounds = {
 			"CB_Battle.ogg",
 		},
 	},
+---重生
+	MusicBattle_73 = {
+		source_group = "MUSIC",
+		gain = 0.7,
+		loop = true,
+		stream = true,
+		files = {
+			"MusicBattleUnderAttackBloodlust.ogg"
+		}
+	},
+	MusicBattle_74 = {
+		source_group = "MUSIC",
+		gain = 0.7,
+		loop = true,
+		stream = true,
+		files = {
+			"MusicBattleUnderAttackBloodlust.ogg"
+		}
+	},
+	MusicBattle_75 = {
+		source_group = "MUSIC",
+		gain = 0.7,
+		loop = true,
+		stream = true,
+		files = {
+			"MusicBattleUnderAttackBloodlust.ogg"
+		}
+	},
+	MusicBattlePrep_73 = {
+		source_group = "MUSIC",
+		gain = 0.7,
+		loop = true,
+		stream = true,
+		files = {
+			"MusicBattlePreparationsForest.ogg"
+		}
+	},
+	MusicBattlePrep_74 = {
+		source_group = "MUSIC",
+		gain = 0.7,
+		loop = true,
+		stream = true,
+		files = {
+			"MusicBattlePreparationsForest.ogg"
+		}
+	},
+	MusicBattlePrep_75 = {
+		source_group = "MUSIC",
+		gain = 0.7,
+		loop = true,
+		stream = true,
+		files = {
+			"MusicBattlePreparationsForest.ogg"
+		}
+	},
+	HobgobBossDeath1 = {
+		loop = false,
+		source_group = "DEATH",
+		files = {
+			"ebhobgobdeath1.ogg"
+		}
+	},
+	HobgobBossDeath2 = {
+		loop = false,
+		source_group = "DEATH",
+		files = {
+			"ebhobgobdeath2.ogg"
+		}
+	},
+	HobgobBossSpawn = {
+		loop = false,
+		source_group = "DEATH",
+		files = {
+			"ebhobgobspawn.ogg"
+		}
+	},
+	HobgobBossAttack = {
+		loop = false,
+		source_group = "SFX",
+		files = {
+			"ebhobgobattack.ogg"
+		}
+	},	
+---		
 	MusicBattle_85 = { files= {"MusicBattleUnderAttackForest1.ogg"    }, loop=true, gain=0.7, source_group='MUSIC', stream=true},
     
 	MusicBossFight = {
