@@ -1,5 +1,5 @@
 return {
-	lives = 114514,
+	lives = 1,
 	cash = 1100,
 	groups = {
 		{

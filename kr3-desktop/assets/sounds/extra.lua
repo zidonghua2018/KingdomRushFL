@@ -500,24 +500,33 @@ local groups = {
 		sounds = {
 			"MusicBattlePrep_73",
 			"MusicBattle_73",
+<<<<<<< HEAD
 			"MusicBossFight1",
 			"MusicBossFight2",
 			"MusicBossFight",
+=======
+			"MusicBossFight"
+>>>>>>> origin/main
 		}
 	},
 	music_stage74 = {
 		sounds = {
 			"MusicBattlePrep_74",
 			"MusicBattle_74",
+<<<<<<< HEAD
 			"MusicBossFight1",
 			"MusicBossFight2",
 			"MusicBossFight",
+=======
+			"MusicBossFight"
+>>>>>>> origin/main
 		}
 	},
 	music_stage75 = {
 		sounds = {
 			"MusicBattlePrep_75",
 			"MusicBattle_75",
+<<<<<<< HEAD
 			"MusicBossFight1",
 			"MusicBossFight2",
 			"MusicBossFight",
@@ -587,6 +596,11 @@ local groups = {
 	music_halloween_moon = {
             sounds = {"MusicHalloweenMoon"}
     },	
+=======
+			"MusicBossFight"
+		}
+	},		
+>>>>>>> origin/main
 ---		
 	music_stage85 = {sounds={ 'MusicBattlePrep_85', 'MusicBattle_85', }},
     

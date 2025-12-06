@@ -227,8 +227,6 @@ return {
 				y = 102
 			}
 		},
-	},
-		
 ---	
 	endless_flags = {
 		[85] = {
