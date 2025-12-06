@@ -9,6 +9,7 @@ package.loaded["game_templates-45h"] = nil
 package.loaded["game_templates-51"] = nil
 package.loaded["game_templates-55"] = nil
 package.loaded["game_templates-56"] = nil
+package.loaded["game_templates_hero_boss"] = nil
 package.loaded["custom_templates_0"] = nil
 package.loaded["custom_templates_1"] = nil
 package.loaded["custom_templates_2"] = nil
@@ -28,6 +29,7 @@ local d56 = require("game_templates-56")
 local dc0 = require("custom_templates_0")
 local dc1 = require("custom_templates_1")
 local dc2 = require("custom_templates_2")
+local dhb = require("game_templates_hero_boss")
 --local d4 = require("game_templates-4")
 
 -- 拖拽功能，实体字段补充

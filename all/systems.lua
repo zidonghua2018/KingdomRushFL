@@ -368,7 +368,7 @@ function sys.level:init(store)
 	end
 	]]
 
-	if store.level_idx >= 101 then
+	if store.level_idx >= 87 then
 		local level_data = require("data.levels."..store.level_name.."_data")
 		
 		if level_data.required_exoskeletons then
@@ -1126,7 +1126,7 @@ local function spawner(store, wave)
 	local gems_creep_idx
 	local gems_keeper_random = store.level_mode == GAME_MODE_CAMPAIGN
 	local gems_spawn_idx = gems_keeper_random and math.random(1, #spawns) or #spawns
-	local max_creeps = spawns[gems_spawn_idx].max
+	local max_creeps = spawns[gems_spawn_idx] and spawns[gems_spawn_idx].max or 3
 
 	if max_creeps > 0 then
 		gems_creep_idx = gems_keeper_random and math.random(1, max_creeps) or max_creeps
@@ -1833,7 +1833,7 @@ function sys.main_script:on_update(dt, ts, store)
 				local success, error = coroutine.resume(s.co, e, store, s)
 
 				if coroutine.status(s.co) == "dead" and not success and error ~= nil or (not success and error ~= nil) then
-					log.error("Error running coro: %s", debug.traceback(s.co, error))
+					--log.error("Error running coro: %s", debug.traceback(s.co, error))
 
 					s.co = nil
 				end
@@ -3120,7 +3120,12 @@ function sys.render:on_update(dt, ts, store)
 			if s.pos then
 				f.pos.x, f.pos.y = s.pos.x, s.pos.y
 			else
-				f.pos.x, f.pos.y = e.pos.x, e.pos.y
+				if f.pos then
+					f.pos.x, f.pos.y = e.pos.x, e.pos.y
+				else
+					f.pos = {x=e.pos.x, y=e.pos.y}
+				end
+				--f.pos.x, f.pos.y = e.pos.x, e.pos.y
 			end
 
 			f.r = s.r

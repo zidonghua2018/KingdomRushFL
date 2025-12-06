@@ -9,7 +9,7 @@ GS.url_policy = "https://www.ironhidegames.com/PrivacyPolicy"
 GS.gameplay_tips_count = 84
 GS.early_wave_reward_per_second = 1--需要判断是不是5代关卡，是的话需要乘以1.8
 GS.early_wave_reward_per_second5 = 1.8
-GS.max_stars = 533
+GS.max_stars = 581
 GS.max_difficulty = DIFFICULTY_IMPOSSIBLE
 GS.difficulty_soldier_hp_max_factor = {
 	1.2,
@@ -42,14 +42,14 @@ GS.main_campaign_levels5 = 116
 GS.last_level = 22
 GS.last_level3 = 22
 GS.last_level2 = 44
-GS.last_level1 = 72
+GS.last_level1 = 75---重生--72
 GS.last_level5 = 135
 GS.jnum1 = 44
-GS.max_level1 = 28
+GS.max_level1 = 32
 GS.jnum2 = 22
-GS.max_level2 = 22
+GS.max_level2 = 27
 GS.jnum3 = 0
-GS.max_level3 = 22
+GS.max_level3 = 23
 GS.jnum5 = 100
 GS.max_level5 = 35
 GS.endless_levels_count = 2
@@ -87,6 +87,9 @@ GS.level_ranges3 = {
 	{
 		21,
 		22
+	},
+	{
+		86
 	}
 }
 GS.level_ranges2 = {
@@ -104,7 +107,22 @@ GS.level_ranges2 = {
 	},
 	{
 		44
-	}
+	},
+	{
+		77
+	},
+	{
+		78
+	},
+	{
+		79
+	},
+	{
+		80
+	},
+	{
+		87
+	},
 }
 GS.level_ranges1 = {
 	{
@@ -142,6 +160,19 @@ GS.level_ranges1 = {
 		71,
 		72
 	},
+	{
+		73
+	},
+	{
+		74
+	},
+	{
+		75
+	},
+	{
+		76
+	},
+	
 }
 GS.level_ranges5 = {
 	{
@@ -1406,6 +1437,41 @@ GS.encyclopedia_enemies = {
 		always_shown = false,
 		name = "enemy_bone_carrier"
 	},
+	---重生
+	{
+		name = "enemy_hobgoblin_small"
+	},
+	{
+		name = "enemy_cursed_shaman"
+	},
+	{
+		name = "enemy_hobgoblin_shield"
+	},
+	{
+		name = "enemy_hobgoblin_rider"
+	},
+	{
+		name = "enemy_goblin_spear"
+	},
+	{
+		name = "enemy_goblin_balloon"
+	},
+	{
+		name = "enemy_cursed_golem"
+	},
+	{
+		name = "enemy_cursed_shard"
+	},
+	{
+		name = "enemy_hobgoblin_miniboss"
+	},
+	{
+		name = "eb_hobgoblin"
+	},
+	{
+		name = "enemy_goblin_platform"
+	},
+	---			
 }
 
 GS.towers_required_exoskeletons = {

@@ -6,12 +6,18 @@ local v = V.v
 
 local a =  {
 
-	RATE_X = 1920/2432,
-	RATE_Y = 1080/1368,
-	OFFSET_X = 215,
-	OFFSET_Y = 540-65,
+	--RATE_X = 1920/2432,
+	--RATE_Y = 1080/1368,
+	OFFSET_X = 215+54,
+	OFFSET_Y = 475+187+156,
 	OFFSET_X1 = 30,
 	OFFSET_Y1 = 100,
+	RATE_X = 1,
+	RATE_Y = 1,
+	--OFFSET_X = 0,
+	--OFFSET_Y = 0,
+	--OFFSET_X1 = 0,
+	--OFFSET_Y1 = 0,
 	
 	flags_20250411 = {
 		{
@@ -307,13 +313,13 @@ local a =  {
 		},
 		{
 			number = "32",
-			--pos = v(1209.2, 783.85)
-			pos = v(1209.2, 703.85)
+			pos = v(1209.2, 783.85)
+			--pos = v(1209.2, 703.85)
 		},
 		{
 			number = "33",
-			pos = v(1339.75, 679.5)
-			--pos = v(1339.75, 759.5)
+			--pos = v(1339.75, 679.5)
+			pos = v(1339.75, 759.5)
 		},
 		{
 			number = "34",

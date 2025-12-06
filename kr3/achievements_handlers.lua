@@ -399,7 +399,11 @@ function ah:h_entity_killed(entity, damage)
 
 					self.A:high_check("BARBARIAN_RUSH", s._barbarian_rush_counter)
 				end
-
+---重生
+				if entity.template_name == "enemy_goblin_spear" and (s.template_name == "axe_barbarian" or s.template_name == "arrow_elf" or s.template_name == "bomb_steam_troop" or s.template_name == "airstrike_steam_troop" or s.template_name == "bomb_molotov_2" or s.template_name == "spear_forest_oak" or s.template_name == "spear_forest" or s.template_name == "dagger_drow" or s.template_name == "arrow_soldier_barrack_2" or s.template_name == "arrow_soldier_barrack_3" or s.template_name == "bone_golem_bone" or s.template_name == "bomb_goblin_zapper_pos" or s.template_name == "bomb_swamp_thing_pos" or s.template_name == "spell_djinn" or s.template_name == "bullet_soldier_ewok" or s.template_name == "arrow_elite_harasser" or s.template_name == "arrow_elite_harasser_barrage") then
+					self.A:inc_check("HOB_SPEAR")
+				end
+---				
 				if table.contains({
 					"soldier_drow",
 					"dagger_drow"
@@ -443,6 +447,12 @@ function ah:h_entity_killed(entity, damage)
 		end
 	elseif entity.template_name == "enemy_wererat" and not entity._has_infected_soldiers then
 		self.A:inc_check("RATATOUILLE")
+---重生		
+	elseif entity.template_name == "enemy_goblin_balloon" then
+		self.A:inc_check("GOBLIN_BLOON")
+	elseif entity.template_name == "eb_hobgoblin_two" then
+		self.A:got("DEFEAT_HOBGOBLIN_BOSS")	
+---					
 	end
 
 	if game.store.level_idx == 84 and (entity.template_name == "enemy_alien_reaper" or entity.template_name == "enemy_alien_breeder") then
@@ -636,6 +646,9 @@ function ah:h_game_victory(store)
 
 		if done_imp then
 			self.A:got("IMPOSSIBLE_MODE")
+---重生			
+			self.A:got("DEFEAT_COMPLETE_IMPOSSIBLE")
+---					
 		end
 	elseif store.level_mode == GAME_MODE_HEROIC and done_h then
 		self.A:got("GREAT_DEFENDER_HEROIC")
@@ -743,6 +756,14 @@ function ah:h_mod_applied(mod, target)
 		if s then
 			s._has_infected_soldiers = true
 		end
+---重生		
+	elseif mod.template_name == "mod_sandstorm_slow" then
+		self.A:inc_check("TIME_WIZARD_SLOW")
+	elseif mod.template_name == "mod_teleport_ancient_guardian" then
+		self.A:inc_check("ANCIENT_GUARD_TELE")
+	elseif mod.template_name == "mod_steam_troop_freeze" then
+		self.A:inc_check("STEAM_TROOP_FREEZE")	
+---			
 	end
 
 	if mod.template_name == "mod_silence_totem" then
@@ -852,7 +873,11 @@ function ah:h_tower_upgraded(new_tower, old_tower)
 	if new_tower.template_name == "tower_tesla" then
 		self.A:inc_check("ENERGY_NETWORK")
 	end
-
+---重生
+	if new_tower.template_name == "tower_steam_troop" then
+		self.A:inc_check("STEAM_TROOP_IND")
+	end
+---	
 	if not self.A:have("SIMCITY") then
 		local excluded_templates = {
 			"tower_faerie_dragon",

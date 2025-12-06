@@ -197,15 +197,48 @@ return {
 				x = 1722,
 				y = 263
 			}
-		}
+		},
+		---重生
+		{
+			number = "73",
+			pos = {
+				x = 743,
+				y = 519
+			}
+		},
+		{
+			number = "74",
+			pos = {
+				x = 702,
+				y = 732
+			}
+		},
+		{
+			number = "75",
+			pos = {
+				x = 957,
+				y = 852
+			}
+		},
+		{
+			number = "76",
+			pos = {
+				x = 1173,
+				y = 102
+			}
+		},
 	},
+		
+---	
 	endless_flags = {
 		[85] = {
 			show_balloon = "map_balloon_endless_view",
 			unlocks_at_level = 7,
 			pos = {
-				x = 850,
-				y = 854
+--				x = 850,
+--				y = 854
+				x = 830,
+				y = 776
 			}
 		}
 	},

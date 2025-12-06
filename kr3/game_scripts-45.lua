@@ -1715,7 +1715,7 @@ function scripts.ignis_altar_bomb.update(this, store)
 	for _, enemy in pairs(enemies) do
 		local d = E:create_entity("damage")
 
-		d.damage_type = b.damage_type
+		d.damage_type = DAMAGE_EXPLOSION--b.damage_type
 		d.reduce_armor = b.reduce_armor
 		d.reduce_magic_armor = b.reduce_magic_armor
 
@@ -2092,7 +2092,7 @@ function scripts.tower_ignis_altar_lava.update(this, store)
 	local damage_factor = b.damage_factor
 	local explode_pos = V.v(b.explode_pos.x, b.explode_pos.y)
 	local aura_duration = b.aura_duration
-	local damage_type = b.damage_type
+	local damage_type = DAMAGE_EXPLOSION--b.damage_type
 	local dps_ts = store.tick_ts
 	local init_ts = store.tick_ts
 	local count = 0
@@ -8067,7 +8067,7 @@ function scripts.tower_sandworm_bomb.update(this, store)
 			d.xp_dest_id = b.source_id
 		end
 
-		if d.damage_type == bor(DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS) and band(enemy.vis.flags, bor(F_BOSS, F_MINIBOSS)) ~= 0 then
+		if d.damage_type == bor(DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS) and (band(enemy.vis.flags, bor(F_BOSS, F_MINIBOSS)) ~= 0 or band(enemy.vis.bans, bor(F_INSTAKILL, F_DISINTEGRATED, F_EAT) ~= 0)) then
 			--empty block
 		else
 			queue_damage(store, d)

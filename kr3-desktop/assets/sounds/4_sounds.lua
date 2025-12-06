@@ -1686,38 +1686,6 @@ return {
 			"kr4_dark_army_blazing_mage_attack_loopend.ogg"
 		}
 	},
-	MusicBattlePrep_71 = {
-		source_group = "MUSIC",
-		gain = 0.15,
-		loop = true,
-		files = {
-			"Tutorial_Exploracion.ogg"
-		}
-	},
-	MusicBattle_71 = {
-		source_group = "MUSIC",
-		gain = 0.15,
-		loop = true,
-		files = {
-			"Tutorial_Guerra.ogg"
-		}
-	},
-	MusicBattlePrep_72 = {
-		source_group = "MUSIC",
-		gain = 0.15,
-		loop = true,
-		files = {
-			"Tutorial_Exploracion.ogg"
-		}
-	},
-	MusicBattle_72 = {
-		source_group = "MUSIC",
-		gain = 0.15,
-		loop = true,
-		files = {
-			"Tutorial_Guerra.ogg"
-		}
-	},
 	haunted_skeleton_death = {
 		source_group = "SFX",
 		files = {

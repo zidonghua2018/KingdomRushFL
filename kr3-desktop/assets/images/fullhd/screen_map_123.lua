@@ -7719,6 +7719,82 @@ return {
         f_quad = {7,1049,342,246},
         alias = {}
     },
+---重生
+--[[
+	stage_thumbs_0073 = {
+		a_name = "screen_map-123.png",
+		size = {
+			342,
+			246
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1573,
+			1323,
+			342,
+			246
+		},
+		alias = {}
+	},
+	stage_thumbs_0074 = {
+		a_name = "screen_map-123.png",
+		size = {
+			342,
+			246
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1573,
+			1575,
+			342,
+			246
+		},
+		alias = {}
+	},
+	stage_thumbs_0075 = {
+		a_name = "screen_map-123.png",
+		size = {
+			342,
+			246
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1197,
+			1323,
+			342,
+			246
+		},
+		alias = {}
+	}, 
+    ]]--
+---          
     stage_thumbs_endless_0081 = {
         a_name = "screen_map-6.png",
         size = {342,246},

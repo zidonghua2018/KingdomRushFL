@@ -9,6 +9,7 @@ local ani_paths2 = require("data.map_animations_paths2")
 local i18n = require("i18n")
 require("gg_views")
 
+
 local function CJK(default, zh, ja, kr)
 	return i18n.cjk(i18n, default, zh, ja, kr)
 end
@@ -145,6 +146,164 @@ end
 local function hero_group_ver(name)
 	return _hero_group_ver[name] or 0
 end
+
+local _level_game_ver = {
+	[1] = 3,
+	[2] = 3,
+	[3] = 3,
+	[4] = 3,
+	[5] = 3,
+	[6] = 3,
+	[7] = 3,
+	[8] = 3,
+	[9] = 3,
+	[10] = 3,
+	[11] = 3,
+	[12] = 3,
+	[13] = 3,
+	[14] = 3,
+	[15] = 3,
+	[16] = 3,
+	[17] = 3,
+	[18] = 3,
+	[19] = 3,
+	[20] = 3,
+	[21] = 3,
+	[22] = 3,
+	[23] = 2,
+	[24] = 2,
+	[25] = 2,
+	[26] = 2,
+	[27] = 2,
+	[28] = 2,
+	[29] = 2,
+	[30] = 2,
+	[31] = 2,
+	[32] = 2,
+	[33] = 2,
+	[34] = 2,
+	[35] = 2,
+	[36] = 2,
+	[37] = 2,
+	[38] = 2,
+	[39] = 2,
+	[40] = 2,
+	[41] = 2,
+	[42] = 2,
+	[43] = 2,
+	[44] = 2,
+	[45] = 1,
+	[46] = 1,
+	[47] = 1,
+	[48] = 1,
+	[49] = 1,
+	[50] = 1,
+	[51] = 1,
+	[52] = 1,
+	[53] = 1,
+	[54] = 1,
+	[55] = 1,
+	[56] = 1,
+	[57] = 1,
+	[58] = 1,
+	[59] = 1,
+	[60] = 1,
+	[61] = 1,
+	[62] = 1,
+	[63] = 1,
+	[64] = 1,
+	[65] = 1,
+	[66] = 1,
+	[67] = 1,
+	[68] = 1,
+	[69] = 1,
+	[70] = 1,
+	[71] = 1,
+	[72] = 1,
+	[73] = 1,
+	[74] = 1,
+	[75] = 1,
+	[76] = 1,
+	[77] = 0,
+	[78] = 0,
+	[79] = 0,
+	[80] = 0,
+	[81] = 23,
+	[82] = 23,
+	[83] = 22,
+	[84] = 22,
+	[85] = 21,
+	[86] = 0,
+	[87] = 0,
+	[88] = 0,
+	[89] = 0,
+	[90] = 0,
+	[91] = 0,
+	[92] = 0,
+	[93] = 0,
+	[94] = 0,
+	[95] = 0,
+	[96] = 0,
+	[97] = 0,
+	[98] = 0,
+	[99] = 0,
+	[100] = 0,
+	[101] = 5,
+	[102] = 5,
+	[103] = 5,
+	[104] = 5,
+	[105] = 5,
+	[106] = 5,
+	[107] = 5,
+	[108] = 5,
+	[109] = 5,
+	[110] = 5,
+	[111] = 5,
+	[112] = 5,
+	[113] = 5,
+	[114] = 5,
+	[115] = 5,
+	[116] = 5,
+	[117] = 5,
+	[118] = 5,
+	[119] = 5,
+	[120] = 5,
+	[121] = 5,
+	[122] = 5,
+	[123] = 5,
+	[124] = 5,
+	[125] = 5,
+	[126] = 5,
+	[127] = 5,
+	[128] = 5,
+	[129] = 5,
+	[130] = 5,
+	[131] = 5,
+	[132] = 5,
+	[133] = 5,
+	[134] = 5,
+	[135] = 5,
+}
+
+local function level_game_ver(level)
+	return _level_game_ver[level] or 0
+end
+
+local function level_rank(rank, gen)
+	local level
+	local count = 0
+	for i = 1, #_level_game_ver do
+		if gen == _level_game_ver[i] then
+			count = count + 1
+		end
+		if count == rank then
+			level = i
+			break
+		end
+	end
+	return level
+end
+
 
 return {
 	--label如果没有可以default，这里暂时不用改
@@ -2018,6 +2177,8 @@ return {
 	},
 	hero_game_ver = hero_game_ver,
 	hero_group_ver = hero_group_ver,
+	level_game_ver = level_game_ver,
+	level_rank = level_rank,
 	--hero_room加载的这里
 	hero_data = {
 		--3代
@@ -3625,6 +3786,300 @@ return {
 				"druids",
 			},
 		},
+		---重生		
+		[73] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {
+				"barracks",
+				"artillery",
+				"mages"
+			}
+		},
+		[74] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {
+				"archers",
+				"artillery",
+				"mages"
+			}
+		},
+		[75] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {
+				"archers",
+				"barracks",
+			}
+		},
+		[76] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[77] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[78] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[79] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[80] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[86] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[87] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[88] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[89] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[90] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[91] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[92] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[93] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[94] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[95] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[96] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[97] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[98] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[99] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		[100] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				"archers",
+				"barracks",
+				"mages",
+				"artillery",
+				"druids",
+			},
+		},
+		---				
 		--5代
 		[101] = {
 			upgrades = {
@@ -9119,7 +9574,41 @@ return {
 			fns = {
 				unlock = deco_fn.path_open.unlock
 			}
+		},
+		---重生
+		{
+			layer = 1,
+			hidden = true,
+			id = "md_path_74",
+			image = "map_path_30_0033",
+			trigger_level = 30,
+			pos = v(765, 687),
+			animations = {
+				to = 33,
+				prefix = "map_path_30",
+				from = 1
+			},
+			fns = {
+				unlock = deco_fn.path_open.unlock
+			}
+		},
+		{
+			layer = 1,
+			hidden = true,
+			id = "md_path_75",
+			image = "map_path_31_0041",
+			trigger_level = 31,
+			pos = v(839, 863),
+			animations = {
+				to = 41,
+				prefix = "map_path_31",
+				from = 1
+			},
+			fns = {
+				unlock = deco_fn.path_open.unlock
+			}
 		}
+---				
 	},
 	--2代
 	map_animations2 = {
@@ -9129,7 +9618,7 @@ return {
 			layer = 1,
 			pos = v(32, 192),
 			animation = {
-				to = 18,
+				to = 18,--18
 				prefix = "ma_waterfall_left",
 				from = 1
 			}
@@ -10470,5 +10959,5 @@ return {
 	},
 	map_decos5 = {
 
-	},
+	}
 }

@@ -33,6 +33,13 @@ d.item_props = {
 		src = "screen_kr1_end",
 		type = "screen",
 	},
+---重生
+	kr1_fa = {
+		src = "screen_kr1_fa",
+		next = "map",
+		type = "screen"
+	},
+---		
 	kr2_end = {
 		next = "map",
 		src = "screen_kr2_end",
@@ -116,6 +123,7 @@ d.loading_image_name = {
 			5,
 			6,
 			82,
+			86,
 		},
 	},
 	{
@@ -180,6 +188,8 @@ d.loading_image_name = {
 			31,
 			32,
 			33,
+			78,
+			80,
 			84,
 		},
 	},
@@ -199,6 +209,7 @@ d.loading_image_name = {
 			38,
 			39,
 			40,
+			79,
 		},
 	},
 	{
@@ -207,6 +218,7 @@ d.loading_image_name = {
 			41,
 			42,
 			43,
+			77,
 		},
 	},
 	{
@@ -233,6 +245,7 @@ d.loading_image_name = {
 			57,
 			62,
 			63,
+			76,
 		},
 	},
 	{
@@ -250,6 +263,17 @@ d.loading_image_name = {
 		},
 	},
 	{
+		"loading_purple_crystal",
+		{
+			87,
+			88,
+			89,
+			90,
+			91,
+			92
+		},
+	},
+	{
 		"loading_blackburn",
 		{
 			67,
@@ -258,6 +282,17 @@ d.loading_image_name = {
 			70,
 		},
 	},
+---重生
+	{
+		"loading_fa",
+		{
+			73,
+			74,
+			75,
+		},
+	},
+	default = "loading_grass",	
+---	
 	{
 		"loading_images_desktop_1",
 		{

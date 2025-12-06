@@ -56555,7 +56555,7 @@ function scripts.tower_pandas.update(this, store, script)
 			local spr = this.render.sprites[panda.render]
 			local cfg = panda.shoot_cfg
 
-			if cfg and store.tick_ts >= cfg.shoot_ts then
+			if cfg and store.tick_ts >= cfg.shoot_ts and #this.render.sprites >= cfg.shooter_sid then
 				enemy = U.find_foremost_enemy(store.entities, tpos(this), 0, at.range + 15, false, a.vis_flags, a.vis_bans)
 
 				if enemy then

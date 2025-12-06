@@ -1298,6 +1298,62 @@ local t = {
 		name = "SUN_BURNER",
 		goal = 20
 	},
+---重生
+	{
+		icon = 475,
+		name = "DEFEAT_COMPLETE_IMPOSSIBLE"
+	},
+	{
+		icon = 476,
+		name = "DEFEAT_HOBGOBLIN_BOSS"
+	},
+	{
+		icon = 477,
+		name = "GOLD_BAG",
+		goal = 500
+	},
+	{
+		icon = 480,
+		name = "HOB_RIDERS",
+		goal = 50
+	},
+	{
+		icon = 479,
+		name = "HOB_SPEAR",
+		goal = 100
+	},
+	{
+		icon = 478,
+		name = "HOB_SHIELD",
+		goal = 25
+	},
+	{
+		icon = 481,
+		name = "GOBLIN_BLOON",
+		goal = 99
+	},
+	{
+		icon = 482,
+		name = "TIME_WIZARD_SLOW",
+		goal = 200
+	},
+	{
+		icon = 483,
+		name = "ANCIENT_GUARD_TELE",
+		goal = 100
+	},
+	{
+		icon = 484,
+		name = "STEAM_TROOP_FREEZE",
+		goal = 150
+	},
+	{
+		icon = 485,
+		name = "STEAM_TROOP_IND",
+		goal = 5,
+		period = P_LEVEL
+	},
+---		
 	-- {
 		-- icon = 49,
 		-- name = "GREAT_DEFENDER"

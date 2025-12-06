@@ -5680,7 +5680,7 @@ return {
         alias = {}
     },
     backPack_icons_off_0003 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,77},
         trim = {9,9,9,11},
         a_size = {2048,2048},
@@ -5688,7 +5688,7 @@ return {
         alias = {}
     },
     base_info_icons_0008 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {22,22},
         trim = {0,1,0,1},
         a_size = {2048,2048},
@@ -5696,7 +5696,7 @@ return {
         alias = {}
     },
     base_info_icons_0009 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {22,22},
         trim = {0,1,0,1},
         a_size = {2048,2048},
@@ -5704,7 +5704,7 @@ return {
         alias = {}
     },
     effect_powerbuy_0001 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {72,82},
         trim = {5,17,5,13},
         a_size = {2048,2048},
@@ -5712,7 +5712,7 @@ return {
         alias = {}
     },
     effect_powerbuy_0004 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {72,82},
         trim = {3,15,3,11},
         a_size = {2048,2048},
@@ -5720,7 +5720,7 @@ return {
         alias = {}
     },
     effect_powerbuy_0008 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {72,82},
         trim = {0,6,4,10},
         a_size = {2048,2048},
@@ -5728,7 +5728,7 @@ return {
         alias = {}
     },
     effect_powerbuy_0019 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {72,82},
         trim = {13,10,5,18},
         a_size = {2048,2048},
@@ -5736,7 +5736,7 @@ return {
         alias = {}
     },
     effect_powerbuy_0020 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {72,82},
         trim = {12,8,6,22},
         a_size = {2048,2048},
@@ -5744,7 +5744,7 @@ return {
         alias = {}
     },
     error_feedback_0001 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {78,72},
         trim = {8,17,8,7},
         a_size = {2048,2048},
@@ -5752,7 +5752,7 @@ return {
         alias = {}
     },
     error_feedback_0002 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {78,72},
         trim = {4,16,4,4},
         a_size = {2048,2048},
@@ -5760,7 +5760,7 @@ return {
         alias = {}
     },
     error_feedback_0006 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {78,72},
         trim = {4,16,4,4},
         a_size = {2048,2048},
@@ -5768,7 +5768,7 @@ return {
         alias = {}
     },
     error_feedback_0007 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {78,72},
         trim = {7,16,7,6},
         a_size = {2048,2048},
@@ -5776,7 +5776,7 @@ return {
         alias = {}
     },
     gemsReward_0001 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {28,25},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -5784,7 +5784,7 @@ return {
         alias = {}
     },
     heart_0001 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {36,36},
         trim = {3,5,3,3},
         a_size = {2048,2048},
@@ -5792,7 +5792,7 @@ return {
         alias = {}
     },
     heart_0004 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {36,36},
         trim = {2,4,2,2},
         a_size = {2048,2048},
@@ -5800,7 +5800,7 @@ return {
         alias = {}
     },
     heart_0005 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {36,36},
         trim = {2,4,2,2},
         a_size = {2048,2048},
@@ -5808,7 +5808,7 @@ return {
         alias = {}
     },
     heart_0006 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {36,36},
         trim = {2,4,2,2},
         a_size = {2048,2048},
@@ -5816,7 +5816,7 @@ return {
         alias = {}
     },
     heart_0007 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {36,36},
         trim = {2,4,2,2},
         a_size = {2048,2048},
@@ -5824,7 +5824,7 @@ return {
         alias = {}
     },
     heart_0008 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {36,36},
         trim = {2,4,2,2},
         a_size = {2048,2048},
@@ -5832,7 +5832,7 @@ return {
         alias = {}
     },
     heart_0009 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {36,36},
         trim = {1,4,3,2},
         a_size = {2048,2048},
@@ -5840,7 +5840,7 @@ return {
         alias = {}
     },
     heart_0010 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {36,36},
         trim = {3,4,3,2},
         a_size = {2048,2048},
@@ -5848,7 +5848,7 @@ return {
         alias = {}
     },
     heart_0011 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {36,36},
         trim = {3,5,3,3},
         a_size = {2048,2048},
@@ -5856,7 +5856,7 @@ return {
         alias = {}
     },
     heart_0012 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {36,36},
         trim = {3,5,3,3},
         a_size = {2048,2048},
@@ -5864,7 +5864,7 @@ return {
         alias = {}
     },
     heart_0013 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {36,36},
         trim = {3,5,3,3},
         a_size = {2048,2048},
@@ -5872,7 +5872,7 @@ return {
         alias = {}
     },
     heart_0014 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {36,36},
         trim = {2,5,4,3},
         a_size = {2048,2048},
@@ -5880,7 +5880,7 @@ return {
         alias = {}
     },
     heart_0015 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {36,36},
         trim = {3,5,3,3},
         a_size = {2048,2048},
@@ -5888,7 +5888,7 @@ return {
         alias = {}
     },
     ico_sell_0001 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {72,66},
         trim = {0,0,2,0},
         a_size = {2048,2048},
@@ -5896,7 +5896,7 @@ return {
         alias = {}
     },
     ico_sell_0001_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {72,66},
         trim = {0,0,2,0},
         a_size = {2048,2048},
@@ -5904,7 +5904,7 @@ return {
         alias = {}
     },
     main_icons_0005 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -5912,7 +5912,7 @@ return {
         alias = {}
     },
     main_icons_0005_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -5920,7 +5920,7 @@ return {
         alias = {}
     },
     main_icons_0014 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -5928,7 +5928,7 @@ return {
         alias = {}
     },
     main_icons_0014_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -5936,7 +5936,7 @@ return {
         alias = {}
     },
     main_icons_0015 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -5944,7 +5944,7 @@ return {
         alias = {}
     },
     main_icons_0015_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -5952,7 +5952,7 @@ return {
         alias = {}
     },
     main_icons_0019 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -5960,7 +5960,7 @@ return {
         alias = {}
     },
     main_icons_0019_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -5968,7 +5968,7 @@ return {
         alias = {}
     },
     main_icons_0020 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -5976,7 +5976,7 @@ return {
         alias = {}
     },
     main_icons_0020_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -5984,7 +5984,7 @@ return {
         alias = {}
     },
     main_icons_0029_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -5992,7 +5992,7 @@ return {
         alias = {}
     },
     main_icons_0030 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6000,7 +6000,7 @@ return {
         alias = {}
     },
     main_icons_0030_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6008,7 +6008,7 @@ return {
         alias = {}
     },
     main_icons_0031 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6016,7 +6016,7 @@ return {
         alias = {}
     },
     main_icons_0031_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6024,7 +6024,7 @@ return {
         alias = {}
     },
     main_icons_0032 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6032,7 +6032,7 @@ return {
         alias = {}
     },
     main_icons_0032_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6040,7 +6040,7 @@ return {
         alias = {}
     },
     main_icons_0033 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6048,7 +6048,7 @@ return {
         alias = {}
     },
     main_icons_0033_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6056,7 +6056,7 @@ return {
         alias = {}
     },
     main_icons_0034 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6064,7 +6064,7 @@ return {
         alias = {}
     },
     main_icons_0034_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6072,7 +6072,7 @@ return {
         alias = {}
     },
     main_icons_0035 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6080,7 +6080,7 @@ return {
         alias = {}
     },
     main_icons_0035_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6088,7 +6088,7 @@ return {
         alias = {}
     },
     main_icons_0036 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6096,7 +6096,7 @@ return {
         alias = {}
     },
     main_icons_0036_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6104,7 +6104,7 @@ return {
         alias = {}
     },
     main_icons_0037 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6112,7 +6112,7 @@ return {
         alias = {}
     },
     main_icons_0037_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6120,7 +6120,7 @@ return {
         alias = {}
     },
     main_icons_0038 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6128,7 +6128,7 @@ return {
         alias = {}
     },
     main_icons_0038_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6136,7 +6136,7 @@ return {
         alias = {}
     },
     main_icons_0039 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6144,7 +6144,7 @@ return {
         alias = {}
     },
     main_icons_0039_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6152,7 +6152,7 @@ return {
         alias = {}
     },
     main_icons_0100 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6160,7 +6160,7 @@ return {
         alias = {}
     },
     main_icons_0100_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6168,7 +6168,7 @@ return {
         alias = {}
     },
     main_icons_0101 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6176,7 +6176,7 @@ return {
         alias = {}
     },
     main_icons_0101_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6184,7 +6184,7 @@ return {
         alias = {}
     },
     main_icons_0102 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6192,7 +6192,7 @@ return {
         alias = {}
     },
     main_icons_0102_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6200,7 +6200,7 @@ return {
         alias = {}
     },
     main_icons_0103 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6208,7 +6208,7 @@ return {
         alias = {}
     },
     main_icons_0103_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6216,7 +6216,7 @@ return {
         alias = {}
     },
     main_icons_0104 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6224,7 +6224,7 @@ return {
         alias = {}
     },
     main_icons_0104_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6232,7 +6232,7 @@ return {
         alias = {}
     },
     main_icons_0105 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6240,7 +6240,7 @@ return {
         alias = {}
     },
     main_icons_0105_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6248,7 +6248,7 @@ return {
         alias = {}
     },
     main_icons_0106 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6256,7 +6256,7 @@ return {
         alias = {}
     },
     main_icons_0106_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6264,7 +6264,7 @@ return {
         alias = {}
     },
     main_icons_0107 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6272,7 +6272,7 @@ return {
         alias = {}
     },
     main_icons_0107_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6280,7 +6280,7 @@ return {
         alias = {}
     },
     main_icons_0108 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6288,7 +6288,7 @@ return {
         alias = {}
     },
     main_icons_0108_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6296,7 +6296,7 @@ return {
         alias = {}
     },
     main_icons_0109 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6304,7 +6304,7 @@ return {
         alias = {}
     },
     main_icons_0109_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6312,7 +6312,7 @@ return {
         alias = {}
     },
     main_icons_0110 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6320,7 +6320,7 @@ return {
         alias = {}
     },
     main_icons_0110_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6328,7 +6328,7 @@ return {
         alias = {}
     },
     main_icons_0111 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6336,7 +6336,7 @@ return {
         alias = {}
     },
     main_icons_0111_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6344,7 +6344,7 @@ return {
         alias = {}
     },
     main_icons_0112 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6352,7 +6352,7 @@ return {
         alias = {}
     },
     main_icons_0112_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6360,7 +6360,7 @@ return {
         alias = {}
     },
     main_icons_0113 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6368,7 +6368,7 @@ return {
         alias = {}
     },
     main_icons_0113_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6376,7 +6376,7 @@ return {
         alias = {}
     },
     main_icons_0114 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6384,7 +6384,7 @@ return {
         alias = {}
     },
     main_icons_0114_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,74},
         trim = {9,6,9,6},
         a_size = {2048,2048},
@@ -6392,7 +6392,7 @@ return {
         alias = {}
     },
     main_icons_buy2_0019_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6400,7 +6400,7 @@ return {
         alias = {}
     },
     main_icons_buy3_0019 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6408,7 +6408,7 @@ return {
         alias = {}
     },
     main_icons_buy3_0019_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6416,7 +6416,7 @@ return {
         alias = {}
     },
     main_icons_buy4_0019 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6424,7 +6424,7 @@ return {
         alias = {}
     },
     main_icons_buy4_0019_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6432,7 +6432,7 @@ return {
         alias = {}
     },
     main_icons_buy5_0019 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6440,7 +6440,7 @@ return {
         alias = {}
     },
     main_icons_buy5_0019_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6448,7 +6448,7 @@ return {
         alias = {}
     },
     main_icons_buy6_0019 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6456,7 +6456,7 @@ return {
         alias = {}
     },
     main_icons_buy6_0019_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6464,7 +6464,7 @@ return {
         alias = {}
     },
     main_icons_buy7_0019 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6472,7 +6472,7 @@ return {
         alias = {}
     },
     main_icons_buy7_0019_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6480,7 +6480,7 @@ return {
         alias = {}
     },
     main_tower_icons_0001 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6488,7 +6488,7 @@ return {
         alias = {}
     },
     main_tower_icons_0001_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6496,7 +6496,7 @@ return {
         alias = {}
     },
     main_tower_icons_0002 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,10,15,12},
         a_size = {2048,2048},
@@ -6504,7 +6504,7 @@ return {
         alias = {}
     },
     main_tower_icons_0002_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,10,15,12},
         a_size = {2048,2048},
@@ -6512,7 +6512,7 @@ return {
         alias = {}
     },
     main_tower_icons_0003 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,10,15,12},
         a_size = {2048,2048},
@@ -6520,7 +6520,7 @@ return {
         alias = {}
     },
     main_tower_icons_0003_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,10,15,12},
         a_size = {2048,2048},
@@ -6528,7 +6528,7 @@ return {
         alias = {}
     },
     main_tower_icons_0004 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6536,7 +6536,7 @@ return {
         alias = {}
     },
     main_tower_icons_0004_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6544,7 +6544,7 @@ return {
         alias = {}
     },
     main_tower_icons_0005 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6552,7 +6552,7 @@ return {
         alias = {}
     },
     main_tower_icons_0005_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6560,7 +6560,7 @@ return {
         alias = {}
     },
     main_tower_icons_0006 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6568,7 +6568,7 @@ return {
         alias = {}
     },
     main_tower_icons_0006_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6576,7 +6576,7 @@ return {
         alias = {}
     },
     main_tower_icons_0007 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6584,7 +6584,7 @@ return {
         alias = {}
     },
     main_tower_icons_0007_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6592,7 +6592,7 @@ return {
         alias = {}
     },
     main_tower_icons_0008 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6600,7 +6600,7 @@ return {
         alias = {}
     },
     main_tower_icons_0008_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6608,7 +6608,7 @@ return {
         alias = {}
     },
     main_tower_icons_0009 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6616,7 +6616,7 @@ return {
         alias = {}
     },
     main_tower_icons_0009_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6624,7 +6624,7 @@ return {
         alias = {}
     },
     main_tower_icons_0010 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6632,7 +6632,7 @@ return {
         alias = {}
     },
     main_tower_icons_0010_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -6640,7 +6640,7 @@ return {
         alias = {}
     },
     nextwaveTimer_0001 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {64,64},
         trim = {5,4,5,6},
         a_size = {2048,2048},
@@ -6648,7 +6648,7 @@ return {
         alias = {}
     },
     nextwaveTimer_0020 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {64,64},
         trim = {22,22,20,22},
         a_size = {2048,2048},
@@ -6656,7 +6656,7 @@ return {
         alias = {}
     },
     nextwaveTimer_Full = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {64,64},
         trim = {5,4,5,6},
         a_size = {2048,2048},
@@ -6664,7 +6664,7 @@ return {
         alias = {}
     },
     nextwaveTimer_glow_0001 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {80,80},
         trim = {7,7,7,7},
         a_size = {2048,2048},
@@ -6672,7 +6672,7 @@ return {
         alias = {}
     },
     nextwaveTimer_glow_0002 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {80,80},
         trim = {6,7,6,7},
         a_size = {2048,2048},
@@ -6680,7 +6680,7 @@ return {
         alias = {}
     },
     nextwaveTimer_glow_0003 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {80,80},
         trim = {25,26,25,26},
         a_size = {2048,2048},
@@ -6688,7 +6688,7 @@ return {
         alias = {}
     },
     nextwave_0002 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6696,7 +6696,7 @@ return {
         alias = {}
     },
     nextwave_0005 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6704,7 +6704,7 @@ return {
         alias = {}
     },
     nextwave_0006 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6712,7 +6712,7 @@ return {
         alias = {}
     },
     nextwave_0007 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6720,7 +6720,7 @@ return {
         alias = {}
     },
     nextwave_0008 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6728,7 +6728,7 @@ return {
         alias = {}
     },
     nextwave_0009 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6736,7 +6736,7 @@ return {
         alias = {}
     },
     nextwave_0010 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6744,7 +6744,7 @@ return {
         alias = {}
     },
     nextwave_0011 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6752,7 +6752,7 @@ return {
         alias = {}
     },
     nextwave_0012 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6760,7 +6760,7 @@ return {
         alias = {}
     },
     nextwave_0013 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6768,7 +6768,7 @@ return {
         alias = {}
     },
     nextwave_0014 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6776,7 +6776,7 @@ return {
         alias = {}
     },
     nextwave_0015 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6784,7 +6784,7 @@ return {
         alias = {}
     },
     nextwave_0016 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6792,7 +6792,7 @@ return {
         alias = {}
     },
     nextwave_0017 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6800,7 +6800,7 @@ return {
         alias = {}
     },
     nextwave_0018 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6808,7 +6808,7 @@ return {
         alias = {}
     },
     nextwave_0019 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6816,7 +6816,7 @@ return {
         alias = {}
     },
     nextwave_0020 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6824,7 +6824,7 @@ return {
         alias = {}
     },
     nextwave_0021 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6832,7 +6832,7 @@ return {
         alias = {}
     },
     nextwave_0022 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6840,7 +6840,7 @@ return {
         alias = {}
     },
     nextwave_0023 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6848,7 +6848,7 @@ return {
         alias = {}
     },
     nextwave_0024 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6856,7 +6856,7 @@ return {
         alias = {}
     },
     nextwave_0025 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6864,7 +6864,7 @@ return {
         alias = {}
     },
     nextwave_0026 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6872,7 +6872,7 @@ return {
         alias = {}
     },
     nextwave_0027 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6880,7 +6880,7 @@ return {
         alias = {}
     },
     nextwave_0028 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6888,7 +6888,7 @@ return {
         alias = {}
     },
     nextwave_0029 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {74,74},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -6896,7 +6896,7 @@ return {
         alias = {}
     },
     nextwave_coin_0001 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {30,40},
         trim = {0,8,0,2},
         a_size = {2048,2048},
@@ -6904,7 +6904,7 @@ return {
         alias = {}
     },
     nextwave_coin_0003 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {30,40},
         trim = {0,3,0,7},
         a_size = {2048,2048},
@@ -6912,7 +6912,7 @@ return {
         alias = {}
     },
     nextwave_coin_0006 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {30,40},
         trim = {0,0,0,10},
         a_size = {2048,2048},
@@ -6920,7 +6920,7 @@ return {
         alias = {}
     },
     nextwave_coin_0007 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {30,40},
         trim = {0,0,0,10},
         a_size = {2048,2048},
@@ -6928,7 +6928,7 @@ return {
         alias = {}
     },
     nextwave_coin_0008 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {30,40},
         trim = {0,0,0,10},
         a_size = {2048,2048},
@@ -6936,7 +6936,7 @@ return {
         alias = {}
     },
     nextwave_coin_0013 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {30,40},
         trim = {0,5,0,3},
         a_size = {2048,2048},
@@ -6944,7 +6944,7 @@ return {
         alias = {}
     },
     nextwave_coin_0014 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {30,40},
         trim = {0,9,0,1},
         a_size = {2048,2048},
@@ -6952,7 +6952,7 @@ return {
         alias = {}
     },
     pause_btn_0001 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {60,54},
         trim = {2,0,2,0},
         a_size = {2048,2048},
@@ -6960,7 +6960,7 @@ return {
         alias = {}
     },
     pause_btn_0002 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {60,54},
         trim = {2,0,2,0},
         a_size = {2048,2048},
@@ -6968,7 +6968,7 @@ return {
         alias = {}
     },
     pointer_point_blue_0001 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -6976,7 +6976,7 @@ return {
         alias = {}
     },
     pointer_point_blue_0003 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -6984,7 +6984,7 @@ return {
         alias = {}
     },
     pointer_point_blue_0005 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -6992,7 +6992,7 @@ return {
         alias = {}
     },
     pointer_point_blue_0006 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -7000,7 +7000,7 @@ return {
         alias = {}
     },
     pointer_point_blue_0009 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -7008,7 +7008,7 @@ return {
         alias = {}
     },
     pointer_point_green_0001 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -7016,7 +7016,7 @@ return {
         alias = {}
     },
     pointer_point_green_0003 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -7024,7 +7024,7 @@ return {
         alias = {}
     },
     pointer_point_green_0004 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {1,4,3,4},
         a_size = {2048,2048},
@@ -7032,7 +7032,7 @@ return {
         alias = {}
     },
     pointer_point_green_0005 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -7040,7 +7040,7 @@ return {
         alias = {}
     },
     pointer_point_green_0006 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -7048,7 +7048,7 @@ return {
         alias = {}
     },
     pointer_point_green_0007 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {1,4,3,4},
         a_size = {2048,2048},
@@ -7056,7 +7056,7 @@ return {
         alias = {}
     },
     pointer_point_green_0008 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {1,4,3,4},
         a_size = {2048,2048},
@@ -7064,7 +7064,7 @@ return {
         alias = {}
     },
     pointer_point_green_0009 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -7072,7 +7072,7 @@ return {
         alias = {}
     },
     pointer_point_green_0010 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {1,4,3,4},
         a_size = {2048,2048},
@@ -7080,7 +7080,7 @@ return {
         alias = {}
     },
     pointer_point_orange_0001 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -7088,7 +7088,7 @@ return {
         alias = {}
     },
     pointer_point_orange_0002 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {2,4,2,4},
         a_size = {2048,2048},
@@ -7096,7 +7096,7 @@ return {
         alias = {}
     },
     pointer_point_orange_0003 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -7104,7 +7104,7 @@ return {
         alias = {}
     },
     pointer_point_orange_0004 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {1,4,3,4},
         a_size = {2048,2048},
@@ -7112,7 +7112,7 @@ return {
         alias = {}
     },
     pointer_point_orange_0005 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -7120,7 +7120,7 @@ return {
         alias = {}
     },
     pointer_point_orange_0006 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -7128,7 +7128,7 @@ return {
         alias = {}
     },
     pointer_point_orange_0007 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {1,4,3,4},
         a_size = {2048,2048},
@@ -7136,7 +7136,7 @@ return {
         alias = {}
     },
     pointer_point_orange_0008 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {1,4,3,4},
         a_size = {2048,2048},
@@ -7144,7 +7144,7 @@ return {
         alias = {}
     },
     pointer_point_orange_0009 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -7152,7 +7152,7 @@ return {
         alias = {}
     },
     pointer_point_orange_0010 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {1,4,3,4},
         a_size = {2048,2048},
@@ -7160,7 +7160,7 @@ return {
         alias = {}
     },
     pointer_reinforce_0002 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {120,120},
         trim = {32,36,36,36},
         a_size = {2048,2048},
@@ -7168,7 +7168,7 @@ return {
         alias = {}
     },
     pointer_reinforce_0003 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {120,120},
         trim = {30,34,30,36},
         a_size = {2048,2048},
@@ -7176,7 +7176,7 @@ return {
         alias = {}
     },
     pointer_set_rally_0001 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -7184,7 +7184,7 @@ return {
         alias = {}
     },
     pointer_set_rally_0002 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {2,4,2,4},
         a_size = {2048,2048},
@@ -7192,7 +7192,7 @@ return {
         alias = {}
     },
     pointer_set_rally_0003 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -7200,7 +7200,7 @@ return {
         alias = {}
     },
     pointer_set_rally_0004 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {2,4,2,4},
         a_size = {2048,2048},
@@ -7208,7 +7208,7 @@ return {
         alias = {}
     },
     pointer_set_rally_0005 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {2,4,2,4},
         a_size = {2048,2048},
@@ -7216,7 +7216,7 @@ return {
         alias = {}
     },
     pointer_set_rally_0006 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -7224,7 +7224,7 @@ return {
         alias = {}
     },
     pointer_set_rally_0007 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {1,4,3,4},
         a_size = {2048,2048},
@@ -7232,7 +7232,7 @@ return {
         alias = {}
     },
     pointer_set_rally_0008 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {1,4,3,4},
         a_size = {2048,2048},
@@ -7240,7 +7240,7 @@ return {
         alias = {}
     },
     pointer_set_rally_0009 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {3,4,3,4},
         a_size = {2048,2048},
@@ -7248,7 +7248,7 @@ return {
         alias = {}
     },
     pointer_set_rally_0010 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {70,42},
         trim = {1,4,3,4},
         a_size = {2048,2048},
@@ -7256,7 +7256,7 @@ return {
         alias = {}
     },
     power_bag_button_0005 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {14,14,14,14},
         a_size = {2048,2048},
@@ -7264,7 +7264,7 @@ return {
         alias = {}
     },
     power_bag_button_0006 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {14,14,14,14},
         a_size = {2048,2048},
@@ -7272,7 +7272,7 @@ return {
         alias = {}
     },
     power_bag_button_0007 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {14,14,14,14},
         a_size = {2048,2048},
@@ -7280,7 +7280,7 @@ return {
         alias = {}
     },
     power_bag_button_0008 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {14,14,14,14},
         a_size = {2048,2048},
@@ -7288,7 +7288,7 @@ return {
         alias = {}
     },
     power_bag_button_0009 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {14,14,14,14},
         a_size = {2048,2048},
@@ -7296,7 +7296,7 @@ return {
         alias = {}
     },
     power_bag_button_0010 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {14,14,14,14},
         a_size = {2048,2048},
@@ -7304,7 +7304,7 @@ return {
         alias = {}
     },
     power_bag_button_doors_0001 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {10,11,12,11},
         a_size = {2048,2048},
@@ -7312,7 +7312,7 @@ return {
         alias = {}
     },
     power_bag_button_doors_0002 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {10,11,12,11},
         a_size = {2048,2048},
@@ -7320,7 +7320,7 @@ return {
         alias = {}
     },
     power_bag_button_doors_0003 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {10,11,12,11},
         a_size = {2048,2048},
@@ -7328,7 +7328,7 @@ return {
         alias = {}
     },
     power_bag_button_doors_0004 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {10,11,12,11},
         a_size = {2048,2048},
@@ -7336,7 +7336,7 @@ return {
         alias = {}
     },
     power_bag_button_doors_0005 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {10,11,12,11},
         a_size = {2048,2048},
@@ -7344,7 +7344,7 @@ return {
         alias = {}
     },
     power_bag_button_doors_0006 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {10,11,12,11},
         a_size = {2048,2048},
@@ -7352,7 +7352,7 @@ return {
         alias = {}
     },
     power_bag_button_doors_0007 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {10,11,12,11},
         a_size = {2048,2048},
@@ -7360,7 +7360,7 @@ return {
         alias = {}
     },
     power_bag_button_doors_0008 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {10,11,12,11},
         a_size = {2048,2048},
@@ -7368,7 +7368,7 @@ return {
         alias = {}
     },
     power_bag_button_doors_0009 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {10,11,12,11},
         a_size = {2048,2048},
@@ -7376,7 +7376,7 @@ return {
         alias = {}
     },
     power_bag_button_doors_0010 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {10,11,12,11},
         a_size = {2048,2048},
@@ -7384,7 +7384,7 @@ return {
         alias = {}
     },
     power_bag_button_doors_0011 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {10,11,12,11},
         a_size = {2048,2048},
@@ -7392,7 +7392,7 @@ return {
         alias = {}
     },
     power_bag_button_doors_0012 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {10,11,12,11},
         a_size = {2048,2048},
@@ -7400,7 +7400,7 @@ return {
         alias = {}
     },
     power_bag_button_doors_0013 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {10,11,12,11},
         a_size = {2048,2048},
@@ -7408,7 +7408,7 @@ return {
         alias = {}
     },
     power_bag_button_doors_0014 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {10,11,12,11},
         a_size = {2048,2048},
@@ -7416,7 +7416,7 @@ return {
         alias = {}
     },
     power_bag_button_doors_0015 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {10,11,12,11},
         a_size = {2048,2048},
@@ -7424,7 +7424,7 @@ return {
         alias = {}
     },
     power_button_icons_0008 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {15,14,15,14},
         a_size = {2048,2048},
@@ -7432,7 +7432,7 @@ return {
         alias = {}
     },
     power_button_icons_0009 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {15,14,15,14},
         a_size = {2048,2048},
@@ -7440,7 +7440,7 @@ return {
         alias = {}
     },
     power_button_icons_0010 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {15,14,15,14},
         a_size = {2048,2048},
@@ -7448,7 +7448,7 @@ return {
         alias = {}
     },
     power_button_icons_0011 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {15,14,15,14},
         a_size = {2048,2048},
@@ -7456,7 +7456,7 @@ return {
         alias = {}
     },
     power_button_icons_0012 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {15,14,15,14},
         a_size = {2048,2048},
@@ -7464,7 +7464,7 @@ return {
         alias = {}
     },
     power_button_icons_0013 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {15,14,15,14},
         a_size = {2048,2048},
@@ -7472,7 +7472,7 @@ return {
         alias = {}
     },
     power_button_icons_0014 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {15,14,15,14},
         a_size = {2048,2048},
@@ -7480,7 +7480,7 @@ return {
         alias = {}
     },
     power_button_icons_0015 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {15,14,15,14},
         a_size = {2048,2048},
@@ -7488,7 +7488,7 @@ return {
         alias = {}
     },
     power_button_icons_0016 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {15,14,15,14},
         a_size = {2048,2048},
@@ -7496,7 +7496,7 @@ return {
         alias = {}
     },
     power_button_icons_0017 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {15,14,15,14},
         a_size = {2048,2048},
@@ -7504,7 +7504,7 @@ return {
         alias = {}
     },
     power_button_icons_0018 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {88,88},
         trim = {15,14,15,14},
         a_size = {2048,2048},
@@ -7512,7 +7512,7 @@ return {
         alias = {}
     },
     power_nbrs_0002 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {30,30},
         trim = {0,2,2,0},
         a_size = {2048,2048},
@@ -7520,7 +7520,7 @@ return {
         alias = {}
     },
     power_nbrs_0003 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {30,30},
         trim = {0,2,2,0},
         a_size = {2048,2048},
@@ -7528,7 +7528,7 @@ return {
         alias = {}
     },
     special_hero_icons_0001 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7536,7 +7536,7 @@ return {
         alias = {}
     },
     special_hero_icons_0001_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7544,7 +7544,7 @@ return {
         alias = {}
     },
     special_hero_icons_0002 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7552,7 +7552,7 @@ return {
         alias = {}
     },
     special_hero_icons_0002_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7560,7 +7560,7 @@ return {
         alias = {}
     },
     special_hero_icons_0003 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7568,7 +7568,7 @@ return {
         alias = {}
     },
     special_hero_icons_0003_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7576,7 +7576,7 @@ return {
         alias = {}
     },
     special_hero_icons_0004 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7584,7 +7584,7 @@ return {
         alias = {}
     },
     special_hero_icons_0004_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7592,7 +7592,7 @@ return {
         alias = {}
     },
     special_hero_icons_0005 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7600,7 +7600,7 @@ return {
         alias = {}
     },
     special_hero_icons_0005_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7608,7 +7608,7 @@ return {
         alias = {}
     },
     special_hero_icons_0006 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7616,7 +7616,7 @@ return {
         alias = {}
     },
     special_hero_icons_0006_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7624,7 +7624,7 @@ return {
         alias = {}
     },
     special_hero_icons_0007 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7632,7 +7632,7 @@ return {
         alias = {}
     },
     special_hero_icons_0007_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7640,7 +7640,7 @@ return {
         alias = {}
     },
     special_hero_icons_0008 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7648,7 +7648,7 @@ return {
         alias = {}
     },
     special_hero_icons_0008_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7656,7 +7656,7 @@ return {
         alias = {}
     },
     special_hero_icons_0009 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7664,7 +7664,7 @@ return {
         alias = {}
     },
     special_hero_icons_0009_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7672,7 +7672,7 @@ return {
         alias = {}
     },
     special_hero_icons_0010 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7680,7 +7680,7 @@ return {
         alias = {}
     },
     special_hero_icons_0010_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7688,7 +7688,7 @@ return {
         alias = {}
     },
     special_hero_icons_0011 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7696,7 +7696,7 @@ return {
         alias = {}
     },
     special_hero_icons_0011_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7704,7 +7704,7 @@ return {
         alias = {}
     },
     special_hero_icons_0012 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7712,7 +7712,7 @@ return {
         alias = {}
     },
     special_hero_icons_0012_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7720,7 +7720,7 @@ return {
         alias = {}
     },
     special_hero_icons_0013 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7728,7 +7728,7 @@ return {
         alias = {}
     },
     special_hero_icons_0013_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7736,7 +7736,7 @@ return {
         alias = {}
     },
     special_hero_icons_0014 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7744,7 +7744,7 @@ return {
         alias = {}
     },
     special_hero_icons_0014_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7752,7 +7752,7 @@ return {
         alias = {}
     },
     special_hero_icons_0015 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7760,7 +7760,7 @@ return {
         alias = {}
     },
     special_hero_icons_0015_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7768,7 +7768,7 @@ return {
         alias = {}
     },
     special_hero_icons_0016 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7776,7 +7776,7 @@ return {
         alias = {}
     },
     special_hero_icons_0016_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7784,7 +7784,7 @@ return {
         alias = {}
     },
     special_hero_icons_0017 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7792,7 +7792,7 @@ return {
         alias = {}
     },
     special_hero_icons_0017_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7800,7 +7800,7 @@ return {
         alias = {}
     },
     special_hero_icons_0018 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7808,7 +7808,7 @@ return {
         alias = {}
     },
     special_hero_icons_0018_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7816,7 +7816,7 @@ return {
         alias = {}
     },
     special_hero_icons_0019 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7824,7 +7824,7 @@ return {
         alias = {}
     },
     special_hero_icons_0019_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7832,7 +7832,7 @@ return {
         alias = {}
     },
     special_hero_icons_0101 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7840,7 +7840,7 @@ return {
         alias = {}
     },
     special_hero_icons_0101_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7848,7 +7848,7 @@ return {
         alias = {}
     },
     special_hero_icons_0102 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7856,7 +7856,7 @@ return {
         alias = {}
     },
     special_hero_icons_0102_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7864,7 +7864,7 @@ return {
         alias = {}
     },
     special_hero_icons_0103 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7872,7 +7872,7 @@ return {
         alias = {}
     },
     special_hero_icons_0103_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7880,7 +7880,7 @@ return {
         alias = {}
     },
     special_hero_icons_0104 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7888,7 +7888,7 @@ return {
         alias = {}
     },
     special_hero_icons_0104_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7896,7 +7896,7 @@ return {
         alias = {}
     },
     special_hero_icons_0105 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7904,7 +7904,7 @@ return {
         alias = {}
     },
     special_hero_icons_0105_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7912,7 +7912,7 @@ return {
         alias = {}
     },
     special_hero_icons_0106 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7920,7 +7920,7 @@ return {
         alias = {}
     },
     special_hero_icons_0106_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7928,7 +7928,7 @@ return {
         alias = {}
     },
     special_hero_icons_0107 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7936,7 +7936,7 @@ return {
         alias = {}
     },
     special_hero_icons_0107_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7944,7 +7944,7 @@ return {
         alias = {}
     },
     special_hero_icons_0108 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7952,7 +7952,7 @@ return {
         alias = {}
     },
     special_hero_icons_0108_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7960,7 +7960,7 @@ return {
         alias = {}
     },
     special_hero_icons_0109 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7968,7 +7968,7 @@ return {
         alias = {}
     },
     special_hero_icons_0109_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7976,7 +7976,7 @@ return {
         alias = {}
     },
     special_hero_icons_0110 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7984,7 +7984,7 @@ return {
         alias = {}
     },
     special_hero_icons_0110_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -7992,7 +7992,7 @@ return {
         alias = {}
     },
     special_hero_icons_0111 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8000,7 +8000,7 @@ return {
         alias = {}
     },
     special_hero_icons_0111_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8008,7 +8008,7 @@ return {
         alias = {}
     },
     special_hero_icons_0112 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8016,7 +8016,7 @@ return {
         alias = {}
     },
     special_hero_icons_0112_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8024,7 +8024,7 @@ return {
         alias = {}
     },
     special_hero_icons_0113 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8032,7 +8032,7 @@ return {
         alias = {}
     },
     special_hero_icons_0113_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8040,7 +8040,7 @@ return {
         alias = {}
     },
     special_hero_icons_0114 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8048,7 +8048,7 @@ return {
         alias = {}
     },
     special_hero_icons_0114_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8056,7 +8056,7 @@ return {
         alias = {}
     },
     special_hero_icons_0115 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8064,7 +8064,7 @@ return {
         alias = {}
     },
     special_hero_icons_0115_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8072,7 +8072,7 @@ return {
         alias = {}
     },
     special_hero_icons_0116 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8080,7 +8080,7 @@ return {
         alias = {}
     },
     special_hero_icons_0116_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8088,7 +8088,7 @@ return {
         alias = {}
     },
     special_hero_icons_0117 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8096,7 +8096,7 @@ return {
         alias = {}
     },
     special_hero_icons_0117_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8104,7 +8104,7 @@ return {
         alias = {}
     },
     special_hero_icons_0118 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8112,7 +8112,7 @@ return {
         alias = {}
     },
     special_hero_icons_0118_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8120,7 +8120,7 @@ return {
         alias = {}
     },
     special_hero_icons_0119 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8128,7 +8128,7 @@ return {
         alias = {}
     },
     special_hero_icons_0119_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8136,7 +8136,7 @@ return {
         alias = {}
     },
     special_hero_icons_0201 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8144,7 +8144,7 @@ return {
         alias = {}
     },
     special_hero_icons_0201_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8152,7 +8152,7 @@ return {
         alias = {}
     },
     special_hero_icons_0202 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8160,7 +8160,7 @@ return {
         alias = {}
     },
     special_hero_icons_0202_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8168,7 +8168,7 @@ return {
         alias = {}
     },
     special_hero_icons_0203 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8176,7 +8176,7 @@ return {
         alias = {}
     },
     special_hero_icons_0203_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8184,7 +8184,7 @@ return {
         alias = {}
     },
     special_hero_icons_0204 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8192,7 +8192,7 @@ return {
         alias = {}
     },
     special_hero_icons_0204_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8200,7 +8200,7 @@ return {
         alias = {}
     },
     special_hero_icons_0205 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8208,7 +8208,7 @@ return {
         alias = {}
     },
     special_hero_icons_0205_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8216,7 +8216,7 @@ return {
         alias = {}
     },
     special_hero_icons_0206 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8224,7 +8224,7 @@ return {
         alias = {}
     },
     special_hero_icons_0206_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8232,7 +8232,7 @@ return {
         alias = {}
     },
     special_hero_icons_0207 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8240,7 +8240,7 @@ return {
         alias = {}
     },
     special_hero_icons_0207_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8248,7 +8248,7 @@ return {
         alias = {}
     },
     special_hero_icons_0208 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8256,7 +8256,7 @@ return {
         alias = {}
     },
     special_hero_icons_0208_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8264,7 +8264,7 @@ return {
         alias = {}
     },
     special_hero_icons_0209 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8272,7 +8272,7 @@ return {
         alias = {}
     },
     special_hero_icons_0209_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8280,7 +8280,7 @@ return {
         alias = {}
     },
     special_hero_icons_0210 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8288,7 +8288,7 @@ return {
         alias = {}
     },
     special_hero_icons_0210_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8296,7 +8296,7 @@ return {
         alias = {}
     },
     special_hero_icons_0211 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8304,7 +8304,7 @@ return {
         alias = {}
     },
     special_hero_icons_0211_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8312,7 +8312,7 @@ return {
         alias = {}
     },
     special_hero_icons_0212 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8320,7 +8320,7 @@ return {
         alias = {}
     },
     special_hero_icons_0212_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8328,7 +8328,7 @@ return {
         alias = {}
     },
     special_hero_icons_0213 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8336,7 +8336,7 @@ return {
         alias = {}
     },
     special_hero_icons_0213_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -8344,7 +8344,7 @@ return {
         alias = {}
     },
     special_icons_0005 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8352,7 +8352,7 @@ return {
         alias = {}
     },
     special_icons_0005_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8360,7 +8360,7 @@ return {
         alias = {}
     },
     special_icons_0006 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8368,7 +8368,7 @@ return {
         alias = {}
     },
     special_icons_0006_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8376,7 +8376,7 @@ return {
         alias = {}
     },
     special_icons_0007 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8384,7 +8384,7 @@ return {
         alias = {}
     },
     special_icons_0007_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8392,7 +8392,7 @@ return {
         alias = {}
     },
     special_icons_0008 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8400,7 +8400,7 @@ return {
         alias = {}
     },
     special_icons_0008_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8408,7 +8408,7 @@ return {
         alias = {}
     },
     special_icons_0009 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8416,7 +8416,7 @@ return {
         alias = {}
     },
     special_icons_0009_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8424,7 +8424,7 @@ return {
         alias = {}
     },
     special_icons_0010 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8432,7 +8432,7 @@ return {
         alias = {}
     },
     special_icons_0010_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8440,7 +8440,7 @@ return {
         alias = {}
     },
     special_icons_0011 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8448,7 +8448,7 @@ return {
         alias = {}
     },
     special_icons_0011_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8456,7 +8456,7 @@ return {
         alias = {}
     },
     special_icons_0012 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8464,7 +8464,7 @@ return {
         alias = {}
     },
     special_icons_0012_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8472,7 +8472,7 @@ return {
         alias = {}
     },
     special_icons_0013 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8480,7 +8480,7 @@ return {
         alias = {}
     },
     special_icons_0013_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8488,7 +8488,7 @@ return {
         alias = {}
     },
     special_icons_0014 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8496,7 +8496,7 @@ return {
         alias = {}
     },
     special_icons_0014_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8504,7 +8504,7 @@ return {
         alias = {}
     },
     special_icons_0015 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8512,7 +8512,7 @@ return {
         alias = {}
     },
     special_icons_0015_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8520,7 +8520,7 @@ return {
         alias = {}
     },
     special_icons_0016 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8528,7 +8528,7 @@ return {
         alias = {}
     },
     special_icons_0016_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8536,7 +8536,7 @@ return {
         alias = {}
     },
     special_icons_0017 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8544,7 +8544,7 @@ return {
         alias = {}
     },
     special_icons_0017_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8552,7 +8552,7 @@ return {
         alias = {}
     },
     special_icons_0018 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8560,7 +8560,7 @@ return {
         alias = {}
     },
     special_icons_0018_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8568,7 +8568,7 @@ return {
         alias = {}
     },
     special_icons_0019 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8576,7 +8576,7 @@ return {
         alias = {}
     },
     special_icons_0019_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8584,7 +8584,7 @@ return {
         alias = {}
     },
     special_icons_0022 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8592,7 +8592,7 @@ return {
         alias = {}
     },
     special_icons_0022_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8600,7 +8600,7 @@ return {
         alias = {}
     },
     special_icons_0023 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8608,7 +8608,7 @@ return {
         alias = {}
     },
     special_icons_0023_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8616,7 +8616,7 @@ return {
         alias = {}
     },
     special_icons_0024 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8624,7 +8624,7 @@ return {
         alias = {}
     },
     special_icons_0024_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8632,7 +8632,7 @@ return {
         alias = {}
     },
     special_icons_0025 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8640,7 +8640,7 @@ return {
         alias = {}
     },
     special_icons_0025_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8648,7 +8648,7 @@ return {
         alias = {}
     },
     special_icons_0026 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8656,7 +8656,7 @@ return {
         alias = {}
     },
     special_icons_0026_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8664,7 +8664,7 @@ return {
         alias = {}
     },
     special_icons_0027 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8672,7 +8672,7 @@ return {
         alias = {}
     },
     special_icons_0027_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8680,7 +8680,7 @@ return {
         alias = {}
     },
     special_icons_0028 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8688,7 +8688,7 @@ return {
         alias = {}
     },
     special_icons_0028_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8696,7 +8696,7 @@ return {
         alias = {}
     },
     special_icons_0029 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8704,7 +8704,7 @@ return {
         alias = {}
     },
     special_icons_0029_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8712,7 +8712,7 @@ return {
         alias = {}
     },
     special_icons_0030 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8720,7 +8720,7 @@ return {
         alias = {}
     },
     special_icons_0030_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8728,7 +8728,7 @@ return {
         alias = {}
     },
     special_icons_0031 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8736,7 +8736,7 @@ return {
         alias = {}
     },
     special_icons_0031_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8744,7 +8744,7 @@ return {
         alias = {}
     },
     special_icons_0032 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8752,7 +8752,7 @@ return {
         alias = {}
     },
     special_icons_0032_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8760,7 +8760,7 @@ return {
         alias = {}
     },
     special_icons_0033 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8768,7 +8768,7 @@ return {
         alias = {}
     },
     special_icons_0033_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8776,7 +8776,7 @@ return {
         alias = {}
     },
     special_icons_0034 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8784,7 +8784,7 @@ return {
         alias = {}
     },
     special_icons_0034_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8792,7 +8792,7 @@ return {
         alias = {}
     },
     special_icons_0035 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8800,7 +8800,7 @@ return {
         alias = {}
     },
     special_icons_0035_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8808,7 +8808,7 @@ return {
         alias = {}
     },
     special_icons_0036 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8816,7 +8816,7 @@ return {
         alias = {}
     },
     special_icons_0036_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8824,7 +8824,7 @@ return {
         alias = {}
     },
     special_icons_0037 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8832,7 +8832,7 @@ return {
         alias = {}
     },
     special_icons_0037_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8840,7 +8840,7 @@ return {
         alias = {}
     },
     special_icons_0038 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8848,7 +8848,7 @@ return {
         alias = {}
     },
     special_icons_0038_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8856,7 +8856,7 @@ return {
         alias = {}
     },
     special_icons_0039 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8864,7 +8864,7 @@ return {
         alias = {}
     },
     special_icons_0039_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8872,7 +8872,7 @@ return {
         alias = {}
     },
     special_icons_0040 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8880,7 +8880,7 @@ return {
         alias = {}
     },
     special_icons_0040_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8888,7 +8888,7 @@ return {
         alias = {}
     },
     special_icons_0041 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8896,7 +8896,7 @@ return {
         alias = {}
     },
     special_icons_0041_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8904,7 +8904,7 @@ return {
         alias = {}
     },
     special_icons_0042 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8912,7 +8912,7 @@ return {
         alias = {}
     },
     special_icons_0042_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8920,7 +8920,7 @@ return {
         alias = {}
     },
     special_icons_0043 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8928,7 +8928,7 @@ return {
         alias = {}
     },
     special_icons_0043_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8936,7 +8936,7 @@ return {
         alias = {}
     },
     special_icons_0044 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8944,7 +8944,7 @@ return {
         alias = {}
     },
     special_icons_0044_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8952,7 +8952,7 @@ return {
         alias = {}
     },
     special_icons_0045 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8960,7 +8960,7 @@ return {
         alias = {}
     },
     special_icons_0045_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8968,7 +8968,7 @@ return {
         alias = {}
     },
     special_icons_0046 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8976,7 +8976,7 @@ return {
         alias = {}
     },
     special_icons_0046_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8984,7 +8984,7 @@ return {
         alias = {}
     },
     special_icons_0047 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -8992,7 +8992,7 @@ return {
         alias = {}
     },
     special_icons_0047_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -9000,7 +9000,7 @@ return {
         alias = {}
     },
     special_icons_0048 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -9008,7 +9008,7 @@ return {
         alias = {}
     },
     special_icons_0048_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -9016,7 +9016,7 @@ return {
         alias = {}
     },
     special_icons_0049 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -9024,7 +9024,7 @@ return {
         alias = {}
     },
     special_icons_0049_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,76},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -9032,7 +9032,7 @@ return {
         alias = {}
     },
     special_icons_0102 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9040,7 +9040,7 @@ return {
         alias = {}
     },
     special_icons_0102_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9048,7 +9048,7 @@ return {
         alias = {}
     },
     special_icons_0103 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9056,7 +9056,7 @@ return {
         alias = {}
     },
     special_icons_0103_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9064,7 +9064,7 @@ return {
         alias = {}
     },
     special_icons_0104 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9072,7 +9072,7 @@ return {
         alias = {}
     },
     special_icons_0104_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9080,7 +9080,7 @@ return {
         alias = {}
     },
     special_icons_0105 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9088,7 +9088,7 @@ return {
         alias = {}
     },
     special_icons_0105_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9096,7 +9096,7 @@ return {
         alias = {}
     },
     special_icons_0106 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9104,7 +9104,7 @@ return {
         alias = {}
     },
     special_icons_0106_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9112,7 +9112,7 @@ return {
         alias = {}
     },
     special_icons_0110 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {10,12,12,10},
         a_size = {2048,2048},
@@ -9120,7 +9120,7 @@ return {
         alias = {}
     },
     special_icons_0110_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {10,12,12,10},
         a_size = {2048,2048},
@@ -9128,7 +9128,7 @@ return {
         alias = {}
     },
     special_icons_0113 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9136,7 +9136,7 @@ return {
         alias = {}
     },
     special_icons_0113_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9144,7 +9144,7 @@ return {
         alias = {}
     },
     special_icons_0114 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {13,11,11,11},
         a_size = {2048,2048},
@@ -9152,7 +9152,7 @@ return {
         alias = {}
     },
     special_icons_0114_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {13,11,11,11},
         a_size = {2048,2048},
@@ -9160,7 +9160,7 @@ return {
         alias = {}
     },
     special_icons_0115 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9168,7 +9168,7 @@ return {
         alias = {}
     },
     special_icons_0115_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9176,7 +9176,7 @@ return {
         alias = {}
     },
     special_icons_0116 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9184,7 +9184,7 @@ return {
         alias = {}
     },
     special_icons_0116_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9192,7 +9192,7 @@ return {
         alias = {}
     },
     special_icons_0118 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9200,7 +9200,7 @@ return {
         alias = {}
     },
     special_icons_0118_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9208,7 +9208,7 @@ return {
         alias = {}
     },
     special_icons_0120 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {13,13,13,11},
         a_size = {2048,2048},
@@ -9216,7 +9216,7 @@ return {
         alias = {}
     },
     special_icons_0120_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {13,13,13,11},
         a_size = {2048,2048},
@@ -9224,7 +9224,7 @@ return {
         alias = {}
     },
     special_icons_0121 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {13,13,13,11},
         a_size = {2048,2048},
@@ -9232,7 +9232,7 @@ return {
         alias = {}
     },
     special_icons_0121_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {13,13,13,11},
         a_size = {2048,2048},
@@ -9240,7 +9240,7 @@ return {
         alias = {}
     },
     special_icons_0122 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9248,7 +9248,7 @@ return {
         alias = {}
     },
     special_icons_0122_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9256,7 +9256,7 @@ return {
         alias = {}
     },
     special_icons_0123 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9264,7 +9264,7 @@ return {
         alias = {}
     },
     special_icons_0123_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9272,7 +9272,7 @@ return {
         alias = {}
     },
     special_icons_0124 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,12,12,10},
         a_size = {2048,2048},
@@ -9280,7 +9280,7 @@ return {
         alias = {}
     },
     special_icons_0124_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,12,12,10},
         a_size = {2048,2048},
@@ -9288,7 +9288,7 @@ return {
         alias = {}
     },
     special_icons_0125 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,12,12,10},
         a_size = {2048,2048},
@@ -9296,7 +9296,7 @@ return {
         alias = {}
     },
     special_icons_0125_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,12,12,10},
         a_size = {2048,2048},
@@ -9304,7 +9304,7 @@ return {
         alias = {}
     },
     special_icons_0126 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,12,12,10},
         a_size = {2048,2048},
@@ -9312,7 +9312,7 @@ return {
         alias = {}
     },
     special_icons_0126_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,12,12,10},
         a_size = {2048,2048},
@@ -9320,7 +9320,7 @@ return {
         alias = {}
     },
     special_icons_0127 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,12,12,10},
         a_size = {2048,2048},
@@ -9328,7 +9328,7 @@ return {
         alias = {}
     },
     special_icons_0127_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,12,12,10},
         a_size = {2048,2048},
@@ -9336,7 +9336,7 @@ return {
         alias = {}
     },
     special_icons_0128 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9344,7 +9344,7 @@ return {
         alias = {}
     },
     special_icons_0128_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {82,79},
         trim = {12,11,12,11},
         a_size = {2048,2048},
@@ -9352,7 +9352,7 @@ return {
         alias = {}
     },
     special_icons_0201 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -9360,7 +9360,7 @@ return {
         alias = {}
     },
     special_icons_0201_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -9368,7 +9368,7 @@ return {
         alias = {}
     },
     special_icons_0301 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -9376,7 +9376,7 @@ return {
         alias = {}
     },
     special_icons_0301_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {96,88},
         trim = {11,9,15,11},
         a_size = {2048,2048},
@@ -9384,7 +9384,7 @@ return {
         alias = {}
     },
     sub_icons_0001 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {68,65},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -9392,7 +9392,7 @@ return {
         alias = {}
     },
     sub_icons_0001_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {68,65},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -9400,7 +9400,7 @@ return {
         alias = {}
     },
     sub_icons_0002 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {68,65},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -9408,7 +9408,7 @@ return {
         alias = {}
     },
     sub_icons_0002_disabled = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {68,65},
         trim = {0,0,0,0},
         a_size = {2048,2048},
@@ -9416,7 +9416,7 @@ return {
         alias = {}
     },
     victoryStars_0003 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {182,106},
         trim = {61,46,61,8},
         a_size = {2048,2048},
@@ -9424,7 +9424,7 @@ return {
         alias = {}
     },
     victoryStars_0012 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {182,106},
         trim = {53,24,53,2},
         a_size = {2048,2048},
@@ -9432,7 +9432,7 @@ return {
         alias = {}
     },
     victoryStars_0016 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {182,106},
         trim = {56,40,56,4},
         a_size = {2048,2048},
@@ -9440,7 +9440,7 @@ return {
         alias = {}
     },
     victoryStars_0017 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {182,106},
         trim = {56,40,56,4},
         a_size = {2048,2048},
@@ -9448,7 +9448,7 @@ return {
         alias = {}
     },
     victoryStars_0018 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {182,106},
         trim = {56,40,56,4},
         a_size = {2048,2048},
@@ -9456,7 +9456,7 @@ return {
         alias = {}
     },
     victoryStars_0019 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {182,106},
         trim = {56,40,56,4},
         a_size = {2048,2048},
@@ -9464,7 +9464,7 @@ return {
         alias = {}
     },
     victoryStars_0020 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {182,106},
         trim = {56,40,56,4},
         a_size = {2048,2048},
@@ -9472,7 +9472,7 @@ return {
         alias = {}
     },
     victoryStars_0021 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {182,106},
         trim = {60,40,52,4},
         a_size = {2048,2048},
@@ -9480,7 +9480,7 @@ return {
         alias = {}
     },
     waveRewardTimer_0005 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {24,48},
         trim = {2,3,2,17},
         a_size = {2048,2048},
@@ -9488,7 +9488,7 @@ return {
         alias = {}
     },
     waveRewardTimer_0007 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {24,48},
         trim = {2,3,2,17},
         a_size = {2048,2048},
@@ -9496,7 +9496,7 @@ return {
         alias = {}
     },
     waveRewardTimer_0009 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {24,48},
         trim = {2,3,2,17},
         a_size = {2048,2048},
@@ -9504,7 +9504,7 @@ return {
         alias = {}
     },
     waveReward_0000 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {24,44},
         trim = {2,10,2,8},
         a_size = {2048,2048},
@@ -9512,7 +9512,7 @@ return {
         alias = {}
     },
     waveReward_0002 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {24,44},
         trim = {1,9,3,9},
         a_size = {2048,2048},
@@ -9520,7 +9520,7 @@ return {
         alias = {}
     },
     waveReward_0003 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {24,44},
         trim = {1,10,3,8},
         a_size = {2048,2048},
@@ -9528,7 +9528,7 @@ return {
         alias = {}
     },
     waveReward_0004 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {24,44},
         trim = {2,9,2,9},
         a_size = {2048,2048},
@@ -9536,7 +9536,7 @@ return {
         alias = {}
     },
     waveReward_0005 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {24,44},
         trim = {1,10,3,8},
         a_size = {2048,2048},
@@ -9544,7 +9544,7 @@ return {
         alias = {}
     },
     waveReward_0006 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {24,44},
         trim = {2,10,2,8},
         a_size = {2048,2048},
@@ -9552,11 +9552,446 @@ return {
         alias = {}
     },
     waveReward_0007 = {
-        a_name = "gui_common-2.png",
+        a_name = "gui_common-2.dds",--"gui_common-2.png"
         size = {24,44},
         trim = {1,9,3,9},
         a_size = {2048,2048},
         f_quad = {261,7,20,26},
         alias = {}
     },
+    ---精英精灵游侠
+	main_icons_0906 = {
+		a_name = "gui_common-2.dds",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			6,--665,
+			1216,--1753,
+			82,
+			73
+		},
+		alias = {}
+	},
+	main_icons_0906_disabled = {
+		a_name = "gui_common-2.dds",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			95,--665,
+			1215,--1832,
+			82,
+			73
+		},
+		alias = {}
+	},
+	special_icons_0950 = {
+		a_name = "gui_common-2.dds",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			191,--1369,
+			1212,--471,
+			82,
+			76
+		},
+		alias = {}
+	},
+	special_icons_0950_disabled = {
+		a_name = "gui_common-2.dds",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			284,--1457,
+			1213,--471,
+			82,
+			76
+		},
+		alias = {}
+	},
+	special_icons_0951 = {
+		a_name = "gui_common-2.dds",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			377,--1545,
+			1211,--471,
+			82,
+			76
+		},
+		alias = {}
+	},
+	special_icons_0951_disabled = {
+		a_name = "gui_common-2.dds",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			470,--1633,
+			1211,--471,
+			82,
+			76
+		},
+		alias = {}
+	},
+	special_icons_0952 = {
+		a_name = "gui_common-2.dds",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			562,--489,
+			1211,--1127,
+			82,
+			76
+		},
+		alias = {}
+	},
+	special_icons_0952_disabled = {
+		a_name = "gui_common-2.dds",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			657,--489,
+			1210,--1209,
+			82,
+			76
+		},
+		alias = {}
+	},
+	---雇佣兵
+	main_icons_00aa = {
+		a_name = "gui_common-2.dds",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			184,--751,1534,1506
+			1300,--1506,721,751
+			82,
+			73
+		},
+		alias = {}
+	},
+	main_icons_00aa_disabled = {
+		a_name = "gui_common-2.dds",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			272,--751,1622,1585
+			1300,--1585,721,751
+			82,
+			73
+		},
+		alias = {}
+	},
+	---大脚怪
+	main_icons_00bb_disabled = {
+		a_name = "gui_common-2.dds",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			96,--751,1446,1269
+			1300,--1269,721,751
+			82,
+			73
+		},
+		alias = {}
+	},
+	main_icons_00bb = {
+		a_name = "gui_common-2.dds",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			8,--751,1358,1190
+			1300,--1190,721,751
+			82,
+			73
+		},
+		alias = {}
+	},
+	main_icons_0031a = {
+		a_name = "gui_common-2.dds",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			362,--1752,1006,1664
+			1300,--1664,800,752
+			82,
+			73
+		},
+		alias = {}
+	},
+	main_icons_0031a_disabled = {
+		a_name = "gui_common-2.dds",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			450,--752,1094,1743
+			1300,--1743,800,752
+			82,
+			73
+		},
+		alias = {}
+	},
+	main_icons_00cc = {
+		a_name = "gui_common-2.dds",--"gui_common-2.dds",--"gui_common-2.png"--"gui_common-5_mod.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			9,--751,1358,1190
+			1381,--1190,721,751
+			82,
+			73
+		},
+		alias = {}
+	},
+	main_icons_00cc_disabled = {
+		a_name = "gui_common-2.dds",--"gui_common-2.dds",--"gui_common-2.png"--"gui_common-5_mod.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			96,--751,1358,1190
+			1380,--1190,721,751
+			82,
+			73
+		},
+		alias = {}
+	},
+	main_icons_00dd = {
+		a_name = "gui_common-2.dds",--"gui_common-2.dds",--"gui_common-2.png"--"gui_common-5_mod.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			541,--751,1358,1190
+			1300,--1190,721,751
+			82,
+			73
+		},
+		alias = {}
+	},
+	main_icons_00dd_disabled = {
+		a_name = "gui_common-2.dds",--"gui_common-2.dds",--"gui_common-2.png"--"gui_common-5_mod.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			625,--751,1358,1190
+			1300,--1190,721,751
+			82,
+			73
+		},
+		alias = {}
+	},
 }

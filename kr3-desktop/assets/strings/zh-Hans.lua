@@ -76,7 +76,7 @@ for k, v in pairs(z5sp) do
 end
 
 
-z["START HERE!!"] = "按Tab隐藏UI"
+z["START HERE!!"] = "按Tab隐藏UI,可上下滑动"
 
 z["BUTTON_NEXT_PAGE"] = "下一页"
 z["Rush"] = "初代"
@@ -158,10 +158,10 @@ z["G5_HERO_DARK_COUNT_2"] = "双黑暗军"
 z["G5_REINFORCEMENT_1"] = "王国军援军"
 z["G5_REINFORCEMENT_2"] = "黑暗军援军"
 z["LH349_REINFORCEMENT_SKIN"] = "设置1代援军皮肤"
-z["LH349_REINFORCEMENT_SKIN_0"] = "原皮"
-z["LH349_REINFORCEMENT_SKIN_1"] = "皮肤1"
-z["LH349_REINFORCEMENT_SKIN_2"] = "皮肤2"
-z["LH349_REINFORCEMENT_SKIN_3"] = "皮肤3"
+z["LH349_REINFORCEMENT_SKIN_0"] = "原版皮肤"
+z["LH349_REINFORCEMENT_SKIN_1"] = "星球大战"
+z["LH349_REINFORCEMENT_SKIN_2"] = "真人快打"
+z["LH349_REINFORCEMENT_SKIN_3"] = "街头霸王"
 
 z["TOWER_G45_PICK"] = "携带%i塔"
 z["HERO_G1_LEVEL10_ON"] = "1代初始满级"

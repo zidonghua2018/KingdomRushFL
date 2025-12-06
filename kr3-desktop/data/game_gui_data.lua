@@ -769,6 +769,74 @@ return {
 			image = "encyclopedia_creeps_0166",
 			layout = N_ENEMY
 		},
+---重生
+		enemy_hobgoblin_small = {
+			icon = "alert_creep_notxt_0057",
+			i18n_key = "ENEMY_HOBGOBLIN",
+			image = "encyclopedia_creeps_0070",
+			layout = N_ENEMY
+		},
+		enemy_cursed_shaman = {
+			icon = "alert_creep_notxt_0058",
+			i18n_key = "ENEMY_CURSED_SHAMAN",
+			image = "encyclopedia_creeps_0071",
+			layout = N_ENEMY
+		},
+		enemy_hobgoblin_shield = {
+			icon = "alert_creep_notxt_0059",
+			i18n_key = "ENEMY_HOBGOBLIN_SHIELD",
+			image = "encyclopedia_creeps_0072",
+			layout = N_ENEMY
+		},
+		enemy_hobgoblin_rider = {
+			icon = "alert_creep_notxt_0060",
+			i18n_key = "ENEMY_HOBGOBLIN_RIDER",
+			image = "encyclopedia_creeps_0073",
+			layout = N_ENEMY
+		},
+		enemy_goblin_spear = {
+			icon = "alert_creep_notxt_0061",
+			i18n_key = "ENEMY_GOBLIN_SPEAR",
+			image = "encyclopedia_creeps_0074",
+			layout = N_ENEMY
+		},
+		enemy_goblin_balloon = {
+			icon = "alert_creep_notxt_0062",
+			i18n_key = "ENEMY_GOBLIN_BALLOON",
+			image = "encyclopedia_creeps_0075",
+			layout = N_ENEMY
+		},
+		enemy_goblin_platform = {
+			icon = "alert_creep_notxt_0062",
+			i18n_key = "ENEMY_GOBLIN_PLATFORM",
+			image = "encyclopedia_creeps_0075",
+			layout = N_ENEMY
+		},
+		enemy_cursed_golem = {
+			icon = "alert_creep_notxt_0063",
+			i18n_key = "ENEMY_CURSED_GOLEM",
+			image = "encyclopedia_creeps_0076",
+			layout = N_ENEMY
+		},
+		enemy_cursed_shard = {
+			icon = "alert_creep_notxt_0064",
+			i18n_key = "ENEMY_CURSED_SHARDM",
+			image = "encyclopedia_creeps_0077",
+			layout = N_ENEMY
+		},
+		enemy_hobgoblin_miniboss = {
+			icon = "alert_creep_notxt_0065",
+			i18n_key = "ENEMY_HOBGOBLIN_MINIBOSS",
+			image = "encyclopedia_creeps_0078",
+			layout = N_ENEMY
+		},
+		eb_hobgoblin = {
+			icon = "alert_creep_notxt_0066",
+			i18n_key = "EB_HOBGOBLIN",
+			image = "encyclopedia_creeps_0079",
+			layout = N_ENEMY
+		},
+---				
 		TOWER_ARCHER_ARCANE = {
 			prefix = "TOWER_ARCANE",
 			always = true,

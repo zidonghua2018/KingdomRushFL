@@ -92585,5 +92585,1951 @@ return {
 			61
 		},
 		alias = {}
-	}
+	},
+---重生
+	map_path_30_0001 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			0,
+			0,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0002 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			132,
+			0,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0003 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			264,
+			0,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0004 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			0,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0005 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			528,
+			0,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0006 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			660,
+			0,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0007 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			792,
+			0,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0008 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			924,
+			0,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0009 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1056,
+			0,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0010 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1188,
+			0,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0011 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1320,
+			0,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0012 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1452,
+			0,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0013 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1584,
+			0,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0014 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1716,
+			0,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0015 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1848,
+			0,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0016 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			0,
+			220,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0017 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			132,
+			220,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0018 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			264,
+			220,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0019 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			220,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0020 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			528,
+			220,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0021 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			660,
+			220,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0022 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			792,
+			220,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0023 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			924,
+			220,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0024 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1056,
+			220,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0025 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1188,
+			220,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0026 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1320,
+			220,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0027 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1452,
+			220,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0028 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1584,
+			220,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0029 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1716,
+			220,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0030 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1848,
+			220,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0031 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			0,
+			440,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0032 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			132,
+			440,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0033 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			264,
+			440,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0034 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			440,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0035 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			528,
+			440,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0036 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			660,
+			440,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0037 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			792,
+			440,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0038 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			924,
+			440,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_30_0039 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			132,
+			220
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1056,
+			440,
+			132,
+			220
+		},
+		alias = {}
+	},
+	map_path_31_0001 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			0,
+			660,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0002 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			264,
+			660,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0003 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			528,
+			660,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0004 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			792,
+			660,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0005 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1056,
+			660,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0006 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1320,
+			660,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0007 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1584,
+			660,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0008 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			0,
+			836,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0009 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			264,
+			836,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0010 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			528,
+			836,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0011 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			792,
+			836,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0012 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1056,
+			836,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0013 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1320,
+			836,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0014 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1584,
+			836,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0015 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			0,
+			1012,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0016 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			264,
+			1012,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0017 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			528,
+			1012,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0018 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			792,
+			1012,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0019 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1056,
+			1012,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0020 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1320,
+			1012,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0021 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1584,
+			1012,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0022 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			0,
+			1188,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0023 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			264,
+			1188,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0024 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			528,
+			1188,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0025 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			792,
+			1188,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0026 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1056,
+			1188,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0027 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1320,
+			1188,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0028 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1584,
+			1188,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0029 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			0,
+			1364,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0030 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			264,
+			1364,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0031 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			528,
+			1364,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0032 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			792,
+			1364,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0033 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1056,
+			1364,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0034 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1320,
+			1364,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0035 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1584,
+			1364,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0036 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			0,
+			1540,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0037 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			264,
+			1540,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0038 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			528,
+			1540,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0039 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			792,
+			1540,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0040 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1056,
+			1540,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0040 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1320,
+			1540,
+			264,
+			176
+		},
+		alias = {}
+	},
+	map_path_31_0041 = {
+		a_name = "screen_map_animations_bloodlust-1.png",
+		size = {
+			264,
+			176
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1584,
+			1540,
+			264,
+			176
+		},
+		alias = {}
+	},
+---		
 }

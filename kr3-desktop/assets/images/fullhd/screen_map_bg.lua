@@ -51,7 +51,8 @@ return {
 		alias = {}
 	}]]
 	--大地图，现行版本用的是AI扩充之后的
-	MapBackground_kr5 = {
+	--[[
+	MapBackground_kr5_back = {
 		a_name = "screen_map_bg_20250925.png",
 		size = {
 			1920,1080
@@ -69,6 +70,28 @@ return {
 			0,
 			187,
 			1920,1080
+		},
+		alias = {}
+	},
+	]]
+	MapBackground_kr5 = {
+		a_name = "screen_map_bg_20250925-resize.png",
+		size = {
+			2432,1922
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2432,1922
+		},
+		f_quad = {
+			0,
+			0,
+			2432,1922
 		},
 		alias = {}
 	},

@@ -495,6 +495,99 @@ local groups = {
 			"MusicBossFight1",
 		},
 	},
+---重生
+	music_stage73 = {
+		sounds = {
+			"MusicBattlePrep_73",
+			"MusicBattle_73",
+			"MusicBossFight1",
+			"MusicBossFight2",
+			"MusicBossFight",
+		}
+	},
+	music_stage74 = {
+		sounds = {
+			"MusicBattlePrep_74",
+			"MusicBattle_74",
+			"MusicBossFight1",
+			"MusicBossFight2",
+			"MusicBossFight",
+		}
+	},
+	music_stage75 = {
+		sounds = {
+			"MusicBattlePrep_75",
+			"MusicBattle_75",
+			"MusicBossFight1",
+			"MusicBossFight2",
+			"MusicBossFight",
+		}
+	},
+	music_stage76 = {
+		sounds = {
+			"MusicBattlePrep_76",
+			"MusicBattle_76",
+			"MusicBossFight1",
+			"MusicBossFight2",
+			"MusicBossFight",
+		}
+	},
+	music_stage77 = {
+		sounds = {
+			"MusicBattlePrep_77",
+			"MusicBattle_77",
+			"MusicBossFight1",
+			"MusicBossFight2",
+			"MusicBossFight",
+		}
+	},
+	music_stage78 = {
+		sounds = {
+			"MusicBattlePrep_78",
+			"MusicBattle_78",
+			"MusicBossFight1",
+			"MusicBossFight2",
+			"MusicBossFight",
+		}
+	},
+	music_stage79 = {
+		sounds = {
+			"MusicBattlePrep_79",
+			"MusicBattle_79",
+			"MusicBossFight1",
+			"MusicBossFight2",
+			"MusicBossFight",
+		}
+	},
+	music_stage80 = {
+		sounds = {
+			"MusicBattlePrep_80",
+			"MusicBattle_80",
+			"MusicBossFight1",
+			"MusicBossFight2",
+			"MusicBossFight",
+		}
+	},
+	music_stage86 = {
+		sounds = {
+			"MusicBattlePrep_86",
+			"MusicBattle_86",
+			"MusicBossFight1",
+			"MusicBossFight2",
+			"MusicBossFight",
+		}
+	},
+	music_stage87 = {
+		sounds = {
+			"MusicBattlePrep_87",
+			"MusicBattle_87",
+			"MusicBossFight2"
+		}
+	},
+	music_halloween_moon = {
+            sounds = {"MusicHalloweenMoon"}
+    },	
+---		
 	music_stage85 = {sounds={ 'MusicBattlePrep_85', 'MusicBattle_85', }},
     
 	hero_alleria_g3 = {
@@ -1869,6 +1962,99 @@ local sounds = {
 			"CB_PreBattle.ogg",
 		},
 	},
+	MusicBattlePrep_71 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Tutorial_Exploracion.ogg"
+		}
+	},
+	MusicBattlePrep_72 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Tutorial_Exploracion.ogg"
+		}
+	},
+	MusicBattlePrep_73 = {
+		source_group = "MUSIC",
+		gain = 0.7,
+		loop = true,
+		stream = true,
+		files = {
+			"MusicBattlePreparationsForest.ogg"
+		}
+	},
+	MusicBattlePrep_74 = {
+		source_group = "MUSIC",
+		gain = 0.7,
+		loop = true,
+		stream = true,
+		files = {
+			"MusicBattlePreparationsForest.ogg"
+		}
+	},
+	MusicBattlePrep_75 = {
+		source_group = "MUSIC",
+		gain = 0.7,
+		loop = true,
+		stream = true,
+		files = {
+			"MusicBattlePreparationsForest.ogg"
+		}
+	},
+	MusicBattlePrep_76 = {
+            files = {"MusicBattlePreparationsMountain.ogg"},
+            gain = 0.8,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+        },
+        MusicBattlePrep_77 = {
+            files = {"CB_PreBattle.ogg"},
+            gain = 0.7,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+        },
+        MusicBattlePrep_78 = {
+            files = {"savage_music_jungle_preparation.mp3"},
+            gain = 0.7,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+        },
+        MusicBattlePrep_79 = {
+            files = {"Prebattle_Rising_Tides.mp3"},
+            gain = 0.7,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+        },
+        MusicBattlePrep_80 = {
+            files = {"Jungle_Prep.mp3"},
+            gain = 0.7,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+        },
+        MusicBattlePrep_86 = {
+            files = {"kro_bgmusic_t3_prebattle1[master_01-11].mp3"},
+            gain = 0.3,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+        },
+		MusicBattlePrep_87 = {
+            files = {"29431171705-1-192.mp3"},
+            gain = 0.3,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+        },
+		
 	MusicBattlePrep_85 = {files= {"MusicBattlePreparationsForest.ogg"},      loop=true, gain=0.8, source_group='MUSIC', stream=true},
 	MusicBattle_45 = {
 		gain = 0.7,
@@ -2050,9 +2236,9 @@ local sounds = {
 		source_group = "MUSIC",
 		stream = true,
 		files = {
-			--"MusicBattleUnderAttackWastelands.ogg",
+			"MusicBattleUnderAttackWastelands.ogg",
 			--"33280295359-1-192.ogg",
-			"33145294233-1-192.ogg",
+			--"33145294233-1-192.ogg",
 		},
 	},
 	MusicBattle_65 = {
@@ -2061,9 +2247,9 @@ local sounds = {
 		source_group = "MUSIC",
 		stream = true,
 		files = {
-			--"MusicBattleUnderAttackWastelands.ogg",
+			"MusicBattleUnderAttackWastelands.ogg",
 			--"33280295359-1-192.ogg",
-			"33145294233-1-192.ogg",
+			--"33145294233-1-192.ogg",
 		},
 	},
 	MusicBattle_66 = {
@@ -2112,6 +2298,128 @@ local sounds = {
 			"CB_Battle.ogg",
 		},
 	},
+	MusicBattle_71 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Tutorial_Guerra.ogg"
+		}
+	},
+	MusicBattle_72 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Tutorial_Guerra.ogg"
+		}
+	},
+---重生
+	MusicBattle_73 = {
+		source_group = "MUSIC",
+		gain = 0.7,
+		loop = true,
+		stream = true,
+		files = {
+			"MusicBattleUnderAttackBloodlust.ogg"
+		}
+	},
+	MusicBattle_74 = {
+		source_group = "MUSIC",
+		gain = 0.7,
+		loop = true,
+		stream = true,
+		files = {
+			"MusicBattleUnderAttackBloodlust.ogg"
+		}
+	},
+	MusicBattle_75 = {
+		source_group = "MUSIC",
+		gain = 0.7,
+		loop = true,
+		stream = true,
+		files = {
+			"MusicBattleUnderAttackBloodlust.ogg"
+		}
+	},
+	MusicBattle_76 = {
+            files = {"MusicBattleUnderAttackMountain.ogg"},
+            gain = 0.8,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+    },
+    MusicBattle_77 = {
+            files = {"CB_Battle.ogg"},
+            gain = 0.5,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+    },
+    MusicBattle_78 = {
+            files = {"Jungle_Battle.ogg"},
+            gain = 0.7,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+    },
+    MusicBattle_79 = {
+            files = {"Battle_Rising_Tides.ogg"},
+            gain = 0.7,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+    },
+    MusicBattle_80 = {
+            files = {"Jungle_Battle.ogg"},
+            gain = 0.7,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+    },
+    MusicBattle_86 = {
+            files = {"kro_bgmusic_t3_battle1[master_03-11].mp3"},
+            gain = 0.3,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+    },
+	MusicBattle_87 = {
+            files = {"33145294233-1-192.ogg"},
+            gain = 0.3,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+    },
+	HobgobBossDeath1 = {
+		loop = false,
+		source_group = "DEATH",
+		files = {
+			"ebhobgobdeath1.ogg"
+		}
+	},
+	HobgobBossDeath2 = {
+		loop = false,
+		source_group = "DEATH",
+		files = {
+			"ebhobgobdeath2.ogg"
+		}
+	},
+	HobgobBossSpawn = {
+		loop = false,
+		source_group = "DEATH",
+		files = {
+			"ebhobgobspawn.ogg"
+		}
+	},
+	HobgobBossAttack = {
+		loop = false,
+		source_group = "SFX",
+		files = {
+			"ebhobgobattack.ogg"
+		}
+	},	
+---		
 	MusicBattle_85 = { files= {"MusicBattleUnderAttackForest1.ogg"    }, loop=true, gain=0.7, source_group='MUSIC', stream=true},
     
 	MusicBossFight = {

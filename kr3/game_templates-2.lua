@@ -13,9 +13,17 @@ local anchor_y = 0
 local image_y = 0
 local tt
 local scripts = require("game_scripts-2")
+local kr1_scripts = require("game_scripts-1")
 local mylua = require("my_lua")
 
 require("templates")
+
+local function adx(v)
+    return v - anchor_x * image_x
+end
+local function ady(v)
+    return v - anchor_y * image_y
+end
 
 local function v(v1, v2)
 	return {
@@ -53,6 +61,32 @@ local function np(pi, spi, ni)
 		spi = spi,
 		ni = ni
 	}
+end
+
+function vec_2(v1, v2)
+    return {
+        x = v1,
+        y = v2
+    }
+end
+
+function vec_1(v1)
+    return {
+        x = v1,
+        y = v1
+    }
+end
+
+local function RT(name, ref)
+	return E:register_t(name, ref)
+end
+
+local function AC(tpl, ...)
+	return E:add_comps(tpl, ...)
+end
+
+local function CC(comp_name)
+	return E:clone_c(comp_name)
 end
 
 local mod_crossbow_eagle = E:register_t("mod_crossbow_eagle", "modifier")
@@ -17917,3 +17951,597 @@ tt.sound_events.insert = {
 }
 tt.barrack.soldier_type = "hero_bolverk_2"
 tt.tower.kind = TOWER_KIND_BARRACK
+
+--KRDOVE的怪物
+
+-- 萨雷格兹主母
+tt = RT("enemy_sarelgaz_big", "enemy")
+AC(tt, "melee", "timed_attacks", "auras")
+anchor_y = 0.1484375
+anchor_x = 0.5
+image_y = 128
+image_x = 220
+tt.enemy.gold = 160
+tt.enemy.lives_cost = 5
+tt.enemy.melee_slot = vec_2(70, 0)
+tt.health.dead_lifetime = 8
+tt.health.hp_max = 2700
+tt.health.magic_armor = 0.3
+tt.health.armor = 0.6
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+tt.health_bar.offset = vec_2(0, 82)
+tt.info.i18n_key = "ENEMY_SARELGAS_BIG"
+tt.info.enc_icon = 35
+tt.info.portrait = "info_portraits_enemies_0036"
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_spider_big.update
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_max = 125
+tt.melee.attacks[1].damage_min = 100
+tt.melee.attacks[1].hit_time = fts(15)
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].sound = "SpiderAttack"
+tt.timed_attacks.list[1] = CC("bullet_attack")
+tt.timed_attacks.list[1].bullet = "enemy_sarelgaz_bigger_egg"
+tt.timed_attacks.list[1].max_cooldown = 17
+tt.timed_attacks.list[1].max_count = 15
+tt.timed_attacks.list[1].min_cooldown = 9
+tt.auras.list[1] = CC("aura_attack")
+tt.auras.list[1].name = "enemy_sarelgaz_big_aura"
+tt.auras.list[1].cooldown = 0
+tt.motion.max_speed = 0.4 * FPS
+tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
+tt.render.sprites[1].scale = vec_1(0.75)
+tt.render.sprites[1].prefix = "eb_sarelgaz"
+tt.render.sprites[1].angles_stickiness = {
+    walk = 10
+}
+tt.render.sprites[1].angles = {
+    walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
+}
+tt.ui.click_rect = r(-45, 0, 90, 80)
+tt.unit.blood_color = BLOOD_GREEN
+tt.unit.fade_time_after_death = 2
+tt.unit.hit_offset = vec_2(0, 45)
+tt.unit.marker_hidden = true
+tt.unit.marker_offset = vec_2(0, 0)
+tt.unit.mod_offset = vec_2(0, 45)
+tt.unit.size = UNIT_SIZE_LARGE
+tt.sound_events.death = "DeathEplosion"
+tt.vis.bans = F_POISON
+tt.vis.flags = F_ENEMY
+tt.health_judger = true
+
+tt = RT("enemy_sarelgaz_big_aura", "aura")
+tt.aura.duration = -1
+tt.aura.mod = "mod_enemy_sarelgaz_big"
+tt.aura.cycle_time = fts(10)
+tt.aura.track_source = true
+tt.aura.radius = 70
+tt.aura.excluded_templates = {"enemy_sarelgaz_big"}
+tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+
+tt = RT("mod_enemy_sarelgaz_big", "mod_slow")
+tt.slow.factor = 1.2
+tt.modifier.duration = fts(12)
+
+tt = RT("enemy_sarelgaz_bigger_egg", "decal_scripted")
+AC(tt, "render", "spawner", "tween")
+tt.main_script.update = scripts.enemies_spawner.update
+tt.render.sprites[1].anchor.y = 0.22
+tt.render.sprites[1].scale = vec_1(1.75)
+tt.render.sprites[1].prefix = "enemy_spider_egg"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].color = {40, 80, 255}
+tt.spawner.count = 1
+tt.spawner.cycle_time = fts(6)
+tt.spawner.entity = "enemy_sarelgaz_small"
+tt.spawner.node_offset = 5
+tt.spawner.pos_offset = vec_2(0, 1)
+tt.spawner.allowed_subpaths = {1, 2, 3}
+tt.spawner.random_subpath = false
+tt.spawner.animation_start = "start"
+tt.tween.disabled = true
+tt.tween.props[1].keys = {{0, 255}, {4, 0}}
+tt.tween.remove = true
+
+tt = RT("enemy_jungle_spider_tiny_with_gold", "enemy_jungle_spider_tiny")
+tt.enemy.gold = 1
+
+tt = RT("enemy_redgale", "enemy_bluegale")
+tt.main_script.update = scripts.enemy_mixed_water.update
+tt.timed_attacks = nil
+tt.melee.attacks[1].damage_max = 144
+tt.melee.attacks[1].damage_min = 72
+tt.ranged.attacks[1].max_range = 150
+tt.ranged.attacks[1].bullet = "ray_redgale"
+tt.render.sprites[1].color = {255, 100, 100}
+tt.render.sprites[2].color = {255, 100, 100}
+
+tt = RT("ray_redgale", "ray_bluegale")
+tt.render.sprites[1].color = {255, 100, 100}
+tt.bullet.damage_min = 50
+tt.bullet.damage_max = 90
+
+tt = RT("enemy_greenshell", "enemy_bloodshell")
+AC(tt, "auras")
+tt.render.sprites[1].color = {100, 255, 100}
+tt.health.armor = 0.45
+tt.health.magic_armor = 0.55
+tt.health.immune_to = DAMAGE_EXPLOSION
+tt.auras.list[1] = CC("aura_attack")
+tt.auras.list[1].name = "greenshell_shield_aura"
+tt.auras.list[1].cooldown = 0
+tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+
+tt = RT("greenshell_shield_aura", "shaman_shield_aura")
+tt.aura.mod = "mod_greenshell_shield"
+tt.aura.allowed_templates = {"enemy_greenfin", "enemy_deviltide", "enemy_redspine", "enemy_bluegale", "enemy_redgale",
+                             "enemy_deviltide_shark", "enemy_deviltide_shark_ghost", "enemy_deviltide_ghost"}
+
+tt = RT("mod_greenshell_shield", "mod_shaman_armor")
+tt.armor_buff.max_factor = 0.35
+
+tt = RT("enemy_deviltide_shark_ghost", "enemy_deviltide_shark")
+tt.payload = "enemy_deviltide_ghost"
+tt.motion.max_speed = 90
+tt.render.sprites[1].alpha = 180
+tt.enemy.gold = 0
+
+tt = RT("enemy_deviltide_ghost", "enemy_deviltide")
+tt.enemy.gold = 0
+tt.motion.max_speed = 50
+tt.render.sprites[1].alpha = 180
+
+tt = RT("enemy_phantom_death_rider", "enemy")
+AC(tt, "auras", "melee")
+anchor_y = 0.18
+image_y = 50
+tt.health.armor = 0.5
+tt.health.hp_max = 1200
+tt.health_bar.offset = vec_2(0, 47.76)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.enemy.melee_slot = vec_2(30, 0)
+tt.unit.blood_color = BLOOD_GRAY
+tt.unit.hit_offset = vec_2(0, 14)
+tt.unit.marker_offset = vec_2(0, ady(10))
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.vis.bans = bor(F_POLYMORPH, F_POISON, F_LYCAN, F_CANNIBALIZE, F_SKELETON)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.melee.cooldown = 1
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_max = 50
+tt.melee.attacks[1].damage_min = 30
+tt.melee.attacks[1].hit_time = fts(9)
+tt.melee.attacks[1].sound = "MeleeSword"
+tt.melee.attacks[1].vis_bans = bor(F_FLYING)
+--tt.info.portrait = "kr2_info_portraits_soldiers_0003"
+tt.motion.max_speed = 50
+tt.render.sprites[1] = CC("sprite")
+tt.render.sprites[1].anchor.y = 0.18
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {"running"}
+tt.render.sprites[1].name = "raise"
+tt.render.sprites[1].prefix = "soldier_death_rider"
+tt.render.sprites[1].color = {180, 180, 255}
+tt.auras.list[1] = CC("aura_attack")
+tt.auras.list[1].cooldown = 0
+tt.auras.list[1].name = "phantom_death_rider_aura"
+
+tt = RT("phantom_death_rider_aura", "aura")
+AC(tt, "render")
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.aura.mod = "mod_phantom_death_rider"
+tt.aura.cycle_time = 1
+tt.aura.duration = -1
+tt.aura.radius = 128
+tt.aura.track_source = true
+tt.aura.targets_per_cycle = 10
+tt.aura.vis_bans = bor(F_FRIEND, F_HERO, F_BOSS)
+tt.aura.vis_flags = F_MOD
+tt.render.sprites[1].name = "soldier_death_rider_aura"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].color = {180, 180, 255}
+
+tt = RT("mod_phantom_death_rider", "modifier")
+AC(tt, "render", "armor_buff")
+tt.modifier.duration = 1
+tt.modifier.use_mod_offset = false
+tt.armor_buff.magic = false
+tt.armor_buff.max_factor = 0.4
+tt.armor_buff.step_factor = 0.02
+tt.armor_buff.cycle_time = 1
+tt.render.sprites[1].name = "NecromancerSkeletonAura"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].color = {180, 180, 255}
+tt.main_script.insert = scripts.mod_armor_buff.insert
+tt.main_script.remove = scripts.mod_armor_buff.remove
+tt.main_script.update = scripts.mod_armor_buff.update
+
+tt = RT("enemy_shaman_gravity", "enemy")
+AC(tt, "melee", "auras")
+anchor_y = 0.16
+image_y = 62
+tt.auras.list[1] = CC("aura_attack")
+tt.auras.list[1].name = "shaman_gravity_aura"
+tt.auras.list[1].cooldown = 0
+tt.enemy.gold = 50
+tt.enemy.melee_slot = vec_2(20, 0)
+tt.health.armor = 0.25
+tt.health.hp_max = 1200
+tt.health.magic_armor = 0
+tt.health_bar.offset = vec_2(0, ady(47))
+tt.info.portrait = "kr2_info_portraits_enemies_0022"
+tt.info.enc_icon = 21
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_max = 26
+tt.melee.attacks[1].damage_min = 14
+tt.melee.attacks[1].hit_time = fts(12)
+tt.motion.max_speed = 0.96 * FPS
+tt.render.sprites[1].anchor.y = anchor_y
+tt.render.sprites[1].prefix = "krdove_enemy_shaman_gravity"
+tt.unit.hit_offset = vec_2(0, 14)
+tt.unit.marker_offset = vec_2(0, ady(10))
+tt.unit.mod_offset = vec_2(0, ady(26))
+tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+
+tt = RT("shaman_gravity_aura", "aura")
+tt.aura.cycle_time = 0.125
+tt.main_script.update = scripts.shaman_gravity_aura.update
+tt.aura.radius = 180
+tt.gravity_inc = 0.3 / (fts(1) * fts(1))
+
+tt = E:register_t("moon_controller_s91", "moon_controller")
+tt.main_script.update = scripts.moon_controller_s91.update
+tt.transit_time = 5
+tt.hold_time = 15
+tt.inactive_time = 25
+tt.enemy_damage_factor = 1.2
+tt.enemy_speed_factor = 1.2
+tt.enemy_cooldown_factor = 0.8
+tt.enemy_health_factor = 0.8
+tt.spawn_creep = "enemy_deviltide_shark_ghost"
+
+
+tt = RT("s72_rotten_spawner")
+AC(tt, "main_script", "editor")
+tt.main_script.update = kr1_scripts.s15_rotten_spawner.update
+tt.entity = "enemy_rotten_tree"
+tt.spawn_margin = {30, 60}
+tt.spawn_timers = {
+    {9, 0},
+    [10] = {15, 1},
+    [11] = {13.5, 1},
+    [12] = {10, 1},
+    [13] = {15, 2},
+    [14] = {15, 3},
+   -- [15] = {15, 4}
+}
+
+tt = E:register_t("moon_controller_s72", "moon_controller")
+tt.main_script.update = scripts.moon_controller_s72.update
+tt.transit_time = 5
+tt.hold_time = 20
+tt.inactive_time = 40
+tt.enemy_armor_buff = 0.2
+tt.enemy_magic_armor_buff = 0.2
+tt.enemy_speed_buff = 12
+tt.enemy_hp_buff = 0.1
+tt.insert_hook = scripts.moon_controller_s72.insert_hook
+tt.insert_hook_remove = scripts.moon_controller_s72.insert_hook_remove
+tt.spawn = {
+    [7] = {"enemy_zombie"},
+    [4] = {"enemy_zombie"},
+    [6] = {"enemy_skeleton"},
+    [5] = {"enemy_ghoul"},
+    [8] = {"enemy_halloween_zombie"}
+}
+tt.spawn_count_function = function(store)
+    return 2 + (store.wave_group_number or 0) * 3
+end
+tt.spawn_gaps = 3
+
+tt = E:register_t("s72_init")
+AC(tt, "main_script")
+tt.main_script.insert = scripts.s72_init.insert
+
+
+tt = RT("graveyard_s110")
+AC(tt, "graveyard", "main_script")
+tt.graveyard.dead_time = 0.5
+tt.graveyard.check_interval = 0.25
+tt.graveyard.spawn_interval = 0.1
+tt.main_script.update = scripts.graveyard_s110.update
+tt.graveyard.keep_gold = false
+tt.graveyard.spawns_by_health = {{"enemy_skeleton", 400}, {"enemy_halloween_zombie", 600}, {"enemy_skeleton_big", 1000},
+                                 {"enemy_gnoll_bloodsydian", 2000}, {"enemy_blade", 3750}, {"eb_alleria", 9e+99}}
+tt.graveyard.vis_has = bor(F_ENEMY, F_FRIEND)
+tt.graveyard.vis_flags = F_SKELETON
+tt.graveyard.vis_bans = F_HERO
+
+tt = RT("eb_jack", "boss")
+AC(tt, "melee", "ranged", "auras", "regen")
+image_y = 104
+anchor_y = 12 / image_y
+tt.auras.list[1] = CC("aura_attack")
+tt.auras.list[1].name = "eb_jack_spawner_aura"
+tt.auras.list[1].cooldown = 0
+tt.auras.list[2] = CC("aura_attack")
+tt.auras.list[2].name = "werewolf_regen_aura"
+tt.auras.list[2].cooldown = 0
+tt.enemy.gold = 0
+tt.enemy.lives_cost = 20
+tt.enemy.melee_slot = vec_2(36, 0)
+tt.health.armor = 0.3
+tt.health.hp_max = 8888
+tt.health.magic_armor = 0.3
+tt.health_bar.offset = vec_2(0, 65)
+tt.info.portrait = "kr2_info_portraits_enemies_0064"
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.eb_jack.update
+tt.melee.attacks[1] = CC("area_attack")
+tt.melee.attacks[1].cooldown = 2
+tt.melee.attacks[1].damage_max = 196
+tt.melee.attacks[1].damage_min = 120
+tt.melee.attacks[1].damage_type = DAMAGE_MAGICAL
+tt.melee.attacks[1].damage_radius = 60
+tt.melee.attacks[1].hit_time = fts(12)
+tt.motion.max_speed = 2.5 * FPS
+tt.ranged.attacks[1].bullet = "eb_jack_pumpkin"
+tt.ranged.attacks[1].bullet_start_offset = {vec_2(20, 65)}
+tt.ranged.attacks[1].cooldown = 4
+tt.ranged.attacks[1].min_range = 40
+tt.ranged.attacks[1].max_range = 190
+tt.ranged.attacks[1].shoot_time = fts(28)
+tt.ranged.attacks[1].hold_advance = false
+tt.render.sprites[1].prefix = "enemy_headless_horseman"
+tt.render.sprites[1].anchor.y = anchor_y
+tt.render.sprites[1].angles = {
+    walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
+}
+tt.sound_events.insert = {"HWHeadlessHorsemanLaugh", "HWHeadlessHorsemanEntry"}
+tt.sound_events.death = nil
+tt.ui.click_rect = r(-20, -5, 40, 60)
+tt.unit.blood_color = BLOOD_RED
+tt.unit.can_explode = false
+tt.unit.hit_offset = vec_2(0, 35)
+tt.unit.marker_offset = vec_2(0, 0)
+tt.unit.mod_offset = vec_2(0, 35)
+tt.unit.hide_after_death = true
+tt.regen.cooldown = 0.25
+tt.regen.health = 4
+tt.vis.flags = bor(F_ENEMY, F_BOSS)
+tt.vis.bans = bor(F_SKELETON, F_TELEPORT, F_POLYMORPH, F_INSTAKILL, F_POISON)
+
+tt = RT("eb_jack_pumpkin", "bomb")
+tt.bullet.damage_min = 150
+tt.bullet.damage_max = 210
+tt.bullet.damage_radius = 40
+tt.bullet.damage_bans = F_ENEMY
+tt.bullet.damage_flags = F_AREA
+tt.bullet.damage_type = DAMAGE_EXPLOSION
+tt.bullet.flight_time = fts(20)
+tt.render.sprites[1].name = "HalloweenRider_bomb"
+tt.main_script.insert = scripts.enemy_bomb.insert
+tt.main_script.update = scripts.enemy_bomb.update
+tt.sound_events.insert = nil
+
+tt = RT("eb_jack_spawner_aura", "aura")
+tt.main_script.update = scripts.eb_jack_spawner_aura.update
+tt.aura.cycle_time = 10
+tt.min_spawn_count = 4
+tt.max_spawn_count = 8
+tt.creeps = {"enemy_halloween_zombie","enemy_ghoul"}
+
+tt = RT("enemy_zombiemancer", "enemy")
+AC(tt, "melee", "ranged", "timed_actions")
+anchor_y = 0.2
+anchor_x = 0.5
+image_y = 38
+image_x = 44
+tt.enemy.gold = 70
+tt.enemy.lives_cost = 3
+tt.enemy.melee_slot = vec_2(18, 0)
+tt.health.hp_max = 1000
+tt.health.magic_armor = 0.5
+tt.health_bar.offset = vec_2(0, 30)
+tt.info.i18n_key = "ENEMY_ZOMBIEMANCER"
+tt.info.enc_icon = 29
+tt.info.portrait = "info_portraits_enemies_0033"
+tt.main_script.update = scripts.enemy_zombiemancer.update
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_max = 35
+tt.melee.attacks[1].damage_min = 20
+tt.melee.attacks[1].hit_time = fts(10)
+tt.melee.attacks[1].damage_type = DAMAGE_MAGICAL
+tt.motion.max_speed = 0.5 * FPS
+tt.ranged.attacks[1] = CC("bullet_attack")
+tt.ranged.attacks[1].bullet = "bolt_necromancer"
+tt.ranged.attacks[1].bullet_start_offset = {vec_2(-8, 22)}
+tt.ranged.attacks[1].cooldown = 1 + fts(23)
+tt.ranged.attacks[1].hold_advance = true
+tt.ranged.attacks[1].max_range = 145
+tt.ranged.attacks[1].min_range = 60
+tt.ranged.attacks[1].shoot_time = fts(9)
+tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
+tt.render.sprites[1].prefix = "enemy_necromancer"
+tt.render.sprites[1].color = {0, 255, 0}
+tt.sound_events.death = "DeathPuff"
+tt.timed_actions.list[1] = CC("spawn_attack")
+tt.timed_actions.list[1].cooldown = 8
+tt.timed_actions.list[1].spawn_time = fts(12)
+tt.timed_actions.list[1].spawn_delay = fts(4)
+tt.timed_actions.list[1].entity = "enemy_halloween_zombie"
+tt.timed_actions.list[1].animation = "summon"
+tt.timed_actions.list[1].spawn_animation = "raise"
+tt.timed_actions.list[1].max_count = 5
+tt.timed_actions.list[1].count_group_name = "zombiemancer_zombies"
+tt.timed_actions.list[1].count_group_type = COUNT_GROUP_CONCURRENT
+tt.timed_actions.list[1].count_group_max = 35
+tt.timed_actions.list[1].summon_offsets = {{2, 0, 0}, {3, 0, 0}, {1, 3, 8}, {2, 3, 8}, {3, 3, 8}, {1, -3, -8},
+                                           {2, -3, -8}, {3, -3, -8}}
+tt.timed_actions.list[2] = CC("spawn_attack")
+tt.timed_actions.list[2].cooldown = 16
+tt.unit.can_explode = false
+tt.unit.hit_offset = vec_2(0, 15)
+tt.unit.mod_offset = vec_2(adx(23), ady(17))
+
+tt = RT("enemy_lycan_werewolf_phantom", "enemy")
+AC(tt, "melee", "moon", "auras", "regen")
+anchor_y = 0.18181818181818182
+image_y = 66
+tt.auras.list[1] = CC("aura_attack")
+tt.auras.list[1].name = "werewolf_regen_aura"
+tt.auras.list[1].cooldown = 0
+tt.auras.list[2] = CC("aura_attack")
+tt.auras.list[2].name = "moon_enemy_aura"
+tt.auras.list[2].cooldown = 0
+tt.auras.list[3] = CC("aura_attack")
+tt.auras.list[3].name = "phantom_warrior_aura"
+tt.auras.list[3].cooldown = 0
+tt.enemy.gold = 120
+tt.enemy.melee_slot = vec_2(24, 0)
+tt.health.armor = 0
+tt.health.hp_max = 1250
+tt.health.immune_to = DAMAGE_PHYSICAL_GROUP
+tt.health.magic_armor = 0.6
+tt.health_bar.offset = vec_2(0, 47)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.info.portrait = "info_portraits_enemies_0033"
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_max = 75
+tt.melee.attacks[1].damage_min = 50
+tt.melee.attacks[1].hit_time = fts(12)
+tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
+tt.melee.attacks[2].mod = "mod_lycanthropy"
+tt.melee.attacks[2].chance = 0.2
+tt.moon.regen_hp = 12
+tt.motion.max_speed = 2 * FPS
+tt.render.sprites[1].prefix = "enemy_lycan_werewolf"
+tt.render.sprites[1].anchor.y = anchor_y
+tt.render.sprites[1].color = {50, 255, 200}
+tt.render.sprites[1].alpha = 150
+tt.regen.cooldown = 0.25
+tt.regen.health = 6
+tt.ui.click_rect = r(-20, -10, 40, 50)
+tt.unit.blood_color = BLOOD_RED
+tt.unit.hit_offset = vec_2(0, 22)
+tt.unit.marker_offset = vec_2(0, 0)
+tt.unit.mod_offset = vec_2(0, 22)
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.sound_events.insert = "HWAlphaWolf"
+
+tt = RT("decal_zombiemancer_raise", "decal_timed")
+tt.render.sprites[1].name = "decal_paladin_holystrike"
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].color = {0, 255, 0}
+
+
+tt = RT("enemy_cannibal_volcano_normal", "enemy")
+AC(tt, "melee", "tween")
+anchor_y = 0.15
+image_y = 100
+--tt.info.portrait = "kr2_info_portraits_enemies_0027"
+tt.enemy.gold = 25
+tt.enemy.lives_cost = 1
+tt.enemy.melee_slot = vec_2(24, 0)
+tt.info.i18n_key = "ENEMY_CANNIBAL_VOLCANO"
+tt.health.armor = 0
+tt.health.hp_max = 900
+tt.health.magic_armor = 0
+tt.health_bar.offset = vec_2(0, ady(70))
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_max = 20
+tt.melee.attacks[1].damage_min = 10
+tt.melee.attacks[1].hit_time = fts(12)
+tt.motion.max_speed = 1.067 * FPS
+tt.render.sprites[1].anchor.y = anchor_y
+tt.render.sprites[1].prefix = "enemy_cannibal_volcano"
+tt.sound_events.scream = "SpecialVolcanoVirginScream"
+tt.sound_events.throw = "SpecialVolcanoThrowSplash"
+tt.tween.props[1].keys = {{0, vec_2(0.65, 0.65)}, {0.2, vec_2(1, 1)}}
+tt.tween.props[1].name = "scale"
+tt.tween.remove = false
+tt.tween.run_once = true
+tt.unit.can_explode = true
+tt.unit.hit_offset = vec_2(0, 18)
+tt.unit.marker_offset = vec_2(0, ady(16))
+tt.unit.mod_offset = vec_2(0, ady(36))
+tt.vis.flags = bor(F_ENEMY, F_BOSS, F_MOCKING)
+tt.vis.bans = bor(F_SKELETON, F_UNDEAD)
+
+tt = RT("enemy_shaman_rage", "enemy")
+AC(tt, "melee", "auras")
+anchor_y = 0.18
+image_y = 62
+tt.auras.list[1] = CC("aura_attack")
+tt.auras.list[1].cooldown = 0
+tt.auras.list[1].name = "shaman_rage_aura"
+tt.enemy.gold = 50
+tt.enemy.melee_slot = vec_2(20, 0)
+tt.health.armor = 0
+tt.health.hp_max = 800
+tt.health_bar.offset = vec_2(0, ady(50))
+tt.info.portrait = "kr2_info_portraits_enemies_0023"
+tt.info.enc_icon = 22
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_max = 26
+tt.melee.attacks[1].damage_min = 14
+tt.melee.attacks[1].hit_time = fts(12)
+tt.motion.max_speed = 0.96 * FPS
+tt.render.sprites[1].anchor.y = anchor_y
+tt.render.sprites[1].prefix = "enemy_shaman_magic"
+tt.render.sprites[1].color = {255, 150, 150}
+tt.unit.hit_offset = vec_2(0, 14)
+tt.unit.marker_offset = vec_2(0, ady(11))
+tt.unit.mod_offset = vec_2(0, ady(26))
+tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+
+tt = RT("shaman_rage_aura", "aura")
+AC(tt, "render")
+tt.aura.allowed_templates = {"enemy_hunter", "enemy_cannibal", "enemy_shaman_priest", "enemy_shaman_shield",
+                             "enemy_shaman_necro", "enemy_shaman_rage", "enemy_shaman_magic", "enemy_gorilla",
+                             "enemy_cannibal_volcano_normal", "enemy_shaman_gravity"}
+tt.aura.cycle_time = 1
+tt.aura.duration = -1
+tt.aura.mod = "mod_shaman_rage"
+tt.aura.radius = 115.2
+tt.aura.requires_magic = true
+tt.aura.targets_per_cycle = 10
+tt.aura.track_source = true
+tt.aura.vis_bans = bor(F_FRIEND, F_HERO, F_BOSS)
+tt.aura.vis_flags = F_MOD
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].name = "shaman_magic_aura"
+tt.render.sprites[1].color = {255, 0, 255}
+
+tt = RT("mod_shaman_rage", "modifier")
+AC(tt, "render")
+tt.extra_armor = 0
+tt.extra_damage_max = 40
+tt.extra_damage_min = 20
+tt.extra_speed = 30
+tt.main_script.insert = scripts.mod_troll_rage.insert
+tt.main_script.remove = scripts.mod_troll_rage.remove
+tt.main_script.update = scripts.mod_track_target.update
+tt.modifier.duration = 1
+tt.modifier.type = MOD_TYPE_RAGE
+tt.modifier.vis_flags = bor(F_MOD)
+tt.modifier.use_mod_offset = false
+tt.render.sprites[1].name = "shaman_magic_mod"
+tt.render.sprites[1].color = {255, 0, 255}

@@ -45,6 +45,10 @@ local function tpos(e)
 	return e.tower and e.tower.range_offset and V.v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or e.pos
 end
 
+function enemy_ready_to_magic_attack(this, store, attack)
+    return this.enemy.can_do_magic and store.tick_ts - attack.ts > attack.cooldown
+end
+
 local scripts = require("scripts")
 
 scripts.enemy_tremor = {}
@@ -19655,5 +19659,744 @@ function scripts.tower_pirate_camp_re.update(this, store, script)
 		coroutine.yield()
 	end
 end
+
+scripts.moon_controller_s91 = {}
+
+function scripts.moon_controller_s91.update(this, store)
+    local glow_sid, eyes_sid = 1, 4
+    local glow_s = this.render.sprites[glow_sid]
+    local eyes_s = this.render.sprites[eyes_sid]
+    local moon = this.decal_moon_dark
+    local moon_s = moon.render.sprites[1]
+    local moon_light = this.decal_moon_light
+    local overlay = this.moon_overlay
+    local fade_time = overlay.tween.props[1].keys[2][1]
+    local transit_time = this.transit_time
+    local hold_time = this.hold_time
+    local inactive_time = this.inactive_time
+    while not store.enemy_count or store.enemy_count == 0 do
+        coroutine.yield()
+    end
+    local time = store.tick_ts
+    while true do
+        while store.tick_ts - time < inactive_time do
+            coroutine.yield()
+        end
+        moon.tween.props[1].keys = { { 0, math.pi / 5 }, { transit_time, math.pi * 0.5 } }
+        moon.tween.disabled = nil
+        moon.tween.ts = store.tick_ts
+        time = store.tick_ts
+        while store.tick_ts - time < transit_time do
+            coroutine.yield()
+        end
+        moon.tween.props[1].keys = { { 0, math.pi / 5 }, { transit_time, math.pi * 0.5 } }
+        moon.tween.disabled = nil
+        moon.tween.ts = store.tick_ts
+        moon_light.tween.ts = store.tick_ts
+        moon_light.tween.reverse = false
+        this.tween.ts = store.tick_ts
+        this.tween.reverse = false
+        overlay.tween.ts = store.tick_ts
+        overlay.tween.reverse = false
+
+        S:queue("MusicHalloweenMoon")
+
+        signal.emit("moon-changed", true, store)
+        time = store.tick_ts
+        this.moon_active = true
+        local spawn_count = store.wave_group_number or 1
+        local spawn_gap = hold_time / spawn_count
+		local store_enemy = table.filter(store.entities, function(k, v)
+            return v.enemy
+		end)
+        for _, e in pairs(store_enemy) do
+            e.unit.damage_factor = e.unit.damage_factor * this.enemy_damage_factor
+            U.speed_mul(e, this.enemy_speed_factor)
+            SU.insert_unit_cooldown_buff(store.tick_ts, e, this.enemy_cooldown_factor)
+            e.health.damage_factor = e.health.damage_factor * this.enemy_health_factor
+        end
+        U.insert_insert_hook(store, this.id, function(e, d)
+            if e.enemy then
+                e.unit.damage_factor = e.unit.damage_factor * this.enemy_damage_factor
+                U.speed_mul(e, this.enemy_speed_factor)
+                SU.insert_unit_cooldown_buff(store.tick_ts, e, this.enemy_cooldown_factor)
+                e.health.damage_factor = e.health.damage_factor * this.enemy_health_factor
+            end
+        end)
+        local spawn_ts = time - spawn_gap
+        while store.tick_ts - time < hold_time do
+            if store.tick_ts - spawn_ts > spawn_gap then
+                local e = E:create_entity(this.spawn_creep)
+                e.nav_path.pi = math.random(2, 4)
+                e.nav_path.spi = 1
+                e.nav_path.ni = P:get_start_node(e.nav_path.pi)
+                queue_insert(store, e)
+                spawn_ts = store.tick_ts
+            end
+            coroutine.yield()
+        end
+		local store_enemy = table.filter(store.entities, function(k, v)
+            return v.enemy
+		end)
+        for _, e in pairs(store_enemy) do
+            e.unit.damage_factor = e.unit.damage_factor / this.enemy_damage_factor
+            U.speed_div(e, this.enemy_speed_factor)
+            SU.remove_unit_cooldown_buff(store.tick_ts, e, this.enemy_cooldown_factor)
+            e.health.damage_factor = e.health.damage_factor / this.enemy_health_factor
+        end
+        U.remove_insert_hook(store, this.id)
+
+        signal.emit("moon-changed", false, store)
+
+        this.moon_active = false
+
+        if not this.tween.reverse then
+            this.tween.ts = store.tick_ts
+            this.tween.reverse = true
+        end
+
+        if not overlay.tween.reverse then
+            overlay.tween.ts = store.tick_ts
+            overlay.tween.reverse = true
+        end
+
+        if not moon_light.tween.reverse then
+            moon_light.tween.ts = store.tick_ts
+            moon_light.tween.reverse = true
+
+            U.y_wait(store, fade_time)
+        end
+
+        S:queue(string.format("MusicBattle_%02d", store.level_idx), {
+            seek = 19.774
+        })
+
+        moon.tween.props[1].keys = { { 0, moon_s.r }, { transit_time, 4 * math.pi / 5 } }
+        moon.tween.ts = store.tick_ts
+
+        time = store.tick_ts
+        while store.tick_ts - time < transit_time do
+            coroutine.yield()
+        end
+    end
+end
+
+scripts.moon_controller_s72 = {}
+function scripts.moon_controller_s72.insert_hook(this, store)
+    if this.enemy then
+        for _, s in pairs(this.render.sprites) do
+            if not s.color then
+                s.color = { 255, 255, 255 }
+            end
+            if not s.alpha then
+                s.alpha = 255
+            end
+            s.color[1] = s.color[1] * 50 / 255
+            s.color[2] = s.color[2] * 200 / 255
+            s.alpha = s.alpha * 150 / 255
+        end
+        SU.armor_inc(this, E:get_template("moon_controller_s72").enemy_armor_buff)
+        SU.magic_armor_inc(this, E:get_template("moon_controller_s72").enemy_magic_armor_buff)
+        U.speed_inc(this, E:get_template("moon_controller_s72").enemy_speed_buff)
+        if this.health.hp then
+            this.health.hp = this.health.hp *
+                (1 + E:get_template("moon_controller_s72").enemy_hp_buff *
+                    (0.9 + store.wave_group_number / 12))
+        end
+    end
+    if this.soldier then
+        for _, s in pairs(this.render.sprites) do
+            if not s.color then
+                s.color = { 255, 255, 255 }
+            end
+            if not s.alpha then
+                s.alpha = 255
+            end
+            s.color[1] = s.color[1] * 50 / 255
+            s.color[2] = s.color[2] * 200 / 255
+            s.alpha = s.alpha * 150 / 255
+        end
+        SU.armor_dec(this, E:get_template("moon_controller_s72").enemy_armor_buff)
+        SU.magic_armor_dec(this, E:get_template("moon_controller_s72").enemy_magic_armor_buff)
+        U.speed_inc(this, E:get_template("moon_controller_s72").enemy_speed_buff)
+        if this.health.hp then
+            this.health.hp = this.health.hp *
+                (1 - E:get_template("moon_controller_s72").enemy_hp_buff *
+                    (0.9 + store.wave_group_number / 12))
+        end
+    end
+end
+
+function scripts.moon_controller_s72.insert_hook_remove(this, store)
+    if this.enemy then
+        for _, s in pairs(this.render.sprites) do
+            if not s.color then
+                s.color = { 255, 255, 255 }
+            end
+            if not s.alpha then
+                s.alpha = 255
+            end
+            s.color[1] = s.color[1] * 255 / 50
+            s.color[2] = s.color[2] * 255 / 200
+            s.alpha = s.alpha * 255 / 150
+        end
+        SU.armor_dec(this, E:get_template("moon_controller_s72").enemy_armor_buff)
+        SU.magic_armor_dec(this, E:get_template("moon_controller_s72").enemy_magic_armor_buff)
+        U.speed_dec(this, E:get_template("moon_controller_s72").enemy_speed_buff)
+    end
+    if this.soldier then
+        for _, s in pairs(this.render.sprites) do
+            if not s.color then
+                s.color = { 255, 255, 255 }
+            end
+            if not s.alpha then
+                s.alpha = 255
+            end
+            s.color[1] = s.color[1] * 255 / 50
+            s.color[2] = s.color[2] * 255 / 200
+            s.alpha = s.alpha * 255 / 150
+        end
+        SU.armor_inc(this, E:get_template("moon_controller_s72").enemy_armor_buff)
+        SU.magic_armor_inc(this, E:get_template("moon_controller_s72").enemy_magic_armor_buff)
+        U.speed_dec(this, E:get_template("moon_controller_s72").enemy_speed_buff)
+    end
+end
+
+function scripts.moon_controller_s72.update(this, store)
+    local glow_sid, eyes_sid = 1, 4
+    local glow_s = this.render.sprites[glow_sid]
+    local eyes_s = this.render.sprites[eyes_sid]
+    local moon = this.decal_moon_dark
+    local moon_s = moon.render.sprites[1]
+    local moon_light = this.decal_moon_light
+    local overlay = this.moon_overlay
+
+    local fade_time = overlay.tween.props[1].keys[2][1]
+    local transit_time = this.transit_time
+    local hold_time = this.hold_time
+    local hold_time_base = this.hold_time
+    local inactive_time = this.inactive_time
+    while not store.enemy_count or store.enemy_count == 0 do
+        coroutine.yield()
+    end
+    local time = store.tick_ts
+    local spawn_point_count = 0
+    for _, _ in pairs(this.spawn) do
+        spawn_point_count = spawn_point_count + 1
+    end
+    while true do
+        while store.tick_ts - time < inactive_time do
+            coroutine.yield()
+        end
+        moon.tween.props[1].keys = { { 0, math.pi / 5 }, { transit_time, math.pi * 0.5 } }
+        moon.tween.disabled = nil
+        moon.tween.ts = store.tick_ts
+        time = store.tick_ts
+        while store.tick_ts - time < transit_time do
+            coroutine.yield()
+        end
+        -- moon.tween.props[1].keys = {{0, math.pi / 5}, {transit_time, math.pi * 0.5}}
+        -- moon.tween.disabled = nil
+        -- moon.tween.ts = store.tick_ts
+        moon_light.tween.ts = store.tick_ts
+        moon_light.tween.reverse = false
+        this.tween.ts = store.tick_ts
+        this.tween.reverse = false
+        overlay.tween.ts = store.tick_ts
+        overlay.tween.reverse = false
+
+        S:queue("MusicHalloweenMoon")
+
+        signal.emit("moon-changed", true, store)
+        time = store.tick_ts
+        this.moon_active = true
+        local spawn_count = math.ceil(this.spawn_count_function(store) / this.spawn_gaps)
+
+        local spawn_gap = hold_time / this.spawn_gaps
+		local store_enemy = table.filter(store.entities, function(k, v)
+            return v.enemy
+		end)
+        for _, e in pairs(store_enemy) do
+            this.insert_hook(e, store)
+        end
+		local store_soldiers = table.filter(store.entities, function(k, v)
+            return v.soldier
+		end)
+        for _, s in pairs(store_soldiers) do
+            this.insert_hook(s, store)
+        end
+        U.insert_insert_hook(store, this.id, this.insert_hook)
+        local spawn_ts = time - spawn_gap
+        hold_time = hold_time_base + store.wave_group_number
+        while store.tick_ts - time < hold_time and (not store.boss_killed) do
+            if store.tick_ts - spawn_ts > spawn_gap then
+                local i = 1
+                local remain_spawn_count = spawn_count
+                for path_id, creeps in pairs(this.spawn) do
+                    if spawn_count > 0 then
+                        local this_spawn_count = math.ceil(((math.random() - 0.5) * 0.4 + 1) * spawn_count /
+                            spawn_point_count)
+                        remain_spawn_count = remain_spawn_count - this_spawn_count
+                        if i == spawn_point_count then
+                            this_spawn_count = this_spawn_count + remain_spawn_count
+                        end
+                        for j = 1, this_spawn_count do
+                            local e = E:create_entity(creeps[math.random(1, #creeps)])
+                            e.nav_path.pi = path_id
+                            e.nav_path.spi = 1
+                            e.nav_path.ni = P:get_start_node(e.nav_path.pi)
+                            e.enemy.gold = 0
+                            queue_insert(store, e)
+                        end
+                    end
+                end
+
+                spawn_ts = store.tick_ts
+            end
+            coroutine.yield()
+        end
+		local store_enemy = table.filter(store.entities, function(k, v)
+            return v.enemy
+		end)
+        for _, e in pairs(store_enemy) do
+            this.insert_hook_remove(e, store)
+        end
+		local store_soldiers = table.filter(store.entities, function(k, v)
+            return v.soldier
+		end)
+        for _, s in pairs(store_soldiers) do
+            this.insert_hook_remove(s, store)
+        end
+        U.remove_insert_hook(store, this.id)
+
+        signal.emit("moon-changed", false, store)
+
+        this.moon_active = false
+
+        if not this.tween.reverse then
+            this.tween.ts = store.tick_ts
+            this.tween.reverse = true
+        end
+
+        if not overlay.tween.reverse then
+            overlay.tween.ts = store.tick_ts
+            overlay.tween.reverse = true
+        end
+
+        if not moon_light.tween.reverse then
+            moon_light.tween.ts = store.tick_ts
+            moon_light.tween.reverse = true
+
+            U.y_wait(store, fade_time)
+        end
+
+        S:queue(string.format("MusicBattle_%02d", store.level_idx), {
+            seek = 19.774
+        })
+
+        moon.tween.props[1].keys = { { 0, moon_s.r }, { transit_time, 4 * math.pi / 5 } }
+        moon.tween.ts = store.tick_ts
+
+        time = store.tick_ts
+        while store.tick_ts - time < transit_time do
+            coroutine.yield()
+        end
+    end
+end
+
+scripts.s72_init = {}
+function scripts.s72_init.insert(this, store)
+	--[[
+    local moon_overlay = E:create_entity("decal_moon_overlay")
+    queue_insert(store, moon_overlay)
+    local decal_moon_dark = E:create_entity("decal_moon_dark")
+    queue_insert(store, decal_moon_dark)
+    local decal_moon_light = E:create_entity("decal_moon_light")
+    queue_insert(store, decal_moon_light)
+    local e = E:create_entity("moon_controller_s72")
+    e.decal_moon_dark = decal_moon_dark
+    e.decal_moon_light = decal_moon_light
+    e.moon_overlay = moon_overlay
+    queue_insert(store, e)
+	]]
+    return false
+end
+
+scripts.graveyard_s110 = {}
+
+function scripts.graveyard_s110.update(this, store)
+    local g = this.graveyard
+
+    while not this.interrupt do
+        local targets = table.filter(store.entities, function(k, v)
+            return not v._in_graveyard and (v.health and v.health.dead) and
+                (v.vis and band(v.vis.flags, g.vis_has) ~= 0 and band(v.vis.flags, g.vis_bans) == 0 and
+                    band(v.vis.bans, g.vis_flags) == 0) and store.tick_ts - v.health.death_ts >= g.dead_time and
+                (not v.reinforcement or not v.reinforcement.hp_before_timeout) and
+                (not g.excluded_templates or not table.contains(g.excluded_templates, v.template_name))
+        end)
+
+        if #targets == 0 then
+            U.y_wait(store, g.check_interval)
+        else
+            for _, t in ipairs(targets) do
+                if this.interrupt then
+                    return
+                end
+
+                t._in_graveyard = true
+
+                for _, s in ipairs(g.spawns_by_health) do
+                    local e, s_pos, pi, spi, ni
+
+                    if t.health.hp_max > s[2] then
+                        -- block empty
+                    else
+                        s_pos = table.random(g.spawn_pos)
+
+                        local nearest_nodes = P:nearest_nodes(s_pos.x, s_pos.y, g.pi and { g.pi } or nil)
+
+                        if #nearest_nodes < 1 then
+                            log.error("graveyard controller %s could not spawn enemy. node not found near %s,%s",
+                                this.id, s_pos.x, s_pos.y)
+                        else
+                            pi, spi, ni = unpack(nearest_nodes[1])
+                            if t.template_name == "enemy_halloween_zombie" then
+                                e = E:create_entity("enemy_skeleton")
+                            else
+                                e = E:create_entity(s[1])
+                            end
+                            e.nav_path.pi, e.nav_path.spi, e.nav_path.ni = pi, math.random(1, 3), ni
+                            e.pos = V.vclone(s_pos)
+                            -- e.render.sprites[1].name = "raise"
+                            e.motion.forced_waypoint = P:node_pos(e.nav_path)
+                            for _, sprite in pairs(e.render.sprites) do
+                                sprite.alpha = 180
+                            end
+                            if not g.keep_gold and e.enemy then
+                                e.enemy.gold = 0
+                            end
+
+                            queue_insert(store, e)
+
+                            break
+                        end
+                    end
+                end
+
+                U.y_wait(store, g.spawn_interval)
+            end
+        end
+    end
+
+    queue_remove(store, this)
+end
+
+scripts.enemy_zombiemancer = {
+    update = function(this, store)
+        local a = this.timed_actions.list[1]
+        local a2 = this.timed_actions.list[2]
+        local cg = store.count_groups[a.count_group_type]
+
+        a.ts = store.tick_ts
+
+        local function summon_count_exceeded()
+            return cg[a.count_group_name] and cg[a.count_group_name] >= a.count_group_max
+        end
+
+        local function ready_to_summon()
+            if U.get_blocker(store, this) then
+                a.ts = store.tick_ts
+
+                return false
+            end
+            return enemy_ready_to_magic_attack(this, store, a) and not summon_count_exceeded()
+        end
+
+        local function ready_to_raise()
+            if U.get_blocker(store, this) then
+                a2.ts = store.tick_ts
+
+                return false
+            end
+            return enemy_ready_to_magic_attack(this, store, a2) and cg[a.count_group_name] and cg[a.count_group_name] >
+                0
+        end
+
+        local function get_zombies()
+			local store_enemy = table.filter(store.entities, function(k, v)
+            return v.enemy
+		end)
+            return table.filter(store_enemy, function(k, v)
+                return v.owner and v.owner == this.id and v.health and not v.health.dead
+            end)
+        end
+
+        local function break_fn()
+            return ready_to_summon() or ready_to_raise()
+        end
+
+        ::label_117_0::
+
+        while true do
+            if this.health.dead then
+                SU.y_enemy_death(store, this)
+
+                return
+            end
+
+            if this.unit.is_stunned then
+                SU.y_enemy_stun(store, this)
+            else
+                if ready_to_summon() then
+                    U.animation_start(this, a.animation, nil, store.tick_ts, false)
+
+                    if SU.y_enemy_wait(store, this, a.spawn_time) then
+                        goto label_117_0
+                    end
+
+                    for i = 1, a.max_count do
+                        if SU.y_enemy_wait(store, this, a.spawn_delay) then
+                            goto label_117_0
+                        end
+
+                        if i ~= 1 and summon_count_exceeded() then
+                            break
+                        end
+
+                        local e = E:create_entity(a.entity)
+                        local noff = a.summon_offsets[i] or a.summon_offsets[1]
+
+                        e.nav_path.pi = this.nav_path.pi
+                        e.nav_path.spi = noff[1]
+                        e.nav_path.ni = this.nav_path.ni + math.random(noff[2], noff[3])
+                        e.render.sprites[1].name = a.spawn_animation
+                        e.enemy.gold = 0
+                        e.owner = this.id
+                        e.motion.max_speed = (0.5 + math.random() * 0.1) * FPS
+                        E:add_comps(e, "count_group")
+                        e.count_group.name = a.count_group_name
+                        e.count_group.type = a.count_group_type
+                        if P:is_node_valid(e.nav_path.pi, e.nav_path.ni) then
+                            queue_insert(store, e)
+                        end
+
+                        coroutine.yield()
+                    end
+
+                    U.y_animation_wait(this)
+
+                    a.ts = store.tick_ts
+                end
+
+                if ready_to_raise() then
+                    local zombies = get_zombies()
+                    if zombies and #zombies > 0 then
+                        U.animation_start(this, a.animation, nil, store.tick_ts, false)
+
+                        local raise_index = math.random(1, #zombies)
+                        local anchor = zombies[raise_index]
+
+                        local fx = E:create_entity("decal_zombiemancer_raise")
+                        fx.pos = V.vclone(anchor.pos)
+                        for i = 1, #fx.render.sprites do
+                            fx.render.sprites[i].ts = store.tick_ts
+                        end
+                        queue_insert(store, fx)
+
+                        local hp_sum = 0
+                        for _, zombie in pairs(zombies) do
+                            if zombie.health and not zombie.health.dead then
+                                local mod = E:create_entity("mod_blood")
+                                mod.modifier.duration = 1
+                                mod.dps.damage_inc = 0
+                                local deal = this.health.hp / 4
+                                mod.dps.damage_max = deal
+                                mod.dps.damage_min = deal
+                                hp_sum = hp_sum + deal
+
+                                mod.modifier.source_id = this.id
+                                mod.modifier.target_id = zombie.id
+                                queue_insert(store, mod)
+                            end
+                        end
+
+                        local abomination = E:create_entity("enemy_abomination")
+                        abomination.nav_path.pi = anchor.nav_path.pi
+                        abomination.nav_path.spi = anchor.nav_path.spi
+                        abomination.nav_path.ni = anchor.nav_path.ni
+                        abomination.enemy.gold = 0
+                        abomination.render.sprites[1].alpha = 100
+                        abomination.health.hp_max = 3 * hp_sum
+                        abomination.health.hp = abomination.health.hp_max
+                        if P:is_node_valid(abomination.nav_path.pi, abomination.nav_path.ni) then
+                            queue_insert(store, abomination)
+                        end
+
+                        SU.stun_inc(abomination)
+                        if SU.y_enemy_wait(store, this, a.spawn_time) then
+                            abomination.render.sprites[1].alpha = 255
+                            SU.stun_dec(abomination)
+                            goto label_117_0
+                        end
+
+                        U.y_animation_wait(this)
+                        abomination.render.sprites[1].alpha = 255
+                        SU.stun_dec(abomination)
+
+                        a2.ts = store.tick_ts
+                    else
+                        a2.ts = a2.ts + 1
+                    end
+                end
+
+                if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, break_fn, break_fn) then
+                    -- block empty
+                else
+                    coroutine.yield()
+                end
+            end
+        end
+    end
+}
+
+scripts.eb_jack = {}
+function scripts.eb_jack.update(this, store)
+    local ra = this.ranged.attacks[1]
+    local last_quit_hp = this.health.hp
+    local quit_threshold = this.health.hp_max * 0.2
+    local function quit()
+        return last_quit_hp - this.health.hp >= quit_threshold
+    end
+    ::label_25_0::
+    while true do
+        if this.health.dead then
+            SU.y_enemy_death(store, this)
+            LU.kill_all_enemies(store, true)
+            store.boss_killed = true
+            return
+        end
+        if last_quit_hp - this.health.hp >= quit_threshold then
+            U.unblock_all(store, this)
+            this.vis.flags = bor(this.vis.flags, F_BLOCK)
+            SU.remove_modifiers(store, this)
+            U.y_animation_play(this, "death", nil, store.tick_ts, 1)
+            S:queue("HWHeadlessHorsemanLaugh")
+            this.health.immune_to = F_ALL
+            U.y_animation_wait(this)
+            local ni = km.clamp(P:get_start_node(this.nav_path.pi), P:get_end_node(this.nav_path.pi),
+                this.nav_path.ni + 11)
+            local dest = P:node_pos(this.nav_path.pi, this.nav_path.spi, ni)
+            this.pos.x, this.pos.y = dest.x, dest.y
+            U.y_animation_play(this, "rise", nil, store.tick_ts, 1)
+            this.health.immune_to = F_NONE
+            this.vis.flags = U.flag_clear(this.vis.flags, F_BLOCK)
+            last_quit_hp = this.health.hp
+            this.nav_path.ni = ni
+        end
+        if this.unit.is_stunned then
+            U.animation_start(this, "idle", nil, store.tick_ts, -1)
+            coroutine.yield()
+        else
+            local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, false, quit)
+
+            if not cont then
+                -- block empty
+            else
+                if blocker then
+                    if not SU.y_wait_for_blocker(store, this, blocker) then
+                        goto label_25_0
+                    end
+
+                    while SU.can_melee_blocker(store, this, blocker) and not quit() do
+                        if ranged then
+                            SU.y_enemy_range_attacks(store, this, ranged)
+                        end
+                        if not SU.y_enemy_melee_attacks(store, this, blocker) then
+                            goto label_25_0
+                        end
+
+                        coroutine.yield()
+                    end
+                elseif ranged then
+                    while SU.can_range_soldier(store, this, ranged) and #this.enemy.blockers == 0 and not quit() do
+                        if not SU.y_enemy_range_attacks(store, this, ranged) then
+                            goto label_25_0
+                        end
+
+                        coroutine.yield()
+                    end
+                end
+                coroutine.yield()
+            end
+        end
+    end
+end
+
+scripts.eb_jack_spawner_aura = {}
+function scripts.eb_jack_spawner_aura.update(this, store)
+    local source = store.entities[this.aura.source_id]
+    if not source or source.health.dead then
+        queue_remove(store, this)
+        return
+    end
+    local a = this.aura
+    while true do
+        if store.tick_ts - a.ts < a.cycle_time then
+            goto continue
+        end
+
+        if not source or source.health.dead then
+            queue_remove(store, this)
+            return
+        end
+        do
+            local pi = source.nav_path.pi
+            local ni = source.nav_path.ni
+
+            local spawn_count = math.random(this.min_spawn_count, this.max_spawn_count)
+
+            for i = 1, spawn_count do
+                local e = E:create_entity(this.creeps[math.random(1, #this.creeps)])
+                e.nav_path.pi = pi
+                e.nav_path.spi = math.random(1, 3)
+                e.nav_path.ni = km.clamp(P:get_start_node(pi), P:get_end_node(pi), ni + math.random(-10, 10))
+                e.enemy.gold = 0
+                queue_insert(store, e)
+            end
+            a.ts = store.tick_ts
+        end
+
+        ::continue::
+        coroutine.yield()
+    end
+    queue_remove(store, this)
+end
+
+scripts.shaman_gravity_aura = {
+    update = function(this, store)
+        local a = this.aura
+        local source = store.entities[a.source_id]
+        a.ts = store.tick_ts
+        local gravity_inc = this.gravity_inc
+        while true do
+            source = store.entities[a.source_id]
+            if not source or source.health.dead then
+                queue_remove(store, this)
+                return
+            end
+            if store.tick_ts - a.ts < a.cycle_time or (not source.enemy.can_do_magic) then
+                coroutine.yield()
+            else
+                a.ts = store.tick_ts
+                for _, e in pairs(store.entities) do
+                    if e.bullet and e.bullet.g and U.is_inside_ellipse(e.pos, source.pos, a.radius) then
+                        e.bullet.g = e.bullet.g + gravity_inc
+                    end
+                end
+            end
+        end
+    end
+}
 
 return scripts

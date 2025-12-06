@@ -3863,6 +3863,11 @@ local a = {
 		to = 40,
 		from = 21
 	},
+	eb_sarelgaz_walkingUp = {
+		prefix = "boss_sarelgaz",
+		to = 40,
+		from = 21
+	},
 	eb_sarelgaz_walkingRightLeft = {
 		prefix = "boss_sarelgaz",
 		to = 20,
@@ -3986,6 +3991,11 @@ local a = {
 		from = 42
 	},
 	eb_kingpin_walkingRightLeft = {
+		prefix = "BossBandit",
+		to = 24,
+		from = 1
+	},
+	eb_kingpin_walkingDown = {
 		prefix = "BossBandit",
 		to = 24,
 		from = 1
@@ -6767,7 +6777,7 @@ local a = {
 		to = 35,
 		from = 1
 	},
-	decal_fish_jump = {
+	decal_fish1_jump = {
 		prefix = "fish",
 		to = 22,
 		from = 1
@@ -7789,7 +7799,738 @@ local a = {
 		prefix = "fallen",
 		to = 146,
 		from = 114
+	},	
+---	重生
+	enemy_cursed_shaman_attack = {
+		prefix = "cursed_shaman",
+		to = 69,
+		from = 56,
+		post = {
+			19
+		}
+	},
+	enemy_cursed_shaman_death = {
+		prefix = "cursed_shaman",
+		to = 85,
+		from = 70
+	},
+	enemy_cursed_shaman_idle = {
+		prefix = "cursed_shaman",
+		to = 19,
+		from = 19
+	},
+	enemy_cursed_shaman_shoot = {
+		prefix = "cursed_shaman",
+		to = 115,
+		from = 104
+	},
+	enemy_cursed_shaman_heal = {
+		prefix = "cursed_shaman",
+		to = 103,
+		from = 86
+	},
+	enemy_cursed_shaman_thorn = {
+		prefix = "cursed_shaman",
+		to = 130,
+		from = 112
+	},
+	enemy_cursed_shaman_thornFree = {
+		prefix = "cursed_shaman",
+		to = 135,
+		from = 131
+	},
+	enemy_cursed_shaman_walkingDown = {
+		prefix = "cursed_shaman",
+		to = 55,
+		from = 38
+	},
+	enemy_cursed_shaman_walk = {
+		prefix = "cursed_shaman",
+		to = 18,
+		from = 1
+	},
+	enemy_cursed_shaman_walkingRightLeft = {
+		prefix = "cursed_shaman",
+		to = 18,
+		from = 1
+	},
+	enemy_cursed_shaman_walkingUp = {
+		prefix = "cursed_shaman",
+		to = 37,
+		from = 20
+	},
+	bolt_cursed_shaman_idle = {
+		prefix = "cursed_shaman_bolt",
+		to = 2,
+		from = 1
+	},
+	bolt_cursed_shaman_flying = {
+		prefix = "cursed_shaman_bolt",
+		to = 2,
+		from = 1
+	},
+	bolt_cursed_shaman_hit = {
+		prefix = "cursed_shaman_bolt",
+		to = 10,
+		from = 3
+	},
+	enemy_hobgoblin_small_attack = {
+		prefix = "hobgoblin_small",
+		to = 10,
+		from = 2,
+		post = {
+			1,
+		}
+	},
+	enemy_hobgoblin_small_death = {
+		prefix = "hobgoblin_small",
+		to = 83,
+		from = 77
+	},
+	enemy_hobgoblin_small_idle = {
+		prefix = "hobgoblin_small",
+		to = 1,
+		from = 1
+	},
+	enemy_hobgoblin_small_thorn = {
+		prefix = "hobgoblin_small",
+		to = 1,
+		from = 1
+	},
+	enemy_hobgoblin_small_thornFree = {
+		prefix = "hobgoblin_small",
+		to = 1,
+		from = 1
+	},
+	enemy_hobgoblin_small_walkingDown = {
+		prefix = "hobgoblin_small",
+		to = 76,
+		from = 55
+	},
+	enemy_hobgoblin_small_walk = {
+		prefix = "hobgoblin_small",
+		to = 32,
+		from = 11
+	},
+	enemy_hobgoblin_small_walkingRightLeft = {
+		prefix = "hobgoblin_small",
+		to = 32,
+		from = 11
+	},
+	enemy_hobgoblin_small_walkingUp = {
+		prefix = "hobgoblin_small",
+		to = 54,
+		from = 33
+	},
+	enemy_hobgoblin_rider_attack = {
+		prefix = "hobgoblin_rider",
+		to = 1,
+		from = 1
+	},
+	enemy_hobgoblin_rider_death = {
+		prefix = "worg",
+		to = 84,
+		from = 69
+	},
+	enemy_hobgoblin_rider_idle = {
+		prefix = "hobgoblin_rider",
+		to = 1,
+		from = 1
+	},
+	enemy_hobgoblin_rider_thorn = {
+		prefix = "hobgoblin_rider",
+		to = 1,
+		from = 1
+	},
+	enemy_hobgoblin_rider_thornFree = {
+		prefix = "hobgoblin_rider",
+		to = 1,
+		from = 1
+	},
+	enemy_hobgoblin_rider_walkingDown = {
+		prefix = "hobgoblin_rider",
+		to = 30,
+		from = 21
+	},
+	enemy_hobgoblin_rider_walk = {
+		prefix = "hobgoblin_rider",
+		to = 10,
+		from = 2
+	},
+	enemy_hobgoblin_rider_walkingRightLeft = {
+		prefix = "hobgoblin_rider",
+		to = 10,
+		from = 2
+	},
+	enemy_hobgoblin_rider_walkingUp = {
+		prefix = "hobgoblin_rider",
+		to = 20,
+		from = 11
+	},
+	enemy_hobgoblin_rider_runningDown = {
+		prefix = "hobgoblin_rider",
+		to = 48,
+		from = 44
+	},
+	enemy_hobgoblin_rider_running = {
+		prefix = "hobgoblin_rider",
+		to = 38,
+		from = 31
+	},
+	enemy_hobgoblin_rider_runningRightLeft = {
+		prefix = "hobgoblin_rider",
+		to = 38,
+		from = 31
+	},
+	enemy_hobgoblin_rider_runningUp = {
+		prefix = "hobgoblin_rider",
+		to = 43,
+		from = 39
+	},
+	enemy_hobgoblin_shield_attack = {
+		prefix = "hobgoblin_shield",
+		to = 124,
+		from = 105,
+		post = {
+			105,
+		}
+	},
+	enemy_hobgoblin_shield_death = {
+		prefix = "hobgoblin_shield",
+		to = 104,
+		from = 87
+	},
+	enemy_hobgoblin_shield_idle = {
+		prefix = "hobgoblin_shield",
+		to = 105,
+		from = 105
+	},
+	enemy_hobgoblin_shield_thorn = {
+		prefix = "hobgoblin_shield",
+		to = 105,
+		from = 105
+	},
+	enemy_hobgoblin_shield_thornFree = {
+		prefix = "hobgoblin_shield",
+		to = 105,
+		from = 105
+	},
+	enemy_hobgoblin_shield_walkingDown = {
+		prefix = "hobgoblin_shield",
+		to = 70,
+		from = 53
+	},
+	enemy_hobgoblin_shield_walk = {
+		prefix = "hobgoblin_shield",
+		to = 52,
+		from = 19
+	},
+	enemy_hobgoblin_shield_walkingRightLeft = {
+		prefix = "hobgoblin_shield",
+		to = 52,
+		from = 19
+	},
+	enemy_hobgoblin_shield_walkingUp = {
+		prefix = "hobgoblin_shield",
+		to = 86,
+		from = 71
+	},
+	enemy_hobgoblin_shield_raise = {
+			prefix = "hobgoblin_shield",
+			to = 105,
+			from = 105
+	},
+		enemy_hobgoblin_shield_burrow = {
+			prefix = "hobgoblin_shield",
+			to = 105,
+			from = 105
+	},
+		enemy_hobgoblin_shield_teleport = {
+			prefix = "states_flying_small",
+			to = 10,
+			from = 1
+	},
+	enemy_goblin_spear_attack = {
+		to = 98,
+		from = 91,
+		prefix = "goblin_spear",
+		post = {
+			1,
+		}
+	},
+	enemy_goblin_spear_death = {
+		prefix = "goblin_spear",
+		to = 90,
+		from = 84
+	},
+	enemy_goblin_spear_idle = {
+		prefix = "goblin_spear",
+		to = 1,
+		from = 1
+	},
+	enemy_goblin_spear_shoot = {
+		prefix = "goblin_spear",
+		to = 17,
+		from = 8
+	},
+	enemy_goblin_spear_thorn = {
+		prefix = "goblin_spear",
+		to = 86,
+		from = 67
+	},
+	enemy_goblin_spear_thornFree = {
+		prefix = "goblin_spear",
+		to = 113,
+		from = 108
+	},
+	enemy_goblin_spear_walkingDown = {
+		prefix = "goblin_spear",
+		to = 83,
+		from = 62
+	},
+	enemy_goblin_spear_walkingRightLeft = {
+		prefix = "goblin_spear",
+		to = 39,
+		from = 18
+	},
+	enemy_goblin_spear_walk = {
+		prefix = "goblin_spear",
+		to = 39,
+		from = 18
+	},
+	enemy_goblin_spear_walkingUp = {
+		prefix = "goblin_spear",
+		to = 61,
+		from = 40
+	},
+	enemy_goblin_balloon_death = {
+		prefix = "goblin_balloon",
+		to = 105,
+		from = 72
+	},
+	enemy_goblin_balloon_idle = {
+		prefix = "goblin_balloon",
+		to = 17,
+		from = 1
+	},
+	enemy_goblin_balloon_walkingDown = {
+		prefix = "goblin_balloon",
+		to = 53,
+		from = 36
+	},
+	enemy_goblin_balloon_walkingRightLeft = {
+		prefix = "goblin_balloon",
+		to = 17,
+		from = 1
+	},
+	enemy_goblin_balloon_walkingUp = {
+		prefix = "goblin_balloon",
+		to = 71,
+		from = 54
+	},
+	enemy_goblin_balloon_shoot = {
+		prefix = "goblin_balloon",
+		to = 35,
+		from = 18
+	},
+	enemy_goblin_platform_death = {
+		prefix = "goblin_platform",
+		to = 105,
+		from = 72
+	},
+	enemy_goblin_platform_idle = {
+		prefix = "goblin_platform",
+		to = 17,
+		from = 1
+	},
+	enemy_goblin_platform_walkingDown = {
+		prefix = "goblin_platform",
+		to = 53,
+		from = 36
+	},
+	enemy_goblin_platform_walkingRightLeft = {
+		prefix = "goblin_platform",
+		to = 17,
+		from = 1
+	},
+	enemy_goblin_platform_walkingUp = {
+		prefix = "goblin_platform",
+		to = 71,
+		from = 54
+	},
+	enemy_goblin_platform_shoot = {
+		prefix = "goblin_platform",
+		to = 35,
+		from = 18
+	},
+	enemy_cursed_golem_attack = {
+		prefix = "cursed_golem",
+		to = 101,
+		from = 76,
+		post = {
+			1,
+		}
+	},
+	cursed_golem_slam = {
+		prefix = "cursed_golem_slam",
+		to = 15,
+		from = 1
+	},
+	enemy_cursed_golem_death = {
+		prefix = "cursed_golem",
+		to = 139,
+		from = 102
+	},
+	enemy_cursed_golem_idle = {
+		prefix = "cursed_golem",
+		to = 1,
+		from = 1
+	},
+	enemy_cursed_golem_raise = {
+		prefix = "cursed_golem",
+		to = 173,
+		from = 142
+	},
+	enemy_cursed_golem_thorn = {
+		prefix = "cursed_golem",
+		to = 121,
+		from = 103
+	},
+	enemy_cursed_golem_thornFree = {
+		prefix = "cursed_golem",
+		to = 125,
+		from = 122
+	},
+	enemy_cursed_golem_walkingDown = {
+		prefix = "cursed_golem",
+		to = 75,
+		from = 54
+	},
+	enemy_cursed_golem_walk = {
+		prefix = "cursed_golem",
+		to = 31,
+		from = 2
+	},
+	enemy_cursed_golem_walkingRightLeft = {
+		prefix = "cursed_golem",
+		to = 31,
+		from = 2
+	},
+	enemy_cursed_golem_walkingUp = {
+		prefix = "cursed_golem",
+		to = 53,
+		from = 32
+	},
+	enemy_cursed_shard_idle = {
+		prefix = "cursed_shard",
+		to = 1,
+		from = 1
+	},
+	enemy_cursed_shard_walkingRightLeft = {
+		prefix = "cursed_shard",
+		to = 7,
+		from = 2
+	},
+	enemy_cursed_shard_running = {
+		prefix = "cursed_shard",
+		to = 7,
+		from = 2
+	},
+	enemy_cursed_shard_walk = {
+		prefix = "cursed_shard",
+		to = 7,
+		from = 2
+	},
+	enemy_cursed_shard_walkingUp = {
+		prefix = "cursed_shard",
+		to = 13,
+		from = 8
+	},
+	enemy_cursed_shard_walkingDown = {
+		prefix = "cursed_shard",
+		to = 19,
+		from = 14
+	},
+	enemy_cursed_shard_attack = {
+		prefix = "cursed_shard",
+		frames = {
+		20,
+		20,
+		21,
+		21,
+		22,
+		22,
+		23,
+		23,
+		24,
+		24,
+		25,
+		25,
+		26,
+		26,
+		27,
+		27,
+		28,
+		28,
+		1
+		}
+	},
+	enemy_cursed_shard_death = {
+		prefix = "cursed_shard",
+		to = 42,
+		from = 29
+	},
+	enemy_cursed_shard_raise = {
+		prefix = "cursed_shard",
+		to = 29,
+		from = 42
+	},
+	cursed_shield = {
+		prefix = "cursed_shield",
+		to = 11,
+		from = 1
+	},
+	cursed_heal = {
+		prefix = "cursed_heal",
+		to = 25,
+		from = 1
 	},		
+	eb_hobgoblin_attack = {
+		prefix = "eb_hobgoblin",
+		to = 124,
+		from = 90
+	},
+	eb_hobgoblin_death = {
+		prefix = "eb_hobgoblin",
+		to = 183,
+		from = 125
+	},
+	eb_hobgoblin_idle = {
+		prefix = "eb_hobgoblin",
+		to = 1,
+		from = 1
+	},
+	eb_hobgoblin_shoot = {
+		prefix = "eb_hobgoblin",
+		to = 89,
+		from = 74
+	},
+	eb_hobgoblin_walkingRightLeft = {
+		prefix = "eb_hobgoblin",
+		to = 25,
+		from = 2
+	},
+	eb_hobgoblin_walkingUp = {
+		prefix = "eb_hobgoblin",
+		to = 49,
+		from = 26
+	},
+	eb_hobgoblin_walkingDown = {
+		prefix = "eb_hobgoblin",
+		to = 73,
+		from = 50
+	},
+	missile_hobgoblin_flying = {
+		prefix = "boss_veznan_soul",
+		to = 10,
+		from = 1
+	},
+	missile_hobgoblin_hit = {
+		prefix = "boss_veznan_soul",
+		to = 14,
+		from = 7
+	},
+	missile_hobgoblin_trail = {
+		prefix = "boss_veznan_soul",
+		to = 19,
+		from = 11
+	},
+	missile_hobgoblin_sparks1 = {
+		prefix = "boss_veznan_soul",
+		to = 10,
+		from = 1
+	},
+	missile_hobgoblin_sparks2 = {
+		prefix = "boss_veznan_soul",
+		to = 10,
+		from = 1
+	},
+	missile_hobgoblin_sparks3 = {
+		prefix = "boss_veznan_soul",
+		to = 10,
+		from = 1
+	},
+	hobgoblin_teleport = {
+		prefix = "hobport",
+		to = 28,
+		from = 1
+	},
+	eb_hobgoblin2_attack = {
+		prefix = "eb_hobgoblin2",
+		to = 53,
+		from = 28
+	},
+	eb_hobgoblin2_attack2 = {
+		prefix = "eb_hobgoblin2",
+		to = 53,
+		from = 28
+	},
+	eb_hobgoblin2_attack3 = {
+		prefix = "eb_hobgoblin2",
+		to = 101,
+		from = 76
+	},
+	eb_hobgoblin2_death = {
+		prefix = "eb_hobgoblin2",
+		to = 149,
+		from = 102
+	},
+	eb_hobgoblin2_idle = {
+		prefix = "eb_hobgoblin2",
+		to = 1,
+		from = 1
+	},
+	eb_hobgoblin2_shoot = {
+		prefix = "eb_hobgoblin2",
+		to = 75,
+		from = 54
+	},
+	eb_hobgoblin2_walkingRightLeft = {
+		prefix = "eb_hobgoblin2",
+		to = 27,
+		from = 2
+	},
+	eb_hobgoblin2_walkingUp = {
+		prefix = "eb_hobgoblin2",
+		to = 27,
+		from = 2
+	},
+	eb_hobgoblin2_walkingDown = {
+		prefix = "eb_hobgoblin2",
+		to = 27,
+		from = 2
+	},
+	fx_teleport_hobgoblin_small = {
+		prefix = "hobportfx_small",
+		to = 11,
+		from = 1
+	},
+	fx_teleport_hobgoblin_big = {
+		prefix = "hobportfx_big",
+		to = 11,
+		from = 1
+	},
+	eb_hobtransform_death = {
+		prefix = "eb_hobtransform",
+		to = 106,
+		from = 1
+	},
+	decal_water_fall_idle = {
+		prefix = "Stg29_WaterFall",
+		to = 9,
+		from = 1
+	},
+	decal_bush1_bl = {
+		prefix = "Stg30_FirstBush",
+		to = 96,
+		from = 1
+	},
+	decal_bush2_bl = {
+		prefix = "Stg30_SecondBush",
+		to = 66,
+		from = 1
+	},
+	decal_bush3_bl = {
+		prefix = "Stg30_ThirdBush",
+		to = 76,
+		from = 1
+	},
+	decal_bridge_bl_close = {
+		prefix = "Stg30_Bridge",
+		to = 30,
+		from = 29
+	},
+	decal_bridge_bl_open = {
+		prefix = "Stg30_Bridge",
+		to = 30,
+		from = 1
+	},
+	decal_spikewall_bl = {
+		prefix = "Stg31_PikeWall",
+		to = 1,
+		from = 1
+	},
+	decal_cavewall_bl = {
+		prefix = "Stg31_CaveWall",
+		to = 1,
+		from = 1
+	},
+	decal_trashcan_bl = {
+		prefix = "bl_trashcan",
+		to = 1,
+		from = 1
+	},
+	decal_tape_bl = {
+		prefix = "bl_tape",
+		to = 1,
+		from = 1
+	},
+	decal_mark_bl = {
+		prefix = "bl_mark",
+		to = 1,
+		from = 1
+	},
+	decal_dwarf_bl = {
+		prefix = "bl_dwarf",
+		to = 1,
+		from = 1
+	},
+	decal_knight_bl = {
+		prefix = "bl_knight",
+		to = 1,
+		from = 1
+	},
+	decal_goldbag_bl_idle = {
+		prefix = "bl_goldbag",
+		to = 1,
+		from = 1
+	},
+	decal_goldbag_bl_death = {
+		prefix = "bl_goldbag",
+		to = 8,
+		from = 1
+	},
+	totem_violet_death = {
+		prefix = "soldier_gargoyle",
+		to = 45,
+		from = 45
+	},
+	totem_violet_walkingRightLeft = {
+		prefix = "soldier_gargoyle",
+		to = 45,
+		from = 45
+	},
+	bomb_hobgoblin_spawner_open = {
+		prefix = "soldier_gargoyle",
+		to = 45,
+		from = 45
+	},
+	bomb_hobgoblin_spawner_idle = {
+		prefix = "soldier_gargoyle",
+		to = 45,
+		from = 45
+	},
+	eb_hobtransform_walkingRightLeft = {
+		prefix = "soldier_gargoyle",
+		to = 45,
+		from = 45
+	},
+	tower_imperial_flag = {
+		prefix = "royalFlag",
+		to = 9,
+		from = 1
+	},
+---			
 }
 local o = {}
 

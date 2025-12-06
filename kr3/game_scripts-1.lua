@@ -9700,6 +9700,10 @@ function scripts.s15_rotten_spawner.update(this, store)
 			break
 		end
 
+		if store.wave_group_number == last_wave and store.level_idx == 77 then
+			break 
+		end
+
 		if store.wave_group_number ~= last_wave then
 			local wave_timers = this.spawn_timers[store.wave_group_number]
 

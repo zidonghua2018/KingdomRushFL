@@ -1427,12 +1427,12 @@ function upgrades:patch_templates(max_level)
 			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
 		end
 		---
-		T("ray_neptune").bullet.damage_min_levels[1] = math.ceil(T("ray_neptune").bullet.damage_min_levels[1]*u.damage_factor)
-		T("ray_neptune").bullet.damage_min_levels[2] = math.ceil(T("ray_neptune").bullet.damage_min_levels[2]*u.damage_factor)
-		T("ray_neptune").bullet.damage_min_levels[3] = math.ceil(T("ray_neptune").bullet.damage_min_levels[3]*u.damage_factor)
-		T("ray_neptune").bullet.damage_max_levels[1] = math.ceil(T("ray_neptune").bullet.damage_max_levels[1]*u.damage_factor)
-		T("ray_neptune").bullet.damage_max_levels[2] = math.ceil(T("ray_neptune").bullet.damage_max_levels[2]*u.damage_factor)
-		T("ray_neptune").bullet.damage_max_levels[3] = math.ceil(T("ray_neptune").bullet.damage_max_levels[3]*u.damage_factor)
+		--T("ray_neptune").bullet.damage_min_levels[1] = math.ceil(T("ray_neptune").bullet.damage_min_levels[1]*u.damage_factor)
+		--T("ray_neptune").bullet.damage_min_levels[2] = math.ceil(T("ray_neptune").bullet.damage_min_levels[2]*u.damage_factor)
+		--T("ray_neptune").bullet.damage_min_levels[3] = math.ceil(T("ray_neptune").bullet.damage_min_levels[3]*u.damage_factor)
+		--T("ray_neptune").bullet.damage_max_levels[1] = math.ceil(T("ray_neptune").bullet.damage_max_levels[1]*u.damage_factor)
+		--T("ray_neptune").bullet.damage_max_levels[2] = math.ceil(T("ray_neptune").bullet.damage_max_levels[2]*u.damage_factor)
+		--T("ray_neptune").bullet.damage_max_levels[3] = math.ceil(T("ray_neptune").bullet.damage_max_levels[3]*u.damage_factor)
 	end
 
 	u = self:get_upgrade("mage_wizard_academy")
@@ -1444,8 +1444,8 @@ function upgrades:patch_templates(max_level)
 			T("tower_necromancer").powers.pestilence,
 			T("tower_necromancer").powers.rider,
 			---
-			T("tower_neptune").powers.ray,
-			T("tower_neptune_d").powers.ray,
+			--T("tower_neptune").powers.ray,
+			--T("tower_neptune_d").powers.ray,
 		}) do
 			p.price_base = math.floor(p.price_base * u.cost_factor)
 			p.price_inc = math.floor(p.price_inc * u.cost_factor)

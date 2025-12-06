@@ -14730,6 +14730,20 @@ return {
 			}
 		}
 	},
+	holder_blocked_elemental_wood_enhance = {
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_holder_elemental_wood_enhance",
+				action = "tw_unblock",
+				halo = "glow_ico_main",
+				image = "kra_main_icons_0045",
+				place = 5,
+				tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WOOD_NAME"),
+				tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WOOD_DESCRIPTION")
+			}
+		}
+	},
 	holder_blocked_elemental_fire = {
 		{
 			{

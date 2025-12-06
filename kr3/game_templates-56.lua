@@ -11866,6 +11866,7 @@ E:add_comps(tt, "main_script")
 tt.main_script.update = scripts.tower_holder_elemental.update
 tt.main_script.remove = scripts.tower_holder_elemental.remove
 tt.tower.terrain_style = nil
+
 tt = E:register_t_10086("tower_holder_elemental_wood", "tower_holder_elemental")
 tt.tower.terrain_style = nil
 tt.render.sid_base = 1
@@ -11886,6 +11887,10 @@ tt.render.sprites[tt.render.sid_dragon].z = Z_OBJECTS
 tt.render.sprites[tt.render.sid_dragon].offset = v(0, -10)
 tt.controller_name = "controller_elemental_wood"
 tt.cannot_be_swapped = true
+
+tt = E:register_t_10086("tower_holder_elemental_wood_enhance", "tower_holder_elemental_wood")
+tt.controller_name = "controller_elemental_wood_enhance"
+
 tt = E:register_t_10086("tower_holder_elemental_fire", "tower_holder_elemental")
 tt.tower.terrain_style = nil
 tt.render.sid_base = 1
@@ -11985,7 +11990,7 @@ tt.info.portrait =  "info_portraits_towers_0019"
 tt.info.i18n_key = "BLOCKED_ELEMENTAL_TOWER"
 tt.info.damage_icon = "fireball"
 tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "terrains_holders_%04i"
+tt.render.sprites[1].name = "terrains_%04i"--"terrains_holders_%04i"
 tt.render.sprites[1].offset = v(0, 13)
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[2] = E:clone_c("sprite")
@@ -12286,6 +12291,12 @@ tt.render.sprites[tt.render.sid_parche].animated = true
 tt.render.sprites[tt.render.sid_parche].offset = v(-5.5, 3.5)
 tt.remove_fx = "fx_elemental_wood_holder_broken_jarra"
 tt.ui.click_rect = r(-45, -8, 90, 90)
+
+
+tt = E:register_t_10086("tower_holder_blocked_elemental_wood_enhance", "tower_holder_blocked_elemental_wood_b")
+tt.tower.type = "holder_blocked_elemental_wood_enhance"
+tt.tower_holder.unblock_price = 50
+
 tt = E:register_t_10086("tower_holder_blocked_elemental_fire", "tower_holder_blocked_2")
 
 E:add_comps(tt, "main_script")
@@ -30741,7 +30752,7 @@ tt.render.sprites[1].draw_order = DO_ENEMY_BIG
 tt.render.sprites[1].anchor = v(0.5, 0.375)
 tt.render.sprites[1].scale = vv(1)
 tt.render.sprites[1].exo = true
-tt.vis.bans = bor(tt.vis.bans, F_STUN, F_INSTAKILL)
+tt.vis.bans = bor(tt.vis.bans, F_STUN, F_INSTAKILL, F_DISINTEGRATED, F_EAT)
 tt.timed_attacks.list[1] = E:clone_c("custom_attack")
 tt.timed_attacks.list[1].animation_start = "spawnIn"
 tt.timed_attacks.list[1].animation_loop = "spawnLoop"
@@ -42634,6 +42645,93 @@ tt.tween.props[1].loop = false
 tt.tween.disabled = true
 tt.tween.reverse = true
 tt.tween.remove = false
+
+tt = RT("controller_elemental_wood_enhance", "controller_elemental_wood")
+b = balance.specials.terrain_8.elemental_holders.wooden_holder_enhance
+tt.main_script.update = scripts.controller_elemental_wood.update
+tt.main_script.remove = scripts.controller_elemental_generic.remove
+tt.first_cooldown = b.first_cooldown
+tt.cooldown = b.cooldown
+tt.slow_factor = b.slow_factor
+tt.damage_min = b.damage_min
+tt.damage_max = b.damage_max
+tt.vis_bans = bor(F_FLYING, F_FRIEND)
+tt.vis_flags = F_RANGED
+tt.duration = b.duration
+tt.root_decal = "decal_elemental_wood_holder_root"
+tt.root_decal_dragon = "decal_elemental_wood_holder_root_dragon"
+tt.default_max_range = b.default_max_range
+tt.skill_detection_range_factor = b.skill_detection_range_factor
+tt.rally_range_factor = b.rally_range_factor
+tt.range_factor = b.range_factor
+tt.controller_aura_name = "aura_elemental_wood"
+tt.render.sid_gradiente = 1
+tt.render.sid_wings = 2
+tt.render.sid_hojas = 3
+tt.render.sid_dragon = 4
+tt.render.sid_dragon_ability = 5
+tt.render.sprites[tt.render.sid_gradiente].prefix = "stage31_wood_holder_gradienteDef"
+tt.render.sprites[tt.render.sid_gradiente].exo = true
+tt.render.sprites[tt.render.sid_gradiente].name = "idle"
+tt.render.sprites[tt.render.sid_gradiente].animated = true
+tt.render.sprites[tt.render.sid_gradiente].z = Z_OBJECTS
+tt.render.sprites[tt.render.sid_gradiente].offset = v(-60, 85)
+tt.render.sprites[tt.render.sid_wings] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_wings].prefix = "stage31_wood_holder_cuernosDef"
+tt.render.sprites[tt.render.sid_wings].name = "run"
+tt.render.sprites[tt.render.sid_wings].exo = true
+tt.render.sprites[tt.render.sid_wings].animated = true
+tt.render.sprites[tt.render.sid_wings].z = Z_OBJECTS
+tt.render.sprites[tt.render.sid_wings].sort_y_offset = -10
+tt.render.sprites[tt.render.sid_wings].anchor = v(0.5, 0.5)
+tt.render.sprites[tt.render.sid_wings].alpha = 0
+tt.render.sprites[tt.render.sid_hojas] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_hojas].prefix = "stage31_wood_holder_jarrahojasDef"
+tt.render.sprites[tt.render.sid_hojas].exo = true
+tt.render.sprites[tt.render.sid_hojas].name = "run"
+tt.render.sprites[tt.render.sid_hojas].animated = true
+tt.render.sprites[tt.render.sid_hojas].z = Z_OBJECTS
+tt.render.sprites[tt.render.sid_hojas].offset = v(0, -10)
+tt.render.sprites[tt.render.sid_hojas].sort_y_offset = -10
+tt.render.sprites[tt.render.sid_dragon] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_dragon].prefix = "stage31_wood_holder_dragonDef"
+tt.render.sprites[tt.render.sid_dragon].exo = true
+tt.render.sprites[tt.render.sid_dragon].name = "idle"
+tt.render.sprites[tt.render.sid_dragon].animated = true
+tt.render.sprites[tt.render.sid_dragon].z = Z_EFFECTS
+tt.render.sprites[tt.render.sid_dragon].offset = v(0, -10)
+tt.render.sprites[tt.render.sid_dragon].anchor = vv(0.5)
+tt.render.sprites[tt.render.sid_dragon_ability] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_dragon_ability].prefix = "stage31_wood_holder_habilidad_1Def"
+tt.render.sprites[tt.render.sid_dragon_ability].exo = true
+tt.render.sprites[tt.render.sid_dragon_ability].name = "start_hability"
+tt.render.sprites[tt.render.sid_dragon_ability].animated = true
+tt.render.sprites[tt.render.sid_dragon_ability].z = Z_EFFECTS
+tt.render.sprites[tt.render.sid_dragon_ability].hidden = true
+tt.render.sprites[tt.render.sid_dragon_ability].anchor = vv(0.5)
+tt.update_on_path_active = {
+	2,
+	3,
+	6
+}
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {
+	{
+		0,
+		0
+	},
+	{
+		0.5,
+		255
+	}
+}
+tt.tween.props[1].sprite_id = tt.render.sid_wings
+tt.tween.props[1].loop = false
+tt.tween.disabled = true
+tt.tween.reverse = true
+tt.tween.remove = false
+
+
 tt = E:register_t_10086("decal_elemental_wood_holder_root_1", "decal_scripted")
 tt.render.sprites[1].prefix = "stage31_wood_holder_root1Def"
 tt.render.sprites[1].exo = true
