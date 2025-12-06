@@ -6767,7 +6767,7 @@ local a = {
 		to = 35,
 		from = 1
 	},
-	decal_fish_jump = {
+	decal_fish1_jump = {
 		prefix = "fish",
 		to = 22,
 		from = 1
