@@ -894,7 +894,7 @@ function wave_db:load_lua(level_name, game_mode)
 	--大boss不参与随机；黑女巫只能随机进来不能随机出去
 	math.randomseed(os.time())
 	if self.user_data.liuhui.rand_creep and self.user_data.liuhui.rand_creep > 0 and table.contains(self.endless_level, level_name) == false then
-		--先统计
+		--先统计，其他怪物不能随机成boss
 		local enemy_list = {}
 		local random_intensity = {0.4, 0.8, 2}
 		for i, waves in pairs(wave_db.db.groups) do
@@ -912,12 +912,12 @@ function wave_db:load_lua(level_name, game_mode)
 		table.sort(enemy_list, function(e1, e2)
 			return (type(T(e1).health.hp_max) == "table" and T(e1).health.hp_max[2] or T(e1).health.hp_max) > (type(T(e2).health.hp_max) == "table" and T(e2).health.hp_max[2] or T(e2).health.hp_max)
 		end)
-		--最后根据怪物强度确定新怪物
+		--最后根据怪物强度确定新怪物，大boss和黑女巫不会被随机成其他怪物
 		for i, waves in pairs(wave_db.db.groups) do
 			for j, path_list in pairs(waves.waves) do
 				for k, creeps in pairs(path_list.spawns) do 
 					intensity_rank = table.find(enemy_list, creeps.creep) or 1
-					if T(creeps.creep).template_name ~= "enemy_witch" then
+					if T(creeps.creep).template_name ~= "enemy_witch" and band(T(creeps.creep).vis.flags, F_BOSS) == 0 then
 						if self.user_data.liuhui.rand_creep == 3 then
 							creeps.creep = table.random(enemy_list)
 						else

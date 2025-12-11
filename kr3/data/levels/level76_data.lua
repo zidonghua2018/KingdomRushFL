@@ -553,7 +553,8 @@ return {
         [55] = {}
     },
     required_sounds = {
-        "music_stage09"
+        "music_stage09",
+        "music_stage76",
     },
     required_textures = {
         "go_enemies_ice",

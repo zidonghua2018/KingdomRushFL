@@ -1153,6 +1153,7 @@ return {
 		},
 		alias = {}
 	},
+	--[[
 	mapButtons_portrait_hero_0015 = {
 		a_name = "encyclopedia_bloodlust-1.dds",
 		size = {
@@ -1177,6 +1178,7 @@ return {
 		},
 		alias = {}
 	},
+	]]
 	heroroom_thumbs_0017 = {
 		a_name = "encyclopedia_bloodlust-1.dds",
 		size = {
@@ -1273,6 +1275,7 @@ return {
 		},
 		alias = {}
 	},
+	--[[
 	mapButtons_portrait_hero_0016 = {
 		a_name = "encyclopedia_bloodlust-1.dds",
 		size = {
@@ -1297,6 +1300,7 @@ return {
 		},
 		alias = {}
 	},
+	]]
 	heroroom_thumbs_0018 = {
 		a_name = "encyclopedia_bloodlust-1.dds",
 		size = {

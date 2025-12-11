@@ -75,6 +75,7 @@ screen_map.required_textures = {
 	--"ultimate45",
 	--"kr4_herogui",
 	--"kr4_hero_power",
+	"rebbborn_fig",
 	"kr4_hero_room",
 	--"kr5_hero_power",
 }

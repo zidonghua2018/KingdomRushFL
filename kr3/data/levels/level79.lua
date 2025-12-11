@@ -74,10 +74,6 @@ function level:load(store)
         elseif store.level_mode == GAME_MODE_HEROIC then
             if h.id == "05" then
                 local e = LU.insert_tower(store, "tower_barrack_mercenaries",h.style, h.pos, h.rally_pos, nil, h.id)
-                e.powers.djspell.level = 3
-                e.powers.djspell.changed = true
-                e.powers.djshock.level = 3
-                e.powers.djshock.changed = true
             else
                 LU.insert_tower(store, "tower_holder", h.style, h.pos, h.rally_pos, nil, h.id)
             end
@@ -303,8 +299,19 @@ function level:load(store)
 end
 
 function level:update(store)
-    LU.insert_hero(store)
+    --插入默认英雄。这里判定是否进入双英雄系统
+		map_data = require("data.map_data")
+		local hero_data = map_data.hero_data
+		if (not user_data.liuhui_hero) or (not user_data.liuhui_hero.usedoublehero) then
+			LU.insert_hero(store)
+		else
+			name1 = hero_data[user_data.liuhui_hero.herolist[1]].name
+			name2 = hero_data[user_data.liuhui_hero.herolist[2]].name
+			LU.insert_double_hero(store, name1, name2)
+		end
+    --LU.insert_hero(store)
     LU.insert_hero(store, "hero_steam_frigate", V.v(646, 421))
+    
 
     while store.wave_group_number < 1 do
         coroutine.yield()

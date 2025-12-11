@@ -409,6 +409,7 @@ return {
             ["tower.terrain_style"] = 10,
             ["ui.nav_mesh_id"] = "47"
         },
+        --[[
         {
             template = "tower_holder_blocked_jungle",
             pos = {
@@ -437,6 +438,7 @@ return {
             ["tower.terrain_style"] = 10,
             ["ui.nav_mesh_id"] = "47"
         },
+        ]]
         {
             template = "tower_holder_blocked_jungle",
             pos = {
@@ -662,6 +664,7 @@ return {
             ["tower.terrain_style"] = 10,
             ["ui.nav_mesh_id"] = "44"
         },
+        --[[
         {
             template = "tower_totem",
             pos = {
@@ -697,6 +700,7 @@ return {
             ["powers.blood.level"] = 1,
             ["ui.nav_mesh_id"] = "44"
         },
+        ]]
         {
             template = "tower_holder_blocked_jungle",
             pos = {
@@ -725,6 +729,7 @@ return {
             ["tower.terrain_style"] = 10,
             ["ui.nav_mesh_id"] = "61"
         },
+        --[[
         {
             template = "tower_holder_blocked_jungle",
             pos = {
@@ -753,6 +758,7 @@ return {
             ["tower.terrain_style"] = 10,
             ["ui.nav_mesh_id"] = "49"
         }
+        ]]
     },
     invalid_path_ranges = {},
     level_mode_overrides = {
@@ -826,7 +832,8 @@ return {
     },
     required_sounds = {
         "FrontiersJungleAmbienceSounds",
-        "music_stage29"--2代第7关，33
+        "music_stage29",--2代第7关，33
+        "music_stage78",
     },
     required_textures = {
         "go_enemies_sarelgaz",

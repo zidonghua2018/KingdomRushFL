@@ -1450,18 +1450,20 @@ tt.tower.price = 250
 
 --第87关自创怪物
 tt = RT("enemy_witch_strong", "enemy_witch")
-tt.enemy.gold = 88
-tt.health.hp_max = 2000
+tt.enemy.gold = 144
+tt.health.hp_max = 1500
 tt.info.i18n_key = "ENEMY_WITCH_STRONG"
 tt.vis.bans = bor(F_BLOCK, F_THORN, F_POISON)
 
 tt = RT("enemy_spectral_knight_strong", "enemy_spectral_knight")
-tt.health.hp_max = 1333
+tt.health.hp_max = 800
+tt.enemy.gold = 222
 tt.info.i18n_key = "ENEMY_SPECTRAL_KNIGHT_STRONG_NAME"
 
 tt = RT("enemy_fallen_knight_strong", "enemy_fallen_knight")
 tt.death_spawns.name = "enemy_spectral_knight_strong_spawn"
-tt.health.hp_max = 3333
+tt.enemy.gold = 222
+tt.health.hp_max = 2000
 tt.info.i18n_key = "ENEMY_FALLEN_KNIGHT_STRONG"
 
 tt = RT("enemy_spectral_knight_strong_spawn", "enemy_spectral_knight_strong")
@@ -1470,4 +1472,5 @@ tt.enemy.gold = 0
 tt = E:register_t("enemy_abomination_strong", "enemy_abomination_1")
 tt.info.i18n_key = "ENEMY_ABOMINATION_STRONG"
 tt.motion.max_speed = 1.28 * 0.5 * FPS
-tt.health.hp_max = 8800
+tt.health.hp_max = 6400
+tt.enemy.gold = 333

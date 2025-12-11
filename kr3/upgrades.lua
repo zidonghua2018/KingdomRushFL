@@ -863,13 +863,13 @@ function upgrades:patch_templates(max_level)
 			"arrow_hammerhold",
 			"arrow_hammerhold_1",
 			---
-			"dwarf_shotgun",
-			"pirate_watchtower_shotgun",	
+			--"dwarf_shotgun",
+			--"pirate_watchtower_shotgun",	
 		}) do
 			T(n).bullet.damage_min = math.ceil(T(n).bullet.damage_min * u.damage_factor)
 			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
 		end
-		T("dwarf_shotgun").bullet.damage_inc = math.ceil(T("dwarf_shotgun").bullet.damage_inc * u.damage_factor)
+		--T("dwarf_shotgun").bullet.damage_inc = math.ceil(T("dwarf_shotgun").bullet.damage_inc * u.damage_factor)
 	end
 
 	u = self:get_upgrade("archer_master_marksmanship")
@@ -903,13 +903,13 @@ function upgrades:patch_templates(max_level)
 			"arrow_hammerhold",
 			"arrow_hammerhold_1",
 			---
-			"dwarf_shotgun",
-			"pirate_watchtower_shotgun",			
+			--"dwarf_shotgun",
+			--"pirate_watchtower_shotgun",			
 		}) do
 			T(n).bullet.damage_min = math.ceil(T(n).bullet.damage_min * u.damage_factor)
 			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
 		end
-		T("dwarf_shotgun").bullet.damage_inc = math.ceil(T("dwarf_shotgun").bullet.damage_inc * u.damage_factor)
+		--T("dwarf_shotgun").bullet.damage_inc = math.ceil(T("dwarf_shotgun").bullet.damage_inc * u.damage_factor)
 	end
 --1代射手科技
 	local archer_towers = {

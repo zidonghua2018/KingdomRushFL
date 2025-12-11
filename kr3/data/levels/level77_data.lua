@@ -317,6 +317,7 @@ return {
     nav_mesh = {nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil,
                 {}, nil, {}, nil, {}, nil, {}},
     required_sounds = {"music_stage70",--1代第26关，26
+    "music_stage77",
     "BlackburnSounds",
     "HalloweenSounds",
     "music_halloween_moon",

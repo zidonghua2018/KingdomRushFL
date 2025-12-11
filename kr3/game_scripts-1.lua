@@ -1083,7 +1083,7 @@ function scripts.tower_tesla.update(this, store, script)
 			end
 
 			if store.tick_ts - ar.ts > ar.cooldown then
-				local enemy = U.find_foremost_enemy(store.entities, tpos(this), 0, ar.range, ar.node_prediction, ar.vis_flags, ar.vis_bans)
+				local enemy = U.find_foremost_enemy(store.entities, tpos(this), 0, a.range, ar.node_prediction, ar.vis_flags, ar.vis_bans)
 
 				if not enemy then
 					-- block empty
@@ -1093,8 +1093,8 @@ function scripts.tower_tesla.update(this, store, script)
 					U.animation_start(this, ar.animation, nil, store.tick_ts, false, tower_sid)
 					U.y_wait(store, ar.shoot_time)
 
-					if enemy.health.dead or not store.entities[enemy.id] or not U.is_inside_ellipse(tpos(this), enemy.pos, ar.range * a.range_check_factor) then
-						enemy = U.find_foremost_enemy(store.entities, tpos(this), 0, ar.range, false, ar.vis_flags, ar.vis_bans)
+					if enemy.health.dead or not store.entities[enemy.id] or not U.is_inside_ellipse(tpos(this), enemy.pos, a.range * a.range_check_factor) then
+						enemy = U.find_foremost_enemy(store.entities, tpos(this), 0, a.range, false, ar.vis_flags, ar.vis_bans)
 					end
 
 					if enemy then
@@ -1118,6 +1118,7 @@ function scripts.tower_tesla.update(this, store, script)
 
 						b.pos.x, b.pos.y = this.pos.x + ao.bullet_start_offset.x, this.pos.y + ao.bullet_start_offset.y
 						b.aura.source_id = this.id
+						b.aura.range = math.ceil(a.range * 10 / 11)
 						b.aura.level = pow_o.level
 
 						queue_insert(store, b)

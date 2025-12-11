@@ -266,10 +266,10 @@ function upgrades_FL:enhance2()
 	T("tower_totem").powers.silence.price_inc = 70
 	T("totem_weakness").aura.radius = 115.5
 	T("mod_weakness_totem").inflicted_damage_factor = 0.4
-	T("mod_weakness_totem").received_damage_factor = 1.5
+	T("mod_weakness_totem").received_damage_factor = 1.8
 --202 弩堡
-	T("tower_crossbow").attacks.list[2].shots = 2
-	T("tower_crossbow").attacks.list[2].shots_inc = 4
+	T("tower_crossbow").attacks.list[2].shots = 1
+	T("tower_crossbow").attacks.list[2].shots_inc = 5
 	T("tower_crossbow").attacks.list[2].near_range = 96
 	T("tower_crossbow").attacks.list[1].critical_chance = 0.1
 	T("tower_crossbow").attacks.list[1].critical_chance_inc = 0.3
@@ -602,7 +602,7 @@ function upgrades_FL:enhance4()
 	T("bone_flingers_bone").bullet.damage_min = 17
 	T("bone_flingers_bone").bullet.damage_max = 41
 	T("tower_bone_flingers_lvl4").powers.skeleton.cooldown = {12, 8}
-	T("tower_bone_flingers_lvl4").powers.milk.damage_inc = {8,16,25}
+	T("tower_bone_flingers_lvl4").powers.milk.damage_inc = {8,18,28}
 	T("bone_golem_bone_2").bullet.damage_min = 25
 	T("bone_golem_bone_2").bullet.damage_max = 39
 	T("bone_golem_bone_3").bullet.damage_min = 33
@@ -646,10 +646,10 @@ function upgrades_FL:enhance4()
 	T("bullet_shaolin_lvl1").bullet.damage_min = 3
 	T("bullet_shaolin_lvl2").bullet.damage_max = 14
 	T("bullet_shaolin_lvl2").bullet.damage_min = 9
-	T("bullet_shaolin_lvl3").bullet.damage_max = 18
-	T("bullet_shaolin_lvl3").bullet.damage_min = 12
-	T("bullet_shaolin_lvl4").bullet.damage_max = 32
-	T("bullet_shaolin_lvl4").bullet.damage_min = 18
+	T("bullet_shaolin_lvl3").bullet.damage_max = 23
+	T("bullet_shaolin_lvl3").bullet.damage_min = 14
+	T("bullet_shaolin_lvl4").bullet.damage_max = 36
+	T("bullet_shaolin_lvl4").bullet.damage_min = 22
 	T("tower_shaolin_lvl1").main_script.update = scripts.tower_shaolin99.update
 	T("tower_shaolin_lvl2").main_script.update = scripts.tower_shaolin99.update
 	T("tower_shaolin_lvl3").main_script.update = scripts.tower_shaolin99.update
@@ -704,7 +704,7 @@ function upgrades_FL:enhance5()
 	T("tower_royal_archers_lvl4").powers.rapacious_hunter.price_base = 100
 	T("tower_royal_archers_lvl4").powers.rapacious_hunter.price_inc = 80
 	T("tower_royal_archers_lvl4").powers.armor_piercer.price_inc = 120
-	T("tower_royal_archers_lvl4").powers.armor_piercer.cooldown = {12, 12, 12}
+	T("tower_royal_archers_lvl4").powers.armor_piercer.cooldown = {8, 8, 8}
 	--T("tower_royal_archers_pow_rapacious_hunter_eagle").attacks.list[1].damage_min = {22,46,70}
 	--T("tower_royal_archers_pow_rapacious_hunter_eagle").attacks.list[1].damage_max = {44,92,140}
 	--T("tower_royal_archers_lvl4").powers.rapacious_hunter.price_base = 120
@@ -800,12 +800,12 @@ function upgrades_FL:enhance5()
 	T("aura_tower_flamespitter").aura.radius = 70
 --512 沙镖
 	T("bullet_tower_sand_lvl1").bounce_damage_mult = 0.6
-	T("bullet_tower_sand_lvl2").bounce_damage_mult = 0.64
-	T("bullet_tower_sand_lvl3").bounce_damage_mult = 0.68
-	T("bullet_tower_sand_lvl4").bounce_damage_mult = 0.72
-	T("bullet_tower_sand_skill_gold").bounce_damage_mult = 0.75
+	T("bullet_tower_sand_lvl2").bounce_damage_mult = 0.7
+	T("bullet_tower_sand_lvl3").bounce_damage_mult = 0.8
+	T("bullet_tower_sand_lvl4").bounce_damage_mult = 0.9
+	T("bullet_tower_sand_skill_gold").bounce_damage_mult = 1
 	T("aura_tower_sand_skill_big_blade").aura.radius = 60
-	T("mod_tower_sand_skill_big_blade_slow").slow.factor = 0.6
+	T("mod_tower_sand_skill_big_blade_slow").slow.factor = 0.4
 --513 战魂
 	T("soldier_tower_ghost_lvl1").health.hp_max = 30
 	T("soldier_tower_ghost_lvl2").health.hp_max = 70
@@ -842,12 +842,12 @@ function upgrades_FL:enhance5()
 	T("mod_tower_ray_damage").damage_tiers = {0.4,0.4,0.1,0.1}
 --516 暮弓
 	T("tower_dark_elf_lvl4").powers.skill_buff.damage_min = {2}
-	T("tower_dark_elf_lvl4").powers.skill_buff.damage_max = {3}
+	T("tower_dark_elf_lvl4").powers.skill_buff.damage_max = {4}
 	T("soldier_tower_dark_elf").dodge.chance = 0.68
-	T("bullet_tower_dark_elf_lvl1").bullet.reduce_armor = 0.15
-	T("bullet_tower_dark_elf_lvl2").bullet.reduce_armor = 0.20
-	T("bullet_tower_dark_elf_lvl3").bullet.reduce_armor = 0.25
-	T("bullet_tower_dark_elf_lvl4").bullet.reduce_armor = 0.30
+	T("bullet_tower_dark_elf_lvl1").bullet.reduce_armor = 0.2
+	T("bullet_tower_dark_elf_lvl2").bullet.reduce_armor = 0.25
+	T("bullet_tower_dark_elf_lvl3").bullet.reduce_armor = 0.3
+	T("bullet_tower_dark_elf_lvl4").bullet.reduce_armor = 0.35
 --517 蛤蟆
 	--EMPTY BLOCK
 	T("tower_hermit_toad_lvl4").powers.jump.price_base = 120

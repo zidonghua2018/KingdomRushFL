@@ -86,8 +86,8 @@ return {
 							fixed_sub_path = 1,
 							creep = "enemy_giant_rat",
 							path = 1,
-							interval_next = 1058,
-							max = 0
+							interval_next = 424,
+							max = 8
 						},
 						{
 							interval = 42,
@@ -182,7 +182,7 @@ return {
 							fixed_sub_path = 1,
 							creep = "enemy_halloween_zombie",
 							path = 1,
-							interval_next = 565,
+							interval_next = 200,
 							max = 1
 						},
 						{
@@ -323,7 +323,7 @@ return {
 							fixed_sub_path = 1,
 							creep = "enemy_giant_rat",
 							path = 3,
-							interval_next = 424,
+							interval_next = 224,
 							max = 1
 						},
 						{
@@ -398,7 +398,34 @@ return {
 							fixed_sub_path = 0,
 							creep = "enemy_halloween_zombie",
 							path = 3,
-							interval_next = 777,
+							interval_next = 377,
+							max = 1
+						},
+						{
+							interval = 0,
+							max_same = 0,
+							fixed_sub_path = 1,
+							creep = "enemy_halloween_zombie",
+							path = 2,
+							interval_next = 28,
+							max = 1
+						},
+						{
+							interval = 0,
+							max_same = 0,
+							fixed_sub_path = 1,
+							creep = "enemy_halloween_zombie",
+							path = 3,
+							interval_next = 28,
+							max = 1
+						},
+						{
+							interval = 0,
+							max_same = 0,
+							fixed_sub_path = 1,
+							creep = "enemy_halloween_zombie",
+							path = 2,
+							interval_next = 28,
 							max = 1
 						},
 						{
@@ -548,7 +575,7 @@ return {
 							fixed_sub_path = 1,
 							creep = "enemy_wererat",
 							path = 2,
-							interval_next = 383,
+							interval_next = 192,
 							max = 0
 						},
 						{
@@ -576,7 +603,7 @@ return {
 							creep = "enemy_wererat",
 							path = 1,
 							interval_next = 197,
-							max = 0
+							max = 4
 						},
 						{
 							interval = 28,
@@ -584,7 +611,16 @@ return {
 							fixed_sub_path = 0,
 							creep = "enemy_giant_rat",
 							path = 1,
-							interval_next = 555,
+							interval_next = 116,
+							max = 4
+						},
+						{
+							interval = 28,
+							max_same = 0,
+							fixed_sub_path = 0,
+							creep = "enemy_giant_rat",
+							path = 1,
+							interval_next = 320,
 							max = 4
 						},
 						{
@@ -1314,6 +1350,42 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
+							creep = "enemy_skeleton_big",
+							path = 1,
+							interval_next = 42,
+							max = 1
+						},
+						{
+							interval = 0,
+							max_same = 0,
+							fixed_sub_path = 1,
+							creep = "enemy_skeleton_blackburn",
+							path = 2,
+							interval_next = 0,
+							max = 1
+						},
+						{
+							interval = 0,
+							max_same = 0,
+							fixed_sub_path = 1,
+							creep = "enemy_skeleton_blackburn",
+							path = 3,
+							interval_next = 42,
+							max = 1
+						},
+						{
+							interval = 0,
+							max_same = 0,
+							fixed_sub_path = 1,
+							creep = "enemy_skeleton_blackburn",
+							path = 2,
+							interval_next = 0,
+							max = 1
+						},
+						{
+							interval = 0,
+							max_same = 0,
+							fixed_sub_path = 1,
 							creep = "enemy_skeleton_blackburn",
 							path = 2,
 							interval_next = 0,
@@ -1465,6 +1537,42 @@ return {
 							max_same = 0,
 							fixed_sub_path = 1,
 							creep = "enemy_skeleton_big",
+							path = 1,
+							interval_next = 42,
+							max = 1
+						},
+						{
+							interval = 0,
+							max_same = 0,
+							fixed_sub_path = 1,
+							creep = "enemy_skeleton_blackburn",
+							path = 2,
+							interval_next = 0,
+							max = 1
+						},
+						{
+							interval = 0,
+							max_same = 0,
+							fixed_sub_path = 1,
+							creep = "enemy_skeleton_blackburn",
+							path = 3,
+							interval_next = 42,
+							max = 1
+						},
+						{
+							interval = 0,
+							max_same = 0,
+							fixed_sub_path = 1,
+							creep = "enemy_skeleton_blackburn",
+							path = 2,
+							interval_next = 0,
+							max = 1
+						},
+						{
+							interval = 0,
+							max_same = 0,
+							fixed_sub_path = 1,
+							creep = "enemy_skeleton_big",
 							path = 2,
 							interval_next = 42,
 							max = 1
@@ -1513,7 +1621,7 @@ return {
 							path = 3,
 							interval_next = 42,
 							max = 1
-						}
+						},
 					}
 				},
 				{
@@ -1587,7 +1695,16 @@ return {
 							path = 1,
 							interval_next = 141,
 							max = 4
-						}
+						},
+						{
+							interval = 28,
+							max_same = 0,
+							fixed_sub_path = 0,
+							creep = "enemy_giant_rat",
+							path = 1,
+							interval_next = 141,
+							max = 4
+						},
 					}
 				},
 				{
@@ -1769,7 +1886,7 @@ return {
 							creep = "enemy_spectral_knight",
 							path = 1,
 							interval_next = 777,
-							max = 1
+							max = 4
 						}
 					}
 				},
@@ -1829,7 +1946,7 @@ return {
 							creep = "enemy_spectral_knight",
 							path = 3,
 							interval_next = 0,
-							max = 1
+							max = 3
 						}
 					}
 				},
@@ -2531,7 +2648,7 @@ return {
 		},
 		{
 			--10
-			interval = 1000,
+			interval = 1250,
 			waves = {
 				{
 					delay = 0,
@@ -2814,7 +2931,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
+							creep = "enemy_fallen_knight",
 							path = 1,
 							interval_next = 141,
 							max = 1
@@ -2823,7 +2940,16 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
+							creep = "enemy_fallen_knight",
+							path = 2,
+							interval_next = 0,
+							max = 1
+						},
+						{
+							interval = 0,
+							max_same = 0,
+							fixed_sub_path = 1,
+							creep = "enemy_fallen_knight",
 							path = 2,
 							interval_next = 0,
 							max = 1
@@ -2847,7 +2973,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
+							creep = "enemy_fallen_knight",
 							path = 1,
 							interval_next = 360,
 							max = 0
@@ -2856,16 +2982,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
-							path = 1,
-							interval_next = 99,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
+							creep = "enemy_fallen_knight",
 							path = 2,
 							interval_next = 0,
 							max = 1
@@ -2874,7 +2991,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
+							creep = "enemy_fallen_knight",
 							path = 3,
 							interval_next = 56,
 							max = 1
@@ -2883,7 +3000,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
+							creep = "enemy_fallen_knight",
 							path = 1,
 							interval_next = 99,
 							max = 1
@@ -2892,7 +3009,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
+							creep = "enemy_fallen_knight",
 							path = 2,
 							interval_next = 0,
 							max = 1
@@ -2996,7 +3113,7 @@ return {
 		},
 		{
 			--11
-			interval = 1400,
+			interval = 1700,
 			waves = {
 				{
 					delay = 0,
@@ -3177,34 +3294,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
-							path = 2,
-							interval_next = 125,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
-							path = 3,
-							interval_next = 125,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
-							path = 2,
-							interval_next = 125,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
+							creep = "enemy_fallen_knight",
 							path = 3,
 							interval_next = 1200,
 							max = 1
@@ -3213,7 +3303,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
+							creep = "enemy_fallen_knight",
 							path = 1,
 							interval_next = 99,
 							max = 1
@@ -3246,7 +3336,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
+							creep = "enemy_fallen_knight",
 							path = 2,
 							interval_next = 777,
 							max = 0
@@ -3255,7 +3345,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
+							creep = "enemy_fallen_knight",
 							path = 2,
 							interval_next = 144,
 							max = 1
@@ -3264,7 +3354,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
+							creep = "enemy_fallen_knight",
 							path = 3,
 							interval_next = 144,
 							max = 1
@@ -3300,7 +3390,7 @@ return {
 							creep = "enemy_fallen_knight",
 							path = 2,
 							interval_next = 150,
-							max = 5
+							max = 3
 						},
 						{
 							interval = 28,
@@ -3309,7 +3399,7 @@ return {
 							creep = "enemy_fallen_knight",
 							path = 2,
 							interval_next = 150,
-							max = 5
+							max = 3
 						},
 						{
 							interval = 28,
@@ -3318,7 +3408,7 @@ return {
 							creep = "enemy_fallen_knight",
 							path = 2,
 							interval_next = 200,
-							max = 5
+							max = 3
 						},
 						{
 							interval = 28,
@@ -3327,7 +3417,7 @@ return {
 							creep = "enemy_fallen_knight",
 							path = 2,
 							interval_next = 777,
-							max = 5
+							max = 3
 						},
 						{
 							interval = 28,
@@ -3336,7 +3426,7 @@ return {
 							creep = "enemy_fallen_knight",
 							path = 2,
 							interval_next = 212,
-							max = 12
+							max = 6
 						}
 					}
 				},
@@ -3376,33 +3466,6 @@ return {
 							max_same = 0,
 							fixed_sub_path = 1,
 							creep = "enemy_abomination_strong",
-							path = 3,
-							interval_next = 56,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_abomination",
-							path = 2,
-							interval_next = 0,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_abomination_strong",
-							path = 3,
-							interval_next = 56,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr",
 							path = 3,
 							interval_next = 56,
 							max = 1
@@ -3462,33 +3525,6 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_abomination",
-							path = 2,
-							interval_next = 0,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_abomination_strong",
-							path = 3,
-							interval_next = 56,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr",
-							path = 3,
-							interval_next = 56,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
 							creep = "eb_10yr",
 							path = 3,
 							interval_next = 56,
@@ -3500,7 +3536,7 @@ return {
 		},
 		{
 			--12
-			interval = 1400,
+			interval = 1600,
 			waves = {
 				{
 					delay = 0,
@@ -3529,24 +3565,6 @@ return {
 							max_same = 0,
 							fixed_sub_path = 1,
 							creep = "enemy_fallen_knight",
-							path = 2,
-							interval_next = 100,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
-							path = 2,
-							interval_next = 1300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
 							path = 1,
 							interval_next = 100,
 							max = 1
@@ -3589,26 +3607,8 @@ return {
 							max_same = 0,
 							fixed_sub_path = 1,
 							creep = "enemy_fallen_knight",
-							path = 2,
-							interval_next = 0,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
 							path = 3,
-							interval_next = 100,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_fallen_knight_strong",
-							path = 2,
-							interval_next = 0,
+							interval_next = 1100,
 							max = 1
 						},
 						{
@@ -3649,24 +3649,6 @@ return {
 							max_same = 0,
 							fixed_sub_path = 1,
 							creep = "enemy_blade",
-							path = 1,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade",
-							path = 2,
-							interval_next = 100,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade",
 							path = 3,
 							interval_next = 300,
 							max = 1
@@ -3677,42 +3659,6 @@ return {
 							fixed_sub_path = 1,
 							creep = "enemy_blade",
 							path = 1,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 2,
 							interval_next = 300,
 							max = 1
 						},
@@ -3745,15 +3691,6 @@ return {
 							max_same = 0,
 							fixed_sub_path = 1,
 							creep = "enemy_blade",
-							path = 2,
-							interval_next = 100,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade",
 							path = 3,
 							interval_next = 300,
 							max = 1
@@ -3798,34 +3735,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
+							creep = "enemy_blade",
 							path = 2,
 							interval_next = 300,
 							max = 1
@@ -3886,7 +3796,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_witch",
+							creep = "enemy_witch_strong",
 							path = 1,
 							interval_next = 36,
 							max = 1
@@ -3905,33 +3815,6 @@ return {
 							max_same = 0,
 							fixed_sub_path = 1,
 							creep = "enemy_witch",
-							path = 3,
-							interval_next = 1200,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_witch_strong",
-							path = 1,
-							interval_next = 36,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_witch_strong",
-							path = 2,
-							interval_next = 0,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_witch_strong",
 							path = 3,
 							interval_next = 600,
 							max = 1
@@ -3940,7 +3823,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_witch_strong",
+							creep = "enemy_witch",
 							path = 1,
 							interval_next = 36,
 							max = 1
@@ -3949,7 +3832,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_witch_strong",
+							creep = "enemy_witch",
 							path = 2,
 							interval_next = 0,
 							max = 1
@@ -4085,42 +3968,6 @@ return {
 							max_same = 0,
 							fixed_sub_path = 1,
 							creep = "enemy_blade",
-							path = 1,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
 							path = 2,
 							interval_next = 300,
 							max = 1
@@ -4198,51 +4045,6 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_blade",
-							path = 1,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
 							creep = "enemy_blade_strong",
 							path = 3,
 							interval_next = 300,
@@ -4264,7 +4066,7 @@ return {
 		},
 		{
 			--13
-			interval = 1300,
+			interval = 1800,
 			waves = {
 				{
 					delay = 0,
@@ -4479,7 +4281,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_witch_strong",
+							creep = "enemy_witch",
 							path = 1,
 							interval_next = 56,
 							max = 1
@@ -4488,16 +4290,16 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_witch_strong",
+							creep = "enemy_witch",
 							path = 2,
 							interval_next = 0,
-							max = 1
+							max = 2
 						},
 						{
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_witch_strong",
+							creep = "enemy_witch",
 							path = 3,
 							interval_next = 212,
 							max = 1
@@ -4509,7 +4311,7 @@ return {
 							creep = "enemy_witch_strong",
 							path = 1,
 							interval_next = 56,
-							max = 4
+							max = 1
 						},
 						{
 							interval = 0,
@@ -4524,7 +4326,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_witch_strong",
+							creep = "enemy_witch",
 							path = 3,
 							interval_next = 355,
 							max = 1
@@ -4533,19 +4335,19 @@ return {
 							interval = 141,
 							max_same = 0,
 							fixed_sub_path = 0,
-							creep = "enemy_witch_strong",
+							creep = "enemy_witch",
 							path = 3,
 							interval_next = 355,
-							max = 6
+							max = 2
 						},
 						{
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_witch_strong",
+							creep = "enemy_witch",
 							path = 1,
 							interval_next = 71,
-							max = 1
+							max = 2
 						},
 						{
 							interval = 0,
@@ -4554,7 +4356,7 @@ return {
 							creep = "enemy_witch_strong",
 							path = 2,
 							interval_next = 0,
-							max = 4
+							max = 1
 						},
 						{
 							interval = 0,
@@ -4569,16 +4371,16 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_witch_strong",
+							creep = "enemy_witch",
 							path = 1,
 							interval_next = 200,
-							max = 1
+							max = 2
 						},
 						{
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_witch_strong",
+							creep = "enemy_witch",
 							path = 1,
 							interval_next = 71,
 							max = 1
@@ -4587,7 +4389,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_witch_strong",
+							creep = "enemy_witch",
 							path = 2,
 							interval_next = 0,
 							max = 1
@@ -4596,7 +4398,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_witch_strong",
+							creep = "enemy_witch",
 							path = 3,
 							interval_next = 71,
 							max = 1
@@ -4608,7 +4410,7 @@ return {
 							creep = "enemy_witch_strong",
 							path = 1,
 							interval_next = 424,
-							max = 4
+							max = 2
 						}
 					}
 				},
@@ -4676,66 +4478,12 @@ return {
 							interval_next = 300,
 							max = 1
 						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_alleria",
-							path = 2,
-							interval_next = 100,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr",
-							path = 2,
-							interval_next = 100,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_gerald",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
 					}
 				},
 				{
 					delay = 0,
 					path_index = 9,
 					spawns = {
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_alleria",
-							path = 2,
-							interval_next = 100,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr",
-							path = 2,
-							interval_next = 100,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_gerald",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
 						{
 							interval = 0,
 							max_same = 0,
@@ -4769,7 +4517,7 @@ return {
 		},
 		{
 			--14
-			interval = 1200,
+			interval = 2100,
 			waves = {
 				{
 					delay = 0,
@@ -4798,15 +4546,6 @@ return {
 							max_same = 0,
 							fixed_sub_path = 1,
 							creep = "eb_10yr",
-							path = 1,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr",
 							path = 2,
 							interval_next = 100,
 							max = 1
@@ -4816,60 +4555,6 @@ return {
 							max_same = 0,
 							fixed_sub_path = 1,
 							creep = "eb_10yr",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr",
-							path = 1,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr_strong",
 							path = 3,
 							interval_next = 300,
 							max = 1
@@ -4921,69 +4606,6 @@ return {
 							max_same = 0,
 							fixed_sub_path = 1,
 							creep = "eb_10yr",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr",
-							path = 1,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr",
-							path = 1,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr_strong",
 							path = 3,
 							interval_next = 300,
 							max = 1
@@ -5044,60 +4666,6 @@ return {
 							max_same = 0,
 							fixed_sub_path = 1,
 							creep = "eb_gerald",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_gerald",
-							path = 1,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_gerald_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_gerald_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_gerald_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_gerald_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_gerald_strong",
 							path = 3,
 							interval_next = 300,
 							max = 1
@@ -5168,51 +4736,6 @@ return {
 							fixed_sub_path = 1,
 							creep = "eb_gerald",
 							path = 1,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_gerald_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_gerald_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_gerald_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_gerald_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_gerald_strong",
-							path = 3,
 							interval_next = 300,
 							max = 1
 						},
@@ -5290,51 +4813,6 @@ return {
 							max_same = 0,
 							fixed_sub_path = 1,
 							creep = "enemy_blade_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
 							path = 3,
 							interval_next = 300,
 							max = 1
@@ -5396,51 +4874,6 @@ return {
 							fixed_sub_path = 1,
 							creep = "enemy_blade",
 							path = 1,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "enemy_blade_strong",
-							path = 3,
 							interval_next = 300,
 							max = 1
 						},
@@ -5517,51 +4950,6 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "eb_alleria_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_alleria_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_alleria_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_alleria_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_alleria_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
 							creep = "enemy_blade_strong",
 							path = 3,
 							interval_next = 300,
@@ -5631,51 +5019,6 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "eb_alleria_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_alleria_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_alleria_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_alleria_strong",
-							path = 2,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_alleria_strong",
-							path = 3,
-							interval_next = 300,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
 							creep = "enemy_blade_strong",
 							path = 3,
 							interval_next = 300,
@@ -5687,30 +5030,12 @@ return {
 		},
 		{
 			--15
-			interval = 1900,
+			interval = 2200,
 			waves = {
 				{
 					delay = 0,
 					path_index = 2,
 					spawns = {
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_blackburn",
-							path = 1,
-							interval_next = 400,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_blackburn",
-							path = 1,
-							interval_next = 400,
-							max = 1
-						},
 						{
 							interval = 0,
 							max_same = 0,
@@ -5726,24 +5051,6 @@ return {
 					delay = 0,
 					path_index = 4,
 					spawns = {
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_saurian_king",
-							path = 1,
-							interval_next = 400,
-							max = 1
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_saurian_king",
-							path = 1,
-							interval_next = 400,
-							max = 1
-						},
 						{
 							interval = 0,
 							max_same = 0,
@@ -5919,7 +5226,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_abomination_strong",
+							creep = "enemy_abomination",
 							path = 1,
 							interval_next = 3000,
 							max = 0
@@ -5970,7 +5277,7 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_abomination_strong",
+							creep = "enemy_abomination",
 							path = 1,
 							interval_next = 3000,
 							max = 0
@@ -6004,10 +5311,19 @@ return {
 							interval = 0,
 							max_same = 0,
 							fixed_sub_path = 1,
-							creep = "enemy_witch_strong",
+							creep = "enemy_witch",
 							path = 1,
 							interval_next = 1800,
 							max = 0
+						},
+						{
+							interval = 0,
+							max_same = 0,
+							fixed_sub_path = 1,
+							creep = "enemy_witch",
+							path = 1,
+							interval_next = 1800,
+							max = 4
 						},
 						{
 							interval = 212,
@@ -6016,7 +5332,7 @@ return {
 							creep = "enemy_witch_strong",
 							path = 1,
 							interval_next = 2200,
-							max = 6
+							max = 2
 						}
 					}
 				},
@@ -6083,24 +5399,6 @@ return {
 							max_same = 0,
 							fixed_sub_path = 1,
 							creep = "eb_alleria_strong",
-							path = 2,
-							interval_next = 300,
-							max = 3
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_alleria_strong",
-							path = 3,
-							interval_next = 300,
-							max = 3
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_gerald_strong",
 							path = 3,
 							interval_next = 300,
 							max = 3
@@ -6111,15 +5409,6 @@ return {
 							fixed_sub_path = 1,
 							creep = "eb_gerald_strong",
 							path = 2,
-							interval_next = 300,
-							max = 3
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr_strong",
-							path = 3,
 							interval_next = 300,
 							max = 3
 						},
@@ -6197,24 +5486,6 @@ return {
 							max_same = 0,
 							fixed_sub_path = 1,
 							creep = "eb_alleria_strong",
-							path = 2,
-							interval_next = 300,
-							max = 3
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_alleria_strong",
-							path = 3,
-							interval_next = 300,
-							max = 3
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_gerald_strong",
 							path = 3,
 							interval_next = 300,
 							max = 3
@@ -6225,15 +5496,6 @@ return {
 							fixed_sub_path = 1,
 							creep = "eb_gerald_strong",
 							path = 2,
-							interval_next = 300,
-							max = 3
-						},
-						{
-							interval = 0,
-							max_same = 0,
-							fixed_sub_path = 1,
-							creep = "eb_10yr_strong",
-							path = 3,
 							interval_next = 300,
 							max = 3
 						},

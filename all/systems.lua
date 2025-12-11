@@ -400,6 +400,8 @@ function sys.level:init(store)
 
 	if store.level_mode == GAME_MODE_CAMPAIGN then
 		store.lives = 20
+	elseif store.level_mode == GAME_MODE_HEROIC and store.level_idx == 87 then
+		store.lives = 20
 	elseif store.level_mode == GAME_MODE_HEROIC then
 		store.lives = 1
 	elseif store.level_mode == GAME_MODE_IRON then
@@ -1910,9 +1912,9 @@ function sys.health:on_update(dt, ts, store)
 							table.insert(store.damage_queue, sad)
 						end
 					end
-				end
+				end 
 
-				if h.dead or band(h.immune_to, d.damage_type) ~= 0 or h.ignore_damage or h.on_damage and not h.on_damage(e, store, d) then
+				if h.dead or (h.immune_to and band(h.immune_to, d.damage_type) ~= 0) or h.ignore_damage or h.on_damage and not h.on_damage(e, store, d) then
 					log_hp.paranoid("entity: (%s) %s dead:%s - ignoring damage: \n%s", e.id, e.template_name, e.health.dead, getfulldump(d))
 				else
 					local starting_hp = h.hp
@@ -2871,7 +2873,7 @@ function sys.render:on_insert(entity, store)
 				x = 0,
 				y = 0
 			}
-			f._draw_order = 100000 * (s.draw_order or i) + entity.id
+			f._draw_order = 100000 * (s.draw_order or i) + (entity.id or 0)
 			f.z = s.z or Z_OBJECTS
 			f.sort_y = s.sort_y
 			f.sort_y_offset = s.sort_y_offset
@@ -3155,7 +3157,7 @@ function sys.render:on_update(dt, ts, store)
 			end
 		end
 
-		if e.health_bar then
+		if e.health_bar and e.health.hp then
 			local hb = e.health_bar
 			local fb = hb.frames[1]
 			local ff = hb.frames[2]

@@ -756,7 +756,7 @@ a.damage_type = DAMAGE_TRUE
 a.reflected_damage_factor = 2
 a.hit_time = fts(5)
 a.sound = "HeroPaladinDeflect"
-tt.enemy.gold = 35
+tt.enemy.gold = 85
 tt.enemy.lives_cost = 2
 tt.main_script.update = function(this, store)
     this.health_bar.hidden = false
@@ -855,7 +855,7 @@ end
 
 tt = RT("eb_gerald_strong", "eb_gerald")
 tt.health.hp_max = 2000
-tt.enemy.gold = 100
+tt.enemy.gold = 255
 tt.enemy.lives_cost = 3
 
 tt = RT("mod_eb_gerald_courage", "modifier")
@@ -898,7 +898,7 @@ end
 tt.main_script.update = scripts.mod_track_target.update
 
 tt = inherit_from_hero_template("eb_alleria", "hero_alleria")
-tt.enemy.gold = 35
+tt.enemy.gold = 70
 tt.enemy.lives_cost = 2
 tt.melee.cooldown = 1
 a = tt.melee.attacks[1]
@@ -995,7 +995,7 @@ end
 
 tt = RT("eb_alleria_strong", "eb_alleria")
 tt.health.hp_max = 2000
-tt.enemy.gold = 100
+tt.enemy.gold = 210
 tt.enemy.lives_cost = 3
 a = tt.melee.attacks[1]
 a.damage_max = 102
@@ -1162,7 +1162,7 @@ a.damage_max = 56
 a.damage_min = 40
 a.cooldown = 7.2
 a.hits = 4
-tt.enemy.gold = 35
+tt.enemy.gold = 70
 tt.main_script.update = function(this, store)
     local brk, sta
     local bda = this.timed_attacks.list[1]
@@ -1341,7 +1341,7 @@ a = tt.melee.attacks[1]
 a.cooldown = 0.8
 a.damage_max = 95
 a.damage_min = 75
-tt.enemy.gold = 50
+tt.enemy.gold = 120
 
 tt = inherit_from_soldier_template("enemy_forest", "soldier_forest")
 tt.ranged.attacks[1].disabled = true
@@ -1857,12 +1857,12 @@ tt.main_script.update = function(this, store)
         coroutine.yield()
     end
 end
-tt.enemy.gold = 50
+tt.enemy.gold = 100
 tt.enemy.lives_cost = 3
 
 tt = RT("eb_10yr_strong", "eb_10yr")
 tt.health.hp_max = 2000
-tt.enemy.gold = 150
+tt.enemy.gold = 300
 tt.enemy.lives_cost = 5
 
 tt = RT("aura_eb_10yr_fireball", "aura_10yr_fireball")

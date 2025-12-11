@@ -1,5 +1,5 @@
 return {
-    cash = 800,
+    cash = 1104,
     live = 20,
     groups = {
         {    -- 第1波

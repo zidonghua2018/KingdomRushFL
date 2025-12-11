@@ -7347,7 +7347,7 @@ end
 function scripts.mod_teleport.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
-	if target and target.health and not target.health.dead and this._target_prev_bans ~= nil and (not this.max_times_applied or not target.enemy.counts.mod_teleport or target.enemy.counts.mod_teleport < this.max_times_applied) and (not this.jump_connection or P:get_next_pi(target.nav_path.pi)) then
+	if target and target.health and target.enemy and not target.health.dead and this._target_prev_bans ~= nil and (not this.max_times_applied or not target.enemy.counts.mod_teleport or target.enemy.counts.mod_teleport < this.max_times_applied) and (not this.jump_connection or P:get_next_pi(target.nav_path.pi)) then
 		target.health.ignore_damage = true
 
 		SU.stun_inc(target)

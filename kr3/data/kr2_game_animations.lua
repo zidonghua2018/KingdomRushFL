@@ -1435,6 +1435,11 @@ return {
 		prefix = "Stage9_Beast",
 		to = 46,
 	},
+	enemy_cannibal_volcano_walkingUp = {
+		from = 24,
+		prefix = "Stage9_Beast",
+		to = 46,
+	},
 	eb_dracula_bat_fly = {
 		from = 124,
 		prefix = "HalloweenBoss",

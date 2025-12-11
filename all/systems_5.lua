@@ -222,6 +222,8 @@ function sys.level:init(store)
 
 	if store.level_mode == GAME_MODE_CAMPAIGN then
 		store.lives = 20
+	elseif store.level_mode == GAME_MODE_HEROIC and store.level_idx == 87 then
+		store.lives = 20
 	elseif store.level_mode == GAME_MODE_HEROIC then
 		store.lives = 1
 	elseif store.level_mode == GAME_MODE_IRON then

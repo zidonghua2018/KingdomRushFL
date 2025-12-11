@@ -195,6 +195,9 @@ function simulation:insert_entity(e)
 		end
 	end
 
+	if (e.id == nil) then
+		e.id = #d.entities + 1
+	end
 	e.pending_removal = nil
 	d.entities[e.id] = e
 	d.entity_count = d.entity_count + 1

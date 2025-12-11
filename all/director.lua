@@ -668,6 +668,7 @@ function director:queue_load_item_named(name, force_reload)
 				"go_enemies_common",
 				"go_towers_44",
 				"go_towers_1-galaxy",
+				"rebbborn_fig",
 				"gui_common_123mod",
 				"go_towers_special",
 			 	"go_barrack_pirates",

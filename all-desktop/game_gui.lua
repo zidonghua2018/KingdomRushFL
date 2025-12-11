@@ -6761,9 +6761,10 @@ function PickView:on_down(button, x, y)
 				return false
 			else
 				local he = game_gui:entity_by_id(game_gui.heroes[rank].hero_id)
+				print(he.template_name)
 				local un = he.hero.skills.ultimate
 				local ut = E:get_template(un.controller_name)
-				--print(un.controller_name)
+				
 
 				if not ut.can_fire_fn or ut.can_fire_fn(ut, wx, wy, game_gui.game.store) then
 					game_gui.power_3:fire(wx, wy)
