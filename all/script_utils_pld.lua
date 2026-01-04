@@ -4491,6 +4491,8 @@ local function entity_casts_range_unit(store, this, a)
 					if not bullet.bullet.ignore_hit_offset and target.unit and target.unit.hit_offset then
 						local flipSign = target.render and target.render.sprites[1].flip_x and -1 or 1
 						bullet.bullet.to.x, bullet.bullet.to.y = pred_pos.x + target.unit.hit_offset.x * flipSign, pred_pos.y + target.unit.hit_offset.y
+						bullet.using_hit_offset_y = true
+						bullet.bullet.target_unit_hit_offset_y = target.unit.hit_offset.y
 					end
 					local start_offset = a.bullet_start_offset[ai]
 					local flipSign = af and -1 or 1

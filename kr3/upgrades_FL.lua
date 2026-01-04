@@ -165,10 +165,10 @@ end
 function upgrades_FL:enhance1()
 --101 游侠
 	T("tower_ranger").powers.poison.price_base = 250
-	T("tower_ranger").powers.poison.price_inc = 150
-	T("mod_ranger_poison").dps.damage_inc = 8
-	T("mod_ranger_poison").dps.damage_max = 4
-	T("mod_ranger_poison").dps.damage_min = 4
+	T("tower_ranger").powers.poison.price_inc = 125
+	T("mod_ranger_poison").dps.damage_inc = 7
+	T("mod_ranger_poison").dps.damage_max = 8
+	T("mod_ranger_poison").dps.damage_min = 8
 	T("aura_ranger_thorn").aura.max_times = 99
 	T("mod_thorn").max_times_applied = 99
 	--T("mod_thorn").damage_min = 50
@@ -193,8 +193,8 @@ function upgrades_FL:enhance1()
 	T("tower_paladin").powers.holystrike.price_base = 145
 	T("tower_paladin").powers.holystrike.price_inc = 100
 	T("soldier_paladin").melee.attacks[3].damage_type = DAMAGE_TRUE
-	T("soldier_paladin").melee.attacks[3].damage_radius = 65
-	T("soldier_paladin").melee.attacks[3].chance = 0.15
+	T("soldier_paladin").melee.attacks[3].damage_radius = 75
+	T("soldier_paladin").melee.attacks[3].chance = 0.2
 	
 --104 蛮子
 	T("tower_barbarian").powers.dual.price_base = 100
@@ -203,20 +203,20 @@ function upgrades_FL:enhance1()
 
 	T("soldier_barbarian").health.hp_max = 375
 	--T("soldier_barbarian").health.dead_lifetime = 9
-	T("soldier_barbarian").ranged.attacks[1].cooldown = 2 + fts(10)
+	T("soldier_barbarian").ranged.attacks[1].cooldown = 2
 	T("soldier_barbarian").melee.attacks[1].damage_inc = 16
-	T("soldier_barbarian").melee.attacks[2].chance = 0.09
-	T("soldier_barbarian").melee.attacks[2].chance_inc = 0.07
+	T("soldier_barbarian").melee.attacks[2].chance = 0.1
+	T("soldier_barbarian").melee.attacks[2].chance_inc = 0.08
 	T("soldier_barbarian").melee.attacks[2].damage_radius = 65
 --105 奥术
-	T("mod_ray_arcane").dps.damage_min = 80
-	T("mod_ray_arcane").dps.damage_max = 156
+	T("mod_ray_arcane").dps.damage_min = 83
+	T("mod_ray_arcane").dps.damage_max = 163
 	T("mod_teleport_arcane").nodes_offset_max = -24
 	T("mod_teleport_arcane").nodes_offset_min = -33
 	T("mod_teleport_arcane").max_times_applied = 5
 	T("tower_arcane_wizard").powers.disintegrate.cooldown_base = 28
 	T("tower_arcane_wizard").powers.disintegrate.cooldown_inc = -4
-	T("tower_arcane_wizard").powers.disintegrate.price_base = 400
+	T("tower_arcane_wizard").powers.disintegrate.price_base = 375
 	T("tower_arcane_wizard").powers.disintegrate.price_inc = 100
 	T("tower_arcane_wizard").main_script.update = scripts.tower_arcane_wizard99.update
 --106 黄法
@@ -266,7 +266,7 @@ function upgrades_FL:enhance2()
 	T("tower_totem").powers.silence.price_inc = 70
 	T("totem_weakness").aura.radius = 115.5
 	T("mod_weakness_totem").inflicted_damage_factor = 0.4
-	T("mod_weakness_totem").received_damage_factor = 1.8
+	T("mod_weakness_totem").received_damage_factor = 1.65
 --202 弩堡
 	T("tower_crossbow").attacks.list[2].shots = 1
 	T("tower_crossbow").attacks.list[2].shots_inc = 5
@@ -353,11 +353,13 @@ function upgrades_FL:enhance3()
 	T("mod_arrow_silver_mark").received_damage_factor = 2.5
 
 --303 红兵
+	T("tower_blade").tower.price = 248
 	T("tower_blade").powers.swirling.price_base = 300
-	T("tower_blade").powers.perfect_parry.price_base = 115
-	T("tower_blade").powers.perfect_parry.price_inc = 205
-	--T("soldier_blade").health.dead_lifetime = 12
+	T("tower_blade").powers.perfect_parry.price_base = 175
+	T("tower_blade").powers.perfect_parry.price_inc = 105
+	T("soldier_blade").health.dead_lifetime = 13
 	T("soldier_blade").health.hp_max = 225
+	--T("soldier_blade").health.dead_lifetime = 13
 	T("soldier_blade").dodge.counter_attack.damage_max = 3
 	T("soldier_blade").dodge.counter_attack.damage_min = 3
 	T("soldier_blade").dodge.counter_attack.damage_inc = 3
@@ -366,8 +368,9 @@ function upgrades_FL:enhance3()
 	T("soldier_blade").powers.blade_dance.damage_min = {20,35,50}
 	T("soldier_blade").timed_attacks.list[1].vis_bans = bor(F_BOSS, F_WATER)
 --304 绿兵
-	T("soldier_forest").health.hp_max = 360
+	T("soldier_forest").health.hp_max = 350
 	T("tower_forest").barrack.max_soldiers = 3
+	T("tower_forest").tower.price = 270
 	T("tower_forest").powers.circle.price_base = 185
 	T("tower_forest").powers.circle.price_inc = 120
 	T("tower_forest").powers.eerie.price_base = 135
@@ -384,6 +387,7 @@ function upgrades_FL:enhance3()
 	T("bolt_wild_magus").bullet.damage_min = 9
 	T("tower_wild_magus").powers.ward.price_base = 120
 	T("tower_wild_magus").powers.ward.price_inc = 90
+	T("tower_wild_magus").powers.eldritch.cooldowns = {28,22.5,17}
 	T("mod_eldritch").damage_levels = {144,324,468}
 	T("bolt_elves_3").bullet.damage_min = 22
 	T("bolt_elves_3").bullet.damage_max = 45
@@ -613,7 +617,13 @@ function upgrades_FL:enhance4()
 --413 红钻
 	T("tower_blazing_watcher_lvl4").powers.disintegrate.price_base = 212
 	T("tower_blazing_watcher_lvl4").powers.disintegrate.price_inc = 106
-	T("tower_blazing_watcher_lvl4").powers.disintegrate.cooldown = {25,21,17}
+	T("tower_blazing_watcher_lvl4").powers.disintegrate.cooldown = {25,20,15}
+	T("tower_blazing_watcher_lvl4").powers.disintegrate.cooldown = {25,20,15}
+	T("tower_blazing_watcher_lvl4").attack_stage_max = 10
+	T("tower_blazing_watcher_lvl1").attacks.extra_range = 30
+	T("tower_blazing_watcher_lvl2").attacks.extra_range = 35
+	T("tower_blazing_watcher_lvl3").attacks.extra_range = 40
+	T("tower_blazing_watcher_lvl4").attacks.extra_range = 45
 --414 腐森
 	--T("mod_tower_rotten_forest_burst_damage").dps.damage_type = DAMAGE_EXPLOSION
 	T("mod_rf_thorn").damage_min = 25
@@ -692,7 +702,7 @@ function upgrades_FL:enhance5()
 	T("tower_paladin_covenant_lvl2").tower.price = 90
 	T("tower_paladin_covenant_lvl3").tower.price = 120
 	T("tower_paladin_covenant_lvl4").tower.price = 150
-	T("tower_paladin_covenant_lvl4").powers.lead.price_base = 180
+	T("tower_paladin_covenant_lvl4").powers.lead.price_base = 175
 	T("tower_paladin_covenant_lvl4").powers.healing_prayer.price_base = 120
 	T("tower_paladin_covenant_lvl4").powers.healing_prayer.price_inc = 105
 	T("tower_paladin_covenant_soldier_lvl4").powers.healing_prayer.cooldown = {27,21,15}
@@ -843,11 +853,15 @@ function upgrades_FL:enhance5()
 --516 暮弓
 	T("tower_dark_elf_lvl4").powers.skill_buff.damage_min = {2}
 	T("tower_dark_elf_lvl4").powers.skill_buff.damage_max = {4}
+	T("tower_dark_elf_lvl4").powers.skill_buff.price_base = 350
 	T("soldier_tower_dark_elf").dodge.chance = 0.68
-	T("bullet_tower_dark_elf_lvl1").bullet.reduce_armor = 0.2
-	T("bullet_tower_dark_elf_lvl2").bullet.reduce_armor = 0.25
-	T("bullet_tower_dark_elf_lvl3").bullet.reduce_armor = 0.3
-	T("bullet_tower_dark_elf_lvl4").bullet.reduce_armor = 0.35
+	T("bullet_tower_dark_elf_lvl1").bullet.reduce_armor = 0.15
+	T("bullet_tower_dark_elf_lvl2").bullet.reduce_armor = 0.2
+	T("bullet_tower_dark_elf_lvl3").bullet.reduce_armor = 0.25
+	T("bullet_tower_dark_elf_lvl4").bullet.reduce_armor = 0.3
+	T("bullet_tower_dark_elf_lvl4").bullet.extra_reduce_armor = 0.4
+	T("bullet_tower_dark_elf_lvl4").bullet.extra_damage_factor = 1.6
+	T("tower_dark_elf_lvl4").main_script.update = scripts.tower_dark_elf99.update
 --517 蛤蟆
 	--EMPTY BLOCK
 	T("tower_hermit_toad_lvl4").powers.jump.price_base = 120
@@ -868,11 +882,11 @@ function upgrades_FL:enhance5()
 	T("bullet_tower_pandas_air_soldier_special_lvl1").bullet.damage_max = 35
 	T("bullet_tower_pandas_air_soldier_special_lvl2").bullet.damage_min = 56
 	T("bullet_tower_pandas_air_soldier_special_lvl2").bullet.damage_max = 70
-	T("soldier_tower_pandas_red_lvl4").powers.teleport.damage_min = {3,24}
-	T("soldier_tower_pandas_red_lvl4").powers.teleport.damage_max = {6,36}
-	T("soldier_tower_pandas_red_lvl4").powers.teleport.nodes_offset_min = {-20,-28}
-	T("soldier_tower_pandas_red_lvl4").powers.teleport.nodes_offset_max = {-24,-32}
-	T("soldier_tower_pandas_blue_lvl4").powers.thunder.cooldown = {15,9}
+	--T("soldier_tower_pandas_red_lvl4").powers.teleport.damage_min = {3,24}
+	--T("soldier_tower_pandas_red_lvl4").powers.teleport.damage_max = {6,36}
+	--T("soldier_tower_pandas_red_lvl4").powers.teleport.nodes_offset_min = {-20,-28}
+	--T("soldier_tower_pandas_red_lvl4").powers.teleport.nodes_offset_max = {-24,-32}
+	--T("soldier_tower_pandas_blue_lvl4").powers.thunder.cooldown = {15,9}
 end
 
 --双英雄模式前3代英雄需要削弱

@@ -194,7 +194,6 @@ function GU.incoming_wave_report(group, path_index, game_mode)
 
 	for k, v in pairs(creep_count) do
 		if v > 0 then
-			print(k)
 			local tpl = E:get_template(k)
 			local i18n_key = (tpl.info.i18n_key or string.upper(k)) .. "_NAME"
 

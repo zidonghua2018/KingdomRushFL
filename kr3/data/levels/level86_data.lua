@@ -492,7 +492,7 @@ return {
             y = 303
         },
         ["tower.holder_id"] = "23",
-        ["tower.terrain_style"] = 6,
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "23"
     }, {
         template = "tower_holder_elven_woods",
@@ -519,7 +519,7 @@ return {
             y = 98
         },
         ["tower.holder_id"] = "19",
-        ["tower.terrain_style"] = 6,
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "19"
     }, {
         template = "tower_holder_elven_woods",
@@ -533,7 +533,7 @@ return {
             y = 243
         },
         ["tower.holder_id"] = "17",
-        ["tower.terrain_style"] = 6,
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "17"
     }, {
         template = "tower_holder_elven_woods",
@@ -547,7 +547,7 @@ return {
             y = 300
         },
         ["tower.holder_id"] = "10",
-        ["tower.terrain_style"] = 6,
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "10"
     }, {
         template = "tower_holder_elven_woods",
@@ -561,7 +561,7 @@ return {
             y = 147
         },
         ["tower.holder_id"] = "18",
-        ["tower.terrain_style"] = 6,
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "18"
     }, {
         template = "tower_holder_elven_woods",
@@ -575,7 +575,7 @@ return {
             y = 154
         },
         ["tower.holder_id"] = "15",
-        ["tower.terrain_style"] = 6,
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "15"
     }, {
         template = "tower_holder_elven_woods",
@@ -589,7 +589,7 @@ return {
             y = 346
         },
         ["tower.holder_id"] = "22",
-        ["tower.terrain_style"] = 6,
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "22"
     }, {
         template = "tower_holder_elven_woods",
@@ -629,7 +629,7 @@ return {
             y = 300
         },
         ["tower.holder_id"] = "11",
-        ["tower.terrain_style"] = 6,
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "11"
     }, {
         template = "tower_holder_elven_woods",
@@ -643,7 +643,7 @@ return {
             y = 488
         },
         ["tower.holder_id"] = "16",
-        ["tower.terrain_style"] = 6,
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "16"
     }, {
         template = "tower_holder_elven_woods",
@@ -657,7 +657,7 @@ return {
             y = 346
         },
         ["tower.holder_id"] = "13",
-        ["tower.terrain_style"] = 6,
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "13"
     }, {
         template = "tower_holder_elven_woods",
@@ -671,7 +671,7 @@ return {
             y = 346
         },
         ["tower.holder_id"] = "14",
-        ["tower.terrain_style"] = 6,
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "14"
     }, {
         template = "tower_holder_elven_woods",
@@ -685,7 +685,7 @@ return {
             y = 437
         },
         ["tower.holder_id"] = "21",
-        ["tower.terrain_style"] = 6,
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "21"
     }, {
         template = "tower_holder_elven_woods",
@@ -712,7 +712,7 @@ return {
             y = 452
         },
         ["tower.holder_id"] = "12",
-        ["tower.terrain_style"] = 6,
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "12"
     }},
     invalid_path_ranges = {},
@@ -764,7 +764,7 @@ return {
      "MetropolisAmbienceSounds", "ElvesLevelFiveSounds", "ElvesPlants",
                        "ElvesCreepHyena", "ElvesRoadRunnerSpecialSounds", "ElvesLevelHRSounds", "ElvesCreepEvoker",
                        "ElvesScourger", "ElvesCreepAvenger", "BlackburnSounds","hero_alleria","ElvesCreepMountedAvenger","ElvesCreepGolem"},
-    required_textures = {"go_enemies_elven_woods","go_hero_alleria", "go_enemies_blackburn",
+    required_textures = {"go_enemies_elven_woods","go_hero_alleria", "go_enemies_blackburn","go_enemies_halloween",
     "go_stage05",--3代5关，53
      "go_stage86_bg",
                          "go_stages_elven_woods", "go_enemies_hulking_rage", "go_enemies_ancient_metropolis","go_enemies_bittering_rancor"},

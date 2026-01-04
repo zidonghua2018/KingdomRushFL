@@ -48,5 +48,6 @@ z["Frontier"] = "Frontier"
 z["Origin"] = "Origin"
 z["SETTINGS_MAX_THREADS"] = "Max threads"
 z["TOWER_G45_PICK"] = "pick=%i"
+z["MAGIC_ARMOR_DESC"] = "magicarmor"
 
 return z

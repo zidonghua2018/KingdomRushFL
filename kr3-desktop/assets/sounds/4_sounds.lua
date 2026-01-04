@@ -1670,7 +1670,199 @@ return {
 			"kr4_hero_beresad_hellfire_firerain.ogg",
 		}
 	},
-	
+--幽灵船
+	hero_lucerna_taunt_1 = {
+		source_group = "TAUNTS",
+		gain = 0.4,
+		files = {
+			"kr_voice_lucerna_select01_a.ogg",
+		}
+	},
+	group_lucerna_taunt = {
+		source_group = "TAUNTS",
+		ignore = 1,
+		mode = "sequence",
+		gain = 0.4,
+		files = {
+			"kr_voice_lucerna_select01_a.ogg",
+            "kr_voice_lucerna_select02_c.ogg",
+            "kr_voice_lucerna_select03_d.ogg",
+            "kr_voice_lucerna_select04_a.ogg",
+		}
+	},
+	hero_lucerna_death = {
+		source_group = "TAUNTS",
+		gain = 0.4,
+		files = {
+			"kr_voice_lucerna_death_b.ogg",
+		}
+	},
+	hero_lucerna_respawn = {
+		source_group = "TAUNTS",
+		gain = 0.4,
+		files = {
+			"krv_sfx_hero_lucerna_respawn_v1.ogg",
+		}
+	},
+	hero_lucerna_teleport = {
+		source_group = "SFX",
+		gain = 0.5,
+		files = {
+			"krv_sfx_hero_lucerna_teleport_v1.ogg",
+		}
+	},
+	hero_lucerna_attack_impact = {
+		source_group = "SFX",
+		gain = 0.5,
+		mode = "sequence",
+		files = {
+			"krv_sfx_hero_lucerna_attack_var1_v1.ogg",
+            "krv_sfx_hero_lucerna_attack_var2_v1.ogg",
+            "krv_sfx_hero_lucerna_attack_var3_v1.ogg",
+		}
+	},
+	hero_lucerna_summon = {
+		source_group = "SFX",
+		gain = 0.5,
+		mode = "sequence",
+		files = {
+			"krv_sfx_hero_lucerna_ghost_summon_op1_v1.ogg",
+            "krv_sfx_hero_lucerna_ghost_summon_op2_v1.ogg",
+            "krv_sfx_hero_lucerna_ghost_summon_op3_v1.ogg",
+            "krv_sfx_hero_lucerna_ghost_summon_op4_v1.ogg",
+		}
+	},
+	hero_lucerna_scare = {
+		source_group = "SFX",
+		gain = 0.5,
+		mode = "sequence",
+		files = {
+			"krv_sfx_hero_lucerna_scare_op1_v1.ogg",
+            "krv_sfx_hero_lucerna_scare_op2_v1.ogg",
+		}
+	},
+	hero_lucerna_ultimate_in = {
+		source_group = "SFX",
+		gain = 0.5,
+		files = {
+			"krv_sfx_hero_lucerna_ultimate_flag_totem-In_v1.ogg",
+		}
+	},
+	hero_lucerna_ultimate_out = {
+		source_group = "SFX",
+		gain = 0.5,
+		files = {
+			"krv_sfx_hero_lucerna_ultimate_flag_totem-Out_1.ogg",
+		}
+	},
+	hero_lucerna_ultimate_flagcast = {
+		source_group = "SFX",
+		gain = 0.5,
+		mode = "sequence",
+		files = {
+			"krv_sfx_hero_lucerna_ultimate_flag_ghostCast_var1_v1.ogg",
+            "krv_sfx_hero_lucerna_ultimate_flag_ghostCast_var2_v1.ogg",
+            "krv_sfx_hero_lucerna_ultimate_flag_ghostCast_var3_v1.ogg",
+		}
+	},
+	hero_lucerna_possession_hit = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_fallen_ones_spirit_mausoleum_possession_hit.ogg"
+		}
+	},
+--坦克      
+	hero_tank_taunt_1 = {
+		source_group = "TAUNTS",
+		gain = 0.4,
+		files = {
+			"kr4_hero_tank_taunt_1.ogg",
+		}
+	},
+	group_tank_taunt = {
+		source_group = "TAUNTS",
+		ignore = 1,
+		mode = "sequence",
+		gain = 0.4,
+		files = {
+			"kr4_hero_tank_taunt_1.ogg",
+            "kr4_hero_tank_taunt_2.ogg",
+            "kr4_hero_tank_taunt_3.ogg",
+            "kr4_hero_tank_taunt_4.ogg",
+		}
+	},
+	hero_tank_death = {
+		source_group = "TAUNTS",
+		gain = 0.4,
+		files = {
+			"kr4_hero_tank_taunt_death.ogg",
+		}
+	},
+	hero_tank_respawn = {
+		source_group = "TAUNTS",
+		gain = 0.4,
+		files = {
+			"kr4_hero_tank_taunt_1.ogg",
+		}
+	},
+	hero_tank_ultimate = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_tank_airstrike_bomb.ogg",
+		}
+	},
+	hero_tank_ultimate_flame = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_tank_airstrike_flames.ogg",
+		}
+	},
+	hero_tank_groundslam_lift = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_tank_groundslam_lift.ogg",
+		}
+	},
+	hero_tank_groundslam_impact = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_tank_groundslam_impact.ogg",
+		}
+	}, 
+	hero_tank_scorching_loop = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_tank_scorching_loop.ogg",
+		}
+	},
+	hero_tank_scorching_loopstart = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_tank_scorching_loopstart.ogg",
+		}
+	},
+	hero_tank_scorching_loopend = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_tank_scorching_loopend.ogg",
+		}
+	},
 --其他
 	dark_army_blazing_mage_attack_loopstart = {
 		source_group = "SFX",

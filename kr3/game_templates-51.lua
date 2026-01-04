@@ -1132,7 +1132,27 @@ tt.attacks.list[7].entities = {
 	}
 }
 
-for i = 8, 19 do
+tt.attacks.list[8].price = 150
+tt.attacks.list[8].entities = {
+	{
+		1,
+		{
+		"hero_lucerna_2"
+		}
+	}
+}
+
+tt.attacks.list[9].price = 150
+tt.attacks.list[9].entities = {
+	{
+		1,
+		{
+		"hero_tank_2"
+		}
+	}
+}
+
+for i = 10, 19 do
 	tt.attacks.list[i] = nil
 end
 
@@ -1285,6 +1305,20 @@ for i, aa in pairs(tt.hero.skills) do
 end
 
 tt = E:register_t("hero_beresad_2", "hero_beresad")
+tt.hero_insert = false
+tt.hero.level = 10
+for i, aa in pairs(tt.hero.skills) do
+	aa.level = 3
+end
+
+tt = E:register_t("hero_lucerna_2", "hero_lucerna")
+tt.hero_insert = false
+tt.hero.level = 10
+for i, aa in pairs(tt.hero.skills) do
+	aa.level = 3
+end
+
+tt = E:register_t("hero_tank_2", "hero_tank")
 tt.hero_insert = false
 tt.hero.level = 10
 for i, aa in pairs(tt.hero.skills) do

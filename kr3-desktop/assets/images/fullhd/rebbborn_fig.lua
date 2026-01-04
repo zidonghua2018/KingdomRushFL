@@ -768,9 +768,9 @@ return {
 		},
 		alias = {}
 	},
-    ---重生
+---重生
 	info_portraits_sc_0094 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -794,7 +794,7 @@ return {
 		alias = {}
 	},
 	info_portraits_sc_0095 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -818,7 +818,7 @@ return {
 		alias = {}
 	},
 	info_portraits_sc_0096 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -842,7 +842,7 @@ return {
 		alias = {}
 	},
 	info_portraits_sc_0097 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -866,7 +866,7 @@ return {
 		alias = {}
 	},
 	info_portraits_sc_0098 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -890,7 +890,7 @@ return {
 		alias = {}
 	},
 	info_portraits_sc_0099 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -914,7 +914,7 @@ return {
 		alias = {}
 	},
 	info_portraits_sc_0100 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -938,7 +938,7 @@ return {
 		alias = {}
 	},
 	info_portraits_sc_0101 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -962,7 +962,7 @@ return {
 		alias = {}
 	},
 	info_portraits_sc_0102 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -986,7 +986,7 @@ return {
 		alias = {}
 	},
 	info_portraits_towers_2223 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -1010,7 +1010,7 @@ return {
 		alias = {}
 	},
 	info_portraits_towers_2224 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -1034,7 +1034,7 @@ return {
 		alias = {}
 	},
 	info_portraits_soldiers_1346 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -1058,7 +1058,7 @@ return {
 		alias = {}
 	},
 	info_portraits_soldiers_1347 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -1082,7 +1082,7 @@ return {
 		alias = {}
 	},
 	heroPortrait_portraits_0014 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -1106,7 +1106,7 @@ return {
 		alias = {}
 	},
 	info_portraits_hero_0016 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -1130,7 +1130,7 @@ return {
 		alias = {}
 	},
 	heroroom_thumbs__off_0017 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -1153,9 +1153,8 @@ return {
 		},
 		alias = {}
 	},
-	--[[
 	mapButtons_portrait_hero_0015 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -1178,9 +1177,8 @@ return {
 		},
 		alias = {}
 	},
-	]]
 	heroroom_thumbs_0017 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -1204,7 +1202,7 @@ return {
 		alias = {}
 	},	
 	heroPortrait_portraits_0015 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -1228,7 +1226,7 @@ return {
 		alias = {}
 	},
 	info_portraits_hero_0017 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -1251,8 +1249,9 @@ return {
 		},
 		alias = {}
 	},
+--[[
 	heroroom_thumbs__off_0018 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -1275,9 +1274,8 @@ return {
 		},
 		alias = {}
 	},
-	--[[
 	mapButtons_portrait_hero_0016 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -1300,9 +1298,8 @@ return {
 		},
 		alias = {}
 	},
-	]]
 	heroroom_thumbs_0018 = {
-		a_name = "encyclopedia_bloodlust-1.dds",
+		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
 			88,
 			88
@@ -1325,5 +1322,6 @@ return {
 		},
 		alias = {}
 	}, 
-
+]]--	
+---      
 }

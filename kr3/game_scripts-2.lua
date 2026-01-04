@@ -5171,7 +5171,7 @@ function scripts.bomb_pirate_cannon.update(this, store, script)
 	queue_insert(store, decal)
 	queue_remove(store, this)
 end
----
+
 scripts.tower_pirate_camp = {}
 
 function scripts.tower_pirate_camp.get_info(this)
@@ -19552,109 +19552,6 @@ function scripts.hero_vampiress.update(this, store, script)
 		end
 
 		::label_458_0::
-
-		coroutine.yield()
-	end
-end
----海盗大炮
-scripts.tower_pirate_camp_re = {}
-
-function scripts.tower_pirate_camp_re.get_info(this)
-	local b = E:get_template("bomb_pirate_camp")
-	local min, max = b.bullet.damage_min, b.bullet.damage_max
-	
-	min, max = math.ceil(min * this.tower.damage_factor), math.ceil(max * this.tower.damage_factor)
-	
-	local cooldown = 0
-	local range = 9999
-	
-	return {
-		desc = "TOWER_PIRATE_CAMP_DESCRIPTION",
-		type = STATS_TYPE_TEXT,
-		damage_min = min,
-		damage_max = max,
-		range = range,
-		cooldown = cooldown
-		
-	}
-end
-
-function scripts.tower_pirate_camp_re.can_select_point(this, x, y)
-	return P:valid_node_nearby(x, y)
-end
-
-function scripts.tower_pirate_camp_re.update(this, store, script)
-	local cannon_sids = {
-		5,
-		6,
-		7
-	}
-	local sign_cannon = this.render.sprites[3]
-	local sign_tap_the_road = this.render.sprites[4]
-	local sign_cannon_last_ts = store.tick_ts
-	local pirate_drink_ts = store.tick_ts
-	local pirate_drink_time = math.random(fts(100), fts(300))
-
-	local function fire_animation(id)
-		U.animation_start(this, "shoot", nil, store.tick_ts, false, cannon_sids[id])
-	end
-
-	local function add_bullet(id, dest)
-		local a = this.attacks.list[1]
-		local b = E:create_entity("bomb_pirate_camp")
-
-		b.pos = V.v(dest.x + U.random_sign() * math.random(a.min_error, a.max_error), dest.y + U.random_sign() * math.random(a.min_error, a.max_error))
-		b.bullet.to = b.pos
-
-		queue_insert(store, b)
-	end
-
-	while true do
-		if pirate_drink_time < store.tick_ts - pirate_drink_ts then
-			U.animation_start(this, "drink", nil, store.tick_ts, false, 8)
-
-			pirate_drink_ts = store.tick_ts
-		end
-
-		if this.user_selection.new_pos then
-			local shots = this.user_selection.arg
-			local dest = this.user_selection.new_pos
-
-			this.user_selection.new_pos = nil
-
-			local attack = this.attacks.list[shots]
-
-			store.player_gold = store.player_gold - attack.price
-
-			local decal = E:create_entity("decal_tower_pirate_camp_target")
-
-			decal.pos = V.vclone(dest)
-			decal.render.sprites[1].ts = store.tick_ts
-
-			queue_insert(store, decal)
-
-			local start_ts = store.tick_ts
-
-			for i = 1, 3 do
-				if i <= shots then
-					fire_animation(i)
-					U.y_wait(store, fts(5))
-					S:queue("PirateBombShootSound")
-				end
-			end
-
-			U.y_wait(store, fts(30) - (store.tick_ts - start_ts))
-
-			for i = 1, 3 do
-				if i <= shots then
-					add_bullet(i, dest)
-				end
-
-				U.y_wait(store, fts(6))
-			end
-
-			U.y_animation_wait(this, cannon_sids[1])
-		end
 
 		coroutine.yield()
 	end

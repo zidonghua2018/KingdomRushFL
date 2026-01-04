@@ -25668,6 +25668,7 @@ function scripts.bolt_dragon_bone_basic_attack.update(this, store, script)
 	local function explosion(r, damage_min, damage_max, dty)
 		local target_bans = bit.bor(F_FLYING)
 		local target_pos = V.vclone(this.pos)
+		local damage_id_list = {}
 
 		if is_flying then
 			target_bans = 0
@@ -25689,6 +25690,7 @@ function scripts.bolt_dragon_bone_basic_attack.update(this, store, script)
 				d.source_id = b.source_id
 				d.xp_gain_factor = b.xp_gain_factor
 				d.xp_dest_id = b.source_id
+				table.insert(damage_id_list, target.id)
 
 				queue_damage(store, d)
 
@@ -25702,6 +25704,29 @@ function scripts.bolt_dragon_bone_basic_attack.update(this, store, script)
 					queue_insert(store, mod)
 				end
 			end
+		end
+		if not table.contains(damage_id_list, b.target_id) then
+			local d = E:create_entity("damage")
+
+				d.value = math.random(damage_min, damage_max)
+				d.damage_type = dty
+				d.target_id = target.id
+				d.source_id = b.source_id
+				d.xp_gain_factor = b.xp_gain_factor
+				d.xp_dest_id = b.source_id
+				table.insert(damage_id_list, target.id)
+
+				queue_damage(store, d)
+
+				if b.mod then
+					local mod = E:create_entity(b.mod)
+
+					mod.modifier.target_id = target.id
+					mod.modifier.source_id = b.source_id
+					mod.xp_dest_id = b.source_id
+
+					queue_insert(store, mod)
+				end
 		end
 	end
 

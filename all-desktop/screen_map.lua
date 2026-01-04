@@ -184,6 +184,10 @@ local function get_hero_stats(p)
 	out.health = info.hp_max
 	out.damage = info.damage_min .. " - " .. info.damage_max
 	out.armor = GU.armor_value_desc(info.armor)
+	out.magic_armor = GU.armor_value_desc(info.magic_armor)
+	if info.armor == 0 and info.magic_armor and info.magic_armor >= 0.01 then
+		out.armor = out.magic_armor.._("MAGIC_ARMOR_DESC")
+	end
 	out.attack_rate = _(string.upper(out.name_i18n) .. "_ATTACKRATE")
 	out.damage_icon = h.info.damage_icon or 1
 	out.skills = h.hero.skills
@@ -2058,12 +2062,12 @@ function MapView:show_flags(num)
 	local function level_rank(rank, gen)
 		local level
 		local count = 0
-		if gen == 3 then 
-			return rank+jnum
-		end
-		if gen == 2 and rank >= 27 then
-			return rank+jnum
-		end
+		--if gen == 3 then 
+		--	return rank+jnum
+		--end
+		--if gen == 2 and rank >= 27 then
+		--	return rank+jnum
+		--end
 		for i = 1, #_level_game_ver do
 			if gen == _level_game_ver[i] then
 				count = count + 1
@@ -2095,7 +2099,7 @@ function MapView:show_flags(num)
 		self.show_flags_in_progress = true
 
 		local ud = screen_map.unlock_data
-		local level_extra_list = {71,72,73,74,75,76,77,78,79,80,86,87}
+		local level_extra_list = {}
 		for i = 1, max_level do
 			local level = levels[level_rank(i,num)]
 			local flag_skip = table.contains(level_extra_list, level_rank(i,num))
@@ -2147,6 +2151,7 @@ function MapView:show_flags(num)
 				if table.contains(ud.unlocked_levels, level_rank(i,num)) then
 					flag.hidden = true
 				end
+				
 
 				if level[GAME_MODE_CAMPAIGN] and level.stars then
 					if ud.show_stars_level ~= level_rank(i,num) or ud.star_count_before > 0 then
@@ -2211,7 +2216,6 @@ function MapView:show_flags(num)
 				end
 
 			end
-			::label_2082::
 		end
 		
 
@@ -2333,7 +2337,6 @@ function MapView:show_flags(num)
 				end
 			end
 
-			::label_2083::
 		end
 		
 
@@ -8641,7 +8644,7 @@ function HeroRoomView:construct_hero(index)
         self.bio_hero_bar_end.hidden = hero_data.level_progress < 1
         self.bio_hero_bar_init.hidden = hero_data.level_progress == 0
     else
-        -- 2代和3代英雄：显示技能视图，隐藏自传视图
+        -- 2-5代英雄：显示技能视图，隐藏自传视图
         self.skills.hidden = false
         self.bio_view.hidden = true
         self.skills:load_hero(index)

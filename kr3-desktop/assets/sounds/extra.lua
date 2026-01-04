@@ -2216,8 +2216,8 @@ local sounds = {
 		source_group = "MUSIC",
 		stream = true,
 		files = {
-			--"MusicBattleUnderAttackMountain.ogg",
-			"33280295359-1-192.ogg",
+			"MusicBattleUnderAttackMountain.ogg",
+			--"33280295359-1-192.ogg",
 		},
 	},
 	MusicBattle_63 = {
@@ -2226,8 +2226,8 @@ local sounds = {
 		source_group = "MUSIC",
 		stream = true,
 		files = {
-			--"MusicBattleUnderAttackMountain.ogg",
-			"33280295359-1-192.ogg",
+			"MusicBattleUnderAttackMountain.ogg",
+			--"33280295359-1-192.ogg",
 		},
 	},
 	MusicBattle_64 = {

@@ -2376,12 +2376,12 @@ tt.sound_events.insert = "NetSound"
 tt.bullet.align_with_trajectory = true
 tt.extra_bolt_range = 100
 tt.extra_bolt = 0--2
-tt.main_script.insert = scripts.bolt_net.insert
+tt.main_script.insert = scripts_rebbborn.bolt_net.insert
 tt = E.register_t(E, "mod_barbarian_net", "mod_slow")
 AC(tt, "render")
 
-tt.main_script.insert = scripts.mod_barbarian_net.insert
-tt.main_script.remove = scripts.mod_barbarian_net.remove
+tt.main_script.insert = scripts_rebbborn.mod_barbarian_net.insert
+tt.main_script.remove = scripts_rebbborn.mod_barbarian_net.remove
 tt.modifier.duration = 3
 tt.slow.factor = {
 0.55,
@@ -8832,6 +8832,7 @@ tt = RT("arrow_ranger", "arrow")
 tt.bullet.damage_min = 13
 tt.bullet.damage_max = 19
 tt = RT("axe_barbarian", "arrow")
+tt.enhance = 0
 tt.bullet.damage_min = 24
 tt.bullet.damage_max = 32
 tt.bullet.damage_inc = 10
@@ -11639,6 +11640,9 @@ tt.play_loops = 0
 -- tt.info.i18n_key = "HERO_10YR"
 
 --补充hero_alleria 流辉一枪349
+
+---KRREBORN的塔
+
 ---时间法师
 tt = RT("tower_time_wizard", "g2_tower_mage_1")
 
@@ -12201,7 +12205,7 @@ tt.attacks.list[3].excluded_templates = {
 tt.attacks.list[3].vis_flags = bor(F_RANGED, F_BURN)
 tt.attacks.list[3].vis_bans = bor(F_BOSS)
 tt.info.portrait = "info_portraits_towers_0219"
-tt.info.fn = scripts.tower_hammerhold.get_info
+tt.info.fn = scripts_rebbborn.tower_hammerhold.get_info
 tt.powers.split = E.clone_c(E, "power")
 tt.powers.split.attack_idx = 2
 tt.powers.split.price_base = 300
@@ -12246,8 +12250,8 @@ tt.render.sprites[3].angles = {
 	},
 }
 tt.render.sprites[3].offset = v(0, 59)
-tt.main_script.update = scripts.tower_hammerhold.update
-tt.main_script.remove = scripts.tower_hammerhold.remove
+tt.main_script.update = scripts_rebbborn.tower_hammerhold.update
+tt.main_script.remove = scripts_rebbborn.tower_hammerhold.remove
 tt.sound_events.insert = "LegionnaireTaunt"
 
 tt = E.register_t(E, "arrow_hammerhold_elite", "arrow")
@@ -12290,7 +12294,7 @@ tt.bullet.damage_max = 40
 tt.bullet.damage_inc = 20
 tt.bullet.flight_time = 0.3
 tt.bullet.prediction_error = false
-tt.main_script.insert = scripts.arrow_split.insert
+tt.main_script.insert = scripts_rebbborn.arrow_split.insert
 tt.extra_arrows_range = 110
 tt.extra_arrows = 4
 tt.bullet.particles_name = "ps_arrow_silver_mark"
@@ -12333,7 +12337,7 @@ tt.health_cap = {
 	0.6,
 	0.4
 }
-tt.main_script.update = scripts.mod_legion_burn.update
+tt.main_script.update = scripts_rebbborn.mod_legion_burn.update
 tt.modifier.duration = 10
 tt.modifier.vis_flags = bor(F_MOD, F_BURN)
 tt.modifier.vis_bans = bor(F_BOSS)
@@ -12419,7 +12423,7 @@ tt.editor.props = table.append(tt.editor.props, {
 	}
 }, true)
 tt.info.i18n_key = "IMPERIALGUARD"
-tt.info.fn = scripts.tower_imperialguard_holder.get_info
+tt.info.fn = scripts_rebbborn.tower_imperialguard_holder.get_info
 tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.remove = scripts.tower_barrack.remove
 tt.main_script.update = scripts.tower_barrack_mercenaries.update
@@ -12525,7 +12529,7 @@ tt.health_bar.offset = v(adx(28), ady(40))
 tt.health.spiked_armor = 0
 tt.info.fn = scripts.soldier_mercenary.get_info
 --tt.main_script.insert = scripts.soldier_imper.insert
-tt.main_script.update = scripts.soldier_imper.update
+tt.main_script.update = scripts_rebbborn.soldier_imper.update
 tt.info.portrait = (IS_PHONE_OR_TABLET and "info_portraits_sc_0026") or "info_portraits_sc_0026"
 tt.info.random_name_count = 20
 tt.info.random_name_format = "SOLDIER_PALADIN_RANDOM_%i_NAME"
@@ -12911,6 +12915,7 @@ tt.dps.damage_inc = 0
 tt.dps.damage_type = DAMAGE_EXPLOSION
 tt.dps.damage_every = fts(3)
 tt.dps.kill = true
+tt.modifier.allows_duplicates = true
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 tt.modifier.duration = 1
@@ -12951,7 +12956,7 @@ image_y = 64
 anchor_y = 0.15384615384615385
 tt.main_script.update = scripts.soldier_barrack_krf.update
 tt.health.armor = 0
-tt.health.armor_inc = 0
+tt.health.armor_inc = 0.1
 tt.health.dead_lifetime = 8
 tt.health.hp_max = 150
 tt.health.hp_inc = 150
@@ -13166,6 +13171,9 @@ tt.bullet.damage_max = 50
 tt.bullet.damage_inc = 5
 tt.bullet.flight_time = fts(15)
 tt.main_script.insert = scripts.axe_barbarian.insert
+
+---KRREBORN的英雄
+
 ---矮人电击手
 tt = E:register_t("hero_voltaire", "hero")
 
@@ -13183,8 +13191,8 @@ tt.info.portrait = "info_portraits_hero_0017"
 tt.info.hero_portrait = "heroPortrait_portraits_0015"
 tt.info.i18n_key = "HERO_VOLT"
 tt.info.fn = scripts.hero_basic.get_info_melee
-tt.hero.fn_level_up = scripts.hero_voltaire.level_up
-tt.main_script.update = scripts.hero_voltaire.update
+tt.hero.fn_level_up = scripts_rebbborn.hero_voltaire.level_up
+tt.main_script.update = scripts_rebbborn.hero_voltaire.update
 tt.sound_events.hero_room_select = "HeroVoltaireTauntSelect"
 tt.sound_events.insert = "HeroSamuraiTauntIntro"
 tt.sound_events.respawn = "HeroSamuraiTauntIntro"
@@ -13362,7 +13370,7 @@ tt.render.sprites[1].name = "voltaire_coil_proj_0001"
 tt.sound_events.insert = "AxeSound"
 tt.bullet.hit_fx = nil
 tt.bullet.hit_scripted = "mini_tesla"
-tt.main_script.remove = scripts.mini_tesla.remove
+tt.main_script.remove = scripts_rebbborn.mini_tesla.remove
 tt.bullet.pop = nil
 tt.bullet.pop_conds = nil
 tt.bullet.damage_type = DAMAGE_NONE
@@ -13388,7 +13396,7 @@ tt.sound_insert = "VoltaireCoilInsert"
 tt.sound_remove = "VoltaireCoilRemove"
 tt.sound_shoot = "TeslaAttack"
 tt.sound_charge = "HWFrankensteinChargeLightning"
-tt.main_script.update = scripts.mini_tesla.update
+tt.main_script.update = scripts_rebbborn.mini_tesla.update
 tt.bullet = "b_tesla"
 tt.bullet_start_offset = v(0, 16)
 tt.shoot_time = fts(22)
@@ -13573,13 +13581,13 @@ tt.hero.skills.shuriken.xp_gain = {
 tt.health.dead_lifetime = 15
 tt.health_bar.offset = v(0, 36)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-tt.hero.fn_level_up = scripts.hero_viper.level_up
+tt.hero.fn_level_up = scripts_rebbborn.hero_viper.level_up
 tt.hero.tombstone_show_time = fts(150)
 tt.info.fn = scripts.hero_basic.get_info_melee
 tt.info.hero_portrait = (IS_PHONE_OR_TABLET and "hero_portraits_0017") or "heroPortrait_portraits_0014"
 tt.info.i18n_key = "HERO_VIPER"
 tt.info.portrait = (IS_PHONE_OR_TABLET and "portraits_hero_0011") or "info_portraits_hero_0016"
-tt.main_script.update = scripts.hero_viper.update
+tt.main_script.update = scripts_rebbborn.hero_viper.update
 tt.motion.max_speed = FPS*3.3
 tt.regen.cooldown = 1
 tt.render.sprites[1].anchor = v(0.5, 0.13636363636363635)
@@ -13667,7 +13675,7 @@ tt.attack.damage_factor = {
 	1
 }
 tt.ray_cooldown = fts(15)
-tt.main_script.update = scripts.viper_debuff_new.update
+tt.main_script.update = scripts_rebbborn.viper_debuff_new.update
 
 tt = E.register_t(E, "ray_viper", "bullet")
 tt.image_width = 42
@@ -13712,7 +13720,7 @@ tt.render.sprites[1].size_names = {
 tt.render.sprites[1].name = "poison"
 tt.dps.damage_type = bor(DAMAGE_POISON, DAMAGE_NO_SHIELD_HIT)
 tt = E.register_t(E, "viper_shuriken_goblirang", "bullet")
-tt.main_script.update = scripts.viper_shuriken_goblirang.update
+tt.main_script.update = scripts_rebbborn.viper_shuriken_goblirang.update
 tt.bullet.particles_name = "ps_fireball_viper"
 tt.bullet.acceleration_factor = 0.05
 tt.bullet.min_speed = 50
@@ -13980,7 +13988,7 @@ tt.damage_type = bor(DAMAGE_TRUE, DAMAGE_DISINTEGRATE, DAMAGE_NO_SPAWNS)
 tt.damage_min = 666--400
 tt.damage_max = 999--600
 tt.cooldown = 25
-tt.main_script.update = scripts.lightning_spell.update
+tt.main_script.update = scripts_rebbborn.lightning_spell.update
 tt.render.sprites[1].prefix = "lightning"
 tt.render.sprites[1].offset = v(5, 405)
 tt.render.sprites[1].scale = v(2, 2)
@@ -14289,10 +14297,12 @@ tt.hero.skills.callofwild.xp_level_steps = {
 	[10] = 3
 }
 tt.info.i18n_key = "HERO_MUNRA"
----重生
+
+---KRREBORN的怪物
+
 tt = RT("tower_holder_lozagon", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_LOZAGON
-tt.render.sprites[1].name = "build_terrain_0009_1"
+tt.render.sprites[1].name = "build_terrain_0032"
 
 tt = RT("enemy_cursed_shaman", "enemy")
 

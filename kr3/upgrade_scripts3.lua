@@ -2329,4 +2329,411 @@ function scripts.soldier_tower_rocket_gunners99.update(this, store, script)
 	end
 end
 
+scripts.tower_dark_elf99 = {}
+function scripts.tower_dark_elf99.update(this, store)
+	local last_ts = store.tick_ts
+	local a_name, a_flip, angle_idx, target, pred_pos
+	local attack = this.attacks.list[1]
+	local attack_soldiers = this.attacks.list[2]
+	local b = this.barrack
+	local pow_soldiers = this.powers and this.powers.skill_soldiers or nil
+	local pow_buff = this.powers and this.powers.skill_buff or nil
+	local MODE_FOREMOST = 0
+	local MODE_MAXHP = 1
+
+	local function find_maxhp_enemy(entities, origin, min_range, max_range, prediction_time, flags, bans, filter_func, min_override_flags)
+		flags = flags or 0
+		bans = bans or 0
+		min_override_flags = min_override_flags or 0
+
+		local enemies = {}
+
+		for _, e in pairs(entities) do
+			if e.pending_removal or not e.enemy or not e.nav_path or not e.vis or e.health and e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or filter_func and not filter_func(e, origin) then
+				-- block empty
+			else
+				local e_pos, e_ni
+
+				if prediction_time and e.motion and e.motion.speed then
+					if e.motion.forced_waypoint then
+						local dt = prediction_time == true and 1 or prediction_time
+
+						e_pos = V.v(e.pos.x + dt * e.motion.speed.x, e.pos.y + dt * e.motion.speed.y)
+						e_ni = e.nav_path.ni
+					else
+						local node_offset = P:predict_enemy_node_advance(e, prediction_time)
+
+						e_ni = e.nav_path.ni + node_offset
+						e_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
+					end
+				else
+					e_pos = e.pos
+					e_ni = e.nav_path.ni
+				end
+
+				if U.is_inside_ellipse(e_pos, origin, max_range) and P:is_node_valid(e.nav_path.pi, e_ni) and (min_range == 0 or band(e.vis.flags, min_override_flags) ~= 0 or not U.is_inside_ellipse(e_pos, origin, min_range)) then
+					e.__ffe_pos = V.vclone(e_pos)
+
+					table.insert(enemies, e)
+				end
+			end
+		end
+
+		if not enemies or #enemies == 0 then
+			return nil, nil
+		else
+			table.sort(enemies, function(e1, e2)
+				return e1.health.hp_max > e2.health.hp_max
+			end)
+
+			return enemies[1], enemies, enemies[1].__ffe_pos
+		end
+	end
+
+	local function find_target(attack, node_prediction)
+		if this.tower_upgrade_persistent_data.current_mode == MODE_FOREMOST then
+			local target, _, pred_pos = U5.find_foremost_enemy(store.entities, tpos(this), 0, this.attacks.range, node_prediction, attack.vis_flags, attack.vis_bans)
+
+			return target, pred_pos
+		else
+			local target, _, pred_pos = find_maxhp_enemy(store.entities, tpos(this), 0, this.attacks.range, node_prediction, attack.vis_flags, attack.vis_bans)
+
+			return target, pred_pos
+		end
+	end
+
+	local function animation_name_facing_angle_dark_elf(group, source_pos, dest_pos)
+		local vx, vy = V.sub(dest_pos.x, dest_pos.y, source_pos.x, source_pos.y)
+		local v_angle = V.angleTo(vx, vy)
+		local angle = km.unroll(v_angle)
+		local angle_deg = km.rad2deg(angle)
+		local a = this.render.sprites[this.render.sid_archer]
+		local o_name, o_flip, o_idx
+		local a1, a2, a3, a4, a5, a6, a7, a8 = 0, 20, 90, 160, 180, 200, 270, 340
+		local angles = a.angles[group]
+
+		if a1 <= angle_deg and angle_deg < a2 then
+			o_name, o_flip, o_idx = angles[1], false, 1
+			quadrant = 1
+		elseif a2 <= angle_deg and angle_deg < a3 then
+			o_name, o_flip, o_idx = angles[2], false, 2
+			quadrant = 2
+		elseif a3 <= angle_deg and angle_deg < a4 then
+			o_name, o_flip, o_idx = angles[2], true, 2
+			quadrant = 3
+		elseif a4 <= angle_deg and angle_deg < a5 then
+			o_name, o_flip, o_idx = angles[1], true, 1
+			quadrant = 4
+		elseif a5 <= angle_deg and angle_deg < a6 then
+			o_name, o_flip, o_idx = angles[4], true, 4
+			quadrant = 5
+		elseif a6 <= angle_deg and angle_deg < a7 then
+			o_name, o_flip, o_idx = angles[3], true, 3
+			quadrant = 6
+		elseif a7 <= angle_deg and angle_deg < a8 then
+			o_name, o_flip, o_idx = angles[3], false, 3
+			quadrant = 7
+		else
+			o_name, o_flip, o_idx = angles[4], false, 4
+			quadrant = 8
+		end
+
+		return o_name, o_flip, o_idx
+	end
+
+	local function check_change_mode()
+		if this.change_mode then
+			this.change_mode = false
+
+			if this.tower_upgrade_persistent_data.current_mode == MODE_FOREMOST then
+				this.tower_upgrade_persistent_data.current_mode = MODE_MAXHP
+			else
+				this.tower_upgrade_persistent_data.current_mode = MODE_FOREMOST
+			end
+
+			return true
+		end
+
+		return false
+	end
+
+	local function check_upgrades_purchase()
+		if this.powers then
+			for k, pow in pairs(this.powers) do
+				if pow.changed then
+					pow.changed = nil
+
+					if pow == pow_soldiers then
+						if not this.controller_soldiers then
+							this.controller_soldiers = E:create_entity(this.controller_soldiers_template)
+							this.controller_soldiers.tower_ref = this
+							this.controller_soldiers.pos = this.pos
+
+							queue_insert(store, this.controller_soldiers)
+						end
+
+						this.controller_soldiers.pow_level = pow.level
+					end
+				end
+			end
+		end
+	end
+
+	local function retarget(node_prediction)
+		local retarget, new_pos = find_target(attack)
+
+		if retarget then
+			this.attacks._last_target_pos = pred_pos
+
+			if this.mod_target then
+				this.mod_target.modifier.target_id = retarget.id
+			end
+
+			return retarget, new_pos
+		else
+			target = nil
+
+			if this.mod_target then
+				queue_remove(store, this.mod_target)
+			end
+
+			return nil, nil
+		end
+	end
+
+	if not this.attacks._last_target_pos then
+		this.attacks._last_target_pos = {}
+		this.attacks._last_target_pos = v(REF_W, 0)
+	end
+
+	local an, af = U5.animation_name_facing_point(this, "idle", this.attacks._last_target_pos, this.render.sid_archer)
+
+	U5.animation_start(this, an, af, store.tick_ts, 1, this.render.sid_archer)
+
+	if this.tower_upgrade_persistent_data.last_ts then
+		last_ts = this.tower_upgrade_persistent_data.last_ts
+		attack.ts = this.tower_upgrade_persistent_data.last_ts
+	else
+		attack.ts = store.tick_ts - attack.cooldown + attack.first_cooldown
+	end
+
+	::label_1159_0::
+
+	while true do
+		if this.tower.blocked then
+			coroutine.yield()
+		else
+			check_upgrades_purchase()
+			check_change_mode()
+			SU5.towers_swaped(store, this, this.attacks.list)
+
+			if store.tick_ts - attack.ts > attack.cooldown then
+				target, pred_pos = find_target(attack, attack.node_prediction_prepare_from_begin + attack.node_prediction)
+
+				if not target then
+					SU5.delay_attack(store, attack, fts(10))
+
+					goto label_1159_0
+				end
+
+				this.mod_target = E:create_entity(attack.mod_target)
+				this.mod_target.modifier.target_id = target.id
+				this.mod_target.modifier.source_id = this.id
+				this.mod_target.render.sprites[1].hidden = this.tower_upgrade_persistent_data.current_mode == MODE_FOREMOST
+
+				queue_insert(store, this.mod_target)
+
+				local a_name, a_flip, angle_idx
+				local start_ts = store.tick_ts
+
+				this.attacks._last_target_pos = pred_pos
+
+				local an, af = U5.animation_name_facing_point(this, "shot_prepare", this.attacks._last_target_pos, this.render.sid_archer)
+
+				U5.animation_start(this, an .. "_begin", af, store.tick_ts, false, this.render.sid_archer)
+
+				while not U5.animation_finished(this, this.render.sid_archer, 1) do
+					check_upgrades_purchase()
+					check_change_mode()
+
+					if this.tower.blocked then
+						local an, af = U5.animation_name_facing_point(this, "idle", this.attacks._last_target_pos, this.render.sid_archer)
+
+						U5.animation_start(this, an, af, store.tick_ts, false, this.render.sid_archer)
+
+						if this.mod_target then
+							queue_remove(store, this.mod_target)
+						end
+
+						goto label_1159_0
+					end
+
+					coroutine.yield()
+				end
+
+				U5.animation_start(this, an .. "_loop", af, store.tick_ts, true, this.render.sid_archer)
+
+				local old_target = target
+
+				target, pred_pos = retarget(attack.node_prediction_prepare_from_loop + attack.node_prediction)
+
+				while not target or not pred_pos do
+					check_upgrades_purchase()
+					check_change_mode()
+
+					if this.tower.blocked then
+						local an, af = U5.animation_name_facing_point(this, "idle", this.attacks._last_target_pos, this.render.sid_archer)
+
+						U5.animation_start(this, an, af, store.tick_ts, false, this.render.sid_archer)
+
+						if this.mod_target then
+							queue_remove(store, this.mod_target)
+						end
+
+						goto label_1159_0
+					end
+
+					coroutine.yield()
+
+					target, pred_pos = retarget(attack.node_prediction_prepare_from_loop + attack.node_prediction)
+				end
+
+				this.attacks._last_target_pos = pred_pos
+
+				local anim_runs_until_now = this.render.sprites[this.render.sid_archer].runs
+
+				while not U5.animation_finished(this, this.render.sid_archer, anim_runs_until_now + 1) do
+					check_upgrades_purchase()
+					check_change_mode()
+
+					if this.tower.blocked then
+						local an, af = U5.animation_name_facing_point(this, "idle", this.attacks._last_target_pos, this.render.sid_archer)
+
+						U5.animation_start(this, an, af, store.tick_ts, false, this.render.sid_archer)
+
+						if this.mod_target then
+							queue_remove(store, this.mod_target)
+						end
+
+						goto label_1159_0
+					end
+
+					coroutine.yield()
+				end
+
+				old_target = target
+				this.attacks._last_target_pos = pred_pos
+				target, pred_pos = retarget(attack.node_prediction_prepare_from_loop + attack.node_prediction)
+
+				if pred_pos then
+					this.attacks._last_target_pos = pred_pos
+				end
+
+				an, af = U5.animation_name_facing_point(this, "shot_prepare", this.attacks._last_target_pos, this.render.sid_archer)
+
+				U5.animation_start(this, an .. "_end", af, store.tick_ts, false, this.render.sid_archer)
+
+				while not U5.animation_finished(this, this.render.sid_archer, 1) do
+					check_upgrades_purchase()
+					check_change_mode()
+
+					if this.tower.blocked then
+						local an, af = U5.animation_name_facing_point(this, "idle", this.attacks._last_target_pos, this.render.sid_archer)
+
+						U5.animation_start(this, an, af, store.tick_ts, false, this.render.sid_archer)
+
+						if this.mod_target then
+							queue_remove(store, this.mod_target)
+						end
+
+						goto label_1159_0
+					end
+
+					coroutine.yield()
+				end
+
+				old_target = target
+				target, pred_pos = retarget(attack.node_prediction)
+
+				if not pred_pos then
+					pred_pos = this.attacks._last_target_pos
+
+					if old_target and not old_target.health.dead then
+						local node_offset = P:predict_enemy_node_advance(old_target, attack.shoot_time)
+						local e_ni = old_target.nav_path.ni + node_offset
+						local e_pos = P:node_pos(old_target.nav_path.pi, old_target.nav_path.spi, e_ni)
+
+						if V.dist(e_pos.x, e_pos.y, this.pos.x, this.pos.y) < this.attacks.range * this.attacks.range * 1.3 then
+							target = old_target
+						end
+					end
+				end
+
+				an, af, angle_idx = animation_name_facing_angle_dark_elf("shot", this.pos, pred_pos)
+
+				U5.animation_start(this, an, af, store.tick_ts, false, this.render.sid_archer)
+				U5.y_wait(store, attack.shoot_time)
+
+				local bullet = E:create_entity(attack.bullet)
+
+				bullet.pos = V.vclone(this.pos)
+
+				local offset_x = af and -attack.bullet_start_offset[angle_idx].x or attack.bullet_start_offset[angle_idx].x
+				local offset_y = attack.bullet_start_offset[angle_idx].y
+
+				bullet.pos = V.v(this.pos.x + offset_x, this.pos.y + offset_y)
+				bullet.bullet.from = V.vclone(bullet.pos)
+				bullet.bullet.to = V.vclone(pred_pos)
+
+				if target then
+					bullet.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+				end
+
+				bullet.bullet.target_id = target and target.id or nil
+				bullet.bullet.source_id = this.id
+				bullet.bullet.damage_factor = this.tower.damage_factor
+
+				if pow_buff and pow_buff.level > 0 then
+					local soulsDamageMin = this.tower_upgrade_persistent_data.souls_extra_damage_min or 0
+					local soulsDamageMax = this.tower_upgrade_persistent_data.souls_extra_damage_max or 0
+
+					bullet.bullet.damage_min = bullet.bullet.damage_min + soulsDamageMin
+					bullet.bullet.damage_max = bullet.bullet.damage_max + soulsDamageMax
+					if target and target.health.hp_max and target.health.hp and target.health.hp / target.health.hp_max < 0.5 then
+						bullet.bullet.damage_factor = bullet.bullet.damage_factor * bullet.bullet.extra_damage_factor
+						bullet.bullet.reduce_armor = bullet.bullet.extra_reduce_armor
+					end
+
+				end
+
+				queue_insert(store, bullet)
+
+				while not U5.animation_finished(this, this.render.sid_archer, 1) do
+					check_upgrades_purchase()
+					check_change_mode()
+					coroutine.yield()
+				end
+
+				local an, af = U5.animation_name_facing_point(this, "shot_end", pred_pos, this.render.sid_archer)
+
+				U5.y_animation_play(this, an, af, store.tick_ts, false, this.render.sid_archer)
+
+				attack.ts = start_ts
+				last_ts = start_ts
+				this.tower.long_idle_pos = V.vclone(pred_pos)
+			end
+
+			this.tower_upgrade_persistent_data.last_ts = last_ts
+
+			if store.tick_ts - last_ts > this.tower.long_idle_cooldown then
+				U5.animation_start(this, "idle", false, store.tick_ts, -1, this.render.sid_archer)
+
+				this.attacks._last_target_pos = v(REF_W, 0)
+			end
+
+			coroutine.yield()
+		end
+	end
+end
+
 return scripts

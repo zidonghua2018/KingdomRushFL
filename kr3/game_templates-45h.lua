@@ -1063,40 +1063,59 @@ tt = RT("hero_tank", "hero")
 E:add_comps(tt, "ranged", "timed_attacks", "auras")
 tt.health.dead_lifetime = 22.5
 tt.health_bar.draw_order = -1
-tt.health_bar.offset = v(0, 70)
+tt.health_bar.offset = v(0, 80)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
 tt.hero.tombstone_show_time = fts(90)
 tt.info.fn = scripts.hero_basic.get_info_ranged_with_damage_factor
---tt.main_script.update = kr4_scripts.hero_gerald99.update
-tt.hero.fn_level_up = scripts.hero_tank.level_up
---暂时取消头像--tt.info.portrait = "info_portraits_hero_0005"
+tt.main_script.update = kr4_scripts.hero_tank.update
+tt.main_script.insert = kr4_scripts.hero_tank.insert
+tt.hero.fn_level_up = kr4_scripts.hero_tank.level_up
+tt.info.portrait = "gui4_bottom_info_image_heroes_0009"
 tt.info.hero_portrait = "kra_hero_portraits_0408"
 tt.info.i18n_key = "HERO_TANK"
 tt.info.ultimate_icon = "0408"
 tt.motion.max_speed = 2.5 * FPS
 tt.soldier.melee_slot_offset = v(5, 0)
-tt.sound_events.change_rally_point = "HeroPaladinTaunt"
-tt.sound_events.death = "HeroPaladinDeath"
-tt.sound_events.hero_room_select = "HeroPaladinTauntSelect"
-tt.sound_events.insert = "HeroPaladinTauntIntro"
-tt.sound_events.respawn = "HeroPaladinTauntIntro"
+tt.sound_events.change_rally_point = "group_tank_taunt"
+tt.sound_events.death = "hero_tank_death"
+tt.sound_events.hero_room_select = "hero_tank_taunt_1"
+tt.sound_events.insert = "group_tank_taunt"
+tt.sound_events.respawn = "group_tank_taunt"
 tt.unit.marker_offset = v(0, 0)
-tt.unit.mod_offset = v(0, 20)
+tt.unit.mod_offset = v(0, 0)
+tt.overwhelm_entity = "controller_overwhelm_tank"
 tt.hero.skills.heat_missiles = E:clone_c("hero_skill")
 tt.hero.skills.heat_missiles.hr_order = 1
+tt.hero.skills.heat_missiles.count = {4,6,8}
+tt.hero.skills.heat_missiles.damage_min_config = {16,22,32}
+tt.hero.skills.heat_missiles.damage_max_config = {24,34,48}
+tt.hero.skills.heat_missiles.xp_gain = {[0]=60,60,120,180}
 tt.hero.skills.heat_missiles.hr_cost = {2,2,2}
 tt.hero.skills.ground_slam = E:clone_c("hero_skill")
 tt.hero.skills.ground_slam.hr_order = 2
 tt.hero.skills.ground_slam.hr_cost = {2,2,2}
+tt.hero.skills.ground_slam.xp_gain = {250,500,750}
+tt.hero.skills.ground_slam.damage_min_config = {21,42,63}
+tt.hero.skills.ground_slam.damage_max_config = {39,78,117}
 tt.hero.skills.expendables = E:clone_c("hero_skill")
 tt.hero.skills.expendables.hr_order = 3
 tt.hero.skills.expendables.hr_cost = {1,2,3}
+tt.hero.skills.expendables.entity = {"hero_tank_expendables_lvl1","hero_tank_expendables_lvl2","hero_tank_expendables_lvl3"}
 tt.hero.skills.scorching_cannon = E:clone_c("hero_skill")
 tt.hero.skills.scorching_cannon.hr_order = 4
 tt.hero.skills.scorching_cannon.hr_cost = {2,2,2}
+tt.hero.skills.scorching_cannon.cooldown = {35,33,30}
+tt.hero.skills.scorching_cannon.xp_gain = {200,400,600}
+tt.hero.skills.scorching_cannon.damage_config = {2,4,6}
 tt.hero.skills.ultimate = E:clone_c("hero_skill")
 tt.hero.skills.ultimate.hr_order = 5
 tt.hero.skills.ultimate.hr_cost = {3,4,5}
+tt.hero.skills.ultimate.cooldown = {[0]=48,48,48,48}
+tt.hero.skills.ultimate.controller_name = "controller_hero_tank_ultimate"
+
+--原版为0.03秒伤害一次，改版为0.3秒伤害一次
+--动画参考5代机甲的大招，伤害机制参考浮士德的大招
+tt.hero.skills.ultimate.damage_config = {[0]=7,10,24,40}--2,3,7,12/0.03
 
 tt.hero.level_stats.hp_max = {
 	264,
@@ -1159,16 +1178,567 @@ tt.hero.level_stats.ranged_damage_max = {
 	188
 }
 tt.regen.cooldown = 2
+
+--动画
+tt.render.sprites[1].anchor.y = 0.02
+tt.render.sprites[1].offset.y = -40
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].prefix = "hero_tank"
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].is_shadow = true
+tt.render.sprites[2].name = "hero_tank_ultimate_plane_shadow"
+tt.render.sprites[2].z = Z_DECALS + 1
+
 tt.ranged.attacks[1] = E:clone_c("bullet_attack")
-tt.ranged.attacks[1].cooldown = 1.5
-tt.ranged.attacks[1].min_range = 25
+tt.ranged.attacks[1].cooldown = 3
+tt.ranged.attacks[1].min_range = 0
+tt.ranged.attacks[1].vis_bans = bor(F_FLYING, F_NIGHTMARE)
 tt.ranged.attacks[1].max_range = 140
+tt.ranged.attacks[1].animation = "shoot"
 tt.ranged.attacks[1].bullet = "bullet_tank"
-tt.ranged.attacks[1].shoot_time = fts(13)
+tt.ranged.attacks[1].node_prediction = fts(25)
+tt.ranged.attacks[1].shoot_time = fts(23)
 tt.ranged.attacks[1].bullet_start_offset = {
-	v(-8, 24)
+	v(8, 38)
 }
-tt = RT("bullet_tank", "g1_bomb")
+--1技能 导弹 参考高达的导弹发射
+tt.timed_attacks.list[1] = E:clone_c("bullet_attack")
+tt.timed_attacks.list[1].animation_pre = "HeatMissilesIn"
+tt.timed_attacks.list[1].animation = "HeatMissilesLoop"
+tt.timed_attacks.list[1].animation_last = "HeatMissilesLastLoop"
+tt.timed_attacks.list[1].animation_post = "HeatMissilesOut"
+tt.timed_attacks.list[1].cooldown = 20
+tt.timed_attacks.list[1].disabled = true
+tt.timed_attacks.list[1].bullet = "missle_tank"
+tt.timed_attacks.list[1].start_offsets = {v(4, 60)}
+tt.timed_attacks.list[1].sound = "hero_lucerna_summon"
+tt.timed_attacks.list[1].hit_times = {fts(3)}
+tt.timed_attacks.list[1].launch_vector = v(math.random(10, 40), math.random(30, 120))
+tt.timed_attacks.list[1].vis_flags = F_RANGED
+tt.timed_attacks.list[1].vis_bans = F_NIGHTMARE
+tt.timed_attacks.list[1].min_range = 0
+tt.timed_attacks.list[1].max_range = 600
+--2技能 震地 参考天十的震地
+--[[
+tt.timed_attacks.list[2] = E:clone_c("bullet_attack")
+tt.timed_attacks.list[2].animation = "GroundSlam"
+tt.timed_attacks.list[2].cooldown = 30
+tt.timed_attacks.list[2].disabled = true
+tt.timed_attacks.list[2].entity = "missle_tank"
+tt.timed_attacks.list[2].sound = "hero_lucerna_summon"
+tt.timed_attacks.list[2].spawn_time = fts(10)
+tt.timed_attacks.list[2].vis_flags = F_RANGED
+tt.timed_attacks.list[2].vis_bans = 0
+tt.timed_attacks.list[2].min_range = 0
+tt.timed_attacks.list[2].max_range = 200
+]]
+tt.timed_attacks.list[2] = CC("area_attack")
+tt.timed_attacks.list[2].disabled = true
+tt.timed_attacks.list[2].cooldown = 30
+tt.timed_attacks.list[2].animation = "GroundSlam"
+tt.timed_attacks.list[2].count = 10
+tt.timed_attacks.list[2].sound_pre = "hero_tank_groundslam_lift"
+tt.timed_attacks.list[2].sound = "hero_tank_groundslam_impact"
+tt.timed_attacks.list[2].damage_max = 0
+tt.timed_attacks.list[2].damage_min = 0
+tt.timed_attacks.list[2].damage_radius = 50
+tt.timed_attacks.list[2].damage_type = DAMAGE_TRUE
+tt.timed_attacks.list[2].hit_decal = "decal_ground_hit"
+tt.timed_attacks.list[2].hit_fx = "fx_ground_hit"
+tt.timed_attacks.list[2].hit_offset = v(0, 0)
+tt.timed_attacks.list[2].hit_time = fts(38)
+tt.timed_attacks.list[2].hit_aura = "aura_tank_skill2_bomb"
+tt.timed_attacks.list[2].min_count = 1
+tt.timed_attacks.list[2].min_range = 20
+tt.timed_attacks.list[2].max_range = 200
+tt.timed_attacks.list[2].min_nodes = 5
+tt.timed_attacks.list[2].max_nodes = 20
+tt.timed_attacks.list[2].pop = {
+	"pop_kapow",
+	"pop_whaam"
+}
+tt.timed_attacks.list[2].pop_chance = 0.3
+tt.timed_attacks.list[2].pop_conds = DR_KILL
+tt.timed_attacks.list[2].sound_short = "TenShiBuffedBombAttack"
+tt.timed_attacks.list[2].sound_long = "TenShiBuffedBombAttackLong"
+tt.timed_attacks.list[2].sound = tt.timed_attacks.list[2].sound_short
+tt.timed_attacks.list[2].xp_from_skill = "buffed"
+--4技能 旋转燃烧  参考腐森的in run out
+tt.timed_attacks.list[3] = E:clone_c("bullet_attack")
+tt.timed_attacks.list[3].animation_pre = "scorchingCannonIn"
+tt.timed_attacks.list[3].animation = "scorchingCannonLoop"
+tt.timed_attacks.list[3].animation_post = "scorchingCannonOut"
+tt.timed_attacks.list[3].cooldown = 35
+tt.timed_attacks.list[3].disabled = true
+tt.timed_attacks.list[3].entity = "aura_roundfire_hero_tank"
+tt.timed_attacks.list[3].sound_pre = "hero_tank_scorching_loopstart"
+tt.timed_attacks.list[3].sound = "hero_tank_scorching_loop"
+tt.timed_attacks.list[3].sound_post = "hero_tank_scorching_loopend"
+tt.timed_attacks.list[3].spawn_time = fts(10)
+tt.timed_attacks.list[3].vis_flags = F_RANGED
+tt.timed_attacks.list[3].vis_bans = 0
+tt.timed_attacks.list[3].min_range = 0
+tt.timed_attacks.list[3].max_range = 100
+
+--被动效果
+tt = E:register_t("controller_overwhelm_tank", "decal_scripted")
+E:add_comps(tt,"ranged")
+tt.owner = nil
+tt.owner_idx = nil
+tt.ranged.attacks[1].cooldown_min = 30
+tt.ranged.attacks[1].cooldown_max = 60
+tt.ranged.attacks[1].cooldown = 0.2
+tt.ranged.attacks[1].start_offset_y = 1
+tt.ranged.attacks[1].bullet = "bullet_overwhelm_tank"
+tt.main_script.update = scripts.controller_overwhelm_tank.update
+
+tt = E:register_t("bullet_overwhelm_tank", "bullet")
+tt.bullet.min_speed = 180 * FPS
+tt.bullet.max_speed = 180 * FPS
+tt.bullet.acceleration_factor = 0.05
+tt.bullet.hit_fx = nil
+--tt.bullet.hit_decal = "hero_murglun_ultimate_rocks_run"
+tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.damage_radius = 100
+tt.bullet.damage_min = 1
+tt.bullet.damage_max = 1
+tt.bullet.damage_factor = 1
+tt.bullet.damage_flags = F_AREA
+tt.bullet.damage_bans = F_FLYING
+tt.render.sprites[1].name = "hero_tank_ultimate_plane_shadow"
+tt.render.sprites[1].keep_flip_x = true
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].hidden = true
+tt.main_script.update = kr4_scripts.lava_blood_murglun.update
+tt.scorch_earth = false
+tt.sound_events.insert = nil
+tt.sound_events.hit = nil
+
+--普攻
+tt = RT("bullet_tank", "bombKR5")
+tt.bullet.flight_time = fts(25)
+tt.bullet.rotation_speed = 20 * FPS * math.pi / 180
+tt.bullet.hit_fx = "fx_explosion_tank"
+tt.bullet.hit_decal = "decal_bomb_crater"
+tt.bullet.hit_fx_water = "fx_explosion_water"
+tt.bullet.damage_type = DAMAGE_EXPLOSION
+tt.bullet.damage_min = 40
+tt.bullet.min_speed = 300
+tt.bullet.damage_max = 40
+tt.bullet.damage_radius = 40
+tt.bullet.pop = nil
+tt.bullet.to = v(0,0)
+tt.bullet.from = v(0,0)
+tt.bullet.damage_flags = F_AREA
+tt.bullet.hide_radius = 8
+tt.bullet.xp_gain_factor = 0.8
+tt.render.sprites[1].name = "hero_tank_simple_proyectile"
+tt.render.sprites[1].animated = false
+tt.sound_events.insert = "BombShootSound"
+tt.sound_events.hit = "BombExplosionSound"
+tt.sound_events.hit_water = "RTWaterExplosion"
+
+local fx_explosion_big = E:register_t("fx_explosion_tank", "fx")
+
+fx_explosion_big.render.sprites[1].prefix = "hero_tank_hit"
+fx_explosion_big.render.sprites[1].name = "run"
+fx_explosion_big.render.sprites[1].offset = v(0,0)
+fx_explosion_big.render.sprites[1].scale = v(1.2,1.2)
+fx_explosion_big.render.sprites[1].anchor.y = 0.13
+fx_explosion_big.render.sprites[1].z = Z_OBJECTS
+fx_explosion_big.render.sprites[1].sort_y_offset = 0 -- -2
+
+local fx_explosion_big = E:register_t("fx_explosion_tank_air", "fx")
+
+fx_explosion_big.render.sprites[1].prefix = "hero_tank_hit_air"
+fx_explosion_big.render.sprites[1].name = "run"
+fx_explosion_big.render.sprites[1].offset = v(0, 0)
+fx_explosion_big.render.sprites[1].scale = v(1.2,1.2)
+fx_explosion_big.render.sprites[1].anchor.y = 0.13
+fx_explosion_big.render.sprites[1].z = Z_OBJECTS
+fx_explosion_big.render.sprites[1].sort_y_offset = 0 -- -2
+
+--1技能 导弹
+local missile_mecha = E:register_t("missle_tank", "bullet")
+missile_mecha.render.sprites[1].name = "hero_tank_missile_proyectile"
+missile_mecha.render.sprites[1].animated = false
+missile_mecha.render.sprites[1].loop = true
+missile_mecha.render.sprites[1].flip_x = true
+missile_mecha.bullet.damage_type = DAMAGE_PHYSICAL
+missile_mecha.bullet.min_speed = 300
+missile_mecha.bullet.max_speed = 600
+missile_mecha.bullet.turn_speed = 10 * math.pi / 180 * 30
+missile_mecha.bullet.acceleration_factor = 0.2
+missile_mecha.bullet.hit_fx = "fx_explosion_tank"
+missile_mecha.bullet.hit_fx_air = "fx_explosion_tank_air"
+missile_mecha.bullet.hit_fx_water = "fx_explosion_water"
+missile_mecha.bullet.damage_min = 20
+missile_mecha.bullet.damage_max = 80
+missile_mecha.bullet.damage_radius = 40
+missile_mecha.bullet.vis_flags = F_RANGED
+missile_mecha.bullet.damage_flags = F_AREA
+missile_mecha.bullet.particles_name = "ps_missile_tank"
+missile_mecha.bullet.retarget_range = 99999
+missile_mecha.bullet.pirates_pillage_rate = 0
+missile_mecha.bullet.got_gold = 3
+missile_mecha.main_script.insert = scripts.missile_tank.insert
+missile_mecha.main_script.update = scripts.missile_tank.update
+missile_mecha.sound_events.insert = "RocketLaunchSound"
+missile_mecha.sound_events.hit = "BombExplosionSound"
+missile_mecha.sound_events.hit_water = "RTWaterExplosion"
+
+tt = E:register_t("ps_missile_tank")
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.name = "hero_tank_missile_particle_run"
+tt.particle_system.animated = true
+tt.particle_system.animation_fps = 50
+tt.particle_system.loop = false
+tt.particle_system.alphas = { 255, 0 }
+tt.particle_system.particle_lifetime = {
+	fts(16),
+	fts(16)
+}
+tt.particle_system.track_rotation = true
+tt.particle_system.scales_x = {
+    1,
+    1.25
+}
+tt.particle_system.scales_y = {
+    1,
+    1.25
+}
+tt.particle_system.emission_rate = 30
+
+--2技能 震地
+tt = RT("aura_tank_skill2_bomb", "aura")
+tt.aura.fx = "decal_tank_spike"
+tt.sound = "hero_tank_scorching_loop"
+tt.aura.damage_radius = 50
+tt.aura.last_attack_damage_radius = 60
+tt.aura.damage_type = DAMAGE_PHYSICAL
+tt.aura.vis_flags = bor(F_RANGED)
+tt.aura.vis_bans = bor(F_FRIEND)
+tt.aura.step_delay = fts(2)
+tt.aura.step_nodes = 6
+tt.aura.steps = 5
+tt.main_script.update = kr4_scripts.aura_tank_skill2_bomb.update
+tt.stun = {}
+tt.stun.vis_flags = bor(F_RANGED, F_STUN)
+tt.stun.vis_bans = bor(F_BOSS)
+tt.stun.mod = "mod_tank_skill2_stun"
+tt.aura.damage_min = 10
+tt.aura.damage_max = 20
+tt.aura.stun_chance = 1
+tt.aura.min_nodes = 0
+tt.aura.max_nodes = 25
+tt.aura.min_count = 1
+tt = RT("mod_tank_skill2_stun", "mod_stun")
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
+tt.modifier.duration = 2
+tt = RT("decal_tank_spike", "decal_bomb_crater")
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].name = "hero_tank_GroundSlam_decal_run"
+tt.render.sprites[2].hide_after_runs = 1
+tt.render.sprites[2].anchor.y = 0.24
+
+--大招
+tt = E:register_t("controller_hero_tank_ultimate")
+
+E:add_comps(tt, "pos", "main_script", "sound_events")
+
+tt.can_fire_fn = scripts.hero_tank_ultimate.can_fire_fn
+tt.cooldown = 48
+tt.entity = "zeppelin_hero_tank"
+tt.main_script.update = scripts.hero_tank_ultimate.update
+tt.sound = "hero_tank_ultimate"
+
+tt = E:register_t("zeppelin_hero_tank", "decal_scripted")
+b = balance.heroes.hero_mecha.ultimate
+
+E:add_comps(tt, "force_motion", "ranged")
+
+tt.decal = "decal_hero_tank_ultimate"
+tt.main_script.update = scripts.zeppelin_hero_tank.update
+tt.force_motion.max_a = 1500
+tt.force_motion.max_v = b.speed_out_of_range
+tt.force_motion.ramp_radius = 30
+tt.force_motion.fr = 0.05
+tt.force_motion.a_step = 40
+tt.flight_height = 150
+tt.flight_height_attack = 30
+tt.duration = b.duration
+tt.start_ts = nil
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "hero_tank_ultimate_plane_fly"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].group = "layers"
+tt.render.sprites[1].offset = v(0, tt.flight_height)
+tt.render.sprites[1].z = Z_FLYING_HEROES
+
+tt.ranged.attacks[1] = E:clone_c("bullet_attack")
+tt.ranged.attacks[1].animation = "attack"
+tt.ranged.attacks[1].bullet = "bullet_zeppelin_hero_tank"
+tt.ranged.attacks[1].bullet_start_offset = {
+	v(0, 105)
+}
+tt.ranged.attacks[1].cooldown = b.ranged_attack.cooldown
+tt.ranged.attacks[1].max_range = b.ranged_attack.max_range
+tt.ranged.attacks[1].min_range = b.ranged_attack.min_range
+tt.ranged.attacks[1].damage_type = b.ranged_attack.damage_type
+tt.ranged.attacks[1].damage_min_config = b.ranged_attack.damage_min
+tt.ranged.attacks[1].damage_max_config = b.ranged_attack.damage_max
+tt.ranged.attacks[1].shoot_time = fts(4)
+tt.ranged.attacks[1].sound_args = {
+	delay = fts(14)
+}
+tt.ranged.attacks[1].sound_chance = 0.5
+tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE, F_CLIFF)
+tt.ranged.attacks[1].xp_gain_factor = b.ranged_attack.xp_gain_factor
+tt.ranged.attacks[1].basic_attack = true
+tt.speed_out_of_range = b.speed_out_of_range
+tt.speed_in_range = b.speed_in_range
+tt.attack_radius = b.attack_radius
+
+tt = E:register_t("decal_hero_tank_ultimate", "decal_tween")
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "hero_tank_ultimate_plane_shadow"
+tt.render.sprites[1].z = Z_DECALS
+tt.tween.props[1].keys = {
+	{
+		1,
+		255
+	},
+	{
+		9,
+		255
+	},
+	{
+		12,
+		0
+	}
+}
+tt.tween.run_once = true
+
+--坦克大招的炸弹
+tt = E:register_t("bullet_zeppelin_hero_tank", "bombKR5")
+b = balance.heroes.hero_mecha.ultimate
+tt.bullet.flight_time = fts(20)
+tt.bullet.hit_fx = "fx_bullet_zeppelin_hero_tank"
+tt.bullet.hit_payload = "decal_bullet_zeppelin_hero_tank"
+tt.bullet.align_with_trajectory = false
+tt.bullet.ignore_hit_offset = true
+tt.bullet.pop_chance = 0.5
+tt.bullet.rotation_speed = 10
+tt.sound_events.insert = "HeroMechaDeathFromAboveAttack"
+tt.sound_events.hit = "hero_tank_ultimate_flame"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "hero_tank_ultimate_proyectile"
+
+tt = E:register_t("fx_bullet_zeppelin_hero_tank", "fx")
+tt.render.sprites[1].name = "hero_tank_ultimate_proyectile_explosion_run"
+
+--燃烧效果
+tt = E:register_t("decal_bullet_zeppelin_hero_tank", "decal_scripted")
+E:add_comps(tt,"ranged")
+tt.owner = nil
+tt.owner_idx = nil
+tt.aura_entity = "aura_bullet_zeppelin_hero_tank"
+tt.entity_count = 6
+tt.main_script.update = kr4_scripts.decal_bullet_zeppelin_hero_tank.update
+
+tt = E:register_t("aura_bullet_zeppelin_hero_tank", "aura")
+E:add_comps(tt, "render")
+tt.render.sprites[1].loopin = "hero_tank_ultimate_fire_in"
+tt.render.sprites[1].prefix = "hero_tank_ultimate_fire"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].scale = v(1.3, 1.3)
+tt.render.sprites[1].anchor = v(0.5, 0.2)
+tt.render.sprites[1].z = Z_DECALS + 1
+tt.aura.duration = 4
+tt.aura.mods = {
+	"mod_bullet_zeppelin_hero_tank"
+}
+tt.aura.cycle_time = 0.2
+tt.aura.radius = 70
+tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
+tt.aura.vis_flags = bor(F_MOD, F_AREA)
+tt.main_script.insert = kr4_scripts.aura_apply_mod_tank.insert
+tt.main_script.update = kr4_scripts.aura_apply_mod_tank.update
+
+local tt = E:register_t("mod_bullet_zeppelin_hero_tank", "modifier")
+
+E:add_comps(tt, "dps", "render")
+
+tt.modifier.duration = 0.5
+tt.dps.damage_min = 7
+tt.dps.damage_max = 7
+tt.dps.damage_inc = 0
+tt.dps.damage_type = DAMAGE_TRUE
+tt.dps.damage_every = 0.1
+tt.render.sprites[1].prefix = "hero_tank_ultimate_fire_modifier"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].size_names = {
+	"run",
+	"run",
+	"run"
+}
+tt.render.sprites[1].size_scales = {
+	vv(1),
+	vv(1.4),
+	vv(1.8)
+}
+tt.render.sprites[1].draw_order = 2
+tt.render.sprites[1].loop = true
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+
+
+tt = E:register_t("aura_roundfire_hero_tank", "aura")
+E:add_comps(tt, "render")
+tt.render.sprites[1].prefix = "hero_tank_fire_loop"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].anchor = v(0.5, 0.2)
+tt.render.sprites[1].z = Z_DECALS + 1
+tt.aura.duration = 4
+tt.aura.mods = {
+	"mod_roundfire_hero_tank"
+}
+tt.aura.cycle_time = 0.2
+tt.aura.radius = 65
+tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
+tt.aura.vis_flags = bor(F_MOD, F_AREA)
+tt.main_script.insert = kr4_scripts.aura_apply_mod_tank.insert
+tt.main_script.update = kr4_scripts.aura_apply_mod_tank.update
+
+local tt = E:register_t("mod_roundfire_hero_tank", "modifier")
+
+E:add_comps(tt, "dps", "render")
+
+tt.modifier.duration = 0.4
+tt.dps.damage_min = 2
+tt.dps.damage_max = 2
+tt.dps.damage_inc = 0
+tt.dps.damage_type = DAMAGE_TRUE
+tt.dps.damage_every = 0.2
+tt.render.sprites[1].prefix = "hero_tank_fire"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].size_names = {
+	"run",
+	"run",
+	"run"
+}
+tt.render.sprites[1].size_scales = {
+	vv(1),
+	vv(1.4),
+	vv(1.8)
+}
+tt.render.sprites[1].draw_order = 2
+tt.render.sprites[1].loop = true
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+
+--3技能 召唤物
+
+tt = E:register_t_10086("fx_expendables_respawn", "fx")
+tt.render.sprites[1].name = "hero_tank_expendable1_spawn"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -10
+
+tt = E:register_t_10086("fx_expendables_respawn2", "fx")
+tt.render.sprites[1].name = "hero_tank_expendable2_spawn"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -10
+
+tt = E:register_t("hero_tank_expendables_lvl1", "soldier_militia")
+
+E:add_comps(tt, "melee", "nav_grid")
+tt.info.i18n_key = "HERO_TANK_EXPENDABLES"
+tt.info.enc_icon = 12
+tt.info.portrait = "gui4_bottom_info_image_heroes_0010"
+tt.info.is_here_pandas = 1
+tt.info.fn = scripts.soldier_reinforcement.get_info
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].offset = v(0, 13)
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {
+	"walk"
+}
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].prefix = "hero_tank_expendable1"
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].is_shadow = true
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].anchor.y = 0.11
+tt.render.sprites[2].offset = v(0, 0)
+tt.render.sprites[2].name = "hero_tank_expendable2_shadow"
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.unit.hit_offset = v(0, 16)
+tt.health_bar.type = HEALTH_BAR_SIZE_SMALL
+tt.health_bar.offset = v(0, 28)
+tt.main_script.insert = kr4_scripts.soldier_hero_tank_expendables_apprentice.insert
+tt.main_script.update = kr4_scripts.soldier_hero_tank_expendables_apprentice.update
+tt.regen.health = 7
+tt.regen.cooldown = 1
+tt.idle_flip.last_animation = "idle"
+tt.melee.range = 60
+tt.melee.attacks[1] = E:clone_c("melee_attack")
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_max = 7
+tt.melee.attacks[1].damage_min = 4
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_time = fts(2)
+tt.melee.attacks[1].animation = "melee"
+tt.respawn_fx = "fx_expendables_respawn"
+tt.respawn_fx_timing = fts(9)
+tt.unit.fade_time_after_death = nil
+tt.ui.click_rect = r(-12, -5, 24, 30)
+tt.not_draggable = true
+tt.health.dead_lifetime = 15
+tt.health.hp_max = 160
+tt.health.ignore_delete_after = true
+tt.motion.max_speed = 75
+tt.soldier.melee_slot_offset = v(12, 0)
+tt.ignore_linirea_true_might_revive = true
+
+--3技能 召唤物
+tt = E:register_t("hero_tank_expendables_lvl2", "hero_tank_expendables_lvl1")
+tt.render.sprites[1].prefix = "hero_tank_expendable1"
+tt.melee.attacks[1].damage_max = 10
+tt.melee.attacks[1].damage_min = 6
+tt.health.hp_max = 200
+
+--3技能 召唤物
+tt = E:register_t("hero_tank_expendables_lvl3", "hero_tank_expendables_lvl2")
+E:add_comps(tt, "ranged")
+tt.render.sprites[1].prefix = "hero_tank_expendable2"
+tt.melee.attacks[1].damage_max = 13
+tt.melee.attacks[1].damage_min = 7
+tt.melee.range = 50
+tt.respawn_fx = "fx_expendables_respawn2"
+tt.info.portrait = "gui4_bottom_info_image_heroes_0011"
+tt.ranged.attacks[1] = CC("bullet_attack")
+tt.ranged.attacks[1].animation = "shoot"
+tt.ranged.attacks[1].bullet = "shotgun_hero_tank_expendables"
+tt.ranged.attacks[1].bullet_start_offset = {
+	v(6, 12)
+}
+tt.ranged.attacks[1].cooldown = 0.9
+tt.ranged.attacks[1].max_range = 175
+tt.ranged.attacks[1].min_range = 25
+tt.ranged.attacks[1].shoot_time = fts(16)
+tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
+
+tt = RT("shotgun_hero_tank_expendables", "shotgun")
+tt.bullet.damage_max = 13
+tt.bullet.damage_min = 7
+tt.bullet.hit_blood_fx = "fx_blood_splat"
+--tt.bullet.miss_fx = "fx_smoke_bullet"
+--tt.bullet.start_fx = "fx_rifle_smoke"
+tt.bullet.min_speed = 20 * FPS
+tt.bullet.max_speed = 20 * FPS
+tt.sound_events.insert = "ShotgunSound"
 
 ----------------------------------------------
 ---------------------黑龙----------------------
@@ -1187,9 +1757,9 @@ tt.health_bar.sort_y_offset = -200
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
 tt.info.fn = scripts.hero_basic.get_info_ranged_with_damage_factor
 --tt.main_script.update = kr4_scripts.hero_gerald99.update
-tt.hero.fn_level_up = scripts.hero_beresad.level_up
-tt.main_script.insert = scripts.hero_beresad.insert
-tt.main_script.update = scripts.hero_beresad.update
+tt.hero.fn_level_up = kr4_scripts.hero_beresad.level_up
+tt.main_script.insert = kr4_scripts.hero_beresad.insert
+tt.main_script.update = kr4_scripts.hero_beresad.update
 --暂时取消头像--tt.info.portrait = "info_portraits_hero_0005"
 tt.info.hero_portrait = "kra_hero_portraits_0409"
 tt.info.portrait = "gui4_bottom_info_image_heroes_0008"
@@ -1787,7 +2357,7 @@ tt.dps.kill = true
 tt.modifier.allows_duplicates = true
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
-tt.modifier.duration = 0.2
+tt.modifier.duration = 3.99
 tt.render.sprites[1].prefix = "hero_beresad_ultimate_modifier"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].size_names = {
@@ -2201,7 +2771,7 @@ tt.bullet.acceleration_factor = 0.05
 tt.bullet.hit_fx = "fx_murglun_lavablood_explosion"
 --tt.bullet.hit_decal = "hero_murglun_ultimate_rocks_run"
 tt.bullet.damage_type = DAMAGE_TRUE
-tt.bullet.damage_radius = 43
+tt.bullet.damage_radius = 50
 tt.bullet.damage_min = 23
 tt.bullet.damage_max = 23
 tt.bullet.damage_factor = 1
@@ -2875,43 +3445,88 @@ E:add_comps(tt, "ranged", "timed_attacks")
 
 image_y = 308
 anchor_y = 0.12962962962962962
-E:add_comps(tt, "ranged", "timed_attacks", "auras")
+E:add_comps(tt, "ranged", "timed_attacks", "auras", "teleport")
 tt.health.dead_lifetime = 27
 tt.health_bar.draw_order = -1
-tt.health_bar.offset = v(0, 130)
+tt.health_bar.offset = v(0, 168)
 tt.health_bar.sort_y_offset = -200
-tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
 tt.info.hero_portrait = "kra_hero_portraits_0417"
 tt.info.i18n_key = "HERO_LUCERNA"
 tt.info.ultimate_icon = "0417"
-tt.info.fn = scripts.hero_basic.get_info_ranged_with_damage_factor
---tt.main_script.update = kr4_scripts.hero_gerald99.update
-tt.hero.fn_level_up = scripts.hero_lucerna.level_up
---暂时取消头像--tt.info.portrait = "info_portraits_hero_0005"
+tt.info.fn = kr4_scripts.hero_lucerna.get_info
+tt.hero.fn_level_up = kr4_scripts.hero_lucerna.level_up
+tt.main_script.insert = kr4_scripts.hero_lucerna.insert
+tt.main_script.update = kr4_scripts.hero_lucerna.update
+tt.info.portrait = "gui4_bottom_info_image_heroes_0020"
 tt.motion.max_speed = 1.3 * FPS
 tt.soldier.melee_slot_offset = v(5, 0)
-tt.sound_events.change_rally_point = "HeroPaladinTaunt"
-tt.sound_events.death = "HeroPaladinDeath"
-tt.sound_events.hero_room_select = "HeroPaladinTauntSelect"
-tt.sound_events.insert = "HeroPaladinTauntIntro"
-tt.sound_events.respawn = "HeroPaladinTauntIntro"
+tt.sound_events.change_rally_point = "group_lucerna_taunt"
+tt.sound_events.death = "hero_lucerna_death"
+tt.sound_events.hero_room_select = "hero_lucerna_taunt_1"
+tt.sound_events.insert = "hero_lucerna_taunt_1"
+tt.sound_events.respawn = "hero_lucerna_respawn"
+tt.nav_rally.requires_node_nearby = false
+tt.nav_grid.ignore_waypoints = true
+--不能飞到水上
+tt.all_except_flying_nowalk = bor(TERRAIN_LAND, TERRAIN_ICE)
+tt.nav_grid.valid_terrains = tt.all_except_flying_nowalk
+tt.nav_grid.valid_terrains_dest = tt.all_except_flying_nowalk
+tt.drag_line_origin_offset = v(0, 100)
+tt.teleport.min_distance = 150
+tt.teleport.delay = 0
+tt.teleport.sound = "hero_lucerna_teleport"
+tt.teleport.animations = {
+	"teleportOut",
+	"teleportIn"
+}
+tt.ui.click_rect = r(-45, 30, 90, 90)
+tt.unit.head_offset = v(0, 130)
+tt.unit.hit_offset = v(0, 92)
+tt.unit.mod_offset = v(0, 91)
 tt.unit.marker_offset = v(0, 130)
 tt.unit.mod_offset = v(0, 130+20)
+for i = 1,6 do
+	tt.render.sprites[i] = E:clone_c("sprite")
+	tt.render.sprites[i].anchor.y = 0.04
+	tt.render.sprites[i].name = "idle"
+	tt.render.sprites[i].prefix = "Lucerna_Ship_layer"..i
+	tt.render.sprites[i].angles = {walk = "idle"}
+	tt.render.sprites[i].z = Z_FLYING_HEROES
+	tt.render.sprites[i].group = "layers"
+end
+tt.render.sprites[7] = E:clone_c("sprite")
+tt.render.sprites[7].animated = false
+tt.render.sprites[7].is_shadow = true
+tt.render.sprites[7].name = "Lucerna_Ship_shadow"
+tt.render.sprites[7].z = Z_DECALS + 1
 tt.hero.skills.scurvy_vissage = E:clone_c("hero_skill")
 tt.hero.skills.scurvy_vissage.hr_order = 1
 tt.hero.skills.scurvy_vissage.hr_cost = {3,3,3}
+tt.hero.skills.scurvy_vissage.xp_gain = {125,250,375}
+tt.hero.skills.scurvy_vissage.duration = {1.5,2,2.5}
+tt.hero.skills.scurvy_vissage.damage_duration = {3,4,5}
 tt.hero.skills.fire_at_will = E:clone_c("hero_skill")
 tt.hero.skills.fire_at_will.hr_order = 2
 tt.hero.skills.fire_at_will.hr_cost = {2,1,1}
+tt.hero.skills.fire_at_will.damage_config = {40,60,80}
+tt.hero.skills.fire_at_will.count = {6,7,8}
+tt.hero.skills.fire_at_will.xp_gain = {60,120,180}
 tt.hero.skills.damned_crew = E:clone_c("hero_skill")
 tt.hero.skills.damned_crew.hr_order = 3
-tt.hero.skills.damned_crew.hr_cost = {2,3,3}
+tt.hero.skills.damned_crew.hr_cost = {3,2,3}
+tt.hero.skills.damned_crew.cooldown = {14,12,10}
+tt.hero.skills.damned_crew.xp_gain = {60,120,180}
 tt.hero.skills.pirates_pillage = E:clone_c("hero_skill")
 tt.hero.skills.pirates_pillage.hr_order = 4
 tt.hero.skills.pirates_pillage.hr_cost = {2,2,2}
+tt.hero.skills.pirates_pillage.rate = {0.1,0.25,0.4}
 tt.hero.skills.ultimate = E:clone_c("hero_skill")
 tt.hero.skills.ultimate.hr_order = 5
 tt.hero.skills.ultimate.hr_cost = {3,3,3}
+tt.hero.skills.ultimate.controller_name = "hero_lucerna_ultimate"
+tt.hero.skills.ultimate.duration = {[0]=7,7,7,7}
+tt.hero.skills.ultimate.cooldown = {[0]=48,48,48,48}
 
 tt.hero.level_stats.hp_max = {
 	384,
@@ -2986,13 +3601,343 @@ tt.hero.level_stats.ranged_damage_max = {
 	57
 }
 tt.regen.cooldown = 2
+--普攻
 tt.ranged.attacks[1] = E:clone_c("bullet_attack")
-tt.ranged.attacks[1].cooldown = 1.5
-tt.ranged.attacks[1].min_range = 25
-tt.ranged.attacks[1].max_range = 140
+tt.ranged.attacks[1].cooldown = 1.8
+tt.ranged.attacks[1].min_range = 0
+tt.ranged.attacks[1].max_range = 250
+tt.ranged.attacks[1].animation = "attack"
 tt.ranged.attacks[1].bullet = "bullet_lucerna"
-tt.ranged.attacks[1].shoot_time = fts(13)
+tt.ranged.attacks[1].shoot_time = fts(3)
 tt.ranged.attacks[1].bullet_start_offset = {
-	v(-8, 24)
+	v(40, 90)
 }
-tt = RT("bullet_lucerna", "bolt")
+--3技能
+tt.timed_attacks.list[1] = E:clone_c("spawn_attack")
+tt.timed_attacks.list[1].animation = "summon"
+tt.timed_attacks.list[1].cooldown = 14
+tt.timed_attacks.list[1].disabled = true
+tt.timed_attacks.list[1].entity = "hero_lucerna_golem"
+tt.timed_attacks.list[1].sound = "hero_lucerna_summon"
+tt.timed_attacks.list[1].spawn_time = fts(10)
+tt.timed_attacks.list[1].vis_flags = F_BLOCK
+tt.timed_attacks.list[1].vis_bans = 0
+tt.timed_attacks.list[1].min_range = 0
+tt.timed_attacks.list[1].max_range = 100
+--2技能 轰炸
+tt.timed_attacks.list[2] = E:clone_c("spawn_attack")
+tt.timed_attacks.list[2].animation = "ability"
+tt.timed_attacks.list[2].cooldown = 20
+tt.timed_attacks.list[2].disabled = true
+tt.timed_attacks.list[2].entity = "ability_lucerna"
+tt.timed_attacks.list[2].spawn_time = fts(15)
+tt.timed_attacks.list[2].vis_flags = bor(F_RANGED)
+tt.timed_attacks.list[2].vis_bans = bor(F_FLYING)
+tt.timed_attacks.list[2].min_range = 0
+tt.timed_attacks.list[2].max_range = 200
+tt.timed_attacks.list[2].damage_max = 40
+tt.timed_attacks.list[2].damage_min = 40
+--1技能 恐惧
+tt.timed_attacks.list[3] = E:clone_c("bullet_attack")
+tt.timed_attacks.list[3].skill = "range_unit"
+tt.timed_attacks.list[3].disabled = true
+tt.timed_attacks.list[3].entity = "hero_lucerna_modifier_fear"
+tt.timed_attacks.list[3].damage_entity = "hero_lucerna_modifier_fear_damage"
+tt.timed_attacks.list[3].max_target = 6
+tt.timed_attacks.list[3].min_range = 0
+tt.timed_attacks.list[3].max_range = 150
+tt.timed_attacks.list[3].cooldown = 45
+tt.timed_attacks.list[3].lucerna_animation = "hero_lucerna_fear_run"
+tt.timed_attacks.list[3].cast_time = fts(15)
+tt.timed_attacks.list[3].node_prediction = fts(17)
+tt.timed_attacks.list[3].sync_animation = true
+tt.timed_attacks.list[3].animation = "fear"
+tt.timed_attacks.list[3].sound = "hero_lucerna_scare"
+tt.timed_attacks.list[3].bullet_start_offset = {
+	v(41, 72)
+}
+tt.timed_attacks.list[1].vis_flags = bor(F_RANGED)
+tt.timed_attacks.list[1].vis_bans = bor(F_FRIEND, F_NIGHTMARE, F_FLYING, F_CLIFF, F_WATER)
+
+local missile_mecha = E:register_t("bullet_lucerna", "bullet")
+
+missile_mecha.render.sprites[1].prefix = "Lucerna_projectile"
+missile_mecha.render.sprites[1].loop = true
+missile_mecha.render.sprites[1].flip_x = true
+missile_mecha.bullet.damage_type = DAMAGE_MAGICAL
+missile_mecha.bullet.min_speed = 300
+missile_mecha.bullet.max_speed = 600
+missile_mecha.bullet.turn_speed = 10 * math.pi / 180 * 30
+missile_mecha.bullet.acceleration_factor = 0.2
+missile_mecha.bullet.hit_fx = "fx_explosion_lucerna"
+missile_mecha.bullet.hit_fx_air = "fx_explosion_lucerna_air"
+missile_mecha.bullet.hit_fx_water = "fx_explosion_water"
+missile_mecha.bullet.damage_min = 20
+missile_mecha.bullet.damage_max = 80
+missile_mecha.bullet.damage_radius = 55
+missile_mecha.bullet.vis_flags = F_RANGED
+missile_mecha.bullet.xp_gain_factor = 0.8
+missile_mecha.bullet.damage_flags = F_AREA
+missile_mecha.bullet.particles_name = "ps_missile_lucerna"
+missile_mecha.bullet.retarget_range = 99999
+missile_mecha.bullet.pirates_pillage_rate = 0
+missile_mecha.bullet.got_gold = 3
+missile_mecha.main_script.insert = scripts.missile_lucerna.insert
+missile_mecha.main_script.update = scripts.missile_lucerna.update
+missile_mecha.sound_events.insert = "RocketLaunchSound"
+missile_mecha.sound_events.hit = "BombExplosionSound"
+missile_mecha.sound_events.hit_water = "RTWaterExplosion"
+--[[
+tt = E:register_t("ps_missile_lucerna")
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.name = "Lucerna_projectileTrail_run"
+tt.particle_system.animated = true
+tt.particle_system.animation_fps = 50
+tt.particle_system.loop = false
+tt.particle_system.alphas = { 255, 0 }
+tt.particle_system.particle_lifetime = {
+	fts(16),
+	fts(16)
+}
+tt.particle_system.track_rotation = true
+tt.particle_system.scales_x = {
+    1,
+    1.25
+}
+tt.particle_system.scales_y = {
+    1,
+    1.25
+}
+tt.particle_system.emission_rate = 30
+]]
+--[[
+tt = E:register_t("ps_missile_lucerna")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "Lucerna_projectileTrail_run"
+tt.particle_system.animated = true
+tt.particle_system.animation_fps = 15
+tt.particle_system.particle_lifetime = {
+	1.6,
+	1.8
+}
+tt.particle_system.alphas = {
+	255,
+	0
+}
+tt.particle_system.scales_x = {
+	1,
+	3
+}
+tt.particle_system.scales_y = {
+	1,
+	3
+}
+tt.particle_system.scale_var = {
+	0.4,
+	0.95
+}
+tt.particle_system.scale_same_aspect = false
+tt.particle_system.emit_spread = math.pi
+tt.particle_system.emission_rate = 30
+]]
+
+tt = E:register_t("ps_missile_lucerna")
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.name = "Lucerna_projectileTrail_run"
+tt.particle_system.animated = true
+tt.particle_system.animation_fps = 50
+tt.particle_system.loop = false
+tt.particle_system.alphas = { 255, 0 }
+tt.particle_system.particle_lifetime = {
+	fts(16),
+	fts(16)
+}
+tt.particle_system.track_rotation = true
+tt.particle_system.scales_x = {
+    1,
+    1.25
+}
+tt.particle_system.scales_y = {
+    1,
+    1.25
+}
+tt.particle_system.emission_rate = 30
+
+tt = E:register_t("hero_lucerna_ultimate")
+E:add_comps(tt, "user_item", "pos", "main_script", "user_selection","sound_events", "attacks", "render")
+tt.can_fire_fn = kr4_scripts.controller_lucerna_ultimate.can_fire_fn
+--tt.sound_events.insert = "HeroEiskaltBreath"
+tt.level = 0
+tt.cooldown = 48
+tt.entity = "totem_lucerna"
+tt.main_script.update = kr4_scripts.lucerna_ultimate.update
+
+
+tt = E:register_t("totem_lucerna")
+E:add_comps(tt, "pos", "main_script","sound_events", "attacks", "render")
+tt.level = 0
+tt.duration = 7
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].anchor.y = 0.04
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].prefix = "Lucerna_totemDecal"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].offset = v(0,-38)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].offset = v(0,-38)
+tt.render.sprites[2].anchor.y = 0.04
+tt.render.sprites[2].name = "idle"
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].prefix = "Lucerna_totem"
+tt.attacks.list[1] = E:clone_c("bullet_attack")
+tt.attacks.list[1].animation = "summon"
+tt.attacks.list[1].bullet_start_offset = {
+	v(0, -11),
+	v(0, 6)
+}
+tt.attacks.list[1].bullet = {
+	"fx_bolt_possession_spawn_lucerna",
+	"bolt_possession_lucerna",
+}
+tt.attacks.list[1].cooldown = 0.85
+tt.attacks.list[1].range = 150
+tt.attacks.list[1].vis_bans = bor(F_BOSS, F_MINIBOSS, F_FLYING, F_NIGHTMARE, F_CLIFF, F_WATER)
+tt.attacks.list[1].vis_flags = bor(F_RANGED, F_BLOCK, F_POLYMORPH)
+tt.attacks.list[1].shoot_time = 0.3
+tt.attacks.list[1].excluded_templates = {}
+tt.main_script.update = kr4_scripts.totem_lucerna.update
+tt.sound_events.sound_in = "hero_lucerna_ultimate_in"
+tt.sound_events.sound_out = "hero_lucerna_ultimate_out"
+tt.sound_events.sound_cast = "hero_lucerna_ultimate_flagcast"
+
+--策反
+tt = E:register_t("fx_bolt_possession_spawn_lucerna", "fx")
+tt.render.sprites[1].name = "Lucerna_possession_projectile_spawn"
+tt.render.sprites[1].anchor = v(0.5, 0.14)
+tt.render.sprites[1].z = Z_OBJECTS + 1
+
+tt = E:register_t("fx_bolt_possession_hit_lucerna", "fx_bolt_possession_hit")
+tt.render.sprites[1].name = "Lucerna_possession_projectile_hit"
+
+tt = RT("mod_possession_lucerna", "mod_possession")
+tt.render.sprites[1].prefix = "Lucerna_possession_decal"
+tt.possession_duration = {[0]=8,9,11,13}
+
+tt = E:register_t("bolt_possession_lucerna", "initial_bolt")
+tt.render.sprites[1].name = "Lucerna_possession_projectile_travel"
+tt.bullet.mod = "mod_possession_lucerna"
+tt.bullet.hit_fx = "fx_bolt_possession_hit_lucerna"
+tt.sound_events.insert = "hero_lucerna_ultimate_flagcast"
+tt.sound_events.hit = "hero_lucerna_possession_hit"
+
+tt = E:register_t("hero_lucerna_golem", "deckhand_goblin_red_lvl1")
+AC(tt, "reinforcement")
+tt.main_script.update = kr4_scripts.soldier_golem_lucerna.update
+tt.health_bar.offset = v(0, 50)
+tt.health.armor = 0
+tt.health.hp_max = 120
+tt.regen.health = 0
+tt.regen.cooldown = 2
+tt.info.portrait = "gui4_bottom_info_image_soldiers_0059"
+tt.melee.attacks[1].cooldown = 1.5
+tt.melee.attacks[1].damage_max = 20
+tt.melee.attacks[1].damage_min = 10
+tt.render.sprites[1].prefix = "lucerna_unitghosts"
+tt.render.sprites[1].name = "idle"
+tt.reinforcement.duration = 7.5
+tt.reinforcement.fade = true
+tt.patrol_pos_offset = v(15, 10)
+tt.patrol_min_cd = 3
+tt.patrol_max_cd = 6
+
+local fx_explosion_big = E:register_t("fx_explosion_lucerna", "fx")
+
+fx_explosion_big.render.sprites[1].prefix = "Lucerna_explosion"
+fx_explosion_big.render.sprites[1].name = "run"
+fx_explosion_big.render.sprites[1].offset = v(0, -30)
+fx_explosion_big.render.sprites[1].scale = v(1.4,1.4)
+fx_explosion_big.render.sprites[1].anchor.y = 0.13
+fx_explosion_big.render.sprites[1].z = Z_OBJECTS
+fx_explosion_big.render.sprites[1].sort_y_offset = 0 -- -2
+
+local fx_explosion_big = E:register_t("fx_explosion_lucerna_air", "fx")
+
+fx_explosion_big.render.sprites[1].prefix = "Lucerna_explosion"
+fx_explosion_big.render.sprites[1].name = "run"
+fx_explosion_big.render.sprites[1].offset = v(0, -15)
+fx_explosion_big.render.sprites[1].scale = v(1.4,1.4)
+fx_explosion_big.render.sprites[1].anchor.y = 0.13
+fx_explosion_big.render.sprites[1].z = Z_OBJECTS
+fx_explosion_big.render.sprites[1].sort_y_offset = 0 -- -2
+
+local fx_explosion_big = E:register_t("fx_explosion_lucerna_ability", "fx")
+
+fx_explosion_big.render.sprites[1].prefix = "Lucerna_Ship_ability"
+fx_explosion_big.render.sprites[1].offset = v(0, -30)
+fx_explosion_big.render.sprites[1].name = "run"
+fx_explosion_big.render.sprites[1].anchor.y = 0.13
+fx_explosion_big.render.sprites[1].z = Z_OBJECTS
+fx_explosion_big.render.sprites[1].sort_y_offset = -2
+
+tt = RT("ability_lucerna", "g1_bomb")
+tt.bullet.flight_time = fts(1)
+tt.bullet.rotation_speed = 20 * FPS * math.pi / 180
+tt.bullet.hit_fx = "fx_explosion_lucerna_ability"
+tt.bullet.hit_decal = "decal_bomb_crater"
+tt.bullet.hit_fx_water = "fx_explosion_water"
+tt.bullet.damage_type = DAMAGE_EXPLOSION
+tt.bullet.damage_min = 40
+tt.bullet.damage_max = 40
+tt.bullet.damage_radius = 55
+tt.bullet.pop = nil
+tt.bullet.to = v(0,0)
+tt.bullet.from = v(0,0)
+tt.bullet.damage_flags = F_AREA
+tt.bullet.hide_radius = 8
+tt.render.sprites[1].name = "g1_bombs_0001"
+tt.render.sprites[1].animated = false
+tt.sound_events.insert = nil --"BombShootSound"
+tt.sound_events.hit = "BombExplosionSound"
+tt.sound_events.hit_water = "RTWaterExplosion"
+
+--1技能 恐惧
+
+tt = E:register_t("hero_lucerna_fear_run", "fx")
+tt.render.sprites[1].name = "Lucerna_run"
+tt.render.sprites[1].anchor = v(0.5, 0.14)
+tt.render.sprites[1].z = Z_OBJECTS + 1
+
+tt = RT("hero_lucerna_modifier_fear", "mod_hero_jacko_horse_intimidation")
+tt.modifier.duration = 1.5
+tt.speed_factor = 1.2
+tt.render.sprites[1].name = "Lucerna_fearModifier_run"
+
+tt = E.register_t(E, "hero_lucerna_modifier_fear_damage", "modifier")
+E.add_comps(E, tt, "dps", "render")
+tt.dps.damage_min = 6
+tt.dps.damage_max = 6
+tt.dps.damage_inc = 0
+tt.dps.damage_type = DAMAGE_TRUE
+tt.dps.damage_every = 0.2
+tt.dps.kill = true
+tt.modifier.allows_duplicates = true
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt.modifier.duration = 3
+tt.render.sprites[1].prefix = "Lucerna_fearDecal"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].size_names = {
+	"run",
+	"run",
+	"run"
+}
+tt.render.sprites[1].size_scales = {
+	vv(1),
+	vv(1.4),
+	vv(1.8)
+}
+tt.render.sprites[1].draw_order = 10
+

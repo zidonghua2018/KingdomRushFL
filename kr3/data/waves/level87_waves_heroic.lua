@@ -2,7 +2,7 @@
 
 return {
 	cash = 2187,
-	lives = 20
+	lives = 20,
 	groups = {
 		{
 			--1

@@ -3857,7 +3857,24 @@ function InfoBar:update_stats()
 
 		sv.l_damage:set_image(damage_icon, V.v(sv.l_damage.size.x, sv.l_damage.size.y))
 
-		sv.l_armor.text = GU.armor_value_desc(stats.armor)
+		--sv.l_armor.text = GU.armor_value_desc(stats.armor)
+		if stats.armor ~= 0 or stats.magic_armor == 0 or (stats.armor == 0 and stats.magic_armor == 0) then
+			local original_w = sv.l_armor.size.x
+
+			sv.l_armor.text = GU.armor_value_desc(stats.armor)
+
+			sv.l_armor:set_image("base_info_icons_0003", V.v(sv.l_armor.w, sv.l_armor.h))
+
+			sv.l_armor.size.x = original_w
+		else
+			local original_w = sv.l_armor.size.x
+
+			sv.l_armor.text = GU.armor_value_desc(stats.magic_armor)
+
+			sv.l_armor:set_image("base_info_icons_0004", V.v(sv.l_armor.w, sv.l_armor.h))
+
+			sv.l_armor.size.x = original_w
+		end
 		sv.l_respawn.text = stats.respawn and string.format(_("%i sec."), stats.respawn) or "-"
 	elseif stats.type == STATS_TYPE_TEXT then
 		sv.l_desc.text = _(stats.desc)
@@ -7647,7 +7664,7 @@ function TowerMenuButton:update(dt)
 		local price = nt.unit.price
 
 		if entity.template_name == "tower_stage_18_elven_barrack" then
-			if price > store.player_gold or entity.barrack.max_soldiers == 3 then 
+			if price > store.player_gold or entity.barrack.current_soldiers == 3 then 
 				self:disable()
 			else
 				self:enable()

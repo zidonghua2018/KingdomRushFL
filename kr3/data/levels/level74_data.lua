@@ -595,7 +595,7 @@ return {
 		},
 		{
 			["tower.holder_id"] = "2",
-			["tower.terrain_style"] = 1,
+			["tower.terrain_style"] = 12,
 			template = "tower_holder_grass",
 			["editor.game_mode"] = 0,
 			["ui.nav_mesh_id"] = "2",
@@ -610,7 +610,7 @@ return {
 		},
 		{
 			["tower.holder_id"] = "2",
-			["tower.terrain_style"] = 1,
+			["tower.terrain_style"] = 12,
 			template = "tower_steam_troop",
 			["editor.game_mode"] = 1,
 			["ui.nav_mesh_id"] = "2",
@@ -625,7 +625,7 @@ return {
 		},
 		{
 			["tower.holder_id"] = "2",
-			["tower.terrain_style"] = 1,
+			["tower.terrain_style"] = 12,
 			template = "tower_steam_troop",
 			["editor.game_mode"] = 2,
 			["ui.nav_mesh_id"] = "2",
@@ -640,7 +640,7 @@ return {
 		},
 		{
 			["tower.holder_id"] = "2",
-			["tower.terrain_style"] = 1,
+			["tower.terrain_style"] = 12,
 			template = "tower_holder_grass",
 			["editor.game_mode"] = 3,
 			["ui.nav_mesh_id"] = "2",
@@ -655,7 +655,7 @@ return {
 		},
 		{
 			["tower.holder_id"] = "2",
-			["tower.terrain_style"] = 1,
+			["tower.terrain_style"] = 12,
 			template = "tower_holder_grass",
 			["editor.game_mode"] = 0,
 			["ui.nav_mesh_id"] = "2",
@@ -670,7 +670,7 @@ return {
 		},
 		{
 			["tower.holder_id"] = "2",
-			["tower.terrain_style"] = 1,
+			["tower.terrain_style"] = 12,
 			template = "tower_holder_grass",
 			["editor.game_mode"] = 0,
 			["ui.nav_mesh_id"] = "2",
@@ -685,7 +685,7 @@ return {
 		},
 		{
 			["tower.holder_id"] = "2",
-			["tower.terrain_style"] = 1,
+			["tower.terrain_style"] = 12,
 			template = "tower_holder_grass",
 			["editor.game_mode"] = 0,
 			["ui.nav_mesh_id"] = "2",
@@ -700,7 +700,7 @@ return {
 		},
 		{
 			["tower.holder_id"] = "2",
-			["tower.terrain_style"] = 1,
+			["tower.terrain_style"] = 12,
 			template = "tower_holder_grass",
 			["editor.game_mode"] = 0,
 			["ui.nav_mesh_id"] = "2",
@@ -715,7 +715,7 @@ return {
 		},
 		{
 			["tower.holder_id"] = "2",
-			["tower.terrain_style"] = 1,
+			["tower.terrain_style"] = 12,
 			template = "tower_holder_grass",
 			["editor.game_mode"] = 0,
 			["ui.nav_mesh_id"] = "2",
@@ -730,7 +730,7 @@ return {
 		},
 		{
 			["tower.holder_id"] = "2",
-			["tower.terrain_style"] = 1,
+			["tower.terrain_style"] = 12,
 			template = "tower_holder_grass",
 			["editor.game_mode"] = 0,
 			["ui.nav_mesh_id"] = "2",
@@ -745,7 +745,7 @@ return {
 		},
 		{
 			["tower.holder_id"] = "2",
-			["tower.terrain_style"] = 1,
+			["tower.terrain_style"] = 12,
 			template = "tower_holder_grass",
 			["editor.game_mode"] = 0,
 			["ui.nav_mesh_id"] = "2",
@@ -760,7 +760,7 @@ return {
 		},
 		{
 			["tower.holder_id"] = "3",
-			["tower.terrain_style"] = 1,
+			["tower.terrain_style"] = 12,
 			template = "tower_holder_grass",
 			["editor.game_mode"] = 0,
 			["ui.nav_mesh_id"] = "3",
@@ -775,7 +775,7 @@ return {
 		},
 		{
 			["tower.holder_id"] = "3",
-			["tower.terrain_style"] = 1,
+			["tower.terrain_style"] = 12,
 			template = "tower_holder_grass",
 			["editor.game_mode"] = 0,
 			["ui.nav_mesh_id"] = "3",
@@ -790,7 +790,7 @@ return {
 		},
 		{
 			["tower.holder_id"] = "3",
-			["tower.terrain_style"] = 1,
+			["tower.terrain_style"] = 12,
 			template = "tower_holder_grass",
 			["editor.game_mode"] = 0,
 			["ui.nav_mesh_id"] = "3",

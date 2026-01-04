@@ -1,6 +1,6 @@
 local a = {
 	---重生
-	build_terrain_0009_1 = {
+	build_terrain_0032 = {
 		a_name = "go_towers_bloodlust-1.dds",
 		size = {
 			176,
@@ -24,7 +24,7 @@ local a = {
 		},
 		alias = {}
 	},
-	build_terrain_0009_1_over = {
+	build_terrain_0032_over = {
 		a_name = "go_towers_bloodlust-1.dds",
 		size = {
 			176,
@@ -47,7 +47,55 @@ local a = {
 			84
 		},
 		alias = {}
-	},	
+	},
+	terrains_0032 = {
+		a_name = "go_towers_bloodlust-1.png",
+		size = {
+			176,
+			88
+		},
+		trim = {
+			19,
+			10,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			548,
+			141,
+			136,
+			70
+		},
+		alias = {}
+	},
+	terrains_0032_over = {
+		a_name = "go_towers_bloodlust-1.png",
+		size = {
+			176,
+			88
+		},
+		trim = {
+			19,
+			10,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			724,
+			141,
+			136,
+			70
+		},
+		alias = {}
+	},		
 	terrain_archer_0009 = {
 		a_name = "go_towers_bloodlust-1.dds",
 		size = {

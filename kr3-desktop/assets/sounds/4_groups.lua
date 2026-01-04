@@ -98,6 +98,8 @@ return{
 			"kr4_hero_jacko_taunt_4.ogg",
             "kr4_hero_murglun_taunt_1.ogg",
             "kr4_hero_beresad_taunt_1.ogg",
+            "kr_voice_lucerna_select01_a.ogg",
+            "kr4_hero_tank_taunt_1.ogg",
         }
     },
     tower_twilight_elves_barrack = {
@@ -484,6 +486,51 @@ return{
             "kr4_hero_beresad_taunt_3.ogg",
             "kr4_hero_beresad_taunt_4.ogg",
             "kr4_hero_beresad_taunt_death.ogg",
+        }
+    },      
+    hero_lucerna = {
+        files = {
+            "kr_voice_lucerna_death_b.ogg",
+            "kr_voice_lucerna_select01_a.ogg",
+            "kr_voice_lucerna_select02_c.ogg",
+            "kr_voice_lucerna_select03_d.ogg",
+            "kr_voice_lucerna_select04_a.ogg",
+            "krv_sfx_hero_lucerna_attack_var1_v1.ogg",
+            "krv_sfx_hero_lucerna_attack_var2_v1.ogg",
+            "krv_sfx_hero_lucerna_attack_var3_v1.ogg",
+            "krv_sfx_hero_lucerna_ghost_summon_op1_v1.ogg",
+            "krv_sfx_hero_lucerna_ghost_summon_op2_v1.ogg",
+            "krv_sfx_hero_lucerna_ghost_summon_op3_v1.ogg",
+            "krv_sfx_hero_lucerna_ghost_summon_op4_v1.ogg",
+            "krv_sfx_hero_lucerna_respawn_v1.ogg",
+            "krv_sfx_hero_lucerna_scare_op1_v1.ogg",
+            "krv_sfx_hero_lucerna_scare_op2_v1.ogg",
+            "krv_sfx_hero_lucerna_teleport_v1.ogg",
+            "krv_sfx_hero_lucerna_ultimate_flag_ghostCast_var1_v1.ogg",
+            "krv_sfx_hero_lucerna_ultimate_flag_ghostCast_var2_v1.ogg",
+            "krv_sfx_hero_lucerna_ultimate_flag_ghostCast_var3_v1.ogg",
+            "krv_sfx_hero_lucerna_ultimate_flag_totem-In_v1.ogg",
+            "krv_sfx_hero_lucerna_ultimate_flag_totem-Out_1.ogg",
+            "kr4_fallen_ones_spirit_mausoleum_possession_hit.ogg",
+        }
+    },
+    hero_tank = {
+        files = {
+            "kr4_hero_tank_airstrike_bomb.ogg",
+            "kr4_hero_tank_airstrike_flames.ogg",
+            "kr4_hero_tank_groundslam_impact.ogg",
+            "kr4_hero_tank_groundslam_lift.ogg",
+            "kr4_hero_tank_scorching_loop.ogg",
+            "kr4_hero_tank_scorching_loopend.ogg",
+            "kr4_hero_tank_scorching_loopstart.ogg",
+            "kr4_hero_tank_taunt_1.ogg",
+            "kr4_hero_tank_taunt_2.ogg",
+            "kr4_hero_tank_taunt_3.ogg",
+            "kr4_hero_tank_taunt_4.ogg",
+            "kr4_hero_tank_taunt_death.ogg",
+            "kra_sfx_heroes_onagro_deathFromAbove_attack_shot_var1_v1.ogg",
+			"kra_sfx_heroes_onagro_deathFromAbove_attack_shot_var2_v1.ogg",
+			"kra_sfx_heroes_onagro_deathFromAbove_attack_shot_var3_v1.ogg",
         }
     },
     sounds_stage426 = {

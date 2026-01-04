@@ -863,8 +863,8 @@ function upgrades:patch_templates(max_level)
 			"arrow_hammerhold",
 			"arrow_hammerhold_1",
 			---
-			--"dwarf_shotgun",
-			--"pirate_watchtower_shotgun",	
+			"dwarf_shotgun",
+			"pirate_watchtower_shotgun",	
 		}) do
 			T(n).bullet.damage_min = math.ceil(T(n).bullet.damage_min * u.damage_factor)
 			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
@@ -903,8 +903,8 @@ function upgrades:patch_templates(max_level)
 			"arrow_hammerhold",
 			"arrow_hammerhold_1",
 			---
-			--"dwarf_shotgun",
-			--"pirate_watchtower_shotgun",			
+			"dwarf_shotgun",
+			"pirate_watchtower_shotgun",			
 		}) do
 			T(n).bullet.damage_min = math.ceil(T(n).bullet.damage_min * u.damage_factor)
 			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
@@ -1726,9 +1726,7 @@ function upgrades:patch_templates(max_level)
 			T("soldier_mecha").attacks.list[2],
 			T("soldier_mecha").attacks.list[3],
 			T("tower_sandworm").attacks.list[2],
-			T("soldier_tremor").melee.attacks[1],
 			T("tower_frankenstein").attacks.list[1],	
-			T("soldier_frankenstein").melee.attacks[1],
 			T("soldier_frankenstein").melee.attacks[2]
 		}) do
 			a.cooldown = a.cooldown * u.cooldown_factor

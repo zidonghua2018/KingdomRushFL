@@ -1718,7 +1718,27 @@ function sys.game_upgrades:on_insert(entity, store)
 		"mage",
 		"g2_mage",
 		"archmage",
-		"necromancer"
+		"necromancer",
+		"g1_mage",
+
+		"wicked_sisters",
+		"deep_devils",
+		"blazing_watcher",
+		"orc_shaman",
+		"spirit_mausoleum",
+		"infernal_mage",
+
+		"arcane_wizard5",
+		"arborean_emissary",
+		"necromancer5",
+		"elven_stargazers",
+		"ray",
+
+		"arcane",
+		"wild_magus",
+		"high_elven",
+		"arcane_wizard",
+		"sorcerer",
 	}
 	local mage_bullet_names = {
 		"bolt_1",
@@ -1768,7 +1788,26 @@ function sys.game_upgrades:on_remove(entity, store)
 		"mage",
 		"g2_mage",
 		"archmage",
-		"necromancer"
+		"necromancer",
+
+		"wicked_sisters",
+		"deep_devils",
+		"blazing_watcher",
+		"orc_shaman",
+		"spirit_mausoleum",
+		"infernal_mage",
+
+		"arcane_wizard5",
+		"arborean_emissary",
+		"necromancer5",
+		"elven_stargazers",
+		"ray",
+
+		"arcane",
+		"wild_magus",
+		"high_elven",
+		"arcane_wizard",
+		"sorcerer"
 	}
 	local mage_bullet_names = {
 		"bolt_1",
@@ -1835,8 +1874,10 @@ function sys.main_script:on_update(dt, ts, store)
 				local success, error = coroutine.resume(s.co, e, store, s)
 
 				if coroutine.status(s.co) == "dead" and not success and error ~= nil or (not success and error ~= nil) then
-					--log.error("Error running coro: %s", debug.traceback(s.co, error))
-
+					if debug.traceback(s.co, error) ~= "cannot resume dead coroutine\nstack traceback:" then
+						
+						log.error("Error running coro: %s", debug.traceback(s.co, error))
+					end
 					s.co = nil
 				end
 			end

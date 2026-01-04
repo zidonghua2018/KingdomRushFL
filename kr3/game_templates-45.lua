@@ -13,6 +13,7 @@ local image_y = 0
 local tt, b
 local scripts = require("game_scripts-5")
 local kr1_scripts = require("game_scripts-1")
+local scripts_rebbborn = require("game_scripts-1-rebbborn")
 local kr4_scripts = require("game_scripts-45")
 
 require("templates")
@@ -469,6 +470,7 @@ tt.render.sprites[2].offset = v(0, 40)
 tt = E:register_t("tower_blazing_watcher_lvl1", "tower_KR5")
 E:add_comps(tt, "attacks", "vis")
 --防御塔基本信息
+tt.attack_stage = 1
 tt.tower.type = "blazing_watcher"
 tt.tower.kind = TOWER_KIND_MAGE
 tt.tower.team = TEAM_LINIREA
@@ -488,12 +490,12 @@ tt.info.damage_icon = "magic"
 tt.info.stat_damage = 9
 tt.info.stat_range = 5
 tt.info.stat_cooldown = 3
---tt.info.fn = kr4_scripts.tower_blazing_watcher.insert.get_info
+tt.info.fn = kr4_scripts.tower_blazing_watcher.get_info
 --攻击方式
 
 tt.attacks.min_cooldown = 1.2
 tt.attacks.range = 150
-tt.attacks.extra_range = 25
+tt.attacks.extra_range = 15
 tt.attacks.attack_delay_on_spawn = fts(5)
 tt.attacks.list[1] = E:clone_c("bullet_attack")
 tt.attacks.list[1].bullet = "bullet_tower_blazing_watcher_lvl1"
@@ -504,7 +506,7 @@ tt.attacks.list[1].duration = 9999
 tt.attacks.list[1].bullet_start_offset = v(1, 72)
 tt.attacks.list[1].ignore_out_of_range_check = 1
 tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
-tt.attacks.list[1].vis_flags = bor(F_RANGED)
+tt.attacks.list[1].vis_flags = bor(F_RANGED, F_AREA)
 
 --动画
 --第一个是要保留的。动画默认设置为true，如果不是动画需要手动false
@@ -579,6 +581,7 @@ tt.tower.level = 4
 tt.tower.price = 300
 tt.tower.menu_offset = v(0, 22)
 tt.tower.size = TOWER_SIZE_LARGE
+tt.attack_stage_max = 4
 tt.attacks.range = 187.5
 tt.attacks.list[1].bullet = "bullet_tower_blazing_watcher_lvl4"
 tt.attacks.list[1].bullet_start_offset = v(1, 76)
@@ -707,7 +710,7 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.render.sprites[1].scale = vv(1)
 tt.damage_from_bullet = true
-tt.damage_tiers = {1,2,3,4}
+tt.damage_tiers = {1,2,3,4,5,6,7,8,9,10}
 tt.tween.props[1].keys = {
 	{
 		0,
@@ -3129,7 +3132,7 @@ tt.bullet.damage_type = b.ultimate.damage_type
 tt.bullet.damage_min = 120
 tt.bullet.damage_max = 180
 tt.bullet.hit_fx = "fx_hero_dianyun_lightning_hit"
-tt.bullet.mod = "mod_stun_electric_son"
+--tt.bullet.mod = "mod_stun_electric_son"
 tt.bullet.max_speed = 600
 tt.bullet.align_with_trajectory = true
 tt.bullet.min_speed = 30
@@ -3752,7 +3755,7 @@ for i = 2, 3 do
 	tt.render.sprites[i].name = "idle"
 	tt.render.sprites[i].group = "layers"
 	tt.render.sprites[i].offset = v(0, 31)
-	tt.render.sprites[i].z = Z_TOWER_BASES
+	tt.render.sprites[i].z = Z_OBJECTS--Z_TOWER_BASES
 end
 --动画？
 tt.sound_events.insert = "BalloonTaunt"
@@ -3771,13 +3774,13 @@ for i = 2, 3 do
 	tt.render.sprites[i].name = "idle"
 	tt.render.sprites[i].group = "layers"
 	tt.render.sprites[i].offset = v(0, 31)
-	tt.render.sprites[i].z = Z_TOWER_BASES
+	tt.render.sprites[i].z = Z_OBJECTS--Z_TOWER_BASES
 end
 tt.render.sprites[4] = E:clone_c("sprite")
 tt.render.sprites[4].prefix = "warmongers_baloon_tower_base_flag"
 tt.render.sprites[4].name = "run"
 tt.render.sprites[4].offset = v(25, 82)
-tt.render.sprites[4].z = Z_TOWER_BASES
+tt.render.sprites[4].z = Z_OBJECTS--Z_TOWER_BASES
 
 tt = E:register_t("tower_balloon_lvl3", "tower_balloon_lvl1")
 tt.info.i18n_key = "TOWER_WARMONGER_BALLOON_LEVEL3"
@@ -3791,13 +3794,13 @@ for i = 2, 3 do
 	tt.render.sprites[i].name = "idle"
 	tt.render.sprites[i].group = "layers"
 	tt.render.sprites[i].offset = v(0, 31)
-	tt.render.sprites[i].z = Z_TOWER_BASES
+	tt.render.sprites[i].z = Z_OBJECTS--Z_TOWER_BASES
 end
 tt.render.sprites[4] = E:clone_c("sprite")
 tt.render.sprites[4].prefix = "warmongers_baloon_tower_base_flag"
 tt.render.sprites[4].name = "run"
 tt.render.sprites[4].offset = v(29, 88)
-tt.render.sprites[4].z = Z_TOWER_BASES
+tt.render.sprites[4].z = Z_OBJECTS--Z_TOWER_BASES
 
 tt = E:register_t("tower_balloon_lvl4", "tower_balloon_lvl1")
 E:add_comps(tt, "powers", "attacks")
@@ -3812,13 +3815,13 @@ for i = 2, 3 do
 	tt.render.sprites[i].name = "idle"
 	tt.render.sprites[i].group = "layers"
 	tt.render.sprites[i].offset = v(0, 31)
-	tt.render.sprites[i].z = Z_TOWER_BASES
+	tt.render.sprites[i].z = Z_OBJECTS--Z_TOWER_BASES
 end
 tt.render.sprites[4] = E:clone_c("sprite")
 tt.render.sprites[4].prefix = "warmongers_baloon_tower_base_lvl4_light"
 tt.render.sprites[4].name = "run"
 tt.render.sprites[4].offset = v(25, 95)
-tt.render.sprites[4].z = Z_TOWER_BASES
+tt.render.sprites[4].z = Z_OBJECTS--Z_TOWER_BASES
 
 tt.powers.bomber = E:clone_c("power")
 tt.powers.bomber.price_base = 136
@@ -4299,7 +4302,7 @@ tt.render.sprites[1].name = "baloon_tower_buff_run"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].anchor.y = 0.21
 tt.render.sprites[1].offset.y = -15
-tt.render.sprites[1].z = Z_TOWER_BASES + 1
+tt.render.sprites[1].z = Z_OBJECTS + 1--Z_TOWER_BASES
 
 --[[
 for i, p in ipairs({
@@ -4721,7 +4724,7 @@ tt.sound_events.insert = "DeepDevilCatch"
 tt.bullet.align_with_trajectory = true
 tt.extra_bolt_range = 100
 tt.extra_bolt = 0--2
-tt.main_script.insert = kr1_scripts.bolt_net.insert
+tt.main_script.insert = scripts_rebbborn.bolt_net.insert
 
 tt = E:register_t("mod_deep_devils_net_lvl1", "mod_stun")
 AC(tt, "render")
@@ -5003,7 +5006,7 @@ tt.bullet.damage_max = 9999999
 tt.bullet.damage_min = 9999999
 tt.bullet.damage_every = 0.25
 tt.bullet.damage_type = bor(DAMAGE_EAT, DAMAGE_NO_SPAWNS)
-tt.bullet.damage_radius = 80
+tt.bullet.damage_radius = 40
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].name = nil--"worm_nest_level4_spit_proyectile"
 tt.render.sprites[1].anchor = v(0.4, 0.5)
@@ -5631,10 +5634,10 @@ tt.hero.skills.ultimate.cooldown = {
 	40
 }
 tt.hero.skills.ultimate.damage_over_time = {
-	[0] = 12,
+	[0] = 6,
+	10,
 	20,
-	40,
-	60
+	30
 }
 tt.hero.skills.ultimate.max_range = 250
 tt.hero.skills.ultimate.range_nodes_max = 45
@@ -5783,6 +5786,7 @@ tt.bullet.rotation_speed = 3 * FPS * math.pi / 20
 tt.bullet.pop_chance = 0.1
 tt.sound_events.insert = "ArrowSound"
 tt.bullet.hit_fx = "fx_hero_jack_o_lantern_explosion"
+tt.bullet.hit_fx_air = "fx_hero_jack_o_lantern_explosion"
 tt.bullet.hit_fx_water = "fx_hero_jack_o_lantern_explosion"
 tt.render.sprites[1].name = "hero_jack_o_lantern_head_proyectile"
 

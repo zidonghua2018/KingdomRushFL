@@ -2167,7 +2167,7 @@ return {
         f_quad = {817,1399,86,86},
         alias = {}
     },
-    info_portraits_sc_0094 = {
+    info_portraits_sc_0103 = {
         a_name = "gui_portraits-0.png",
         size = {96,96},
         trim = {0,0,10,10},

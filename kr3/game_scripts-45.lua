@@ -716,8 +716,8 @@ function scripts.tower_blazing_watcher.get_info(this)
 
 	o.type = STATS_TYPE_TOWER_MAGE
 	
-	local min = math.ceil(b.bullet.damage_min * this.tower.damage_factor)
-	local max = math.ceil(b.bullet.damage_max * this.tower.damage_factor)
+	local min = math.ceil(b.bullet.damage_min * this.tower.damage_factor * this.attack_stage)
+	local max = math.ceil(b.bullet.damage_max * this.tower.damage_factor * this.attack_stage)
 
 	o.damage_min = min
 	o.damage_max = max
@@ -865,19 +865,21 @@ function scripts.tower_blazing_watcher.update(this, store)
 							while enemy and not enemy.health.dead and not enemy.trigger_deselect and b and not b.force_stop_ray and not this.tower.blocked and not enemy._blazing_deselect and V.dist2(tpos(this).x, tpos(this).y, enemy.pos.x, enemy.pos.y) <= range_to_stay * range_to_stay do
 								local charge_time = store.tick_ts - charge_start
 								if charge_time > 3.6 then
-									if pow_c and pow_c.level >= 1 and this.attack_stage ~= 4 then
+									if pow_c and pow_c.level >= 1 and this.attack_stage < 4 then
 										U.animation_start(this, "level4Loop", nil, store.tick_ts, true, 3)
-										this.attack_stage = 4
+									end
+									if pow_c and pow_c.level >= 1 then
+										this.attack_stage = math.min(4 + math.floor((charge_time-3.6) / 2.4), this.attack_stage_max)
 									end
 								elseif charge_time > 2.4 then
-									if this.attack_stage ~= 3 then
+									if this.attack_stage < 3 then
 										this.attack_stage = 3
 									end
 									if not pow_c or pow_c.level < 1 then
 										charge_start = store.tick_ts - 2.4
 									end
 								elseif charge_time > 1.2 then
-									if this.attack_stage ~= 2 then
+									if this.attack_stage < 2 then
 										this.attack_stage = 2
 									end
 								end
@@ -894,23 +896,26 @@ function scripts.tower_blazing_watcher.update(this, store)
 									last_fx = store.tick_ts
 								end
 
+								if this.tower.blocked or V.dist2(tpos(this).x, tpos(this).y, enemy.pos.x, enemy.pos.y) > range_to_stay * range_to_stay or enemy._blazing_deselect or band(enemy.vis.bans, bor(F_AREA, F_RANGED))~=0 then
+									b.force_stop_ray = true
+
+									log.info("(%s) tower ray target (%s) out of range_to_stay", this.id, enemy.id)
+									print(string.format("(%s) tower ray target (%s) out of range_to_stay", this.id, enemy.id))
+								end
+
+								if enemy and enemy.template_name == "enemy_tower_ray_sheep_flying" or enemy.template_name == "enemy_tower_ray_sheep" then
+									b.force_stop_ray = true
+								end
+
 								coroutine.yield()
 
 							end
 
-							if this.tower.blocked or V.dist2(tpos(this).x, tpos(this).y, enemy.pos.x, enemy.pos.y) > range_to_stay * range_to_stay then
-								b.force_stop_ray = true
-
-								log.info("(%s) tower ray target (%s) out of range_to_stay", this.id, enemy.id)
-							end
-
-							if enemy and enemy.template_name == "enemy_tower_ray_sheep_flying" or enemy.template_name == "enemy_tower_ray_sheep" then
-								b.force_stop_ray = true
-							end
-
+							b.force_stop_ray = true
+							
 							:: label_861_1 ::
 							aa.ts = last_ts
-							if this.attack_stage == 4 then
+							if this.attack_stage >= 4 then
 								U.animation_start(this, "level4Out", nil, store.tick_ts, false, 3)
 							else
 								U.animation_start(this, "out", nil, store.tick_ts, false, 3)
@@ -1071,7 +1076,7 @@ function scripts.bullet_tower_blazing_watcher.update(this, store)
 	local source = store.entities[b.source_id]
 	while target and not target.health.dead and not this.force_stop_ray and source do
 		if attack_stage ~= tower.attack_stage then
-			if tower.attack_stage == 4 then
+			if tower.attack_stage >= 4 then
 				U.animation_start(this, "loop4", nil, store.tick_ts, true, 1)
 				mods_added[1].render.sprites[1].name = "blazing_watcher_hit_level4Run"
 				this.render.sprites[2].name = "level4Run"
@@ -1123,7 +1128,7 @@ function scripts.bullet_tower_blazing_watcher.update(this, store)
 	end
 
 	this.render.sprites[2].hidden = true
-	if attack_stage == 4 then
+	if attack_stage >= 4 then
 		U.y_animation_play(this, "level4Out", nil, store.tick_ts, false, 1)
 	else
 		U.y_animation_play(this, "out", nil, store.tick_ts, false, 1)
@@ -1174,7 +1179,7 @@ function scripts.mod_tower_blazing_watcher_damage.update(this, store)
 				local blast = E:create_entity(tower.attacks.list[1].payload_bullet)
 				blast.pos = pos
 				blast.bullet.level = tower.powers.explosion.level * factor
-				blast.attack_stage = tower.attack_stage
+				blast.attack_stage = math.min(tower.attack_stage, 4)
 				queue_insert(store, blast)
 			end
 		end
@@ -3574,7 +3579,7 @@ function scripts.tower_spirit_mausoleum.update(this, store, script)
 
 			if pow_p and pow_p.level > 0 and this.tower.can_do_magic and store.tick_ts - a2.ts >= a2.cooldown then
 				local target = ULH.find_strongest_enemy_in_range(store.entities, tpos(this), 0, a.range, a2.node_prediction, a2.vis_flags, a2.vis_bans, function(e)
-					return e.nav_path and e.melee and not U.has_modifiers(store, e, "mod_possession") and (not a2.excluded_templates or not table.contains(a2.excluded_templates, e.template_name))
+					return e.nav_path and e.melee and not U.has_modifiers(store, e, "mod_possession") and not U.has_modifiers(store, e, "mod_possession_lucerna") and (not a2.excluded_templates or not table.contains(a2.excluded_templates, e.template_name))
 				end)
 				if not target then
 					SU.delay_attack(store, a2, 0.1)
@@ -8067,7 +8072,7 @@ function scripts.tower_sandworm_bomb.update(this, store)
 			d.xp_dest_id = b.source_id
 		end
 
-		if d.damage_type == bor(DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS) and (band(enemy.vis.flags, bor(F_BOSS, F_MINIBOSS)) ~= 0 or band(enemy.vis.bans, bor(F_INSTAKILL, F_DISINTEGRATED, F_EAT) ~= 0)) then
+		if band(d.damage_type,DAMAGE_INSTAKILL) ~= 0 and ((band(enemy.vis.flags, bor(F_BOSS, F_MINIBOSS)) ~= 0 or band(enemy.vis.bans, bor(F_INSTAKILL, F_DISINTEGRATED, F_EAT) ~= 0))) then
 			--empty block
 		else
 			queue_damage(store, d)
@@ -9277,8 +9282,10 @@ function scripts.KR5Bomb.update(this, store, script)
 		end
 	end
 
+	--return v.enemy and v.vis and v.health and not v.health.dead and band(v.vis.flags, b.damage_bans) == 0 and band(v.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(v.pos, V.v(b.to.x, b.to.y - b.target_unit_hit_offset_y or 0), dradius)
+
 	local enemies = table.filter(store.entities, function(k, v)
-		return v.enemy and v.vis and v.health and not v.health.dead and band(v.vis.flags, b.damage_bans) == 0 and band(v.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(v.pos, b.to, dradius)
+		return v.enemy and v.vis and v.health and not v.health.dead and band(v.vis.flags, b.damage_bans) == 0 and band(v.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(v.pos, V.v(b.to.x, b.to.y - (b.target_unit_hit_offset_y or 0)), dradius)
 	end)
 
 	for _, enemy in pairs(enemies) do

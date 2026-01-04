@@ -157,7 +157,7 @@ function level:update(store)
 		signal.emit("show-gui")
 		signal.emit("end-cinematic")
 		S:stop_group("MUSIC")
-		S:queue("MusicBossFight1_19")
+		S:queue("MusicBossFight_119")
 
 		while not boss.bossfight_ended do
 			coroutine.yield()

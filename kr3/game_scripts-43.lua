@@ -781,7 +781,8 @@ function scripts.hero_eiskalt.update(this, store)
 					U.y_wait(store, a.spawn_time)
 
 					local delay = 0
-					local n_step = ni < s_ni and -2 or 2
+					--local n_step = ni < s_ni and -2 or 2
+					local n_step = ni < s_ni and -4 or 4
 
 					ni = km.clamp(1, #P:path(s_pi), ni < s_ni and ni + 6 or ni)
 

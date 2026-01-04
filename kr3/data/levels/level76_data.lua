@@ -128,7 +128,7 @@ return {
                 y = 180.09375
             },
             ["tower.holder_id"] = "27",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "27"
         },
         {
@@ -143,7 +143,7 @@ return {
                 y = 215.25
             },
             ["tower.holder_id"] = "51",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "51"
         },
         {
@@ -158,7 +158,7 @@ return {
                 y = 250.40625
             },
             ["tower.holder_id"] = "11",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "11"
         },
         {
@@ -173,7 +173,7 @@ return {
                 y = 250.40625
             },
             ["tower.holder_id"] = "13",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "13"
         },
         {
@@ -188,7 +188,7 @@ return {
                 y = 168.84375
             },
             ["tower.holder_id"] = "25",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "25"
         },
         {
@@ -203,7 +203,7 @@ return {
                 y = 241.96875
             },
             ["tower.holder_id"] = "29",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "29"
         },
         {
@@ -218,7 +218,7 @@ return {
                 y = 225.09375
             },
             ["tower.holder_id"] = "8",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "8"
         },
         {
@@ -233,7 +233,7 @@ return {
                 y = 237.75
             },
             ["tower.holder_id"] = "47",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "47"
         },
         {
@@ -248,7 +248,7 @@ return {
                 y = 319.3125
             },
             ["tower.holder_id"] = "49",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "49"
         },
         {
@@ -263,7 +263,7 @@ return {
                 y = 320.71875
             },
             ["tower.holder_id"] = "15",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "15"
         },
         {
@@ -278,7 +278,7 @@ return {
                 y = 372.75
             },
             ["tower.holder_id"] = "31",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "31"
         },
         {
@@ -293,7 +293,7 @@ return {
                 y = 382.59375
             },
             ["tower.holder_id"] = "17",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "17"
         },
         {
@@ -308,7 +308,7 @@ return {
                 y = 464.15625
             },
             ["tower.holder_id"] = "55",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "55"
         },
         {
@@ -323,7 +323,7 @@ return {
                 y = 478.21875
             },
             ["tower.holder_id"] = "39",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "39"
         },
         {
@@ -338,7 +338,7 @@ return {
                 y = 478.21875
             },
             ["tower.holder_id"] = "23",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "23"
         },
         {
@@ -353,7 +353,7 @@ return {
                 y = 527.4375
             },
             ["tower.holder_id"] = "35",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "35"
         },
         {
@@ -368,7 +368,7 @@ return {
                 y = 606.1875
             },
             ["tower.holder_id"] = "37",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "37"
         },
         {
@@ -383,7 +383,7 @@ return {
                 y = 545.71875
             },
             ["tower.holder_id"] = "33",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "33"
         },
         {
@@ -398,7 +398,7 @@ return {
                 y = 564
             },
             ["tower.holder_id"] = "19",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "19"
         },
         {
@@ -413,7 +413,7 @@ return {
                 y = 638.53125
             },
             ["tower.holder_id"] = "53",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "53"
         },
         {
@@ -428,7 +428,7 @@ return {
                 y = 603.375
             },
             ["tower.holder_id"] = "21",
-            ["tower.terrain_style"] = 11,
+            ["tower.terrain_style"] = 13,
             ["ui.nav_mesh_id"] = "21"
         }
     },

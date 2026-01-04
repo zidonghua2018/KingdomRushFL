@@ -13,6 +13,7 @@ local anchor_y = 0
 local image_y = 0
 local tt
 local scripts = require("game_scripts")
+local scripts_rebbborn = require("game_scripts-1-rebbborn")
 local mylua = require("my_lua")
 
 require("templates")
@@ -13719,7 +13720,7 @@ tt.unit.marker_offset = v(0, 0)
 tt.unit.mod_offset = v(0, 27)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_INSTAKILL, F_POLYMORPH, F_DRILL, F_DISINTEGRATED) --流辉349 移除F_DISINTEGRATED
-tt.vis.flags = bor(F_ENEMY, F_BOSS, F_MINIBOSS)
+tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
 tt = RT("enemy_gnoll_warleader", "enemy")
 
 AC(tt, "melee", "death_spawns")
@@ -24759,6 +24760,9 @@ tt.cheat_game_6 = true
 tt = RT("goldenfinger_cheat_7", "goldenfinger_cheat")
 tt.cheat_game = false
 tt.cheat_game_7 = true
+
+---KRREBORN的塔
+
 ---阿渥克
 tt = RT("tower_ewok_rework", "tower_barrack_1")
 
@@ -24917,7 +24921,7 @@ tt.tower.level = 1
 tt.tower.price = 295
 tt.tower.size = TOWER_SIZE_LARGE
 tt.info.enc_icon = 17
-tt.info.fn = scripts.tower_green_archer.get_info
+tt.info.fn = scripts_rebbborn.tower_green_archer.get_info
 tt.info.portrait = "info_portraits_groundArchers_0003"
 tt.powers.burst = E:clone_c("power")
 tt.powers.burst.price_base = 200
@@ -24969,8 +24973,8 @@ tt.render.sprites[6].offset.x = 13
 tt.render.sprites[6].ts = fts(15)
 --tt.main_script.insert = scripts.tower_green_archer.insert
 --tt.main_script.update = scripts.tower_green_archer.update
-tt.main_script.insert = scripts.tower_green_archer.insert
-tt.main_script.update = scripts.tower_green_archer.update
+tt.main_script.insert = scripts_rebbborn.tower_green_archer.insert
+tt.main_script.update = scripts_rebbborn.tower_green_archer.update
 tt.attacks.range = 200
 tt.attacks.list[1] = E:clone_c("bullet_attack")
 tt.attacks.list[1].animation = "shoot"
@@ -25018,7 +25022,7 @@ tt.bullet.flight_time_min = fts(21)
 tt.bullet.damage_inc = 19
 tt.bullet.damage_type = bor(DAMAGE_MAGICAL)
 tt.bullet.prediction_error = false
-tt.main_script.insert = scripts.arrow_green_tower_green_archer.insert
+tt.main_script.insert = scripts_rebbborn.arrow_green_tower_green_archer.insert
 tt.extra_arrows_range = 110
 tt.extra_arrows = 4
 tt.bullet.reset_to_target_pos = true
@@ -25042,7 +25046,7 @@ tt.bullet.flight_time_factor = fts(0.03333333333333333)
 tt.bullet.damage_type = bor(DAMAGE_TRUE)
 tt.bullet.prediction_error = false
 tt.bullet.particles_name = "ps_arrow_multishot_hero_alleria"
-tt.main_script.insert = scripts.arrow_green.insert
+tt.main_script.insert = scripts_rebbborn.arrow_green.insert
 tt.extra_arrows = 3
 tt.extra_arrows_range = 110
 tt.bullet.pop_conds = DR_KILL
@@ -25068,7 +25072,7 @@ mod_weak.modifier.resets_same = true
 mod_weak.modifier.use_mod_offset = false
 mod_weak.modifier.allows_duplicates = false
 mod_weak.modifier.vis_flags = F_MOD
-mod_weak.main_script.insert = scripts.mod_damage_factors2.insert
+mod_weak.main_script.insert = scripts_rebbborn.mod_damage_factors2.insert
 mod_weak.main_script.remove = scripts.mod_damage_factors.remove
 mod_weak.main_script.update = scripts.mod_track_target.update
 tt = E:register_t("mod_arrow_green_mark", "mod_weak")
@@ -25175,7 +25179,7 @@ tt.render.sprites[5].offset = v(0, 32)
 tt.render.sprites[5].prefix = "tower_ewok_door"
 tt.render.door_sid = 5
 --tt.main_script.insert = scripts.tower_barrack.insert
-tt.main_script.update = scripts.tower_ewok.update
+tt.main_script.update = scripts_rebbborn.tower_ewok.update
 --tt.main_script.remove = scripts.tower_barrack.remove
 tt.attacks.range = 200
 tt.attacks.list[1] = E:clone_c("bullet_attack")
@@ -25243,7 +25247,7 @@ tt.info.random_name_count = 6
 tt.info.random_name_format = "ELVES_SOLDIER_EWOK_%i_NAME"
 tt.main_script.insert = scripts.soldier_barrack.insert
 tt.main_script.remove = scripts.soldier_barrack.remove
-tt.main_script.update = scripts.soldier_ewok_re.update
+tt.main_script.update = scripts_rebbborn.soldier_ewok_re.update
 tt.melee.attacks[1].cooldown = 1
 tt.melee.attacks[1].damage_max = 7
 tt.melee.attacks[1].damage_min = 3

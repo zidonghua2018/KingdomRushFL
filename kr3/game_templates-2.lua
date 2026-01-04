@@ -14,6 +14,7 @@ local image_y = 0
 local tt
 local scripts = require("game_scripts-2")
 local kr1_scripts = require("game_scripts-1")
+local scripts_rebbborn = require("game_scripts-1-rebbborn")
 local mylua = require("my_lua")
 
 require("templates")
@@ -2159,51 +2160,7 @@ tt.attacks.list[1].shoot_time = fts(5)
 tt.attacks.list[1].bullet_start_offset = {
 	v(0, 50)
 }
----军团弓兵塔
-tt = E:register_t("tower_archer_hammerhold_1", "tower")
 
-E:add_comps(tt, "attacks")
-
-tt.tower.type = "archer_hammerhold_1"
-tt.tower.level = 1
-tt.tower.price = 20
-tt.info.portrait = "info_portraits_towers_0219"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "terrain_archer_%04i"
-tt.render.sprites[1].offset = v(0, 12)
-tt.render.sprites[1].hidden = true
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].animated = false
-tt.render.sprites[2].name = "city_tower"
-tt.render.sprites[2].offset = v(0, 28)
-tt.render.sprites[3] = E:clone_c("sprite")
-tt.render.sprites[3].prefix = "shooterarcherhammerhold"
-tt.render.sprites[3].name = "idleDown"
-tt.render.sprites[3].angles = {}
-tt.render.sprites[3].angles.idle = {
-	"idleUp",
-	"idleDown"
-}
-tt.render.sprites[3].angles.shoot = {
-	"shootingUp",
-	"shootingDown"
-}
-tt.render.sprites[3].offset = v(0, 59)
-tt.main_script.insert = scripts.tower_archer.insert
-tt.main_script.update = scripts.tower_archer.update
-tt.main_script.remove = scripts.tower_archer.remove
-tt.attacks.range = 166.4--189
-tt.attacks.list[1] = E:clone_c("bullet_attack")
-tt.attacks.list[1].bullet = "arrow_hammerhold_1"
-tt.attacks.list[1].cooldown = 0.5
-tt.attacks.list[1].shoot_time = fts(5)
-tt.attacks.list[1].bullet_start_offset = {
-	v(0, 50)
-}
-
-tt = E:register_t("arrow_hammerhold_1", "arrow")
-tt.bullet.damage_min = 5--18
-tt.bullet.damage_max = 10--25
 tt = E:register_t("tower_barrack_pirates", "tower")
 
 E:add_comps(tt, "barrack")
@@ -15974,10 +15931,7 @@ tt.unit.hit_offset = v(0, 17)
 tt.unit.marker_offset = v(0, 0)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_POLYMORPH, F_POISON, F_LYCAN)
----麻痹
-tt = E:register_t("mod_frankenstein_pound", "mod_shock_and_awe")
-tt.modifier.vis_bans = bor(F_BOSS)--bor(F_FLYING, F_BOSS)
----
+
 tt = E:register_t("fx_frankenstein_pound", "decal_scripted")
 
 E:add_comps(tt, "tween")
@@ -16882,6 +16836,294 @@ tt.main_script.update = scripts.mod_track_target.update
 tt.main_script.insert = scripts.mod_alien_screech.insert
 tt.main_script.remove = scripts.mod_alien_screech.remove
 
+-- 黑胡子船长 			hero_steam_frigate
+tt = E:register_t("hero_steam_frigate_2", "stage_hero")
+
+E:add_comps(tt, "ranged", "timed_attacks")
+tt.hero_insert = false
+image_y = 120
+anchor_y = 0.16666666666666666
+tt.health.armor = 0.7
+tt.health.hp_max = 420
+tt.health.immune_to = DAMAGE_ALL
+tt.health_bar.offset = v(0, ady(55))
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.hero.level = 10
+tt.idle_flip = nil
+tt.info.fn = scripts.hero_steam_frigate.get_info
+tt.info.hero_portrait = "hero_portraits_0211"
+tt.info.portrait = "info_portraits_heroes_0221"
+tt.main_script.insert = scripts.hero_steam_frigate.insert
+tt.main_script.update = scripts.hero_steam_frigate.update
+tt.motion.max_speed = 75
+tt.nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_ICE)
+tt.nav_grid.valid_terrains_dest = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_ICE)
+-- tt.nav_rally.requires_node_nearby = false
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].anchor.y = anchor_y
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].prefix = "hero_steam_frigate_l1"
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].anchor.y = anchor_y
+tt.render.sprites[2].name = "idle"
+tt.render.sprites[2].prefix = "hero_steam_frigate_l2"
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].anchor.y = anchor_y
+tt.render.sprites[3].loop_forced = true
+tt.render.sprites[3].name = "idle"
+tt.render.sprites[3].prefix = "hero_steam_frigate_smoke"
+tt.sound_events.change_rally_point = "PirateBoatTaunt"
+tt.ui.click_rect = r(-30, 0, 60, 38)
+tt.unit.hit_offset = v(0, 12)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, ady(22))
+tt.vis.bans = F_ALL
+tt.vis.flags = F_NONE
+tt.ranged.attacks[1] = E:clone_c("bullet_attack")
+tt.ranged.attacks[1].animation = "throw_barrel"
+tt.ranged.attacks[1].bullet = "steam_frigate_barrel"
+tt.ranged.attacks[1].bullet_start_offset = {
+	v(29, 39)
+}
+tt.ranged.attacks[1].cooldown = 2
+tt.ranged.attacks[1].max_range = 250
+tt.ranged.attacks[1].min_range = 50
+tt.ranged.attacks[1].node_prediction = fts(33)
+tt.ranged.attacks[1].shoot_time = fts(13)
+tt.ranged.attacks[1].vis_bans = bor(F_FLYING)
+tt.timed_attacks.list[1] = E:clone_c("bullet_attack")
+tt.timed_attacks.list[1].animation = "throw_mine"
+tt.timed_attacks.list[1].bullet = "steam_frigate_mine"
+tt.timed_attacks.list[1].bullet_start_offset = {
+	v(29, 39)
+}
+tt.timed_attacks.list[1].cooldown = 8
+tt.timed_attacks.list[1].max_mines = 20
+tt.timed_attacks.list[1].max_range = 150
+tt.timed_attacks.list[1].min_range = 16.5
+tt.timed_attacks.list[1].shoot_time = fts(13)
+--tt.timed_attacks.list[1].valid_terrains = TERRAIN_WATER
+
+-- -- 矮人 鲁林			hero_dwarf
+tt = E:register_t("hero_dwarf_2", "hero_dwarf")
+tt.hero_insert = false
+tt.info.i18n_key = "HERO_DWARF"		
+-- 吸血姬 卢克雷齐亚	hero_vampiress
+tt = E:register_t("hero_vampiress_2", "hero_vampiress")
+tt.hero_insert = false
+tt.info.i18n_key = "HERO_ELVIRA"
+-- 沙王 阿尔里奇		hero_alric
+tt = E:register_t("hero_alric_2", "hero_alric")
+tt.hero_insert = false
+tt.hero.level = 10
+tt.hero.skills.flurry.level = 3
+tt.hero.skills.sandwarriors.level = 3
+tt.hero.skills.spikedarmor.level = 3
+tt.hero.skills.swordsmanship.level = 3
+tt.hero.skills.toughness.level = 3
+tt.info.i18n_key = "HERO_ALRIC"
+-- 刺客 幻影			hero_mirage
+tt = E:register_t("hero_mirage_2", "hero_mirage")
+tt.hero_insert = false
+tt.hero.level = 10
+tt.hero.skills.precision.level = 3
+tt.hero.skills.shadowdodge.level = 3
+tt.hero.skills.swiftness.level = 3
+tt.hero.skills.shadowdance.level = 3
+tt.hero.skills.lethalstrike.level = 3
+tt.info.i18n_key = "HERO_MIRAGE"
+-- 石巨人 格劳尔		hero_giant
+tt = E:register_t("hero_giant_2", "hero_giant")
+tt.hero_insert = false
+tt.hero.level = 10
+tt.hero.skills.boulderthrow.level = 3
+tt.hero.skills.stomp.level = 3
+tt.hero.skills.bastion.level = 3
+tt.hero.skills.massivedamage.level = 3
+tt.hero.skills.hardrock.level = 3
+tt.info.i18n_key = "HERO_GIANT"
+-- 大巫师 纽维斯		hero_wizard
+tt = E:register_t("hero_wizard_2", "hero_wizard")
+tt.hero_insert = false
+tt.hero.level = 10
+tt.hero.skills.magicmissile.level = 3
+tt.hero.skills.chainspell.level = 3
+tt.hero.skills.disintegrate.level = 3
+tt.hero.skills.arcanereach.level = 3
+tt.hero.skills.arcanefocus.level = 3
+tt.info.i18n_key = "HERO_WIZARD"
+-- 兽王 克罗南			hero_beastmaster
+tt = E:register_t("hero_beastmaster_2", "hero_beastmaster")
+tt.hero_insert = false
+tt.hero.level = 10
+tt.hero.skills.boarmaster.level = 3
+tt.hero.skills.stampede.level = 3
+tt.hero.skills.falconer.level = 3
+tt.hero.skills.deeplashes.level = 3
+tt.hero.skills.regeneration.level = 3
+tt.info.i18n_key = "HERO_BEASTMASTER"
+-- 虚空猎手 沙塔		hero_alien
+tt = E:register_t("hero_alien_2", "hero_alien")
+tt.hero_insert = false
+tt.hero.level = 10
+tt.hero.skills.energyglaive.level = 3
+tt.hero.skills.purificationprotocol.level = 3
+tt.hero.skills.abduction.level = 3
+tt.hero.skills.vibroblades.level = 3
+tt.hero.skills.finalcountdown.level = 3
+tt.info.i18n_key = "HERO_ALIEN"
+-- 女祭司 德得尔		hero_priest
+tt = E:register_t("hero_priest_2", "hero_priest")
+tt.hero_insert = false
+tt.hero.level = 10
+tt.hero.skills.holylight.level = 3
+tt.hero.skills.consecrate.level = 3
+tt.hero.skills.wingsoflight.level = 3
+tt.hero.skills.blessedarmor.level = 3
+tt.hero.skills.divinehealth.level = 3
+tt.info.i18n_key = "HERO_PRIEST"
+-- 红龙 阿什比特		hero_dragon
+tt = E:register_t("hero_dragon_2", "hero_dragon")
+tt.hero_insert = false
+tt.hero.level = 10
+tt.hero.skills.blazingbreath.level = 3
+tt.hero.skills.feast.level = 3
+tt.hero.skills.fierymist.level = 3
+tt.hero.skills.wildfirebarrage.level = 3
+tt.hero.skills.reignoffire.level = 3
+tt.info.i18n_key = "HERO_DRAGON"
+-- 海盗 黑棘船长		hero_pirate
+tt = E:register_t("hero_pirate_2", "hero_pirate")
+tt.hero_insert = false
+tt.hero.level = 10
+tt.hero.skills.swordsmanship.level = 3
+tt.hero.skills.looting.level = 3
+tt.hero.skills.toughness.level = 3
+tt.hero.skills.kraken.level = 3
+tt.hero.skills.scattershot.level = 3
+tt.info.i18n_key = "HERO_PIRATE"
+-- 武僧 库绍			hero_monk
+tt = E:register_t("hero_monk_2", "hero_monk")
+tt.hero_insert = false
+tt.hero.level = 10
+tt.hero.skills.snakestyle.level = 3
+tt.hero.skills.dragonstyle.level = 3
+tt.hero.skills.tigerstyle.level = 3
+tt.hero.skills.leopardstyle.level = 3
+tt.hero.skills.cranestyle.level = 3
+tt.info.i18n_key = "HERO_MONK"
+-- 战争大师 卡基诺斯	hero_crab
+tt = E:register_t("hero_crab_2", "hero_crab")
+tt.hero_insert = false
+tt.hero.level = 10
+tt.hero.skills.hookedclaw.level = 3
+tt.hero.skills.battlehardened.level = 3
+tt.hero.skills.pincerattack.level = 3
+tt.hero.skills.shouldercannon.level = 3
+tt.hero.skills.burrow.level = 3
+tt.info.i18n_key = "HERO_BLACKTORTOISE"
+-- 骨龙 伯恩哈特		hero_dracolich
+tt = E:register_t("hero_dracolich_2", "hero_dracolich")
+tt.hero_insert = false
+tt.hero.level = 10
+tt.hero.skills.spinerain.level = 3
+tt.hero.skills.bonegolem.level = 3
+tt.hero.skills.plaguecarrier.level = 3
+tt.hero.skills.diseasenova.level = 3
+tt.hero.skills.unstabledisease.level = 3
+tt.info.i18n_key = "HERO_DRACOLICH"
+-- 猎人 但丁			hero_van_helsing
+tt = E:register_t("hero_van_helsing_2", "hero_van_helsing")
+tt.hero_insert = false
+tt.hero.level = 10
+tt.hero.skills.multishoot.level = 3
+tt.hero.skills.silverbullet.level = 3
+tt.hero.skills.holygrenade.level = 3
+tt.hero.skills.relicofpower.level = 3
+tt.hero.skills.beaconoflight.level = 3
+tt.info.i18n_key = "HERO_VAN_HELSING" 
+-- 巫毒法师 布鲁西		hero_voodoo_witch
+tt = E:register_t("hero_voodoo_witch_2", "hero_voodoo_witch")
+tt.hero_insert = false
+tt.hero.level = 10
+tt.hero.skills.laughingskulls.level = 3
+tt.hero.skills.deathskull.level = 3
+tt.hero.skills.bonedance.level = 3
+tt.hero.skills.deathaura.level = 3
+tt.hero.skills.voodoomagic.level = 3
+tt.info.i18n_key = "HERO_VOODOO_WITCH"
+-- 军阀 卡兹			hero_minotaur
+tt = E:register_t("hero_minotaur_2", "hero_minotaur")
+tt.hero_insert = false
+tt.hero.level = 10
+tt.hero.skills.bullrush.level = 3
+tt.hero.skills.bloodaxe.level = 3
+tt.hero.skills.daedalusmaze.level = 3
+tt.hero.skills.roaroffury.level = 3
+tt.hero.skills.doomspin.level = 3
+tt.info.i18n_key = "HERO_MINOTAUR" 
+-- 神猴 塞塔姆			hero_monkey_god
+tt = E:register_t("hero_monkey_god_2", "hero_monkey_god")
+tt.hero_insert = false
+tt.hero.level = 10
+tt.hero.skills.spinningpole.level = 3
+tt.hero.skills.tetsubostorm.level = 3
+tt.hero.skills.monkeypalm.level = 3
+tt.hero.skills.angrygod.level = 3
+tt.hero.skills.divinenature.level = 3
+tt.info.i18n_key = "HERO_MONKEY_GOD"
+
+---KRREBORN的塔
+
+---麻痹
+tt = E:register_t("mod_frankenstein_pound", "mod_shock_and_awe")
+tt.modifier.vis_bans = bor(F_BOSS)--bor(F_FLYING, F_BOSS)
+
+---军团弓兵塔
+tt = E:register_t("tower_archer_hammerhold_1", "tower")
+
+E:add_comps(tt, "attacks")
+
+tt.tower.type = "archer_hammerhold_1"
+tt.tower.level = 1
+tt.tower.price = 20
+tt.info.portrait = "info_portraits_towers_0219"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrain_archer_%04i"
+tt.render.sprites[1].offset = v(0, 12)
+tt.render.sprites[1].hidden = true
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "city_tower"
+tt.render.sprites[2].offset = v(0, 28)
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].prefix = "shooterarcherhammerhold"
+tt.render.sprites[3].name = "idleDown"
+tt.render.sprites[3].angles = {}
+tt.render.sprites[3].angles.idle = {
+	"idleUp",
+	"idleDown"
+}
+tt.render.sprites[3].angles.shoot = {
+	"shootingUp",
+	"shootingDown"
+}
+tt.render.sprites[3].offset = v(0, 59)
+tt.main_script.insert = scripts.tower_archer.insert
+tt.main_script.update = scripts.tower_archer.update
+tt.main_script.remove = scripts.tower_archer.remove
+tt.attacks.range = 166.4--189
+tt.attacks.list[1] = E:clone_c("bullet_attack")
+tt.attacks.list[1].bullet = "arrow_hammerhold_1"
+tt.attacks.list[1].cooldown = 0.5
+tt.attacks.list[1].shoot_time = fts(5)
+tt.attacks.list[1].bullet_start_offset = {
+	v(0, 50)
+}
+
+tt = E:register_t("arrow_hammerhold_1", "arrow")
+tt.bullet.damage_min = 5--18
+tt.bullet.damage_max = 10--25
 ---海盗大炮
 tt = E:register_t("tower_pirate_camp_land", "tower")
 
@@ -16899,10 +17141,10 @@ tt.powers.shoot = E:clone_c("power")
 tt.powers.shoot.enc_icon = 125
 tt.info.enc_icon = 91
 tt.info.i18n_key = "TOWER_PIRATE_CAMP"
-tt.info.fn = scripts.tower_pirate_camp_re.get_info
+tt.info.fn = scripts_rebbborn.tower_pirate_camp_re.get_info
 tt.info.portrait = (IS_PHONE_OR_TABLET and "portraits_towers_" or "info_portraits_towers_") .. "0216"
-tt.main_script.update = scripts.tower_pirate_camp_re.update
-tt.user_selection.can_select_point_fn = scripts.tower_pirate_camp_re.can_select_point
+tt.main_script.update = scripts_rebbborn.tower_pirate_camp_re.update
+tt.user_selection.can_select_point_fn = scripts_rebbborn.tower_pirate_camp_re.can_select_point
 tt.attacks.list[1] = E:clone_c("bullet_attack")
 tt.attacks.list[1].bullet = "bomb_pirate_camp"
 tt.attacks.list[1].price = 25
@@ -17548,244 +17790,6 @@ tt.render.sprites[1].name = "soldier_djinn_polyshapes_0002"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor.y = 0.16
 tt.timed.duration = 4
-
--- 黑胡子船长 			hero_steam_frigate
-tt = E:register_t("hero_steam_frigate_2", "stage_hero")
-
-E:add_comps(tt, "ranged", "timed_attacks")
-tt.hero_insert = false
-image_y = 120
-anchor_y = 0.16666666666666666
-tt.health.armor = 0.7
-tt.health.hp_max = 420
-tt.health.immune_to = DAMAGE_ALL
-tt.health_bar.offset = v(0, ady(55))
-tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-tt.hero.level = 10
-tt.idle_flip = nil
-tt.info.fn = scripts.hero_steam_frigate.get_info
-tt.info.hero_portrait = "hero_portraits_0211"
-tt.info.portrait = "info_portraits_heroes_0221"
-tt.main_script.insert = scripts.hero_steam_frigate.insert
-tt.main_script.update = scripts.hero_steam_frigate.update
-tt.motion.max_speed = 75
-tt.nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_ICE)
-tt.nav_grid.valid_terrains_dest = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_ICE)
--- tt.nav_rally.requires_node_nearby = false
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].anchor.y = anchor_y
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].prefix = "hero_steam_frigate_l1"
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].anchor.y = anchor_y
-tt.render.sprites[2].name = "idle"
-tt.render.sprites[2].prefix = "hero_steam_frigate_l2"
-tt.render.sprites[3] = E:clone_c("sprite")
-tt.render.sprites[3].anchor.y = anchor_y
-tt.render.sprites[3].loop_forced = true
-tt.render.sprites[3].name = "idle"
-tt.render.sprites[3].prefix = "hero_steam_frigate_smoke"
-tt.sound_events.change_rally_point = "PirateBoatTaunt"
-tt.ui.click_rect = r(-30, 0, 60, 38)
-tt.unit.hit_offset = v(0, 12)
-tt.unit.marker_offset = v(0, 0)
-tt.unit.mod_offset = v(0, ady(22))
-tt.vis.bans = F_ALL
-tt.vis.flags = F_NONE
-tt.ranged.attacks[1] = E:clone_c("bullet_attack")
-tt.ranged.attacks[1].animation = "throw_barrel"
-tt.ranged.attacks[1].bullet = "steam_frigate_barrel"
-tt.ranged.attacks[1].bullet_start_offset = {
-	v(29, 39)
-}
-tt.ranged.attacks[1].cooldown = 2
-tt.ranged.attacks[1].max_range = 250
-tt.ranged.attacks[1].min_range = 50
-tt.ranged.attacks[1].node_prediction = fts(33)
-tt.ranged.attacks[1].shoot_time = fts(13)
-tt.ranged.attacks[1].vis_bans = bor(F_FLYING)
-tt.timed_attacks.list[1] = E:clone_c("bullet_attack")
-tt.timed_attacks.list[1].animation = "throw_mine"
-tt.timed_attacks.list[1].bullet = "steam_frigate_mine"
-tt.timed_attacks.list[1].bullet_start_offset = {
-	v(29, 39)
-}
-tt.timed_attacks.list[1].cooldown = 8
-tt.timed_attacks.list[1].max_mines = 20
-tt.timed_attacks.list[1].max_range = 150
-tt.timed_attacks.list[1].min_range = 16.5
-tt.timed_attacks.list[1].shoot_time = fts(13)
---tt.timed_attacks.list[1].valid_terrains = TERRAIN_WATER
-
--- -- 矮人 鲁林			hero_dwarf
-tt = E:register_t("hero_dwarf_2", "hero_dwarf")
-tt.hero_insert = false
-tt.info.i18n_key = "HERO_DWARF"		
--- 吸血姬 卢克雷齐亚	hero_vampiress
-tt = E:register_t("hero_vampiress_2", "hero_vampiress")
-tt.hero_insert = false
-tt.info.i18n_key = "HERO_ELVIRA"
--- 沙王 阿尔里奇		hero_alric
-tt = E:register_t("hero_alric_2", "hero_alric")
-tt.hero_insert = false
-tt.hero.level = 10
-tt.hero.skills.flurry.level = 3
-tt.hero.skills.sandwarriors.level = 3
-tt.hero.skills.spikedarmor.level = 3
-tt.hero.skills.swordsmanship.level = 3
-tt.hero.skills.toughness.level = 3
-tt.info.i18n_key = "HERO_ALRIC"
--- 刺客 幻影			hero_mirage
-tt = E:register_t("hero_mirage_2", "hero_mirage")
-tt.hero_insert = false
-tt.hero.level = 10
-tt.hero.skills.precision.level = 3
-tt.hero.skills.shadowdodge.level = 3
-tt.hero.skills.swiftness.level = 3
-tt.hero.skills.shadowdance.level = 3
-tt.hero.skills.lethalstrike.level = 3
-tt.info.i18n_key = "HERO_MIRAGE"
--- 石巨人 格劳尔		hero_giant
-tt = E:register_t("hero_giant_2", "hero_giant")
-tt.hero_insert = false
-tt.hero.level = 10
-tt.hero.skills.boulderthrow.level = 3
-tt.hero.skills.stomp.level = 3
-tt.hero.skills.bastion.level = 3
-tt.hero.skills.massivedamage.level = 3
-tt.hero.skills.hardrock.level = 3
-tt.info.i18n_key = "HERO_GIANT"
--- 大巫师 纽维斯		hero_wizard
-tt = E:register_t("hero_wizard_2", "hero_wizard")
-tt.hero_insert = false
-tt.hero.level = 10
-tt.hero.skills.magicmissile.level = 3
-tt.hero.skills.chainspell.level = 3
-tt.hero.skills.disintegrate.level = 3
-tt.hero.skills.arcanereach.level = 3
-tt.hero.skills.arcanefocus.level = 3
-tt.info.i18n_key = "HERO_WIZARD"
--- 兽王 克罗南			hero_beastmaster
-tt = E:register_t("hero_beastmaster_2", "hero_beastmaster")
-tt.hero_insert = false
-tt.hero.level = 10
-tt.hero.skills.boarmaster.level = 3
-tt.hero.skills.stampede.level = 3
-tt.hero.skills.falconer.level = 3
-tt.hero.skills.deeplashes.level = 3
-tt.hero.skills.regeneration.level = 3
-tt.info.i18n_key = "HERO_BEASTMASTER"
--- 虚空猎手 沙塔		hero_alien
-tt = E:register_t("hero_alien_2", "hero_alien")
-tt.hero_insert = false
-tt.hero.level = 10
-tt.hero.skills.energyglaive.level = 3
-tt.hero.skills.purificationprotocol.level = 3
-tt.hero.skills.abduction.level = 3
-tt.hero.skills.vibroblades.level = 3
-tt.hero.skills.finalcountdown.level = 3
-tt.info.i18n_key = "HERO_ALIEN"
--- 女祭司 德得尔		hero_priest
-tt = E:register_t("hero_priest_2", "hero_priest")
-tt.hero_insert = false
-tt.hero.level = 10
-tt.hero.skills.holylight.level = 3
-tt.hero.skills.consecrate.level = 3
-tt.hero.skills.wingsoflight.level = 3
-tt.hero.skills.blessedarmor.level = 3
-tt.hero.skills.divinehealth.level = 3
-tt.info.i18n_key = "HERO_PRIEST"
--- 红龙 阿什比特		hero_dragon
-tt = E:register_t("hero_dragon_2", "hero_dragon")
-tt.hero_insert = false
-tt.hero.level = 10
-tt.hero.skills.blazingbreath.level = 3
-tt.hero.skills.feast.level = 3
-tt.hero.skills.fierymist.level = 3
-tt.hero.skills.wildfirebarrage.level = 3
-tt.hero.skills.reignoffire.level = 3
-tt.info.i18n_key = "HERO_DRAGON"
--- 海盗 黑棘船长		hero_pirate
-tt = E:register_t("hero_pirate_2", "hero_pirate")
-tt.hero_insert = false
-tt.hero.level = 10
-tt.hero.skills.swordsmanship.level = 3
-tt.hero.skills.looting.level = 3
-tt.hero.skills.toughness.level = 3
-tt.hero.skills.kraken.level = 3
-tt.hero.skills.scattershot.level = 3
-tt.info.i18n_key = "HERO_PIRATE"
--- 武僧 库绍			hero_monk
-tt = E:register_t("hero_monk_2", "hero_monk")
-tt.hero_insert = false
-tt.hero.level = 10
-tt.hero.skills.snakestyle.level = 3
-tt.hero.skills.dragonstyle.level = 3
-tt.hero.skills.tigerstyle.level = 3
-tt.hero.skills.leopardstyle.level = 3
-tt.hero.skills.cranestyle.level = 3
-tt.info.i18n_key = "HERO_MONK"
--- 战争大师 卡基诺斯	hero_crab
-tt = E:register_t("hero_crab_2", "hero_crab")
-tt.hero_insert = false
-tt.hero.level = 10
-tt.hero.skills.hookedclaw.level = 3
-tt.hero.skills.battlehardened.level = 3
-tt.hero.skills.pincerattack.level = 3
-tt.hero.skills.shouldercannon.level = 3
-tt.hero.skills.burrow.level = 3
-tt.info.i18n_key = "HERO_BLACKTORTOISE"
--- 骨龙 伯恩哈特		hero_dracolich
-tt = E:register_t("hero_dracolich_2", "hero_dracolich")
-tt.hero_insert = false
-tt.hero.level = 10
-tt.hero.skills.spinerain.level = 3
-tt.hero.skills.bonegolem.level = 3
-tt.hero.skills.plaguecarrier.level = 3
-tt.hero.skills.diseasenova.level = 3
-tt.hero.skills.unstabledisease.level = 3
-tt.info.i18n_key = "HERO_DRACOLICH"
--- 猎人 但丁			hero_van_helsing
-tt = E:register_t("hero_van_helsing_2", "hero_van_helsing")
-tt.hero_insert = false
-tt.hero.level = 10
-tt.hero.skills.multishoot.level = 3
-tt.hero.skills.silverbullet.level = 3
-tt.hero.skills.holygrenade.level = 3
-tt.hero.skills.relicofpower.level = 3
-tt.hero.skills.beaconoflight.level = 3
-tt.info.i18n_key = "HERO_VAN_HELSING" 
--- 巫毒法师 布鲁西		hero_voodoo_witch
-tt = E:register_t("hero_voodoo_witch_2", "hero_voodoo_witch")
-tt.hero_insert = false
-tt.hero.level = 10
-tt.hero.skills.laughingskulls.level = 3
-tt.hero.skills.deathskull.level = 3
-tt.hero.skills.bonedance.level = 3
-tt.hero.skills.deathaura.level = 3
-tt.hero.skills.voodoomagic.level = 3
-tt.info.i18n_key = "HERO_VOODOO_WITCH"
--- 军阀 卡兹			hero_minotaur
-tt = E:register_t("hero_minotaur_2", "hero_minotaur")
-tt.hero_insert = false
-tt.hero.level = 10
-tt.hero.skills.bullrush.level = 3
-tt.hero.skills.bloodaxe.level = 3
-tt.hero.skills.daedalusmaze.level = 3
-tt.hero.skills.roaroffury.level = 3
-tt.hero.skills.doomspin.level = 3
-tt.info.i18n_key = "HERO_MINOTAUR" 
--- 神猴 塞塔姆			hero_monkey_god
-tt = E:register_t("hero_monkey_god_2", "hero_monkey_god")
-tt.hero_insert = false
-tt.hero.level = 10
-tt.hero.skills.spinningpole.level = 3
-tt.hero.skills.tetsubostorm.level = 3
-tt.hero.skills.monkeypalm.level = 3
-tt.hero.skills.angrygod.level = 3
-tt.hero.skills.divinenature.level = 3
-tt.info.i18n_key = "HERO_MONKEY_GOD"
-
 ---神灯
 tt = E:register_t("tower_aladdin_lamp_holder")
 

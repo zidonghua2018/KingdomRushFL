@@ -7358,6 +7358,7 @@ function scripts.enemy_glarebrood_crystal.update(this, store, script)
 
 		if store.tick_ts - start_ts > this.transform_time then
 			this.vis.bans = bor(F_AREA, F_MOD)
+			this._blazing_deselect = true
 
 			U.y_animation_play(this, this.transform_anim, nil, store.tick_ts)
 

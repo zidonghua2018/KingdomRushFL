@@ -11333,6 +11333,7 @@ return {
 	},
 	barbarian = {
 		{
+			--[[
 			{
 				check = "special_icons_0020",
 				action_arg = "nets",
@@ -11359,6 +11360,7 @@ return {
 					}
 				}
 			},
+			]]
 			{
 				action = "upgrade_power",
 				action_arg = "dual",
@@ -12869,6 +12871,26 @@ return {
 				place = 13,
 				tt_title = _("HERO_BERESAD_NAME"),
 				tt_desc = _("HERO_BERESAD_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = 8,
+				action = "tw_buy_attack",
+				halo = "glow_ico_main",
+				image = "krv_gui_heroes_0020",
+				place = 15,
+				tt_title = _("HERO_LUCERNA_NAME"),
+				tt_desc = _("HERO_LUCERNA_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = 9,
+				action = "tw_buy_attack",
+				halo = "glow_ico_main",
+				image = "krv_gui_heroes_0009",
+				place = 19,
+				tt_title = _("HERO_LUCERNA_NAME"),
+				tt_desc = _("HERO_LUCERNA_DESCRIPTION")
 			},
 			{
 				check = "main_icons_0019",

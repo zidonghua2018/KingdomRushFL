@@ -135,52 +135,6 @@ return {
 		prefix = "EnemyGreenmuck",
 		to = 53,
 	},
-	enemy_greenmuck_shoot = {
-		pre = {
-			34,
-			35,
-		},
-		to = 75,
-		from = 56,
-		prefix = "EnemyGreenmuck",
-		post = {
-			34,
-			34,
-			34,
-			34,
-			34,
-			34,
-			34,
-			34,
-			34,
-			34,
-		},
-	},
-	enemy_greenmuck_idle = {
-		from = 34,
-		prefix = "EnemyGreenmuck",
-		to = 34,
-	},
-	enemy_greenmuck_death = {
-		from = 87,
-		prefix = "EnemyGreenmuck",
-		to = 98,
-	},
-	enemy_greenmuck_walkingUp = {
-		from = 32,
-		prefix = "EnemyGreenmuck",
-		to = 17,
-	},
-	enemy_greenmuck_walkingDown = {
-		from = 17,
-		prefix = "EnemyGreenmuck",
-		to = 32,
-	},
-	enemy_greenmuck_walkingRightLeft = {
-		from = 1,
-		prefix = "EnemyGreenmuck",
-		to = 16,
-	},
 	-- customization
 	towerbarracklvl4_barbarian_door_open = {
 		prefix = "tower_barrack_lvl4_Barbarians_layer2",
