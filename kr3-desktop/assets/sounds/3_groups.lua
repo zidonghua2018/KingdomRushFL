@@ -1442,7 +1442,18 @@ return {
 			"canibal_zombie_three.ogg",
 			"canibal_zombie_two.ogg",
 			"savant_attack.ogg",
-
+---魔法花
+			"kre_sfx_plant_magicmissile.ogg",
+			"kre_sfx_plant_ready_conchime.ogg",
+---紫魔法花
+			"kro_sfx_poisonplant_discharge[conacido]_B.ogg",
+			"kro_sfx_poisonplant_ready_v2B.ogg",
+---树
+			"kro_sfx_bitteringrancor_lynn-curseofdispair[conprecarga].ogg",
+			"kro_sfx_bitteringrancor_lynn-fatesealed.ogg",
+			"kro_sfx_bitteringrancor_lynn-hexfury[op3].ogg",
+			"kro_sfx_bitteringrancor_lynn-weakeningcurse[sincrackle].ogg",
+						
 			"kro_sfx_barezad_firebreath_v2[loop].ogg",
 			"kro_sfx_barezad_firebreath_v2[end].ogg",
 			"kro_sfx_barezad_firebreath_v2[starter].ogg",

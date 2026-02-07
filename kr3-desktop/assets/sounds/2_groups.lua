@@ -698,6 +698,8 @@ return {
 			"worm_bite.ogg",
 			"worm_dirtLoop.ogg",
 			"krf_toee_aliengoddess_screech[op3].ogg",
+			---食人花
+			"carnivore_plant.ogg",
 		},
 		ids = {},
 	},

@@ -499,6 +499,7 @@ local a = {
 		alias = {},
 		textureRotated = false
 	},
+	--[[
 	["portraits_power_hero_0401"] = {
 		a_name = "kr4_frozenthunder.png",
 		size = {
@@ -549,6 +550,7 @@ local a = {
 		alias = {},
 		textureRotated = false
 	},
+	]]
 	["hero_room_skill_icons_hero_eiskalt_0005"] = {
 		a_name = "kr4_frozenthunder.png",
 		size = {

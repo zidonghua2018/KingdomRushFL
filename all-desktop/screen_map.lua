@@ -182,7 +182,12 @@ local function get_hero_stats(p)
 	out.taunt = h.sound_events.change_rally_point .. "Select"
 	out.hero_class = _(string.upper(out.name_i18n) .. "_CLASS")
 	out.health = info.hp_max
-	out.damage = info.damage_min .. " - " .. info.damage_max
+	if info.ranged_damage_min then
+		out.damage = info.ranged_damage_min .. " - " .. info.ranged_damage_max
+	else
+		out.damage = info.damage_min .. " - " .. info.damage_max
+	end
+	
 	out.armor = GU.armor_value_desc(info.armor)
 	out.magic_armor = GU.armor_value_desc(info.magic_armor)
 	if info.armor == 0 and info.magic_armor and info.magic_armor >= 0.01 then
@@ -4171,9 +4176,9 @@ function UpgradesView:initialize(sw, sh)
 	local max_upgrade_stars = UPGR:get_total_stars()
 	local l_stars_num = math.ceil(math.min(screen_map.total_stars, max_upgrade_stars) - self.spent_stars)
 
-	screen_map.upgrade_star.hidden = l_stars_num == 0
+	screen_map.upgrade_star.hidden = l_stars_num <= 0
 	screen_map.upgrade_points.text = l_stars_num
-	screen_map.upgrade_points.hidden = l_stars_num == 0
+	screen_map.upgrade_points.hidden = l_stars_num <= 0
 end
 
 function UpgradesView:set_tip_panel(title, desc, price)
@@ -6273,6 +6278,9 @@ function TowerSelectView:initialize(sw, sh)
 	if screen_map.user_data.liuhui.cheat5 == nil then
 		screen_map.user_data.liuhui.cheat5 = false
 	end
+	if screen_map.user_data.liuhui.cheat5_dragon == nil then
+		screen_map.user_data.liuhui.cheat5_dragon = false
+	end
 	if screen_map.user_data.liuhui.cheathero == nil then
 		screen_map.user_data.liuhui.cheathero = false
 	end
@@ -6629,7 +6637,9 @@ function TowerSelectView:initialize(sw, sh)
 	minus_button.label.fit_lines = 1
 	function minus_button.on_click()
 		local impossiblerate = screen_map.user_data.liuhui.impossiblerate
-		if impossiblerate and impossiblerate >= 1.14 then
+		if impossiblerate and impossiblerate >= 2.51 then
+			impossiblerate = impossiblerate - 0.25
+		elseif impossiblerate and impossiblerate >= 1.14 then
 			impossiblerate = impossiblerate - 0.05
 		else
 			impossiblerate = 1.10
@@ -6773,8 +6783,10 @@ function TowerSelectView:initialize(sw, sh)
 		local impossiblerate = screen_map.user_data.liuhui.impossiblerate
 		if impossiblerate and impossiblerate <= 2.49 then
 			impossiblerate = impossiblerate + 0.05
+		elseif impossiblerate and impossiblerate <= 19.99 then
+			impossiblerate = impossiblerate + 0.25
 		else
-			impossiblerate = 2.5
+			impossiblerate = 20
 		end
 		screen_map.user_data.liuhui.impossiblerate = impossiblerate
 		GS.difficulty_enemy_hp_max_factor[4] = screen_map.user_data.liuhui.impossiblerate
@@ -6863,7 +6875,7 @@ function TowerSelectView:initialize(sw, sh)
 
 	local cheat_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
 	cheat_button.anchor = v(math.floor(select_button.size.x / 2), select_button.size.y / 2)
-	cheat_button.pos = v(bg_middle + 160, 428)
+	cheat_button.pos = v(bg_middle + 100, 428)
 	cheat_button.scale = v(0.8, 0.8)
 	cheat_button.label.size = v(100, 34)
 	cheat_button.label.text_size = select_button.label.size
@@ -6884,7 +6896,7 @@ function TowerSelectView:initialize(sw, sh)
 
 	local cheat_hero_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
 	cheat_hero_button.anchor = v(math.floor(select_button.size.x / 2), select_button.size.y / 2)
-	cheat_hero_button.pos = v(bg_middle + 280, 428)--v(self.back.size.x - 166 - select_button.size.x - 20, self.back.size.y - 32)
+	cheat_hero_button.pos = v(bg_middle + 220, 428)--v(self.back.size.x - 166 - select_button.size.x - 20, self.back.size.y - 32)
 	cheat_hero_button.scale = v(0.8, 0.8)
 	cheat_hero_button.label.size = v(100, 34)
 	cheat_hero_button.label.text_size = select_button.label.size
@@ -6905,7 +6917,7 @@ function TowerSelectView:initialize(sw, sh)
 
 	local g5_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
 	g5_button.anchor = v(math.floor(select_button.size.x / 2), select_button.size.y / 2)
-	g5_button.pos = v(bg_middle + 400, 428)
+	g5_button.pos = v(bg_middle + 340, 428)
 	g5_button.scale = v(0.8, 0.8)
 	g5_button.label.size = v(100, 34)
 	g5_button.label.text_size = select_button.label.size
@@ -6923,6 +6935,27 @@ function TowerSelectView:initialize(sw, sh)
 	end
 	self.g5_button = g5_button
 	self.backback:add_child(self.g5_button)
+
+	local g5_dragon_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	g5_dragon_button.anchor = v(math.floor(select_button.size.x / 2), select_button.size.y / 2)
+	g5_dragon_button.pos = v(bg_middle + 460, 428)
+	g5_dragon_button.scale = v(0.8, 0.8)
+	g5_dragon_button.label.size = v(100, 34)
+	g5_dragon_button.label.text_size = select_button.label.size
+	g5_dragon_button.label.pos = v(20, 19)
+	g5_dragon_button.label.font_size = 24
+	g5_dragon_button.label.font_name = "sans_bold"
+	g5_dragon_button.label.vertical_align = "middle"
+	g5_dragon_button.label.text = screen_map.user_data.liuhui.cheat5_dragon and _("G5_DRAGON_SPECIAL") or _("G5_DRAGON_DESELECT")
+	g5_dragon_button.label.fit_lines = 1
+	function g5_dragon_button.on_click()
+		screen_map.user_data.liuhui.cheat5_dragon = not screen_map.user_data.liuhui.cheat5_dragon
+		storage:save_slot(screen_map.user_data)
+		self:update_selected_tower()
+		S:queue("GUIButtonCommon")
+	end
+	self.g5_dragon_button = g5_dragon_button
+	self.backback:add_child(self.g5_dragon_button)
 
 --设置随机模式
 	local st_rand = GGLabel:new(V.v(bg_middle - 80, 24))
@@ -7100,6 +7133,7 @@ function TowerSelectView:update_selected_tower()
 	self.c_button.label.text = screen_map.user_data.liuhui.use3tower and _("PICK3") or _("UNPICK3")
 	self.g3_hprate_button.label.text = screen_map.user_data.liuhui.g3_hprate and _("G3_CALRATE") or _("G3_STANDARD")
 	self.g5_button.label.text = screen_map.user_data.liuhui.cheat5 and _("G5_SELECT") or _("G5_DESELECT")
+	self.g5_dragon_button.label.text = screen_map.user_data.liuhui.cheat5_dragon and _("G5_DRAGON_SPECIAL") or _("G5_DRAGON_DESELECT")
 	self.ecound_button.label.text = _("LH349_ENEMY_COUNT_"..(screen_map.user_data.liuhui.enemy_count or 1))
 	self.g5_hero_button.label.text = _("G5_HERO_DARK_COUNT_"..screen_map.user_data.liuhui.g5_hero_dark_count or 2)
 	self.g5_reinforcement_button.label.text = _("G5_REINFORCEMENT_"..((screen_map.user_data.liuhui.reinforcement_5=="dark")and 2 or 1))

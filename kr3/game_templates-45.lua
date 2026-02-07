@@ -958,7 +958,7 @@ tt.bullet.hit_payload = "aura_bullet_tower_ignis_altar"
 tt.bullet.damage_max = 2
 tt.bullet.damage_min = 2
 tt.bullet.damage_every = 0.4
-tt.bullet.damage_type = DAMAGE_ELECTRICAL--DAMAGE_EXPLOSION
+tt.bullet.damage_type = DAMAGE_EXPLOSION
 tt.bullet.damage_radius = 50
 tt.bullet.aura_duration = 3.5
 tt.render.sprites[1].animated = true
@@ -1205,7 +1205,7 @@ tt.render.sprites[1].size_names = {
 tt = E:register_t("mod_tower_ignis_altar_lava", "bullet")
 tt.main_script.update = scripts.tower_ignis_altar_lava.update
 
-tt.bullet.damage_type = DAMAGE_ELECTRICAL--DAMAGE_EXPLOSION
+tt.bullet.damage_type = DAMAGE_EXPLOSION
 
 tt.bullet.damage_min = 0
 tt.bullet.damage_max = 0
@@ -4691,6 +4691,7 @@ tt.health.hp_max = 284--230
 
 tt = E:register_t("deep_devil_arrow_lvl4", "arrow5_fixed_height")
 tt.render.sprites[1].name = "deep_devils_reef_tower_redspine_spear_lvl4"
+tt.render.sprites[1].scale = v(-1, 1)
 tt.bullet.miss_decal = "deep_devils_reef_tower_redspine_spear_decal_lvl4_0009"
 tt.bullet.miss_decal_anchor = v(1, 0.5)
 tt.bullet.damage_max = 15
@@ -5871,7 +5872,7 @@ tt.unit.head_offset = v(0, 29)
 tt.unit.mod_offset = v(0, 16)
 tt.unit.marker_offset = v(0, 0)
 tt.info.fn = scripts.soldier_reinforcement.get_info
---tt.info.portrait = "bottom_info_image_soldiers_0048"
+tt.info.portrait = "gui4_bottom_info_image_soldiers_0056"
 tt.info.random_name_format = nil
 tt.info.random_name_count = nil
 tt.motion.max_speed = 30

@@ -352,8 +352,10 @@ function sys.level:init(store)
 		"tower_tree_transformationFXDef",
 	}
 	if slot.liuhui.cheat5 then
-		EXO:load(dragon_table)
 		EXO:load(tower_special_gen5_table)
+	end
+	if slot.liuhui.cheat5_dragon then
+		EXO:load(dragon_table)
 	end
 	--[[
 	local FS = love.filesystem

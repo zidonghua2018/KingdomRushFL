@@ -596,7 +596,27 @@ local a = {
 		to = 14,
 		from = 1
 	},				    
-		
+---阿渥克1.5
+	tree_ewok_idleUp = {
+		prefix = "ewok_a",
+		to = 1,
+		from = 1
+	},
+	tree_ewok_idleDown = {
+		prefix = "ewok_a",
+		to = 1,
+		from = 1
+	},	
+	tree_ewok_shootingUp = {
+		prefix = "ewok_a",
+		to = 15,
+		from = 2
+	},
+	tree_ewok_shootingDown = {
+		prefix = "ewok_a",
+		to = 15,
+		from = 2
+	},			
     ---矮人电击手
 	hero_voltaire_idle = {
 		prefix = "hero_voltaire",
@@ -1696,7 +1716,74 @@ local a = {
 		to = 9,
 		from = 1
 	},
----				
+---		
+---	野蛮人巢穴 1.3
+	soldier_cannibal_idle = {
+		prefix = "Canibal",
+		to = 67,
+		from = 67
+	},
+	soldier_cannibal_running = {
+		prefix = "Canibal",
+		to = 22,
+		from = 1
+	},
+	soldier_cannibal_attack = {
+		prefix = "Canibal",
+		to = 76,
+		from = 67
+	},
+	soldier_cannibal_death = {
+		prefix = "Canibal",
+		to = 130,
+		from = 123
+	},
+	soldier_cannibal_cannibalize = {
+		prefix = "Canibal",
+		to = 99,
+		from = 77
+	},
+	carnivorous_plant_toBeInactive = {
+		prefix = "Stage7_CarnivorePlant",
+		to = 30,
+		from = 49
+	},	
+---魔法阿渥克
+	soldier_ewok_magical_running = {
+		prefix = "ewok_magical",
+		to = 18,
+		from = 3
+	},
+	soldier_ewok_magical_idle = {
+		prefix = "ewok_magical",
+		to = 1,
+		from = 1
+	},
+	soldier_ewok_magical_shoot = {
+		prefix = "ewok_magical",
+		to = 34,
+		from = 21
+	},
+	soldier_ewok_magical_dance1 = {
+		prefix = "ewok_magical",
+		to = 44,
+		from = 35
+	},
+	soldier_ewok_magical_dance2 = {
+		prefix = "ewok_magical",
+		to = 60,
+		from = 45
+	},
+	soldier_ewok_magical_death = {
+		prefix = "ewok",
+		to = 80,
+		from = 73
+	},
+	soldier_ewok_magical_attack = {
+		prefix = "ewok",
+		to = 29,
+		from = 18
+	},									
 ---
 	enemy_paladin_attack = {
 		prefix = "soldier_lvl4_paladin",

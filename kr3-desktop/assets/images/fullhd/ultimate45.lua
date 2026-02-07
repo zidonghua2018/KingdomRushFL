@@ -500,6 +500,7 @@ return {
 		alias = {},
 		textureRotated = false
 	},
+	--[[
 	["portraits_power_hero_0402"] = {
 		a_name = "ultimate45.png",
 		size = {
@@ -575,4 +576,5 @@ return {
 		alias = {},
 		textureRotated = false
 	}
+		]]
 }

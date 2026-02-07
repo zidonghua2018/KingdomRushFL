@@ -4505,10 +4505,7 @@ tt.render.sprites[1].prefix = "bullet_razor_edge"
 tt.render.sprites[1].name = "flying"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].anchor = v(0.5, 0.5)
-
-tt = RT("bullet_razor_edge_1", "bullet_razor_edge")
-tt.bullet.payload = "aura_razor_edge_1"
-
+----12.24去除了无用的代码
 tt = RT("aura_razor_edge", "aura")
 
 AC(tt, "render", "tween")
@@ -4570,14 +4567,6 @@ for i = 2, 4 do
 	tt.tween.props[i].sprite_id = i
 	tt.tween.props[i].keys[1][2] = 0
 end
-
-tt = RT("aura_razor_edge_1", "aura_razor_edge")
-tt.aura.damage_min = 2
-tt.aura.damage_max = 4
-tt.aura.damage_inc = 2
-tt.aura.damage_type = DAMAGE_TRUE
-tt.aura.radius = 55
-tt.aura.duration = 2--1
 
 tt = E:register_t("soldier_barrack_1", "soldier_militia")
 
@@ -6390,7 +6379,7 @@ tt.health_bar.offset = v(0, 39)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_arivan.level_up
 tt.hero.tombstone_show_time = fts(90)
-tt.info.damage_icon = "magic"
+--tt.info.damage_icon = "magic"
 tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.i18n_key = "HERO_ELVES_ELEMENTALIST"
 tt.info.hero_portrait = "hero_portraits_0002"
@@ -7225,7 +7214,7 @@ tt.hero.tombstone_show_time = nil
 tt.hero.use_custom_spawn_point = true
 tt.idle_flip.cooldown = 10
 tt.drag_line_origin_offset = v(0, 127)
-tt.info.damage_icon = "magic"
+--tt.info.damage_icon = "magic"
 tt.info.fn = scripts.hero_faustus.get_info
 tt.info.hero_portrait = "hero_portraits_0009"
 tt.info.i18n_key = "HERO_ELVES_FAUSTUS"
@@ -8179,7 +8168,7 @@ tt.health_bar.offset = v(0, 45)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_catha.level_up
 tt.hero.tombstone_show_time = fts(90)
-tt.info.damage_icon = "arrow"
+--tt.info.damage_icon = "arrow"
 tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.hero_portrait = "hero_portraits_0003"
 tt.info.portrait = "info_portraits_heroes_0003"
@@ -8834,7 +8823,7 @@ tt.health_bar.offset = v(0, 41)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_veznan.level_up
 tt.hero.tombstone_show_time = fts(90)
-tt.info.damage_icon = "magic"
+--tt.info.damage_icon = "magic"
 tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.hero_portrait = "hero_portraits_0006"
 tt.info.i18n_key = "HERO_ELVES_VEZNAN"
@@ -10733,7 +10722,7 @@ tt.hero.tombstone_show_time = nil
 tt.hero.use_custom_spawn_point = true
 tt.idle_flip.cooldown = 10
 tt.drag_line_origin_offset = v(0, 77)
-tt.info.damage_icon = "arrow"
+--tt.info.damage_icon = "arrow"
 tt.info.fn = scripts.hero_wilbur.get_info
 tt.info.hero_portrait = "hero_portraits_0017"
 tt.info.i18n_key = "HERO_ELVES_GYRO"
@@ -10885,7 +10874,7 @@ tt.info.fn = scripts.hero_basic.get_info_melee
 tt.info.hero_portrait = "hero_portraits_0019"
 tt.info.i18n_key = "HERO_ARCHER"
 tt.info.portrait = "portraits_sc_0064"
-tt.info.damage_icon = "arrow"
+--tt.info.damage_icon = "arrow"
 tt.fixed_mode = nil
 tt.main_script.insert = scripts.hero_alleria.insert
 tt.main_script.update = mylua.hero_alleria99.update
@@ -18839,6 +18828,7 @@ tt = E:register_t("mod_ray_crystal_arcane", "modifier")
 E:add_comps(tt, "dps")
 
 tt.modifier.duration = fts(16)
+tt.modifier.allows_duplicates = true
 tt.dps.damage_every = fts(4)
 tt.dps.damage_min = 150 / (tt.modifier.duration / tt.dps.damage_every)
 tt.dps.damage_max = 200 / (tt.modifier.duration / tt.dps.damage_every)
@@ -21205,7 +21195,7 @@ tt.render.sprites[4].offset = v(25, 41)
 tt.render.sprites[4].r = d2r(-6)
 tt.sound_events.insert = nil
 tt.tower.menu_offset = v(2, 20)
-tt.tower.price = -260 --0
+tt.tower.price = 0 --0
 tt.tower.type = "faerie_dragon"
 tt.tower.kind = TOWER_KIND_BARRACK
 
@@ -22429,6 +22419,7 @@ tt.render.sprites[1].angles.walk = {
 }
 tt.render.sprites[1].prefix = "babyAshbite"
 tt.render.sprites[1].sync_idx = 8
+tt.render.sprites[1].z = Z_FLYING_HEROES
 tt.render.sprites[2] = E:clone_c("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "babyAshbite_0099"
@@ -23887,7 +23878,8 @@ tt.hero.skills.box.level = 3
 tt.hero.skills.engine.level = 3
 tt.hero.skills.ultimate.level = 3
 tt.info.i18n_key = "HERO_ELVES_GYRO"
-tt.info.fn = mylua.hero_wilbur99.get_info
+tt.info.fn = scripts.hero_wilbur.get_info
+--tt.info.fn = mylua.hero_wilbur99.get_info
 -- tt.info.ultimate_icon = nil
 tt.ranged.attacks[1].bullet = "shot_wilbur_2"
 tt = E:register_t("ultimate_hero_wilbur")
@@ -23949,7 +23941,8 @@ tt.hero.skills.enervation.level = 3
 tt.hero.skills.liquid_fire.level = 3
 tt.hero.skills.ultimate.level = 3
 tt.info.i18n_key = "HERO_ELVES_FAUSTUS"
-tt.info.fn = mylua.hero_faustus99.get_info
+tt.info.fn = scripts.hero_faustus.get_info
+--tt.info.fn = mylua.hero_faustus99.get_info
 -- tt.info.ultimate_icon = nil
 tt.ranged.attacks[1].bullet = "bolt_faustus_2"
 tt = E:register_t("ultimate_hero_faustus")
@@ -25135,8 +25128,8 @@ tt = RT("spear_ewok", "arrow")
 tt.bullet.damage_min = 24
 tt.bullet.damage_max = 40
 tt.bullet.flight_time = fts(20)
-tt.bullet.miss_decal = "decal_spear"
-tt.render.sprites[1].name = "spear"
+tt.bullet.miss_decal = "ewok_2_proy_0002"
+tt.render.sprites[1].name = "ewok_2_proy_0001"
 tt.sound_events.insert = "AxeSound"
 tt = E:register_t("tower_ewok_archer_re", "tower_barrack_1")
 E:add_comps(tt, "attacks","powers")
@@ -25205,6 +25198,45 @@ tt.powers.tear = CC("power")
 tt.powers.tear.max_level = 3
 tt.powers.tear.price_base = 200
 tt.powers.tear.price_inc = 100
+tt.powers.plant_magic_blossom = E:clone_c("power")
+tt.powers.plant_magic_blossom.max_level = 2
+tt.powers.plant_magic_blossom.price_base = 120
+tt.powers.plant_magic_blossom.price_inc = 120
+tt.powers.plant_magic_blossom.pos = {
+	v(-47, -18),
+	v(47, -18)
+}
+tt.powers.plant_magic_blossom.template = "plant_magic_blossom_ewok"
+tt.powers.plant_magic_blossom.plants = {}
+tt = E:register_t("plant_magic_blossom_ewok", "decal_scripted")
+
+E:add_comps(tt, "custom_attack", "ui", "plant", "editor")
+
+tt.is_removed = nil
+tt.custom_attack.cooldown = 25
+tt.custom_attack.range = 200
+tt.custom_attack.bullet = "bolt_plant_magic_blossom"
+tt.custom_attack.bullet_count = 8
+tt.custom_attack.vis_flags = bor(F_RANGED)
+tt.custom_attack.bullet_start_offset = v(0, 55)
+tt.custom_attack.sound = "ElvesPlantMissile"
+tt.custom_attack.shoot_time = fts(6)
+tt.editor.props = {
+	{
+		"ui.nav_mesh_id",
+		PT_STRING
+	}
+}
+tt.render.sprites[1].prefix = "plant_magic_blossom"
+tt.render.sprites[1].name = "loading"
+tt.render.sprites[1].anchor.y = 0.0641025641025641
+tt.main_script.update = scripts_rebbborn.plant_magic_blossom_ewok.update
+tt.ui.can_click = true
+tt.ui.can_select = false
+tt.ui.click_rect = r(-24, -5, 48, 78)
+tt.ui.has_nav_mesh = true
+tt.ui.hover_sprite_name = "plant_magicBlosom_0001_over_console"
+tt.ui.hover_sprite_anchor = v(0.5, 0.4823529411764706)
 tt = E.register_t(E, "soldier_ewok_re_1", "soldier_barrack_1")
 
 E.add_comps(E, tt, "dodge", "revive", "ranged","powers")
@@ -25299,3 +25331,228 @@ tt.damage_min = 0.01
 tt.damage_max = 0.01
 tt.damage_type = DAMAGE_ARMOR
 tt.damage_inc = 0.01
+---魔法侏儒花园
+tt = E.register_t(E, "tower_pixie_re", "tower")
+
+E.add_comps(E, tt, "powers", "attacks")
+
+tt.attacks.list[1] = E.clone_c(E, "bullet_attack")
+tt.attacks.list[1].animation = "shoot"
+tt.attacks.list[1].bullet_start_offset = v(10, 11)
+tt.attacks.list[1].bullet = "bullet_pixie_instakill"
+tt.attacks.list[1].vis_bans = bor(F_FLYING, F_BOSS)
+tt.attacks.list[1].vis_flags = bor(F_RANGED, F_STUN, F_INSTAKILL)
+tt.attacks.list[1].chance = 0
+tt.attacks.list[2] = table.deepclone(tt.attacks.list[1])
+tt.attacks.list[2].animation = "shoot"
+tt.attacks.list[2].bullet = "bullet_pixie_poison"
+tt.attacks.list[2].vis_flags = bor(F_RANGED, F_STUN, F_POISON)
+tt.attacks.list[2].chance = 0
+tt.attacks.list[3] = E.clone_c(E, "mod_attack")
+tt.attacks.list[3].animation = "attack"
+tt.attacks.list[3].mod = "mod_pixie_polymorph"
+tt.attacks.list[3].vis_bans = bor(F_FLYING, F_BOSS)
+tt.attacks.list[3].vis_flags = bor(F_RANGED, F_STUN, F_POLYMORPH)
+tt.attacks.list[3].chance = 0.1
+tt.attacks.list[4] = E.clone_c(E, "mod_attack")
+tt.attacks.list[4].animation = "harvester"
+tt.attacks.list[4].mod = "mod_pixie_pickpocket"
+tt.attacks.list[4].vis_bans = bor(F_FLYING, F_BOSS)
+tt.attacks.list[4].vis_flags = bor(F_RANGED, F_STUN)
+tt.attacks.list[4].chance = 0.9
+tt.attacks.list[4].check_gold_bag = true
+tt.attacks.list[5] = E.clone_c(E, "mod_attack")
+tt.attacks.list[5].animation = "attack"
+tt.attacks.list[5].mod = "mod_pixie_teleport"
+tt.attacks.list[5].vis_bans = bor(F_FLYING, F_BOSS)
+tt.attacks.list[5].vis_flags = bor(F_RANGED, F_STUN, F_TELEPORT)
+tt.attacks.list[5].chance = 0
+tt.attacks.hide_range = false
+tt.attacks.range = 190
+tt.attacks.cooldown = fts(10)
+tt.attacks.enemy_cooldown = 3
+tt.attacks.pixie_cooldown = 5
+tt.attacks.excluded_templates = {
+	"enemy_rabbit"
+}
+tt.info.i18n_key = "ELVES_TOWER_PIXIE"
+tt.info.fn = scripts_rebbborn.tower_pixie_re.get_info
+tt.info.portrait =  "info_portraits_towers_0017"
+tt.info.enc_icon = 70
+tt.main_script.update = scripts_rebbborn.tower_pixie_re.update
+tt.main_script.remove = scripts_rebbborn.tower_pixie_re.remove
+tt.powers.cream = E.clone_c(E, "power")
+tt.powers.cream.price_base = 250
+tt.powers.cream.price_inc = 250
+tt.powers.cream.max_level = 2
+tt.powers.cream.idle_offsets = {
+	v(-18, -1),
+	v(21, -3),
+	v(5, -9)
+}
+tt.powers.cream.enc_icon = 101
+tt.powers.total = E.clone_c(E, "power")
+tt.powers.total.price_base = 200
+tt.powers.total.price_inc = 200
+tt.powers.total.max_level = 3
+tt.powers.total.chances = {
+	{
+		0,
+		0,
+		0.1
+	},
+	{
+		0.2,
+		0.1,
+		0.2
+	},
+	{
+		0.1,
+		0.1,
+		0.1
+	},
+	{
+		0.7,
+		0.6,
+		0.5
+	},
+	{
+		0,
+		0.2,
+		0.1
+	}
+}
+tt.powers.total.enc_icon = 102
+tt.powers.plant_poison = E:clone_c("power")
+tt.powers.plant_poison.max_level = 2
+tt.powers.plant_poison.price_base = 200
+tt.powers.plant_poison.price_inc = 200
+tt.powers.plant_poison.pos = {
+	v(-54.5, -1),
+	v(54.5, -1),
+--	v(-47, -18),
+--	v(47, -18),
+--	v(-62, 24),
+--	v(62, 24)
+}
+tt.powers.plant_poison.template = "plant_poison_pumpkin_pixie"
+tt.powers.plant_poison.plants = {}
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrains_0002"
+tt.render.sprites[1].offset = v(0, 10)
+tt.render.sprites[2] = E.clone_c(E, "sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "pixie_tower"
+tt.render.sprites[2].offset = v(0, 15)
+tt.render.sprites[2].sort_y_offset = 15
+tt.sound_events.insert = "ElvesGnomeNew"
+tt.tower.menu_offset = v(0, 6)
+tt.tower.price = 0--230
+tt.tower.type = "pixie_re"
+tt = E:register_t("plant_poison_pumpkin_pixie", "decal_scripted")
+
+E:add_comps(tt, "custom_attack", "ui", "plant", "editor")
+
+tt.custom_attack.cooldown = 25
+tt.custom_attack.range = 170
+tt.custom_attack.mods = {
+	"mod_plant_poison_pumpkin_slow",
+	"mod_plant_poison_pumpkin"
+}
+tt.custom_attack.vis_flags = bor(F_RANGED, F_POISON)
+tt.custom_attack.sound = "VenomPlantDischarge"
+tt.editor.props = {
+	{
+		"ui.nav_mesh_id",
+		PT_STRING
+	}
+}
+tt.main_script.update = scripts_rebbborn.plant_poison_pumpkin_pixie.update
+tt.render.sprites[1].prefix = "plant_poison_pumpkin"
+tt.render.sprites[1].name = "loading"
+tt.render.sprites[1].anchor.y = 0.0641025641025641
+tt.ui.can_click = true
+tt.ui.can_select = false
+tt.ui.click_rect = r(-30, -5, 60, 54)
+tt.ui.has_nav_mesh = true
+tt.ui.hover_sprite_name = "plant_venom_0001_over_console"
+tt.ui.hover_sprite_anchor = v(0.5, 0.43703703703703706)
+---
+tt = E:register_t("tower_faerie_dragon_re", "tower")
+
+E:add_comps(tt, "powers", "attacks")
+
+tt.attacks.list[1] = E:clone_c("custom_attack")
+tt.attacks.list[1].cooldown = 3
+tt.attacks.list[1].vis_flags = bor(F_RANGED, F_STUN, F_FREEZE)
+tt.attacks.list[1].vis_bans = bor(F_BOSS)
+tt.attacks.range = 250
+tt.info.i18n_key = "ELVES_TOWER_SPECIAL_FAERIE_DRAGONS"
+tt.info.fn = scripts.tower_faerie_dragon.get_info
+tt.info.portrait = "info_portraits_towers_0018"
+tt.main_script.update = scripts_rebbborn.tower_faerie_dragon_re.update
+tt.main_script.remove = scripts_rebbborn.tower_faerie_dragon_re.remove
+tt.powers.more_dragons = E:clone_c("power")
+tt.powers.more_dragons.price_base = 150
+tt.powers.more_dragons.price_inc = 150
+tt.powers.more_dragons.max_level = 2
+tt.powers.more_dragons.idle_offsets = {
+	v(-12, 7),
+	v(28, -3)
+}
+tt.powers.improve_shot = E:clone_c("power")
+tt.powers.improve_shot.price_base = 125
+tt.powers.improve_shot.price_inc = 125
+tt.powers.improve_shot.max_level = 2
+tt.powers.plant_poison = E:clone_c("power")
+tt.powers.plant_poison.max_level = 2
+tt.powers.plant_poison.price_base = 200
+tt.powers.plant_poison.price_inc = 200
+tt.powers.plant_poison.pos = {
+	v(-54.5, -1),
+	v(54.5, -1),
+--	v(-47, -18),
+--	v(47, -18),
+--	v(-62, 24),
+--	v(62, 24)
+}
+tt.powers.plant_poison.template = "paralyzing_tree_re"--"plant_poison_pumpkin_pixie"
+tt.powers.plant_poison.plants = {}
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrains_0002"
+tt.render.sprites[1].offset = v(0, 10)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "fairy_dragon_tower"
+tt.render.sprites[2].offset = v(0, 36)
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].prefix = "tower_faerie_dragon_egg"
+tt.render.sprites[3].offset = v(-19, 50)
+tt.render.sprites[3].r = d2r(15)
+tt.render.sprites[4] = E:clone_c("sprite")
+tt.render.sprites[4].prefix = "tower_faerie_dragon_egg"
+tt.render.sprites[4].offset = v(25, 41)
+tt.render.sprites[4].r = d2r(-6)
+tt.sound_events.insert = nil
+tt.tower.menu_offset = v(2, 20)
+tt.tower.price = 0 --0
+tt.tower.type = "faerie_dragon_re"
+tt.tower.kind = TOWER_KIND_BARRACK
+tt = RT("paralyzing_tree_re", "decal_scripted")
+
+E:add_comps(tt, "custom_attack", "ui", "plant")
+
+tt.render.sprites[1].anchor.y = 0.31976744186046513
+tt.render.sprites[1].prefix = "paralyzing_tree"
+tt.render.sprites[1].name = "loading"
+tt.main_script.update = scripts.paralyzing_tree.update
+tt.ui.can_click = true
+tt.ui.can_select = false
+tt.ui.click_rect = r(-40, -5, 80, 80)
+tt.custom_attack.cooldown = 15
+tt.custom_attack.range = 160
+tt.custom_attack.vis_flags = bor(F_RANGED, F_STUN)
+tt.custom_attack.vis_bans = bor(F_BOSS)
+tt.custom_attack.shoot_time = fts(6)
+tt.custom_attack.animation = "shoot"
+tt.custom_attack.mod = "mod_paralyzing_tree"

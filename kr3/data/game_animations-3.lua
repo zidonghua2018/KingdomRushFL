@@ -7094,26 +7094,6 @@ local a = {
 		to = 60,
 		from = 45
 	},
-	tree_ewok_idleUp = {
-		prefix = "ewok_a",
-		to = 1,
-		from = 1
-	},
-	tree_ewok_idleDown = {
-		prefix = "ewok_a",
-		to = 1,
-		from = 1
-	},	
-	tree_ewok_shootingUp = {
-		prefix = "ewok_a",
-		to = 15,
-		from = 2
-	},
-	tree_ewok_shootingDown = {
-		prefix = "ewok_a",
-		to = 15,
-		from = 2
-	},	
 	decal_s05_cascade_1 = {
 		prefix = "stage5_cascade_1",
 		to = 15,

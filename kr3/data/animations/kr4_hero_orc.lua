@@ -1,4 +1,5 @@
 return {
+	--维鲁克本体
 	hero_orc_idle = {
 		prefix = "hero_orc",
 		to = 1,
@@ -14,6 +15,11 @@ return {
 		to = 36,
 		from = 17
 	},
+	hero_orc_attack = {
+		prefix = "hero_orc",
+		to = 36,
+		from = 17
+	},
 	hero_orc_melee2 = {
 		prefix = "hero_orc",
 		to = 65,
@@ -24,7 +30,12 @@ return {
 		to = 111,
 		from = 66
 	},
-	hero_orc_levelUp = {
+	hero_orc_levelup = {
+		prefix = "hero_orc",
+		to = 128,
+		from = 112
+	},
+	hero_orc_respawn = {
 		prefix = "hero_orc",
 		to = 128,
 		from = 112
@@ -69,12 +80,22 @@ return {
 		to = 21,
 		from = 10
 	},
+	hero_orc_spear_goblin_running = {
+		prefix = "hero_orc_spear_goblin",
+		to = 21,
+		from = 10
+	},
+	hero_orc_spear_goblin_attack = {
+		prefix = "hero_orc_spear_goblin",
+		to = 45,
+		from = 22
+	},
 	hero_orc_spear_goblin_melee = {
 		prefix = "hero_orc_spear_goblin",
 		to = 45,
 		from = 22
 	},
-	hero_orc_spear_goblin_range = {
+	hero_orc_spear_goblin_shoot = {
 		prefix = "hero_orc_spear_goblin",
 		to = 66,
 		from = 46
@@ -98,5 +119,40 @@ return {
 		prefix = "hero_orc_stun_decal",
 		to = 17,
 		from = 1
+	},
+	reinforcement_goblin_idle = {
+		prefix = "reinforcement_goblin",
+		to = 1,
+		from = 1
+	},
+	reinforcement_goblin_walk = {
+		prefix = "reinforcement_goblin",
+		to = 2,
+		from = 9
+	},
+	reinforcement_goblin_running = {
+		prefix = "reinforcement_goblin",
+		to = 2,
+		from = 9
+	},
+	reinforcement_goblin_melee = {
+		prefix = "reinforcement_goblin",
+		to = 10,
+		from = 23
+	},
+	reinforcement_goblin_attack = {
+		prefix = "reinforcement_goblin",
+		to = 10,
+		from = 23
+	},
+	reinforcement_goblin_death = {
+		prefix = "reinforcement_goblin",
+		to = 24,
+		from = 36
+	},
+	reinforcement_goblin_spawn = {
+		prefix = "reinforcement_goblin",
+		to = 37,
+		from = 56
 	},
 }

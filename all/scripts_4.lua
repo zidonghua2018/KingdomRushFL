@@ -521,7 +521,7 @@ function scripts.fx_coin_shower.update(this, store)
 end
 
 scripts.enemy_basic = {}
-
+--[[
 function scripts.enemy_basic.get_info(this)
 	local min, max, attacks
 
@@ -570,6 +570,119 @@ function scripts.enemy_basic.get_info(this)
 		lives = this.enemy.lives_cost,
 		immune = this.health.immune_to == DAMAGE_ALL_TYPES
 	}
+end
+]]--
+----本段代码来自DOVE版
+function scripts.enemy_basic.get_info(this)
+    local attacks, damage_type
+    local min, max
+	local yes_melee = true
+    local no_ranged = true
+    if this.melee and this.melee.attacks then
+        attacks = this.melee.attacks
+        for _, a in pairs(attacks) do
+            if a.damage_min then
+                min, max = a.damage_min, a.damage_max
+                damage_type = a.damage_type
+                break
+            end
+        end
+        if this.unit and min then
+            min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
+        end
+
+        if min and max then
+            min, max = math.ceil(min), math.ceil(max)
+        end
+    end
+
+    local ranged_min, ranged_max
+    local ranged_damage_type
+    if this.ranged and this.ranged.attacks then
+        for _, a in pairs(this.ranged.attacks) do
+            if not a.disabled and a.bullet then
+                local b = E:get_template(a.bullet)
+                local level = a.level
+                if b and b.bullet.damage_min and b.bullet.damage_max then
+                    if level and b.bullet.damage_inc then
+                        ranged_min, ranged_max = b.bullet.damage_min + (b.bullet.damage_inc * level),
+                            b.bullet.damage_max + (b.bullet.damage_inc * level)
+                    else
+                        ranged_min, ranged_max = b.bullet.damage_min, b.bullet.damage_max
+                    end
+                    ranged_damage_type = b.bullet.damage_type
+                    break
+                end
+            end
+        end
+
+        if this.unit and ranged_min then
+            ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
+        end
+
+        if ranged_min and ranged_max then
+            ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+        end
+    end
+	
+--[[	
+    if not ranged_damage_type and this.timed_attacks and this.timed_attacks.list[1].bullet then
+        local b = E:get_template(this.timed_attacks.list[1].bullet)
+
+        if b and b.bullet and b.bullet.damage_min and b.bullet.damage_max then
+            ranged_min, ranged_max = math.ceil((b.bullet.damage_min) * this.unit.damage_factor),
+                math.ceil((b.bullet.damage_max) * this.unit.damage_factor)
+            ranged_damage_type = b.bullet.damage_type
+        end
+    end
+]]--	
+    if ranged_damage_type then
+        no_ranged = false
+    end
+
+    local melee_count = 0
+    if this.melee and this.melee.attacks then
+        melee_count = #this.melee.attacks
+    end
+
+    if no_ranged and melee_count > 1 then
+        while melee_count > 1 do
+            local a = this.melee.attacks[melee_count]
+            if a.damage_min and not a.disabled then
+                ranged_min, ranged_max = a.damage_min, a.damage_max
+                ranged_damage_type = a.damage_type
+                if this.unit then
+                    ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
+                end
+                ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+                break
+            end
+            melee_count = melee_count - 1
+        end
+    end
+
+    return {
+        type = STATS_TYPE_ENEMY,
+        hp = this.health.hp,
+        hp_max = this.health.hp_max,
+
+        damage_min = min,
+        damage_max = max,
+        damage_type = damage_type,
+		damage_icon = this.info.damage_icon,
+
+        ranged_damage_min = ranged_min,
+        ranged_damage_max = ranged_max,
+        ranged_damage_type = ranged_damage_type,
+		ranged_damage_icon = this.info.ranged_damage_icon,
+
+        armor = this.health.armor,
+        magic_armor = this.health.magic_armor,
+		lives = this.enemy and this.enemy.lives_cost or 1,
+		immune = this.health.immune_to == DAMAGE_ALL_TYPES,
+		no_ranged = no_ranged,
+		yes_melee = yes_melee
+    }
 end
 
 function scripts.enemy_basic.insert(this, store, script)
@@ -1039,7 +1152,7 @@ function scripts.delayed_spawn.update(this, store)
 end
 
 scripts.soldier_reinforcement = {}
-
+--[[
 function scripts.soldier_reinforcement.get_info(this)
 	local attacks
 
@@ -1076,6 +1189,116 @@ function scripts.soldier_reinforcement.get_info(this)
 		damage_icon = this.info.damage_icon,
 		armor = this.health.armor
 	}
+end
+]]--
+----本段代码来自DOVE版
+function scripts.soldier_reinforcement.get_info(this)
+    local attacks, damage_type
+    local min, max
+	local yes_melee = true
+    local no_ranged = true
+    if this.melee and this.melee.attacks then
+        attacks = this.melee.attacks
+        for _, a in pairs(attacks) do
+            if a.damage_min then
+                min, max = a.damage_min, a.damage_max
+                damage_type = a.damage_type
+                break
+            end
+        end
+        if this.unit and min then
+            min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
+        end
+
+        if min and max then
+            min, max = math.ceil(min), math.ceil(max)
+        end
+    end
+
+    local ranged_min, ranged_max
+    local ranged_damage_type
+    if this.ranged and this.ranged.attacks then
+        for _, a in pairs(this.ranged.attacks) do
+            if not a.disabled and a.bullet then
+                local b = E:get_template(a.bullet)
+                local level = a.level
+                if b and b.bullet.damage_min and b.bullet.damage_max then
+                    if level and b.bullet.damage_inc then
+                        ranged_min, ranged_max = b.bullet.damage_min + (b.bullet.damage_inc * level),
+                            b.bullet.damage_max + (b.bullet.damage_inc * level)
+                    else
+                        ranged_min, ranged_max = b.bullet.damage_min,b.bullet.damage_max
+                    end
+                    ranged_damage_type = b.bullet.damage_type
+                    break
+                end
+            end
+        end
+
+        if this.unit and ranged_min then
+            ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
+        end
+
+        if ranged_min and ranged_max then
+            ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+        end
+    end
+--[[
+    if not ranged_damage_type and this.timed_attacks and this.timed_attacks.list[1].bullet then
+        local b = E:get_template(this.timed_attacks.list[1].bullet)
+
+        if b and b.bullet and b.bullet.damage_min and b.bullet.damage_max then
+            ranged_min, ranged_max = math.ceil((b.bullet.damage_min) * this.unit.damage_factor),
+                math.ceil((b.bullet.damage_max) * this.unit.damage_factor)
+            ranged_damage_type = b.bullet.damage_type
+        end
+    end
+]]--
+    if ranged_damage_type then
+        no_ranged = false
+    end
+
+    local melee_count = 0
+    if this.melee and this.melee.attacks then
+        melee_count = #this.melee.attacks
+    end
+
+    if no_ranged and melee_count > 1 then
+        while melee_count > 1 do
+            local a = this.melee.attacks[melee_count]
+            if a.damage_min and not a.disabled then
+                ranged_min, ranged_max = a.damage_min, a.damage_max
+                ranged_damage_type = a.damage_type
+                if this.unit then
+                    ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
+                end
+                ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+                break
+            end
+            melee_count = melee_count - 1
+        end
+    end
+
+    return {
+        type = STATS_TYPE_SOLDIER,
+        hp = this.health.hp,
+        hp_max = this.health.hp_max,
+
+        damage_min = min,
+        damage_max = max,
+        damage_type = damage_type,
+		damage_icon = this.info.damage_icon,
+
+        ranged_damage_min = ranged_min,
+        ranged_damage_max = ranged_max,
+        ranged_damage_type = ranged_damage_type,
+		ranged_damage_icon = this.info.ranged_damage_icon,
+
+        armor = this.health.armor,
+        magic_armor = this.health.magic_armor,
+        no_ranged = no_ranged,
+		yes_melee = yes_melee
+    }
 end
 
 function scripts.soldier_reinforcement.insert(this, store, script)
@@ -1182,7 +1405,7 @@ function scripts.soldier_mercenary.get_info(this)
 end
 
 scripts.soldier_barrack = {}
-
+--[[
 function scripts.soldier_barrack.get_info(this)
 	local attacks
 
@@ -1220,6 +1443,117 @@ function scripts.soldier_barrack.get_info(this)
 		armor = this.health.armor,
 		respawn = this.health.dead_lifetime
 	}
+end
+]]--
+----本段代码来自DOVE版
+function scripts.soldier_barrack.get_info(this)
+    local attacks, damage_type
+    local min, max
+	local yes_melee = true
+    local no_ranged = true
+    if this.melee and this.melee.attacks then
+        attacks = this.melee.attacks
+        for _, a in pairs(attacks) do
+            if a.damage_min then
+                min, max = a.damage_min, a.damage_max
+                damage_type = a.damage_type
+                break
+            end
+        end
+        if this.unit and min then
+            min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
+        end
+
+        if min and max then
+            min, max = math.ceil(min), math.ceil(max)
+        end
+    end
+
+    local ranged_min, ranged_max
+    local ranged_damage_type
+    if this.ranged and this.ranged.attacks then
+        for _, a in pairs(this.ranged.attacks) do
+            if not a.disabled and a.bullet then
+                local b = E:get_template(a.bullet)
+                local level = a.level
+                if b and b.bullet.damage_min and b.bullet.damage_max then
+                    if level and b.bullet.damage_inc then
+                        ranged_min, ranged_max = b.bullet.damage_min + (b.bullet.damage_inc * level),
+                            b.bullet.damage_max + (b.bullet.damage_inc * level)
+                    else
+                        ranged_min, ranged_max = b.bullet.damage_min,b.bullet.damage_max
+                    end
+                    ranged_damage_type = b.bullet.damage_type
+                    break
+                end
+            end
+        end
+
+        if this.unit and ranged_min then
+            ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
+        end
+
+        if ranged_min and ranged_max then
+            ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+        end
+    end
+--[[
+    if not ranged_damage_type and this.timed_attacks and this.timed_attacks.list[1].bullet then
+        local b = E:get_template(this.timed_attacks.list[1].bullet)
+
+        if b and b.bullet and b.bullet.damage_min and b.bullet.damage_max then
+            ranged_min, ranged_max = math.ceil((b.bullet.damage_min) * this.unit.damage_factor),
+                math.ceil((b.bullet.damage_max) * this.unit.damage_factor)
+            ranged_damage_type = b.bullet.damage_type
+        end
+    end
+]]--	
+    if ranged_damage_type then
+        no_ranged = false
+    end
+
+    local melee_count = 0
+    if this.melee and this.melee.attacks then
+        melee_count = #this.melee.attacks
+    end
+
+    if no_ranged and melee_count > 1 then
+        while melee_count > 1 do
+            local a = this.melee.attacks[melee_count]
+            if a.damage_min and not a.disabled then
+                ranged_min, ranged_max = a.damage_min, a.damage_max
+                ranged_damage_type = a.damage_type
+                if this.unit then
+                    ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
+                end
+                ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+                break
+            end
+            melee_count = melee_count - 1
+        end
+    end
+
+    return {
+        type = STATS_TYPE_SOLDIER,
+        hp = this.health.hp,
+        hp_max = this.health.hp_max,
+
+        damage_min = min,
+        damage_max = max,
+        damage_type = damage_type,
+		damage_icon = this.info.damage_icon,
+
+        ranged_damage_min = ranged_min,
+        ranged_damage_max = ranged_max,
+        ranged_damage_type = ranged_damage_type,
+		ranged_damage_icon = this.info.ranged_damage_icon,
+
+        armor = this.health.armor,
+        magic_armor = this.health.magic_armor,
+        respawn = this.health.dead_lifetime,
+        no_ranged = no_ranged,
+		yes_melee = yes_melee
+    }
 end
 
 function scripts.soldier_barrack.insert(this, store, script)
@@ -1436,7 +1770,7 @@ function scripts.soldier_barrack.update(this, store, script)
 end
 
 scripts.hero_basic = {}
-
+--[[
 function scripts.hero_basic.get_info_melee(this)
 	local a = this.melee.attacks[1]
 	local min, max = a.damage_min, a.damage_max
@@ -1454,7 +1788,118 @@ function scripts.hero_basic.get_info_melee(this)
 		respawn = this.health.dead_lifetime
 	}
 end
+]]--
+----本段代码来自DOVE版
+function scripts.hero_basic.get_info_melee(this)
+    local attacks, damage_type
+    local min, max
+	local yes_melee = true
+    local no_ranged = true
+    if this.melee and this.melee.attacks then
+        attacks = this.melee.attacks
+        for _, a in pairs(attacks) do
+            if a.damage_min then
+                min, max = a.damage_min, a.damage_max
+                damage_type = a.damage_type
+                break
+            end
+        end
+        if this.unit and min then
+            min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
+        end
 
+        if min and max then
+            min, max = math.ceil(min), math.ceil(max)
+        end
+    end
+
+    local ranged_min, ranged_max
+    local ranged_damage_type
+    if this.ranged and this.ranged.attacks then
+        for _, a in pairs(this.ranged.attacks) do
+            if not a.disabled and a.bullet then
+                local b = E:get_template(a.bullet)
+                local level = a.level
+                if b and b.bullet.damage_min and b.bullet.damage_max then
+                    if level and b.bullet.damage_inc then
+                        ranged_min, ranged_max = b.bullet.damage_min + (b.bullet.damage_inc * level),
+                            b.bullet.damage_max + (b.bullet.damage_inc * level)
+                    else
+                        ranged_min, ranged_max = b.bullet.damage_min,b.bullet.damage_max
+                    end
+                    ranged_damage_type = b.bullet.damage_type
+                    break
+                end
+            end
+        end
+
+        if this.unit and ranged_min then
+            ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
+        end
+
+        if ranged_min and ranged_max then
+            ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+        end
+    end
+--[[
+    if not ranged_damage_type and this.timed_attacks and this.timed_attacks.list[1].bullet then
+        local b = E:get_template(this.timed_attacks.list[1].bullet)
+
+        if b and b.bullet and b.bullet.damage_min and b.bullet.damage_max then
+            ranged_min, ranged_max = math.ceil((b.bullet.damage_min) * this.unit.damage_factor),
+                math.ceil((b.bullet.damage_max) * this.unit.damage_factor)
+            ranged_damage_type = b.bullet.damage_type
+        end
+    end
+]]--
+    if ranged_damage_type then
+        no_ranged = false
+    end
+
+    local melee_count = 0
+    if this.melee and this.melee.attacks then
+        melee_count = #this.melee.attacks
+    end
+
+    if no_ranged and melee_count > 1 then
+        while melee_count > 1 do
+            local a = this.melee.attacks[melee_count]
+            if a.damage_min and not a.disabled then
+                ranged_min, ranged_max = a.damage_min, a.damage_max
+                ranged_damage_type = a.damage_type
+                if this.unit then
+                    ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
+                end
+                ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+                break
+            end
+            melee_count = melee_count - 1
+        end
+    end
+
+    return {
+        type = STATS_TYPE_SOLDIER,
+        hp = this.health.hp,
+        hp_max = this.health.hp_max,
+
+        damage_min = min,
+        damage_max = max,
+        damage_type = damage_type,
+		damage_icon = this.info.damage_icon,
+
+        ranged_damage_min = ranged_min,
+        ranged_damage_max = ranged_max,
+        ranged_damage_type = ranged_damage_type,
+		ranged_damage_icon = this.info.ranged_damage_icon,
+
+        armor = this.health.armor,
+        magic_armor = this.health.magic_armor,
+        respawn = this.health.dead_lifetime,
+        no_ranged = no_ranged,
+		yes_melee = yes_melee
+    }
+end
+--[[
 function scripts.hero_basic.get_info_ranged(this)
 	local a = this.ranged.attacks[1]
 	local b = E:get_template(a.bullet)
@@ -1471,6 +1916,117 @@ function scripts.hero_basic.get_info_ranged(this)
 		armor = this.health.armor,
 		respawn = this.health.dead_lifetime
 	}
+end
+]]--
+----本段代码来自DOVE版
+function scripts.hero_basic.get_info_ranged(this)
+    local attacks, damage_type
+    local min, max
+	local yes_melee = true
+    local no_ranged = true
+    if this.melee and this.melee.attacks then
+        attacks = this.melee.attacks
+        for _, a in pairs(attacks) do
+            if a.damage_min then
+                min, max = a.damage_min, a.damage_max
+                damage_type = a.damage_type
+                break
+            end
+        end
+        if this.unit and min then
+            min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
+        end
+
+        if min and max then
+            min, max = math.ceil(min), math.ceil(max)
+        end
+    end
+
+    local ranged_min, ranged_max
+    local ranged_damage_type
+    if this.ranged and this.ranged.attacks then
+        for _, a in pairs(this.ranged.attacks) do
+            if not a.disabled and a.bullet then
+                local b = E:get_template(a.bullet)
+                local level = a.level
+                if b and b.bullet.damage_min and b.bullet.damage_max then
+                    if level and b.bullet.damage_inc then
+                        ranged_min, ranged_max = b.bullet.damage_min + (b.bullet.damage_inc * level),
+                            b.bullet.damage_max + (b.bullet.damage_inc * level)
+                    else
+                        ranged_min, ranged_max = b.bullet.damage_min,b.bullet.damage_max
+                    end
+                    ranged_damage_type = b.bullet.damage_type
+                    break
+                end
+            end
+        end
+
+        if this.unit and ranged_min then
+            ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
+        end
+
+        if ranged_min and ranged_max then
+            ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+        end
+    end
+--[[
+    if not ranged_damage_type and this.timed_attacks and this.timed_attacks.list[1].bullet then
+        local b = E:get_template(this.timed_attacks.list[1].bullet)
+
+        if b and b.bullet and b.bullet.damage_min and b.bullet.damage_max then
+            ranged_min, ranged_max = math.ceil((b.bullet.damage_min) * this.unit.damage_factor),
+                math.ceil((b.bullet.damage_max) * this.unit.damage_factor)
+            ranged_damage_type = b.bullet.damage_type
+        end
+    end
+]]--
+    if ranged_damage_type then
+        no_ranged = false
+    end
+
+    local melee_count = 0
+    if this.melee and this.melee.attacks then
+        melee_count = #this.melee.attacks
+    end
+
+    if no_ranged and melee_count > 1 then
+        while melee_count > 1 do
+            local a = this.melee.attacks[melee_count]
+            if a.damage_min and not a.disabled then
+                ranged_min, ranged_max = a.damage_min, a.damage_max
+                ranged_damage_type = a.damage_type
+                if this.unit then
+                    ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
+                end
+                ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+                break
+            end
+            melee_count = melee_count - 1
+        end
+    end
+
+    return {
+        type = STATS_TYPE_SOLDIER,
+        hp = this.health.hp,
+        hp_max = this.health.hp_max,
+
+        damage_min = min,
+        damage_max = max,
+        damage_type = damage_type,
+		damage_icon = this.info.damage_icon,
+
+        ranged_damage_min = ranged_min,
+        ranged_damage_max = ranged_max,
+        ranged_damage_type = ranged_damage_type,
+		ranged_damage_icon = this.info.ranged_damage_icon,
+
+        armor = this.health.armor,
+        magic_armor = this.health.magic_armor,
+        respawn = this.health.dead_lifetime,
+        no_ranged = no_ranged,
+		yes_melee = yes_melee
+    }
 end
 
 function scripts.hero_basic.insert(this, store)
@@ -1805,7 +2361,7 @@ function scripts.tower_engineer.update(this, store, script)
 end
 
 scripts.tower_barrack = {}
-
+--[[
 function scripts.tower_barrack.get_info(this)
 	local s = E:create_entity(this.barrack.soldier_type)
 
@@ -1848,6 +2404,129 @@ function scripts.tower_barrack.get_info(this)
 		armor = s.health.armor,
 		respawn = s.health.dead_lifetime
 	}
+end
+]]--
+----本段代码来自DOVE版
+function scripts.tower_barrack.get_info(this)
+	local s = E:create_entity(this.barrack.soldier_type)
+
+	if this.powers then
+		for pn, p in pairs(this.powers) do
+			for i = 1, p.level do
+				SU.soldier_power_upgrade(s, pn)
+			end
+		end
+	end
+
+	local s_info = s.info.fn(s)
+    local attacks, damage_type
+    local min, max
+	local yes_melee = true
+    local no_ranged = true
+    if s.melee and s.melee.attacks then
+        attacks = s.melee.attacks
+        for _, a in pairs(attacks) do
+            if a.damage_min then
+                min, max = a.damage_min, a.damage_max
+                damage_type = a.damage_type
+                break
+            end
+        end
+        if s.unit and min then
+            min, max = min * s.unit.damage_factor, max * s.unit.damage_factor
+        end
+
+        if min and max then
+            min, max = math.ceil(min), math.ceil(max)
+        end
+    end
+
+    local ranged_min, ranged_max
+    local ranged_damage_type
+	local ranged_damage_type
+    if s.ranged and s.ranged.attacks then
+		ranged_attacks = s.ranged.attacks
+        for _, a in pairs(ranged_attacks) do
+            if not a.disabled and a.bullet then
+                local b = E:get_template(a.bullet)
+                local level = a.level
+                if b and b.bullet.damage_min and b.bullet.damage_max then
+                    if level and b.bullet.damage_inc then
+                        ranged_min, ranged_max = b.bullet.damage_min + (b.bullet.damage_inc * level),
+                            b.bullet.damage_max + (b.bullet.damage_inc * level)
+                    else
+                        ranged_min, ranged_max = b.bullet.damage_min,b.bullet.damage_max
+                    end
+                    ranged_damage_type = b.bullet.damage_type
+                    break
+                end
+            end
+        end
+
+        if s.unit and ranged_min then
+            ranged_min, ranged_max = ranged_min * s.unit.damage_factor, ranged_max * s.unit.damage_factor
+        end
+
+        if ranged_min and ranged_max then
+            ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+        end
+    end
+--[[
+    if not ranged_damage_type and s.timed_attacks and s.timed_attacks.list[1].bullet then
+        local b = E:get_template(s.timed_attacks.list[1].bullet)
+
+        if b and b.bullet and b.bullet.damage_min and b.bullet.damage_max then
+            ranged_min, ranged_max = math.ceil((b.bullet.damage_min) * s.unit.damage_factor),
+                math.ceil((b.bullet.damage_max) * s.unit.damage_factor)
+            ranged_damage_type = b.bullet.damage_type
+        end
+    end
+]]--	
+    if ranged_damage_type then
+        no_ranged = false
+    end
+
+    local melee_count = 0
+    if s.melee and s.melee.attacks then
+        melee_count = #s.melee.attacks
+    end
+
+    if no_ranged and melee_count > 1 then
+        while melee_count > 1 do
+            local a = s.melee.attacks[melee_count]
+            if a.damage_min and not a.disabled then
+                ranged_min, ranged_max = a.damage_min, a.damage_max
+                ranged_damage_type = a.damage_type
+                if s.unit then
+                    ranged_min, ranged_max = ranged_min * s.unit.damage_factor, ranged_max * s.unit.damage_factor
+                end
+                ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+                break
+            end
+            melee_count = melee_count - 1
+        end
+    end
+
+    return {
+        type = STATS_TYPE_TOWER_BARRACK,
+        hp_max = s.health.hp_max,
+
+        damage_min = min,
+        damage_max = max,
+        damage_type = damage_type,
+		damage_icon = s.info.damage_icon,
+
+        ranged_damage_min = ranged_min,
+        ranged_damage_max = ranged_max,
+        ranged_damage_type = ranged_damage_type,
+		ranged_damage_icon = s.info.ranged_damage_icon,
+
+        armor = s.health.armor,
+        magic_armor = s.health.magic_armor,
+        respawn = s.health.dead_lifetime,
+        no_ranged = no_ranged,
+		yes_melee = yes_melee
+    }
 end
 
 function scripts.tower_barrack.insert(this, store, script)

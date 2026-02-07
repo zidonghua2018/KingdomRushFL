@@ -1551,7 +1551,7 @@ function scripts.mod_tower_common.remove(this, store, script)
 			target.tower.damage_factor = target.tower.damage_factor / this.damage_factor
 		end
 
-		if this.cooldown_factor and target.attacks.list[1].cooldown then
+		if this.cooldown_factor and target.attacks.list and target.attacks.list[1] and target.attacks.list[1].cooldown then
 			target.attacks.list[1].cooldown = target.attacks.list[1].cooldown / this.cooldown_factor
 			if target.attacks.min_cooldown then
 				target.attacks.min_cooldown = target.attacks.min_cooldown / this.cooldown_factor

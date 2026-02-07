@@ -2031,7 +2031,7 @@ local function y_soldier_do_single_melee_attack(store, this, target, attack)
 		signal.emit("soldier-attack", this, attack, attack.signal)
 	end
 
-	if not unit_dodges(store, target, false, attack, this) and table.contains(target.enemy.blockers, this.id) then
+	if not unit_dodges(store, target, false, attack, this) and target.enemy and table.contains(target.enemy.blockers, this.id) then
 		if attack.damage_type ~= DAMAGE_NONE then
 			local d = E:create_entity("damage")
 
@@ -2624,7 +2624,8 @@ local function soldier_courage_upgrade(store, this)
 			"soldier_dwarf",
 			"soldier_frankenstein",
 			"soldier_death_rider",
-			"soldier_tremor"
+			"soldier_tremor",
+			"soldier_cannibal"
 	}
 	local flag = false
 	if table.contains(barrack_list,this.template_name) then

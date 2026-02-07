@@ -852,7 +852,11 @@ function scripts.infernal_mage.update(this, store)
 	}
 
 	local function find_target(aa)
-		local target, __, pred_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, aa.range, aa.node_prediction, aa.vis_flags, aa.vis_bans, function(e)
+		local max_range = aa.range
+		if aa == ar then
+			max_range = this.attacks.range
+		end
+		local target, __, pred_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, max_range, aa.node_prediction, aa.vis_flags, aa.vis_bans, function(e)
 			if aa == at then
 				return e.nav_path.ni >= aa.min_nodes and (not e.enemy.counts.mod_teleport or e.enemy.counts.mod_teleport < max_times_applied)
 			else

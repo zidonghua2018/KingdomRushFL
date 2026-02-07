@@ -2861,7 +2861,7 @@ return {
 			icon = 401,
 			thumb = 401,
 			portrait = 401,
-			transplanting = true,
+			--transplanting = true,
 			coming_soon = false
 		},
 		{
@@ -2871,7 +2871,7 @@ return {
 			icon = 402,
 			thumb = 402,
 			portrait = 402,
-			transplanting = true,
+			--transplanting = true,
 			coming_soon = false
 		},
 		{
@@ -2881,7 +2881,7 @@ return {
 			icon = 403,
 			thumb = 403,
 			portrait = 403,
-			transplanting = true,
+			--transplanting = true,
 			coming_soon = false
 		},
 		{

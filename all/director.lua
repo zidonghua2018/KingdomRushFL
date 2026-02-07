@@ -766,13 +766,16 @@ function director:queue_load_item_named(name, force_reload)
 				table.insert(game.required_textures, "go_stage118")
 				table.insert(game.required_textures, "go_stage120")
 				table.insert(game.required_textures, "go_stage122")
-				table.insert(game.required_textures, "go_stage135")
-				table.insert(game.required_textures, "go_wukong_elemental_holders")
 				for i = HERO_5_START, #map_data.hero_data do
 					if map_data.hero_data[i].transplanting == nil then
 						table.insert(game.scale_required_textures, "go_"..map_data.hero_data[i].name)
 					end
 				end
+			end
+
+			if user_data.liuhui.cheat5_dragon == true then
+				table.insert(game.required_textures, "go_stage135")
+				table.insert(game.required_textures, "go_wukong_elemental_holders")
 			end
 			
 			if args.level_idx == 5 then

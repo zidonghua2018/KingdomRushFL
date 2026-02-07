@@ -1436,7 +1436,7 @@ function scripts.tower_ignis_altar.get_info(this)
 
 	local o = scripts.tower_common.get_info(this)
 
-	--o.type = STATS_TYPE_TOWER_MAGE
+	o.type = STATS_TYPE_TOWER
 	damage_panel = {20,44,78,152}
 	damage_basic = {2,4,6,8}
 	damage_times = {10,11,13,19}
@@ -1445,6 +1445,7 @@ function scripts.tower_ignis_altar.get_info(this)
 
 	o.damage_min = min
 	o.damage_max = max
+	o.damage_type = DAMAGE_EXPLOSION
 
 	return o
 end
@@ -4608,7 +4609,7 @@ function scripts.decal_rotten_forest_smoke.update(this, store, script)
 end
 
 scripts.hero_dianyun = {}
-
+--[[
 function scripts.hero_dianyun.get_info(this)
     local level = this.hero.level
     local min = this.hero.level_stats.ranged_damage_min[level]
@@ -4628,6 +4629,20 @@ function scripts.hero_dianyun.get_info(this)
 		armor = this.health.armor,
 		respawn = this.health.dead_lifetime
 	}
+end
+]]--
+function scripts.hero_dianyun.get_info(this)
+	local t = scripts.hero_basic.get_info_ranged(this)
+    local level = this.hero.level
+    local min = this.hero.level_stats.ranged_damage_min[level]
+    local max = this.hero.level_stats.ranged_damage_max[level]
+    	t.ranged_damage_max = max * this.unit.damage_factor
+		t.ranged_damage_min = min * this.unit.damage_factor
+		t.ranged_damage_type = DAMAGE_MAGICAL
+		t.damage_max = 0--m.bullet.damage_max
+		t.damage_min = 0--m.bullet.damage_min
+		t.damage_type = DAMAGE_MAGICAL
+	return t
 end
 
 function scripts.hero_dianyun.level_up(this, store, initial)
@@ -6083,8 +6098,8 @@ function scripts.tower_wicked_sisters.get_info(this)
 	local sm = E:get_template(this.barrack.soldier_type)
 	--local b = E:get_template(sm.attacks.list[1].bullet)
 	--local min, max = b.bullet.damage_min, b.bullet.damage_max
-	min_table2 = {36,90,153,252}
-	max_table2 = {36,90,153,252}
+	min_table2 = {36,90,153,254}
+	max_table2 = {36,90,153,254}
 
 	min_table1 = {13,32,58,94}
 	max_table1 = {30,76,135,220}
@@ -6105,6 +6120,7 @@ function scripts.tower_wicked_sisters.get_info(this)
 		type = STATS_TYPE_TOWER_MAGE,
 		damage_min = min,
 		damage_max = max,
+		damage_type = this.tower_upgrade_persistent_data.current_mode == 1 and DAMAGE_MAGICAL or DAMAGE_TRUE,
 		range = range,
 		cooldown = cooldown
 	}
@@ -6559,7 +6575,8 @@ function scripts.tower_balloon.get_info(this)
 	local range = sm.attacks.list[1].max_range
 
 	return {
-		type = STATS_TYPE_TOWER_MAGE,
+		type = STATS_TYPE_TOWER,
+		damage_type = DAMAGE_EXPLOSION,
 		damage_min = min,
 		damage_max = max,
 		range = range,
@@ -7214,6 +7231,7 @@ function scripts.tower_deep_devils.get_info(this)
 
 	return {
 		type = STATS_TYPE_TOWER_MAGE,
+		damage_type = DAMAGE_MAGICAL,
 		damage_min = min,
 		damage_max = max,
 		range = range,
@@ -7433,7 +7451,7 @@ function scripts.tower_deep_devils.update(this, store, script)
 				if aa and not aa.disabled and store.tick_ts - aa.ts > aa.cooldown then 
 					if aa == ab then
 						local target
-						target = U.find_foremost_enemy(store.entities, tpos(this), 0, aa.range, false, aa.vis_flags, aa.vis_bans)
+						target = U.find_foremost_enemy(store.entities, tpos(this), 0, this.attacks.range, false, aa.vis_flags, aa.vis_bans)
 						if not target then
 							--SU.delay_attack(store, aa, fts(5))
 						else
@@ -9728,9 +9746,10 @@ function scripts.mod_intimidation.insert(this, store, script)
 		else
 			target.nav_path.dir = -1
 		end
+		target.vis.on_fear = true
 		if target.vis.bans then
 			target.vis._original_bans = target.vis.bans
-			target.vis.bans = U.flag_set(target.vis.bans, F_BLOCK)
+			target.vis.bans = U.flag_set(target.vis.bans, F_BLOCK, F_TELEPORT)
 		end
 		if target and target.enemy then
 			U.unblock_all(store, target)
@@ -9756,6 +9775,25 @@ function scripts.mod_intimidation.insert(this, store, script)
 	return true
 end
 
+function scripts.mod_intimidation.update(this, store, script)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+	if (target.water or target.cliff) then
+		print("terrain_type ~= terrain_type0")
+		SU.remove_modifiers(store, target)
+		SU.remove_auras(store, target)
+		queue_remove(store, target)
+		local e = E:create_entity(target.template_name)
+		e.pos = V.vclone(target.pos)
+		--e.health.hp_max = target.health.hp
+		e.health.hp = target.health.hp
+		e.nav_path = table.deepclone(target.nav_path)
+		queue_insert(store, e)
+
+		queue_remove(store, this)
+	end
+end
+
 function scripts.mod_intimidation.remove(this, store, script)
 	local target = store.entities[this.modifier.target_id]
 
@@ -9765,6 +9803,7 @@ function scripts.mod_intimidation.remove(this, store, script)
 		end
 
 		if target.nav_path and target.vis and target.vis.flags then
+			target.vis.on_fear = false
 			if band(target.vis.flags, F_FRIEND) ~= 0 then
 				target.nav_path.dir = -1
 			else

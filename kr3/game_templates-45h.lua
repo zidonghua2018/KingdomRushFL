@@ -114,41 +114,60 @@ tt.hero_insert = false
 anchor_x, anchor_y = 0.5, 0.12
 image_x, image_y = 92, 110
 tt.health.dead_lifetime = 16
-tt.melee.range = 65
-tt.health_bar.offset = v(0, 36)
+tt.health_bar.offset = v(0, 50)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.tombstone_show_time = fts(90)
 tt.info.fn = scripts.hero_basic.get_info_melee
---tt.main_script.update = kr4_scripts.hero_gerald99.update
-tt.hero.fn_level_up = scripts.hero_orc.level_up
---暂时取消头像--tt.info.portrait = "info_portraits_hero_0005"
+tt.main_script.update = kr4_scripts.hero_orc.update
+tt.hero.fn_level_up = kr4_scripts.hero_orc.level_up
+tt.info.portrait = "gui4_bottom_info_image_heroes_0001"
 tt.info.hero_portrait = "kra_hero_portraits_0401"
 tt.info.i18n_key = "HERO_VERUK"
 tt.info.ultimate_icon = "0401"
 tt.motion.max_speed = 2.5 * FPS
 tt.soldier.melee_slot_offset = v(5, 0)
-tt.sound_events.change_rally_point = "HeroPaladinTaunt"
-tt.sound_events.death = "HeroPaladinDeath"
-tt.sound_events.hero_room_select = "HeroPaladinTauntSelect"
-tt.sound_events.insert = "HeroPaladinTauntIntro"
+tt.sound_events.change_rally_point = "group_orc_taunt"
+tt.sound_events.death = "hero_orc_death"
+tt.sound_events.hero_room_select = "hero_orc_taunt_1"
+tt.sound_events.insert = "hero_orc_taunt_1"
 tt.sound_events.respawn = "HeroPaladinTauntIntro"
-tt.unit.marker_offset = v(0, 0)
-tt.unit.mod_offset = v(0, 20)
+tt.ui.click_rect = r(-29, -5, 58, 105)
+tt.unit.head_offset = v(0, 48)
+tt.unit.hit_offset = v(0, 30)
+tt.unit.mod_offset = v(0, 30)
+tt.unit.hide_after_death = nil
+tt.vis.bans = bor(tt.vis.bans, F_EAT, F_NET)
+tt.soldier.melee_slot_offset = v(25, 0)
 tt.hero.skills.duelist = E:clone_c("hero_skill")
 tt.hero.skills.duelist.hr_order = 1
 tt.hero.skills.duelist.hr_cost = {3,3,3}
+tt.hero.skills.duelist.damage_config = {90,180,270}
+tt.hero.skills.duelist.xp_gain = {90,180,270}
+tt.hero.skills.duelist.cooldown = {15,15,15}
 tt.hero.skills.brute_force = E:clone_c("hero_skill")
 tt.hero.skills.brute_force.hr_order = 2
 tt.hero.skills.brute_force.hr_cost = {1,2,3}
+tt.hero.skills.brute_force.damage_config = {90,180,270}
+tt.hero.skills.brute_force.xp_gain = {90,180,270}
+tt.hero.skills.brute_force.duration = {1,2,4}
+tt.hero.skills.brute_force.cooldown = {16,15,14}
 tt.hero.skills.aimed_slash = E:clone_c("hero_skill")
 tt.hero.skills.aimed_slash.hr_order = 3
 tt.hero.skills.aimed_slash.hr_cost = {2,3,4}
+tt.hero.skills.aimed_slash.damage_inc = {0.08,0.24,0.36}
 tt.hero.skills.inspiring_leader = E:clone_c("hero_skill")
 tt.hero.skills.inspiring_leader.hr_order = 4
 tt.hero.skills.inspiring_leader.hr_cost = {1,2,3}
+tt.hero.skills.inspiring_leader.instance = {"hero_veruk_ghoul_lvl1","hero_veruk_ghoul_lvl2","hero_veruk_ghoul_lvl3"}
+tt.hero.skills.inspiring_leader.cooldown = {20,18,15}
 tt.hero.skills.ultimate = E:clone_c("hero_skill")
 tt.hero.skills.ultimate.hr_order = 5
+tt.hero.skills.ultimate.cooldown = {[0]=32,32,32,32}
+tt.hero.skills.ultimate.controller_name = "hero_orc_ultimate"
 tt.hero.skills.ultimate.hr_cost = {2,2,2}
+tt.hero.skills.ultimate.instance = {"hero_veruk_spear_lvl1","hero_veruk_spear_lvl2","hero_veruk_spear_lvl3","hero_veruk_spear_lvl4"}
+
+
 
 tt.hero.level_stats.armor = {
 	0.03,
@@ -211,21 +230,242 @@ tt.hero.level_stats.regen_health = {
 	47
 }
 tt.regen.cooldown = 2
+tt.render.sprites[1].anchor.y = 0.12
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].scale = v(1.2,1.2)
+tt.render.sprites[1].prefix = "hero_orc"
+tt.render.sprites[1].angles.walk = {
+	"walk"
+}
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].is_shadow = true
+tt.render.sprites[2].name = "hero_orc_shadow"
+tt.render.sprites[2].anchor.y = 0.12
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.melee.range = 60
 tt.melee.attacks[1] = E:clone_c("melee_attack")
 tt.melee.attacks[1].cooldown = 1
 tt.melee.attacks[1].damage_max = nil
 tt.melee.attacks[1].damage_min = nil
 tt.melee.attacks[1].hit_time = fts(9)
 tt.melee.attacks[1].sound = "MeleeSword"
+tt.melee.attacks[1].animation = "melee"
 tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF)
 tt.melee.attacks[1].vis_flags = F_BLOCK
-tt.melee.attacks[1].xp_gain_factor = 1
+tt.melee.attacks[1].xp_gain_factor = 2.2
+tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
+tt.melee.attacks[2].disabled = true
+tt.melee.attacks[2].basic_attack = nil
+tt.melee.attacks[2].sound = "hero_orc_slash"
+tt.melee.attacks[2].animation = "special"
+tt.melee.attacks[2].hit_time = fts(15)
+tt.melee.attacks[2].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[2].damage_min = 90
+tt.melee.attacks[2].damage_max = 90
+tt.melee.attacks[2].cooldown = 15
+tt.melee.attacks[2].xp_gain = 90
+tt.melee.attacks[2].mod = "mod_hero_jacko_reduce_armor"
+tt.melee.attacks[3] = E:clone_c("area_attack")
+tt.melee.attacks[3].animation = "stun"
+tt.melee.attacks[3].mod = "mod_veruk_stun"
+tt.melee.attacks[3].sound = "hero_orc_bruteforce"
+tt.melee.attacks[3].damage_max = 0
+tt.melee.attacks[3].damage_min = 0
+tt.melee.attacks[3].damage_max_inc = 0
+tt.melee.attacks[3].damage_min_inc = 0
+tt.melee.attacks[3].damage_radius = 50
+tt.melee.attacks[3].xp_gain = 90
+tt.melee.attacks[3].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[3].disabled = true
+tt.melee.attacks[3].cooldown = 20
+tt.melee.attacks[3].hit_decal = "decal_orc_holystrike"
+tt.melee.attacks[3].hit_offset = v(22, 0)
+tt.melee.attacks[3].hit_time = fts(15)
+tt.melee.attacks[3].level = 0
+tt.melee.attacks[3].pop = nil
+--tt.melee.attacks[3].shared_cooldown = true
+tt.melee.attacks[3].vis_bans = bor(F_FLYING)
+tt.melee.attacks[3].vis_flags = bor(F_BLOCK)
+
+tt.timed_attacks.list[1] = E:clone_c("bullet_attack")
+tt.timed_attacks.list[1].skill = "range_at_path"
+tt.timed_attacks.list[1].disabled = true
+tt.timed_attacks.list[1].use_center = nil
+tt.timed_attacks.list[1].bullet = "hero_veruk_spawner_seed"
+tt.timed_attacks.list[1].max_bullets = 2
+tt.timed_attacks.list[1].range_nodes = 25
+tt.timed_attacks.list[1].min_targets = 2
+tt.timed_attacks.list[1].cooldown = 30
+tt.timed_attacks.list[1].min_nodes = -3
+tt.timed_attacks.list[1].max_nodes = -1
+tt.timed_attacks.list[1].cast_time = fts(10)
+tt.timed_attacks.list[1].sound = "hero_orc_leader"
+tt.timed_attacks.list[1].animation = "call"
+tt.timed_attacks.list[1].bullet_start_offset = {
+	v(19, 55)
+}
+tt.timed_attacks.list[1].vis_bans = bor(F_FRIEND, F_FLYING)
+tt.timed_attacks.list[1].xp_from_skill = "inspiring_leader"
+
+tt = RT("decal_orc_holystrike", "decal_timed")
+tt.render.sprites[1].name = "decal_orc_holystrike"
+tt.render.sprites[1].z = Z_DECALS
+
+tt = RT("mod_veruk_stun", "mod_stun")
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
+tt.modifier.duration = 1
+
+tt = E:register_t("hero_veruk_spawner_seed", "KR5Bomb")
+tt.bullet.damage_min = 64
+tt.bullet.damage_max = 64
+tt.bullet.damage_radius = 50
+tt.bullet.flight_time = fts(2)
+tt.bullet.rotation_speed = 2 * FPS * math.pi / 22
+tt.bullet.hit_fx = nil
+tt.bullet.hit_fx_water = nil
+tt.bullet.hit_decal = nil
+tt.bullet.hit_payload = "hero_veruk_ghoul_lvl1"
+tt.sound_events.hit = nil
+tt.sound_events.hit_water = nil
+tt.render.sprites[1].name = nil
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].animated = false
+
+tt = RT("hero_veruk_ghoul_lvl1", "soldier_hover")
+E:add_comps(tt, "reinforcement")
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.health.hp_max = 35
+tt.health_bar.offset = v(0, 32)
+tt.unit.hit_offset = v(0, 16)
+tt.unit.head_offset = v(0, 29)
+tt.unit.mod_offset = v(0, 16)
+tt.unit.marker_offset = v(0, 0)
+tt.info.fn = scripts.soldier_reinforcement.get_info
+tt.info.portrait = "gui4_bottom_info_image_soldiers_0032" --gui4_bottom_info_image_soldiers_0039
+tt.info.random_name_format = nil
+tt.info.random_name_count = nil
+tt.motion.max_speed = 30
+tt.render.sprites[1].prefix = "reinforcement_goblin"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].anchor.y = 0.125
+tt.render.sprites[1].angles.walk = {
+	"walk",
+}
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].is_shadow = true
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "hero_orc_spear_goblin_shadow"
+tt.render.sprites[2].anchor.y = 0.125
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.soldier.melee_slot_offset = v(16, 0)
+tt.melee.range = 75
+tt.melee.attacks[1].damage_min = 3
+tt.melee.attacks[1].damage_max = 4
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].hit_time = fts(9)
+tt.regen.health = 0
+tt.regen.cooldown = 2
+tt.reinforcement.duration = 10
+tt.ui.click_rect = r(-20, -5, 40, 28)
+tt.hover.cooldown_min = 5
+tt.hover.cooldown_max = 15
+tt.hover.random_ni = 6
+tt.fade_out = true
+tt.insert_delay = 0.6
+
+tt = RT("hero_veruk_ghoul_lvl2", "hero_veruk_ghoul_lvl1")
+tt.melee.attacks[1].damage_min = 6
+tt.melee.attacks[1].damage_max = 8
+tt.health.hp_max = 70
+
+tt = RT("hero_veruk_ghoul_lvl3", "hero_veruk_ghoul_lvl1")
+tt.melee.attacks[1].damage_min = 9
+tt.melee.attacks[1].damage_max = 12
+tt.health.hp_max = 100
+
+tt = RT("hero_veruk_spear_lvl1", "hero_veruk_ghoul_lvl1")
+E:add_comps(tt, "ranged")
+tt.render.sprites[1].prefix = "hero_orc_spear_goblin"
+tt.melee.attacks[1].damage_min = 8
+tt.melee.attacks[1].damage_max = 11
+tt.info.portrait = "gui4_bottom_info_image_soldiers_0039"
+tt.health.hp_max = 50
+tt.ranged.attacks[1] = CC("bullet_attack")
+tt.ranged.attacks[1].animation = "shoot"
+tt.ranged.attacks[1].bullet = "spear_veruk_goblin_lvl1"
+tt.ranged.attacks[1].bullet_start_offset = {
+	v(6, 12)
+}
+tt.ranged.attacks[1].cooldown = 0.9
+tt.ranged.attacks[1].max_range = 175
+tt.ranged.attacks[1].min_range = 25
+tt.ranged.attacks[1].shoot_time = fts(10)
+tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
+
+tt = RT("hero_veruk_spear_lvl2", "hero_veruk_spear_lvl1")
+E:add_comps(tt, "ranged")
+tt.melee.attacks[1].damage_min = 10
+tt.melee.attacks[1].damage_max = 14
+tt.health.hp_max = 100
+tt.ranged.attacks[1].bullet = "spear_veruk_goblin_lvl2"
+
+tt = RT("hero_veruk_spear_lvl3", "hero_veruk_spear_lvl1")
+E:add_comps(tt, "ranged")
+tt.melee.attacks[1].damage_min = 19
+tt.melee.attacks[1].damage_max = 29
+tt.health.hp_max = 150
+tt.ranged.attacks[1].bullet = "spear_veruk_goblin_lvl3"
+
+tt = RT("hero_veruk_spear_lvl4", "hero_veruk_spear_lvl1")
+E:add_comps(tt, "ranged")
+tt.melee.attacks[1].damage_min = 29
+tt.melee.attacks[1].damage_max = 43
+tt.health.hp_max = 200
+tt.ranged.attacks[1].bullet = "spear_veruk_goblin_lvl4"
+
+tt = E:register_t("spear_veruk_goblin_lvl1", "arrow5_fixed_height")
+tt.render.sprites[1].name = "hero_orc_spear_goblin_proyectile"
+tt.render.sprites[1].scale = v(-1, 1)
+tt.bullet.miss_decal = "hero_orc_spear_goblin_proyectile_decal_0007"
+tt.bullet.miss_decal_anchor = v(1, 0.5)
+tt.bullet.damage_max = 11
+tt.bullet.damage_min = 5
+tt.bullet.fixed_height = 35
+tt.bullet.flip_x = true
+tt.bullet.g = -1000
+tt.bullet.hide_radius = 1
+tt.bullet.reset_to_target_pos = true
+tt.bullet.use_unit_damage_factor = true
+
+tt = E:register_t("spear_veruk_goblin_lvl2", "spear_veruk_goblin_lvl1")
+tt.bullet.damage_max = 24
+tt.bullet.damage_min = 16
+
+tt = E:register_t("spear_veruk_goblin_lvl3", "spear_veruk_goblin_lvl1")
+tt.bullet.damage_max = 36
+tt.bullet.damage_min = 24
+
+tt = E:register_t("spear_veruk_goblin_lvl4", "spear_veruk_goblin_lvl1")
+tt.bullet.damage_max = 42
+tt.bullet.damage_min = 28
+
+tt = E:register_t("hero_orc_ultimate")
+E:add_comps(tt, "user_item", "pos", "main_script", "user_selection","sound_events", "attacks", "render")
+tt.can_fire_fn = kr4_scripts.controller_orc_ultimate.can_fire_fn
+--tt.sound_events.insert = "HeroEiskaltBreath"
+tt.level = 0
+tt.cooldown = 32
+tt.entity = "hero_veruk_spear_lvl1"
+tt.main_script.update = kr4_scripts.orc_ultimate.update
 
 ----------------------------------------------
 --------------------阿斯拉---------------------
 ----------------------------------------------
 tt = RT("hero_asra", "hero")
-AC(tt, "melee", "ranged", "timed_attacks", "dodge")
+AC(tt, "melee", "ranged", "timed_attacks", "teleport")
 tt.hero_insert = false
 anchor_x, anchor_y = 0.5, 0.12
 image_x, image_y = 92, 110
@@ -235,36 +475,56 @@ tt.health_bar.offset = v(0, 36)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.tombstone_show_time = fts(90)
 tt.info.fn = scripts.hero_basic.get_info_ranged_with_damage_factor
---tt.main_script.update = kr4_scripts.hero_gerald99.update
-tt.hero.fn_level_up = scripts.hero_asra.level_up
---暂时取消头像--tt.info.portrait = "info_portraits_hero_0005"
+tt.main_script.update = kr4_scripts.hero_asra.update
+tt.hero.fn_level_up = kr4_scripts.hero_asra.level_up
+tt.info.portrait = "gui4_bottom_info_image_heroes_0002"
 tt.info.hero_portrait = "kra_hero_portraits_0402"
 tt.info.i18n_key = "HERO_ASRA"
 tt.info.ultimate_icon = "0402"
 tt.motion.max_speed = 2.5 * FPS
 tt.soldier.melee_slot_offset = v(5, 0)
-tt.sound_events.change_rally_point = "HeroPaladinTaunt"
-tt.sound_events.death = "HeroPaladinDeath"
-tt.sound_events.hero_room_select = "HeroPaladinTauntSelect"
-tt.sound_events.insert = "HeroPaladinTauntIntro"
+tt.sound_events.change_rally_point = "group_asra_taunt"
+tt.sound_events.death = "hero_asra_death"
+tt.sound_events.hero_room_select = "hero_asra_taunt_1"
+tt.sound_events.insert = "hero_asra_taunt_1"
 tt.sound_events.respawn = "HeroPaladinTauntIntro"
 tt.unit.marker_offset = v(0, 0)
 tt.unit.mod_offset = v(0, 20)
+tt.teleport.min_distance = 150
+tt.teleport.delay = 0
+tt.teleport.sound = "hero_asra_teleport"
+tt.teleport.animations = {
+	"teleportOut",
+	"teleportIn"
+}
 tt.hero.skills.spider_bite = E:clone_c("hero_skill")
 tt.hero.skills.spider_bite.hr_order = 1
 tt.hero.skills.spider_bite.hr_cost = {5,4,3}
+tt.hero.skills.spider_bite.cooldown = {45,45,45}
+tt.hero.skills.spider_bite.damage_config = {7,15,35}
+tt.hero.skills.spider_bite.xp_gain = {300,600,900}
 tt.hero.skills.onix_arrows = E:clone_c("hero_skill")
 tt.hero.skills.onix_arrows.hr_order = 2
 tt.hero.skills.onix_arrows.hr_cost = {2,2,2}
+tt.hero.skills.onix_arrows.loops = {3,4,5}
+tt.hero.skills.onix_arrows.damage_min = {20,28,36}
+tt.hero.skills.onix_arrows.damage_max = {30,42,54}
+tt.hero.skills.onix_arrows.xp_gain = {90,180,270}
 tt.hero.skills.quiver_of_sorrow = E:clone_c("hero_skill")
 tt.hero.skills.quiver_of_sorrow.hr_order = 3
 tt.hero.skills.quiver_of_sorrow.hr_cost = {1,1,1}
+tt.hero.skills.quiver_of_sorrow.damage_armor = {0.01,0.02,0.03}
 tt.hero.skills.shield_of_shadows = E:clone_c("hero_skill")
 tt.hero.skills.shield_of_shadows.hr_order = 4
 tt.hero.skills.shield_of_shadows.hr_cost = {2,2,2}
+tt.hero.skills.shield_of_shadows.shield_max_damage = {120,400,600}
+tt.hero.skills.shield_of_shadows.xp_gain = {120,240,360}
 tt.hero.skills.ultimate = E:clone_c("hero_skill")
 tt.hero.skills.ultimate.hr_order = 5
 tt.hero.skills.ultimate.hr_cost = {3,3,3}
+tt.hero.skills.ultimate.damage_config = {[0]=10,15,30,50}
+tt.hero.skills.ultimate.cooldown = {[0]=40,40,40,40}
+tt.hero.skills.ultimate.controller_name = "hero_asra_ultimate"
 
 tt.hero.level_stats.armor = {
 	0.06,
@@ -350,71 +610,313 @@ tt.hero.level_stats.regen_health = {
 	30,
 	33
 }
+
+tt.regen.cooldown = 2
+tt.render.sprites[1].anchor.y = 0.12
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].scale = v(1.2,1.2)
+tt.render.sprites[1].prefix = "hero_asra"
+tt.render.sprites[1].angles.walk = {
+	"walk"
+}
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].is_shadow = true
+tt.render.sprites[2].name = "hero_asra_shadow"
+tt.render.sprites[2].anchor.y = 0.12
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.melee.range = 60
 tt.regen.cooldown = 2
 tt.melee.attacks[1] = E:clone_c("melee_attack")
-tt.melee.attacks[1].cooldown = 1
-tt.melee.attacks[1].damage_max = nil
-tt.melee.attacks[1].damage_min = nil
+tt.melee.attacks[1].cooldown = 0.8
+tt.melee.attacks[1].damage_max = 10
+tt.melee.attacks[1].damage_min = 5
+tt.melee.attacks[1].animation = "melee"
 tt.melee.attacks[1].hit_time = fts(9)
 tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF)
 tt.melee.attacks[1].vis_flags = F_BLOCK
-tt.melee.attacks[1].xp_gain_factor = 1
+tt.melee.attacks[1].xp_gain_factor = 2.2
+tt.melee.attacks[2] = E:clone_c("melee_attack")
+tt.melee.attacks[2].cooldown = 45
+tt.melee.attacks[2].disabled = true
+tt.melee.attacks[2].sound = "hero_asra_spiderbite"
+tt.melee.attacks[2].damage_max = 1
+tt.melee.attacks[2].damage_min = 1
+tt.melee.attacks[2].animation = "meleePoison"
+tt.melee.attacks[2].hit_time = fts(9)
+tt.melee.attacks[2].mod = "mod_asra_poison"
+tt.melee.attacks[2].vis_bans = bor(F_FLYING, F_CLIFF)
+tt.melee.attacks[2].vis_flags = F_BLOCK
+tt.melee.attacks[2].xp_gain = 300
 tt.ranged.attacks[1] = E:clone_c("bullet_attack")
-tt.ranged.attacks[1].cooldown = 1.5
+tt.ranged.attacks[1].cooldown = 1
 tt.ranged.attacks[1].min_range = 25
-tt.ranged.attacks[1].max_range = 140
+tt.ranged.attacks[1].xp_gain_factor = 2.2
+tt.ranged.attacks[1].max_range = 200
+tt.ranged.attacks[1].animation = "shoot"
 tt.ranged.attacks[1].bullet = "bullet_asra"
-tt.ranged.attacks[1].shoot_time = fts(13)
+tt.ranged.attacks[1].shoot_time = fts(11)
 tt.ranged.attacks[1].bullet_start_offset = {
 	v(-8, 24)
 }
-tt = RT("bullet_asra", "arrow")
+tt.ranged.attacks[2] = E:clone_c("bullet_attack")
+tt.ranged.attacks[2].cooldown = 18
+tt.ranged.attacks[2].min_range = 25
+tt.ranged.attacks[2].max_range = 200
+--tt.ranged.attacks[2].animation = "shoot"
+tt.ranged.attacks[2].bullet = "bullet_onix_asra"
+tt.ranged.attacks[2].max_loops = 3
+tt.ranged.attacks[2].loops = 3
+tt.ranged.attacks[2].xp_gain = 90
+tt.ranged.attacks[2].disabled = true
+tt.ranged.attacks[2].shoot_times = {fts(5)}
+tt.ranged.attacks[2].bullet_start_offset = {
+	v(-8, 24)
+}
+tt.ranged.attacks[2].animations = {
+	"multishotIn",
+	"multishotLoop",
+	"multishotOut"
+}
+
+tt.timed_attacks.list[1] = E:clone_c("mod_attack")
+tt.timed_attacks.list[1].animation = "special"
+tt.timed_attacks.list[1].cooldown = 22
+tt.timed_attacks.list[1].max_range_trigger = 72
+tt.timed_attacks.list[1].max_range_effect = 140
+tt.timed_attacks.list[1].min_targets = 1
+tt.timed_attacks.list[1].max_targets = 4
+tt.timed_attacks.list[1].mod = "hero_asra_unbreakable_mod"
+tt.timed_attacks.list[1].disabled = true
+tt.timed_attacks.list[1].cast_time = fts(6)
+tt.timed_attacks.list[1].xp_from_skill = "shield_of_shadows"
+tt.timed_attacks.list[1].sound = "hero_asra_shield"
+tt.timed_attacks.list[1].vis_bans = bor(F_FLYING)
+
+tt = E:register_t("hero_asra_ultimate")
+
+E:add_comps(tt, "pos", "main_script")
+
+tt.can_fire_fn = scripts.hero_asra_ultimate.can_fire_fn
+tt.cooldown = 40
+tt.sound = "hero_asra_ultimate_poison"
+tt.bullet = "arrow_hero_asra_ultimate"
+tt.spread = {
+	[0] = 6,
+	6,
+	6,
+	6
+}
+tt.damage = {
+	[0] = 0,
+	0,
+	0,
+	0
+}
+tt.main_script.update = scripts.hero_asra_ultimate.update
+
+tt = E:register_t("arrow_hero_asra_ultimate", "bullet")
+tt.main_script.update = scripts.arrow_hero_asra_ultimate.update
+tt.bullet.damage_radius = 45
+tt.bullet.damage_flags = F_AREA
+tt.bullet.damage_bans = F_FRIEND
+tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.arrive_decal = "decal_hero_asra_ultimate"
+tt.bullet.max_speed = 1500
+tt.bullet.mod = "mod_hero_asra_ultimate_poison"
+tt.render.sprites[1].name = "hero_asra_special_arrow"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].scale = v(-1, 1)
+tt.render.sprites[1].anchor.x = 0.9629629629629629
+tt.sound_events.insert = "ArrowSound"
+
+tt = RT("mod_hero_asra_ultimate_poison", "mod_poison")
+tt.modifier.duration = 2.1
+tt.dps.damage_max = 7
+tt.dps.damage_min = 7
+tt.dps.damage_every = 0.5
+tt.dps.kill = true
+tt.dps.damage_type = bor(DAMAGE_POISON, DAMAGE_NO_SHIELD_HIT)
+
+tt = E:register_t("decal_hero_asra_ultimate", "decal_tween")
+AC(tt, "main_script")
+tt.main_script.insert = scripts.decal_hero_asra_ultimate.insert
+tt.tween.props[1].keys = {
+	{
+		0,
+		255
+	},
+	{
+		1,
+		255
+	},
+	{
+		4,
+		0
+	}
+}
+tt.tween.props[2] = table.deepclone(tt.tween.props[1])
+tt.tween.props[2].sprite_id = 2
+tt.render.sprites[1].name = "hero_asra_special_poison_explosion_run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "fx_hero_elves_archer_ultimate_smoke"
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].loop = false
+tt.render.sprites[2].z = Z_OBJECTS
+
+tt = E:register_t("hero_asra_unbreakable_mod", "modifier")
+
+E:add_comps(tt, "render", "health_bar", "health")
+
+tt.modifier.vis_flags = bor(F_MOD)
+tt.modifier.duration = 5
+tt.modifier.use_mod_offset = false
+tt.shield_max_damage = 120
+tt.damage_taken = 0
+tt.main_script.insert = scripts.hero_asra_unbreakable_mod.insert
+tt.main_script.remove = scripts.hero_asra_unbreakable_mod.remove
+tt.main_script.update = scripts.hero_asra_unbreakable_mod.update
+tt.health_bar.offset = v(0, 42)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.health_bar.colors = {}
+tt.health_bar.colors.fg = {
+	255,
+	255,
+	0,
+	255
+}
+tt.health_bar.colors.bg = {
+	0,
+	0,
+	0,
+	255
+}
+tt.health_bar.sort_y_offset = -2
+tt.health_bar.disable_fade = true
+--替换成asra的盾
+tt.sprites_per_enemies = {
+	"hero_asra_shield",
+	"hero_asra_shield",
+	"hero_asra_shield"
+}
+tt.animation_start = "start"
+tt.animation_loop = "idle"
+tt.animation_end = "end"
+tt.render.sprites[1].prefix = nil
+tt.render.sprites[1].offset = v(0, 20)
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].loop = true
+
+tt = RT("mod_asra_poison", "mod_poison")
+tt.modifier.duration = 99999
+tt.dps.damage_max = 7
+tt.dps.damage_min = 7
+tt.dps.damage_every = 0.5
+tt.dps.kill = true
+tt.dps.damage_type = bor(DAMAGE_POISON, DAMAGE_NO_SHIELD_HIT)
+
+tt = E:register_t("bullet_asra", "arrow")
+tt.bullet.hit_distance = 50
+tt.bullet.flight_time = fts(9)
+tt.bullet.flight_time_factor = fts(1 / 60)
+tt.bullet.damage_max = 16
+tt.bullet.damage_min = 10
+tt.bullet.xp_gain_factor = 6
+tt.bullet.miss_decal = "hero_asra_projectile_decal"
+tt.bullet.mod = {
+	"mod_arrow_asra"
+}
+tt.bullet.hit_fx = "fx_arrow_asra_hit"
+tt.render.sprites[1].name = "hero_asra_projectile"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].flip_x = true
+
+tt = E:register_t("bullet_onix_asra", "arrow")
+tt.bullet.flight_time = fts(6)
+--tt.bullet.flight_time_factor = fts(1 / 60)
+tt.bullet.damage_max = 16
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.bullet.damage_min = 10
+tt.bullet.miss_decal = "hero_asra_multishot_arrow_decal"
+tt.bullet.mod = {
+	"mod_arrow_asra"
+}
+tt.bullet.hit_fx = "fx_arrow_asra_hit"
+tt.render.sprites[1].name = "hero_asra_multishot_arrow"
+
+tt = E:register_t("fx_arrow_asra_hit", "fx")
+tt.render.sprites[1].name = "hero_asra_multishot_arrow_hit_run"
+
+tt = E:register_t("mod_arrow_asra", "mod_damage")
+tt.damage_min = 0
+tt.damage_max = 0
+tt.damage_type = DAMAGE_ARMOR
 
 ----------------------------------------------
 --------------------奥洛克---------------------
 ----------------------------------------------
 tt = RT("hero_oloch", "hero")
-AC(tt, "melee", "ranged", "timed_attacks", "dodge")
+AC(tt, "melee", "ranged", "timed_attacks", "dodge", "auras", "selfdestruct")
 tt.hero_insert = false
 anchor_x, anchor_y = 0.5, 0.12
 image_x, image_y = 92, 110
-tt.melee.range = 50
-tt.health_bar.offset = v(0, 36)
+tt.melee.range = 20
+tt.health_bar.offset = v(0, 52)
 tt.health.dead_lifetime = 16
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.tombstone_show_time = fts(90)
 tt.info.fn = scripts.hero_basic.get_info_ranged_with_damage_factor
---tt.main_script.update = kr4_scripts.hero_gerald99.update
+tt.main_script.update = kr4_scripts.hero_oloch.update
 tt.hero.fn_level_up = scripts.hero_oloch.level_up
---暂时取消头像--tt.info.portrait = "info_portraits_hero_0005"
+tt.info.portrait = "gui4_bottom_info_image_heroes_0003"
 tt.info.hero_portrait = "kra_hero_portraits_0403"
 tt.info.i18n_key = "HERO_OLOCH"
 tt.info.ultimate_icon = "0403"
-tt.motion.max_speed = 1.8 * FPS
+tt.motion.max_speed = 1.83 * FPS
 tt.soldier.melee_slot_offset = v(5, 0)
-tt.sound_events.change_rally_point = "HeroPaladinTaunt"
-tt.sound_events.death = "HeroPaladinDeath"
-tt.sound_events.hero_room_select = "HeroPaladinTauntSelect"
-tt.sound_events.insert = "HeroPaladinTauntIntro"
+tt.sound_events.change_rally_point = "group_oloch_taunt"
+tt.sound_events.death = "hero_oloch_death"
+tt.sound_events.hero_room_select = "hero_oloch_taunt_1"
+tt.sound_events.insert = "hero_oloch_taunt_1"
 tt.sound_events.respawn = "HeroPaladinTauntIntro"
 tt.unit.marker_offset = v(0, 0)
 tt.unit.mod_offset = v(0, 20)
 tt.hero.skills.duplication = E:clone_c("hero_skill")
 tt.hero.skills.duplication.hr_order = 1
 tt.hero.skills.duplication.hr_cost = {4,4,4}
+tt.hero.skills.duplication.xp_gain = {50,100,150}
+tt.hero.skills.duplication.damage_min = {10,16,24}
+tt.hero.skills.duplication.damage_max = {20,48,72}
 tt.hero.skills.magma_eruption = E:clone_c("hero_skill")
 tt.hero.skills.magma_eruption.hr_order = 2
 tt.hero.skills.magma_eruption.hr_cost = {2,2,2}
+tt.hero.skills.magma_eruption.xp_gain = {50,100,150}
+tt.hero.skills.magma_eruption.count = {3, 4, 5}
+tt.hero.skills.magma_eruption.damage_config = {20,40,60}
+tt.hero.skills.magma_eruption.damage_aura_config = {7,11,13}
 tt.hero.skills.hellish_infusion = E:clone_c("hero_skill")
 tt.hero.skills.hellish_infusion.hr_order = 3
 tt.hero.skills.hellish_infusion.hr_cost = {1,2,3}
+tt.hero.skills.hellish_infusion.cooldown = {40,30,20}
+tt.hero.skills.hellish_infusion.damage_factor_config = {1.1,1.2,1.3}
+tt.hero.skills.hellish_infusion.xp_gain = {60,120,180}
 tt.hero.skills.demonic_blast = E:clone_c("hero_skill")
 tt.hero.skills.demonic_blast.hr_order = 4
 tt.hero.skills.demonic_blast.hr_cost = {2,2,2}
+tt.hero.skills.demonic_blast.damage_min = {60,120,180}
+tt.hero.skills.demonic_blast.damage_max = {180,360,540}
+tt.hero.skills.demonic_blast.xp_gain = {60,120,180}
 tt.hero.skills.ultimate = E:clone_c("hero_skill")
 tt.hero.skills.ultimate.hr_order = 5
 tt.hero.skills.ultimate.hr_cost = {1,2,3}
+tt.hero.skills.ultimate.cooldown = {[0]=24,21.6,19.2,16}
+tt.hero.skills.ultimate.max_targets = {[0]=6,8,10,12}
+tt.hero.skills.ultimate.offset_config = {[0]=-15,-25,-35,-45}
+tt.hero.skills.ultimate.controller_name = "controller_hero_oloch_ultimate"
 
 tt.hero.level_stats.armor = {
 	0.06,
@@ -429,16 +931,16 @@ tt.hero.level_stats.armor = {
 	0.15
 }
 tt.hero.level_stats.hp_max = {
-	120,
-	144,
-	168,
-	192,
+	180,
+	198,
 	216,
-	240,
-	264,
+	234,
+	252,
+	270,
 	288,
-	312,
-	336
+	306,
+	324,
+	342
 }
 tt.hero.level_stats.melee_damage_max = {
 	9,
@@ -488,6 +990,18 @@ tt.hero.level_stats.ranged_damage_min = {
 	25,
 	28
 }
+tt.hero.level_stats.selfdestruct_damage_config = {
+	50,
+	50,
+	50,
+	50,
+	75,
+	75,
+	75,
+	75,
+	100,
+	100
+}
 tt.hero.level_stats.regen_health = {
 	16,
 	17,
@@ -501,25 +1015,401 @@ tt.hero.level_stats.regen_health = {
 	28
 }
 tt.regen.cooldown = 2
+tt.render.sprites[1].anchor.y = 0.12
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].scale = v(1.2,1.2)
+tt.render.sprites[1].offset = v(0, -18)
+tt.render.sprites[1].prefix = "hero_oloch"
+tt.render.sprites[1].angles.walk = {
+	"walk"
+}
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].is_shadow = true
+tt.render.sprites[2].offset = v(0,-15)
+tt.render.sprites[2].name = "hero_oloch_shadow"
+tt.render.sprites[2].anchor.y = 0.12
+tt.render.sprites[2].z = Z_DECALS + 1
+
 tt.melee.attacks[1] = E:clone_c("melee_attack")
 tt.melee.attacks[1].cooldown = 1
-tt.melee.attacks[1].damage_max = nil
-tt.melee.attacks[1].damage_min = nil
+tt.melee.attacks[1].damage_max = 1
+tt.melee.attacks[1].damage_min = 1
+tt.melee.attacks[1].animation = "melee"
+tt.melee.attacks[1].damage_type = DAMAGE_MAGICAL
 tt.melee.attacks[1].hit_time = fts(9)
+tt.melee.attacks[1].xp_gain_factor = 1.2
 tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF)
 tt.melee.attacks[1].vis_flags = F_BLOCK
 tt.melee.attacks[1].xp_gain_factor = 1
 tt.ranged.attacks[1] = E:clone_c("bullet_attack")
-tt.ranged.attacks[1].cooldown = 1.5
-tt.ranged.attacks[1].min_range = 25
-tt.ranged.attacks[1].max_range = 140
-tt.ranged.attacks[1].bullet = "bullet_oloch"
-tt.ranged.attacks[1].shoot_time = fts(13)
+tt.ranged.attacks[1].cooldown = 1.8
+tt.ranged.attacks[1].min_range = 20
+tt.ranged.attacks[1].max_range = 160
+tt.ranged.attacks[1].xp_gain_factor = 1.6
+tt.ranged.attacks[1].animation = "shoot"
+tt.ranged.attacks[1].bullet = "bolt_oloch"
+tt.ranged.attacks[1].shoot_time = fts(31)
 tt.ranged.attacks[1].bullet_start_offset = {
-	v(-8, 24)
+	v(-8, 44)
 }
-tt = RT("bullet_oloch", "bolt")
+--4技能 大火球
+tt.ranged.attacks[2] = E:clone_c("bullet_attack")
+tt.ranged.attacks[2].cooldown = 30
+tt.ranged.attacks[2].disabled = true
+tt.ranged.attacks[2].animation = "megaBolt"
+tt.ranged.attacks[2].sound = "hero_oloch_demonic_cast"
+tt.ranged.attacks[2].min_range = 20
+tt.ranged.attacks[2].max_range = 175
+tt.ranged.attacks[2].bullet = "bolt_oloch_big"
+tt.ranged.attacks[2].shoot_time = fts(45)
+tt.ranged.attacks[2].bullet_start_offset = {
+	v(0, 52)
+}
+--1技能 分身
+tt.timed_attacks.list[1] = CC("spawn_attack")
+tt.timed_attacks.list[1].animation = "duplication"
+tt.timed_attacks.list[1].cooldown = 25
+tt.timed_attacks.list[1].cast_time = fts(12)
+tt.timed_attacks.list[1].disabled = true
+tt.timed_attacks.list[1].entity = "soldier_oloch_illusion"
+--tt.timed_attacks.list[1].entity_rotations = {{d2r(0)},{d2r(0),d2r(180)},{d2r(0),d2r(120),d2r(240)}}
+tt.timed_attacks.list[1].entity_rotations = {{d2r(0),d2r(180)},{d2r(0),d2r(180)},{d2r(0),d2r(180)}}
+tt.timed_attacks.list[1].sound = "hero_oloch_respawn"
+tt.timed_attacks.list[1].spawn_time = fts(19)
+tt.timed_attacks.list[1].initial_rally = v(0, 30)
+tt.timed_attacks.list[1].initial_pos = v(0, 33)
+tt.timed_attacks.list[1].radius = 30
+tt.timed_attacks.list[1].min_range = 0
+tt.timed_attacks.list[1].max_range = 200
+tt.timed_attacks.list[1].spawn_time = fts(19)
+tt.timed_attacks.list[1].spawn_time = fts(19)
+tt.timed_attacks.list[1].xp_from_skill = "mirage"
+tt.timed_attacks.list[1].count = 2
+--2技能 岩浆池
+tt.timed_attacks.list[2] = E:clone_c("spawn_attack")
+tt.timed_attacks.list[2].animation = "magmaEruption"
+tt.timed_attacks.list[2].cooldown = 25
+tt.timed_attacks.list[2].disabled = true
+tt.timed_attacks.list[2].entity = "oloch_magma"
+tt.timed_attacks.list[2].spawn_time = fts(30)
+tt.timed_attacks.list[2].vis_flags = bor(F_RANGED)
+tt.timed_attacks.list[2].vis_bans = bor(F_FLYING)
+tt.timed_attacks.list[2].min_range = 0
+tt.timed_attacks.list[2].max_range = 175
+tt.timed_attacks.list[2].damage_max = 200
+tt.timed_attacks.list[2].damage_min = 200
+--3技能 增伤f
+tt.auras.list[1] = E:clone_c("mod_attack")
+tt.auras.list[1].mod = "range_mod_oloch"
+tt.auras.list[1].sound = "hero_oloch_hellish"
+tt.auras.list[1].animation = "hellishInfusion"
+tt.auras.list[1].cooldown = 40
+tt.auras.list[1].range = 150
+tt.auras.list[1].damage_inc = 1.0
+tt.auras.list[1].disabled = true
+tt.auras.list[1].excluded_templates = {}
+tt.selfdestruct.animation = "death"
+tt.selfdestruct.damage_radius = 60
+tt.selfdestruct.damage_type = DAMAGE_PHYSICAL
+tt.selfdestruct.damage_max = 100
+tt.selfdestruct.damage_min = 100
+tt.selfdestruct.hit_time = fts(29)
+tt.selfdestruct.sound = "BombExplosionSound"
+tt.selfdestruct.sound_args = {
+	delay = fts(40)
+}
+
+--1技能 分身 参考马格努斯
+tt = RT("soldier_oloch_illusion", "soldier_militia")
+AC(tt, "reinforcement", "ranged", "tween")
+image_x, image_y = 60, 76
+anchor_y = 0.14
+tt.melee = nil
+tt.health.hp_max = 300
+tt.health_bar.offset = v(0, 52)
+tt.health.dead_lifetime = fts(14)
+tt.info.portrait = "gui4_bottom_info_image_heroes_0003"
+tt.info.i18n_key = "HERO_OLOCH"
+tt.info.random_name_format = nil
+tt.info.fn = scripts.soldier_oloch_illusion.get_info
+tt.main_script.insert = scripts.soldier_reinforcement.insert
+tt.main_script.update = scripts.soldier_reinforcement.update
+tt.reinforcement.duration = 10
+tt.reinforcement.fade = nil
+tt.ranged.attacks[1] = CC("bullet_attack")
+tt.ranged.attacks[1].bullet = "bolt_oloch_duplication"
+tt.ranged.attacks[1].bullet_start_offset = {
+	v(-8, 44)
+}
+tt.ranged.attacks[1].max_range = 175
+tt.ranged.attacks[1].min_range = 20
+tt.ranged.attacks[1].damage_max = nil
+tt.ranged.attacks[1].damage_min = nil
+tt.ranged.attacks[1].shoot_time = fts(31)
+tt.ranged.attacks[1].cooldown = 1.8
+tt.regen.cooldown = 1
+tt.render.sprites[1].prefix = "hero_oloch_duplication"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].offset = v(0, -18)
+tt.render.sprites[1].alpha = 180
+tt.tween.props[1].name = "offset"
+tt.tween.props[1].keys = {
+	{
+		0,
+		v(0, 0)
+	},
+	{
+		fts(6),
+		v(0, 0)
+	}
+}
+tt.tween.remove = false
+tt.tween.run_once = true
+tt.ui.click_rect = r(-13, -5, 26, 32)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 15)
+tt.unit.price = 0
+tt.vis.bans = bor(F_LYCAN, F_SKELETON, F_CANNIBALIZE, F_RANGED)
+
+--2技能 岩浆池 参考冰龙
+tt = E:register_t("oloch_magma", "bullet")
+E:add_comps(tt, "tween")
+tt.main_script.update = kr4_scripts.oloch_magma.update
+tt.bullet.damage_max = 20
+tt.bullet.damage_min = 20
+tt.bullet.damage_radius = 25
+tt.bullet.hit_payload = "oloch_magma_lavapool"
+tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.damage_flags = F_AREA
+tt.bullet.damage_bans = F_FRIEND
+tt.bullet.mod = nil
+tt.bullet.hit_time = fts(4)
+tt.bullet.duration = 2
+tt.render.sprites[1].prefix = "hero_oloch_magma_eruption_explotion"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].anchor.y = 0.09027777777777778
+tt.render.sprites[1].z = Z_OBJECTS
+tt.tween.remove = false
+tt.tween.props[1].keys = {
+	{
+		0,
+		0
+	},
+	{
+		fts(3),
+		0
+	},
+	{
+		fts(6),
+		255
+	},
+	{
+		tt.bullet.duration,
+		255
+	},
+	{
+		tt.bullet.duration + fts(10),
+		0
+	}
+}
+--tt.tween.props[1].sprite_id = 2
+tt.sound_events.delayed_insert = "hero_oloch_duplication"
+
+tt = E:register_t("oloch_magma_lavapool", "aura")
+E:add_comps(tt, "render", "tween")
+tt.aura.cycle_time = 0.3
+tt.aura.duration = 5
+tt.aura.mod = "mod_oloch_magma"
+tt.aura.radius = 25
+tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
+tt.aura.vis_flags = bor(F_MOD)
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.render.sprites[1].name = "hero_oloch_magma_eruption_decal_run"
+tt.render.sprites[1].offset.y = 20
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+tt.tween.remove = false
+tt.tween.props[1].keys = {
+	{
+		0,
+		255
+	},
+	{
+		"this.aura.duration-1",
+		255
+	},
+	{
+		"this.aura.duration",
+		0
+	}
+}
+tt = E:register_t("mod_oloch_magma", "modifier")
+E:add_comps(tt, "dps", "render")
+tt.dps.damage_min = 7
+tt.dps.damage_max = 7
+tt.dps.damage_inc = 0
+tt.dps.damage_type = DAMAGE_PHYSICAL
+tt.dps.damage_every = fts(10)
+tt.dps.kill = true
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt.modifier.duration = 1
+tt.modifier.allows_duplicates = false
+tt.render.sprites[1].prefix = "fire"
+tt.render.sprites[1].name = "small"
+tt.render.sprites[1].size_names = {
+	"small",
+	"medium",
+	"large"
+}
+tt.render.sprites[1].draw_order = 10
+
+--3技能 增伤 参考火龙
+--范围buff
+local tt = E:register_t("range_mod_oloch", "modifier")
+
+E:add_comps(tt, "render", "tween")
+tt.modifier.duration = 6
+tt.range_factor = 1.0
+tt.range_factor_inc = 0
+tt.main_script.insert = kr4_scripts.range_mod_oloch.insert
+tt.main_script.remove = kr4_scripts.range_mod_oloch.remove
+tt.main_script.update = kr4_scripts.range_mod_oloch.update
+tt.tween.remove = false
+tt.tween.props[1].name = "scale"
+tt.tween.props[1].loop = true
+tt.tween.props[1].keys = {
+	{
+		0,
+		v(1, 1)
+	},
+	{
+		0.5,
+		v(0.9, 0.9)
+	},
+	{
+		1,
+		v(1, 1)
+	}
+}
+tt.render.sprites[1].prefix = "hero_oloch_hellish_infusion"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].anchor.y = 0.21
+tt.render.sprites[1].offset.y = -10
+tt.render.sprites[1].z = Z_TOWER_BASES + 1
+
+--普攻/4技能
+tt = RT("bolt_oloch", "bolt")
+tt.bullet.damage_max = 78
+tt.bullet.damage_min = 42
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.bullet.hit_fx = "fx_bolt_oloch_hit"
+tt.bullet.max_speed = 600
+tt.bullet.xp_gain_factor = 1.6
+tt.bullet.particles_name = "ps_bolt_oloch"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].name = "hero_oloch_bolt_0001"
+tt.render.sprites[1].animated = false
+tt.sound_events.insert = "InfernalMageAttack"
+
+tt = RT("bolt_oloch_duplication", "bolt")
+tt.bullet.damage_max = 78
+tt.bullet.damage_min = 42
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.bullet.hit_fx = "fx_bolt_oloch_hit"
+tt.bullet.max_speed = 600
+tt.bullet.particles_name = "ps_bolt_oloch"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].name = "hero_oloch_bolt_0001"
+tt.render.sprites[1].animated = false
+tt.sound_events.insert = "InfernalMageAttack"
+
+tt = RT("bolt_oloch_big", "bolt")
+tt.bullet.damage_max = 78
+tt.bullet.damage_min = 42
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.bullet.hit_fx = "fx_bolt_oloch_big_hit"
+tt.bullet.max_speed = 600
+tt.bullet.particles_name = "ps_bolt_oloch_big"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].name = "hero_oloch_mega_bolt_0001"
+tt.render.sprites[1].animated = false
+tt.sound_events.insert = "hero_oloch_demonic_travel"
+
+tt = RT("fx_bolt_oloch_hit", "fx")
+tt.render.sprites[1].prefix = "hero_oloch_bolt"
+tt.render.sprites[1].name = "hit"
+
+tt = E:register_t("ps_bolt_oloch","ps_bullet_tower_wicked_sisters_basic_trail")
+tt.particle_system.animated = true
+tt.particle_system.name = "hero_oloch_bolt_particle_run"
+tt.particle_system.particle_lifetime = {
+    fts(10),
+    fts(10)
+}
+
+tt = RT("fx_bolt_oloch_big_hit", "fx")
+tt.render.sprites[1].prefix = "hero_oloch_mega_bolt"
+tt.render.sprites[1].name = "hit"
+
+tt = E:register_t("ps_bolt_oloch_big","ps_bullet_tower_wicked_sisters_basic_trail")
+tt.particle_system.animated = true
+tt.particle_system.name = "hero_oloch_mega_bolt_particle_run"
+tt.particle_system.particle_lifetime = {
+    fts(10),
+    fts(10)
+}
+
+--大招
+tt = E:register_t("controller_hero_oloch_ultimate")
+E:add_comps(tt, "pos", "main_script", "sound_events")
+tt.main_script.update = scripts.hero_oloch_ultimate.update
+tt.can_fire_fn = scripts.hero_oloch_ultimate.can_fire_fn
+tt.cooldown = 24
+tt.teleport_decal = "decal_hero_oloch_ultimate"
+tt.vis_bans = bor(F_BOSS)
+tt.vis_flags = bor(F_TELEPORT)
+tt.sound_cast = "hero_oloch_ultimate"
+tt.radius = 80
+tt.max_targets = 4
+tt.mod_mark = "mod_hero_oloch_ultimate_mark"
+tt.mod_teleport = "mod_hero_oloch_ultimate_teleport"
+
+tt = E:register_t("mod_hero_oloch_ultimate_mark", "modifier")
+
+E:add_comps(tt, "mark_flags")
+
+tt.mark_flags.vis_bans = F_TELEPORT
+tt.modifier.duration = fts(50)
+tt.main_script.queue = scripts.mod_mark_flags.queue
+tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.update = scripts.mod_mark_flags.update
+
+tt = E:register_t("decal_hero_oloch_ultimate", "decal_timed")
+tt.render.sprites[1].name = "hero_oloch_teleport_decal_run"
+tt.render.sprites[1].z = Z_DECALS
+
+tt = E:register_t("mod_hero_oloch_ultimate_teleport", "mod_teleport")
+tt.main_script.remove = scripts.mod_hero_oloch_ultimate_teleport.remove
+tt.modifier.vis_flags = bor(F_MOD)
+tt.modifier.vis_bans = bor(F_BOSS)
+tt.modifier.duration = 1
+tt.nodes_offset = -15
+tt.dest_valid_node = true
+tt.max_times_applied = 1e+99
+tt.delay_start = fts(3)
+tt.hold_time = 0.34
+tt.delay_end = fts(3)
+tt.fx_start = "fx_hero_oloch_ultimate"
+tt.fx_end = "fx_hero_oloch_ultimate"
+--tt.sound_events.insert = "HeroDragonBoneUltimateOut"
+--tt.sound_events.remove = "HeroDragonBoneUltimateIn"
+
+tt = E:register_t("fx_hero_oloch_ultimate", "fx")
+tt.render.sprites[1].name = "hero_oloch_teleport_modifier_run"
 
 
 ----------------------------------------------
@@ -538,7 +1428,7 @@ tt.hero.tombstone_show_time = fts(90)
 tt.info.fn = scripts.hero_basic.get_info_ranged_with_damage_factor
 --tt.main_script.update = kr4_scripts.hero_gerald99.update
 tt.hero.fn_level_up = scripts.hero_tramin.level_up
---暂时取消头像--tt.info.portrait = "info_portraits_hero_0005"
+tt.info.portrait = "gui4_bottom_info_image_heroes_0005"
 tt.info.hero_portrait = "kra_hero_portraits_0404"
 tt.info.i18n_key = "HERO_TRAMIS"
 tt.info.ultimate_icon = "0404"
@@ -688,7 +1578,7 @@ tt.hero.tombstone_show_time = fts(90)
 tt.info.fn = scripts.hero_basic.get_info_melee
 --tt.main_script.update = kr4_scripts.hero_gerald99.update
 tt.hero.fn_level_up = scripts.hero_jigou.level_up
---暂时取消头像--tt.info.portrait = "info_portraits_hero_0005"
+tt.info.portrait = "gui4_bottom_info_image_heroes_0007"
 tt.info.hero_portrait = "kra_hero_portraits_0405"
 tt.info.i18n_key = "HERO_JIGOU"
 tt.info.ultimate_icon = "0405"
@@ -741,7 +1631,7 @@ tt.hero.level_stats.hp_max = {
 	840,
 	900
 }
-tt.hero.level_stats.melee_damage_max = {
+tt.hero.level_stats.melee_damage_min = {
 	19,
 	24,
 	30,
@@ -753,7 +1643,7 @@ tt.hero.level_stats.melee_damage_max = {
 	62,
 	67
 }
-tt.hero.level_stats.melee_damage_min = {
+tt.hero.level_stats.melee_damage_max = {
 	26,
 	35,
 	43,
@@ -804,7 +1694,7 @@ tt.hero.tombstone_show_time = fts(90)
 tt.info.fn = scripts.hero_basic.get_info_melee
 --tt.main_script.update = kr4_scripts.hero_gerald99.update
 tt.hero.fn_level_up = scripts.hero_margosa.level_up
---暂时取消头像--tt.info.portrait = "info_portraits_hero_0005"
+tt.info.portrait = "gui4_bottom_info_image_heroes_0006"
 tt.info.hero_portrait = "kra_hero_portraits_0406"
 tt.info.i18n_key = "HERO_MARGOSA"
 tt.info.ultimate_icon = "0406"
@@ -921,7 +1811,7 @@ tt.hero.tombstone_show_time = fts(90)
 tt.info.fn = scripts.hero_basic.get_info_ranged_with_damage_factor
 --tt.main_script.update = kr4_scripts.hero_gerald99.update
 tt.hero.fn_level_up = scripts.hero_mortemis.level_up
---暂时取消头像--tt.info.portrait = "info_portraits_hero_0005"
+tt.info.portrait = "gui4_bottom_info_image_heroes_0004"
 tt.info.hero_portrait = "kra_hero_portraits_0407"
 tt.info.i18n_key = "HERO_MORTEMIS"
 tt.info.ultimate_icon = "0407"
@@ -974,7 +1864,7 @@ tt.hero.level_stats.hp_max = {
 	330,
 	360
 }
-tt.hero.level_stats.melee_damage_max = {
+tt.hero.level_stats.melee_damage_min = {
 	7,
 	8,
 	10,
@@ -986,7 +1876,7 @@ tt.hero.level_stats.melee_damage_max = {
 	19,
 	21
 }
-tt.hero.level_stats.melee_damage_min = {
+tt.hero.level_stats.melee_damage_max = {
 	4,
 	5,
 	5,
@@ -1307,7 +2197,7 @@ tt.bullet.damage_factor = 1
 tt.bullet.damage_flags = F_AREA
 tt.bullet.damage_bans = F_FLYING
 tt.render.sprites[1].name = "hero_tank_ultimate_plane_shadow"
-tt.render.sprites[1].keep_flip_x = true
+tt.render.sprites[1].flip_x = true
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].hidden = true
 tt.main_script.update = kr4_scripts.lava_blood_murglun.update
@@ -1556,11 +2446,11 @@ tt.render.sprites[1].name = "run"
 tt.render.sprites[1].scale = v(1.3, 1.3)
 tt.render.sprites[1].anchor = v(0.5, 0.2)
 tt.render.sprites[1].z = Z_DECALS + 1
-tt.aura.duration = 4
+tt.aura.duration = 4.4
 tt.aura.mods = {
 	"mod_bullet_zeppelin_hero_tank"
 }
-tt.aura.cycle_time = 0.2
+tt.aura.cycle_time = 0.1
 tt.aura.radius = 70
 tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.aura.vis_flags = bor(F_MOD, F_AREA)
@@ -1570,12 +2460,12 @@ tt.main_script.update = kr4_scripts.aura_apply_mod_tank.update
 local tt = E:register_t("mod_bullet_zeppelin_hero_tank", "modifier")
 
 E:add_comps(tt, "dps", "render")
-
-tt.modifier.duration = 0.5
+tt.modifier.allows_duplicates = false
+tt.modifier.duration = 0.4
 tt.dps.damage_min = 7
 tt.dps.damage_max = 7
 tt.dps.damage_inc = 0
-tt.dps.damage_type = DAMAGE_TRUE
+tt.dps.damage_type = DAMAGE_PHYSICAL
 tt.dps.damage_every = 0.1
 tt.render.sprites[1].prefix = "hero_tank_ultimate_fire_modifier"
 tt.render.sprites[1].name = "run"
@@ -2777,7 +3667,7 @@ tt.bullet.damage_max = 23
 tt.bullet.damage_factor = 1
 tt.bullet.damage_flags = F_AREA
 tt.render.sprites[1].name = "hero_murglun_lava_blood_proy"
-tt.render.sprites[1].keep_flip_x = true
+tt.render.sprites[1].flip_x = true
 tt.render.sprites[1].animated = false
 tt.main_script.update = kr4_scripts.lava_blood_murglun.update
 tt.scorch_earth = false
@@ -2916,7 +3806,7 @@ tt.render.sprites[1].size_names = {
 tt.render.sprites[1].draw_order = 10
 
 
---范围buff
+--火龙增伤buff
 local tt = E:register_t("range_mod_murglun", "modifier")
 
 E:add_comps(tt, "render", "tween")

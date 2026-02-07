@@ -570,7 +570,7 @@ function scripts.alien_egg.update(this, store, script)
 end
 
 scripts.enemy_alien_breeder = {}
-
+--[[
 function scripts.enemy_alien_breeder.get_info(this)
 	local min, max = 10, 20
 
@@ -584,6 +584,17 @@ function scripts.enemy_alien_breeder.get_info(this)
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
 	}
+end
+]]--
+function scripts.enemy_alien_breeder.get_info(this)
+	local breeder_min, breeder_max = 10, 20
+
+	local out = scripts.enemy_basic.get_info(this)
+
+	out.damage_min = breeder_min
+	out.damage_max = breeder_max
+
+	return out
 end
 
 function scripts.enemy_alien_breeder.insert(this, store, script)
@@ -1851,7 +1862,18 @@ function scripts.enemy_deviltide_shark.get_info(this)
 		lives = this.enemy.lives_cost
 	}
 end
+--[[
+function scripts.enemy_deviltide_shark.get_info(this)
+	local t = E:get_template("enemy_deviltide")
 
+	local out = scripts.enemy_basic.get_info(this)
+
+	out.damage_min = t.melee.attacks[1].damage_min,
+	out.damage_max = t.melee.attacks[1].damage_max,
+
+	return out
+end
+]]--
 function scripts.enemy_deviltide_shark.update(this, store, script)
 	local n = this.nav_path
 	local water_trail = E:create_entity("ps_water_trail")
@@ -3660,7 +3682,7 @@ function scripts.tower_dwaarp.update(this, store, script)
 end
 
 scripts.tower_mech = {}
-
+--[[
 function scripts.tower_mech.get_info(this)
 	local sm = E:get_template(this.barrack.soldier_type)
 	local b = E:get_template(sm.attacks.list[1].bullet)
@@ -3675,6 +3697,27 @@ function scripts.tower_mech.get_info(this)
 		type = STATS_TYPE_TOWER,
 		damage_min = min,
 		damage_max = max,
+		range = range,
+		cooldown = cooldown
+	}
+end
+]]--
+function scripts.tower_mech.get_info(this)
+	local sm = E:get_template(this.barrack.soldier_type)
+	local b = E:get_template(sm.attacks.list[1].bullet)
+	local min, max = b.bullet.damage_min, b.bullet.damage_max
+	local d_type = b.bullet.damage_type
+
+	min, max = math.ceil(min * this.tower.damage_factor), math.ceil(max * this.tower.damage_factor)
+
+	local cooldown = sm.attacks.list[1].cooldown
+	local range = sm.attacks.list[1].max_range
+
+	return {
+		type = STATS_TYPE_TOWER,
+		damage_min = min,
+		damage_max = max,
+		damage_type = d_type,
 		range = range,
 		cooldown = cooldown
 	}
@@ -3762,7 +3805,7 @@ function scripts.tower_mech.update(this, store, script)
 end
 
 scripts.tower_neptune_holder = {}
-
+--[[
 function scripts.tower_neptune_holder.get_info(this)
 	local t = E:get_template("tower_neptune")
 	local b = E:get_template(t.attacks.list[1].bullet)
@@ -3778,9 +3821,27 @@ function scripts.tower_neptune_holder.get_info(this)
 		cooldown = cooldown
 	}
 end
+]]--
+function scripts.tower_neptune_holder.get_info(this)
+	local t = E:get_template("tower_neptune")
+	local b = E:get_template(t.attacks.list[1].bullet)
+	local min, max = b.bullet.damage_min_levels[1], b.bullet.damage_max_levels[1]
+	local d_type = b.bullet.damage_type
+	local range = 2000
+	local cooldown = t.attacks.list[1].cooldown
+
+	return {
+		type = STATS_TYPE_TOWER,
+		damage_min = min,
+		damage_max = max,
+		damage_type = d_type,
+		range = range,
+		cooldown = cooldown
+	}
+end
 
 scripts.tower_neptune = {}
-
+--[[
 function scripts.tower_neptune.get_info(this)
 	local level = this.powers.ray.level
 	local b = E:get_template(this.attacks.list[1].bullet)
@@ -3796,7 +3857,24 @@ function scripts.tower_neptune.get_info(this)
 		cooldown = cooldown
 	}
 end
+]]--
+function scripts.tower_neptune.get_info(this)
+	local level = this.powers.ray.level
+	local b = E:get_template(this.attacks.list[1].bullet)
+	local min, max = b.bullet.damage_min_levels[level], b.bullet.damage_max_levels[level]
+	local d_type = b.bullet.damage_type
+	local range = 2000
+	local cooldown = this.attacks.list[1].cooldown
 
+	return {
+		type = STATS_TYPE_TOWER,
+		damage_min = min,
+		damage_max = max,
+		damage_type = d_type,
+		range = range,
+		cooldown = cooldown
+	}
+end
 function scripts.tower_neptune.insert(this, store, script)
 	return true
 end
@@ -5938,7 +6016,7 @@ function scripts.button_steal_dragon_gold.update(this, store, script)
 end
 
 scripts.tower_archer_dwarf = {}
-
+--[[
 function scripts.tower_archer_dwarf.get_info(this)
 	local pow = this.powers.extra_damage
 	local a = this.attacks.list[1]
@@ -5958,6 +6036,32 @@ function scripts.tower_archer_dwarf.get_info(this)
 		type = STATS_TYPE_TOWER,
 		damage_min = min,
 		damage_max = max,
+		range = this.attacks.range,
+		cooldown = cooldown
+	}
+end
+]]--
+function scripts.tower_archer_dwarf.get_info(this)
+	local pow = this.powers.extra_damage
+	local a = this.attacks.list[1]
+	local b = E:get_template(a.bullet)
+	local min, max = b.bullet.damage_min, b.bullet.damage_max
+	local d_type = b.bullet.damage_type
+
+	if pow.level > 0 then
+		min = min + math.floor(b.bullet.damage_inc * pow.level)
+		max = max + math.floor(b.bullet.damage_inc * pow.level)
+	end
+
+	min, max = math.ceil(min * this.tower.damage_factor), math.ceil(max * this.tower.damage_factor)
+
+	local cooldown = a.cooldown
+
+	return {
+		type = STATS_TYPE_TOWER,
+		damage_min = min,
+		damage_max = max,
+		damage_type = d_type,
 		range = this.attacks.range,
 		cooldown = cooldown
 	}
@@ -6307,7 +6411,7 @@ function scripts.decal_umbra_crystals.update(this, store, script)
 end
 
 scripts.tower_pirate_watchtower = {}
-
+--[[
 function scripts.tower_pirate_watchtower.get_info(this)
 	local a = this.attacks.list[1]
 	local b = E:get_template(a.bullet)
@@ -6321,6 +6425,26 @@ function scripts.tower_pirate_watchtower.get_info(this)
 		type = STATS_TYPE_TOWER,
 		damage_min = min,
 		damage_max = max,
+		range = this.attacks.range,
+		cooldown = cooldown
+	}
+end
+]]--
+function scripts.tower_pirate_watchtower.get_info(this)
+	local a = this.attacks.list[1]
+	local b = E:get_template(a.bullet)
+	local min, max = b.bullet.damage_min, b.bullet.damage_max
+	local d_type = b.bullet.damage_type
+
+	min, max = math.ceil(min * this.tower.damage_factor), math.ceil(max * this.tower.damage_factor)
+
+	local cooldown = a.cooldown
+
+	return {
+		type = STATS_TYPE_TOWER,
+		damage_min = min,
+		damage_max = max,
+		damage_type = d_type,
 		range = this.attacks.range,
 		cooldown = cooldown
 	}
@@ -6594,7 +6718,7 @@ function scripts.pirate_watchtower_parrot.update(this, store)
 end
 
 scripts.enemy_gunboat = {}
-
+--[[
 function scripts.enemy_gunboat.get_info(this)
 	local b = E:get_template(this.attacks.list[1].bullet)
 	local min, max = b.bullet.damage_min, b.bullet.damage_max
@@ -6609,6 +6733,12 @@ function scripts.enemy_gunboat.get_info(this)
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
 	}
+end
+]]--
+function scripts.enemy_gunboat.get_info(this)
+	local out = scripts.enemy_basic.get_info(this)
+
+	return out
 end
 
 function scripts.enemy_gunboat.update(this, store)
@@ -7130,11 +7260,12 @@ function scripts.moon_enemy_aura.update(this, store)
 end
 
 scripts.tower_frankenstein = {}
-
+--[[
 function scripts.tower_frankenstein.get_info(this)
 	local l = this.powers.lightning.level
 	local m = E:get_template("mod_ray_frankenstein")
 	local min, max = m.dps.damage_min + l * m.dps.damage_inc, m.dps.damage_max + l * m.dps.damage_inc
+	local d_type = m.dps.damage_type
 
 	min, max = math.ceil(min * this.tower.damage_factor), math.ceil(max * this.tower.damage_factor)
 
@@ -7148,6 +7279,31 @@ function scripts.tower_frankenstein.get_info(this)
 		type = STATS_TYPE_TOWER_MAGE,
 		damage_min = min,
 		damage_max = max,
+		damage_type = d_type,
+		range = this.attacks.range,
+		cooldown = cooldown
+	}
+end
+]]--
+function scripts.tower_frankenstein.get_info(this)
+	local l = this.powers.lightning.level
+	local m = E:get_template("mod_ray_frankenstein")
+	local min, max = m.dps.damage_min + l * m.dps.damage_inc, m.dps.damage_max + l * m.dps.damage_inc
+	local d_type = m.dps.damage_type
+
+	min, max = math.ceil(min * this.tower.damage_factor), math.ceil(max * this.tower.damage_factor)
+
+	local cooldown
+
+	if this.attacks and this.attacks.list[1].cooldown then
+		cooldown = this.attacks.list[1].cooldown
+	end
+
+	return {
+		type = STATS_TYPE_TOWER_MAGE,
+		damage_min = min,
+		damage_max = max,
+		damage_type = d_type,
 		range = this.attacks.range,
 		cooldown = cooldown
 	}
@@ -8481,7 +8637,7 @@ function scripts.mod_alien_screech.remove(this, store)
 end
 
 scripts.eb_efreeti = {}
-
+--[[
 function scripts.eb_efreeti.get_info(this)
 	return {
 		damage_min = 500,
@@ -8493,6 +8649,15 @@ function scripts.eb_efreeti.get_info(this)
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
 	}
+end
+]]--
+function scripts.eb_efreeti.get_info(this)
+	local out = scripts.enemy_basic.get_info(this)
+
+	out.damage_min = 500
+	out.damage_max = 800
+
+	return out
 end
 
 function scripts.eb_efreeti.insert(this, store, script)
@@ -8843,7 +9008,7 @@ function scripts.eb_efreeti.update(this, store, script)
 end
 
 scripts.eb_gorilla = {}
-
+--[[
 function scripts.eb_gorilla.get_info(this)
 	return {
 		type = STATS_TYPE_ENEMY,
@@ -8855,6 +9020,12 @@ function scripts.eb_gorilla.get_info(this)
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
 	}
+end
+]]--
+function scripts.eb_gorilla.get_info(this)
+	local out = scripts.enemy_basic.get_info(this)
+
+	return out
 end
 
 function scripts.eb_gorilla.insert(this, store, script)
@@ -9151,7 +9322,7 @@ function scripts.eb_gorilla.update(this, store, script)
 end
 
 scripts.eb_umbra = {}
-
+--[[
 function scripts.eb_umbra.get_info(this)
 	local b = E:get_template("ray_umbra")
 	local min, max = b.bullet.damage_min, b.bullet.damage_max
@@ -9165,6 +9336,28 @@ function scripts.eb_umbra.get_info(this)
 		armor = this.health.armor,
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
+	}
+end
+]]--
+function scripts.eb_umbra.get_info(this)
+	local b = E:get_template("ray_umbra")
+	local min, max = b.bullet.damage_min, b.bullet.damage_max
+	local damage_type = b.bullet.damage_type
+	local yes_melee = false
+	local no_ranged = false
+
+	return {
+		type = STATS_TYPE_ENEMY,
+		hp = this.health.hp,
+		hp_max = this.health.hp_max,
+		damage_min = 2 * min,
+		damage_max = 2 * max,
+		damage_type = damage_type,
+		armor = this.health.armor,
+		magic_armor = this.health.magic_armor,
+		lives = this.enemy.lives_cost,
+		no_ranged = no_ranged,
+		yes_melee = yes_melee		
 	}
 end
 
@@ -10124,7 +10317,7 @@ function scripts.umbra_guy.update(this, store, script)
 end
 
 scripts.eb_leviathan = {}
-
+--[[
 function scripts.eb_leviathan.get_info(this)
 	return {
 		damage_min = 500,
@@ -10136,6 +10329,15 @@ function scripts.eb_leviathan.get_info(this)
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
 	}
+end
+]]--
+function scripts.eb_leviathan.get_info(this)
+	local out = scripts.enemy_basic.get_info(this)
+
+	out.damage_min = 500
+	out.damage_max = 800
+
+	return out
 end
 
 function scripts.eb_leviathan.insert(this, store, script)
@@ -10447,7 +10649,7 @@ function scripts.leviathan_tentacle.update(this, store)
 end
 
 scripts.eb_dracula = {}
-
+--[[
 function scripts.eb_dracula.get_info(this)
 	return {
 		damage_min = 150,
@@ -10459,6 +10661,15 @@ function scripts.eb_dracula.get_info(this)
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
 	}
+end
+]]--
+function scripts.eb_dracula.get_info(this)
+	local out = scripts.enemy_basic.get_info(this)
+
+	out.damage_min = 150
+	out.damage_max = 200
+
+	return out
 end
 
 function scripts.eb_dracula.insert(this, store, script)
@@ -10674,10 +10885,11 @@ function scripts.mod_dracula_lifesteal.update(this, store)
 end
 
 scripts.eb_saurian_king = {}
-
+--[[
 function scripts.eb_saurian_king.get_info(this)
 	local m = E:get_template("mod_saurian_king_tongue")
 	local min, max = m.modifier.damage_min, m.modifier.damage_max
+	local d_type = m.modifier.damage_type
 
 	return {
 		type = STATS_TYPE_ENEMY,
@@ -10685,6 +10897,25 @@ function scripts.eb_saurian_king.get_info(this)
 		hp_max = this.health.hp_max,
 		damage_min = min,
 		damage_max = max,
+		damage_type = d_type,
+		armor = this.health.armor,
+		magic_armor = this.health.magic_armor,
+		lives = this.enemy.lives_cost
+	}
+end
+]]--
+function scripts.eb_saurian_king.get_info(this)
+	local m = E:get_template("mod_saurian_king_tongue")
+	local min, max = m.modifier.damage_min, m.modifier.damage_max
+	local d_type = m.modifier.damage_type
+
+	return {
+		type = STATS_TYPE_ENEMY,
+		hp = this.health.hp,
+		hp_max = this.health.hp_max,
+		damage_min = min,
+		damage_max = max,
+		damage_type = d_type,
 		armor = this.health.armor,
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
@@ -10869,7 +11100,13 @@ function scripts.hero_alric.get_info(this)
 		respawn = this.health.dead_lifetime
 	}
 end
+--[[
+function scripts.hero_alric.get_info(this)
+	local t = scripts.hero_basic.get_info_melee(this)
 
+	return t
+end
+]]--
 function scripts.hero_alric.level_up(this, store, initial)
 	local hl = this.hero.level
 	local ls = this.hero.level_stats
@@ -11161,7 +11398,13 @@ function scripts.hero_mirage.get_info(this)
 		respawn = this.health.dead_lifetime
 	}
 end
+--[[
+function scripts.hero_mirage.get_info(this)
+	local t = scripts.hero_basic.get_info_melee(this)
 
+	return t
+end
+]]--
 function scripts.hero_mirage.level_up(this, store, initial)
 	local hl = this.hero.level
 	local ls = this.hero.level_stats
@@ -11649,7 +11892,13 @@ function scripts.hero_giant.get_info(this)
 		respawn = this.health.dead_lifetime
 	}
 end
+--[[
+function scripts.hero_giant.get_info(this)
+	local t = scripts.hero_basic.get_info_melee(this)
 
+	return t
+end
+]]--
 function scripts.hero_giant.level_up(this, store, initial)
 	local hl = this.hero.level
 	local ls = this.hero.level_stats
@@ -12053,7 +12302,13 @@ function scripts.hero_pirate.get_info(this)
 		respawn = this.health.dead_lifetime
 	}
 end
+--[[
+function scripts.hero_pirate.get_info(this)
+	local t = scripts.hero_basic.get_info_melee(this)
 
+	return t
+end
+]]--
 function scripts.hero_pirate.level_up(this, store, initial)
 	local hl = this.hero.level
 	local ls = this.hero.level_stats
@@ -12435,6 +12690,7 @@ scripts.hero_wizard = {}
 function scripts.hero_wizard.get_info(this)
 	local m = E:get_template("mod_ray_wizard")
 	local min, max = m.damage_min, m.damage_max
+	local d_type = m.damage_type
 
 	return {
 		type = STATS_TYPE_SOLDIER,
@@ -12443,11 +12699,29 @@ function scripts.hero_wizard.get_info(this)
 		damage_min = min,
 		damage_max = max,
 		damage_type = DAMAGE_MAGICAL,
+		damage_type = d_type,
 		armor = this.health.armor,
 		respawn = this.health.dead_lifetime
 	}
 end
+--[[
+function scripts.hero_wizard.get_info(this)
+	local m = E:get_template("mod_ray_wizard")
+	local min, max = m.damage_min, m.damage_max
+	local d_type = m.damage_type
 
+	return {
+		type = STATS_TYPE_SOLDIER,
+		hp = this.health.hp,
+		hp_max = this.health.hp_max,
+		damage_min = min,
+		damage_max = max,
+		damage_type = d_type,
+		armor = this.health.armor,
+		respawn = this.health.dead_lifetime
+	}
+end
+]]--
 function scripts.hero_wizard.level_up(this, store, initial)
 	local hl = this.hero.level
 	local ls = this.hero.level_stats
@@ -12899,7 +13173,13 @@ function scripts.hero_beastmaster.get_info(this)
 		respawn = this.health.dead_lifetime
 	}
 end
+--[[
+function scripts.hero_beastmaster.get_info(this)
+	local t = scripts.hero_basic.get_info_melee(this)
 
+	return t
+end
+]]--
 function scripts.hero_beastmaster.level_up(this, store, initial)
 	local hl = this.hero.level
 	local ls = this.hero.level_stats
@@ -13293,7 +13573,7 @@ function scripts.aura_beastmaster_regeneration.update(this, store)
 end
 
 scripts.beastmaster_boar = {}
-
+--[[
 function scripts.beastmaster_boar.get_info(this)
 	local min, max = this.melee.attacks[1].damage_min, this.melee.attacks[1].damage_max
 
@@ -13306,6 +13586,14 @@ function scripts.beastmaster_boar.get_info(this)
 		armor = this.health.armor,
 		respawn = this.owner.timed_attacks.list[2].cooldown
 	}
+end
+]]--
+function scripts.beastmaster_boar.get_info(this)
+	local t = scripts.soldier_barrack.get_info(this)
+
+	t.respawn = this.owner.timed_attacks.list[2].cooldown
+
+	return t
 end
 
 function scripts.beastmaster_boar.insert(this, store)
@@ -13445,7 +13733,18 @@ function scripts.beastmaster_rhino.update(this, store)
 end
 
 scripts.beastmaster_falcon = {}
-
+--[[
+function scripts.beastmaster_falcon.get_info(this)
+	return {
+		armor = 0,
+		type = STATS_TYPE_SOLDIER,
+		hp = this.fake_hp,
+		hp_max = this.fake_hp,
+		damage_min = this.custom_attack.damage_min,
+		damage_max = this.custom_attack.damage_max
+	}
+end
+]]--
 function scripts.beastmaster_falcon.get_info(this)
 	return {
 		armor = 0,
@@ -13571,7 +13870,13 @@ function scripts.hero_alien.get_info(this)
 		respawn = this.health.dead_lifetime
 	}
 end
+--[[
+function scripts.hero_alien.get_info(this)
+	local t = scripts.hero_basic.get_info_melee(this)
 
+	return t
+end
+]]--
 function scripts.hero_alien.level_up(this, store, initial)
 	local hl = this.hero.level
 	local ls = this.hero.level_stats
@@ -14044,7 +14349,13 @@ function scripts.hero_priest.get_info(this)
 		respawn = this.health.dead_lifetime
 	}
 end
+--[[
+function scripts.hero_priest.get_info(this)
+	local t = scripts.hero_basic.get_info_ranged(this)
 
+	return t
+end
+]]--
 function scripts.hero_priest.level_up(this, store, initial)
 	local hl = this.hero.level
 	local ls = this.hero.level_stats
@@ -14584,7 +14895,7 @@ function scripts.mod_stun_kraken.update(this, store)
 end
 
 scripts.hero_dragon = {}
-
+--[[
 function scripts.hero_dragon.get_info(this)
 	local m = E:get_template("fireball_dragon")
 	local min, max = m.bullet.damage_min, m.bullet.damage_max
@@ -14599,6 +14910,18 @@ function scripts.hero_dragon.get_info(this)
 		armor = this.health.armor,
 		respawn = this.health.dead_lifetime
 	}
+end
+]]--
+function scripts.hero_dragon.get_info(this)
+	local t = scripts.hero_basic.get_info_ranged(this)
+	local m = E:get_template(this.ranged.attacks[1].bullet)
+    	t.ranged_damage_max = m.bullet.damage_max * this.unit.damage_factor
+		t.ranged_damage_min = m.bullet.damage_min * this.unit.damage_factor
+		t.ranged_damage_type = m.bullet.damage_type
+		t.damage_max = 0--m.bullet.damage_max
+		t.damage_min = 0--m.bullet.damage_min
+		t.damage_type = m.bullet.damage_type
+	return t
 end
 
 function scripts.hero_dragon.level_up(this, store, initial)
@@ -15405,7 +15728,13 @@ function scripts.hero_monk.get_info(this)
 		respawn = this.health.dead_lifetime
 	}
 end
+--[[
+function scripts.hero_monk.get_info(this)
+	local t = scripts.hero_basic.get_info_melee(this)
 
+	return t
+end
+]]--
 function scripts.hero_monk.level_up(this, store, initial)
 	local hl = this.hero.level
 	local ls = this.hero.level_stats
@@ -15795,7 +16124,13 @@ function scripts.hero_crab.get_info(this)
 		respawn = this.health.dead_lifetime
 	}
 end
+--[[
+function scripts.hero_crab.get_info(this)
+	local t = scripts.hero_basic.get_info_melee(this)
 
+	return t
+end
+]]--
 function scripts.hero_crab.level_up(this, store, initial)
 	local hl = this.hero.level
 	local ls = this.hero.level_stats
@@ -16238,6 +16573,7 @@ end
 
 scripts.hero_dracolich = {}
 
+--[[
 function scripts.hero_dracolich.get_info(this)
 	local m = E:get_template("fireball_dracolich")
 	local min, max = m.bullet.damage_min, m.bullet.damage_max
@@ -16253,6 +16589,20 @@ function scripts.hero_dracolich.get_info(this)
 		respawn = this.health.dead_lifetime
 	}
 end
+]]--
+
+function scripts.hero_dracolich.get_info(this)
+	local t = scripts.hero_basic.get_info_ranged(this)
+	local m = E:get_template(this.ranged.attacks[1].bullet)
+    	t.ranged_damage_max = m.bullet.damage_max * this.unit.damage_factor
+		t.ranged_damage_min = m.bullet.damage_min * this.unit.damage_factor
+		t.ranged_damage_type = m.bullet.damage_type
+		t.damage_max = 0--m.bullet.damage_max
+		t.damage_min = 0--m.bullet.damage_min
+		t.damage_type = m.bullet.damage_type
+	return t
+end
+
 
 function scripts.hero_dracolich.level_up(this, store, initial)
 	local hl = this.hero.level
@@ -17020,7 +17370,13 @@ function scripts.hero_van_helsing.get_info(this)
 		respawn = this.health.dead_lifetime
 	}
 end
+--[[
+function scripts.hero_van_helsing.get_info(this)
+	local t = scripts.hero_basic.get_info_melee(this)
 
+	return t
+end
+]]--
 function scripts.hero_van_helsing.level_up(this, store, initial)
 	local hl = this.hero.level
 	local ls = this.hero.level_stats
@@ -17574,7 +17930,13 @@ function scripts.hero_minotaur.get_info(this)
 		respawn = this.health.dead_lifetime
 	}
 end
+--[[
+function scripts.hero_minotaur.get_info(this)
+	local t = scripts.hero_basic.get_info_melee(this)
 
+	return t
+end
+]]--
 function scripts.hero_minotaur.level_up(this, store, initial)
 	local hl = this.hero.level
 	local ls = this.hero.level_stats
@@ -18153,7 +18515,13 @@ function scripts.hero_monkey_god.get_info(this)
 		respawn = this.health.dead_lifetime
 	}
 end
+--[[
+function scripts.hero_monkey_god.get_info(this)
+	local t = scripts.hero_basic.get_info_melee(this)
 
+	return t
+end
+]]--
 function scripts.hero_monkey_god.level_up(this, store, initial)
 	local hl = this.hero.level
 	local ls = this.hero.level_stats
@@ -18528,7 +18896,13 @@ function scripts.hero_voodoo_witch.get_info(this)
 		respawn = this.health.dead_lifetime
 	}
 end
+--[[
+function scripts.hero_voodoo_witch.get_info(this)
+	local t = scripts.hero_basic.get_info_melee(this)
 
+	return t
+end
+]]--
 function scripts.hero_voodoo_witch.level_up(this, store, initial)
 	local hl = this.hero.level
 	local ls = this.hero.level_stats
@@ -19191,7 +19565,13 @@ function scripts.hero_steam_frigate.get_info(this)
 		armor = this.health.armor
 	}
 end
-
+--[[
+function scripts.hero_steam_frigate.get_info(this)
+	local t = scripts.soldier_barrack.get_info(this)
+	
+	return t
+end
+]]--
 function scripts.hero_steam_frigate.insert(this, store, script)
 	return true
 end

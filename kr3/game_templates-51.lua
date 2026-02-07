@@ -190,7 +190,7 @@ tt.tower.price = b.price[1]
 tt.tower.menu_offset = v(3, 19)
 tt.info.enc_icon = 3
 tt.info.i18n_key = "TOWER_SPARKING_GEODE_1"
-tt.info.portrait = "portraits_towers_0024"
+tt.info.portrait = "portraits_towers_0030"
 tt.info.room_portrait = "quickmenu_main_icons_main_icons_0024_0001"
 tt.info.fn = scripts.tower_sparking_geode.get_info
 tt.main_script.update = scripts.tower_sparking_geode.update
@@ -1152,7 +1152,37 @@ tt.attacks.list[9].entities = {
 	}
 }
 
-for i = 10, 19 do
+tt.attacks.list[10].price = 90
+tt.attacks.list[10].entities = {
+	{
+		1,
+		{
+		"hero_orc_2"
+		}
+	}
+}
+
+tt.attacks.list[11].price = 90
+tt.attacks.list[11].entities = {
+	{
+		1,
+		{
+		"hero_asra_2"
+		}
+	}
+}
+
+tt.attacks.list[12].price = 90
+tt.attacks.list[12].entities = {
+	{
+		1,
+		{
+		"hero_oloch_2"
+		}
+	}
+}
+
+for i = 13, 19 do
 	tt.attacks.list[i] = nil
 end
 
@@ -1319,6 +1349,27 @@ for i, aa in pairs(tt.hero.skills) do
 end
 
 tt = E:register_t("hero_tank_2", "hero_tank")
+tt.hero_insert = false
+tt.hero.level = 10
+for i, aa in pairs(tt.hero.skills) do
+	aa.level = 3
+end
+
+tt = E:register_t("hero_asra_2", "hero_asra")
+tt.hero_insert = false
+tt.hero.level = 10
+for i, aa in pairs(tt.hero.skills) do
+	aa.level = 3
+end
+
+tt = E:register_t("hero_orc_2", "hero_orc")
+tt.hero_insert = false
+tt.hero.level = 10
+for i, aa in pairs(tt.hero.skills) do
+	aa.level = 3
+end
+
+tt = E:register_t("hero_oloch_2", "hero_oloch")
 tt.hero_insert = false
 tt.hero.level = 10
 for i, aa in pairs(tt.hero.skills) do

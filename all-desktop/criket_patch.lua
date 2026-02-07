@@ -333,7 +333,7 @@ local g1_to_g3_towers = {
         tt_desc = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_DESCRIPTION")
     }, {
         check = "main_icons_0019",
-        action_arg = "tower_ewok_rework",
+        action_arg = "tower_ewok_archer_re",--"tower_ewok_rework",
         action = "tw_upgrade",
         halo = "glow_ico_main",
         image = "main_icons_0112",
@@ -414,7 +414,7 @@ local g1_to_g3_towers = {
         tt_desc = _("TOWER_MAGE_HIGH_ELVEN_DESCRIPTION")
     }, {
         check = "main_icons_0019",
-        action_arg = "tower_pixie_d",
+        action_arg = "tower_pixie_re",--"tower_pixie_d",
         action = "tw_upgrade",
         halo = "glow_ico_main",
         image = "main_tower_icons_0002",
@@ -423,7 +423,7 @@ local g1_to_g3_towers = {
         tt_desc = _("ELVES_TOWER_PIXIE_DESCRIPTION")
     }, {
         check = "main_icons_0019",
-        action_arg = "tower_faerie_dragon_d",
+        action_arg = "tower_faerie_dragon_re",--"tower_faerie_dragon_d",
         action = "tw_upgrade",
         halo = "glow_ico_main",
         image = "main_tower_icons_0001",
@@ -696,12 +696,12 @@ local function patch_cricket_ui(game_gui)
                 tower_menus["holder"][1]["pages"][rank][cheat_rank]["place"] = 14
             end
         end
-        if user_data.liuhui.cheat5 then
+        if user_data.liuhui.cheat5 or liuhui.cheat5_dragon then
             table.insert(tower_menus["holder"][1]["pages"][rank], map_data.cheat_g5_json)
             local cheat5_rank_inc = user_data.liuhui.cheat and 2 or 1
             local cheat5_rank = #tower_menus["holder"][1]["pages"][rank]--cheat5_rank_inc + user_data.tower_pick
             tower_menus["holder"][1]["pages"][rank][cheat5_rank]["place"] = 21
-            if user_data.liuhui.cheat5 and user_data.tower_pick == 12 and (screen_map.user_data.liuhui.rand_tower == nil or screen_map.user_data.liuhui.rand_tower == 0) then
+            if (user_data.liuhui.cheat5 or liuhui.cheat5_dragon) and user_data.tower_pick == 12 and (screen_map.user_data.liuhui.rand_tower == nil or screen_map.user_data.liuhui.rand_tower == 0) then
                 tower_menus["holder"][1]["pages"][rank][cheat5_rank]["place"] = 20
             end
             if screen_map.user_data.liuhui.rand_tower and screen_map.user_data.liuhui.rand_tower >= 3 and screen_map.user_data.liuhui.rand_tower_mode == 4 then

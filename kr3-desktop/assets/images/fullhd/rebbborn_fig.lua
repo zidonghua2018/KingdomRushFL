@@ -1153,6 +1153,7 @@ return {
 		},
 		alias = {}
 	},
+	--[[
 	mapButtons_portrait_hero_0015 = {
 		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {
@@ -1177,6 +1178,7 @@ return {
 		},
 		alias = {}
 	},
+	--
 	heroroom_thumbs_0017 = {
 		a_name = "gui_portraits_bloodlust-1.dds",
 		size = {

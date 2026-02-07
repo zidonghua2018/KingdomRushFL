@@ -1863,6 +1863,213 @@ return {
 			"kr4_hero_tank_scorching_loopend.ogg",
 		}
 	},
+--阿斯拉
+	hero_asra_taunt_1 = {
+		source_group = "TAUNTS",
+		gain = 0.4,
+		files = {
+			"kr4_hero_asra_taunt_1.ogg",
+		}
+	},
+	group_asra_taunt = {
+		source_group = "TAUNTS",
+		ignore = 1,
+		mode = "sequence",
+		gain = 0.4,
+		files = {
+			"kr4_hero_asra_taunt_1.ogg",
+			"kr4_hero_asra_taunt_2.ogg",
+			"kr4_hero_asra_taunt_3.ogg",
+			"kr4_hero_asra_taunt_4.ogg",
+		}
+	},
+	hero_asra_death = {
+		source_group = "TAUNTS",
+		gain = 0.4,
+		files = {
+			"kr4_hero_asra_taunt_death.ogg",
+		}
+	},
+	hero_asra_respawn = {
+		source_group = "TAUNTS",
+		gain = 0.4,
+		files = {
+			"kr4_hero_asra_taunt_1.ogg",
+		}
+	},
+	hero_asra_teleport = {
+		source_group = "TAUNTS",
+		gain = 0.4,
+		files = {
+			"kr4_hero_asra_shadowdance_teleport.ogg",
+		}
+	},
+	hero_asra_shield = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_asra_shield.ogg",
+		}
+	},
+	hero_asra_spiderbite = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_asra_spiderbite_attack.ogg",
+		}
+	},
+	hero_asra_ultimate_poison = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_asra_toxicrain_impactwithpoison.ogg",
+		}
+	},
+--维鲁克
+	hero_orc_taunt_1 = {
+		source_group = "TAUNTS",
+		gain = 0.4,
+		files = {
+			"kr4_hero_orc_taunt_1.ogg",
+		}
+	},
+	group_orc_taunt = {
+		source_group = "TAUNTS",
+		ignore = 1,
+		mode = "sequence",
+		gain = 0.4,
+		files = {
+			"kr4_hero_orc_taunt_1.ogg",
+            "kr4_hero_orc_taunt_2.ogg",
+            "kr4_hero_orc_taunt_3.ogg",
+            "kr4_hero_orc_taunt_4.ogg",
+		}
+	},
+	hero_orc_death = {
+		source_group = "TAUNTS",
+		gain = 0.4,
+		files = {
+			"kr4_hero_orc_taunt_death.ogg",
+		}
+	},
+	hero_orc_respawn = {
+		source_group = "TAUNTS",
+		gain = 0.4,
+		files = {
+			"kr4_hero_orc_taunt_1.ogg",
+		}
+	},
+	hero_orc_bruteforce = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_veruk_bruteforce.ogg",
+		}
+	},
+	hero_orc_slash = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_veruk_aimedslashes.ogg",
+		}
+	},
+	hero_orc_leader = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_veruk_inspiringleader.ogg",
+		}
+	},
+--奥洛克
+	hero_oloch_taunt_1 = {
+		source_group = "TAUNTS",
+		gain = 0.4,
+		files = {
+			"kr4_hero_oloch_taunt_1.ogg",
+		}
+	},
+	group_oloch_taunt = {
+		source_group = "TAUNTS",
+		ignore = 1,
+		mode = "sequence",
+		gain = 0.4,
+		files = {
+			"kr4_hero_oloch_taunt_1.ogg",
+            "kr4_hero_oloch_taunt_2.ogg",
+            "kr4_hero_oloch_taunt_3.ogg",
+            "kr4_hero_oloch_taunt_4.ogg",
+		}
+	},
+	hero_oloch_death = {
+		source_group = "TAUNTS",
+		gain = 0.4,
+		files = {
+			"kr4_hero_oloch_taunt_death.ogg",
+		}
+	},
+	hero_oloch_respawn = {
+		source_group = "TAUNTS",
+		gain = 0.4,
+		files = {
+			"kr4_hero_oloch_taunt_1.ogg",
+		}
+	},
+	hero_oloch_duplication = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_oloch_duplication.ogg",
+		}
+	},
+	hero_oloch_magma = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_oloch_magmaeruption.ogg",
+		}
+	},
+	hero_oloch_hellish = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_oloch_hellishpact.ogg",
+		}
+	},
+	--剩余
+	hero_oloch_demonic_cast = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_oloch_demonicblast_cast.ogg",
+		}
+	},
+	hero_oloch_demonic_travel = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_oloch_demonicblast_travel.ogg",
+		}
+	},  
+	hero_oloch_ultimate = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_oloch_sealisolation.ogg",
+		}
+	}, 
+            
 --其他
 	dark_army_blazing_mage_attack_loopstart = {
 		source_group = "SFX",

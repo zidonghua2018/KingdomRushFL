@@ -2093,6 +2093,7 @@ return {
 		v(53, 27)
 	},
 	range_center_offset = v(0, -12),
+--[[	
 	damage_icons = {
 		default = "base_info_icons_0001",
 		magic = "base_info_icons_0002",
@@ -2105,6 +2106,28 @@ return {
 		[DAMAGE_MAGICAL] = "base_info_icons_0002",
 		[DAMAGE_EXPLOSION] = "base_info_icons_0001"
 	},
+]]--
+	damage_icons = {
+		default = "base_info_icons_0001",
+		magic = "base_info_icons_0002",
+		meleemagic = "base_info_icons_0020",
+		sword = "base_info_icons_0001",
+		fireball = "base_info_icons_0012",
+		arrow = "base_info_icons_0010",
+		shot = "base_info_icons_0011",
+		electrical = "base_info_icons_0018",
+		meleeelectrical = "base_info_icons_0015",
+		explosion = "base_info_icons_0019",
+		meleeexplosion = "base_info_icons_0016",
+		meleetrue = "base_info_icons_0014",
+		rangedtrue = "base_info_icons_0017",
+		[DAMAGE_TRUE] = "base_info_icons_0017",
+        -- 远程的物理攻击在 game_gui 中额外处理，显示为箭伤
+		[DAMAGE_PHYSICAL] = "base_info_icons_0001",
+		[DAMAGE_MAGICAL] = "base_info_icons_0002",
+		[DAMAGE_EXPLOSION] = "base_info_icons_0019",
+        [DAMAGE_ELECTRICAL] = "base_info_icons_0018",
+	},	
 	power_button_block_styles = {
 		drow_queen = {
 			image = "malicia_powerNet_0001",

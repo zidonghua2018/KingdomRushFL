@@ -806,6 +806,7 @@ tt.tower.size = TOWER_SIZE_LARGE
 tt.tower.menu_offset = v(0, 14)
 tt.info.enc_icon = 15
 --tt.info.portrait = (IS_PHONE_OR_TABLET and "krv_portraits_0003") or "krv_portraits_0003"
+tt.info.portrait = "gui4_bottom_info_image_towers_0005"
 tt.powers.fissure = CC("power")
 tt.powers.fissure.price_base = 170
 tt.powers.fissure.price_inc = 170

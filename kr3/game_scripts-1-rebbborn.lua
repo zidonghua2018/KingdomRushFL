@@ -2065,6 +2065,7 @@ scripts.mod_damage_factors2 = {
 		return true
 	end
 }
+---精英阿渥克
 scripts.tower_ewok = {}
 function scripts.tower_ewok.update(this, store, script)
 	local tower_sid = 2
@@ -2079,7 +2080,32 @@ function scripts.tower_ewok.update(this, store, script)
 	
 	a.ts = store.tick_ts	
 
+	local pow_plant = this.powers.plant_magic_blossom
+	local plants = pow_plant.plants
+
+	for i, pos in ipairs(pow_plant.pos) do
+		pos.x = pos.x + this.pos.x
+		pos.y = pos.y + this.pos.y
+	end
+
 	while true do
+
+		if pow_plant.changed then
+			pow_plant.changed = nil
+
+			for i = 1, pow_plant.level do
+				if not plants[i] then
+					local plant = E:create_entity(pow_plant.template)
+
+					plant.pos = V.vclone(pow_plant.pos[i])
+					plant.owner = this
+					plants[i] = plant
+
+					queue_insert(store, plant)
+				end
+			end
+		end		
+
 		local b = this.barrack
 
 		if this.powers then
@@ -2087,10 +2113,24 @@ function scripts.tower_ewok.update(this, store, script)
 				if p.changed then
 					p.changed = nil
 
-					for _, s in pairs(b.soldiers) do
-						s.powers[pn].level = p.level
-						s.powers[pn].changed = true
+					if p == this.powers.tear  then
+						for _, s in pairs(b.soldiers) do
+							s.powers[pn].level = p.level
+							s.powers[pn].changed = true
+						end
 					end
+					if p == this.powers.shield then
+						for _, s in pairs(b.soldiers) do
+							s.powers[pn].level = p.level
+							s.powers[pn].changed = true
+						end
+					end
+					if p == this.powers.armor then
+						for _, s in pairs(b.soldiers) do
+							s.powers[pn].level = p.level
+							s.powers[pn].changed = true
+						end
+					end										
 				end
 			end
 		end
@@ -2120,7 +2160,18 @@ function scripts.tower_ewok.update(this, store, script)
 
 					if this.powers then
 						for pn, p in pairs(this.powers) do
-							s.powers[pn].level = p.level
+							if p == this.powers.tear and p.level > 0 then
+								s.powers[pn].level = p.level
+								s.powers[pn].changed = true
+							end	
+							if p == this.powers.shield and p.level > 0 then
+								s.powers[pn].level = p.level
+								s.powers[pn].changed = true
+							end	
+							if p == this.powers.armor and p.level > 0 then
+								s.powers[pn].level = p.level
+								s.powers[pn].changed = true
+							end	
 						end
 					end
 
@@ -2395,6 +2446,1126 @@ function scripts.soldier_ewok_re.update(this, store)
 
         coroutine.yield()
     end
+end
+---魔法阿渥克
+scripts.plant_magic_blossom_ewok = {}
+
+function scripts.plant_magic_blossom_ewok.update(this, store)
+	local ca = this.custom_attack
+	local fx_loading = E:create_entity("fx_plant_magic_blossom_loading")
+	local fx_idle1 = E:create_entity("fx_plant_magic_blossom_idle1")
+	local fx_idle2 = E:create_entity("fx_plant_magic_blossom_idle2")
+
+	fx_loading.pos.x, fx_loading.pos.y = this.pos.x, this.pos.y
+	fx_idle1.pos.x, fx_idle1.pos.y = this.pos.x, this.pos.y
+	fx_idle2.pos.x, fx_idle2.pos.y = this.pos.x, this.pos.y
+
+	queue_insert(store, fx_loading)
+	queue_insert(store, fx_idle1)
+	queue_insert(store, fx_idle2)
+
+	::label_411_0::
+
+	fx_loading.render.sprites[1].hidden = true
+	fx_idle1.render.sprites[1].hidden = true
+	fx_idle2.render.sprites[1].hidden = true
+
+	U.animation_start(this, "loading", nil, store.tick_ts, true)
+
+	while (this.plant.blocked or store.wave_group_number < 1) and not this.force_ready do
+		coroutine.yield()
+	end
+
+	::label_411_1::
+
+	fx_loading.render.sprites[1].hidden = false
+	fx_idle1.render.sprites[1].hidden = true
+	fx_idle2.render.sprites[1].hidden = true
+
+	U.animation_start(this, "loading", nil, store.tick_ts, true)
+
+	ca.ts = store.tick_ts
+
+	while store.tick_ts - ca.ts < ca.cooldown and not this.force_ready do
+		if this.is_removed then
+			break
+		end
+
+		if this.plant.blocked then
+			goto label_411_0
+		end
+
+		coroutine.yield()
+	end
+
+	fx_loading.render.sprites[1].hidden = true
+
+	U.y_animation_play(this, "ready", nil, store.tick_ts)
+
+	fx_idle1.render.sprites[1].hidden = false
+	fx_idle2.render.sprites[1].hidden = false
+	this.force_ready = nil
+
+	U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+	this.ui.clicked = nil
+
+	while true do
+		if this.is_removed then
+			break
+		end
+
+		if this.plant.blocked then
+			goto label_411_0
+		end
+
+		if this.ui.clicked then
+			this.ui.clicked = nil
+
+			S:queue(ca.sound)
+			U.animation_start(this, "shoot", nil, store.tick_ts, false)
+			U.y_wait(store, ca.shoot_time)
+
+			local first, targets = U.find_foremost_enemy(store.entities, this.pos, 0, ca.range, true, ca.vis_flags, ca.vis_bans)
+
+			for i = 1, ca.bullet_count do
+				local b = E:create_entity(ca.bullet)
+
+				b.bullet.shot_index = i
+				b.bullet.source_id = this.id
+				b.pos.x, b.pos.y = this.pos.x + ca.bullet_start_offset.x, this.pos.y + ca.bullet_start_offset.y
+				b.bullet.from = V.vclone(b.pos)
+
+				if targets and #targets > 0 then
+					local target
+
+					if i <= #targets then
+						target = targets[i]
+					else
+						target = first
+					end
+
+					b.bullet.target_id = target.id
+					b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+				else
+					b.bullet.to = V.v(this.pos.x + ca.bullet_start_offset.x + math.random(-50, 50), this.pos.y + ca.bullet_start_offset.y + math.random(30, 100))
+				end
+
+				b.initial_impulse_angle_abs = math.pi / 2 + U.frandom(-math.pi / 2, math.pi / 2)
+				b.initial_impulse = U.frandom(0.3, 1) * b.initial_impulse
+
+				queue_insert(store, b)
+			end
+
+			U.y_animation_wait(this)
+
+			goto label_411_1
+		end
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, fx_loading)
+	queue_remove(store, fx_idle1)
+	queue_remove(store, fx_idle2)
+	queue_remove(store, this)
+end
+---魔法侏儒花园
+scripts.tower_pixie_re = {}
+
+function scripts.tower_pixie_re.remove(this, store)
+	local pow_plant = this.powers.plant_poison
+
+	for i, p in ipairs(pow_plant.plants) do
+		queue_remove(store, p)
+
+		for _, f in ipairs(p.fxs_idle) do
+			queue_remove(store, f)
+		end
+	end
+
+	if this.pixies then
+		for _, e in pairs(this.pixies) do
+			e.owner = nil
+
+			queue_remove(store, e)
+		end
+	end
+
+	return true
+end
+
+function scripts.tower_pixie_re.get_info(this)
+	return {
+		type = STATS_TYPE_TOWER,
+		damage_min = 0,
+		damage_max = 0,
+		range = this.attacks.range,
+		cooldown = this.attacks.pixie_cooldown / this.powers.cream.level
+	}
+end
+
+function scripts.tower_pixie_re.update(this, store)
+	local a = this.attacks
+
+	a.ts = store.tick_ts
+
+	local pow_c = this.powers.cream
+	local pow_t = this.powers.total
+	local pow_plant = this.powers.plant_poison
+	local plants = pow_plant.plants
+	local available_paths = {}
+	local enemy_cooldowns = {}
+
+	this.pixies = {}
+---new
+	for k, v in pairs(P.paths) do
+		table.insert(available_paths, k)
+	end
+
+	if store.level.ignore_walk_backwards_paths then
+		available_paths = table.filter(available_paths, function(k, v)
+			return not table.contains(store.level.ignore_walk_backwards_paths, v)
+		end)
+	end
+
+	local posAndDist2 = {}
+
+	for i, pos in ipairs(pow_plant.pos) do
+		pos.x = pos.x + this.pos.x
+		pos.y = pos.y + this.pos.y
+
+		local nearest = P:nearest_nodes(pos.x, pos.y, available_paths, nil, true)
+		local pi, spi, ni = unpack(nearest[1])
+
+		spi = 1
+
+		local nodePos = P:node_pos(pi, spi, ni)
+		local d2 = V.dist2(pos.x, pos.y, nodePos.x, nodePos.y)
+		local e = {}
+
+		e.pos = pos
+		e.d2 = d2
+
+		table.insert(posAndDist2, e)
+	end
+
+	table.sort(posAndDist2, function(e1, e2)
+		return e1.d2 < e2.d2
+	end)
+
+	for i = 1, #posAndDist2 do
+		pow_plant.pos[i] = posAndDist2[i].pos
+	end	
+---
+	local function spawn_pixie()
+		local e = E:create_entity("decal_pixie")
+		local po = pow_c.idle_offsets[#this.pixies + 1]
+
+		e.idle_pos = po
+		e.pos.x, e.pos.y = this.pos.x + po.x, this.pos.y + po.y
+		e.owner = this
+
+		table.insert(this.pixies, e)
+		queue_insert(store, e)
+	end
+
+	spawn_pixie()
+
+	while true do
+		if this.tower.blocked then
+			-- block empty
+		else
+			if pow_c.changed and #this.pixies < 3 then
+				pow_c.changed = nil
+
+				spawn_pixie()
+			end
+
+			if pow_t.changed then
+				pow_t.changed = nil
+
+				for i, ch in ipairs(pow_t.chances) do
+					a.list[i].chance = ch[pow_t.level]
+				end
+			end
+
+			if pow_plant.changed then
+				pow_plant.changed = nil
+
+				for i = 1, pow_plant.level do
+					if not plants[i] then
+						local plant = E:create_entity(pow_plant.template)
+
+						plant.pos = V.vclone(pow_plant.pos[i])
+						plant.force_ready = true
+						plants[i] = plant
+
+						queue_insert(store, plant)
+					end
+				end
+			end
+
+			for k, v in pairs(enemy_cooldowns) do
+				if v <= store.tick_ts then
+					enemy_cooldowns[k] = nil
+				end
+			end
+
+			if store.tick_ts - a.ts > a.cooldown then
+				for _, pixie in pairs(this.pixies) do
+					local target, attack
+					local rnd, acc = math.random(), 0
+
+					if pixie.target or store.tick_ts - pixie.attack_ts <= a.pixie_cooldown then
+						-- block empty
+					else
+						for ii, aa in ipairs(a.list) do
+							if aa.chance > 0 and rnd <= aa.chance + acc then
+								attack = aa
+
+								break
+							else
+								acc = acc + aa.chance
+							end
+						end
+
+						if not attack then
+							-- block empty
+						else
+							target = U.find_random_enemy(store.entities, this.pos, 0, a.range, attack.vis_flags, attack.vis_bans, function(e)
+								return not table.contains(a.excluded_templates, e.template_name) and not enemy_cooldowns[e.id] and (not attack.check_gold_bag or e.enemy.gold_bag > 0)
+							end)
+
+							if not target then
+								-- block empty
+							else
+								enemy_cooldowns[target.id] = store.tick_ts + a.enemy_cooldown
+								pixie.attack_ts = store.tick_ts
+								pixie.target_id = target.id
+								pixie.attack = attack
+								pixie.attack_level = pow_t.level
+								a.ts = store.tick_ts
+
+								break
+							end
+						end
+					end
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+scripts.plant_poison_pumpkin_pixie = {}
+
+function scripts.plant_poison_pumpkin_pixie.update(this, store)
+	local smokes1 = {
+		{
+			"left",
+			-74,
+			21,
+			false,
+			false
+		},
+		{
+			"left",
+			75,
+			20,
+			true,
+			false
+		},
+		{
+			"down",
+			-4,
+			-18,
+			false,
+			false
+		},
+		{
+			"down",
+			-4,
+			62,
+			false,
+			true
+		}
+	}
+	local smokes2 = {
+		{
+			"fill",
+			24,
+			0,
+			false,
+			false
+		},
+		{
+			"fill",
+			29,
+			42,
+			false,
+			false
+		},
+		{
+			"fill",
+			-34,
+			43,
+			true,
+			false
+		},
+		{
+			"fill",
+			-34,
+			0,
+			true,
+			false
+		}
+	}
+	local smokes3 = {
+		{
+			"fill",
+			48,
+			-4,
+			false,
+			false
+		},
+		{
+			"fill",
+			45,
+			52,
+			false,
+			false
+		},
+		{
+			"fill",
+			-43,
+			-3,
+			true,
+			false
+		},
+		{
+			"fill",
+			-45,
+			56,
+			true,
+			false
+		}
+	}
+
+	local function add_smokes(t)
+		for _, item in pairs(t) do
+			local name, x, y, flip_x, flip_y = unpack(item)
+			local fx = E:create_entity("fx_plant_poison_pumpkin_smoke_" .. name)
+
+			fx.pos.x, fx.pos.y = this.pos.x + x, this.pos.y + y
+			fx.render.sprites[1].flip_x = flip_x
+			fx.render.sprites[1].flip_y = flip_y
+			fx.render.sprites[1].ts = store.tick_ts
+
+			if name == "fill" and flip_x then
+				fx.tween.props[3].keys[2][2].x = -1 * fx.tween.props[3].keys[2][2].x
+				fx.tween.props[3].keys[3][2].x = -1 * fx.tween.props[3].keys[3][2].x
+			end
+
+			queue_insert(store, fx)
+		end
+	end
+
+	local ca = this.custom_attack
+	local fx_idle_l = E:create_entity("fx_plant_poison_pumpkin_idle")
+	local fx_idle_c = E:create_entity("fx_plant_poison_pumpkin_idle")
+	local fx_idle_r = E:create_entity("fx_plant_poison_pumpkin_idle")
+
+	fx_idle_l.pos.x, fx_idle_l.pos.y = this.pos.x, this.pos.y
+	fx_idle_c.pos.x, fx_idle_c.pos.y = this.pos.x, this.pos.y
+	fx_idle_r.pos.x, fx_idle_r.pos.y = this.pos.x, this.pos.y
+	fx_idle_l.render.sprites[1].offset = V.v(-30, 30)
+	fx_idle_c.render.sprites[1].offset = V.v(-5, 28)
+	fx_idle_r.render.sprites[1].offset = V.v(32, 30)
+	fx_idle_l.render.sprites[1].flip_x = true
+	fx_idle_c.render.sprites[1].flip_x = true
+
+	queue_insert(store, fx_idle_l)
+	queue_insert(store, fx_idle_c)
+	queue_insert(store, fx_idle_r)
+
+	this.fxs_idle = {
+		fx_idle_l,
+		fx_idle_c,
+		fx_idle_r
+	}
+
+	local fxs_idle = this.fxs_idle
+
+	::label_412_0::
+
+	for _, fx in pairs(fxs_idle) do
+		fx.render.sprites[1].hidden = true
+	end
+
+	U.animation_start(this, "loading", nil, store.tick_ts, true)
+
+	while this.plant.blocked and not this.force_ready do
+		coroutine.yield()
+	end
+
+	::label_412_1::
+
+	for _, fx in pairs(fxs_idle) do
+		fx.render.sprites[1].hidden = true
+	end
+
+	U.animation_start(this, "loading", nil, store.tick_ts, true)
+
+	ca.ts = store.tick_ts
+
+	while store.tick_ts - ca.ts < ca.cooldown and not this.force_ready do
+		if this.plant.blocked then
+			goto label_412_0
+		end
+
+		coroutine.yield()
+	end
+
+	S:queue("VenomPlantReady")
+	U.y_animation_play(this, "ready", nil, store.tick_ts)
+
+	for _, fx in pairs(fxs_idle) do
+		fx.render.sprites[1].hidden = nil
+	end
+
+	this.force_ready = nil
+
+	U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+	this.ui.clicked = nil
+
+	while true do
+		if this.plant.blocked then
+			goto label_412_0
+		end
+
+		if this.ui.clicked then
+			this.ui.clicked = nil
+
+			S:queue(ca.sound)
+			U.animation_start(this, "shoot", nil, store.tick_ts, false)
+
+			for _, fx in pairs(fxs_idle) do
+				fx.render.sprites[1].hidden = true
+			end
+
+			U.y_wait(store, fts(9))
+			add_smokes(smokes1)
+			U.y_wait(store, fts(6))
+			add_smokes(smokes2)
+			U.y_wait(store, fts(2))
+			add_smokes(smokes3)
+
+			local first, targets = U.find_foremost_enemy(store.entities, this.pos, 0, ca.range, false, ca.vis_flags, ca.vis_bans)
+
+			if first then
+				for _, target in pairs(targets) do
+					for _, mod_name in pairs(ca.mods) do
+						local m = E:create_entity(mod_name)
+
+						m.modifier.target_id = target.id
+						m.modifier.source_id = this.id
+
+						queue_insert(store, m)
+					end
+				end
+			end
+
+			U.y_animation_wait(this)
+
+			goto label_412_1
+		end
+
+		coroutine.yield()
+	end
+
+	for _, fx in pairs(fxs_idle) do
+		queue_remove(store, fx)
+	end
+
+	queue_remove(store, this)
+end
+---仙女龙
+scripts.tower_faerie_dragon_re = {}
+function scripts.tower_faerie_dragon_re.remove(this, store)
+	local pow_plant = this.powers.plant_poison
+
+	for i, p in ipairs(pow_plant.plants) do
+		queue_remove(store, p)
+
+--		for _, f in ipairs(p.fxs_idle) do
+--			queue_remove(store, f)
+--		end
+	end
+
+	if this.dragons then
+		for _, e in pairs(this.dragons) do
+			e.owner = nil
+
+			queue_remove(store, e)
+		end
+	end
+
+	return true
+end
+
+function scripts.tower_faerie_dragon_re.update(this, store)
+	local a = this.attacks.list[1]
+	local pow_m = this.powers.more_dragons
+	local pow_i = this.powers.improve_shot
+	local pow_plant = this.powers.plant_poison
+	local plants = pow_plant.plants
+	local available_paths = {}
+
+	for k, v in pairs(P.paths) do
+		table.insert(available_paths, k)
+	end
+
+	if store.level.ignore_walk_backwards_paths then
+		available_paths = table.filter(available_paths, function(k, v)
+			return not table.contains(store.level.ignore_walk_backwards_paths, v)
+		end)
+	end
+
+	local posAndDist2 = {}
+
+	for i, pos in ipairs(pow_plant.pos) do
+		pos.x = pos.x + this.pos.x
+		pos.y = pos.y + this.pos.y
+
+		local nearest = P:nearest_nodes(pos.x, pos.y, available_paths, nil, true)
+		local pi, spi, ni = unpack(nearest[1])
+
+		spi = 1
+
+		local nodePos = P:node_pos(pi, spi, ni)
+		local d2 = V.dist2(pos.x, pos.y, nodePos.x, nodePos.y)
+		local e = {}
+
+		e.pos = pos
+		e.d2 = d2
+
+		table.insert(posAndDist2, e)
+	end
+
+	table.sort(posAndDist2, function(e1, e2)
+		return e1.d2 < e2.d2
+	end)
+
+	for i = 1, #posAndDist2 do
+		pow_plant.pos[i] = posAndDist2[i].pos
+	end	
+	
+	this.dragons = {}
+	local egg_sids = {
+		3,
+		4
+	}
+
+	while true do
+
+
+		if this.tower.blocked then
+			-- block empty
+		else
+			if pow_m.changed and #this.dragons < 2 then
+				pow_m.changed = nil
+
+				log.debug("pow_m:%s", getdump(pow_m))
+
+				local egg_sid = egg_sids[pow_m.level]
+				local egg_s = this.render.sprites[egg_sid]
+
+				U.animation_start(this, "open", nil, store.tick_ts, false, egg_sid)
+				U.y_wait(store, fts(5))
+
+				local o = pow_m.idle_offsets[pow_m.level]
+				local e = E:create_entity("faerie_dragon")
+
+				e.idle_pos = 0
+				e.pos.x, e.pos.y = this.pos.x + o.x, this.pos.y + o.y
+				e.idle_pos = V.vclone(e.pos)
+				
+				queue_insert(store, e)
+				table.insert(this.dragons, e)
+				e.owner = this
+			end
+			
+			if pow_plant.changed then
+				pow_plant.changed = nil
+
+				for i = 1, pow_plant.level do
+					if not plants[i] then
+						local plant = E:create_entity(pow_plant.template)
+
+						plant.pos = V.vclone(pow_plant.pos[i])
+						plant.force_ready = true
+						plants[i] = plant
+
+						queue_insert(store, plant)
+					end
+				end
+			end
+
+			if pow_i.changed then
+				pow_i.changed = nil
+			end
+
+			if #this.dragons > 0 and store.tick - a.ts > a.cooldown then
+				a.ts = store.tick_ts
+
+				local assigned_target_ids = {}
+
+				for _, dragon in pairs(this.dragons) do
+					if dragon.custom_attack.target_id then
+						table.insert(assigned_target_ids, dragon.custom_attack.target_id)
+					end
+				end
+
+				for _, dragon in pairs(this.dragons) do
+					if dragon.custom_attack.target_id then
+						-- block empty
+					else
+						local targets = U.find_enemies_in_range(store.entities, this.pos, 0, this.attacks.range, a.vis_flags, a.vis_bans, function(e)
+							return not table.contains(assigned_target_ids, e.id)
+						end)
+
+						if not targets then
+							goto label_539_0
+						end
+
+						table.sort(targets, function(e1, e2)
+							local f1 = e1.unit.is_stunned
+							local f2 = e2.unit.is_stunned
+
+							if f1 ~= 0 then
+								return false
+							end
+
+							if f2 ~= 0 then
+								return true
+							end
+
+							return V.dist(e1.pos.x, e1.pos.y, origin.x, origin.y) < V.dist(e2.pos.x, e2.pos.y, origin.x, origin.y)
+						end)
+
+						dragon.custom_attack.target_id = targets[1].id
+
+						table.insert(assigned_target_ids, targets[1].id)
+					end
+				end
+			end
+					
+		end
+
+		::label_539_0::
+
+		coroutine.yield()
+	end
+end
+---野蛮人巢穴
+scripts.tower_barrack_canibal = {}
+--[[
+function scripts.tower_barrack_canibal.update(this, store, script)
+	local b = this.barrack
+	local door_sid = this.render.door_sid or 2
+
+	if this.tower_upgrade_persistent_data.max_soldiers then
+		b.max_soldiers = this.tower_upgrade_persistent_data.max_soldiers
+	end
+
+	local pow_plant = this.powers.carnivorous_plant
+	local plants = pow_plant.plants
+	local available_paths = {}
+
+	for k, v in pairs(P.paths) do
+		table.insert(available_paths, k)
+	end
+
+	if store.level.ignore_walk_backwards_paths then
+		available_paths = table.filter(available_paths, function(k, v)
+			return not table.contains(store.level.ignore_walk_backwards_paths, v)
+		end)
+	end
+
+	local posAndDist2 = {}
+
+	for i, pos in ipairs(pow_plant.pos) do
+		pos.x = pos.x + this.pos.x
+		pos.y = pos.y + this.pos.y
+
+		local nearest = P:nearest_nodes(pos.x, pos.y, available_paths, nil, true)
+		local pi, spi, ni = unpack(nearest[1])
+
+		spi = 1
+
+		local nodePos = P:node_pos(pi, spi, ni)
+		local d2 = V.dist2(pos.x, pos.y, nodePos.x, nodePos.y)
+		local e = {}
+
+		e.pos = pos
+		e.d2 = d2
+
+		table.insert(posAndDist2, e)
+	end
+
+	table.sort(posAndDist2, function(e1, e2)
+		return e1.d2 < e2.d2
+	end)
+
+	for i = 1, #posAndDist2 do
+		pow_plant.pos[i] = posAndDist2[i].pos
+	end
+
+	while true do
+		if pow_plant.changed then
+			pow_plant.changed = nil
+
+			for i = 1, pow_plant.level do
+				if not plants[i] then
+					local plant = E:create_entity(pow_plant.template)
+
+					plant.pos = V.vclone(pow_plant.pos[i])
+					plant.owner = this
+					plants[i] = plant
+
+					queue_insert(store, plant)
+				end
+			end
+		end
+
+		local old_count = #b.soldiers
+
+		b.soldiers = table.filter(b.soldiers, function(_, s)
+			return store.entities[s.id] ~= nil
+		end)
+
+		if #b.soldiers > 0 and #b.soldiers ~= old_count then
+			for i, s in ipairs(b.soldiers) do
+				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+			end
+		end
+
+		if b.unit_bought then
+			b.max_soldiers = b.max_soldiers + 1
+			this.tower_upgrade_persistent_data.max_soldiers = b.max_soldiers
+
+			for i, ss in ipairs(b.soldiers) do
+				ss.nav_rally.pos, ss.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+			end
+
+			b.unit_bought = nil
+
+			local price = E:get_template(b.soldier_type).unit.price[this.barrack.max_soldiers]
+
+			store.player_gold = store.player_gold - price
+		end
+
+		if b.rally_new then
+			b.rally_new = false
+
+			signal.emit("rally-point-changed", this)
+
+			local sounds = {}
+			local all_dead = true
+
+			for i, s in ipairs(b.soldiers) do
+				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+				s.nav_rally.new = true
+
+				if s.sound_events.change_rally_point then
+					table.insert(sounds, s.sound_events.change_rally_point)
+				end
+
+				all_dead = all_dead and s.health.dead
+			end
+
+			if not all_dead then
+				if #sounds > 0 then
+					S:queue(sounds[math.random(1, #sounds)])
+				else
+					S:queue(this.sound_events.change_rally_point)
+				end
+			end
+		end
+
+		if not this.tower.blocked then
+			for i = 1, this.barrack.max_soldiers do
+				local s = b.soldiers[i]
+
+				if not s or s.health.dead and not store.entities[s.id] then
+					if b.has_door and not b.door_open then
+						U.animation_start(this, "open", nil, store.tick_ts, false, door_sid)
+						U.y_animation_wait(this, door_sid)
+
+						b.door_open = true
+						b.door_open_ts = store.tick_ts
+					end
+
+					S:queue(this.spawn_sound)
+
+					s = E:create_entity(b.soldier_type)
+					s.soldier.tower_id = this.id
+					s.soldier.tower_soldier_idx = i
+					s.pos = V.v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+					s.nav_rally.new = true
+					s.render.sprites[1].flip_x = true
+					s.spawned_from_tower = true
+
+					queue_insert(store, s)
+
+					b.soldiers[i] = s
+				end
+			end
+		end
+
+		if b.has_door and b.door_open and store.tick_ts - b.door_open_ts > b.door_hold_time then
+			U.animation_start(this, "close", nil, store.tick_ts, false, door_sid)
+			U.y_animation_wait(this, door_sid)
+
+			b.door_open = false
+		end
+
+		coroutine.yield()
+	end
+end
+]]--
+function scripts.tower_barrack_canibal.update(this, store, script)
+	local tower_sid = 2
+	local door_sid = 3
+
+	local pow_plant = this.powers.carnivorous_plant
+	local plants = pow_plant.plants
+
+	for i, pos in ipairs(pow_plant.pos) do
+		pos.x = pos.x + this.pos.x
+		pos.y = pos.y + this.pos.y
+	end
+	
+	while true do
+		if pow_plant.changed then
+			pow_plant.changed = nil
+
+			for i = 1, pow_plant.level do
+				if not plants[i] then
+					local plant = E:create_entity(pow_plant.template)
+
+					plant.pos = V.vclone(pow_plant.pos[i])
+					plant.owner = this
+					plants[i] = plant
+
+					queue_insert(store, plant)
+				end
+			end
+		end
+
+		local b = this.barrack
+
+		if this.powers then
+			for pn, p in pairs(this.powers) do
+				if p.changed then
+					p.changed = nil
+
+					for _, s in pairs(b.soldiers) do
+						s.powers[pn].level = p.level
+						s.powers[pn].changed = true
+					end
+				end
+			end
+		end
+
+		if not this.tower.blocked then
+			for i = 1, b.max_soldiers do
+				local s = b.soldiers[i]
+
+				if not s or s.health.dead and not store.entities[s.id] then
+					if not b.door_open then
+						S:queue("GUITowerOpenDoor")
+						U.animation_start(this, "open", nil, store.tick_ts, 1, door_sid)
+
+						while not U.animation_finished(this, door_sid) do
+							coroutine.yield()
+						end
+
+						b.door_open = true
+						b.door_open_ts = store.tick_ts
+					end
+
+					s = E:create_entity(b.soldier_type)
+					s.soldier.tower_id = this.id
+					s.pos = V.v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers)
+					s.nav_rally.new = true
+
+					if this.powers then
+						for pn, p in pairs(this.powers) do
+							s.powers[pn].level = p.level
+						end
+					end
+
+					queue_insert(store, s)
+
+					b.soldiers[i] = s
+
+					signal.emit("tower-spawn", this, s)
+				end
+			end
+		end
+
+		if b.door_open and store.tick_ts - b.door_open_ts > b.door_hold_time then
+			U.animation_start(this, "close", nil, store.tick_ts, 1, door_sid)
+
+			while not U.animation_finished(this, door_sid) do
+				coroutine.yield()
+			end
+
+			b.door_open = false
+		end
+
+		if b.rally_new then
+			b.rally_new = false
+
+			signal.emit("rally-point-changed", this)
+
+			local all_dead = true
+
+			for i, s in ipairs(b.soldiers) do
+				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+				s.nav_rally.new = true
+				all_dead = all_dead and s.health.dead
+			end
+
+			if not all_dead then
+				S:queue(this.sound_events.change_rally_point)
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.cannibal_carnivorous_plant = {}
+
+function scripts.cannibal_carnivorous_plant.insert(this, store, script)
+	for i, pos in ipairs(this.attack_pos) do
+		this.attack_pos[i].x = pos.x + this.pos.x
+		this.attack_pos[i].y = pos.y + this.pos.y
+	end
+
+	return true
+end
+
+function scripts.cannibal_carnivorous_plant.update(this, store, script)
+	local a = this.area_attack
+	local isIdle = false
+
+	U.animation_start(this, "inactive", nil, store.tick_ts, true)
+
+	local attack_ts = store.tick_ts - a.cooldown
+
+	while true do
+		if not this.owner or not store.entities[this.owner.id] then
+			queue_remove(store, this)
+
+			return
+		end
+
+		while store.tick_ts - attack_ts < a.cooldown do
+			if not this.owner or not store.entities[this.owner.id] then
+				queue_remove(store, this)
+
+				return
+			end
+
+			coroutine.yield()
+		end
+
+		if not isIdle then
+			U.y_animation_play(this, "activate", nil, store.tick_ts)
+
+			isIdle = true
+
+			U.animation_start(this, "idle", nil, store.tick_ts, true)
+		end
+
+		local attackPos
+
+		for _, e in pairs(store.entities) do
+			for i, pos in ipairs(this.attack_pos) do
+				if e.enemy and e.health and not e.health.dead and band(e.vis.bans, a.vis_flags) == 0 and band(e.vis.flags, a.vis_bans) == 0 and U.is_inside_ellipse(e.pos, pos, a.damage_radius) then
+					attackPos = V.vclone(pos)
+
+					break
+				end
+			end
+
+			if attackPos then
+				break
+			end
+		end
+
+		if not attackPos then
+			attack_ts = store.tick_ts - a.cooldown + 0.2
+		else
+			local start_ts = store.tick_ts
+			local attack_animation = attackPos.y > this.pos.y and "attack_up" or "attack_down"
+			local flipX = attackPos.x < this.pos.x
+
+			U.animation_start(this, attack_animation, flipX, store.tick_ts)
+			U.y_wait(store, a.hit_time)
+			S:queue("SpecialCarnivorePlant")
+
+			local e = E:create_entity("pop_slurp")
+			local x_off = this.render.sprites[1].flip_x and -40 or 40
+			local y_off = attackPos.y > this.pos.y and 40 or -50
+
+			e.pos = V.v(this.pos.x + x_off, this.pos.y + e.pop_y_offset + y_off)
+			e.render.sprites[1].r = math.random(-21, 21) * math.pi / 180
+			e.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, e)
+
+			local targets = table.filter(store.entities, function(_, e)
+--				return (e.enemy or e.soldier) and e.health and not e.health.dead and e.vis and band(e.vis.bans, a.vis_flags) == 0 and band(e.vis.flags, a.vis_bans) == 0 and U.is_inside_ellipse(e.pos, attackPos, a.damage_radius)
+				return e.enemy and e.health and not e.health.dead and e.vis and band(e.vis.bans, a.vis_flags) == 0 and band(e.vis.flags, a.vis_bans) == 0 and U.is_inside_ellipse(e.pos, attackPos, a.damage_radius)				
+			end)
+
+			if #targets > 0 then
+				attack_ts = start_ts
+
+				for _, target in pairs(targets) do
+					local d = E:create_entity("damage")
+
+					d.damage_type = a.damage_type
+					d.source_id = this.id
+					d.target_id = target.id
+
+					queue_damage(store, d)
+				end
+			end
+
+			U.y_animation_wait(this)
+
+			if #targets > 0 then
+				U.y_animation_play(this, "toBeInactive", nil, store.tick_ts)
+
+				isIdle = false
+
+				U.animation_start(this, "inactive", nil, store.tick_ts, true)
+			else
+				isIdle = true
+
+				U.animation_start(this, "idle", nil, store.tick_ts, true)
+			end
+		end
+	end
 end
 ---矮人电击手
 scripts.hero_voltaire = {}
@@ -4085,5 +5256,102 @@ function scripts.enemy_hobgoblin_shield.update(this, store, script)
 		end
 	end
 end
----
+--重生的路径
+scripts.decal_path_marching_ant = {}
+
+function scripts.decal_path_marching_ant.insert(this, store)
+	this.render.sprites[1].alpha = 0
+	this.pos = P:node_pos(this.nav_path)
+
+	return true
+end
+
+function scripts.decal_path_marching_ant.update(this, store)
+	this.tween.disabled = nil
+	this.tween.ts = store.tick_ts
+	this.done = nil
+
+	while true do
+		local next_pos, new = P:next_entity_node(this, store.tick_length)
+
+		if not next_pos then
+			queue_remove(store, this)
+
+			return
+		end
+
+		if this.owner.done and not this.done then
+			this.done = true
+			this.tween.reverse = true
+			this.tween.remove = true
+			this.tween.ts = store.tick_ts
+		end
+
+		U.set_destination(this, next_pos)
+		U.walk(this, store.tick_length)
+
+		this.render.sprites[1].r = this.heading.angle
+
+		coroutine.yield()
+
+		this.motion.speed.x, this.motion.speed.y = 0, 0
+	end
+end
+
+scripts.path_marching_ants_controller = {}
+
+function scripts.path_marching_ants_controller.update(this, store)
+	local function insert_ant(pi, ni)
+		local e = E:create_entity(this.ant_template)
+
+		e.nav_path.pi = pi
+		e.nav_path.spi = 1
+		e.nav_path.ni = ni
+		e.owner = this
+
+		queue_insert(store, e)
+	end
+
+	local path_pis = P:get_connected_paths(this.pi)
+	local ni_reminder = 0
+
+	for _, pi in pairs(path_pis) do
+		ni_reminder = 0
+
+		local sni = P:get_start_node(pi)
+
+		sni = sni + ni_reminder
+
+		local eni = P:get_end_node(pi)
+		local last_ni = 0
+
+		for ii = sni, eni, this.skip_nodes do
+			insert_ant(pi, ii)
+
+			last_ni = ii
+		end
+
+		ni_reminder = km.zmod(last_ni - sni, this.skip_nodes)
+	end
+
+	local start_node = P:get_start_node(this.pi)
+	local ant_speed = E:get_template(this.ant_template).motion.max_speed
+	local ant_dist = P.average_node_dist * this.skip_nodes
+
+	while not this.done do
+		U.y_wait(store, ant_dist / ant_speed)
+
+		path_pis = P:get_connected_paths(this.pi)
+
+		for _, pi in pairs(path_pis) do
+			local sni = P:get_start_node(pi)
+
+			insert_ant(pi, sni)
+		end
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
 return scripts

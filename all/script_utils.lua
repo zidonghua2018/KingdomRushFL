@@ -2378,7 +2378,8 @@ local function soldier_courage_upgrade(store, this)
 			"soldier_dwarf",
 			"soldier_frankenstein",
 			"soldier_death_rider",
-			"soldier_tremor"
+			"soldier_tremor",
+			"soldier_cannibal"
 	}
 	local flag = false
 	if table.contains(barrack_list,this.template_name) then

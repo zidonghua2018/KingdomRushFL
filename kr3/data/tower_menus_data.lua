@@ -7352,7 +7352,7 @@ return {
 			},
 			{
 				check = "main_icons_0019",
-				action_arg = "tower_mage_3",
+				action_arg = "tower_faerie_dragon_re",
 				action = "tw_upgrade",
 				halo = "glow_ico_main",
 				image = "main_icons_0005",
@@ -7473,7 +7473,7 @@ return {
 			},
 			{
 				check = "main_icons_0019",
-				action_arg = "tower_mage_3",
+				action_arg = "tower_pixie_re",
 				action = "tw_upgrade",
 				halo = "glow_ico_main",
 				image = "main_icons_0005",
@@ -8889,14 +8889,24 @@ return {
 			},
 			{
 				check = "main_icons_0019",
+				action_arg = "tower_barrack_canibal",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "canibal_0004",
+				place = 11,
+				tt_title = _("TOWER_BARRACK_CANIBAL_NAME"),
+				tt_desc = _("TOWER_BARRACK_CANIBAL_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
 				action_arg = "tower_aladdin_lamp_holder",
 				action = "tw_upgrade",
 				halo = "glow_ico_main",
 				image = "aladdin_lamp_0001",
-				place = 11,
+				place = 12,
 				tt_title = _("ALADDIN_LAMP_NAME"),
 				tt_desc = _("ALADDIN_LAMP_DESCRIPTION")
-			},
+			},							
 			{
 				check = "main_icons_0019",
 				action_arg = "tower_barrack_mercenaries_2",
@@ -12889,8 +12899,38 @@ return {
 				halo = "glow_ico_main",
 				image = "krv_gui_heroes_0009",
 				place = 19,
-				tt_title = _("HERO_LUCERNA_NAME"),
-				tt_desc = _("HERO_LUCERNA_DESCRIPTION")
+				tt_title = _("HERO_TANK_NAME"),
+				tt_desc = _("HERO_TANK_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = 10,
+				action = "tw_buy_attack",
+				halo = "glow_ico_main",
+				image = "krv_gui_heroes_0001",
+				place = 21,
+				tt_title = _("HERO_ORC_NAME"),
+				tt_desc = _("HERO_ORC_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = 11,
+				action = "tw_buy_attack",
+				halo = "glow_ico_main",
+				image = "krv_gui_heroes_0002",
+				place = 14,
+				tt_title = _("HERO_ASRA_NAME"),
+				tt_desc = _("HERO_ASRA_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = 12,
+				action = "tw_buy_attack",
+				halo = "glow_ico_main",
+				image = "krv_gui_heroes_0003",
+				place = 20,
+				tt_title = _("HERO_OLOCH_NAME"),
+				tt_desc = _("HERO_OLOCH_DESCRIPTION")
 			},
 			{
 				check = "main_icons_0019",
@@ -14187,6 +14227,28 @@ return {
 			},
 			{
 				check = "special_icons_0020",
+				action_arg = "plant_magic_blossom",
+				action = "upgrade_power",
+				image = "special_icons_plant",--"tower_upgrade_icons_0061",
+				place = 3,
+				halo = "glow_ico_special",
+				sounds = {
+					"ElvesPlantReady"
+				},
+				tt_phrase = _("TOWER_EWOK_PLANT_MAGIC_BLOSSOM_NOTE"),
+				tt_list = {
+					{
+						tt_title = _("TOWER_EWOK_PLANT_MAGIC_BLOSSOM_1_NAME"),
+						tt_desc = _("TOWER_EWOK_PLANT_MAGIC_BLOSSOM_1_DESCRIPTION")
+					},
+					{
+						tt_title = _("TOWER_EWOK_PLANT_MAGIC_BLOSSOM_2_NAME"),
+						tt_desc = _("TOWER_EWOK_PLANT_MAGIC_BLOSSOM_2_DESCRIPTION")
+					}
+				}
+			},						
+			{
+				check = "special_icons_0020",
 				action_arg = "armor",
 				action = "upgrade_power",
 				image = "special_icons_0041",
@@ -14271,6 +14333,165 @@ return {
 				place = 9
 			}
 		}
+	},	
+---侏儒花园	
+	pixie_re = {
+		{
+			{
+				check = "special_icons_0020",
+				action_arg = "cream",
+				action = "upgrade_power",
+				image = "special_icons_0122",
+				place = 1,
+				halo = "glow_ico_special",
+				sounds = {
+					"ElvesGnomeNew"
+				},
+				tt_phrase = _("ELVES_TOWER_PIXIE_UPGRADE1_NOTE"),
+				tt_list = {
+					{
+						tt_title = _("ELVES_TOWER_PIXIE_UPGRADE1_NAME_1"),
+						tt_desc = _("ELVES_TOWER_PIXIE_UPGRADE1_DESCRIPTION_1")
+					},
+					{
+						tt_title = _("ELVES_TOWER_PIXIE_UPGRADE1_NAME_2"),
+						tt_desc = _("ELVES_TOWER_PIXIE_UPGRADE1_DESCRIPTION_2")
+					}
+				}
+			},
+			{
+				check = "special_icons_0020",
+				action_arg = "total",
+				action = "upgrade_power",
+				image = "special_icons_0123",
+				place = 2,
+				halo = "glow_ico_special",
+				sounds = {
+					"ElvesGnomePower"
+				},
+				tt_phrase = _("ELVES_TOWER_PIXIE_UPGRADE2_NOTE"),
+				tt_list = {
+					{
+						tt_title = _("ELVES_TOWER_PIXIE_UPGRADE2_NAME_1"),
+						tt_desc = _("ELVES_TOWER_PIXIE_UPGRADE2_DESCRIPTION_1")
+					},
+					{
+						tt_title = _("ELVES_TOWER_PIXIE_UPGRADE2_NAME_2"),
+						tt_desc = _("ELVES_TOWER_PIXIE_UPGRADE2_DESCRIPTION_2")
+					},
+					{
+						tt_title = _("ELVES_TOWER_PIXIE_UPGRADE2_NAME_3"),
+						tt_desc = _("ELVES_TOWER_PIXIE_UPGRADE2_DESCRIPTION_3")
+					}
+				}
+			},
+			{
+				check = "special_icons_0020",
+				action_arg = "plant_poison",
+				action = "upgrade_power",
+				image = "special_icons_plant",
+				place = 3,
+				halo = "glow_ico_special",
+				sounds = {
+					"VenomPlantReady"
+				},
+				tt_phrase = _("ELVES_TOWER_PIXIE_UPGRADE3_NOTE"),
+				tt_list = {
+					{
+						tt_title = _("ELVES_TOWER_PIXIE_UPGRADE3_NAME_1"),
+						tt_desc = _("ELVES_TOWER_PIXIE_UPGRADE3_DESCRIPTION_1")
+					},
+					{
+						tt_title = _("ELVES_TOWER_PIXIE_UPGRADE3_NAME_1"),
+						tt_desc = _("ELVES_TOWER_PIXIE_UPGRADE3_DESCRIPTION_1")
+					}					
+				}
+			},			
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}
+		}
+	},	
+	faerie_dragon_re = {
+		{
+			{
+				check = "special_icons_0020",
+				action_arg = "more_dragons",
+				action = "upgrade_power",
+				image = "special_icons_0124",
+				place = 1,
+				halo = "glow_ico_special",
+				sounds = {
+					"ElvesFaeryDragonDragonBuy"
+				},
+				tt_phrase = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_MORE_DRAGONS_NOTE"),
+				tt_list = {
+					{
+						tt_title = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_MORE_DRAGONS_NAME_1"),
+						tt_desc = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_MORE_DRAGONS_SMALL_DESCRIPTION_1")
+					},
+					{
+						tt_title = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_MORE_DRAGONS_NAME_2"),
+						tt_desc = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_MORE_DRAGONS_SMALL_DESCRIPTION_2")
+					}
+				}
+			},
+			{
+				check = "special_icons_0020",
+				action_arg = "improve_shot",
+				action = "upgrade_power",
+				image = "special_icons_0125",
+				place = 2,
+				halo = "glow_ico_special",
+				sounds = {
+					"ElvesFaeryDragonExtraAbility"
+				},
+				tt_phrase = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_IMPROVE_SHOT_NOTE"),
+				tt_list = {
+					{
+						tt_title = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_IMPROVE_SHOT_NAME_1"),
+						tt_desc = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_IMPROVE_SHOT_SMALL_DESCRIPTION_1")
+					},
+					{
+						tt_title = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_IMPROVE_SHOT_NAME_2"),
+						tt_desc = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_IMPROVE_SHOT_SMALL_DESCRIPTION_2")
+					}
+				}
+			},
+			{
+				check = "special_icons_0020",
+				action_arg = "plant_poison",
+				action = "upgrade_power",
+				image = "special_icons_plant",
+				place = 3,
+				halo = "glow_ico_special",
+				sounds = {
+					"ElvesHeroLynnFateSealed"
+				},
+				tt_phrase = _("ELVES_TOWER_PIXIE_UPGRADE3_NOTE"),
+				tt_list = {
+					{
+						tt_title = _("ELVES_TOWER_PIXIE_UPGRADE3_NAME_1"),
+						tt_desc = _("ELVES_TOWER_PIXIE_UPGRADE3_DESCRIPTION_1")
+					},
+					{
+						tt_title = _("ELVES_TOWER_PIXIE_UPGRADE3_NAME_1"),
+						tt_desc = _("ELVES_TOWER_PIXIE_UPGRADE3_DESCRIPTION_1")
+					}					
+				}
+			},	
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}								
+		}
 	},		
 	---叶脉弓手
 	green = {
@@ -14336,6 +14557,137 @@ return {
 			}
 		}
 	},
+	---野蛮人巢穴
+	tower_barrack_canibal = {
+		{
+			--[[
+			{
+				check = "main_icons_0019",
+				action = "tw_buy_soldier",
+				action_arg = "soldier_cannibal",
+				halo = "glow_ico_main",
+				image = "main_icons_0033",
+				place = 5,
+				tt_title = _("SPECIAL_AMAZONAS_WARRIOR_NAME"),
+				tt_desc = _("SPECIAL_AMAZONAS_WARRIOR_DESCRIPTION")
+			},
+			]]--
+			{
+				action = "upgrade_power",
+				action_arg = "eat",
+				check = "special_icons_0020",
+				halo = "glow_ico_special",
+				image = "special_icons_eat",
+				place = 6,
+				sounds = {
+					"BarrackBarbarianThrowingAxesTaunt",
+				},
+				tt_phrase = _("BLOODLY_EATING_NOTE"),
+				tt_list = {
+					{
+						tt_title = _("BLOODLY_EATING_NAME_1"),
+						tt_desc = _("BLOODLY_EATING_DESCRIPTION_1"),
+					},
+					{
+						tt_title = _("BLOODLY_EATING_NAME_2"),
+						tt_desc = _("BLOODLY_EATING_DESCRIPTION_2"),
+					},
+					{
+						tt_title = _("BLOODLY_EATING_NAME_3"),
+						tt_desc = _("BLOODLY_EATING_DESCRIPTION_3"),
+					},
+				},
+			},
+			{
+				check = "special_icons_0020",
+				action_arg = "extralife",
+				action = "upgrade_power",
+				image = "special_icons_tree",
+				place = 5,
+				halo = "glow_ico_special",
+				sounds = {
+					"BarrackBarbarianTwisterTaunt",
+				},
+				tt_phrase = _("FOREST_ELITE_NOTE"),
+				tt_list = {
+					{
+						tt_title = _("FOREST_ELITE_NAME_1"),
+						tt_desc = _("FOREST_ELITE_DESCRIPTION_1")
+					},
+					{
+						tt_title = _("FOREST_ELITE_NAME_2"),
+						tt_desc = _("FOREST_ELITE_DESCRIPTION_2")
+					},
+					{
+						tt_title = _("FOREST_ELITE_NAME_3"),
+						tt_desc = _("FOREST_ELITE_DESCRIPTION_3")
+					}
+				}
+			},			
+			{
+				check = "special_icons_0020",
+				action_arg = "spear",
+				action = "upgrade_power",
+				image = "special_icons_spear",
+				place = 7,
+				halo = "glow_ico_special",
+				sounds = {
+					"BarrackBarbarianDoubleAxesTaunt",
+				},
+				tt_phrase = _("SHARP_SPEAR_NOTE"),
+				tt_list = {
+					{
+						tt_title = _("SHARP_SPEAR_NAME_1"),
+						tt_desc = _("SHARP_SPEAR_DESCRIPTION_1")
+					},
+					{
+						tt_title = _("SHARP_SPEAR_NAME_2"),
+						tt_desc = _("SHARP_SPEAR_DESCRIPTION_2")
+					},
+					{
+						tt_title = _("SHARP_SPEAR_NAME_3"),
+						tt_desc = _("SHARP_SPEAR_DESCRIPTION_3")
+					}
+				}
+			},						
+			{
+				check = "special_icons_0020",
+				action_arg = "carnivorous_plant",
+				action = "upgrade_power",
+				image = "special_icons_plant",--"tower_upgrade_icons_0055",
+				place = 3,
+				halo = "glow_ico_special",
+				sounds = {
+					"SpecialCarnivorePlant"
+				},
+				tt_phrase = _("CARNIVOROUS_PLANT_NOTE"),
+				tt_list = {
+					{
+						tt_title = _("CARNIVOROUS_PLANT_1_NAME"),
+						tt_desc = _("CARNIVOROUS_PLANT_1_DESCRIPTION")
+					},
+					{
+						tt_title = _("CARNIVOROUS_PLANT_2_NAME"),
+						tt_desc = _("CARNIVOROUS_PLANT_2_DESCRIPTION")
+					}
+				}
+			},
+			{
+				action = "tw_rally",
+				check = "sub_icons_0003",
+				halo = "glow_ico_sub",
+				image = "sub_icons_0001",
+				place = 8,
+			},
+			{
+				action = "tw_sell",
+				check = "ico_sell_0002",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9,
+			},
+		}
+	},		
 	--5代其他holder的补充
 	holder_blocked_sea_of_trees = {
 		{

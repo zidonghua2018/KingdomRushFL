@@ -900,6 +900,7 @@ return {
 		alias = {},
 		textureRotated = false
 	},
+	--[[
 	["portraits_power_hero_0401"] = {
 		a_name = "kr5_hero_power.dds",
 		size = {
@@ -975,4 +976,5 @@ return {
 		alias = {},
 		textureRotated = false
 	}
+		]]
 }

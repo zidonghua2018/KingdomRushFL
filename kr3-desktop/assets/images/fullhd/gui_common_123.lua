@@ -103,6 +103,174 @@ return {
         f_quad = {1981,1835,22,22},
         alias = {}
     },
+	base_info_icons_0014 = {
+		a_name = "gui_common-1.png",
+		size = {
+			22,
+			22
+		},
+		trim = {
+			1,
+            1,
+            1,
+            1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2015,
+			1130,
+			20,
+			20
+		},
+		alias = {},
+	},
+	base_info_icons_0015 = {
+		a_name = "gui_common-1.png",
+		size = {
+			22,
+			22
+		},
+		trim = {
+			1,
+            1,
+            1,
+            0
+		},
+		a_size = {
+			2048,
+            2048
+		},
+		f_quad = {
+			2015,
+			1155,
+			20,
+			21
+		},
+		alias = {},
+	},        
+	base_info_icons_0016 = {
+		a_name = "gui_common-1.png",
+		size = {
+			22,
+			22
+		},
+		trim = {
+			1,
+            1,
+            1,
+            1
+		},
+		a_size = {
+			2048,
+            2048
+		},
+		f_quad = {
+			2015,
+			1180,
+			20,
+			20
+		},
+		alias = {},
+	}, 
+	base_info_icons_0017 = {
+		a_name = "gui_common-1.png",
+		size = {
+			22,
+			22
+		},
+		trim = {
+			0,
+            1,
+            0,
+            1
+		},
+		a_size = {
+			2048,
+            2048
+		},
+		f_quad = {
+			2015,
+			1230,
+			22,
+			20
+		},
+		alias = {},
+	},
+	base_info_icons_0018 = {
+		a_name = "gui_common-1.png",
+		size = {
+			22,
+			22
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2048,
+            2048
+		},
+		f_quad = {
+			2015,
+			1280,
+			22,
+			22
+		},
+		alias = {},
+	},     
+	base_info_icons_0019 = {
+		a_name = "gui_common-1.png",
+		size = {
+			22,
+			22
+		},
+		trim = {
+			1,
+            0,
+            1,
+            0
+		},
+		a_size = {
+			2048,
+            2048
+		},
+		f_quad = {
+			2015,
+			1255,
+			20,
+			22
+		},
+		alias = {},
+	},
+	base_info_icons_0020 = {
+		a_name = "gui_common-1.png",
+		size = {
+			22,
+			22
+		},
+		trim = {
+			1,
+            0,
+            1,
+            0
+		},
+		a_size = {
+			2048,
+            2048
+		},
+		f_quad = {
+			2015,
+			1202,
+			20,
+			22
+		},
+		alias = {},
+	},                       
     button_continue_chains = {
         a_name = "gui_common-0.png",
         size = {220,124},

@@ -1356,7 +1356,6 @@ function upgrades:patch_templates(max_level)
 			"tower_pixie_d",
 			"tower_pixie_re",
 			"tower_faerie_dragon_d",
-			"tower_faerie_dragon_re",
 		}) do
 			T(n).attacks.range = math.ceil(T(n).attacks.range * u.range_factor)
 		end
@@ -1395,7 +1394,6 @@ function upgrades:patch_templates(max_level)
 			"tower_pixie_d",
 			"tower_pixie_re",
 			"tower_faerie_dragon_d",
-			"tower_faerie_dragon_re",
 		}) do
 			T(n).attacks.range = math.ceil(T(n).attacks.range * u.range_factor)
 		end

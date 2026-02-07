@@ -1700,13 +1700,14 @@ function scripts.tower_bastion_holder.insert(this, store)
 end
 
 scripts.tower_bastion = {}
-
+--[[
 function scripts.tower_bastion.get_info(this, store)
 	local level = this.powers and this.powers.razor_edge.level or 0
 	local au = E:get_template("aura_razor_edge")
 	local a = au.aura
 	local cycles = a.duration / a.cycle_time
 	local min, max = a.damage_min + a.damage_inc * level, a.damage_max + a.damage_inc * level
+	local damage_type = a.damage_type
 
 	min, max = min * cycles, max * cycles
 
@@ -1716,6 +1717,28 @@ function scripts.tower_bastion.get_info(this, store)
 		type = STATS_TYPE_TOWER_NO_RANGE,
 		damage_min = min,
 		damage_max = max,
+		damage_type = damage_type
+		cooldown = t.attacks.list[1].cooldown
+	}
+end
+]]--
+function scripts.tower_bastion.get_info(this, store)
+	local level = this.powers and this.powers.razor_edge.level or 0
+	local au = E:get_template("aura_razor_edge")
+	local a = au.aura
+	local cycles = a.duration / a.cycle_time
+	local min, max = a.damage_min + a.damage_inc * level, a.damage_max + a.damage_inc * level
+	local damage_type = a.damage_type
+
+	min, max = min * cycles, max * cycles
+
+	local t = E:get_template("tower_bastion")
+
+	return {
+		type = STATS_TYPE_TOWER_NO_RANGE,
+		damage_min = min,
+		damage_max = max,
+		damage_type = damage_type,
 		cooldown = t.attacks.list[1].cooldown
 	}
 end
@@ -4494,7 +4517,7 @@ function scripts.hero_regson_ultimate.update(this, store)
 end
 
 scripts.hero_faustus = {}
-
+--[[
 function scripts.hero_faustus.get_info(this)
 	local m = E:get_template("bolt_faustus")
 	local min, max = 3 * m.bullet.damage_min, 3 * m.bullet.damage_max
@@ -4509,6 +4532,19 @@ function scripts.hero_faustus.get_info(this)
 		armor = this.health.armor,
 		respawn = this.health.dead_lifetime
 	}
+end
+]]--
+function scripts.hero_faustus.get_info(this)
+	local t = scripts.hero_basic.get_info_ranged(this)
+	local m = E:get_template(this.ranged.attacks[1].bullet)
+    	t.ranged_damage_max = 3 * m.bullet.damage_max * this.unit.damage_factor
+		t.ranged_damage_min = 3 * m.bullet.damage_min * this.unit.damage_factor
+		t.ranged_damage_type = m.bullet.damage_type
+		t.damage_max = 0--3 * m.bullet.damage_max
+		t.damage_min = 0--3 * m.bullet.damage_min
+		t.damage_type = m.bullet.damage_type
+
+	return t
 end
 
 function scripts.hero_faustus.level_up(this, store, initial)
@@ -8101,7 +8137,7 @@ function scripts.hero_lynn_ultimate.update(this, store)
 end
 
 scripts.hero_phoenix = {}
-
+--[[
 function scripts.hero_phoenix.get_info(this)
 	local b = E:get_template(this.ranged.attacks[1].bullet)
 	local ba = E:get_template(b.bullet.hit_payload)
@@ -8117,6 +8153,34 @@ function scripts.hero_phoenix.get_info(this)
 		damage_icon = this.info.damage_icon,
 		armor = this.health.armor,
 		respawn = this.health.dead_lifetime
+	}
+end
+]]--
+function scripts.hero_phoenix.get_info(this)
+	local b = E:get_template(this.ranged.attacks[1].bullet)
+	local ba = E:get_template(b.bullet.hit_payload)
+--	local c = E:get_template(this.melee.attacks[1])
+	local min, max = ba.aura.damage_min, ba.aura.damage_max
+	local ranged_min, ranged_max = ba.aura.damage_min, ba.aura.damage_max
+	local ranged_damage_type = b.bullet.damage_type
+
+	return {
+		type = STATS_TYPE_SOLDIER,
+		hp = this.health.hp,
+		hp_max = this.health.hp_max,
+		damage_min = 0,--min,
+		damage_max = 0,--max,
+		damage_type = b.bullet.damage_type,
+		damage_icon = this.info.damage_icon,
+		armor = this.health.armor,
+		respawn = this.health.dead_lifetime,
+        ranged_damage_min = ranged_min,
+        ranged_damage_max = ranged_max,
+        ranged_damage_type = ranged_damage_type,
+		ranged_damage_icon = this.info.ranged_damage_icon,
+        armor = this.health.armor,
+        magic_armor = this.health.magic_armor,
+		respawn = this.health.dead_lifetime,		
 	}
 end
 
@@ -8452,7 +8516,7 @@ function scripts.hero_phoenix_ultimate.update(this, store)
 end
 
 scripts.hero_wilbur = {}
-
+--[[
 function scripts.hero_wilbur.get_info(this)
 	local m = E:get_template("shot_wilbur")
 	local min, max = 3 * m.bullet.damage_min, 3 * m.bullet.damage_max
@@ -8468,6 +8532,19 @@ function scripts.hero_wilbur.get_info(this)
 		armor = this.health.armor,
 		respawn = this.health.dead_lifetime
 	}
+end
+]]--
+function scripts.hero_wilbur.get_info(this)
+	local t = scripts.hero_basic.get_info_ranged(this)
+	local m = E:get_template(this.ranged.attacks[1].bullet)
+    	t.ranged_damage_max = 3 * m.bullet.damage_max * this.unit.damage_factor
+		t.ranged_damage_min = 3 * m.bullet.damage_min * this.unit.damage_factor
+		t.ranged_damage_type = m.bullet.damage_type		
+		t.damage_max = 0--3 * m.bullet.damage_max
+		t.damage_min = 0--3 * m.bullet.damage_min
+		t.damage_type = m.bullet.damage_type
+
+	return t
 end
 
 function scripts.hero_wilbur.missile_filter_fn(e, origin)
@@ -13017,7 +13094,7 @@ function scripts.decal_drow_queen_shield.update(this, store)
 end
 
 scripts.eb_spider = {}
-
+--[[
 function scripts.eb_spider.get_info(this)
 	local b = E:get_template(this.ranged.attacks[1].bullet)
 
@@ -13031,6 +13108,12 @@ function scripts.eb_spider.get_info(this)
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
 	}
+end
+]]--
+function scripts.eb_spider.get_info(this)
+	local out = scripts.enemy_basic.get_info(this)
+
+	return out
 end
 
 function scripts.eb_spider.update(this, store, script)
@@ -13379,7 +13462,7 @@ function scripts.eb_spider.update(this, store, script)
 end
 
 scripts.eb_bram = {}
-
+--[[
 function scripts.eb_bram.get_info(this)
 	return {
 		type = STATS_TYPE_ENEMY,
@@ -13391,6 +13474,12 @@ function scripts.eb_bram.get_info(this)
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
 	}
+end
+]]--
+function scripts.eb_bram.get_info(this)
+	local out = scripts.enemy_basic.get_info(this)
+
+	return out
 end
 
 function scripts.eb_bram.update(this, store)
@@ -21855,7 +21944,7 @@ function scripts.mod_black_baby_dragon.insert(this, store)
 end
 
 scripts.tower_baby_ashbite = {}
-
+--[[
 function scripts.tower_baby_ashbite.get_info(this)
 	local e = E:get_template("soldier_baby_ashbite")
 	local b = E:get_template(e.ranged.attacks[1].bullet)
@@ -21868,6 +21957,29 @@ function scripts.tower_baby_ashbite.get_info(this)
 		damage_max = max,
 		damage_icon = this.info.damage_icon,
 		armor = e.health.armor,
+		respawn = e.health.dead_lifetime
+	}
+end
+]]--
+function scripts.tower_baby_ashbite.get_info(this)
+	local e = E:get_template("soldier_baby_ashbite")
+	local b = E:get_template(e.ranged.attacks[1].bullet)
+	local ranged_min, ranged_max = b.bullet.damage_min, b.bullet.damage_max
+	local ranged_damage_type = b.bullet.damage_type
+	local min, max = b.bullet.damage_min, b.bullet.damage_max
+
+	return {
+		type = STATS_TYPE_TOWER_BARRACK,
+		hp_max = e.health.hp_max,
+		damage_min = min,
+		damage_max = max,
+		damage_icon = this.info.damage_icon,		
+        ranged_damage_min = ranged_min,
+        ranged_damage_max = ranged_max,
+        ranged_damage_type = ranged_damage_type,
+		ranged_damage_icon = this.info.ranged_damage_icon,
+        armor = e.health.armor,
+        magic_armor = e.health.magic_armor,
 		respawn = e.health.dead_lifetime
 	}
 end
@@ -21945,7 +22057,7 @@ function scripts.soldier_baby_ashbite.blazing_breath_filter_fn(e, origin)
 
 	return allow
 end
-
+--[[
 function scripts.soldier_baby_ashbite.get_info(this)
 	local b = E:get_template(this.ranged.attacks[1].bullet)
 	local min, max = b.bullet.damage_min, b.bullet.damage_max
@@ -21960,6 +22072,12 @@ function scripts.soldier_baby_ashbite.get_info(this)
 		armor = this.health.armor,
 		respawn = this.health.dead_lifetime
 	}
+end
+]]--
+function scripts.soldier_baby_ashbite.get_info(this)
+	local t = scripts.soldier_barrack.get_info(this)
+
+	return t
 end
 
 function scripts.soldier_baby_ashbite.insert(this, store)

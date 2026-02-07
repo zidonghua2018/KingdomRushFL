@@ -12472,7 +12472,7 @@ local towers = {
 		skill_sheep = {
 			range = 200,
 			price = {
-				150
+				200
 			},
 			cooldown = {
 				20

@@ -1993,10 +1993,10 @@ tt.tower.terrain_style = nil
 tt.tower.type = "elf"
 tt.tower.kind = TOWER_KIND_BARRACK
 tt.ui.click_rect = r(-40, -10, 80, 90)
-
+---12.30改了雇佣兵人数上限
 tt = RT("tower_elf_d", "tower_elf")
 tt.info.i18n_key = "SPECIAL_ELF"
-tt.barrack.max_soldiers = 6
+tt.barrack.max_soldiers = 5
 --tt.main_script.update = scripts.tower_barrack.update
 tt.tower.price = 50
 tt.tower.type = "elf_d"
@@ -2839,7 +2839,6 @@ tt.hero.skills.block_counter.xp_level_steps = {
 	[10] = 3,
 	[4] = 1,
 	[7] = 2,
-	---
 	[5] = 1,
 	[6] = 1,
 	[8] = 2,
@@ -3057,7 +3056,6 @@ tt.hero.skills.callofwild.xp_level_steps = {
 	[10] = 3,
 	[4] = 1,
 	[7] = 2,
-	---
 	[5] = 1,
 	[6] = 1,
 	[8] = 2,
@@ -3068,7 +3066,7 @@ tt.health_bar.offset = v(0, 33)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_alleria.level_up
 tt.hero.tombstone_show_time = fts(90)
-tt.info.damage_icon = "arrow"
+--tt.info.damage_icon = "arrow"
 tt.info.hero_portrait = "heroPortrait_portraits_0004"
 tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.i18n_key = "HERO_ARCHER"
@@ -3230,7 +3228,6 @@ tt.hero.skills.mines.xp_level_steps = {
 	3,
 	3,
 	3
-	---
 }
 tt.hero.skills.mines.xp_gain = {
 	25,
@@ -3257,7 +3254,6 @@ tt.hero.skills.tar.xp_level_steps = {
 	[10] = 3,
 	[4] = 1,
 	[7] = 2,
-	---
 	[5] = 1,
 	[6] = 1,
 	[8] = 2,
@@ -3273,7 +3269,8 @@ tt.health_bar.offset = v(0, 43)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_bolin.level_up
 tt.hero.tombstone_show_time = fts(60)
-tt.info.damage_icon = "shot"
+--tt.info.damage_icon = "shot"
+tt.info.ranged_damage_icon = "shot"
 tt.info.hero_portrait = "heroPortrait_portraits_0003"
 tt.info.fn = scripts.hero_bolin.get_info
 tt.info.i18n_key = "HERO_RIFLEMAN"
@@ -3460,7 +3457,6 @@ tt.hero.skills.mirage.xp_level_steps = {
 	nil,
 	nil,
 	3,
-	---
 	[3] = 1,
 	[4] = 1,
 	[6] = 2,
@@ -3488,7 +3484,6 @@ tt.hero.skills.arcane_rain.xp_level_steps = {
 	[10] = 3,
 	[4] = 1,
 	[7] = 2,
-	---
 	[5] = 1,
 	[6] = 1,
 	[8] = 2,
@@ -3663,7 +3658,6 @@ tt.hero.skills.flaming_frenzy.xp_level_steps = {
 	[10] = 3,
 	[4] = 1,
 	[7] = 2,
-	---
 	[5] = 1,
 	[6] = 1,
 	[8] = 2,
@@ -3694,7 +3688,6 @@ tt.hero.skills.surge_of_flame.xp_level_steps = {
 	nil,
 	nil,
 	3,
-	---
 	[3] = 1,
 	[4] = 1,
 	[6] = 2,
@@ -3859,7 +3852,6 @@ tt.hero.skills.smash.xp_level_steps = {
 	nil,
 	nil,
 	3,
-	---
 	[3] = 1,
 	[4] = 1,
 	[6] = 2,
@@ -3887,7 +3879,6 @@ tt.hero.skills.fissure.xp_level_steps = {
 	[10] = 3,
 	[4] = 1,
 	[7] = 2,
-	---
 	[5] = 1,
 	[6] = 1,
 	[8] = 2,
@@ -4067,7 +4058,6 @@ tt.hero.skills.tower_buff.xp_level_steps = {
 	nil,
 	nil,
 	3,
-	---
 	[3] = 1,
 	[4] = 1,
 	[6] = 2,
@@ -4100,7 +4090,6 @@ tt.hero.skills.catapult.xp_level_steps = {
 	[10] = 3,
 	[4] = 1,
 	[7] = 2,
-	---
 	[5] = 1,
 	[6] = 1,
 	[8] = 2,
@@ -4291,7 +4280,6 @@ tt.hero.skills.ancestors_call.xp_level_steps = {
 	nil,
 	nil,
 	3,
-	---
 	[3] = 1,
 	[4] = 1,
 	[6] = 2,
@@ -4324,7 +4312,6 @@ tt.hero.skills.bear.xp_level_steps = {
 	[10] = 3,
 	[4] = 1,
 	[7] = 2,
-	---
 	[5] = 1,
 	[6] = 1,
 	[8] = 2,
@@ -4534,7 +4521,6 @@ tt.hero.skills.chill.xp_level_steps = {
 	nil,
 	nil,
 	3,
-	---
 	[3] = 1,
 	[4] = 1,
 	[6] = 2,
@@ -4572,7 +4558,6 @@ tt.hero.skills.ice_storm.xp_level_steps = {
 	[10] = 3,
 	[4] = 1,
 	[7] = 2,
-	---
 	[5] = 1,
 	[6] = 1,
 	[8] = 2,
@@ -4750,7 +4735,6 @@ tt.hero.skills.death_strike.xp_level_steps = {
 	[10] = 3,
 	[4] = 1,
 	[7] = 2,
-	---
 	[5] = 1,
 	[6] = 1,
 	[8] = 2,
@@ -4781,7 +4765,6 @@ tt.hero.skills.torment.xp_level_steps = {
 	nil,
 	nil,
 	3,
-	---
 	[3] = 1,
 	[4] = 1,
 	[6] = 2,
@@ -4963,7 +4946,6 @@ tt.hero.skills.timber.xp_level_steps = {
 	[10] = 3,
 	[4] = 1,
 	[7] = 2,
-	---
 	[5] = 1,
 	[6] = 1,
 	[8] = 2,
@@ -4989,7 +4971,6 @@ tt.hero.skills.sawblade.xp_level_steps = {
 	nil,
 	nil,
 	3,
-	---
 	[3] = 1,
 	[4] = 1,
 	[6] = 2,
@@ -5159,7 +5140,6 @@ tt.hero.skills.chainlightning.xp_level_steps = {
 	3,
 	3,
 	3
-	---
 }
 tt.hero.skills.chainlightning.xp_gain = {
 	50,
@@ -5191,7 +5171,6 @@ tt.hero.skills.thunderclap.xp_level_steps = {
 	[10] = 3,
 	[4] = 1,
 	[7] = 2,
-	---
 	[5] = 1,
 	[6] = 1,
 	[8] = 2,
@@ -5364,7 +5343,6 @@ tt.hero.skills.rain.xp_level_steps = {
 	nil,
 	nil,
 	3,
-	---
 	[3] = 1,
 	[4] = 1,
 	[6] = 2,
@@ -5422,7 +5400,6 @@ tt.hero.skills.buffed.xp_level_steps = {
 	[10] = 3,
 	[4] = 1,
 	[7] = 2,
-	---
 	[5] = 1,
 	[6] = 1,
 	[8] = 2,
@@ -7674,7 +7651,7 @@ tt.skate.walk_angles = {
 tt = RT("enemy_hobgoblin", "enemy")
 
 AC(tt, "melee", "death_spawns")
-
+---12.30改了info.portrait图标
 anchor_x, anchor_y = 0.5, 0.17532467532467533
 image_x, image_y = 224, 154
 tt.death_spawns.concurrent_with_death = true
@@ -7687,7 +7664,7 @@ tt.health.hp_max = 2000
 tt.health_bar.offset = v(0, 82)
 tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
 tt.info.i18n_key = "ENEMY_ENDLESS_MINIBOSS_ORC"
-tt.info.portrait = "info_portraits_sc_0094"
+tt.info.portrait = "info_portraits_sc_0103"
 tt.melee.attacks[1] = CC("area_attack")
 tt.melee.attacks[1].cooldown = 2
 tt.melee.attacks[1].count = 10
@@ -12915,7 +12892,6 @@ tt.dps.damage_inc = 0
 tt.dps.damage_type = DAMAGE_EXPLOSION
 tt.dps.damage_every = fts(3)
 tt.dps.kill = true
-tt.modifier.allows_duplicates = true
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 tt.modifier.duration = 1
@@ -12951,12 +12927,12 @@ tt.modifier.duration = 0.5
 tt = RT("soldier_tremor", "g1_soldier_militia")
 
 AC(tt, "melee")
-
+---12.30去除了小沙虫的护甲
 image_y = 64
 anchor_y = 0.15384615384615385
 tt.main_script.update = scripts.soldier_barrack_krf.update
 tt.health.armor = 0
-tt.health.armor_inc = 0.1
+tt.health.armor_inc = 0
 tt.health.dead_lifetime = 8
 tt.health.hp_max = 150
 tt.health.hp_inc = 150
@@ -13290,7 +13266,6 @@ tt.hero.skills.toss.xp_level_steps = {
 	[2] = 1,
 	[5] = 2,
 	[8] = 3,
-	---
 	[3] = 1,
 	[4] = 1,
 	[6] = 2,
@@ -13333,7 +13308,6 @@ tt.hero.skills.tesla.xp_level_steps = {
 	[4] = 1,
 	[7] = 2,
 	[10] = 3,
-	---
 	[5.0] = 1,
 	[6.0] = 1,
 	[8.0] = 2,
@@ -13529,7 +13503,6 @@ tt.hero.skills.curse.xp_level_steps = {
 	[10.0] = 3,
 	[4.0] = 1,
 	[7.0] = 2,
-	---
 	[5.0] = 1,
 	[6.0] = 1,
 	[8.0] = 2,
@@ -13565,7 +13538,6 @@ tt.hero.skills.shuriken.xp_level_steps = {
 	nil,
 	nil,
 	3,
-	---
 	[3] = 1,
 	[4] = 1,
 	[6] = 2,
@@ -13993,7 +13965,6 @@ tt.render.sprites[1].prefix = "lightning"
 tt.render.sprites[1].offset = v(5, 405)
 tt.render.sprites[1].scale = v(2, 2)
 tt.sound_events.insert = "PowerLightning"
----
 
 tt = RT("hero_munra", "hero")
 
@@ -14126,7 +14097,6 @@ tt.hero.skills.callofwild.xp_level_steps = {
 	[10.0] = 3,
 	[4.0] = 1,
 	[7.0] = 2,
-	---
 	[5] = 1,
 	[6] = 1,
 	[8] = 2,
@@ -14137,7 +14107,7 @@ tt.health_bar.offset = v(0, 33)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_alleria.level_up
 tt.hero.tombstone_show_time = fts(90)
-tt.info.damage_icon = "arrow"
+--tt.info.damage_icon = "arrow"
 tt.info.hero_portrait = nil
 tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.i18n_key = "HERO_MUNRA"
@@ -16158,4 +16128,35 @@ tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].z = 2001
 tt = RT("decal_spark_bl", "decal")
 tt.render.sprites[1].name = "stun_small_loop"
----
+--重生的路径
+tt = E:register_t("decal_path_marching_ant", "decal")
+
+E:add_comps(tt, "motion", "nav_path", "main_script", "heading", "tween")
+
+tt.motion.max_speed = 45
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "waveflag_path_arrow"
+tt.render.sprites[1].z = Z_GUI_DECALS
+tt.main_script.insert = scripts_rebbborn.decal_path_marching_ant.insert
+tt.main_script.update = scripts_rebbborn.decal_path_marching_ant.update
+tt.tween.props[1].keys = {
+	{
+		0,
+		0
+	},
+	{
+		0.25,
+		255
+	}
+}
+tt.tween.remove = false
+tt.owner = nil
+
+tt = E:register_t("path_marching_ants_controller")
+
+E:add_comps(tt, "main_script")
+
+tt.main_script.update = scripts_rebbborn.path_marching_ants_controller.update
+tt.skip_nodes = 4
+tt.ant_template = "decal_path_marching_ant"
+tt.pi = nil

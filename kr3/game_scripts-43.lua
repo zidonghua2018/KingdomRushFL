@@ -636,7 +636,7 @@ end
 
 --冰龙
 scripts.hero_eiskalt = {}
-
+--[[
 function scripts.hero_eiskalt.get_info(this)
 	local m = E:get_template("fireball_eiskalt")
 	local min, max = m.bullet.damage_min, m.bullet.damage_max
@@ -651,6 +651,19 @@ function scripts.hero_eiskalt.get_info(this)
 		armor = this.health.armor,
 		respawn = this.health.dead_lifetime
 	}
+end
+]]--
+function scripts.hero_eiskalt.get_info(this)
+	local t = scripts.hero_basic.get_info_ranged(this)
+	local m = E:get_template(this.ranged.attacks[1].bullet)
+    	t.ranged_damage_max = m.bullet.damage_max * this.unit.damage_factor
+		t.ranged_damage_min = m.bullet.damage_min * this.unit.damage_factor
+		t.ranged_damage_type = m.bullet.damage_type
+		t.damage_max = 0--3 * m.bullet.damage_max
+		t.damage_min = 0--3 * m.bullet.damage_min
+		t.damage_type = m.bullet.damage_type
+
+	return t
 end
 
 function scripts.hero_eiskalt.level_up(this, store, initial)

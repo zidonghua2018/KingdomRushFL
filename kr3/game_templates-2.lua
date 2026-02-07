@@ -2183,12 +2183,13 @@ tt.render.sprites[2].offset = v(0, 35)
 tt.barrack.soldier_type = "soldier_pirate_captain"
 tt.barrack.rally_range = 145.28
 tt.barrack.respawn_offset = v(0, 0)
+---12.30改了雇佣兵人数上限
 tt = E:register_t("tower_barrack_pirates_d", "tower_barrack_pirates")
 tt.info.i18n_key = "TOWER_BARRACK_PIRATES"
 tt.tower.type = "mercenaries_pirates_d"
 tt.tower.kind = TOWER_KIND_BARRACK
 tt.tower.price = 50
-tt.barrack.max_soldiers = 6
+tt.barrack.max_soldiers = 5
 tt = E:register_t("tower_barrack_amazonas_d", "tower_barrack_pirates_d")
 tt.info.i18n_key = "TOWER_BARRACK_AMAZONAS"
 tt.tower.type = "mercenaries_amazonas_d"
@@ -3118,7 +3119,8 @@ tt.health_bar.offset = v(0, ady(55))
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.level = 10
 tt.idle_flip = nil
-tt.info.fn = scripts.hero_steam_frigate.get_info
+--tt.info.fn = scripts.hero_steam_frigate.get_info
+tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.hero_portrait = "hero_portraits_0211"
 tt.info.portrait = "info_portraits_heroes_0221"
 tt.main_script.insert = scripts.hero_steam_frigate.insert
@@ -3507,7 +3509,8 @@ tt.hero.fn_level_up = scripts.hero_alric.level_up
 tt.hero.tombstone_show_time = fts(60)
 tt.idle_flip.chance = 0.4
 tt.idle_flip.cooldown = 1
-tt.info.fn = scripts.hero_alric.get_info
+--tt.info.fn = scripts.hero_alric.get_info
+tt.info.fn = scripts.hero_basic.get_info_melee
 tt.info.hero_portrait = "hero_portraits_0201"
 tt.info.portrait = "info_portraits_heroes_0201"
 tt.main_script.insert = scripts.hero_alric.insert
@@ -3746,10 +3749,11 @@ tt.hero.fn_level_up = scripts.hero_mirage.level_up
 tt.hero.tombstone_show_time = fts(60)
 tt.idle_flip.chance = 0.4
 tt.idle_flip.cooldown = 1
-tt.info.fn = scripts.hero_mirage.get_info
+--tt.info.fn = scripts.hero_mirage.get_info
+tt.info.fn = scripts.hero_basic.get_info_melee
 tt.info.hero_portrait = "hero_portraits_0202"
 tt.info.portrait = "info_portraits_heroes_0202"
-tt.info.damage_icon = "arrow"
+--tt.info.damage_icon = "arrow"
 tt.main_script.insert = scripts.hero_mirage.insert
 tt.main_script.update = scripts.hero_mirage.update
 tt.melee.attacks[1] = E:clone_c("melee_attack")
@@ -4050,7 +4054,8 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_giant.level_up
 tt.hero.tombstone_show_time = fts(60)
 tt.idle_flip.cooldown = 1
-tt.info.fn = scripts.hero_giant.get_info
+--tt.info.fn = scripts.hero_giant.get_info
+tt.info.fn = scripts.hero_basic.get_info_melee
 tt.info.hero_portrait = "hero_portraits_0208"
 tt.info.portrait = "info_portraits_heroes_0208"
 tt.main_script.insert = scripts.hero_giant.insert
@@ -4454,7 +4459,7 @@ tt.idle_flip.cooldown = 1
 tt.info.fn = scripts.hero_wizard.get_info
 tt.info.hero_portrait = "hero_portraits_0206"
 tt.info.portrait = "info_portraits_heroes_0206"
-tt.info.damage_icon = "magic"
+--tt.info.damage_icon = "magic"
 tt.main_script.insert = scripts.hero_wizard.insert
 tt.main_script.update = scripts.hero_wizard.update
 tt.motion.max_speed = 45
@@ -4556,12 +4561,14 @@ tt.bounce_range = 75
 tt.bounce_vis_flags = F_RANGED
 tt.bounce_vis_bans = 0
 tt.bullet.xp_gain_factor = nil
+---12.30修了纽维斯无法对魔抗怪造成伤害的bug
 tt = E:register_t("mod_ray_wizard", "modifier")
+tt.modifier.allows_duplicates = true
 tt.modifier.duration = fts(18)
 tt.damage_min = nil
 tt.damage_max = nil
 tt.damage_type = DAMAGE_MAGICAL
-tt.damage_every = 0.03333333333333333
+tt.damage_every = fts(2)--0.03333333333333333
 tt.pop = {
 	"pop_bzzt"
 }
@@ -4804,7 +4811,8 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_beastmaster.level_up
 tt.hero.tombstone_show_time = fts(60)
 tt.idle_flip.cooldown = 1
-tt.info.fn = scripts.hero_beastmaster.get_info
+--tt.info.fn = scripts.hero_beastmaster.get_info
+tt.info.fn = scripts.hero_basic.get_info_melee
 tt.info.hero_portrait = "hero_portraits_0203"
 tt.info.portrait = "info_portraits_heroes_0203"
 tt.main_script.insert = scripts.hero_beastmaster.insert
@@ -5187,7 +5195,8 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_alien.level_up
 tt.hero.tombstone_show_time = fts(66)
 tt.idle_flip.cooldown = 1
-tt.info.fn = scripts.hero_alien.get_info
+--tt.info.fn = scripts.hero_alien.get_info
+tt.info.fn = scripts.hero_basic.get_info_melee
 tt.info.hero_portrait = "hero_portraits_0207"
 tt.info.portrait = "info_portraits_heroes_0207"
 tt.main_script.insert = scripts.hero_alien.insert
@@ -5800,10 +5809,11 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_priest.level_up
 tt.hero.tombstone_show_time = fts(60)
 tt.idle_flip.cooldown = 1
-tt.info.fn = scripts.hero_priest.get_info
+--tt.info.fn = scripts.hero_priest.get_info
+tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.hero_portrait = "hero_portraits_0205"
 tt.info.portrait = "info_portraits_heroes_0205"
-tt.info.damage_icon = "magic"
+--tt.info.damage_icon = "magic"
 tt.main_script.insert = scripts.hero_priest.insert
 tt.main_script.update = scripts.hero_priest.update
 tt.motion.max_speed = 90
@@ -6183,8 +6193,10 @@ tt.hero.tombstone_show_time = nil
 tt.idle_flip.cooldown = 10
 tt.drag_line_origin_offset = v(0, 135)
 tt.info.fn = scripts.hero_dragon.get_info
+--tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.hero_portrait = "hero_portraits_0209"
 tt.info.portrait = "info_portraits_heroes_0209"
+tt.info.ranged_damage_icon = "fireball"
 tt.info.damage_icon = "fireball"
 tt.main_script.insert = scripts.hero_dragon.insert
 tt.main_script.update = scripts.hero_dragon.update
@@ -6201,6 +6213,7 @@ tt.render.sprites[1].angles.walk = {
 	"idle"
 }
 tt.render.sprites[1].sort_y_offset = -200
+tt.render.sprites[1].z = Z_FLYING_HEROES
 tt.render.sprites[2] = E:clone_c("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "hero_dragon_0181"
@@ -6729,7 +6742,8 @@ tt.health.hp_max = tt.hero.level_stats.hp_max[1]
 tt.health_bar.offset = v(0, 38.16)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.idle_flip.cooldown = 1
-tt.info.fn = scripts.hero_pirate.get_info
+--tt.info.fn = scripts.hero_pirate.get_info
+tt.info.fn = scripts.hero_basic.get_info_melee
 tt.info.hero_portrait = "hero_portraits_0204"
 tt.info.portrait = "info_portraits_heroes_0204"
 tt.main_script.insert = scripts.hero_pirate.insert
@@ -7054,7 +7068,8 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_monk.level_up
 tt.hero.tombstone_show_time = fts(66)
 tt.idle_flip.cooldown = 1
-tt.info.fn = scripts.hero_monk.get_info
+--tt.info.fn = scripts.hero_monk.get_info
+tt.info.fn = scripts.hero_basic.get_info_melee
 tt.info.hero_portrait = "hero_portraits_0213"
 tt.info.portrait = "info_portraits_heroes_0215"
 tt.main_script.insert = scripts.hero_monk.insert
@@ -7337,7 +7352,8 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = mylua.hero_crab99.level_up
 tt.hero.tombstone_show_time = fts(66)
 tt.idle_flip.cooldown = 5
-tt.info.fn = scripts.hero_crab.get_info
+--tt.info.fn = scripts.hero_crab.get_info
+tt.info.fn = scripts.hero_basic.get_info_melee
 tt.info.hero_portrait = "hero_portraits_0212"
 tt.info.portrait = "info_portraits_heroes_0214"
 tt.main_script.insert = scripts.hero_crab.insert
@@ -7756,7 +7772,8 @@ tt.drag_line_origin_offset = v(0, 92)
 tt.info.fn = scripts.hero_dracolich.get_info
 tt.info.hero_portrait = "hero_portraits_0216"
 tt.info.portrait = "info_portraits_heroes_0217"
-tt.info.damage_icon = "magic"
+tt.info.damage_icon = "rangedtrue"
+tt.info.ranged_damage_icon = "rangedtrue"
 tt.main_script.insert = scripts.hero_dracolich.insert
 tt.main_script.update = scripts.hero_dracolich.update
 tt.motion.max_speed = 90
@@ -7772,6 +7789,7 @@ tt.render.sprites[1].angles.walk = {
 	"idle"
 }
 tt.render.sprites[1].sort_y_offset = -200
+tt.render.sprites[1].z = Z_FLYING_HEROES
 tt.render.sprites[2] = E:clone_c("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "Halloween_hero_bones_layer1_0160"
@@ -8720,8 +8738,9 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_voodoo_witch.level_up
 tt.hero.tombstone_show_time = fts(90)
 tt.idle_flip.cooldown = 2
-tt.info.damage_icon = "magic"
-tt.info.fn = scripts.hero_voodoo_witch.get_info
+--tt.info.damage_icon = "magic"
+--tt.info.fn = scripts.hero_voodoo_witch.get_info
+tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.hero_portrait = "hero_portraits_0219"
 tt.info.portrait = "info_portraits_heroes_0219"
 tt.main_script.insert = scripts.hero_voodoo_witch.insert
@@ -9128,7 +9147,8 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_minotaur.level_up
 tt.hero.tombstone_show_time = fts(90)
 tt.idle_flip.cooldown = 10
-tt.info.fn = scripts.hero_minotaur.get_info
+--tt.info.fn = scripts.hero_minotaur.get_info
+tt.info.fn = scripts.hero_basic.get_info_melee
 tt.info.hero_portrait = "hero_portraits_0218"
 tt.info.portrait = "info_portraits_heroes_0218"
 tt.main_script.insert = scripts.hero_minotaur.insert
@@ -9590,13 +9610,14 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_monkey_god.level_up
 tt.hero.tombstone_show_time = fts(30)
 tt.idle_flip.cooldown = 2
-tt.info.fn = scripts.hero_monkey_god.get_info
+--tt.info.fn = scripts.hero_monkey_god.get_info
+tt.info.fn = scripts.hero_basic.get_info_melee
 tt.info.hero_portrait = "hero_portraits_0220"
 tt.info.portrait = "info_portraits_heroes_0224"
 tt.main_script.insert = scripts.hero_monkey_god.insert
 tt.main_script.update = scripts.hero_monkey_god.update
 tt.motion.max_speed = 90
-tt.nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK)
+tt.nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK, TERRAIN_ICE)
 tt.regen.cooldown = 1
 tt.regen.health = nil
 tt.render.sprites[1].anchor.y = anchor_y
@@ -12074,7 +12095,7 @@ tt.auras.list[1].name = "ghost_sound_aura"
 tt.auras.list[1].cooldown = 0
 tt.enemy.gold = 10
 tt.enemy.melee_slot = v(24, 0)
-tt.health.armor = 0
+tt.health.armor = 1
 tt.health.hp_max = 100
 tt.health.immune_to = bor(DAMAGE_PHYSICAL, DAMAGE_EXPLOSION)
 tt.health.magic_armor = 0
@@ -12152,7 +12173,7 @@ tt.auras.list[1].name = "phantom_warrior_aura"
 tt.auras.list[1].cooldown = 0
 tt.enemy.gold = 90
 tt.enemy.melee_slot = v(27, 0)
-tt.health.armor = 0
+tt.health.armor = 1
 tt.health.hp_max = 1000
 tt.health.immune_to = bor(DAMAGE_PHYSICAL, DAMAGE_EXPLOSION)
 tt.health.magic_armor = 0
@@ -15738,7 +15759,7 @@ tt.tower.level = 1
 tt.tower.price = 0
 tt.info.fn = mylua.tower_frankenstein99.get_info
 tt.info.portrait = "info_portraits_towers_0222"
-tt.info.damage_icon = "magic"
+tt.info.damage_icon = "electrical"
 tt.powers.lightning = E:clone_c("power")
 tt.powers.lightning.price_base = 250
 tt.powers.lightning.price_inc = 150
@@ -16850,7 +16871,8 @@ tt.health_bar.offset = v(0, ady(55))
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.level = 10
 tt.idle_flip = nil
-tt.info.fn = scripts.hero_steam_frigate.get_info
+--tt.info.fn = scripts.hero_steam_frigate.get_info
+tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.hero_portrait = "hero_portraits_0211"
 tt.info.portrait = "info_portraits_heroes_0221"
 tt.main_script.insert = scripts.hero_steam_frigate.insert
@@ -17297,7 +17319,7 @@ tt.tween.props[4].keys = {
 }
 tt.tween.props[4].sprite_id = 4
 ---长矛女战士
-tt = E.register_t(E, "tower_barrack_amazonas_re", "tower_barrack_1")
+tt = E.register_t(E, "tower_barrack_amazonas_re", "g2_tower_barrack_1")
 tt.tower.price = 425
 tt.tower.type = "mercenaries_amazonas_re"
 tt.info.portrait = ((IS_PHONE_OR_TABLET and "portraits_towers_") or "info_portraits_towers_") .. "0215"
@@ -17361,7 +17383,7 @@ tt.unit.marker_offset = v(0, ady(23))
 tt.unit.mod_offset = v(0, 17)
 tt.unit.price = 75
 ---海盗酒馆
-tt = E.register_t(E, "tower_barrack_pirate_captain", "tower_barrack_1")
+tt = E.register_t(E, "tower_barrack_pirate_captain", "g2_tower_barrack_1")
 
 E.add_comps(E, tt, "powers", "barrack")
 
@@ -17389,7 +17411,7 @@ tt.render.sprites[3].offset = v(0, 35)
 tt.barrack.respawn_offset = v(0, 0)
 tt.sound_events.insert = "PiratesTaunt"
 tt.sound_events.change_rally_point = "PiratesTaunt"
-tt = E.register_t(E, "tower_barrack_pirate_captain_2", "tower_barrack_1")
+tt = E.register_t(E, "tower_barrack_pirate_captain_2", "g2_tower_barrack_1")
 
 E.add_comps(E, tt, "powers", "barrack")
 
@@ -17446,7 +17468,7 @@ tt.melee.attacks[1].damage_max = 30
 tt.melee.attacks[1].damage_min = 15
 tt.melee.attacks[1].hit_time = fts(6)
 
-tt = E.register_t(E, "tower_barrack_pirate_flamer_2", "tower_barrack_1")
+tt = E.register_t(E, "tower_barrack_pirate_flamer_2", "g2_tower_barrack_1")
 
 E.add_comps(E, tt, "powers", "barrack")
 
@@ -17531,7 +17553,7 @@ tt.modifier.duration = 3
 tt.modifier.vis_flags = bor(F_MOD, F_BURN)
 --tt.modifier.vis_bans = bor(F_FLYING)
 
-tt = E.register_t(E, "tower_barrack_pirate_anchor_2", "tower_barrack_1")
+tt = E.register_t(E, "tower_barrack_pirate_anchor_2", "g2_tower_barrack_1")
 
 E.add_comps(E, tt, "powers", "barrack")
 
@@ -17595,7 +17617,7 @@ tt.unit.size = UNIT_SIZE_MEDIUM
 tt = E.register_t(E, "mod_anchor_stun", "mod_shock_and_awe")
 tt.modifier.duration = 1
 ---雇佣兵
-tt = E:register_t("tower_barrack_mercenaries_2", "tower_barrack_1")
+tt = E:register_t("tower_barrack_mercenaries_2", "g2_tower_barrack_1")
 E.add_comps(E, tt, "powers", "barrack")
 tt.tower.type = "mercenaries_desert_2"
 tt.tower.kind = TOWER_KIND_BARRACK
@@ -17955,7 +17977,129 @@ tt.sound_events.insert = {
 }
 tt.barrack.soldier_type = "hero_bolverk_2"
 tt.tower.kind = TOWER_KIND_BARRACK
+---野蛮人巢穴
+tt = E.register_t(E, "tower_barrack_canibal", "g2_tower_barrack_1")
 
+E.add_comps(E, tt, "powers", "barrack")
+
+tt.info.portrait = ((IS_PHONE_OR_TABLET and "portraits_towers_") or "info_portraits_towers_") .. "0215"
+tt.info.enc_icon = 66
+tt.info.i18n_key = "TOWER_BARRACK_CANIBAL"
+tt.powers.carnivorous_plant = E:clone_c("power")
+tt.powers.carnivorous_plant.max_level = 2
+tt.powers.carnivorous_plant.price_base = 325
+tt.powers.carnivorous_plant.price_inc = 250
+tt.powers.carnivorous_plant.pos = {
+--	v(-47, -18),
+--	v(47, -18),
+--	v(-62, 24),
+--	v(62, 24)
+	v(-54.5, -1),
+	v(54.5, -1),
+}
+tt.powers.carnivorous_plant.template = "cannibal_carnivorous_plant"
+tt.powers.carnivorous_plant.plants = {}
+tt.powers.eat = E:clone_c("power")
+tt.powers.eat.price_base = 225
+tt.powers.eat.price_inc = 75
+tt.powers.eat.enc_icon = 224
+tt.powers.extralife = E.clone_c(E, "power")
+tt.powers.extralife.price_base = 100
+tt.powers.extralife.price_inc = 100
+tt.powers.extralife.name = "TOUGHNESS"
+tt.powers.extralife.enc_icon = 27
+tt.powers.spear = E.clone_c(E, "power")
+tt.powers.spear.price_base = 100
+tt.powers.spear.price_inc = 50
+tt.barrack.max_soldiers = 3
+tt.tower.type = "tower_barrack_canibal"
+tt.tower.price = 230
+tt.barrack.soldier_type = "soldier_cannibal"
+tt.barrack.rally_range = 145.28
+tt.render.sprites[2].name = "tower_canibal"
+tt.render.sprites[3].prefix = "tower_forest_door"
+tt.render.sprites[3].hidden = true
+tt.barrack.respawn_offset = v(0, 0)
+tt.sound_events.insert = "BarrackBarbarianTaunt"
+tt.sound_events.change_rally_point = "BarrackBarbarianTaunt"
+tt.main_script.update = scripts_rebbborn.tower_barrack_canibal.update
+tt = E:register_t("soldier_cannibal", "soldier_militia")
+
+E:add_comps(tt, "melee","powers","track_kills")
+
+anchor_y = 0.21428571428571427
+image_y = 42
+--tt.cannibalize = {}
+--tt.cannibalize.extra_hp = 50
+--tt.cannibalize.hps = 3 * FPS
+--tt.cannibalize.max_hp = 600
+tt.health.armor = 0.1
+tt.health.dead_lifetime = 10
+tt.health.hp_max = 250
+tt.health.hp_inc = 50
+tt.health.power_name = "extralife"
+tt.health_bar.offset = v(0, ady(37))
+tt.regen.health = 30
+tt.regen.cooldown = 0.5
+tt.info.portrait = "info_portraits_enemies_0019"
+tt.info.enc_icon = 218
+--tt.main_script.update = scripts.enemy_cannibal.update
+tt.main_script.update = scripts.soldier_barrack_krf.update
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_max = 20
+tt.melee.attacks[1].damage_min = 10
+tt.melee.attacks[1].damage_inc = 10
+tt.melee.attacks[1].hit_time = fts(12)
+tt.melee.attacks[1].sound = "MeleeSword"
+tt.melee.attacks[1].power_name = "spear"
+tt.melee.attacks[2] = E:clone_c("melee_attack")
+tt.melee.attacks[2].cooldown = 6
+tt.melee.attacks[2].animation = "cannibalize"
+tt.melee.attacks[2].damage_max = 100
+tt.melee.attacks[2].damage_min = 50
+tt.melee.attacks[2].damage_inc = 50
+tt.melee.attacks[2].sound_hit = "CanibalEating"
+tt.melee.attacks[2].mod = "mod_healing_cannibal"
+tt.melee.attacks[2].hit_time = fts(12)
+tt.melee.attacks[2].power_name = "eat"
+tt.melee.attacks[2].disabled = true
+tt.soldier.melee_slot_offset = v(5, 0)
+tt.melee.range = 64
+tt.motion.max_speed = FPS*2.5
+tt.track_kills.mod = "amazona_heal_mod"
+tt.render.sprites[1].anchor.y = anchor_y
+tt.render.sprites[1].prefix = "soldier_cannibal"
+tt.sound_events.cannibalize = "CanibalEating"
+--tt.sound_events.water_splash = "SpecialMermaid"
+tt.powers.spear = E.clone_c(E, "power")
+tt.powers.eat = E.clone_c(E, "power")
+tt.powers.extralife = E.clone_c(E, "power")
+tt.powers.carnivorous_plant = E.clone_c(E, "power")
+tt = E:register_t("mod_healing_cannibal", "modifier")
+tt.heal_hp = 150
+tt.main_script.insert = scripts.mod_simple_lifesteal.insert
+tt = E:register_t("cannibal_carnivorous_plant", "decal_scripted")
+
+E:add_comps(tt, "area_attack")
+
+tt.owner = nil
+tt.attack_pos = {
+	v(31, -48),
+	v(-31, -48),
+	v(80, 62),
+	v(-80, 62)
+}
+tt.main_script.insert = scripts_rebbborn.cannibal_carnivorous_plant.insert
+tt.main_script.update = scripts_rebbborn.cannibal_carnivorous_plant.update
+tt.render.sprites[1].prefix = "carnivorous_plant"
+tt.render.sprites[1].name = "inactive"
+tt.render.sprites[1].anchor.y = 0.41
+tt.area_attack.cooldown = 42
+tt.area_attack.damage_radius = 55
+tt.area_attack.hit_time = fts(10)
+tt.area_attack.vis_flags = F_EAT
+tt.area_attack.vis_bans = bor(F_BOSS, F_MINIBOSS)
+tt.area_attack.damage_type = DAMAGE_EAT
 --KRDOVE的怪物
 
 -- 萨雷格兹主母

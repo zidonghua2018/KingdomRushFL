@@ -231,7 +231,7 @@ scripts.a_dwarf = {
 			return
 		end
 		if this.cheat_game_2 then
-			store.player_gold = store.player_gold + 6666
+			store.player_gold = store.player_gold + 5000
 			storage:load_slot().gems = storage:load_slot().gems + 99
 			signal.emit("show-gems-reward", this, 99)
 			U.sprites_hide(this)

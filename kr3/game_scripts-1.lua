@@ -1486,7 +1486,7 @@ function scripts.soldier_alleria_wildcat.level_up(this, store, skill)
 	at.damage_max = skill.damage_max_base + skill.damage_inc * skill.level
 	at.damage_min = skill.damage_min_base + skill.damage_inc * skill.level
 end
-
+--[[
 function scripts.soldier_alleria_wildcat.get_info(this)
 	local min, max = this.melee.attacks[1].damage_min, this.melee.attacks[1].damage_max
 
@@ -1495,12 +1495,19 @@ function scripts.soldier_alleria_wildcat.get_info(this)
 		hp = this.health.hp,
 		hp_max = this.health.hp_max,
 		damage_min = min,
-		damage_max = max,
-		armor = this.health.armor,
+		damage_max = max,		
+		armor = this.health.armor,	
 		respawn = this.owner.timed_attacks.list[1].cooldown
 	}
 end
+]]--
+function scripts.soldier_alleria_wildcat.get_info(this)
+	local t = scripts.soldier_barrack.get_info(this)
 
+	t.respawn = this.owner.timed_attacks.list[1].cooldown
+
+	return t
+end
 function scripts.soldier_alleria_wildcat.insert(this, store)
 	this.melee.order = U.attack_order(this.melee.attacks)
 
@@ -1556,10 +1563,11 @@ function scripts.soldier_alleria_wildcat.update(this, store)
 end
 
 scripts.soldier_magnus_illusion = {}
-
+--[[
 function scripts.soldier_magnus_illusion.get_info(this)
 	local a = this.ranged.attacks[1]
 	local b = E:get_template(a.bullet)
+
 	local min, max = b.bullet.damage_min, b.bullet.damage_max
 
 	return {
@@ -1572,6 +1580,14 @@ function scripts.soldier_magnus_illusion.get_info(this)
 		damage_icon = this.info.damage_icon,
 		armor = this.health.armor
 	}
+end
+]]--
+function scripts.soldier_magnus_illusion.get_info(this)
+	local t = scripts.soldier_barrack.get_info(this)
+
+	t.respawn = nil
+
+	return t
 end
 
 scripts.hero_gerald = {}
@@ -1898,7 +1914,7 @@ function scripts.hero_alleria.update(this, store)
 end
 
 scripts.hero_bolin = {}
-
+--[[
 function scripts.hero_bolin.get_info(this)
 	local a = this.timed_attacks.list[1]
 	local b = E:get_template(a.bullet)
@@ -1916,7 +1932,15 @@ function scripts.hero_bolin.get_info(this)
 		respawn = this.health.dead_lifetime
 	}
 end
-
+]]--
+function scripts.hero_bolin.get_info(this)
+	local t = scripts.hero_basic.get_info_ranged(this)
+	local m = E:get_template(this.timed_attacks.list[1].bullet)
+    	t.ranged_damage_max = m.bullet.damage_max * this.unit.damage_factor
+		t.ranged_damage_min = m.bullet.damage_min * this.unit.damage_factor
+		t.ranged_damage_type = m.bullet.damage_type
+	return t
+end
 function scripts.hero_bolin.level_up(this, store)
 	local hl = this.hero.level
 	local ls = this.hero.level_stats
@@ -2992,7 +3016,7 @@ function scripts.hero_hacksaw.update(this, store)
 end
 
 scripts.hero_ingvar = {}
-
+--[[
 function scripts.hero_ingvar.get_info(this)
 	local a = this.is_bear and this.melee.attacks[3] or this.melee.attacks[1]
 	local min, max = a.damage_min, a.damage_max
@@ -3004,11 +3028,20 @@ function scripts.hero_ingvar.get_info(this)
 		hp = this.health.hp,
 		hp_max = this.health.hp_max,
 		damage_min = min,
-		damage_max = max,
+		damage_max = max,		
 		damage_icon = this.info.damage_icon,
 		armor = this.health.armor,
 		respawn = this.health.dead_lifetime
 	}
+end
+]]--
+function scripts.hero_ingvar.get_info(this)
+	local t = scripts.hero_basic.get_info_melee(this)
+	local a = this.is_bear and this.melee.attacks[3] or this.melee.attacks[1]
+		t.damage_max = a.damage_max * this.unit.damage_factor
+		t.damage_min = a.damage_min * this.unit.damage_factor
+		t.damage_type = a.damage_type
+	return t
 end
 
 function scripts.hero_ingvar.level_up(this, store, initial)
@@ -4101,7 +4134,7 @@ function scripts.hero_thor.update(this, store)
 end
 
 scripts.hero_10yr = {}
-
+--[[
 function scripts.hero_10yr.get_info(this)
 	local a = this.is_buffed and this.melee.attacks[3] or this.melee.attacks[1]
 	local min, max = a.damage_min, a.damage_max
@@ -4118,6 +4151,15 @@ function scripts.hero_10yr.get_info(this)
 		armor = this.health.armor,
 		respawn = this.health.dead_lifetime
 	}
+end
+]]--
+function scripts.hero_10yr.get_info(this)
+	local t = scripts.hero_basic.get_info_melee(this)
+	local a = this.is_buffed and this.melee.attacks[3] or this.melee.attacks[1]
+		t.damage_max = a.damage_max * this.unit.damage_factor
+		t.damage_min = a.damage_min * this.unit.damage_factor
+		t.damage_type = a.damage_type
+	return t
 end
 
 function scripts.hero_10yr.level_up(this, store, initial)
@@ -5166,7 +5208,7 @@ function scripts.enemy_spectral_knight.update(this, store)
 end
 
 scripts.eb_juggernaut = {}
-
+--[[
 function scripts.eb_juggernaut.get_info(this)
 	local ma = this.melee.attacks[1]
 	local min, max = ma.damage_min, ma.damage_max
@@ -5181,6 +5223,12 @@ function scripts.eb_juggernaut.get_info(this)
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
 	}
+end
+]]--
+function scripts.eb_juggernaut.get_info(this)
+	local out = scripts.enemy_basic.get_info(this)
+
+	return out
 end
 
 function scripts.eb_juggernaut.insert(this, store, script)
@@ -5300,7 +5348,7 @@ function scripts.eb_juggernaut.update(this, store, script)
 end
 
 scripts.eb_jt = {}
-
+--[[
 function scripts.eb_jt.get_info(this)
 	local ma = this.melee.attacks[1]
 	local min, max = ma.damage_min, ma.damage_max
@@ -5315,6 +5363,12 @@ function scripts.eb_jt.get_info(this)
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
 	}
+end
+]]--
+function scripts.eb_jt.get_info(this)
+	local out = scripts.enemy_basic.get_info(this)
+
+	return out
 end
 
 function scripts.eb_jt.on_damage(this, store, damage)
@@ -5563,7 +5617,7 @@ function scripts.mod_jt_tower.update(this, store)
 end
 
 scripts.eb_veznan = {}
-
+--[[
 function scripts.eb_veznan.get_info(this)
 	return {
 		type = STATS_TYPE_ENEMY,
@@ -5575,6 +5629,12 @@ function scripts.eb_veznan.get_info(this)
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
 	}
+end
+]]--
+function scripts.eb_veznan.get_info(this)
+	local out = scripts.enemy_basic.get_info(this)
+
+	return out
 end
 
 function scripts.eb_veznan.on_damage(this, store, damage)
@@ -6100,7 +6160,7 @@ function scripts.veznan_soul.update(this, store)
 end
 
 scripts.eb_greenmuck = {}
-
+--[[
 function scripts.eb_greenmuck.get_info(this)
 	local ma = this.melee.attacks[1]
 	local min, max = ma.damage_min, ma.damage_max
@@ -6116,6 +6176,13 @@ function scripts.eb_greenmuck.get_info(this)
 		lives = this.enemy.lives_cost
 	}
 end
+]]--
+function scripts.eb_greenmuck.get_info(this)
+	local out = scripts.enemy_basic.get_info(this)
+
+	return out
+end
+
 
 function scripts.eb_greenmuck.update(this, store)
 	local ba = this.timed_attacks.list[1]
@@ -6210,7 +6277,7 @@ function scripts.eb_greenmuck.update(this, store)
 end
 
 scripts.eb_kingpin = {}
-
+--[[
 function scripts.eb_kingpin.get_info(this)
 	local ma = this.melee.attacks[1]
 	local min, max = ma.damage_min, ma.damage_max
@@ -6225,6 +6292,12 @@ function scripts.eb_kingpin.get_info(this)
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
 	}
+end
+]]--
+function scripts.eb_kingpin.get_info(this)
+	local out = scripts.enemy_basic.get_info(this)
+
+	return out
 end
 
 function scripts.eb_kingpin.update(this, store)
@@ -6310,7 +6383,7 @@ function scripts.eb_kingpin.update(this, store)
 end
 
 scripts.eb_ulgukhai = {}
-
+--[[
 function scripts.eb_ulgukhai.get_info(this)
 	local ma = this.melee.attacks[1]
 	local min, max = ma.damage_min, ma.damage_max
@@ -6325,6 +6398,12 @@ function scripts.eb_ulgukhai.get_info(this)
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
 	}
+end
+]]--
+function scripts.eb_ulgukhai.get_info(this)
+	local out = scripts.enemy_basic.get_info(this)
+
+	return out
 end
 
 function scripts.eb_ulgukhai.update(this, store)
@@ -6378,7 +6457,7 @@ function scripts.eb_ulgukhai.update(this, store)
 end
 
 scripts.eb_moloch = {}
-
+--[[
 function scripts.eb_moloch.get_info(this)
 	local ma = this.melee.attacks[1]
 	local min, max = ma.damage_min, ma.damage_max
@@ -6393,6 +6472,12 @@ function scripts.eb_moloch.get_info(this)
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
 	}
+end
+]]--
+function scripts.eb_moloch.get_info(this)
+	local out = scripts.enemy_basic.get_info(this)
+
+	return out
 end
 
 function scripts.eb_moloch.update(this, store)
@@ -6524,7 +6609,7 @@ function scripts.eb_moloch.update(this, store)
 end
 
 scripts.eb_myconid = {}
-
+--[[
 function scripts.eb_myconid.get_info(this)
 	local ma = this.melee.attacks[1]
 	local min, max = ma.damage_min, ma.damage_max
@@ -6539,6 +6624,12 @@ function scripts.eb_myconid.get_info(this)
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
 	}
+end
+]]--
+function scripts.eb_myconid.get_info(this)
+	local out = scripts.enemy_basic.get_info(this)
+
+	return out
 end
 
 function scripts.eb_myconid.update(this, store)
@@ -6669,7 +6760,7 @@ function scripts.eb_myconid.update(this, store)
 end
 
 scripts.eb_blackburn = {}
-
+--[[
 function scripts.eb_blackburn.get_info(this)
 	local ma = this.melee.attacks[1]
 	local min, max = ma.damage_min, ma.damage_max
@@ -6684,6 +6775,12 @@ function scripts.eb_blackburn.get_info(this)
 		magic_armor = this.health.magic_armor,
 		lives = this.enemy.lives_cost
 	}
+end
+]]--
+function scripts.eb_blackburn.get_info(this)
+	local out = scripts.enemy_basic.get_info(this)
+
+	return out
 end
 
 function scripts.eb_blackburn.update(this, store)

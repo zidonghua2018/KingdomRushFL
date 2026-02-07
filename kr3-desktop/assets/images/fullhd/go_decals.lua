@@ -1321,6 +1321,7 @@ return {
 		},
 		alias = {}
 	},
+---联盟的路径图标	
 	waveflag_path_arrow = {
 		a_name = "go_decals-1.dds",
 		size = {
@@ -1344,5 +1345,5 @@ return {
 			22
 		},
 		alias = {}
-	}
+	},
 }

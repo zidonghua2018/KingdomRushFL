@@ -52,7 +52,7 @@ if true then
         "soldier_pirate_captain", "soldier_pirate_captain_2",
         "soldier_pirate_flamer", "soldier_pirate_flamer_2",
         "soldier_pirate_anchor", "soldier_pirate_anchor_2",
-        "soldier_dwarf", "soldier_amazona", "soldier_amazona_re",
+        "soldier_dwarf", "soldier_amazona", "soldier_amazona_re","soldier_cannibal",
         "soldier_mecha", 
         -- 3代
         "soldier_barrack_1", "soldier_barrack_2", "soldier_barrack_3",

@@ -100,6 +100,9 @@ return{
             "kr4_hero_beresad_taunt_1.ogg",
             "kr_voice_lucerna_select01_a.ogg",
             "kr4_hero_tank_taunt_1.ogg",
+            "kr4_hero_orc_taunt_1.ogg",
+            "kr4_hero_asra_taunt_1.ogg",
+            "kr4_hero_oloch_taunt_1.ogg",
         }
     },
     tower_twilight_elves_barrack = {
@@ -531,6 +534,48 @@ return{
             "kra_sfx_heroes_onagro_deathFromAbove_attack_shot_var1_v1.ogg",
 			"kra_sfx_heroes_onagro_deathFromAbove_attack_shot_var2_v1.ogg",
 			"kra_sfx_heroes_onagro_deathFromAbove_attack_shot_var3_v1.ogg",
+        }
+    },
+    hero_asra = {
+        files = {
+			"kr4_hero_asra_taunt_1.ogg",
+			"kr4_hero_asra_taunt_2.ogg",
+			"kr4_hero_asra_taunt_3.ogg",
+			"kr4_hero_asra_taunt_4.ogg",
+			"kr4_hero_asra_taunt_death.ogg",
+			"kr4_hero_asra_shadowdance_teleport.ogg",
+			"kr4_hero_asra_shield.ogg",
+			"kr4_hero_asra_spiderbite_attack.ogg",
+			"kr4_hero_asra_toxicrain_impactwithpoison.ogg",
+        }
+    },
+    hero_orc = {
+        files = {
+            "kr4_hero_orc_taunt_1.ogg",
+            "kr4_hero_orc_taunt_2.ogg",
+            "kr4_hero_orc_taunt_3.ogg",
+            "kr4_hero_orc_taunt_4.ogg",
+            "kr4_hero_orc_taunt_death.ogg",
+            "kr4_hero_veruk_aimedslashes.ogg",
+            "kr4_hero_veruk_bruteforce.ogg",
+            "kr4_hero_veruk_enterwarmongers.ogg",
+            "kr4_hero_veruk_inspiringleader.ogg",
+        }
+    },
+    hero_oloch = {
+        files = {
+            "kr4_hero_oloch_demonicblast_cast.ogg",
+            "kr4_hero_oloch_demonicblast_travel.ogg",
+            "kr4_hero_oloch_duplication.ogg",
+            "kr4_hero_oloch_hellishpact.ogg",
+            "kr4_hero_oloch_magmaeruption.ogg",
+            "kr4_hero_oloch_sealisolation.ogg",
+            "kr4_hero_oloch_taunt_1.ogg",
+            "kr4_hero_oloch_taunt_2.ogg",
+            "kr4_hero_oloch_taunt_3.ogg",
+            "kr4_hero_oloch_taunt_4.ogg",
+            "kr4_hero_oloch_taunt_death.ogg",
+            "kr4_ember_lords_mage_attack.ogg",
         }
     },
     sounds_stage426 = {

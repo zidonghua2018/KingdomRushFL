@@ -2811,7 +2811,35 @@ end
 local function soldier_courage_upgrade(store, this)
 	local upg = UP:get_upgrade("barrack_courage")
 
-	if upg and this.soldier and this.health and store.tick_ts - this.soldier.courage_ts > upg.regen_cooldown then
+	local barrack_list = {
+			"soldier_militia",
+			"soldier_footmen",
+			"soldier_knight",
+			"soldier_templar",
+			"soldier_assassin",
+			"soldier_pirate_captain",
+			"soldier_pirate_flamer",
+			"soldier_pirate_anchor",
+			"soldier_pirate_captain_2",
+			"soldier_pirate_flamer_2",
+			"soldier_pirate_anchor_2",
+			"soldier_amazona",
+			"soldier_amazona_re",			
+			"soldier_legionnaire",
+			"soldier_djinn",
+			"soldier_legionnaire_2",
+			"soldier_djinn_2",
+			"soldier_dwarf",
+			"soldier_frankenstein",
+			"soldier_death_rider",
+			"soldier_tremor"
+	}
+	local flag = false
+	if table.contains(barrack_list,this.template_name) then
+		flag = true
+	end
+
+	if upg and this.soldier and this.health and store.tick_ts - this.soldier.courage_ts > upg.regen_cooldown and flag then
 		this.soldier.courage_ts = store.tick_ts
 		this.health.hp = km.clamp(0, this.health.hp_max, km.round(this.health.hp + this.health.hp_max * upg.regen_factor))
 	end

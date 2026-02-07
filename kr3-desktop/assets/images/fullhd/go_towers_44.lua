@@ -14840,7 +14840,12672 @@ local a = {
 		alias = {
 			"ewok_a_0015"
 		}
-	},																																									
+	},
+---野蛮人巢穴 1.3
+	canibal_0004 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			88,
+			79,
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			21,
+			154,
+			88,
+			79
+		},
+		alias = {}
+	},
+	canibal_0004_disabled = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			88,
+			79,
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			105,
+			154,
+			88,
+			79
+		},
+		alias = {}
+	},
+	special_icons_plant = {
+		a_name = "go_tower_canibal.png",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			117,
+			243,
+			82,
+			76
+		},
+		alias = {}
+	},
+	special_icons_plant_disabled = {
+		a_name = "go_tower_canibal.png",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			119,
+			324,
+			82,
+			76
+		},
+		alias = {}
+	},
+	special_icons_tree = {
+		a_name = "go_tower_canibal.png",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			21,
+			245,
+			82,
+			76
+		},
+		alias = {}
+	},
+	special_icons_tree_disabled = {
+		a_name = "go_tower_canibal.png",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			23,
+			326,
+			82,
+			76
+		},
+		alias = {}
+	},	
+	special_icons_spear = {
+		a_name = "go_tower_canibal.png",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			212,
+			241,
+			82,
+			76
+		},
+		alias = {}
+	},
+	special_icons_spear_disabled = {
+		a_name = "go_tower_canibal.png",--"gui_common-5_mod.dds",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			214,
+			322,
+			82,
+			76
+		},
+		alias = {}
+	},
+	tower_canibal = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			133,
+			129
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			0,
+			0,
+			133,
+			129
+		},
+		alias = {}
+	},	
+	
+	Canibal_0001 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			30,
+			6,
+			25,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			135,
+			0,
+			38,
+			43
+		},
+		alias = {
+			"Canibal_0002"
+		}
+	},
+	Canibal_0003 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			29,
+			3,
+			26,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			175,
+			0,
+			38,
+			46
+		},
+		alias = {
+			"Canibal_0004"
+		}
+	},
+	Canibal_0005 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			28,
+			1,
+			27,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			215,
+			0,
+			38,
+			48
+		},
+		alias = {
+			"Canibal_0006"
+		}
+	},
+	Canibal_0007 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			27,
+			2,
+			27,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			255,
+			0,
+			39,
+			47
+		},
+		alias = {}
+	},
+	Canibal_0008 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			27,
+			4,
+			28,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			295,
+			0,
+			38,
+			45
+		},
+		alias = {
+			"Canibal_0009"
+		}
+	},
+	Canibal_0010 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			27,
+			9,
+			31,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			335,
+			0,
+			35,
+			40
+		},
+		alias = {
+			"Canibal_0011"
+		}
+	},
+	Canibal_0012 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			27,
+			6,
+			28,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			375,
+			0,
+			38,
+			43
+		},
+		alias = {
+			"Canibal_0013"
+		}
+	},
+	Canibal_0014 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			28,
+			3,
+			26,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			415,
+			0,
+			39,
+			46
+		},
+		alias = {
+			"Canibal_0015"
+		}
+	},
+	Canibal_0016 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			30,
+			1,
+			25,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			455,
+			0,
+			38,
+			48
+		},
+		alias = {
+			"Canibal_0017"
+		}
+	},
+	Canibal_0018 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			30,
+			2,
+			25,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			495,
+			0,
+			38,
+			47
+		},
+		alias = {}
+	},
+	Canibal_0019 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			30,
+			4,
+			25,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			535,
+			0,
+			38,
+			45
+		},
+		alias = {
+			"Canibal_0020"
+		}
+	},
+	Canibal_0021 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			29,
+			9,
+			24,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			575,
+			0,
+			40,
+			40
+		},
+		alias = {
+			"Canibal_0022"
+		}
+	},
+--[[
+	Canibal_0023 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			31,
+			8,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			454,
+			415,
+			32,
+			41
+		},
+		alias = {
+			"Canibal_0024"
+		}
+	},
+	Canibal_0025 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			32,
+			6,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			491,
+			462,
+			31,
+			43
+		},
+		alias = {
+			"Canibal_0026"
+		}
+	},
+	Canibal_0027 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			32,
+			6,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			528,
+			462,
+			31,
+			43
+		},
+		alias = {
+			"Canibal_0028"
+		}
+	},
+	Canibal_0029 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			32,
+			6,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			565,
+			462,
+			31,
+			43
+		},
+		alias = {}
+	},
+	Canibal_0030 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			31,
+			7,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			416,
+			609,
+			32,
+			42
+		},
+		alias = {
+			"Canibal_0031"
+		}
+	},
+	Canibal_0032 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			31,
+			11,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			682,
+			415,
+			32,
+			38
+		},
+		alias = {
+			"Canibal_0033"
+		}
+	},
+	Canibal_0034 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			31,
+			8,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			492,
+			415,
+			32,
+			41
+		},
+		alias = {
+			"Canibal_0035"
+		}
+	},
+	Canibal_0036 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			31,
+			6,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			986,
+			363,
+			32,
+			43
+		},
+		alias = {
+			"Canibal_0037"
+		}
+	},
+	Canibal_0038 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			31,
+			7,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			416,
+			657,
+			32,
+			42
+		},
+		alias = {
+			"Canibal_0039"
+		}
+	},
+	Canibal_0040 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			31,
+			7,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			416,
+			705,
+			32,
+			42
+		},
+		alias = {}
+	},
+	Canibal_0041 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			30,
+			8,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			613,
+			310,
+			33,
+			41
+		},
+		alias = {
+			"Canibal_0042"
+		}
+	},
+	Canibal_0043 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			30,
+			11,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			808,
+			310,
+			33,
+			38
+		},
+		alias = {
+			"Canibal_0044"
+		}
+	},
+	Canibal_0045 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			31,
+			6,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			416,
+			415,
+			32,
+			43
+		},
+		alias = {
+			"Canibal_0046"
+		}
+	},
+	Canibal_0047 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			32,
+			3,
+			29,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			568,
+			363,
+			32,
+			46
+		},
+		alias = {
+			"Canibal_0048"
+		}
+	},
+	Canibal_0049 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			31,
+			3,
+			29,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			418,
+			310,
+			33,
+			46
+		},
+		alias = {
+			"Canibal_0050"
+		}
+	},
+	Canibal_0051 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			31,
+			1,
+			29,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			301,
+			873,
+			33,
+			48
+		},
+		alias = {}
+	},
+	Canibal_0052 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			31,
+			4,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			682,
+			363,
+			32,
+			45
+		},
+		alias = {
+			"Canibal_0053"
+		}
+	},
+	Canibal_0054 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			31,
+			8,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			530,
+			415,
+			32,
+			41
+		},
+		alias = {
+			"Canibal_0055"
+		}
+	},
+	Canibal_0056 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			31,
+			6,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			416,
+			464,
+			32,
+			43
+		},
+		alias = {
+			"Canibal_0057"
+		}
+	},
+	Canibal_0058 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			31,
+			2,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			963,
+			310,
+			32,
+			47
+		},
+		alias = {
+			"Canibal_0059"
+		}
+	},
+	Canibal_0060 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			30,
+			1,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			301,
+			927,
+			33,
+			48
+		},
+		alias = {
+			"Canibal_0061"
+		}
+	},
+	Canibal_0062 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			31,
+			1,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			378,
+			849,
+			32,
+			48
+		},
+		alias = {}
+	},
+	Canibal_0063 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			30,
+			4,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			496,
+			310,
+			33,
+			45
+		},
+		alias = {
+			"Canibal_0064"
+		}
+	},
+	Canibal_0065 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			30,
+			8,
+			30,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			652,
+			310,
+			33,
+			41
+		},
+		alias = {
+			"Canibal_0066"
+		}
+	},
+	]]--
+	Canibal_0067 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			28,
+			7,
+			28,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			620,
+			0,
+			37,
+			42
+		},
+		alias = {
+			"Canibal_0076",
+			"Canibal_0123"
+		}
+	},
+	Canibal_0068 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			22,
+			7,
+			34,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			660,
+			0,
+			37,
+			42
+		},
+		alias = {
+			"Canibal_0069",
+			"Canibal_0070",
+			"Canibal_0071",
+			"Canibal_0072"
+		}
+	},
+	Canibal_0073 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			34,
+			8,
+			10,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			700,
+			0,
+			49,
+			41
+		},
+		alias = {
+			"Canibal_0074",
+			"Canibal_0075"
+		}
+	},
+	Canibal_0077 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			28,
+			7,
+			28,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			755,
+			0,
+			37,
+			41
+		},
+		alias = {
+			"Canibal_0098",
+			"Canibal_0099"
+		}
+	},
+	Canibal_0078 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			34,
+			11,
+			28,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			795,
+			0,
+			31,
+			37
+		},
+		alias = {
+			"Canibal_0088"
+		}
+	},
+	Canibal_0079 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			34,
+			11,
+			19,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			830,
+			0,
+			40,
+			37
+		},
+		alias = {}
+	},
+	Canibal_0080 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			34,
+			12,
+			19,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			875,
+			0,
+			40,
+			36
+		},
+		alias = {}
+	},
+	Canibal_0081 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			32,
+			9,
+			25,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			920,
+			0,
+			36,
+			39
+		},
+		alias = {
+			"Canibal_0082"
+		}
+	},
+	Canibal_0083 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			32,
+			11,
+			25,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			960,
+			0,
+			36,
+			37
+		},
+		alias = {
+			"Canibal_0084"
+		}
+	},
+	Canibal_0085 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			32,
+			12,
+			24,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			135,
+			50,
+			37,
+			36
+		},
+		alias = {}
+	},
+	Canibal_0086 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			32,
+			10,
+			24,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			175,
+			50,
+			37,
+			38
+		},
+		alias = {}
+	},
+	Canibal_0087 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			33,
+			10,
+			27,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			215,
+			50,
+			33,
+			38
+		},
+		alias = {
+			"Canibal_0096",
+			"Canibal_0097"
+		}
+	},
+	Canibal_0089 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			34,
+			11,
+			19,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			255,
+			50,
+			40,
+			37
+		},
+		alias = {}
+	},
+	Canibal_0090 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			34,
+			12,
+			19,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			300,
+			50,
+			40,
+			36
+		},
+		alias = {}
+	},
+	Canibal_0091 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			32,
+			9,
+			25,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			345,
+			50,
+			36,
+			39
+		},
+		alias = {
+			"Canibal_0092"
+		}
+	},
+	Canibal_0093 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			32,
+			11,
+			25,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			385,
+			50,
+			36,
+			37
+		},
+		alias = {
+			"Canibal_0094"
+		}
+	},
+	Canibal_0095 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			32,
+			12,
+			25,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			425,
+			50,
+			36,
+			36
+		},
+		alias = {}
+	},
+--[[
+	Canibal_0100 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			28,
+			7,
+			28,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			654,
+			65,
+			37,
+			46
+		},
+		alias = {}
+	},
+	Canibal_0101 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			28,
+			7,
+			28,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			482,
+			65,
+			37,
+			47
+		},
+		alias = {}
+	},
+	Canibal_0102 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			28,
+			6,
+			28,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			439,
+			65,
+			37,
+			48
+		},
+		alias = {
+			"Canibal_0103"
+		}
+	},
+	Canibal_0104 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			27,
+			5,
+			28,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			579,
+			6,
+			38,
+			49
+		},
+		alias = {
+			"Canibal_0105"
+		}
+	},
+	Canibal_0106 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			27,
+			7,
+			28,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			799,
+			6,
+			38,
+			48
+		},
+		alias = {}
+	},
+	Canibal_0107 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			26,
+			7,
+			25,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			554,
+			298,
+			42,
+			48
+		},
+		alias = {}
+	},
+	Canibal_0108 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			26,
+			6,
+			25,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			506,
+			298,
+			42,
+			49
+		},
+		alias = {}
+	},
+	Canibal_0109 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			28,
+			6,
+			29,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			306,
+			123,
+			36,
+			48
+		},
+		alias = {}
+	},
+	Canibal_0110 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			27,
+			7,
+			29,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			525,
+			65,
+			37,
+			47
+		},
+		alias = {
+			"Canibal_0111",
+			"Canibal_0112",
+			"Canibal_0113",
+			"Canibal_0114",
+			"Canibal_0115",
+			"Canibal_0116",
+			"Canibal_0117",
+			"Canibal_0118"
+		}
+	},
+	Canibal_0119 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			27,
+			4,
+			29,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			267,
+			65,
+			37,
+			50
+		},
+		alias = {
+			"Canibal_0120"
+		}
+	},
+	Canibal_0121 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			28,
+			7,
+			28,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			568,
+			65,
+			37,
+			47
+		},
+		alias = {}
+	},
+	Canibal_0122 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			28,
+			7,
+			28,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			697,
+			65,
+			37,
+			46
+		},
+		alias = {}
+	},
+]]--
+	Canibal_0124 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			16,
+			4,
+			36,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			465,
+			50,
+			41,
+			45
+		},
+		alias = {}
+	},
+	Canibal_0125 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			13,
+			3,
+			39,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			510,
+			50,
+			41,
+			46
+		},
+		alias = {}
+	},
+	Canibal_0126 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			10,
+			6,
+			41,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			555,
+			50,
+			42,
+			43
+		},
+		alias = {}
+	},
+	Canibal_0127 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			5,
+			19,
+			41,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			600,
+			50,
+			47,
+			40
+		},
+		alias = {}
+	},
+	Canibal_0128 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			4,
+			28,
+			42,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			650,
+			50,
+			47,
+			29
+		},
+		alias = {
+			"Canibal_0129"
+		}
+	},
+	Canibal_0130 = {
+		a_name = "go_tower_canibal.png",
+		size = {
+			93,
+			59
+		},
+		trim = {
+			4,
+			25,
+			42,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			700,
+			50,
+			47,
+			33
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0001 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			108,
+			88,
+			107,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1679,
+			204,
+			75,
+			82
+		},
+		alias = {
+			"Stage7_CarnivorePlant_0002",
+			"Stage7_CarnivorePlant_0030"
+		}
+	},
+	Stage7_CarnivorePlant_0003 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			108,
+			88,
+			107,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1760,
+			204,
+			75,
+			82
+		},
+		alias = {
+			"Stage7_CarnivorePlant_0004",
+			"Stage7_CarnivorePlant_0005"
+		}
+	},
+	Stage7_CarnivorePlant_0006 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			87,
+			107,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1921,
+			204,
+			74,
+			83
+		},
+		alias = {
+			"Stage7_CarnivorePlant_0007"
+		}
+	},
+	Stage7_CarnivorePlant_0008 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			87,
+			107,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1271,
+			300,
+			74,
+			83
+		},
+		alias = {
+			"Stage7_CarnivorePlant_0009",
+			"Stage7_CarnivorePlant_0010"
+		}
+	},
+	Stage7_CarnivorePlant_0011 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			87,
+			107,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1271,
+			389,
+			74,
+			83
+		},
+		alias = {
+			"Stage7_CarnivorePlant_0012"
+		}
+	},
+	Stage7_CarnivorePlant_0013 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			86,
+			107,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1841,
+			204,
+			74,
+			84
+		},
+		alias = {
+			"Stage7_CarnivorePlant_0014",
+			"Stage7_CarnivorePlant_0015",
+			"Stage7_CarnivorePlant_0018",
+			"Stage7_CarnivorePlant_0019",
+			"Stage7_CarnivorePlant_0020"
+		}
+	},
+	Stage7_CarnivorePlant_0016 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			86,
+			108,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1271,
+			833,
+			73,
+			84
+		},
+		alias = {
+			"Stage7_CarnivorePlant_0017"
+		}
+	},
+	Stage7_CarnivorePlant_0021 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			87,
+			107,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1271,
+			478,
+			74,
+			83
+		},
+		alias = {
+			"Stage7_CarnivorePlant_0022"
+		}
+	},
+	Stage7_CarnivorePlant_0023 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			87,
+			107,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1271,
+			567,
+			74,
+			83
+		},
+		alias = {
+			"Stage7_CarnivorePlant_0024"
+		}
+	},
+	Stage7_CarnivorePlant_0025 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			87,
+			107,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1271,
+			656,
+			74,
+			83
+		},
+		alias = {
+			"Stage7_CarnivorePlant_0026"
+		}
+	},
+	Stage7_CarnivorePlant_0027 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			108,
+			87,
+			107,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1517,
+			204,
+			75,
+			83
+		},
+		alias = {
+			"Stage7_CarnivorePlant_0028",
+			"Stage7_CarnivorePlant_0029"
+		}
+	},
+	Stage7_CarnivorePlant_0031 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			88,
+			107,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1271,
+			745,
+			74,
+			82
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0032 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			87,
+			106,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1598,
+			204,
+			75,
+			83
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0033 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			85,
+			107,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1974,
+			6,
+			74,
+			85
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0034 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			82,
+			106,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1436,
+			204,
+			75,
+			88
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0035 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			108,
+			80,
+			106,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1354,
+			204,
+			76,
+			90
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0036 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			80,
+			104,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1271,
+			204,
+			77,
+			90
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0037 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			80,
+			101,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1174,
+			898,
+			80,
+			90
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0038 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			80,
+			99,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1174,
+			720,
+			82,
+			90
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0039 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			78,
+			98,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1174,
+			529,
+			83,
+			92
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0040 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			77,
+			96,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1844,
+			105,
+			85,
+			93
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0041 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			77,
+			93,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1564,
+			105,
+			88,
+			93
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0042 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			77,
+			91,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1468,
+			105,
+			90,
+			93
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0043 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			77,
+			89,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1273,
+			105,
+			92,
+			93
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0044 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			77,
+			88,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1174,
+			105,
+			93,
+			93
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0045 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			79,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1074,
+			301,
+			94,
+			91
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0046 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			80,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1074,
+			689,
+			94,
+			90
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0047 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			80,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1074,
+			785,
+			94,
+			90
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0048 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			80,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1074,
+			881,
+			94,
+			90
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0049 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			79,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1074,
+			398,
+			94,
+			91
+		},
+		alias = {
+			"Stage7_CarnivorePlant_0078",
+			"Stage7_CarnivorePlant_0096",
+			"Stage7_CarnivorePlant_0097",
+			"Stage7_CarnivorePlant_0107"
+		}
+	},
+	Stage7_CarnivorePlant_0050 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			79,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1074,
+			495,
+			94,
+			91
+		},
+		alias = {
+			"Stage7_CarnivorePlant_0079",
+			"Stage7_CarnivorePlant_0080"
+		}
+	},
+	Stage7_CarnivorePlant_0051 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			79,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1074,
+			592,
+			94,
+			91
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0052 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			78,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1574,
+			6,
+			94,
+			92
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0053 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			78,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1674,
+			6,
+			94,
+			92
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0054 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			78,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1774,
+			6,
+			94,
+			92
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0055 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			78,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1874,
+			6,
+			94,
+			92
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0056 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			78,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1074,
+			105,
+			94,
+			92
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0057 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			77,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			974,
+			606,
+			94,
+			93
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0058 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			77,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			974,
+			705,
+			94,
+			93
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0059 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			77,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			974,
+			804,
+			94,
+			93
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0060 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			76,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			740,
+			346,
+			94,
+			94
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0061 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			76,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			739,
+			499,
+			94,
+			94
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0062 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			76,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			843,
+			721,
+			94,
+			94
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0063 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			76,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			843,
+			821,
+			94,
+			94
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0064 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			76,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			843,
+			921,
+			94,
+			94
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0065 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			76,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			974,
+			6,
+			94,
+			94
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0066 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			76,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			974,
+			106,
+			94,
+			94
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0067 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			76,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			974,
+			206,
+			94,
+			94
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0068 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			76,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			974,
+			306,
+			94,
+			94
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0069 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			76,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			974,
+			406,
+			94,
+			94
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0070 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			76,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			974,
+			506,
+			94,
+			94
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0071 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			77,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			974,
+			903,
+			94,
+			93
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0072 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			77,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1074,
+			6,
+			94,
+			93
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0073 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			77,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1174,
+			6,
+			94,
+			93
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0074 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			77,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1274,
+			6,
+			94,
+			93
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0075 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			77,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1374,
+			6,
+			94,
+			93
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0076 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			77,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1474,
+			6,
+			94,
+			93
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0077 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			78,
+			87,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1074,
+			203,
+			94,
+			92
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0081 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			80,
+			90,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1371,
+			105,
+			91,
+			90
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0082 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			81,
+			93,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1658,
+			105,
+			88,
+			89
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0083 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			82,
+			95,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1752,
+			105,
+			86,
+			88
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0084 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			82,
+			96,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1935,
+			105,
+			85,
+			88
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0085 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			83,
+			98,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1174,
+			627,
+			83,
+			87
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0086 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			108,
+			83,
+			97,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1174,
+			343,
+			85,
+			87
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0087 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			108,
+			83,
+			98,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1174,
+			436,
+			84,
+			87
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0088 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			58,
+			78,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			843,
+			603,
+			103,
+			112
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0089 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			75,
+			68,
+			75
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			843,
+			178,
+			113,
+			112
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0090 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			84,
+			46,
+			41
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			564,
+			871,
+			135,
+			137
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0091 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			120,
+			49,
+			6
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			705,
+			871,
+			132,
+			136
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0092 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			119,
+			76,
+			9
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			843,
+			463,
+			105,
+			134
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0093 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			106,
+			73,
+			41
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			728,
+			627,
+			108,
+			115
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0094 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			100,
+			72,
+			73
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			6,
+			930,
+			109,
+			89
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0095 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			92,
+			75,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			121,
+			930,
+			106,
+			78
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0098 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			37,
+			90,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1174,
+			204,
+			91,
+			133
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0099 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			9,
+			70,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			843,
+			296,
+			111,
+			161
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0100 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			4,
+			56,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			843,
+			6,
+			125,
+			166
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0101 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			23,
+			11,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			564,
+			346,
+			170,
+			147
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0102 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			48,
+			12,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			564,
+			499,
+			169,
+			122
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0103 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			45,
+			23,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			564,
+			627,
+			158,
+			125
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0104 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			63,
+			39,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			564,
+			758,
+			142,
+			107
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0105 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			71,
+			60,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			712,
+			758,
+			121,
+			99
+		},
+		alias = {}
+	},
+	Stage7_CarnivorePlant_0106 = {
+		a_name = "go_tower_canibal-2.png",
+		size = {
+			290,
+			262
+		},
+		trim = {
+			109,
+			79,
+			82,
+			92
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			392,
+			930,
+			99,
+			91
+		},
+		alias = {}
+	},	
+---阿渥克魔法	
+	ewok_magical_0001 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			10,
+			12,
+			18,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			500,
+			935,
+			34,
+			37
+		},
+		alias = {
+			"ewok_magical_0002"
+		}
+	},
+	ewok_magical_0003 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			17,
+			1,
+			16,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			505,
+			975,
+			29,
+			48
+		},
+		alias = {
+			"ewok_magical_0004"
+		}
+	},
+	ewok_magical_0005 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			16,
+			4,
+			15,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			540,
+			975,
+			31,
+			45
+		},
+		alias = {
+			"ewok_magical_0006"
+		}
+	},
+	ewok_magical_0007 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			16,
+			6,
+			15,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			580,
+			975,
+			31,
+			43
+		},
+		alias = {
+			"ewok_magical_0008"
+		}
+	},
+	ewok_magical_0009 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			15,
+			9,
+			14,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			615,
+			975,
+			33,
+			40
+		},
+		alias = {
+			"ewok_magical_0010"
+		}
+	},
+	ewok_magical_0011 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			9,
+			4,
+			18,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			655,
+			975,
+			35,
+			45
+		},
+		alias = {
+			"ewok_magical_0012"
+		}
+	},
+	ewok_magical_0013 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			11,
+			5,
+			16,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			695,
+			975,
+			35,
+			44
+		},
+		alias = {
+			"ewok_magical_0014"
+		}
+	},
+	ewok_magical_0015 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			12,
+			8,
+			15,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			735,
+			975,
+			35,
+			41
+		},
+		alias = {
+			"ewok_magical_0016"
+		}
+	},
+	ewok_magical_0017 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			11,
+			14,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			775,
+			975,
+			34,
+			38
+		},
+		alias = {
+			"ewok_magical_0018"
+		}
+	},
+--[[]]	
+	ewok_magical_0019 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			10,
+			12,
+			18,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			810,
+			975,
+			34,
+			37
+		},
+		alias = {
+			"ewok_magical_0020"
+		}
+	},
+--[[]]
+	ewok_magical_0021 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			6,
+			13,
+			19,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			850,
+			975,
+			37,
+			36
+		},
+		alias = {
+			"ewok_magical_0022"
+		}
+	},
+	ewok_magical_0023 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			4,
+			14,
+			19,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			890,
+			975,
+			39,
+			35
+		},
+		alias = {
+			"ewok_magical_0024"
+		}
+	},
+	ewok_magical_0025 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			3,
+			16,
+			19,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			935,
+			975,
+			40,
+			33
+		},
+		alias = {
+			"ewok_magical_0026"
+		}
+	},
+	ewok_magical_0027 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			9,
+			16,
+			13,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			980,
+			975,
+			40,
+			33
+		},
+		alias = {
+			"ewok_magical_0028"
+		}
+	},
+	ewok_magical_0029 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			18,
+			16,
+			9,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			980,
+			935,
+			35,
+			33
+		},
+		alias = {
+			"ewok_magical_0030"
+		}
+	},
+	ewok_magical_0031 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			18,
+			20,
+			11,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			940,
+			935,
+			33,
+			29
+		},
+		alias = {
+			"ewok_magical_0032"
+		}
+	},
+	ewok_magical_0033 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			18,
+			16,
+			16,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			905,
+			935,
+			28,
+			33
+		},
+		alias = {
+			"ewok_magical_0034"
+		}
+	},
+	ewok_magical_0035 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			18,
+			11,
+			9,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			865,
+			935,
+			35,
+			38
+		},
+		alias = {
+			"ewok_magical_0036"
+		}
+	},
+	ewok_magical_0037 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			17,
+			16,
+			8,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			825,
+			935,
+			37,
+			33
+		},
+		alias = {
+			"ewok_magical_0038"
+		}
+	},
+	ewok_magical_0039 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			16,
+			18,
+			7,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			785,
+			935,
+			39,
+			31
+		},
+		alias = {
+			"ewok_magical_0040"
+		}
+	},
+	ewok_magical_0041 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			15,
+			20,
+			7,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			745,
+			935,
+			40,
+			29
+		},
+		alias = {
+			"ewok_magical_0042"
+		}
+	},
+	ewok_magical_0043 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			18,
+			13,
+			8,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			705,
+			935,
+			36,
+			36
+		},
+		alias = {
+			"ewok_magical_0044"
+		}
+	},
+	ewok_magical_0045 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			6,
+			13,
+			18,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			665,
+			935,
+			38,
+			36
+		},
+		alias = {
+			"ewok_magical_0046"
+		}
+	},
+	ewok_magical_0047 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			6,
+			17,
+			18,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			625,
+			935,
+			38,
+			32
+		},
+		alias = {
+			"ewok_magical_0048"
+		}
+	},
+	ewok_magical_0049 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			9,
+			2,
+			15,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			580,
+			925,
+			38,
+			47
+		},
+		alias = {
+			"ewok_magical_0050",
+			"ewok_magical_0057",
+			"ewok_magical_0058"
+		}
+	},
+	ewok_magical_0051 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			15,
+			0,
+			13,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			540,
+			925,
+			34,
+			49
+		},
+		alias = {
+			"ewok_magical_0052"
+		}
+	},
+	ewok_magical_0053 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			8,
+			10,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			500,
+			880,
+			38,
+			41
+		},
+		alias = {
+			"ewok_magical_0054"
+		}
+	},
+	ewok_magical_0055 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			13,
+			10,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			545,
+			880,
+			38,
+			36
+		},
+		alias = {
+			"ewok_magical_0056"
+		}
+	},
+	ewok_magical_0059 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			7,
+			8,
+			16,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			585,
+			880,
+			39,
+			41
+		},
+		alias = {
+			"ewok_magical_0060"
+		}
+	},
+	plant_magicBlosom_0001 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			42,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			267,
+			124,
+			58,
+			68
+		},
+		alias = {
+			"plant_magicBlosom_0002",
+			"plant_magicBlosom_0003",
+			"plant_magicBlosom_0019",
+			"plant_magicBlosom_0020",
+			"plant_magicBlosom_0021",
+			"plant_magicBlosom_0022",
+			"plant_magicBlosom_0023"
+		}
+	},
+	plant_magicBlosom_0004 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			42,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			331,
+			124,
+			58,
+			68
+		},
+		alias = {
+			"plant_magicBlosom_0005",
+			"plant_magicBlosom_0006"
+		}
+	},
+	plant_magicBlosom_0007 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			42,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			395,
+			124,
+			58,
+			68
+		},
+		alias = {
+			"plant_magicBlosom_0008",
+			"plant_magicBlosom_0009"
+		}
+	},
+	plant_magicBlosom_0010 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			42,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			459,
+			124,
+			58,
+			68
+		},
+		alias = {
+			"plant_magicBlosom_0011",
+			"plant_magicBlosom_0012"
+		}
+	},
+	plant_magicBlosom_0013 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			42,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			523,
+			124,
+			58,
+			68
+		},
+		alias = {
+			"plant_magicBlosom_0014",
+			"plant_magicBlosom_0015"
+		}
+	},
+	plant_magicBlosom_0016 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			42,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			587,
+			124,
+			58,
+			68
+		},
+		alias = {
+			"plant_magicBlosom_0017",
+			"plant_magicBlosom_0018"
+		}
+	},
+	plant_magicBlosom_0024 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			36,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			852,
+			58,
+			74
+		},
+		alias = {
+			"plant_magicBlosom_0025"
+		}
+	},
+	plant_magicBlosom_0026 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			31,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			767,
+			58,
+			79
+		},
+		alias = {
+			"plant_magicBlosom_0027"
+		}
+	},
+	plant_magicBlosom_0028 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			28,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			679,
+			58,
+			82
+		},
+		alias = {
+			"plant_magicBlosom_0029"
+		}
+	},
+	plant_magicBlosom_0030 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			23,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			404,
+			58,
+			87
+		},
+		alias = {
+			"plant_magicBlosom_0031"
+		}
+	},
+	plant_magicBlosom_0032 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			25,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			497,
+			58,
+			85
+		},
+		alias = {
+			"plant_magicBlosom_0033",
+			"plant_magicBlosom_0034",
+			"plant_magicBlosom_0035",
+			"plant_magicBlosom_0046"
+		}
+	},
+	plant_magicBlosom_0036 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			25,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			588,
+			58,
+			85
+		},
+		alias = {
+			"plant_magicBlosom_0037",
+			"plant_magicBlosom_0038",
+			"plant_magicBlosom_0039"
+		}
+	},
+	plant_magicBlosom_0040 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			25,
+			9,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			867,
+			59,
+			85
+		},
+		alias = {
+			"plant_magicBlosom_0041",
+			"plant_magicBlosom_0042"
+		}
+	},
+	plant_magicBlosom_0043 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			25,
+			9,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			124,
+			59,
+			85
+		},
+		alias = {
+			"plant_magicBlosom_0044",
+			"plant_magicBlosom_0045"
+		}
+	},
+	plant_magicBlosom_0047 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			35,
+			8,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			676,
+			60,
+			75
+		},
+		alias = {
+			"plant_magicBlosom_0048"
+		}
+	},
+	plant_magicBlosom_0049 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			37,
+			7,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			451,
+			61,
+			73
+		},
+		alias = {
+			"plant_magicBlosom_0050"
+		}
+	},
+	plant_magicBlosom_0051 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			6,
+			9,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			757,
+			59,
+			104
+		},
+		alias = {
+			"plant_magicBlosom_0052"
+		}
+	},
+	plant_magicBlosom_0053 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			1,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			289,
+			58,
+			109
+		},
+		alias = {
+			"plant_magicBlosom_0054"
+		}
+	},
+	plant_magicBlosom_0055 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			1,
+			8,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			561,
+			60,
+			109
+		},
+		alias = {
+			"plant_magicBlosom_0056"
+		}
+	},
+	plant_magicBlosom_0057 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			2,
+			7,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			224,
+			61,
+			108
+		},
+		alias = {
+			"plant_magicBlosom_0058"
+		}
+	},
+	plant_magicBlosom_0059 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			3,
+			7,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			338,
+			61,
+			107
+		},
+		alias = {
+			"plant_magicBlosom_0060"
+		}
+	},
+	plant_magicBlosom_0061 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			40,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			139,
+			124,
+			58,
+			70
+		},
+		alias = {
+			"plant_magicBlosom_0062"
+		}
+	},
+	plant_magicBlosom_0063 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			39,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			932,
+			58,
+			71
+		},
+		alias = {
+			"plant_magicBlosom_0064"
+		}
+	},
+	plant_magicBlosom_0065 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			0,
+			40,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			203,
+			124,
+			58,
+			70
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0001 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			6,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			469,
+			567,
+			21,
+			46
+		},
+		alias = {
+			"plant_magicBlosom_loaded2_0049"
+		}
+	},
+	plant_magicBlosom_loaded2_0002 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			6,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			469,
+			619,
+			21,
+			46
+		},
+		alias = {
+			"plant_magicBlosom_loaded2_0050"
+		}
+	},
+	plant_magicBlosom_loaded2_0003 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			6,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			469,
+			671,
+			21,
+			46
+		},
+		alias = {
+			"plant_magicBlosom_loaded2_0051"
+		}
+	},
+	plant_magicBlosom_loaded2_0004 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			7,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			469,
+			827,
+			21,
+			45
+		},
+		alias = {
+			"plant_magicBlosom_loaded2_0052"
+		}
+	},
+	plant_magicBlosom_loaded2_0005 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			7,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			469,
+			878,
+			21,
+			45
+		},
+		alias = {
+			"plant_magicBlosom_loaded2_0053"
+		}
+	},
+	plant_magicBlosom_loaded2_0006 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			7,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			469,
+			929,
+			21,
+			45
+		},
+		alias = {
+			"plant_magicBlosom_loaded2_0054"
+		}
+	},
+	plant_magicBlosom_loaded2_0007 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			7,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			496,
+			458,
+			21,
+			45
+		},
+		alias = {
+			"plant_magicBlosom_loaded2_0055"
+		}
+	},
+	plant_magicBlosom_loaded2_0008 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			19,
+			7,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			413,
+			895,
+			22,
+			45
+		},
+		alias = {
+			"plant_magicBlosom_loaded2_0056"
+		}
+	},
+	plant_magicBlosom_loaded2_0009 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			18,
+			6,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			892,
+			368,
+			23,
+			46
+		},
+		alias = {
+			"plant_magicBlosom_loaded2_0057"
+		}
+	},
+	plant_magicBlosom_loaded2_0010 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			17,
+			6,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			443,
+			368,
+			24,
+			46
+		},
+		alias = {
+			"plant_magicBlosom_loaded2_0058"
+		}
+	},
+	plant_magicBlosom_loaded2_0011 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			17,
+			5,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			413,
+			368,
+			24,
+			47
+		},
+		alias = {
+			"plant_magicBlosom_loaded2_0059"
+		}
+	},
+	plant_magicBlosom_loaded2_0012 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			16,
+			4,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			345,
+			727,
+			25,
+			48
+		},
+		alias = {
+			"plant_magicBlosom_loaded2_0060"
+		}
+	},
+	plant_magicBlosom_loaded2_0013 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			16,
+			7,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			345,
+			938,
+			25,
+			45
+		},
+		alias = {
+			"plant_magicBlosom_loaded2_0061"
+		}
+	},
+	plant_magicBlosom_loaded2_0014 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			16,
+			7,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			382,
+			368,
+			25,
+			45
+		},
+		alias = {
+			"plant_magicBlosom_loaded2_0062"
+		}
+	},
+	plant_magicBlosom_loaded2_0015 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			16,
+			7,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			382,
+			419,
+			25,
+			45
+		},
+		alias = {
+			"plant_magicBlosom_loaded2_0063"
+		}
+	},
+	plant_magicBlosom_loaded2_0016 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			17,
+			6,
+			23,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			345,
+			834,
+			25,
+			46
+		},
+		alias = {
+			"plant_magicBlosom_loaded2_0064"
+		}
+	},
+	plant_magicBlosom_loaded2_0017 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			18,
+			6,
+			23,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			473,
+			368,
+			24,
+			46
+		},
+		alias = {
+			"plant_magicBlosom_loaded2_0065"
+		}
+	},
+	plant_magicBlosom_loaded2_0018 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			19,
+			5,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			413,
+			790,
+			22,
+			47
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0019 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			4,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			469,
+			513,
+			21,
+			48
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0020 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			3,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			469,
+			458,
+			21,
+			49
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0021 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			2,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			442,
+			918,
+			21,
+			50
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0022 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			1,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			442,
+			690,
+			21,
+			51
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0023 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			1,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			442,
+			747,
+			21,
+			51
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0024 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			0,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			442,
+			458,
+			21,
+			52
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0025 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			0,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			442,
+			516,
+			21,
+			52
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0026 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			7,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			523,
+			458,
+			21,
+			45
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0027 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			7,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			550,
+			458,
+			21,
+			45
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0028 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			7,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			577,
+			458,
+			21,
+			45
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0029 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			7,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			604,
+			458,
+			21,
+			45
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0030 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			7,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			631,
+			458,
+			21,
+			45
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0031 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			6,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			469,
+			723,
+			21,
+			46
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0032 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			6,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			469,
+			775,
+			21,
+			46
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0033 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			19,
+			6,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			413,
+			843,
+			22,
+			46
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0034 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			18,
+			5,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			863,
+			368,
+			23,
+			47
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0035 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			17,
+			4,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			382,
+			895,
+			24,
+			48
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0036 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			17,
+			7,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			503,
+			368,
+			24,
+			45
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0037 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			16,
+			7,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			382,
+			470,
+			25,
+			45
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0038 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			16,
+			7,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			382,
+			521,
+			25,
+			45
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0039 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			16,
+			7,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			382,
+			572,
+			25,
+			45
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0040 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			16,
+			6,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			345,
+			886,
+			25,
+			46
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0041 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			17,
+			5,
+			23,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			345,
+			781,
+			25,
+			47
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0042 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			18,
+			4,
+			23,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			382,
+			949,
+			24,
+			48
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0043 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			19,
+			3,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			413,
+			735,
+			22,
+			49
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0044 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			2,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			442,
+			974,
+			21,
+			50
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0045 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			1,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			442,
+			804,
+			21,
+			51
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0046 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			1,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			442,
+			861,
+			21,
+			51
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0047 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			0,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			442,
+			574,
+			21,
+			52
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded2_0048 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			20,
+			0,
+			24,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			442,
+			632,
+			21,
+			52
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded_0001 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			2,
+			30,
+			8,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			139,
+			428,
+			55,
+			32
+		},
+		alias = {
+			"plant_magicBlosom_loaded_0002",
+			"plant_magicBlosom_loaded_0003"
+		}
+	},
+	plant_magicBlosom_loaded_0004 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			6,
+			28,
+			9,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			257,
+			200,
+			50,
+			34
+		},
+		alias = {
+			"plant_magicBlosom_loaded_0005",
+			"plant_magicBlosom_loaded_0006"
+		}
+	},
+	plant_magicBlosom_loaded_0007 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			7,
+			28,
+			6,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			139,
+			625,
+			52,
+			33
+		},
+		alias = {
+			"plant_magicBlosom_loaded_0008",
+			"plant_magicBlosom_loaded_0009"
+		}
+	},
+	plant_magicBlosom_loaded_0010 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			9,
+			30,
+			7,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			965,
+			171,
+			49,
+			23
+		},
+		alias = {
+			"plant_magicBlosom_loaded_0011",
+			"plant_magicBlosom_loaded_0012"
+		}
+	},
+	plant_magicBlosom_loaded_0013 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			12,
+			33,
+			5,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			139,
+			994,
+			48,
+			19
+		},
+		alias = {
+			"plant_magicBlosom_loaded_0014"
+		}
+	},
+	plant_magicBlosom_loaded_0015 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			12,
+			33,
+			2,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			903,
+			173,
+			51,
+			19
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded_0016 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			4,
+			32,
+			2,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			1000,
+			59,
+			20
+		},
+		alias = {
+			"plant_magicBlosom_loaded_0017"
+		}
+	},
+	plant_magicBlosom_loaded_0018 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			1,
+			32,
+			2,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			198,
+			62,
+			20
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded_0019 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			1,
+			31,
+			2,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			606,
+			97,
+			62,
+			21
+		},
+		alias = {
+			"plant_magicBlosom_loaded_0020"
+		}
+	},
+	plant_magicBlosom_loaded_0021 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			1,
+			31,
+			2,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			166,
+			62,
+			26
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded_0022 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			1,
+			32,
+			3,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			530,
+			61,
+			25
+		},
+		alias = {
+			"plant_magicBlosom_loaded_0023"
+		}
+	},
+	plant_magicBlosom_loaded_0024 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			1,
+			32,
+			5,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			253,
+			59,
+			30
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loaded_0025 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			1,
+			30,
+			5,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			74,
+			215,
+			59,
+			32
+		},
+		alias = {
+			"plant_magicBlosom_loaded_0026"
+		}
+	},
+	plant_magicBlosom_loading_0001 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			17,
+			23,
+			22,
+			61
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			345,
+			415,
+			29,
+			26
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loading_0002 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			17,
+			23,
+			25,
+			59
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			345,
+			625,
+			26,
+			28
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loading_0003 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			17,
+			23,
+			25,
+			59
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			345,
+			659,
+			26,
+			28
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loading_0004 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			17,
+			23,
+			26,
+			61
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			382,
+			863,
+			25,
+			26
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loading_0005 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			26,
+			31,
+			25,
+			61
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1006,
+			276,
+			17,
+			18
+		},
+		alias = {}
+	},
+	plant_magicBlosom_loading_0006 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			26,
+			21,
+			10,
+			61
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			498,
+			330,
+			32,
+			28
+		},
+		alias = {
+			"plant_magicBlosom_loading_0007"
+		}
+	},
+	plant_magicBlosom_loading_0008 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			28,
+			21,
+			10,
+			61
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			907,
+			330,
+			30,
+			28
+		},
+		alias = {
+			"plant_magicBlosom_loading_0009"
+		}
+	},
+	plant_magicBlosom_loading_0010 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			28,
+			28,
+			21,
+			61
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			762,
+			458,
+			19,
+			21
+		},
+		alias = {
+			"plant_magicBlosom_loading_0011",
+			"plant_magicBlosom_loading_0012"
+		}
+	},
+	plant_magicBlosom_loading_0013 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			28,
+			29,
+			24,
+			60
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			811,
+			458,
+			16,
+			21
+		},
+		alias = {
+			"plant_magicBlosom_loading_0014"
+		}
+	},
+	plant_magicBlosom_loading_0015 = {
+		a_name = "go_tower_ewok_magical.png",
+		size = {
+			68,
+			110
+		},
+		trim = {
+			30,
+			26,
+			22,
+			61
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1008,
+			368,
+			16,
+			23
+		},
+		alias = {
+			"plant_magicBlosom_loading_0016"
+		}
+	},
+---侏儒花园
+	plant_venom_0001 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			42,
+			20,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			344,
+			483,
+			86,
+			65
+		},
+		alias = {
+			"plant_venom_0050",
+			"plant_venom_0051",
+			"plant_venom_0054",
+			"plant_venom_0055",
+			"plant_venom_0056",
+			"plant_venom_0077",
+			"plant_venom_0078"
+		}
+	},
+	plant_venom_0002 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			47,
+			18,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			922,
+			181,
+			88,
+			60
+		},
+		alias = {
+			"plant_venom_0003"
+		}
+	},
+	plant_venom_0004 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			49,
+			17,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			357,
+			6,
+			89,
+			58
+		},
+		alias = {
+			"plant_venom_0005"
+		}
+	},
+	plant_venom_0006 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			50,
+			17,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			452,
+			6,
+			89,
+			57
+		},
+		alias = {
+			"plant_venom_0007"
+		}
+	},
+	plant_venom_0008 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			37,
+			22,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			344,
+			930,
+			84,
+			70
+		},
+		alias = {
+			"plant_venom_0009"
+		}
+	},
+	plant_venom_0010 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			32,
+			22,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			344,
+			849,
+			84,
+			75
+		},
+		alias = {
+			"plant_venom_0011"
+		}
+	},
+	plant_venom_0012 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			25,
+			20,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			899,
+			270,
+			86,
+			82
+		},
+		alias = {
+			"plant_venom_0013"
+		}
+	},
+	plant_venom_0014 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			20,
+			20,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			807,
+			270,
+			86,
+			87
+		},
+		alias = {
+			"plant_venom_0015"
+		}
+	},
+	plant_venom_0016 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			15,
+			19,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			530,
+			270,
+			87,
+			92
+		},
+		alias = {
+			"plant_venom_0017"
+		}
+	},
+	plant_venom_0018 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			12,
+			18,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			245,
+			889,
+			88,
+			95
+		},
+		alias = {
+			"plant_venom_0019"
+		}
+	},
+	plant_venom_0020 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			9,
+			18,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			245,
+			682,
+			88,
+			98
+		},
+		alias = {
+			"plant_venom_0021"
+		}
+	},
+	plant_venom_0022 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			8,
+			18,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			245,
+			577,
+			88,
+			99
+		},
+		alias = {
+			"plant_venom_0023"
+		}
+	},
+	plant_venom_0024 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			7,
+			18,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			245,
+			471,
+			88,
+			100
+		},
+		alias = {
+			"plant_venom_0025"
+		}
+	},
+	plant_venom_0026 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			3,
+			20,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			344,
+			373,
+			86,
+			104
+		},
+		alias = {
+			"plant_venom_0027"
+		}
+	},
+	plant_venom_0028 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			2,
+			21,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			344,
+			554,
+			85,
+			105
+		},
+		alias = {
+			"plant_venom_0029"
+		}
+	},
+	plant_venom_0030 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			1,
+			22,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			344,
+			737,
+			84,
+			106
+		},
+		alias = {
+			"plant_venom_0031"
+		}
+	},
+	plant_venom_0032 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			11,
+			20,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			623,
+			270,
+			86,
+			96
+		},
+		alias = {
+			"plant_venom_0033"
+		}
+	},
+	plant_venom_0034 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			8,
+			46,
+			8,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			825,
+			71,
+			108,
+			61
+		},
+		alias = {
+			"plant_venom_0035"
+		}
+	},
+	plant_venom_0036 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			1,
+			48,
+			1,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			6,
+			122,
+			59
+		},
+		alias = {
+			"plant_venom_0037",
+			"plant_venom_0040",
+			"plant_venom_0041",
+			"plant_venom_0044",
+			"plant_venom_0045"
+		}
+	},
+	plant_venom_0038 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			2,
+			48,
+			2,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			134,
+			6,
+			120,
+			59
+		},
+		alias = {
+			"plant_venom_0039",
+			"plant_venom_0042",
+			"plant_venom_0043",
+			"plant_venom_0046",
+			"plant_venom_0047"
+		}
+	},
+	plant_venom_0048 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			16,
+			46,
+			16,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			445,
+			181,
+			92,
+			61
+		},
+		alias = {
+			"plant_venom_0049"
+		}
+	},
+	plant_venom_0052 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			40,
+			23,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			526,
+			373,
+			83,
+			67
+		},
+		alias = {
+			"plant_venom_0053"
+		}
+	},
+	plant_venom_0057 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			41,
+			21,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			344,
+			665,
+			85,
+			66
+		},
+		alias = {
+			"plant_venom_0058",
+			"plant_venom_0075",
+			"plant_venom_0076"
+		}
+	},
+	plant_venom_0059 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			11,
+			40,
+			8,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			132,
+			457,
+			105,
+			67
+		},
+		alias = {
+			"plant_venom_0060"
+		}
+	},
+	plant_venom_0061 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			6,
+			39,
+			3,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			262,
+			115,
+			68
+		},
+		alias = {
+			"plant_venom_0062"
+		}
+	},
+	plant_venom_0063 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			9,
+			37,
+			6,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			596,
+			71,
+			109,
+			70
+		},
+		alias = {
+			"plant_venom_0064"
+		}
+	},
+	plant_venom_0065 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			12,
+			36,
+			9,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			132,
+			623,
+			103,
+			71
+		},
+		alias = {
+			"plant_venom_0066"
+		}
+	},
+	plant_venom_0067 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			17,
+			36,
+			14,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			181,
+			93,
+			71
+		},
+		alias = {
+			"plant_venom_0068"
+		}
+	},
+	plant_venom_0069 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			37,
+			17,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			639,
+			181,
+			89,
+			70
+		},
+		alias = {
+			"plant_venom_0070"
+		}
+	},
+	plant_venom_0071 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			39,
+			18,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			828,
+			181,
+			88,
+			68
+		},
+		alias = {
+			"plant_venom_0072"
+		}
+	},
+	plant_venom_0073 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			40,
+			22,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			436,
+			373,
+			84,
+			67
+		},
+		alias = {
+			"plant_venom_0074"
+		}
+	},
+	plant_venom_0079 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			11,
+			20,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			715,
+			270,
+			86,
+			96
+		},
+		alias = {
+			"plant_venom_0080",
+			"plant_venom_0091",
+			"plant_venom_0092"
+		}
+	},
+	plant_venom_0081 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			10,
+			19,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			344,
+			270,
+			87,
+			97
+		},
+		alias = {
+			"plant_venom_0082",
+			"plant_venom_0089",
+			"plant_venom_0090"
+		}
+	},
+	plant_venom_0083 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			10,
+			19,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			437,
+			270,
+			87,
+			97
+		},
+		alias = {
+			"plant_venom_0084",
+			"plant_venom_0087",
+			"plant_venom_0088"
+		}
+	},
+	plant_venom_0085 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			124,
+			107
+		},
+		trim = {
+			18,
+			10,
+			18,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			245,
+			786,
+			88,
+			97
+		},
+		alias = {
+			"plant_venom_0086"
+		}
+	},
+	plant_venom_particles_0001 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			23,
+			28
+		},
+		trim = {
+			4,
+			8,
+			0,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			922,
+			247,
+			19,
+			17
+		},
+		alias = {
+			"plant_venom_particles_0002"
+		}
+	},
+	plant_venom_particles_0003 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			23,
+			28
+		},
+		trim = {
+			1,
+			6,
+			0,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			481,
+			155,
+			22,
+			20
+		},
+		alias = {
+			"plant_venom_particles_0004"
+		}
+	},
+	plant_venom_particles_0005 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			23,
+			28
+		},
+		trim = {
+			1,
+			6,
+			5,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			582,
+			811,
+			17,
+			21
+		},
+		alias = {
+			"plant_venom_particles_0006"
+		}
+	},
+	plant_venom_particles_0007 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			23,
+			28
+		},
+		trim = {
+			4,
+			5,
+			3,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			675,
+			895,
+			16,
+			22
+		},
+		alias = {
+			"plant_venom_particles_0008"
+		}
+	},
+	plant_venom_particles_0009 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			23,
+			28
+		},
+		trim = {
+			4,
+			9,
+			1,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			369,
+			1006,
+			18,
+			18
+		},
+		alias = {
+			"plant_venom_particles_0010"
+		}
+	},
+	plant_venom_particles_0011 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			23,
+			28
+		},
+		trim = {
+			0,
+			7,
+			1,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			537,
+			155,
+			22,
+			19
+		},
+		alias = {
+			"plant_venom_particles_0012"
+		}
+	},
+	plant_venom_particles_0013 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			23,
+			28
+		},
+		trim = {
+			0,
+			6,
+			1,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			509,
+			155,
+			22,
+			20
+		},
+		alias = {
+			"plant_venom_particles_0014"
+		}
+	},
+	plant_venom_particles_0015 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			23,
+			28
+		},
+		trim = {
+			1,
+			4,
+			1,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			939,
+			155,
+			21,
+			20
+		},
+		alias = {
+			"plant_venom_particles_0016"
+		}
+	},
+	plant_venom_particles_0017 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			23,
+			28
+		},
+		trim = {
+			2,
+			3,
+			1,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			634,
+			524,
+			20,
+			19
+		},
+		alias = {
+			"plant_venom_particles_0018"
+		}
+	},
+	plant_venom_particles_0019 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			23,
+			28
+		},
+		trim = {
+			0,
+			1,
+			1,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			666,
+			147,
+			22,
+			23
+		},
+		alias = {
+			"plant_venom_particles_0020"
+		}
+	},
+	plant_venom_particles_0021 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			23,
+			28
+		},
+		trim = {
+			0,
+			0,
+			0,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			98,
+			987,
+			23,
+			25
+		},
+		alias = {
+			"plant_venom_particles_0022"
+		}
+	},
+	plant_venom_particles_0023 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			23,
+			28
+		},
+		trim = {
+			1,
+			9,
+			0,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			565,
+			155,
+			22,
+			16
+		},
+		alias = {
+			"plant_venom_particles_0024"
+		}
+	},
+	plant_venom_smoke_down_0001 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			53,
+			4,
+			44,
+			52
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			763,
+			446,
+			24,
+			45
+		},
+		alias = {}
+	},
+	plant_venom_smoke_down_0002 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			53,
+			4,
+			44,
+			52
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			793,
+			446,
+			24,
+			45
+		},
+		alias = {}
+	},
+	plant_venom_smoke_down_0003 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			53,
+			4,
+			41,
+			41
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			993,
+			373,
+			27,
+			56
+		},
+		alias = {}
+	},
+	plant_venom_smoke_down_0004 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			53,
+			4,
+			41,
+			41
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			730,
+			446,
+			27,
+			56
+		},
+		alias = {}
+	},
+	plant_venom_smoke_down_0005 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			49,
+			4,
+			33,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			640,
+			446,
+			39,
+			68
+		},
+		alias = {}
+	},
+	plant_venom_smoke_down_0006 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			49,
+			4,
+			33,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			685,
+			446,
+			39,
+			68
+		},
+		alias = {}
+	},
+	plant_venom_smoke_down_0007 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			46,
+			4,
+			23,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			524,
+			446,
+			52,
+			72
+		},
+		alias = {}
+	},
+	plant_venom_smoke_down_0008 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			46,
+			4,
+			23,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			582,
+			446,
+			52,
+			72
+		},
+		alias = {}
+	},
+	plant_venom_smoke_down_0009 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			42,
+			4,
+			21,
+			21
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			436,
+			874,
+			58,
+			76
+		},
+		alias = {}
+	},
+	plant_venom_smoke_down_0010 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			42,
+			4,
+			21,
+			21
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			518,
+			524,
+			58,
+			76
+		},
+		alias = {}
+	},
+	plant_venom_smoke_down_0011 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			34,
+			4,
+			18,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			436,
+			703,
+			69,
+			80
+		},
+		alias = {}
+	},
+	plant_venom_smoke_down_0012 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			34,
+			5,
+			18,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			436,
+			789,
+			69,
+			79
+		},
+		alias = {}
+	},
+	plant_venom_smoke_down_0013 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			29,
+			5,
+			16,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			436,
+			614,
+			76,
+			83
+		},
+		alias = {}
+	},
+	plant_venom_smoke_down_0014 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			29,
+			4,
+			16,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			436,
+			524,
+			76,
+			84
+		},
+		alias = {}
+	},
+	plant_venom_smoke_down_0015 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			26,
+			20,
+			13,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			436,
+			446,
+			82,
+			72
+		},
+		alias = {
+			"plant_venom_smoke_down_0016"
+		}
+	},
+	plant_venom_smoke_down_0017 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			25,
+			18,
+			11,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			939,
+			71,
+			85,
+			78
+		},
+		alias = {
+			"plant_venom_smoke_down_0018"
+		}
+	},
+	plant_venom_smoke_down_0019 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			22,
+			17,
+			9,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			543,
+			181,
+			90,
+			83
+		},
+		alias = {
+			"plant_venom_smoke_down_0020"
+		}
+	},
+	plant_venom_smoke_down_0021 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			20,
+			16,
+			6,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			245,
+			181,
+			95,
+			83
+		},
+		alias = {
+			"plant_venom_smoke_down_0022"
+		}
+	},
+	plant_venom_smoke_down_0023 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			18,
+			15,
+			5,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			132,
+			863,
+			98,
+			84
+		},
+		alias = {
+			"plant_venom_smoke_down_0024"
+		}
+	},
+	plant_venom_smoke_down_0025 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			16,
+			13,
+			4,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			132,
+			771,
+			101,
+			86
+		},
+		alias = {
+			"plant_venom_smoke_down_0026"
+		}
+	},
+	plant_venom_smoke_down_0027 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			15,
+			12,
+			3,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			132,
+			530,
+			103,
+			87
+		},
+		alias = {
+			"plant_venom_smoke_down_0028"
+		}
+	},
+	plant_venom_smoke_down_0029 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			13,
+			11,
+			2,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			132,
+			284,
+			106,
+			88
+		},
+		alias = {
+			"plant_venom_smoke_down_0030"
+		}
+	},
+	plant_venom_smoke_down_0031 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			12,
+			9,
+			1,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			711,
+			71,
+			108,
+			90
+		},
+		alias = {
+			"plant_venom_smoke_down_0032"
+		}
+	},
+	plant_venom_smoke_down_0033 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			11,
+			8,
+			0,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			71,
+			110,
+			91
+		},
+		alias = {
+			"plant_venom_smoke_down_0034"
+		}
+	},
+	plant_venom_smoke_down_0035 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			10,
+			7,
+			23,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			734,
+			181,
+			88,
+			76
+		},
+		alias = {
+			"plant_venom_smoke_down_0036"
+		}
+	},
+	plant_venom_smoke_down_0037 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			48,
+			13,
+			21,
+			34
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			809,
+			373,
+			52,
+			54
+		},
+		alias = {
+			"plant_venom_smoke_down_0038"
+		}
+	},
+	plant_venom_smoke_down_0039 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			47,
+			13,
+			21,
+			34
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			750,
+			373,
+			53,
+			54
+		},
+		alias = {
+			"plant_venom_smoke_down_0040"
+		}
+	},
+	plant_venom_smoke_down_0041 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			121,
+			101
+		},
+		trim = {
+			46,
+			11,
+			19,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			968,
+			6,
+			56,
+			57
+		},
+		alias = {
+			"plant_venom_smoke_down_0042"
+		}
+	},
+	plant_venom_smoke_fill = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			101,
+			73
+		},
+		trim = {
+			5,
+			0,
+			1,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			132,
+			953,
+			95,
+			68
+		},
+		alias = {}
+	},
+	plant_venom_smoke_left_0001 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			91,
+			53,
+			1,
+			40
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			987,
+			43,
+			17
+		},
+		alias = {
+			"plant_venom_smoke_left_0002"
+		}
+	},
+	plant_venom_smoke_left_0003 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			60,
+			41,
+			1,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			816,
+			22,
+			74,
+			38
+		},
+		alias = {
+			"plant_venom_smoke_left_0004"
+		}
+	},
+	plant_venom_smoke_left_0005 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			43,
+			31,
+			1,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			260,
+			6,
+			91,
+			55
+		},
+		alias = {
+			"plant_venom_smoke_left_0006"
+		}
+	},
+	plant_venom_smoke_left_0007 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			32,
+			25,
+			1,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			132,
+			700,
+			102,
+			65
+		},
+		alias = {
+			"plant_venom_smoke_left_0008"
+		}
+	},
+	plant_venom_smoke_left_0009 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			28,
+			22,
+			1,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			132,
+			378,
+			106,
+			73
+		},
+		alias = {
+			"plant_venom_smoke_left_0010"
+		}
+	},
+	plant_venom_smoke_left_0011 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			25,
+			19,
+			1,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			481,
+			71,
+			109,
+			78
+		},
+		alias = {
+			"plant_venom_smoke_left_0012"
+		}
+	},
+	plant_venom_smoke_left_0013 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			21,
+			16,
+			1,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			336,
+			113,
+			83
+		},
+		alias = {
+			"plant_venom_smoke_left_0014"
+		}
+	},
+	plant_venom_smoke_left_0015 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			17,
+			14,
+			1,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			169,
+			117,
+			87
+		},
+		alias = {
+			"plant_venom_smoke_left_0016"
+		}
+	},
+	plant_venom_smoke_left_0017 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			13,
+			11,
+			2,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			71,
+			120,
+			92
+		},
+		alias = {
+			"plant_venom_smoke_left_0018"
+		}
+	},
+	plant_venom_smoke_left_0019 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			9,
+			8,
+			19,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			132,
+			181,
+			107,
+			97
+		},
+		alias = {
+			"plant_venom_smoke_left_0020"
+		}
+	},
+	plant_venom_smoke_left_0021 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			6,
+			6,
+			19,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			249,
+			71,
+			110,
+			101
+		},
+		alias = {
+			"plant_venom_smoke_left_0022"
+		}
+	},
+	plant_venom_smoke_left_0023 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			4,
+			5,
+			20,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			132,
+			71,
+			111,
+			104
+		},
+		alias = {
+			"plant_venom_smoke_left_0024"
+		}
+	},
+	plant_venom_smoke_left_0025 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			4,
+			4,
+			20,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			651,
+			111,
+			106
+		},
+		alias = {
+			"plant_venom_smoke_left_0026"
+		}
+	},
+	plant_venom_smoke_left_0027 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			3,
+			3,
+			21,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			763,
+			111,
+			106
+		},
+		alias = {
+			"plant_venom_smoke_left_0028"
+		}
+	},
+	plant_venom_smoke_left_0029 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			2,
+			2,
+			22,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			425,
+			111,
+			107
+		},
+		alias = {
+			"plant_venom_smoke_left_0030"
+		}
+	},
+	plant_venom_smoke_left_0031 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			1,
+			1,
+			23,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			538,
+			111,
+			107
+		},
+		alias = {
+			"plant_venom_smoke_left_0032"
+		}
+	},
+	plant_venom_smoke_left_0033 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			0,
+			1,
+			24,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			6,
+			875,
+			111,
+			106
+		},
+		alias = {
+			"plant_venom_smoke_left_0034"
+		}
+	},
+	plant_venom_smoke_left_0035 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			18,
+			7,
+			25,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			245,
+			365,
+			92,
+			100
+		},
+		alias = {
+			"plant_venom_smoke_left_0036"
+		}
+	},
+	plant_venom_smoke_left_0037 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			16,
+			5,
+			26,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			245,
+			270,
+			93,
+			89
+		},
+		alias = {
+			"plant_venom_smoke_left_0038"
+		}
+	},
+	plant_venom_smoke_left_0039 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			46,
+			22,
+			28,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			683,
+			373,
+			61,
+			59
+		},
+		alias = {
+			"plant_venom_smoke_left_0040"
+		}
+	},
+	plant_venom_smoke_left_0041 = {
+		a_name = "go_stages_faerie_grove-1.png",
+		size = {
+			135,
+			110
+		},
+		trim = {
+			45,
+			21,
+			28,
+			30
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			615,
+			373,
+			62,
+			59
+		},
+		alias = {
+			"plant_venom_smoke_left_0042"
+		}
+	},	
+---树
+	paralyzingTree_0001 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			547,
+			459,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0002",
+			"paralyzingTree_0003",
+			"paralyzingTree_0004"
+		}
+	},
+	paralyzingTree_0005 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			547,
+			610,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0006",
+			"paralyzingTree_0007",
+			"paralyzingTree_0008"
+		}
+	},
+	paralyzingTree_0009 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			547,
+			761,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0010",
+			"paralyzingTree_0011",
+			"paralyzingTree_0012"
+		}
+	},
+	paralyzingTree_0013 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			705,
+			6,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0014",
+			"paralyzingTree_0015",
+			"paralyzingTree_0016"
+		}
+	},
+	paralyzingTree_0017 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			54,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			389,
+			766,
+			152,
+			145
+		},
+		alias = {
+			"paralyzingTree_0018",
+			"paralyzingTree_0019",
+			"paralyzingTree_0020"
+		}
+	},
+	paralyzingTree_0021 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			54,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			547,
+			6,
+			152,
+			145
+		},
+		alias = {
+			"paralyzingTree_0022",
+			"paralyzingTree_0023",
+			"paralyzingTree_0024"
+		}
+	},
+	paralyzingTree_0025 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			54,
+			35,
+			47,
+			61
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			201,
+			730,
+			152,
+			146
+		},
+		alias = {
+			"paralyzingTree_0026",
+			"paralyzingTree_0027",
+			"paralyzingTree_0028"
+		}
+	},
+	paralyzingTree_0029 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			54,
+			35,
+			47,
+			61
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			389,
+			6,
+			152,
+			146
+		},
+		alias = {
+			"paralyzingTree_0030",
+			"paralyzingTree_0031",
+			"paralyzingTree_0032"
+		}
+	},
+	paralyzingTree_0033 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			54,
+			35,
+			47,
+			61
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			389,
+			158,
+			152,
+			146
+		},
+		alias = {
+			"paralyzingTree_0034",
+			"paralyzingTree_0035",
+			"paralyzingTree_0036"
+		}
+	},
+	paralyzingTree_0037 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			54,
+			35,
+			47,
+			61
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			389,
+			310,
+			152,
+			146
+		},
+		alias = {
+			"paralyzingTree_0038",
+			"paralyzingTree_0039",
+			"paralyzingTree_0040"
+		}
+	},
+	paralyzingTree_0041 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			54,
+			35,
+			47,
+			61
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			389,
+			462,
+			152,
+			146
+		},
+		alias = {
+			"paralyzingTree_0042",
+			"paralyzingTree_0043",
+			"paralyzingTree_0044"
+		}
+	},
+	paralyzingTree_0045 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			54,
+			35,
+			47,
+			61
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			389,
+			614,
+			152,
+			146
+		},
+		alias = {
+			"paralyzingTree_0046",
+			"paralyzingTree_0047",
+			"paralyzingTree_0048"
+		}
+	},
+	paralyzingTree_0049 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			54,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			547,
+			157,
+			152,
+			145
+		},
+		alias = {
+			"paralyzingTree_0050",
+			"paralyzingTree_0051",
+			"paralyzingTree_0052"
+		}
+	},
+	paralyzingTree_0053 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			54,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			547,
+			308,
+			152,
+			145
+		},
+		alias = {
+			"paralyzingTree_0054",
+			"paralyzingTree_0055",
+			"paralyzingTree_0056"
+		}
+	},
+	paralyzingTree_0057 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			705,
+			157,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0058",
+			"paralyzingTree_0059",
+			"paralyzingTree_0060"
+		}
+	},
+	paralyzingTree_0061 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			705,
+			308,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0062",
+			"paralyzingTree_0063",
+			"paralyzingTree_0064"
+		}
+	},
+	paralyzingTree_0065 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			705,
+			459,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0066",
+			"paralyzingTree_0067",
+			"paralyzingTree_0068"
+		}
+	},
+	paralyzingTree_0069 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			705,
+			610,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0070",
+			"paralyzingTree_0071",
+			"paralyzingTree_0072"
+		}
+	},
+	paralyzingTree_0073 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			705,
+			761,
+			148,
+			145
+		},
+		alias = {}
+	},
+	paralyzingTree_0074 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			27,
+			22,
+			37,
+			30
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			6,
+			415,
+			189,
+			190
+		},
+		alias = {
+			"paralyzingTree_0075"
+		}
+	},
+	paralyzingTree_0076 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			27,
+			13,
+			37,
+			30
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			6,
+			6,
+			189,
+			199
+		},
+		alias = {
+			"paralyzingTree_0077"
+		}
+	},
+	paralyzingTree_0078 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			27,
+			14,
+			37,
+			30
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			6,
+			211,
+			189,
+			198
+		},
+		alias = {
+			"paralyzingTree_0079"
+		}
+	},
+	paralyzingTree_0080 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			29,
+			22,
+			39,
+			31
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			6,
+			611,
+			185,
+			189
+		},
+		alias = {
+			"paralyzingTree_0081"
+		}
+	},
+	paralyzingTree_0082 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			29,
+			30,
+			39,
+			31
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			6,
+			806,
+			185,
+			181
+		},
+		alias = {
+			"paralyzingTree_0083"
+		}
+	},
+	paralyzingTree_0084 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			30,
+			34,
+			41,
+			32
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			201,
+			6,
+			182,
+			176
+		},
+		alias = {
+			"paralyzingTree_0085"
+		}
+	},
+	paralyzingTree_0086 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			32,
+			34,
+			41,
+			32
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			201,
+			188,
+			180,
+			176
+		},
+		alias = {
+			"paralyzingTree_0087"
+		}
+	},
+	paralyzingTree_0088 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			32,
+			33,
+			44,
+			33
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			201,
+			370,
+			177,
+			176
+		},
+		alias = {
+			"paralyzingTree_0089"
+		}
+	},
+	paralyzingTree_0090 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			37,
+			35,
+			47,
+			35
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			201,
+			552,
+			169,
+			172
+		},
+		alias = {
+			"paralyzingTree_0091"
+		}
+	},
+	paralyzingTree_0092 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			859,
+			6,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0093"
+		}
+	},
+	paralyzingTree_0094 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			859,
+			157,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0095"
+		}
+	},
+	paralyzingTree_0096 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			859,
+			308,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0097"
+		}
+	},
+	paralyzingTree_0098 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			859,
+			459,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0099"
+		}
+	},
+	paralyzingTree_0100 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			859,
+			610,
+			148,
+			145
+		},
+		alias = {}
+	},
+	paralyzingTree_0101 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			859,
+			761,
+			148,
+			145
+		},
+		alias = {}
+	},
+	paralyzingTree_0102 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1013,
+			6,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0103"
+		}
+	},
+	paralyzingTree_0104 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1013,
+			157,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0105"
+		}
+	},
+	paralyzingTree_0106 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1013,
+			308,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0107"
+		}
+	},
+	paralyzingTree_0108 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1013,
+			459,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0109"
+		}
+	},
+	paralyzingTree_0110 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1013,
+			610,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0111"
+		}
+	},
+	paralyzingTree_0112 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1013,
+			761,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0113"
+		}
+	},
+	paralyzingTree_0114 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1167,
+			6,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0115"
+		}
+	},
+	paralyzingTree_0116 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1321,
+			6,
+			148,
+			145
+		},
+		alias = {
+			"paralyzingTree_0117",
+			"paralyzingTree_0118",
+			"paralyzingTree_0119",
+			"paralyzingTree_0120"
+		}
+	},
+	paralyzingTree_0121 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			253,
+			242
+		},
+		trim = {
+			58,
+			35,
+			47,
+			62
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1475,
+			6,
+			148,
+			145
+		},
+		alias = {}
+	},
+	paralyzingTree_particle0_0001 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			593,
+			959,
+			40,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle0_0002"
+		}
+	},
+	paralyzingTree_particle0_0003 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			639,
+			959,
+			40,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle0_0004"
+		}
+	},
+	paralyzingTree_particle0_0005 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			705,
+			912,
+			40,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle0_0006"
+		}
+	},
+	paralyzingTree_particle0_0007 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			705,
+			958,
+			40,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle0_0008"
+		}
+	},
+	paralyzingTree_particle0_0009 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			751,
+			912,
+			40,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle0_0010"
+		}
+	},
+	paralyzingTree_particle0_0011 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			797,
+			912,
+			40,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle0_0012"
+		}
+	},
+	paralyzingTree_particle0_0013 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			751,
+			958,
+			40,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle0_0014"
+		}
+	},
+	paralyzingTree_particle0_0015 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			797,
+			958,
+			40,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle0_0016"
+		}
+	},
+	paralyzingTree_particle0_0017 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			859,
+			912,
+			40,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle0_0018"
+		}
+	},
+	paralyzingTree_particle0_0019 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			859,
+			958,
+			40,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle0_0020"
+		}
+	},
+	paralyzingTree_particle0_0021 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			905,
+			912,
+			40,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle0_0022"
+		}
+	},
+	paralyzingTree_particle0_0023 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			951,
+			912,
+			40,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle0_0024"
+		}
+	},
+	paralyzingTree_particle0_0025 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			905,
+			958,
+			40,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle0_0026"
+		}
+	},
+	paralyzingTree_particle0_0027 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			951,
+			958,
+			40,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle0_0028"
+		}
+	},
+	paralyzingTree_particle0_0029 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			3,
+			2
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1809,
+			6,
+			38,
+			39
+		},
+		alias = {
+			"paralyzingTree_particle0_0030"
+		}
+	},
+	paralyzingTree_particle1_0001 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			436,
+			917,
+			40,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle1_0002"
+		}
+	},
+	paralyzingTree_particle1_0003 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			482,
+			917,
+			40,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle1_0004"
+		}
+	},
+	paralyzingTree_particle1_0005 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			251,
+			964,
+			41,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle1_0006"
+		}
+	},
+	paralyzingTree_particle1_0007 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			299,
+			921,
+			41,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle1_0008"
+		}
+	},
+	paralyzingTree_particle1_0009 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			299,
+			968,
+			41,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle1_0010"
+		}
+	},
+	paralyzingTree_particle1_0011 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			0,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			389,
+			917,
+			41,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle1_0012"
+		}
+	},
+	paralyzingTree_particle1_0013 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			436,
+			964,
+			40,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle1_0014"
+		}
+	},
+	paralyzingTree_particle1_0015 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			482,
+			964,
+			40,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle1_0016"
+		}
+	},
+	paralyzingTree_particle1_0017 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			547,
+			912,
+			40,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle1_0018"
+		}
+	},
+	paralyzingTree_particle1_0019 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			547,
+			959,
+			40,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle1_0020"
+		}
+	},
+	paralyzingTree_particle1_0021 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			593,
+			912,
+			40,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle1_0022"
+		}
+	},
+	paralyzingTree_particle1_0023 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			639,
+			912,
+			40,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle1_0024"
+		}
+	},
+	paralyzingTree_particle1_0025 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			2,
+			1,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1013,
+			912,
+			40,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle1_0026"
+		}
+	},
+	paralyzingTree_particle1_0027 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			2,
+			1,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1013,
+			958,
+			40,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle1_0028"
+		}
+	},
+	paralyzingTree_particle1_0029 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1059,
+			912,
+			40,
+			39
+		},
+		alias = {
+			"paralyzingTree_particle1_0030"
+		}
+	},
+	paralyzingTree_particle2_0001 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			2,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1059,
+			957,
+			39,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle2_0002"
+		}
+	},
+	paralyzingTree_particle2_0003 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			2,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1104,
+			957,
+			39,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle2_0004"
+		}
+	},
+	paralyzingTree_particle2_0005 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			2,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1629,
+			6,
+			39,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle2_0006"
+		}
+	},
+	paralyzingTree_particle2_0007 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			2,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1629,
+			53,
+			39,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle2_0008"
+		}
+	},
+	paralyzingTree_particle2_0009 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			2,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1629,
+			100,
+			39,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle2_0010"
+		}
+	},
+	paralyzingTree_particle2_0011 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			2,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1674,
+			6,
+			39,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle2_0012"
+		}
+	},
+	paralyzingTree_particle2_0013 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			2,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1674,
+			53,
+			39,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle2_0014"
+		}
+	},
+	paralyzingTree_particle2_0015 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			2,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1674,
+			100,
+			39,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle2_0016"
+		}
+	},
+	paralyzingTree_particle2_0017 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			2,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1719,
+			6,
+			39,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle2_0018"
+		}
+	},
+	paralyzingTree_particle2_0019 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			2,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1719,
+			53,
+			39,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle2_0020"
+		}
+	},
+	paralyzingTree_particle2_0021 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			2,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1719,
+			100,
+			39,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle2_0022"
+		}
+	},
+	paralyzingTree_particle2_0023 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			1,
+			2,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1764,
+			6,
+			39,
+			41
+		},
+		alias = {
+			"paralyzingTree_particle2_0024"
+		}
+	},
+	paralyzingTree_particle2_0025 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			2,
+			2,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1764,
+			53,
+			39,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle2_0026"
+		}
+	},
+	paralyzingTree_particle2_0027 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			2,
+			2,
+			0
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1764,
+			99,
+			39,
+			40
+		},
+		alias = {
+			"paralyzingTree_particle2_0028"
+		}
+	},
+	paralyzingTree_particle2_0029 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			42,
+			42
+		},
+		trim = {
+			1,
+			2,
+			3,
+			1
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1809,
+			51,
+			38,
+			39
+		},
+		alias = {
+			"paralyzingTree_particle2_0030"
+		}
+	},
+	paralyzingTree_stun_0001 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			11,
+			2,
+			12,
+			6
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1809,
+			96,
+			33,
+			37
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0002 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			10,
+			3,
+			12,
+			6
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			346,
+			921,
+			34,
+			36
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0003 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			10,
+			5,
+			13,
+			7
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			348,
+			882,
+			33,
+			33
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0004 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			10,
+			6,
+			22,
+			13
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			359,
+			730,
+			24,
+			26
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0005 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			9,
+			8,
+			22,
+			13
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			389,
+			995,
+			25,
+			24
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0006 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			8,
+			9,
+			7,
+			11
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			201,
+			998,
+			41,
+			25
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0007 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			8,
+			9,
+			7,
+			11
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			389,
+			964,
+			41,
+			25
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0008 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			8,
+			8,
+			6,
+			11
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			105,
+			993,
+			42,
+			26
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0009 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			7,
+			8,
+			6,
+			11
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			56,
+			993,
+			43,
+			26
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0010 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			8,
+			8,
+			6,
+			11
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			153,
+			993,
+			42,
+			26
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0011 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			8,
+			6,
+			4,
+			11
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			6,
+			993,
+			44,
+			28
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0012 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			8,
+			6,
+			4,
+			7
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			201,
+			921,
+			44,
+			32
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0013 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			9,
+			6,
+			3,
+			6
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			201,
+			882,
+			44,
+			33
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0014 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			9,
+			6,
+			4,
+			6
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			201,
+			959,
+			43,
+			33
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0015 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			9,
+			6,
+			4,
+			6
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			251,
+			882,
+			43,
+			33
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0016 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			10,
+			6,
+			4,
+			6
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			300,
+			882,
+			42,
+			33
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0017 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			10,
+			4,
+			4,
+			4
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			251,
+			921,
+			42,
+			37
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0018 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			11,
+			4,
+			6,
+			4
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1105,
+			912,
+			39,
+			37
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0019 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			19,
+			3,
+			6,
+			4
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1891,
+			6,
+			31,
+			38
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0020 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			18,
+			4,
+			6,
+			4
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1853,
+			97,
+			32,
+			37
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0021 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			18,
+			3,
+			6,
+			3
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1853,
+			52,
+			32,
+			39
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0022 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			17,
+			1,
+			6,
+			4
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			346,
+			968,
+			33,
+			40
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0023 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			17,
+			1,
+			7,
+			4
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1853,
+			6,
+			32,
+			40
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0024 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			17,
+			1,
+			11,
+			5
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1891,
+			95,
+			28,
+			39
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0025 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			16,
+			1,
+			11,
+			5
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1891,
+			50,
+			29,
+			39
+		},
+		alias = {}
+	},
+	paralyzingTree_stun_0026 = {
+		a_name = "go_stages_bittering_rancor-1.png",
+		size = {
+			56,
+			45
+		},
+		trim = {
+			17,
+			2,
+			11,
+			5
+		},
+		a_size = {
+			2048,
+			1024
+		},
+		f_quad = {
+			1928,
+			6,
+			28,
+			38
+		},
+		alias = {}
+	}																																											
 }
 
 return a 

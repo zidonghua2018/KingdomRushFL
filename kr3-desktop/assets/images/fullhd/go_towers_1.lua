@@ -30105,8 +30105,9 @@ return {
 			"g1_reinforce_B0_0016"
 		}
 	},
+ ---12.30修复贴图缺失   
 	g1_reinforce_B1_0001 = {
-		a_name = "go_towers-1.png",
+		a_name = "go_towers-2_mod.png",
 		size = {
 			126,
 			45
@@ -30122,8 +30123,8 @@ return {
 			2048
 		},
 		f_quad = {
-			2025,
-			1271,
+			2021,
+			669,
 			23,
 			32
 		},

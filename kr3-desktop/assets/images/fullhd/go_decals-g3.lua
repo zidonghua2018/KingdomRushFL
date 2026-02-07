@@ -5548,5 +5548,30 @@ return {
 		alias = {
 			"xin_hero_scream_soldierDecal_0024"
 		}
-	}
+	},
+---联盟的路径图标	
+	waveflag_path_arrow = {
+		a_name = "go_decals-1.dds",
+		size = {
+			40,
+			40
+		},
+		trim = {
+			11,
+			9,
+			10,
+			9
+		},
+		a_size = {
+			2048,
+			800
+		},
+		f_quad = {
+			1057,
+			608,
+			19,
+			22
+		},
+		alias = {}
+	},	
 }

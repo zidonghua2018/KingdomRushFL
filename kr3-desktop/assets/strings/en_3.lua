@@ -69,7 +69,7 @@ return {
 	CHEAT = "Golden Finger(Sell when not in use)",
 	CHEAT1 = "Functional Modes",
 	CHEAT_1 = "Immediately skip a wave",
-	CHEAT_2 = "Gain 6666 gold coins, 99 diamonds",
+	CHEAT_2 = "Gain 5000 gold coins, 99 diamonds",
 	CHEAT_3 = "Number of hearts to 99",
 	CHEAT_4 = "Suppresses all enemy movement",
 	CHEAT_5 = "High armor and 50% damage reduction for soldiers",
