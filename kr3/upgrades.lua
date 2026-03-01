@@ -1705,9 +1705,9 @@ function upgrades:patch_templates(max_level)
 		T("tower_dwaarp").attacks.list[1].damage_max = T("tower_dwaarp").attacks.list[1].damage_max * u.damage_factor
 		T("mod_teeth").dps.damage_min = T("mod_teeth").dps.damage_min * u.damage_factor
 		T("mod_teeth").dps.damage_max = T("mod_teeth").dps.damage_max * u.damage_factor
-		T("mod_ray_frankenstein").dps.damage_min = math.ceil(T("mod_ray_frankenstein").dps.damage_min * u.damage_factor)
-		T("mod_ray_frankenstein").dps.damage_max = math.ceil(T("mod_ray_frankenstein").dps.damage_max * u.damage_factor)
-		T("mod_ray_frankenstein").dps.damage_inc = math.ceil(T("mod_ray_frankenstein").dps.damage_inc * u.damage_factor)			
+		--T("mod_ray_frankenstein").dps.damage_min = math.ceil(T("mod_ray_frankenstein").dps.damage_min * u.damage_factor)
+		--T("mod_ray_frankenstein").dps.damage_max = math.ceil(T("mod_ray_frankenstein").dps.damage_max * u.damage_factor)
+		--T("mod_ray_frankenstein").dps.damage_inc = math.ceil(T("mod_ray_frankenstein").dps.damage_inc * u.damage_factor)			
 	end
 
 	u = self:get_upgrade("engineer_gnomish_tinkering")
@@ -2451,7 +2451,7 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("reinforcement_level_4")
 
-	if u and user_data.liuhui.reinforcement_5 ~= "dark" and game and game.store and game.store.level_idx and game.store.level_idx >= 101  then
+	if u and user_data.liuhui.reinforcement_5 ~= "dark" and game and game.store and game.store.level_idx and game.store.level_idx >= 101 and  game.store.level_idx <= 150 then
 		local portrait_idxs = {
 			31,
 			33
@@ -2469,7 +2469,8 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("reinforcement_level_4")
 
-	if u and user_data.liuhui.reinforcement_5 == "dark" and game and game.store and game.store.level_idx and game.store.level_idx >= 101  then
+	-- 只有5代关卡能生效
+	if u and user_data.liuhui.reinforcement_5 == "dark" and game and game.store and game.store.level_idx and game.store.level_idx >= 101 and game.store.level_idx <= 150 then
 		for i = 1, 1 do
 			local num = km.zmod(i, 2)
 			local t = T("soldier_reinforcement_shadow_archer_0" .. num)
@@ -2486,7 +2487,7 @@ function upgrades:patch_templates(max_level)
 	end
 
 	--出口科技
-	if game and game.store and game.store.level_idx and game.store.level_idx >= 101 then
+	if game and game.store and game.store.level_idx and game.store.level_idx >= 101 and game.store.level_idx <= 159 then
 			c_upg = E:create_entity("controller_upgrades_alliance")
 			c_upg.seal = "decal_upgrade_alliance_seal_of_punishment"
 			c_upg.coil = "decal_upgrade_alliance_flux_altering_coils"

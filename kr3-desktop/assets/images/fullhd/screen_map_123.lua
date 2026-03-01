@@ -4287,6 +4287,22 @@ return {
         f_quad = {7,1904,158,136},
         alias = {}
     },
+    ["mapButtons-notxt_0400"] = {
+        a_name = "kr4_notxt.png",
+        size = {226,184},
+        trim = {33,26,35,26},
+        a_size = {227,337},
+        f_quad = {38,15,158,132},
+        alias = {}
+    },
+    ["mapButtons-notxt_0401"] = {
+        a_name = "kr4_notxt.png",
+        size = {226,184},
+        trim = {33,26,35,22},
+        a_size = {227,337},
+        f_quad = {34,178,158,136},
+        alias = {}
+    },
     ["mapButtons-notxt_0500"] = {
         a_name = "kr5_notxt.png",
         size = {226,184},

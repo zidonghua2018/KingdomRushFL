@@ -24,7 +24,9 @@ local timer = require("hump.timer")
 local utf8 = require("utf8")
 local balance = require("balance/balance")
 --local screen_map_classes = require("screen_map_classes")
-local achievements_data, map_data
+local achievements_data
+local map_data = require("data.map_data")
+
 
 local function T(name)
 	return E:get_template(name)
@@ -71,6 +73,7 @@ screen_map.required_textures = {
 	"encyclopedia_thumbs",
 	"encyclopedia_towers",
 	"encyclopedia_creeps",
+	"kr4_level_thumbs",
 	"kr5_level_thumbs",
 	--"ultimate45",
 	--"kr4_herogui",
@@ -232,16 +235,16 @@ function screen_map:init(w, h, done_callback)
 	E:load()
 
 	--坐标切换.注意kr5的大小是2432*1368，放到前3代缩小到了1920*1080
-	local points_data = require("data.map_points")
+	local points_data
 	-- GS.level_ranges = GS.level_ranges3
 	-- GS.last_level = GS.last_level3
 	local generation = 3
 
+	if self.kr1_map == false and self.kr2_map == false and self.kr3_map == false and self.kr4_map == false and self.kr5_map == false then
+		self.kr3_map = true
+	end
 
-	if self.kr3_map == true then
-		local points_data = require("data.map_points")
-		local generation = 3
-	elseif self.kr1_map == true then
+	if self.kr1_map == true then
 		points_data = require("data.map_points1")
 		generation = 1
 
@@ -251,7 +254,12 @@ function screen_map:init(w, h, done_callback)
 	elseif self.kr5_map == true then
 		points_data = require("data.map_points5")
 		generation = 5
-
+	elseif self.kr4_map == true then
+		points_data = require("data.map_points4")
+		generation = 4
+	else
+		points_data = require("data.map_points")--3代
+		local generation = 3
 	end
 
 	local ppl = {}
@@ -523,7 +531,7 @@ function screen_map:init(w, h, done_callback)
 	local change_button1 = GGButton:new("mapButtons-notxt_0013", "mapButtons-notxt_0014")
 
 	change_button1.anchor = v(change_button1.size.x / 2, change_button1.size.y / 2)
-	change_button1.pos = v(a_button.pos.x - 1190, sh - 90)
+	change_button1.pos = v(a_button.pos.x - 1360, sh - 90)
 
 	function change_button1.on_click(this, button, x, y)
 
@@ -533,6 +541,7 @@ function screen_map:init(w, h, done_callback)
 			S:queue("GUIButtonCommon")
 			self.kr3_map = false
 			self.kr2_map = false
+			self.kr4_map = false
 			self.kr5_map = false
 			self.kr1_map = true
 			timer.clear()
@@ -553,7 +562,7 @@ function screen_map:init(w, h, done_callback)
 	local change_button2 = GGButton:new("mapButtons-notxt_0015", "mapButtons-notxt_0016")
 
 	change_button2.anchor = v(change_button2.size.x / 2, change_button2.size.y / 2)
-	change_button2.pos = v(a_button.pos.x - 1020, sh - 90)
+	change_button2.pos = v(a_button.pos.x - 1190, sh - 90)
 
 	function change_button2.on_click(this, button, x, y)
 
@@ -564,6 +573,7 @@ function screen_map:init(w, h, done_callback)
 			self.kr3_map = false
 			self.kr2_map = true
 			self.kr5_map = false
+			self.kr4_map = false
 			self.kr1_map = false
 			timer.clear()
 			screen_map:init(w, h, done_callback)
@@ -580,6 +590,38 @@ function screen_map:init(w, h, done_callback)
 
 	self.window:add_child(change_button2)
 
+	local change_button4 = GGButton:new("mapButtons-notxt_0400", "mapButtons-notxt_0401")
+
+	change_button4.anchor = v(change_button4.size.x / 2, change_button4.size.y / 2)
+	change_button4.pos = v(a_button.pos.x - 850, sh - 90)
+	--change_button5.scale = v(2,2)
+
+	function change_button4.on_click(this, button, x, y)
+
+		if self.kr4_map then
+
+		else
+			S:queue("GUIButtonCommon")
+			self.kr3_map = false
+			self.kr2_map = false
+			self.kr5_map = false
+			self.kr4_map = true
+			self.kr1_map = false
+			timer.clear()
+			screen_map:init(w, h, done_callback)
+		end
+	end
+	
+	change_button4.label.pos = v(50, 121)
+	change_button4.label.size = v(126, 30)
+	change_button4.label.text_size = change_button4.label.size
+	change_button4.label.font_size = 18
+	change_button4.label.vertical_align = CJK("middle", "top", nil, "top")
+	change_button4.label.text = _("Vegnance")
+	change_button4.label.fit_lines = 1
+	self.window:add_child(change_button4)
+
+
 	local change_button5 = GGButton:new("mapButtons-notxt_0500", "mapButtons-notxt_0501")
 
 	change_button5.anchor = v(change_button5.size.x / 2, change_button5.size.y / 2)
@@ -594,6 +636,7 @@ function screen_map:init(w, h, done_callback)
 			S:queue("GUIButtonCommon")
 			self.kr3_map = false
 			self.kr2_map = false
+			self.kr4_map = false
 			self.kr5_map = true
 			self.kr1_map = false
 			timer.clear()
@@ -613,7 +656,7 @@ function screen_map:init(w, h, done_callback)
 	local change_button3 = GGButton:new("mapButtons-notxt_0017", "mapButtons-notxt_0018")
 
 	change_button3.anchor = v(change_button3.size.x / 2, change_button3.size.y / 2)
-	change_button3.pos = v(a_button.pos.x - 850, sh - 90)
+	change_button3.pos = v(a_button.pos.x - 1020, sh - 90)
 
 	function change_button3.on_click(this, button, x, y)
 
@@ -624,6 +667,7 @@ function screen_map:init(w, h, done_callback)
 			self.kr3_map = true
 			self.kr2_map = false
 			self.kr5_map = false
+			self.kr4_map = false
 			self.kr1_map = false
 			timer.clear()
 			screen_map:init(w, h, done_callback)
@@ -641,6 +685,7 @@ function screen_map:init(w, h, done_callback)
 	self.change_button1 = change_button1
 	self.change_button2 = change_button2
 	self.change_button3 = change_button3
+	self.change_button4 = change_button4
 	self.change_button5 = change_button5
 	self.window:add_child(change_button3)
 
@@ -657,7 +702,7 @@ function screen_map:init(w, h, done_callback)
 
 	local double_hero_room = GGButton:new("screen_map_button_map_heroes_0001", "screen_map_button_map_heroes_0001")
 	double_hero_room.anchor = v(double_hero_room.size.x / 2, double_hero_room.size.y / 2)
-	double_hero_room.pos = v(270, sh - 90)
+	double_hero_room.pos = v(100, sh - 250)
 	double_hero_room.scale = v(1,1)
 	function double_hero_room.on_click(this, button, x, y)
 		S:queue("GUIButtonCommon")
@@ -665,7 +710,6 @@ function screen_map:init(w, h, done_callback)
 	end
 	self.double_hero_room = double_hero_room
 	self.window:add_child(double_hero_room)
-
 
 	local u_button = GGButton:new("mapButtons-notxt_0010", "mapButtons-notxt_0011")
 
@@ -991,6 +1035,8 @@ function screen_map:init(w, h, done_callback)
 		S:queue("MusicMap2")
 	elseif self.kr5_map then
 		S:queue("MusicMap5")
+	elseif self.kr4_map then
+		S:queue("MusicMap4")
 	else
 		S:queue("MusicMap")
 	end
@@ -1073,6 +1119,7 @@ function screen_map:keypressed(key, isrepeat)
 			self.window:remove_child(self.change_button1)
 			self.window:remove_child(self.change_button2)
 			self.window:remove_child(self.change_button3)
+			self.window:remove_child(self.change_button4)
 			self.window:remove_child(self.change_button5)
 			self.window:remove_child(self.hero_but)
 			self.window:remove_child(self.skill_star)
@@ -1090,6 +1137,7 @@ function screen_map:keypressed(key, isrepeat)
 			self.window:add_child(self.change_button1)
 			self.window:add_child(self.change_button2)
 			self.window:add_child(self.change_button3)
+			self.window:add_child(self.change_button4)
 			self.window:add_child(self.change_button5)
 			self.window:add_child(self.hero_but)
 			self.window:add_child(self.skill_star)
@@ -1472,6 +1520,65 @@ function MapView:initialize(screen_w, screen_h)
 
 		self:load_map_animations(5)
 		self:show_flags(5)
+	elseif screen_map.kr4_map then
+		KImageView.initialize(self, "MapBackground_kr4")
+
+		self.screen_w = screen_w
+		self.screen_h = screen_h
+		self.stime = 0
+		self.max_scroll_speed = 280
+		self.scrolling_dir = 0
+		self.ma_under_layer = KView:new(V.v(screen_w, screen_h))
+		self.ma_under_layer.propagate_on_click = true
+		self.ma_under_layer.propagate_on_down = true
+		self.ma_under_layer.propagate_on_up = true
+
+		self:add_child(self.ma_under_layer)
+
+		self.points_layer = KView:new(V.v(screen_w, screen_h))
+		self.points_layer.propagate_on_click = true
+		self.points_layer.propagate_on_down = true
+		self.points_layer.propagate_on_up = true
+
+		self:add_child(self.points_layer)
+
+		self.ma_mid_layer = KView:new(V.v(screen_w, screen_h))
+		self.ma_mid_layer.propagate_on_click = true
+		self.ma_mid_layer.propagate_on_down = true
+		self.ma_mid_layer.propagate_on_up = true
+
+		self:add_child(self.ma_mid_layer)
+
+		self.flags_layer = KView:new(V.v(screen_w, screen_h))
+		self.flags_layer.propagate_on_click = true
+		self.flags_layer.propagate_on_down = true
+		self.flags_layer.propagate_on_up = true
+
+		self:add_child(self.flags_layer)
+
+		self.ma_over_layer = KView:new(V.v(screen_w, screen_h))
+		self.ma_over_layer.propagate_on_click = true
+		self.ma_over_layer.propagate_on_down = true
+		self.ma_over_layer.propagate_on_up = true
+
+		self:add_child(self.ma_over_layer)
+
+		local last_flag_idx = screen_map.unlock_data.new_level or #screen_map.user_data.levels
+		local last_flag = screen_map.map_points.flags[last_flag_idx]
+
+		if last_flag and last_flag.pos then
+			log.debug("scroll to show level idx:%s", last_flag_idx)
+
+			local vl, vr = -1 * self.pos.x, -1 * self.pos.x + self.screen_w
+
+			if vl > last_flag.pos.x or vr < last_flag.pos.x then
+				self.pos.x = -(last_flag.pos.x - self.screen_w / 2)
+				self.pos.x = km.clamp(self.screen_w - self.size.x, 0, self.pos.x)
+			end
+		end
+
+		self:load_map_animations(4)
+		self:show_flags(4)
 	else
 		KImageView.initialize(self, "map_background_0001")
 
@@ -1919,185 +2026,9 @@ function MapView:show_flags(num)
 	elseif num == 5 then
 		max_level = GS.max_level5
 		jnum = GS.jnum5
-	end
-
-	--23
-	local _level_game_ver = {
-		[1] = 3,
-		[2] = 3,
-		[3] = 3,
-		[4] = 3,
-		[5] = 3,
-		[6] = 3,
-		[7] = 3,
-		[8] = 3,
-		[9] = 3,
-		[10] = 3,
-		[11] = 3,
-		[12] = 3,
-		[13] = 3,
-		[14] = 3,
-		[15] = 3,
-		[16] = 3,
-		[17] = 3,
-		[18] = 3,
-		[19] = 3,
-		[20] = 3,
-		[21] = 3,
-		[22] = 3,
-		[23] = 2,
-		[24] = 2,
-		[25] = 2,
-		[26] = 2,
-		[27] = 2,
-		[28] = 2,
-		[29] = 2,
-		[30] = 2,
-		[31] = 2,
-		[32] = 2,
-		[33] = 2,
-		[34] = 2,
-		[35] = 2,
-		[36] = 2,
-		[37] = 2,
-		[38] = 2,
-		[39] = 2,
-		[40] = 2,
-		[41] = 2,
-		[42] = 2,
-		[43] = 2,
-		[44] = 2,
-		[45] = 1,
-		[46] = 1,
-		[47] = 1,
-		[48] = 1,
-		[49] = 1,
-		[50] = 1,
-		[51] = 1,
-		[52] = 1,
-		[53] = 1,
-		[54] = 1,
-		[55] = 1,
-		[56] = 1,
-		[57] = 1,
-		[58] = 1,
-		[59] = 1,
-		[60] = 1,
-		[61] = 1,
-		[62] = 1,
-		[63] = 1,
-		[64] = 1,
-		[65] = 1,
-		[66] = 1,
-		[67] = 1,
-		[68] = 1,
-		[69] = 1,
-		[70] = 1,
-		[71] = 1,
-		[72] = 1,
-		[73] = 1,
-		[74] = 1,
-		[75] = 1,
-		[76] = 1,
-		[77] = 2,
-		[78] = 2,
-		[79] = 2,
-		[80] = 2,
-		[81] = 23,
-		[82] = 23,
-		[83] = 22,
-		[84] = 22,
-		[85] = 21,
-		[86] = 3,
-		[87] = 2,
-		[88] = 0,
-		[89] = 0,
-		[90] = 0,
-		[91] = 0,
-		[92] = 0,
-		[93] = 0,
-		[94] = 0,
-		[95] = 0,
-		[96] = 0,
-		[97] = 0,
-		[98] = 0,
-		[99] = 0,
-		[100] = 0,
-		[101] = 5,
-		[102] = 5,
-		[103] = 5,
-		[104] = 5,
-		[105] = 5,
-		[106] = 5,
-		[107] = 5,
-		[108] = 5,
-		[109] = 5,
-		[110] = 5,
-		[111] = 5,
-		[112] = 5,
-		[113] = 5,
-		[114] = 5,
-		[115] = 5,
-		[116] = 5,
-		[117] = 5,
-		[118] = 5,
-		[119] = 5,
-		[120] = 5,
-		[121] = 5,
-		[122] = 5,
-		[123] = 5,
-		[124] = 5,
-		[125] = 5,
-		[126] = 5,
-		[127] = 5,
-		[128] = 5,
-		[129] = 5,
-		[130] = 5,
-		[131] = 5,
-		[132] = 5,
-		[133] = 5,
-		[134] = 5,
-		[135] = 5,
-	}
-
-	local function level_game_ver(level)
-		return _level_game_ver[level] or 0
-	end
-
-	local function level_rank(rank, gen)
-		local level
-		local count = 0
-		--if gen == 3 then 
-		--	return rank+jnum
-		--end
-		--if gen == 2 and rank >= 27 then
-		--	return rank+jnum
-		--end
-		for i = 1, #_level_game_ver do
-			if gen == _level_game_ver[i] then
-				count = count + 1
-			end
-			if count == rank then
-				level = i
-				break
-			end
-		end
-		return level
-	end
-
-	local function level_rank_2(rank, gen)
-		local level
-		local count = 0
-		for i = 1, #_level_game_ver do
-			if gen == _level_game_ver[i] then
-				count = count + 1
-			end
-			if count == rank then
-				level = i
-				break
-			end
-		end
-		return level
+	elseif num == 4 then
+		max_level = GS.max_level4
+		jnum = GS.jnum4
 	end
 
 	timer.script(function(wait)
@@ -2106,15 +2037,15 @@ function MapView:show_flags(num)
 		local ud = screen_map.unlock_data
 		local level_extra_list = {}
 		for i = 1, max_level do
-			local level = levels[level_rank(i,num)]
-			local flag_skip = table.contains(level_extra_list, level_rank(i,num))
+			local level = levels[map_data.level_rank(i,num)]
+			local flag_skip = table.contains(level_extra_list, map_data.level_rank(i,num))
 			if not level then
 				-- block empty
 			else
 				local points_data = screen_map.map_points.points[i]
 				local flag_pos = V.vclone(screen_map.map_points.flags[i].pos)
 
-				if self.level_decos[i] and not table.contains(ud.unlocked_levels, level_rank(i,num)) then
+				if self.level_decos[i] and not table.contains(ud.unlocked_levels, map_data.level_rank(i,num)) then
 					local v = self.level_decos[i].view
 
 					v:unlock()
@@ -2136,7 +2067,7 @@ function MapView:show_flags(num)
 						pointt.anchor = v(pointt.size.x / 2, pointt.size.y - 4)
 						pointt.propagate_on_click = true
 
-						if table.contains(ud.unlocked_levels, level_rank(i,num)) then
+						if table.contains(ud.unlocked_levels, map_data.level_rank(i,num)) then
 							pointt.hidden = true
 						end
 					end
@@ -2153,13 +2084,13 @@ function MapView:show_flags(num)
 
 				flag:set_mode("nostar")
 
-				if table.contains(ud.unlocked_levels, level_rank(i,num)) then
+				if table.contains(ud.unlocked_levels, map_data.level_rank(i,num)) then
 					flag.hidden = true
 				end
 				
 
 				if level[GAME_MODE_CAMPAIGN] and level.stars then
-					if ud.show_stars_level ~= level_rank(i,num) or ud.star_count_before > 0 then
+					if ud.show_stars_level ~= map_data.level_rank(i,num) or ud.star_count_before > 0 then
 						flag:set_mode("campaign")
 					end
 
@@ -2173,13 +2104,13 @@ function MapView:show_flags(num)
 
 						star.pos = flag.star_pos[j]
 
-						if ud.show_stars_level == level_rank(i,num) and j > ud.star_count_before then
+						if ud.show_stars_level == map_data.level_rank(i,num) and j > ud.star_count_before then
 							star.hidden = true
 						end
 					end
 				end
 
-				if level[GAME_MODE_IRON] and ud.iron_level ~= level_rank(i,num) then
+				if level[GAME_MODE_IRON] and ud.iron_level ~= map_data.level_rank(i,num) then
 					flag:set_mode("iron")
 				end
 
@@ -2194,7 +2125,7 @@ function MapView:show_flags(num)
 
 					wing.pos = v(flag_pos.x - 3, flag_pos.y)
 					wing.anchor = v(wing.size.x / 2, wing.size.y / 2)
-					wing.hidden = ud.heroic_level == level_rank(i,num)
+					wing.hidden = ud.heroic_level == map_data.level_rank(i,num)
 				end
 
 				for lid, f in pairs(screen_map.map_points.endless_flags) do
@@ -2231,8 +2162,8 @@ function MapView:show_flags(num)
 		end
 
 		for i = 1, max_level do
-			local level = levels[level_rank(i,num)]
-			local flag_skip = table.contains(level_extra_list, level_rank(i,num))
+			local level = levels[map_data.level_rank(i,num)]
+			local flag_skip = table.contains(level_extra_list, map_data.level_rank(i,num))
 
 			if not level then
 				-- block empty
@@ -2243,7 +2174,7 @@ function MapView:show_flags(num)
 				local flag = self.flags[i]
 				local wing = self.wings[i]
 
-				if flag and ud.show_stars_level == level_rank(i,num) then
+				if flag and ud.show_stars_level == map_data.level_rank(i,num) then
 					flag:disable(false)
 
 					local first_star = ud.star_count_before + 1
@@ -2278,7 +2209,7 @@ function MapView:show_flags(num)
 					flag:enable()
 				end
 
-				if flag and ud.iron_level == level_rank(i,num) then
+				if flag and ud.iron_level == map_data.level_rank(i,num) then
 					flag:disable(false)
 					wait(0.5)
 					S:queue("GUIWinStars")
@@ -2288,7 +2219,7 @@ function MapView:show_flags(num)
 					flag:enable()
 				end
 
-				if wing and ud.heroic_level == level_rank(i,num) then
+				if wing and ud.heroic_level == map_data.level_rank(i,num) then
 					flag:disable(false)
 
 					wing.hidden = true
@@ -2308,13 +2239,13 @@ function MapView:show_flags(num)
 					flag:enable()
 				end
 
-				if self.level_decos[i] and table.contains(ud.unlocked_levels, level_rank(i,num)) then
+				if self.level_decos[i] and table.contains(ud.unlocked_levels, map_data.level_rank(i,num)) then
 					local v = self.level_decos[i].view
 
 					v:unlock(wait)
 				end
 
-				if i > 1 and ud.new_level == level_rank(i,num) then
+				if i > 1 and ud.new_level == map_data.level_rank(i,num) then
 					S:queue("GuimapNewRoad")
 
 					for _, pointt in ipairs(self.point_groups[i]) do
@@ -2330,7 +2261,7 @@ function MapView:show_flags(num)
 					end
 				end
 
-				if table.contains(ud.unlocked_levels, level_rank(i,num)) then
+				if table.contains(ud.unlocked_levels, map_data.level_rank(i,num)) then
 					flag.hidden = false
 
 					flag:disable(false)
@@ -2355,6 +2286,8 @@ function MapView:show_flags(num)
 			if screen_map.kr1_map then
 				start_here.pos = v(292, 775)
 			elseif screen_map.kr2_map then
+				start_here.pos = v(307, 280)
+			elseif screen_map.kr4_map then
 				start_here.pos = v(307, 280)
 			elseif screen_map.kr5_map then
 				start_here.pos = v(1160, 913)
@@ -3367,9 +3300,10 @@ LevelSelectView = class("LevelSelectView", PopUpView)
 
 function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot_data)
 	PopUpView.initialize(self, V.v(sw, sh))
+	local level_list_gen4 = {[1]=0,[2]=1,[3]=2,[4]=17,[5]=26,[6]=27}
+	local local_generation = 3
 
 	local local_level_num = level_num
-	local local_generation = 3
 	if screen_map.kr1_map then
 		level_num = level_num + 44
 		local_generation = 1
@@ -3382,13 +3316,18 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 			level_num = level_num + 60
 		end
 		local_generation = 2
-	elseif screen_map.kr5_map then
-		level_num = level_num + 100
-		local_generation = 5
-	else 
+	elseif screen_map.kr3_map then
 		if level_num >= 23 then
 			level_num = 86
 		end
+		local_generation = 3
+	elseif screen_map.kr5_map then
+		level_num = level_num + 100
+		local_generation = 5
+	elseif screen_map.kr4_map then
+		local_level_num = level_list_gen4[level_num]
+		level_num = local_level_num + 150
+		local_generation = 4
 	end
 	local level_string = string.format("%02i", level_num)
 	local level_data = screen_map.level_data[level_num]
@@ -3413,8 +3352,8 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 		self:hide()
 	end
 
-	add_levelid_title(self.back, string.format("%d-%d", local_generation,local_level_num), "left", ls_page_y)
-	add_level_title(self.back, _(string.format("LEVEL_%d_TITLE", level_num)), "left", ls_page_y+46)
+	add_levelid_title(self.back, string.format("%d-%d", local_generation,local_level_num or 0), "left", ls_page_y)
+	add_level_title(self.back, _(string.format("LEVEL_%d_TITLE", level_num or 0)), "left", ls_page_y+46)
 	--add_level_title(self.back, _(string.format("LEVEL_%d_TITLE", level_num)), "left", ls_page_y+22)
 
 	--[[
@@ -5487,6 +5426,7 @@ function EncyclopediaView:detail_creep(index)
 		--empty
 	else
 		special = special..special_extra_key
+		special = string.gsub(special, "\n", "；")
 	end
 
 	local special_frame = KImageView:new("encyclopedia_rightPages_0004")

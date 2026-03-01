@@ -6,6 +6,7 @@ package.loaded["game_templates-40"] = nil
 package.loaded["game_templates-43"] = nil
 package.loaded["game_templates-45"] = nil
 package.loaded["game_templates-45h"] = nil
+package.loaded["game_templates-45e"] = nil
 package.loaded["game_templates-51"] = nil
 package.loaded["game_templates-55"] = nil
 package.loaded["game_templates-56"] = nil
@@ -23,6 +24,7 @@ local d40 = require("game_templates-40")
 local d43 = require("game_templates-43")
 local d45 = require("game_templates-45")
 local d45h = require("game_templates-45h")
+local d45e = require("game_templates-45e")
 local d51 = require("game_templates-51")
 local d55 = require("game_templates-55")
 local d56 = require("game_templates-56")
@@ -63,7 +65,6 @@ if true then
         "soldier_s6_imperial_guard", "soldier_s6_imperial_guard_2",
         "soldier_imperial_guard", "soldier_tremor", "soldier_elf_kr1",
         "soldier_ewok_re_1",
-        -- 5代援军
     }
     for _, item in pairs(items) do
         local e = T(item)

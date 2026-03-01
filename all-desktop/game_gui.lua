@@ -2962,7 +2962,7 @@ function Power2Button:fire(wx, wy)
 		e.pos.x, e.pos.y = wx, wy
 		Power1Button.super.fire(self, wx, wy)
 		game_gui.game.simulation:insert_entity(e)
-	elseif level_idx <= 100 then
+	elseif level_idx <= 100 or level_idx >= 160 then
 		if screen_map.reinforcement_count and screen_map.reinforcement_count ~= 0 then
 			local e = E:create_entity(re_str .. i)
 	

@@ -224,17 +224,17 @@ local _level_game_ver = {
 	[74] = 1,
 	[75] = 1,
 	[76] = 1,
-	[77] = 0,
-	[78] = 0,
-	[79] = 0,
-	[80] = 0,
+	[77] = 2,
+	[78] = 2,
+	[79] = 2,
+	[80] = 2,
 	[81] = 23,
 	[82] = 23,
 	[83] = 22,
 	[84] = 22,
 	[85] = 21,
-	[86] = 0,
-	[87] = 0,
+	[86] = 3,
+	[87] = 2,
 	[88] = 0,
 	[89] = 0,
 	[90] = 0,
@@ -283,6 +283,73 @@ local _level_game_ver = {
 	[133] = 5,
 	[134] = 5,
 	[135] = 5,
+	[136] = 5,
+	[137] = 5,
+	[138] = 5,
+	[139] = 5,
+	[140] = 5,
+	[141] = 0,
+	[142] = 0,
+	[143] = 0,
+	[144] = 0,
+	[145] = 0,
+	[146] = 0,
+	[147] = 0,
+	[148] = 0,
+	[149] = 0,
+	[150] = 0,
+	[150] = 4,
+	[151] = 4,
+	[152] = 4,
+	[153] = 0,
+	[154] = 0,
+	[155] = 0,
+	[156] = 0,
+	[157] = 0,
+	[158] = 0,
+	[159] = 0,
+	[160] = 0,
+	[161] = 0,
+	[162] = 0,
+	[163] = 0,
+	[164] = 0,
+	[165] = 0,
+	[166] = 0,
+	[167] = 4,
+	[168] = 0,
+	[169] = 0,
+	[170] = 0,
+	[171] = 0,
+	[172] = 0,
+	[173] = 0,
+	[174] = 0,
+	[175] = 0,
+	[176] = 4,
+	[177] = 4,
+	[178] = 0,
+	[179] = 0,
+	[180] = 0,
+	[181] = 0,
+	[182] = 0,
+	[183] = 0,
+	[184] = 0,
+	[185] = 0,
+	[186] = 0,
+	[187] = 0,
+	[188] = 0,
+	[189] = 0,
+	[190] = 0,
+	[191] = 0,
+	[192] = 0,
+	[193] = 0,
+	[194] = 0,
+	[195] = 0,
+	[196] = 0,
+	[197] = 0,
+	[198] = 0,
+	[199] = 0,
+	[200] = 0,
+	[201] = 0,
 }
 
 local function level_game_ver(level)
@@ -3766,11 +3833,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[72] = {
@@ -3779,11 +3842,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		---重生		
@@ -3825,11 +3884,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[77] = {
@@ -3838,11 +3893,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[78] = {
@@ -3851,11 +3902,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[79] = {
@@ -3864,11 +3911,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[80] = {
@@ -3877,11 +3920,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[86] = {
@@ -3890,11 +3929,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[87] = {
@@ -3903,11 +3938,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[88] = {
@@ -3916,11 +3947,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[89] = {
@@ -3929,11 +3956,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[90] = {
@@ -3942,11 +3965,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[91] = {
@@ -3955,11 +3974,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[92] = {
@@ -3968,11 +3983,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[93] = {
@@ -3981,11 +3992,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[94] = {
@@ -3994,11 +4001,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[95] = {
@@ -4007,11 +4010,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[96] = {
@@ -4020,11 +4019,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[97] = {
@@ -4033,11 +4028,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[98] = {
@@ -4046,11 +4037,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[99] = {
@@ -4059,11 +4046,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[100] = {
@@ -4072,11 +4055,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		---				
@@ -4087,11 +4066,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[102] = {
@@ -4100,11 +4075,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[103] = {
@@ -4113,11 +4084,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[104] = {
@@ -4126,11 +4093,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[105] = {
@@ -4139,11 +4102,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[106] = {
@@ -4152,11 +4111,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[107] = {
@@ -4165,11 +4120,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[108] = {
@@ -4178,11 +4129,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[109] = {
@@ -4191,11 +4138,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[110] = {
@@ -4204,11 +4147,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[111] = {
@@ -4217,11 +4156,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[112] = {
@@ -4230,11 +4165,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[113] = {
@@ -4243,11 +4174,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[114] = {
@@ -4256,11 +4183,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[115] = {
@@ -4269,11 +4192,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[116] = {
@@ -4282,11 +4201,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[117] = {
@@ -4295,11 +4210,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[118] = {
@@ -4308,11 +4219,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[119] = {
@@ -4321,11 +4228,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[120] = {
@@ -4334,11 +4237,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[121] = {
@@ -4347,11 +4246,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[122] = {
@@ -4360,11 +4255,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[123] = {
@@ -4373,11 +4264,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[124] = {
@@ -4386,11 +4273,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[125] = {
@@ -4399,11 +4282,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[126] = {
@@ -4412,11 +4291,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[127] = {
@@ -4425,11 +4300,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[128] = {
@@ -4438,11 +4309,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[129] = {
@@ -4451,11 +4318,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[130] = {
@@ -4464,11 +4327,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[131] = {
@@ -4477,11 +4336,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[132] = {
@@ -4490,11 +4345,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[133] = {
@@ -4503,11 +4354,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[134] = {
@@ -4516,11 +4363,7 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+				
 			},
 		},
 		[135] = {
@@ -4529,11 +4372,566 @@ return {
 				level = 5,
 			},
 			iron = {
-				"archers",
-				"barracks",
-				"mages",
-				"artillery",
-				"druids",
+			},
+		},
+		[136] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[137] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[138] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[139] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[140] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[141] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[142] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[143] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[144] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[145] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[146] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[147] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[148] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[149] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[150] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[151] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[152] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[153] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[154] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[155] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[156] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[157] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[158] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[159] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[160] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[161] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[162] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[163] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[164] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[165] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[166] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[167] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[168] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[169] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[170] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[171] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[172] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[173] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[174] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[175] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[176] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[177] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[178] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[179] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[180] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[181] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[182] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[183] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[184] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[185] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[186] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[187] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[188] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[189] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[190] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[191] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[192] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[193] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[194] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+				
+			},
+		},
+		[195] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[196] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[197] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[198] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[199] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[200] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[201] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
+			},
+		},
+		[202] = {
+			upgrades = {
+				heroe = true,
+				level = 5,
+			},
+			iron = {
 			},
 		},
 	},
@@ -10958,6 +11356,12 @@ return {
 	map_animations5 = {
 	},
 	map_decos5 = {
+
+	},
+	--4代
+	map_animations4 = {
+	},
+	map_decos4 = {
 
 	}
 }

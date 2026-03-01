@@ -2019,43 +2019,49 @@ local sounds = {
             source_group = "MUSIC",
             stream = true
         },
-        MusicBattlePrep_78 = {
+    MusicBattlePrep_78 = {
             files = {"savage_music_jungle_preparation.mp3"},
             gain = 0.7,
             loop = true,
             source_group = "MUSIC",
             stream = true
         },
-        MusicBattlePrep_79 = {
+    MusicBattlePrep_79 = {
             files = {"Prebattle_Rising_Tides.mp3"},
             gain = 0.7,
             loop = true,
             source_group = "MUSIC",
             stream = true
         },
-        MusicBattlePrep_80 = {
+    MusicBattlePrep_80 = {
             files = {"Jungle_Prep.mp3"},
             gain = 0.7,
             loop = true,
             source_group = "MUSIC",
             stream = true
         },
-        MusicBattlePrep_86 = {
+    MusicBattlePrep_86 = {
             files = {"kro_bgmusic_t3_prebattle1[master_01-11].mp3"},
             gain = 0.3,
             loop = true,
             source_group = "MUSIC",
             stream = true
         },
-		MusicBattlePrep_87 = {
+	MusicBattlePrep_87 = {
             files = {"29431171705-1-192.mp3"},
             gain = 0.3,
             loop = true,
             source_group = "MUSIC",
             stream = true
-        },
+    },
 		
-	MusicBattlePrep_85 = {files= {"MusicBattlePreparationsForest.ogg"},      loop=true, gain=0.8, source_group='MUSIC', stream=true},
+	MusicBattlePrep_85 = {
+		files= {"MusicBattlePreparationsForest.ogg"},      
+		loop=true, 
+		gain=0.8, 
+		source_group='MUSIC', 
+		stream=true
+	},
 	MusicBattle_45 = {
 		gain = 0.7,
 		loop = true,
@@ -2391,6 +2397,120 @@ local sounds = {
             source_group = "MUSIC",
             stream = true
     },
+--4代
+	MusicBattle_150 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Tutorial_Guerra.ogg"
+		}
+	},
+	MusicBattle_151 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Enanos_Guerra.ogg"
+		}
+	},
+	MusicBattle_152 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Enanos_Guerra_Variacion.ogg"
+		}
+	},
+	MusicBattle_153 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Enanos_Guerra.ogg"
+		}
+	},
+	MusicBattle_154 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Enanos_Guerra_Variacion.ogg"
+		}
+	},
+	MusicBattle_155 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Enanos_Guerra.ogg"
+		}
+	},
+	MusicBattle_156 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Enanos_Guerra_Variacion.ogg"
+		}
+	},
+	MusicBattle_156_Boss = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Enanos_Boss_Fight.ogg"
+		}
+	},
+	MusicBattle_167 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Sapos_Guerra.ogg"
+		}
+	},
+	MusicBattle_168 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Sapos_Guerra_Variacion.ogg"
+		}
+	},
+	MusicBattle_169 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Sapos_Guerra.ogg"
+		}
+	},
+	MusicBattle_176 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Tutorial_Guerra.ogg"
+		}
+	},
+	MusicBattle_177 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Tutorial_Guerra.ogg"
+		}
+	},
+	MusicBattle_178 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Tutorial_Guerra.ogg"
+		}
+	},
+--boss战
 	HobgobBossDeath1 = {
 		loop = false,
 		source_group = "DEATH",
@@ -2447,6 +2567,112 @@ local sounds = {
 			"kro_bgmusic_creditos[master].mp3"
 		}
 	},
+--4代
+	MusicBattlePrep_150 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Tutorial_Exploracion.ogg"
+		}
+	},
+	MusicBattlePrep_151 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Enanos_Exploracion.ogg"
+		}
+	},
+	MusicBattlePrep_152 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Enanos_Exploracion_Variacion.ogg"
+		}
+	},
+	MusicBattlePrep_153 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Enanos_Exploracion.ogg"
+		}
+	},
+	MusicBattlePrep_154 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Enanos_Exploracion_Variacion.ogg"
+		}
+	},
+	MusicBattlePrep_155 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Enanos_Exploracion.ogg"
+		}
+	},
+	MusicBattlePrep_156 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Enanos_Exploracion_Variacion.ogg"
+		}
+	},
+	MusicBattlePrep_167 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Sapos_Exploracion.ogg"
+		}
+	},
+	MusicBattlePrep_168 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Sapos_Exploracion_Variacion.ogg"
+		}
+	},
+	MusicBattlePrep_169 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Sapos_Exploracion.ogg"
+		}
+	},
+	MusicBattlePrep_176 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Tutorial_Exploracion.ogg"
+		}
+	},
+	MusicBattlePrep_177 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Tutorial_Exploracion.ogg"
+		}
+	},
+	MusicBattlePrep_178 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Tutorial_Exploracion.ogg"
+		}
+	},
+--其他
 	MusicEndCredits1 = {
 		source_group = "MUSIC",
 		gain = 0.7,
