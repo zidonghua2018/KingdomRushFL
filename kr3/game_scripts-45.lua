@@ -6589,21 +6589,24 @@ function scripts.tower_balloon.insert(this, store, script)
 end
 
 function scripts.tower_balloon.update(this, store, script)
-	local wts
-	local is_open = false
+    local wts
+    local is_open = false
 
-	local balloon = E:create_entity(this.barrack.soldier_type)
+    local balloon = this.barrack.soldiers[1]
+    if not balloon or balloon.health.dead and not store.entities[balloon.id] then
+        balloon = E:create_entity(this.barrack.soldier_type)
 
-	balloon.pos.x, balloon.pos.y = this.pos.x, this.pos.y + 16
-	balloon.nav_rally.pos.x, balloon.nav_rally.pos.y = this.tower.default_rally_pos.x, this.tower.default_rally_pos.y
-	balloon.nav_rally.new = true
-	balloon.owner = this
-	balloon.wick_mode = 1
+        balloon.pos.x, balloon.pos.y = this.pos.x, this.pos.y + 16
+        balloon.nav_rally.pos.x, balloon.nav_rally.pos.y = this.tower.default_rally_pos.x, this.tower.default_rally_pos.y
+        balloon.nav_rally.center = V.vclone(balloon.nav_rally.pos)
+        balloon.soldier.tower_id = this.id
+        balloon.wick_mode = 1
 
-	queue_insert(store, balloon)
-	table.insert(this.barrack.soldiers, balloon)
-	coroutine.yield()
-
+        queue_insert(store, balloon)
+        table.insert(this.barrack.soldiers, balloon)
+        coroutine.yield()
+    end
+    balloon.nav_rally.new = true
 
 	wts = store.tick_ts
 	is_open = true
@@ -6733,7 +6736,7 @@ scripts.soldier_balloon = {}
 function scripts.soldier_balloon.insert(this, store, script)
 	this.attacks.order = U.attack_order(this.attacks.list)
 	this.idle_flip.ts = store.tick_ts
-
+    this.tween.ts = store.tick_ts
 	return true
 end
 
@@ -6769,8 +6772,7 @@ function scripts.soldier_balloon.update(this, store, script)
 	local pow_b = this.powers and this.powers.bomber
 	local pow_e = this.powers and this.powers.watcher
 	--local pow_o = this.powers and this.powers.oil
-
-	
+    local owner = store.entities[this.soldier.tower_id];
 	this.wick_mode = 1
 	ab.ts = store.tick_ts
 
@@ -6810,13 +6812,14 @@ function scripts.soldier_balloon.update(this, store, script)
 
 			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
-			if this.owner.tower.level == 4 then
+			if owner.tower.level == 4 then
 				U.animation_start_group(this, an, af, store.tick_ts, true, "layers")
+                this.render.sprites[7].flip_x = af
 			else
 				U.animation_start(this, an, af, store.tick_ts, true, 1)
 			end
 			--同时塔台开始
-			U.animation_start_group(this.owner, "flags", nil, store.tick_ts, true, "layers")
+			U.animation_start_group(owner, "flags", nil, store.tick_ts, true, "layers")
 			--S:queue("MechWalk")
 
 			local ts = store.tick_ts
@@ -6835,12 +6838,12 @@ function scripts.soldier_balloon.update(this, store, script)
 			end
 
 			--U.animation_start_group(this, "idle", nil, store.tick_ts, true, "layers")
-			if this.owner.tower.level == 4 then
+			if owner.tower.level == 4 then
 				U.animation_start_group(this, "idle", nil, store.tick_ts, true, "layers")
 			else
 				U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
 			end
-			U.animation_start_group(this.owner, "idle", nil, store.tick_ts, true, "layers")
+			U.animation_start_group(owner, "idle", nil, store.tick_ts, true, "layers")
 
 			--S:stop("MechWalk")
 			coroutine.yield()
@@ -6890,7 +6893,7 @@ function scripts.soldier_balloon.update(this, store, script)
 
 						local b = E:create_entity(aa.bullet)
 
-						b.bullet.damage_factor = this.owner.tower.damage_factor * this.owner.tower.damage_factor
+						b.bullet.damage_factor = owner.tower.damage_factor * owner.tower.damage_factor
 						b.pos.x, b.pos.y = this.pos.x + aa.bullet_start_offset.x, this.pos.y + aa.bullet_start_offset.y
 						b.bullet.from = V.vclone(b.pos)
 						b.bullet.to = this.pos--enemy and enemy.pos or trigger_pos
@@ -6957,12 +6960,13 @@ function scripts.soldier_balloon.update(this, store, script)
 				this.wick_mode = km.zmod(this.wick_mode + 1, 2)
 				local an, af = U.animation_name_facing_point(this, ab.animations[this.wick_mode], target.pos)
 
-				U.animation_start(this, an, af, store.tick_ts, false, this.owner.tower.level == 4 and this.wick_mode + 4 or 2)
+                local animation_idx = owner.tower.level == 4 and this.wick_mode + 4 or 2
+				U.animation_start(this, an, af, store.tick_ts, false, animation_idx)
 				U.y_wait(store, ab.hit_times[this.wick_mode])
 
 				
 				local b = E:create_entity(ab.bullet)
-				b.bullet.damage_factor = this.owner.tower.damage_factor
+				b.bullet.damage_factor = owner.tower.damage_factor
 				b.pos.x = this.pos.x + (af and -1 or 1) * ab.start_offsets[this.wick_mode].x
 				b.pos.y = this.pos.y + ab.start_offsets[this.wick_mode].y
 				b.bullet.from = V.vclone(b.pos)
@@ -6971,7 +6975,7 @@ function scripts.soldier_balloon.update(this, store, script)
 				b.bullet.source_id = this.id
 				queue_insert(store, b)
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished(this, animation_idx) do
 					if this.nav_rally.new then
 						break
 					end
@@ -7012,7 +7016,7 @@ function scripts.soldier_balloon.update(this, store, script)
 						return v.modifier.target_id
 					end)
 					local towers = table.filter(store.entities, function(_, e)
-						return e.tower and e ~= this.owner and e.tower.can_be_mod and not table.contains(busy_ids, e.id) and not table.contains(ea.excluded_templates, e.template_name) and U.is_inside_ellipse(e.pos, this.pos, eagle_range)
+						return e.tower and e ~= owner and e.tower.can_be_mod and not table.contains(busy_ids, e.id) and not table.contains(ea.excluded_templates, e.template_name) and U.is_inside_ellipse(e.pos, this.pos, eagle_range)
 					end)
 
 					for _, tower in pairs(towers) do
@@ -7041,7 +7045,7 @@ function scripts.soldier_balloon.update(this, store, script)
 
 		--U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
 
-		if this.owner.tower.level == 4 then
+		if owner.tower.level == 4 then
 			U.animation_start_group(this, "idle", nil, store.tick_ts, true, "layers")
 		else
 			U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
@@ -8175,20 +8179,21 @@ function scripts.tower_sandworm_bomb.update(this, store)
 		
 		if hp.aura then
 			hp.aura.duration = this.aura_duration[this.bullet.level]
-			hp.tween.props[1].keys = {
-				{
-					0,
-					255
-				},
-				{
-					hp.aura.duration - 0.5,
-					255
-				},
-				{
-					hp.aura.duration,
-					0
-				}
-			}
+            if (hp.tween_visible_delay) then
+                hp.tween.props[1].keys = {
+                    { 0, 0 },
+                    { hp.tween_visible_delay - 0.01, 0 },
+                    { hp.tween_visible_delay, 255 },
+                    { hp.aura.duration - 0.5, 255 },
+                    { hp.aura.duration, 0 }
+                }
+            else
+                hp.tween.props[1].keys = {
+                    { 0, 255 },
+                    { hp.aura.duration - 0.5, 255 },
+                    { hp.aura.duration, 0 }
+                }
+            end
 		
 		else
 			this.aura.mod = nil

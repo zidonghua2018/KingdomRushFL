@@ -1795,7 +1795,7 @@ tt.sound_events.insert = "GoblirangBeesSound"
 
 tt = E.register_t(E, "honey_bees_aura", "aura")
 
-E.add_comps(E, tt, "render")
+E.add_comps(E, tt, "render", "tween")
 
 tt.aura.cycle_time = 0.2
 tt.aura.duration = 7
@@ -1804,14 +1804,25 @@ tt.aura.radius = 40
 tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.aura.vis_flags = bor(F_MOD)
 tt.aura.track_target = true
-tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.insert = scripts4.honey_bees_aura.insert
 tt.main_script.update = scripts4.honey_bees_aura.update
 tt.render.sprites[1].prefix = "explosion_honey"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = true
-tt.render.sprites[1].offset = v(0, 10)
+tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
+tt.render.sprites[3] = table.deepclone(tt.render.sprites[1])
 tt.sound_events.insert = "GoblirangsBeesHit"
+for i = 1, 3 do
+    tt.tween.props[i] = E:clone_c("tween_prop")
+    tt.tween.props[i].name = "offset"
+    tt.tween.props[i].sprite_id = i
+    tt.tween.props[i].loop = true
+end
+tt.tween.props[4] = E:clone_c("tween_prop")
+tt.tween.props[4].name = "alpha"
+tt.tween.props[4].sprite_id = { 1, 2, 3 }
+tt.tween.remove = false
 
 tt = E.register_t(E, "mod_goblirang_slow", "mod_slow")
 tt.modifier.duration = 0.1

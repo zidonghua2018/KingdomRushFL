@@ -2487,6 +2487,33 @@ end
 
 scripts.honey_bees_aura = {}
 
+function scripts.honey_bees_aura.insert(this, store, script)
+    if not scripts.aura_apply_mod.insert(this, store, script) then
+        return false
+    end
+    local bees = #this.render.sprites
+    local offset_x = this.render.sprites[1].offset.x
+    local offset_y = this.render.sprites[1].offset.y + 15
+    local base_keys = {
+        { 0, v(offset_x - 25, offset_y) },
+        { fts(30), v(offset_x, offset_y - 10) },
+        { fts(60), v(offset_x + 25, offset_y) },
+        { fts(90), v(offset_x, offset_y + 10) },
+        { fts(120), v(offset_x - 25, offset_y) }
+    }
+    for i = 1, bees do
+        this.tween.props[i].keys = base_keys
+        this.tween.props[i].time_offset = -(fts(120) / bees) * (i - 1)
+    end
+    this.tween.props[bees + 1].keys = {
+        { 0, 255 },
+        { this.actual_duration - 0.5, 255 },
+        { this.actual_duration, 0 }
+    }
+    this.tween.ts = store.tick_ts
+    return true
+end
+
 function scripts.honey_bees_aura.update(this, store, script)
 	local first_hit_ts
 	local last_hit_ts = 0

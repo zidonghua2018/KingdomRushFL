@@ -707,7 +707,6 @@ function scripts.hero_eiskalt.level_up(this, store, initial)
 	if initial and s.level > 0 then
 		local a = this.timed_attacks.list[1]
 		a.disabled = nil
-		e = E:get_template("aura_eiskalt_rider")
 		a.damage_min = s.damage_min[s.level]
 		a.damage_max = s.damage_max[s.level]
 	end
@@ -804,14 +803,14 @@ function scripts.hero_eiskalt.update(this, store)
 
 						e.pos = P:node_pos(pi, spi, ni)
 						e.render.sprites[1].prefix = e.render.sprites[1].prefix
-						e.render.sprites[1].flip_x = not flip
+						e.render.sprites[1].flip_x = math.random() > 0.5
 						e.delay = delay
 						e.bullet.source_id = this.id
 						e.bullet.level = this.hero.skills.icepeak.level
 
 						queue_insert(store, e)
 
-						delay = delay + fts(U.frandom(1, 3))
+						delay = delay + fts(U.frandom(2, 3))
 						ni = ni + n_step
 						spi = km.zmod(spi + math.random(1, 2), 3)
 					end
@@ -874,6 +873,11 @@ function scripts.hero_eiskalt.update(this, store)
 
 						queue_insert(store, b)
 
+                        local fx = E:create_entity(b.aura.hit_decal)
+                        fx.pos = V.vclone(b.pos)
+                        fx.delay = delay
+                        queue_insert(store, fx)
+
 						delay = delay + 0.05
 						ni = ni + n_step
 						spi = km.zmod(spi + 1, 3)
@@ -924,30 +928,27 @@ function scripts.hero_eiskalt.update(this, store)
 
 						s_ni = km.clamp(1, #P:path(s_pi), s_ni + (dir > 0 and offset or -offset))
 
-						local flip = P:node_pos(s_pi, s_spi, s_ni, true).x < this.pos.x
+                        local target_node = P:node_pos(s_pi, s_spi, s_ni, true)
+						local flip = target_node.x < this.pos.x
 
 						S:queue(a.sound)
 						U.animation_start(this, "frosty", flip, store.tick_ts)
 						U.y_wait(store, a.spawn_time)
 
-						local delay = 0
+                        local e = E:create_entity(a.entity)
 
-						for i = 1, a.count do
-							local e = E:create_entity(a.entity)
+                        e.bullet.from = v(this.pos.x + (flip and -1 or 1) * a.spawn_offset.x, this.pos.y + a.spawn_offset.y)
+                        e.bullet.to = v(target_node.x, target_node.y)
+                        e.bullet.level = this.hero.skills.frosty.level
+                        --e.pos.x, e.pos.y = this.pos.x + (flip and -1 or 1) * a.spawn_offset.x, this.pos.y + a.spawn_offset.y
+                        --e.nav_path.pi = s_pi
+                        --e.nav_path.spi = math.random(1, 3)
+                        --e.nav_path.ni = s_ni
+                        --e.nav_path.dir = dir
+                        --e.aura.source_id = this.id
+                        --e.aura.level = this.hero.skills.frosty.level
 
-							e.pos.x, e.pos.y = this.pos.x + (flip and -1 or 1) * a.spawn_offset.x, this.pos.y + a.spawn_offset.y
-							e.nav_path.pi = s_pi
-							e.nav_path.spi = math.random(1, 3)
-							e.nav_path.ni = s_ni
-							e.nav_path.dir = dir
-							e.delay = delay
-							e.aura.source_id = this.id
-							e.aura.level = this.hero.skills.frosty.level
-
-							queue_insert(store, e)
-
-							delay = delay + fts(U.frandom(1, 3))
-						end
+                        queue_insert(store, e)
 
 						U.y_animation_wait(this)
 
@@ -1077,6 +1078,21 @@ function scripts.hero_eiskalt.update(this, store)
 
 		coroutine.yield()
 	end
+end
+
+--冰冻烟雾
+scripts.eiskalt_cold_fury_smoke = {}
+function scripts.eiskalt_cold_fury_smoke.update(this, store)
+    U.sprites_hide(this)
+    if this.delay then
+        U.y_wait(store, this.delay)
+    end
+    for _, s in pairs(this.render.sprites) do
+        s.ts = store.tick_ts
+    end
+    U.sprites_show(this)
+    this.tween.disabled = false
+    this.tween.ts = store.tick_ts
 end
 
 --冰刺
@@ -1645,8 +1661,6 @@ function scripts.hero_eiskalt_ultimate.insert(this, store, script)
 end
 
 function scripts.hero_eiskalt_ultimate.update(this, store, script)
-	local this_ts = store.tick_ts
-
 	--signal.emit("atomic-freeze-starts")
 
 	local targets = U.find_enemies_in_range(store.entities, this.pos, 0, 9999, this.vis_flags, this.vis_bans, function(e)
@@ -1694,70 +1708,77 @@ function scripts.hero_eiskalt_ultimate.update(this, store, script)
 			end
 		end
 	end
-	if mod then
-		while this_ts + mod.modifier.duration > store.ts do
-			this.rain.ts = store.tick_ts
-				local r = this.rain
-				r.ts = store.tick_ts
 
-				local angle = U.frandom(r.angle_min, r.angle_max)
+    if mod then
+        local overlay_tween_time = 0.5
+        local overlay = E:create_entity("overlay_eiskalt_freeze")
+        overlay.pos.x, overlay.pos.y = REF_W / 2, REF_H / 2
+        overlay.tween.props[1].keys = {
+            { 0, 0 },
+            { overlay_tween_time, this.freeze_alpha_min }
+        }
+        overlay.tween.props[1].ts = store.tick_ts
+        queue_insert(store, overlay)
 
-				for i = 1, r.count do
-					angle = angle + U.frandom(-r.angle_between, r.angle_between)
+        local begin_ts = store.tick_ts
+        while begin_ts + mod.modifier.duration > store.tick_ts do
+            if not overlay.tween.props[1].loop and store.tick_ts - begin_ts > overlay_tween_time then
+                overlay.tween.props[1].loop = true
+                overlay.tween.props[1].keys = {
+                    { 0, this.freeze_alpha_min },
+                    { 0.8, this.freeze_alpha_max },
+                    { 1.6, this.freeze_alpha_min }
+                }
+                overlay.tween.props[1].ts = store.tick_ts
+            end
 
-					local dist = math.random(r.distance_min, r.distance_max)
-					local ox, oy = V.rotate(angle, dist, 0)
-					local delay = U.frandom(0.001, r.delay_max)
-					local pos = V.v(math.random(-REF_OX, REF_W + REF_OX), math.random(0, REF_H))
-					local e = E:create_entity("fx_power_eiskalt_drop")
+            this.rain.ts = store.tick_ts
+            local rain = this.rain
+            rain.ts = store.tick_ts
 
-					e.pos.x, e.pos.y = pos.x, pos.y
-					e.render.sprites[1].offset = V.v(-ox, -oy)
-					e.render.sprites[1].r = angle
-					e.render.sprites[1].alpha = math.random(r.alpha_min, r.alpha_max)
-					e.tween.props[1].keys = {
-						{
-							0,
-							0
-						},
-						{
-							0.001,
-							255
-						}
-					}
-					e.tween.props[2] = E:clone_c("tween_prop")
-					e.tween.props[2].keys = {
-						{
-							0,
-							V.v(-ox, -oy)
-						},
-						{
-							0.001,
-							V.v(-ox, -oy)
-						},
-						{
-							r.duration,
-							V.v(0, 0)
-						}
-					}
-					e.tween.props[2].name = "offset"
-					e.tween.ts = store.tick_ts + delay
+            local angle = U.frandom(rain.angle_min, rain.angle_max)
 
-					queue_insert(store, e)
+            for i = 1, rain.count do
+                angle = angle + U.frandom(-rain.angle_between, rain.angle_between)
 
-					--[[
-					local e = E:create_entity("fx_power_thunder_rain_splash")
+                local dist = math.random(rain.distance_min, rain.distance_max)
+                local ox, oy = V.rotate(angle, dist, 0)
+                local delay = U.frandom(0.001, rain.delay_max)
+                local pos = V.v(math.random(-REF_OX, REF_W + REF_OX), math.random(0, REF_H))
+                local e = E:create_entity("fx_power_eiskalt_drop")
 
-					e.pos.x, e.pos.y = pos.x, pos.y
-					e.render.sprites[1].ts = store.tick_ts + delay + r.duration
+                e.pos.x, e.pos.y = pos.x, pos.y
+                e.render.sprites[1].offset = V.v(-ox, -oy)
+                e.render.sprites[1].r = angle
+                e.render.sprites[1].alpha = math.random(rain.alpha_min, rain.alpha_max)
+                e.tween.props[1].keys = {
+                    { 0, 0 },
+                    { 0.001, 255 }
+                }
+                e.tween.props[2] = E:clone_c("tween_prop")
+                e.tween.props[2].keys = {
+                    { 0, V.v(-ox, -oy) },
+                    { 0.001, V.v(-ox, -oy) },
+                    { rain.duration, V.v(0, 0) }
+                }
+                e.tween.props[2].name = "offset"
+                e.tween.ts = store.tick_ts + delay
 
-					queue_insert(store, e)
-					]]--
-				end
-			coroutine.yield()
-		end
+                queue_insert(store, e)
+            end
+            coroutine.yield()
+        end
+
+        overlay.tween.props[1].keys = {
+            { 0, overlay.render.sprites[1].alpha },
+            { overlay_tween_time, 0 }
+        }
+        overlay.tween.props[1].ts = store.tick_ts
+        overlay.tween.props[1].loop = false
+        overlay.tween.remove = true
 	end
 	U.y_wait(store, this.duration)
+
 	--signal.emit("atomic-freeze-ends")
 	queue_remove(store, this)
 end

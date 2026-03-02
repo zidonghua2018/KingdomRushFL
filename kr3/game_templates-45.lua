@@ -3838,9 +3838,14 @@ tt.powers.watcher.enc_icon = 315
 
 --飞艇本体
 local balloon_offset_y = 50
-tt = E:register_t("soldier_balloon_lvl1")
-
-E:add_comps(tt, "pos", "render", "motion", "nav_rally", "main_script", "vis", "idle_flip", "attacks", "nav_grid")
+tt = E:register_t("soldier_balloon_lvl1", "soldier")
+E:add_comps(tt, "melee", "attacks", "tween")
+tt.health.ignore_damage = true
+tt.ui.can_select = false
+tt.ui.click_rect = r(-15, 50, 30, 30)
+tt.melee.attacks = {}
+tt.health_bar = nil
+tt.regen = nil
 
 --tt.powers.missile = E:clone_c("power")
 --tt.powers.oil = E:clone_c("power")
@@ -3868,8 +3873,20 @@ tt.render.sprites[3].animated = false
 tt.render.sprites[3].name = "warmongers_baloon_tower_shadow"
 tt.render.sprites[3].z = Z_DECALS + 1
 for i = 1, tt.balloon_layer_count do
-	tt.render.sprites[i].offset.y = tt.render.sprites[i].offset.y + balloon_offset_y
+    local final_offset_y = tt.render.sprites[i].offset.y + balloon_offset_y
+	tt.render.sprites[i].offset.y = final_offset_y
+    tt.tween.props[i] = E:clone_c("tween_prop")
+    tt.tween.props[i].name = "offset"
+    tt.tween.props[i].interp = "sine"
+    tt.tween.props[i].loop = true
+    tt.tween.props[i].sprite_id = i
+    tt.tween.props[i].keys = {
+        { 0, v(tt.render.sprites[i].offset.x, final_offset_y - 3) },
+        { 1.5, v(tt.render.sprites[i].offset.x, final_offset_y + 3) },
+        { 3, v(tt.render.sprites[i].offset.x, final_offset_y - 3) }
+    }
 end
+tt.tween.remove = false
 tt.attacks.list[1] = E:clone_c("bullet_attack")
 tt.attacks.list[1].bullet = "bomb_balloon_lvl1"
 tt.attacks.list[1].vis_bans = F_FLYING
@@ -3952,7 +3969,18 @@ tt.render.sprites[8].animated = false
 tt.render.sprites[8].name = "warmongers_baloon_tower_shadow"
 tt.render.sprites[8].z = Z_DECALS + 1
 for i = 1, tt.balloon_layer_count do
-	tt.render.sprites[i].offset.y = tt.render.sprites[i].offset.y + balloon_offset_y
+    local final_offset_y = tt.render.sprites[i].offset.y + balloon_offset_y
+    tt.render.sprites[i].offset.y = final_offset_y
+    tt.tween.props[i] = E:clone_c("tween_prop")
+    tt.tween.props[i].name = "offset"
+    tt.tween.props[i].interp = "sine"
+    tt.tween.props[i].loop = true
+    tt.tween.props[i].sprite_id = i
+    tt.tween.props[i].keys = {
+        { 0, v(tt.render.sprites[i].offset.x, final_offset_y - 3) },
+        { 1.5, v(tt.render.sprites[i].offset.x, final_offset_y + 3) },
+        { 3, v(tt.render.sprites[i].offset.x, final_offset_y - 3) }
+    }
 end
 tt.attacks.list[1].bullet = "bomb_balloon_lvl4"
 tt.attacks.list[1].start_offsets = {
@@ -4951,8 +4979,9 @@ tt.particle_system.emit_rotation_spread = math.pi * 2
 
 tt = E:register_t("fx_bullet_tower_sandworm_slime_hit", "fx")
 tt.render.sprites[1].name = "worm_nest_level4_spit_decal_in"
-tt.render.sprites[1].scale = v(1,1)
+tt.render.sprites[1].scale = v(1, 1)
 tt.render.sprites[1].offset = v(0, 0)
+tt.render.sprites[1].z = Z_DECALS
 
 tt = E:register_t("tower_sandworm_spit", "bombKR5")
 AC(tt, "aura")
@@ -5109,6 +5138,7 @@ tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].loop = true
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
+tt.tween_visible_delay = fts(18)
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].sprite_id = 1
 tt.tween.props[1].keys = {

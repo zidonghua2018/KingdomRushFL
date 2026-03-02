@@ -655,7 +655,7 @@ tt.vis.flags = bor(tt.vis.flags, F_FLYING)
 tt.ranged.attacks[1] = E:clone_c("bullet_attack")
 tt.ranged.attacks[1].bullet = "fireball_eiskalt"
 tt.ranged.attacks[1].bullet_start_offset = {
-	v(35, 85)
+	v(46, 52)
 }
 tt.ranged.attacks[1].cooldown = 2
 tt.ranged.attacks[1].min_range = 0
@@ -672,22 +672,21 @@ tt.timed_attacks.list[1] = E:clone_c("spawn_attack")
 tt.timed_attacks.list[1].animation = "frosty"
 tt.timed_attacks.list[1].cooldown = 18
 tt.timed_attacks.list[1].disabled = true
-tt.timed_attacks.list[1].entity = "aura_eiskalt_rider"--"hero_eiskalt_frosty"
-tt.timed_attacks.list[1].spawn_offset = v(43, 21)
-tt.timed_attacks.list[1].spawn_time = fts(37)
+tt.timed_attacks.list[1].entity = "bullet_eiskalt_frosty"--"hero_eiskalt_frosty"
+tt.timed_attacks.list[1].spawn_offset = v(12, 60)
+tt.timed_attacks.list[1].spawn_time = fts(20)
 tt.timed_attacks.list[1].vis_flags = bor(F_RANGED)
 tt.timed_attacks.list[1].vis_bans = bor(F_FLYING)
 tt.timed_attacks.list[1].range_nodes_max = 50
 tt.timed_attacks.list[1].range_nodes_min = 10
 tt.timed_attacks.list[1].sound = "HeroDracolichSoulsPlague"
-tt.timed_attacks.list[1].count = 1
 --脊柱雨->冰刺
 tt.timed_attacks.list[2] = E:clone_c("spawn_attack")
 tt.timed_attacks.list[2].animation = "icePeaks"
 tt.timed_attacks.list[2].cooldown = 15
 tt.timed_attacks.list[2].disabled = true
 tt.timed_attacks.list[2].entity = "eiskalt_icepeaks"
-tt.timed_attacks.list[2].spawn_time = fts(40)
+tt.timed_attacks.list[2].spawn_time = fts(8)
 tt.timed_attacks.list[2].vis_flags = bor(F_RANGED)
 tt.timed_attacks.list[2].vis_bans = bor(F_FLYING)
 tt.timed_attacks.list[2].min_range = 0
@@ -698,7 +697,7 @@ tt.timed_attacks.list[2].damage_min = 200
 tt.timed_attacks.list[3] = CC("aura_attack")
 tt.timed_attacks.list[3].animation = "coldFury"
 tt.timed_attacks.list[3].bullet = "aura_chill_eiskalt"
-tt.timed_attacks.list[3].cast_time = fts(43)
+tt.timed_attacks.list[3].cast_time = fts(25)
 tt.timed_attacks.list[3].cooldown = 20
 tt.timed_attacks.list[3].disabled = true
 tt.timed_attacks.list[3].max_range = 125
@@ -723,6 +722,18 @@ tt = RT("mod_eiskalt_chill_lvl3", "mod_slow")
 tt.modifier.duration = fts(15)
 tt.slow.factor = 0.5
 
+
+tt = RT("fx_aura_chill_eiskalt_smoke", "decal_scripted")
+AC(tt, "tween")
+tt.main_script.update = kr4_scripts.eiskalt_cold_fury_smoke.update
+tt.render.sprites[1].name = "hero_eiskalt_cold_fury_smoke_run"
+tt.render.sprites[1].animated = true
+tt.tween.disabled = true
+tt.tween.props[1].keys = {
+    { fts(20), 255 },
+    { fts(40), 0 }
+}
+
 tt = RT("aura_chill_eiskalt", "aura")
 
 AC(tt, "render", "tween")
@@ -733,6 +744,7 @@ tt.aura.mod = "mod_eiskalt_chill_lvl2"
 tt.aura.radius = 44.800000000000004
 tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.aura.vis_flags = bor(F_ENEMY)
+tt.aura.hit_decal = "fx_aura_chill_eiskalt_smoke"
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = kr1_scripts.aura_chill_elora.update
 tt.render.sprites[1].name = "hero_eiskalt_cold_fury_ice"
@@ -906,6 +918,25 @@ tt.particle_system.particle_lifetime = {
 tt.particle_system.emit_offset = v(0, 0)
 tt.emit_offset_relative = v(-10, 0)
 
+tt = E:register_t("fx_eiskalt_frosty_spawn", "fx")
+tt.render.sprites[1].name = "hero_eiskalt_frosty_explotion_run"
+tt.render.sprites[1].anchor.y = 0.4
+
+tt = E:register_t("bullet_eiskalt_frosty", "bombKR5")
+tt.sound_events.insert = nil
+tt.sound_events.hit = nil
+tt.bullet.flight_time = fts(30)
+tt.bullet.hit_fx = "fx_eiskalt_frosty_spawn"
+tt.bullet.pop = nil
+tt.bullet.pop_chance = 0
+tt.bullet.rotation_speed = 4 * math.pi
+tt.bullet.hit_payload = "aura_eiskalt_rider"
+tt.bullet.damage_max = 0
+tt.bullet.damage_min = 0
+tt.bullet.damage_radius = 0
+tt.render.sprites[1].name = "hero_eiskalt_frosty_projectile"
+tt.render.sprites[1].animated = false
+
 tt = E:register_t("aura_eiskalt_rider", "aura")
 b = balance.towers.necromancer5.skill_rider
 
@@ -1036,13 +1067,16 @@ tt.rain.angle_between = 2 * math.pi / 180
 tt.rain.angle_max = -60 * math.pi / 180
 tt.rain.angle_min = -80 * math.pi / 180
 tt.rain.cooldown = 0.25
-tt.rain.count = 20
+tt.rain.count = 6
 tt.rain.delay_max = 0.25
 tt.rain.disabled = false
 tt.rain.distance_max = 550
 tt.rain.distance_min = 450
 tt.rain.duration = 0.25
 tt.rain.ts = 0
+
+tt.freeze_alpha_min = 80
+tt.freeze_alpha_max = 112
 
 tt.mod = "mod_eiskalt_freeze"
 
@@ -1061,6 +1095,11 @@ tt.custom_animations = {
 		"start",
 		"end"
 }
+
+tt = RT("overlay_eiskalt_freeze", "overlay_power_thunder_flash")
+tt.render.sprites[1].color = { 223, 223, 255, 255 }
+tt.render.sprites[2] = nil
+tt.tween.props[2] = nil
 
 
 ----------------------------------------------
@@ -1351,7 +1390,7 @@ tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
 --tt.melee.attacks[1].hit_decal = "decal_ground_hit"
 --tt.melee.attacks[1].hit_fx = "fx_ground_hit"
 tt.melee.attacks[1].hit_offset = v(35, 0)
-tt.melee.attacks[1].hit_time = fts(32)
+tt.melee.attacks[1].hit_time = fts(13)
 tt.melee.attacks[1].pop = {
 	"pop_whaam",
 	"pop_kapow"
@@ -1372,7 +1411,7 @@ tt.melee.attacks[2].damage_type = DAMAGE_PHYSICAL
 --tt.melee.attacks[2].hit_decal = "decal_ground_hit"
 --tt.melee.attacks[2].hit_fx = "fx_ground_hit"
 tt.melee.attacks[2].hit_offset = v(35, 0)
-tt.melee.attacks[2].hit_time = fts(33)
+tt.melee.attacks[2].hit_time = fts(13)
 tt.melee.attacks[2].mod ="mod_swamp_stun"
 tt.melee.attacks[2].animation = "stun"
 tt.melee.attacks[2].pop = {
@@ -1390,7 +1429,7 @@ tt.melee.attacks[3].chance_inc = 0.02
 tt.melee.attacks[3].cooldown = 2.5
 tt.melee.attacks[3].shared_cooldown = 2.5
 --tt.melee.attacks[3].disabled = true
-tt.melee.attacks[3].hit_time = fts(36)
+tt.melee.attacks[3].hit_time = fts(18)
 tt.melee.attacks[3].instakill = true
 tt.melee.attacks[3].sound_hit = "SwampMonsterExplosion"
 tt.melee.attacks[3].damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_FX_EXPLODE, DAMAGE_NO_DODGE)

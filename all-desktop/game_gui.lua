@@ -6984,14 +6984,14 @@ function PickView:rally_tower(x, y)
 			e.barrack.rally_pos = v(lx, ly)
 			e.barrack.rally_new = true
 
-			game_gui:show_rally_flag(lx, ly)
+			game_gui:show_rally_flag(game_gui:g2u(e.barrack.rally_pos))
 			game_gui:hide_rally_range()
 			game_gui:deselect_entity()
 			return true
-		else 
-			if U.is_inside_ellipse(v(lx, ly), rc, b.rally_range) then
-				print(string.format("%.4f, %.4f", lx, ly))
-			end
+		--else
+			--if U.is_inside_ellipse(v(lx, ly), rc, b.rally_range) then
+			--	print(string.format("%.4f, %.4f", lx, ly))
+			--end
 		end
 	end
 	game_gui:show_invalid_point_cross(x, y)
