@@ -165,7 +165,7 @@ tt.hero.skills.ultimate.hr_order = 5
 tt.hero.skills.ultimate.cooldown = {[0]=32,32,32,32}
 tt.hero.skills.ultimate.controller_name = "hero_orc_ultimate"
 tt.hero.skills.ultimate.hr_cost = {2,2,2}
-tt.hero.skills.ultimate.instance = {"hero_veruk_spear_lvl1","hero_veruk_spear_lvl2","hero_veruk_spear_lvl3","hero_veruk_spear_lvl4"}
+tt.hero.skills.ultimate.instance = {[0] = "hero_veruk_spear_lvl1","hero_veruk_spear_lvl2","hero_veruk_spear_lvl3","hero_veruk_spear_lvl4"}
 
 
 
@@ -406,21 +406,18 @@ tt.ranged.attacks[1].shoot_time = fts(10)
 tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
 
 tt = RT("hero_veruk_spear_lvl2", "hero_veruk_spear_lvl1")
-E:add_comps(tt, "ranged")
 tt.melee.attacks[1].damage_min = 10
 tt.melee.attacks[1].damage_max = 14
 tt.health.hp_max = 100
 tt.ranged.attacks[1].bullet = "spear_veruk_goblin_lvl2"
 
 tt = RT("hero_veruk_spear_lvl3", "hero_veruk_spear_lvl1")
-E:add_comps(tt, "ranged")
 tt.melee.attacks[1].damage_min = 19
 tt.melee.attacks[1].damage_max = 29
 tt.health.hp_max = 150
 tt.ranged.attacks[1].bullet = "spear_veruk_goblin_lvl3"
 
 tt = RT("hero_veruk_spear_lvl4", "hero_veruk_spear_lvl1")
-E:add_comps(tt, "ranged")
 tt.melee.attacks[1].damage_min = 29
 tt.melee.attacks[1].damage_max = 43
 tt.health.hp_max = 200

@@ -1,6 +1,7 @@
 return{
     common4 = {
         files = {
+            "Mapa.ogg",
             "kr4_elves_barrack_taunt_1.ogg",
             "kr4_elves_barrack_taunt_2.ogg",
             "kr4_elves_barrack_taunt_3.ogg",
@@ -578,6 +579,52 @@ return{
             "kr4_ember_lords_mage_attack.ogg",
         }
     },
+    sounds_stage150 = {
+		sounds = {
+			"MusicBattlePrep_150",
+			"MusicBattle_150",
+		}
+	},
+    sounds_stage151 = {
+		sounds = {
+			"MusicBattlePrep_151",
+			"MusicBattle_151",
+		}
+	},
+    sounds_stage152 = {
+		sounds = {
+			"MusicBattlePrep_152",
+			"MusicBattle_152",
+		}
+	},
+    sounds_stage176 = {
+		sounds = {
+			"MusicBattlePrep_176",
+			"MusicBattle_176",
+			"dark_army_blazing_mage_attack_loopstart",
+            "puff_death_sound",
+            "haunted_skeleton_death",
+            "haunted_skeleton_death",
+            "ElvesCreepScreecherDeath",
+            "dwarves_sulfur_alchemist_death",
+            "corrosive_soul_death",
+		}
+	},
+	sounds_stage177 = {
+		sounds = {
+			"MusicBattlePrep_177",
+			"MusicBattle_177",
+			"level27_gillman_jump",
+			"level27_gillman_appear",
+			"level27_girl_drinking",
+			"dark_army_blazing_mage_attack_loopstart",
+            "puff_death_sound",
+            "haunted_skeleton_death",
+            "ElvesCreepScreecherDeath",
+            "dwarves_sulfur_alchemist_death",
+            "corrosive_soul_death",
+		}
+	},
     sounds_stage426 = {
 		sounds = {
 			"MusicBattlePrep_71",
@@ -595,6 +642,34 @@ return{
 		sounds = {
 			"MusicBattlePrep_72",
 			"MusicBattle_72",
+			"level27_gillman_jump",
+			"level27_gillman_appear",
+			"level27_girl_drinking",
+			"dark_army_blazing_mage_attack_loopstart",
+            "puff_death_sound",
+            "haunted_skeleton_death",
+            "ElvesCreepScreecherDeath",
+            "dwarves_sulfur_alchemist_death",
+            "corrosive_soul_death",
+		}
+	},
+    sounds_stage176 = {
+		sounds = {
+			"MusicBattlePrep_176",
+			"MusicBattle_176",
+			"dark_army_blazing_mage_attack_loopstart",
+            "puff_death_sound",
+            "haunted_skeleton_death",
+            "haunted_skeleton_death",
+            "ElvesCreepScreecherDeath",
+            "dwarves_sulfur_alchemist_death",
+            "corrosive_soul_death",
+		}
+	},
+	sounds_stage177 = {
+		sounds = {
+			"MusicBattlePrep_177",
+			"MusicBattle_177",
 			"level27_gillman_jump",
 			"level27_gillman_appear",
 			"level27_girl_drinking",

@@ -95,6 +95,27 @@ return {
 		},
 		alias = {}
 	},
+	MapBackground_kr4 = {
+		a_name = "MapBackground_kr4.png",
+		size = {
+			2496,1780
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2496,1780
+		},
+		f_quad = {
+			0,
+			0,
+			2496,1780
+		},
+		alias = {}
+	},
 	screen_map_button_map_0005 = {
 		a_name = "Icon_kr5.png",
 		size = {

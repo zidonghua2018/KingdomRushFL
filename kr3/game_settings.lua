@@ -9,7 +9,7 @@ GS.url_policy = "https://www.ironhidegames.com/PrivacyPolicy"
 GS.gameplay_tips_count = 84
 GS.early_wave_reward_per_second = 1--需要判断是不是5代关卡，是的话需要乘以1.8
 GS.early_wave_reward_per_second5 = 1.8
-GS.max_stars = 581
+GS.max_stars = 640
 GS.max_difficulty = DIFFICULTY_IMPOSSIBLE
 GS.difficulty_soldier_hp_max_factor = {
 	1.2,
@@ -39,11 +39,13 @@ GS.main_campaign_levels3 = 15
 GS.main_campaign_levels2 = 37
 GS.main_campaign_levels1 = 56
 GS.main_campaign_levels5 = 116
+GS.main_campaign_levels4 = 152
 GS.last_level = 22
 GS.last_level3 = 22
 GS.last_level2 = 44
 GS.last_level1 = 75---重生--72
 GS.last_level5 = 135
+GS.last_level4 = 191
 GS.jnum1 = 44
 GS.max_level1 = 32
 GS.jnum2 = 22
@@ -52,6 +54,8 @@ GS.jnum3 = 0
 GS.max_level3 = 23
 GS.jnum5 = 100
 GS.max_level5 = 35
+GS.jnum4 = 149
+GS.max_level4 = 42
 GS.endless_levels_count = 2
 GS.level_ranges = {
 	{
@@ -195,6 +199,19 @@ GS.level_ranges5 = {
 	{
 		131,
 		135
+	},
+}
+GS.level_ranges4 = {
+	{
+		150,
+		152
+	},
+	{
+		167,
+	},
+	{
+		176,
+		177
 	},
 }
 
@@ -426,7 +443,79 @@ GS.gems_per_level = {
 	400,
 	400,
 	400,
-	400
+	400,
+	100,
+	150,
+	200,
+	250,
+	250,
+	275,
+	275,
+	300,
+	300,
+	325,
+	325,
+	350,
+	350,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
+	400,
 }
 GS.tower_room_tower_thumb_fmt = "kra_main_icons_%04d"--"quickmenu_main_icons_main_icons_0%03i_0001" -- 5和14缺失
 GS.encyclopedia_tower_fmt = "encyclopedia_towers_0%03i"
@@ -1414,6 +1503,14 @@ GS.encyclopedia_enemies = {
 		name = "enemy_pumpkin_witch"
 	},
 	--4代
+	{
+		always_shown = false,
+		name = "enemy_human_woodcutter"
+	},
+	{
+		always_shown = false,
+		name = "enemy_human_worker"
+	},
 	{
 		always_shown = false,
 		name = "enemy_kr4_ghost"

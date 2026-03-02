@@ -911,7 +911,7 @@ return {
 	G2_TOWER_BARRACK_3_A_NAME = "骑士兵营",
 	G2_TOWER_BARRACK_3_B_DESCRIPTION = "骑士是身穿重甲的专业士兵。骑士为国王鞠躬尽瘁，阻挡敌人进军。",
 	G2_TOWER_BARRACK_3_B_NAME = "骑士兵营",
-	GAME_TITLE_KR3 = "王国保卫战 流辉版(FluidLight5.0/FL5.0) 版本号：%s 作者：流辉一枪349",
+	GAME_TITLE_KR3 = "王国保卫战 流辉版(FluidLight6.0/FL6.0) 版本号：%s 作者：流辉一枪349",
 	GET_ALL_AWESOME_HEROES = "获得所有强大的英雄",
 	GET_THIS_AWESOME = "获得这位\n强大的英雄",
 	GET_THIS_AWESOME_2 = "获得这些\n强大的英雄",

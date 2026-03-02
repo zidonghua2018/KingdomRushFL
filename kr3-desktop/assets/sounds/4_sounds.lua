@@ -1,4 +1,13 @@
 return {
+--关卡
+	MusicMap4 = {
+		source_group = "MUSIC",
+		gain = 0.15,
+		loop = true,
+		files = {
+			"Mapa.ogg"
+		}
+	},
 --骚扰
     kr4_elves_barrack_taunt = {
 		loop = false,
