@@ -18,15 +18,90 @@ return {
 		{
 			template = "decal_background",
 			["render.sprites[1].z"] = 1000,
-			["render.sprites[1].name"] = "stage_417",
+			["render.sprites[1].name"] = "Stage_167",
 			pos = {
 				x = 512,
 				y = 384
 			},
 		},
 		{
+			template = "bullywag_spawner",
+			pos = {
+				x = 260,
+				y = 147
+			},
+			["spawner.pi"] = 1,
+			["spawner.name"] = "object1",
+			["editor.game_mode"] = 1,
+		},
+		{
+			template = "bullywag_spawner",
+			pos = {
+				x = 700,
+				y = 455
+			},
+			["spawner.pi"] = 1,
+			["spawner.name"] = "object2",
+			["editor.game_mode"] = 1,
+		},
+		{
+			template = "mega_spawner",
+			load_file = "level167_campaign_spawner",
+			["editor.game_mode"] = 1,
+		},
+		{
+			template = "bullywag_spawner",
+			pos = {
+				x = 260,
+				y = 147
+			},
+			["spawner.pi"] = 1,
+			["spawner.name"] = "object1",
+			["editor.game_mode"] = 2,
+		},
+		{
+			template = "bullywag_spawner",
+			pos = {
+				x = 700,
+				y = 455
+			},
+			["spawner.pi"] = 1,
+			["spawner.name"] = "object2",
+			["editor.game_mode"] = 2,
+		},
+		{
+			template = "mega_spawner",
+			load_file = "level167_heroic_spawner",
+			["editor.game_mode"] = 2,
+		},
+		{
+			template = "bullywag_spawner",
+			pos = {
+				x = 260,
+				y = 147
+			},
+			["spawner.pi"] = 1,
+			["spawner.name"] = "object1",
+			["editor.game_mode"] = 3,
+		},
+		{
+			template = "bullywag_spawner",
+			pos = {
+				x = 700,
+				y = 455
+			},
+			["spawner.pi"] = 1,
+			["spawner.name"] = "object2",
+			["editor.game_mode"] = 3,
+		},
+		{
+			template = "mega_spawner",
+			load_file = "level167_iron_spawner",
+			["editor.game_mode"] = 3,
+		},
+		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 718,
 				y = 602
@@ -40,7 +115,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 494,
 				y = 580
@@ -54,7 +129,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 367,
 				y = 297
@@ -68,7 +143,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 438,
 				y = 262
@@ -82,7 +157,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 290,
 				y = 458
@@ -96,7 +171,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 533,
 				y = 279
@@ -110,7 +185,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 615,
 				y = 455
@@ -124,7 +199,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 530,
 				y = 432
@@ -138,7 +213,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 838,
 				y = 598
@@ -152,7 +227,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 622,
 				y = 136
@@ -166,7 +241,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 152,
 				y = 252
@@ -180,7 +255,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 886,
 				y = 454
@@ -194,7 +269,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 752,
 				y = 207
@@ -208,7 +283,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 862,
 				y = 328
@@ -699,6 +774,7 @@ return {
 				y = 414
 			},
 		},
+		--[[
 		{
 			template = "fx_repeat_forever",
 			pos = {
@@ -743,6 +819,7 @@ return {
 			["render.sprites[1].name"] = "stage17_barco_mask3",
 			["render.sprites[1].animated"] = false,
 		},
+
 		{
 			template = "fx_repeat_forever",
 			pos = {
@@ -765,6 +842,7 @@ return {
 			["render.sprites[1].name"] = "stage17_chains",
 			["render.sprites[1].animated"] = false,
 		},
+		
 		{
 			template = "fx_repeat_forever",
 			pos = {
@@ -806,6 +884,7 @@ return {
 			},
 			["render.sprites[1].z"] = Z_DECALS,
 		},
+		]]
 	},
 	nav_mesh = {
 		{ 9, nil, 2, 7 },
@@ -822,5 +901,23 @@ return {
 		{ nil, 9, 1, 14 },
 		{ nil, 14, 10, nil },
 		{ nil, 12, 7, 13 },
+	},
+	level_mode_overrides = {
+        [3] = {
+            locked_hero = false,
+            locked_towers = {
+            },
+            max_upgrade_level = 5
+        }
+    },
+	required_sounds = {
+		"sounds_stage167",
+		"enemy_sapos"
+	},
+	required_textures = {
+	},
+	scale_required_textures = {
+		"kr4_sapos",
+		"go_stage_167",
 	}
 }

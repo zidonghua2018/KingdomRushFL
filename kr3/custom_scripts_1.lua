@@ -643,7 +643,7 @@ end
 scripts.kr4_elven_warrior = {}
 function scripts.kr4_elven_warrior.on_damage(this, store, damage)
 	if not this.dodge or this.dodge.chance <= 0 or this.unit.is_stunned or this.health.dead or 
-	band(damage.damage_type, DAMAGE_ALL_TYPES, bnot(bor(DAMAGE_PHYSICAL, DAMAGE_MAGICAL, DAMAGE_TRUE, DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL))) ~= 0 or 
+	band(damage.damage_type, DAMAGE_ALL_TYPES, bnot(bor(DAMAGE_PHYSICAL, DAMAGE_MAGICAL, DAMAGE_TRUE, DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL, DAMAGE_SHOT))) ~= 0 or 
 	band(damage.damage_type, DAMAGE_NO_DODGE) ~= 0 or this.dodge.chance < math.random() then
 		return true
 	end

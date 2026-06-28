@@ -6,142 +6,163 @@ return {
 			page = 0,
 			pages = {
 				{
-					-- 3代
-					
-						{
-							check = "main_icons_0019",
-							action_arg = "tower_build_archer",
-							action = "tw_upgrade",
-							halo = "glow_ico_main",
-							image = "main_icons_0100",
-							place = 1,
-							preview = "archer",
-							tt_title = _("TOWER_ARCHER_1_NAME"),
-							tt_desc = _("TOWER_ARCHER_1_DESCRIPTION")
-						},
-						{
-							check = "main_icons_0019",
-							action_arg = "tower_build_barrack",
-							action = "tw_upgrade",
-							halo = "glow_ico_main",
-							image = "main_icons_0101",
-							place = 2,
-							preview = "barrack",
-							tt_title = _("TOWER_BARRACK_1_NAME"),
-							tt_desc = _("TOWER_BARRACK_1_DESCRIPTION")
-						},
-						{
-							check = "main_icons_0019",
-							action_arg = "tower_build_mage",
-							action = "tw_upgrade",
-							halo = "glow_ico_main",
-							image = "main_icons_0102",
-							place = 3,
-							preview = "mage",
-							tt_title = _("TOWER_MAGE_1_NAME"),
-							tt_desc = _("TOWER_MAGE_1_DESCRIPTION")
-						},
-						{
-							check = "main_icons_0019",
-							action_arg = "tower_build_rock_thrower",
-							action = "tw_upgrade",
-							halo = "glow_ico_main",
-							image = "main_icons_0103",
-							place = 4,
-							preview = "rock_thrower",
-							tt_title = _("TOWER_ROCK_THROWER_1_NAME"),
-							tt_desc = _("TOWER_ROCK_THROWER_1_DESCRIPTION")
-						},
-						{
-							check = "main_icons_0019",
-							action_arg = "g2_tower_build_archer",
-							action = "tw_upgrade",
-							halo = "glow_ico_main",
-							image = "g2_main_icons_0001",
-							place = 11,--1,
-							preview = "g2_archer",
-							tt_title = _("G2_TOWER_ARCHER_1_NAME"),
-							tt_desc = _("G2_TOWER_ARCHER_1_DESCRIPTION")
-						},
-						{
-							check = "main_icons_0019",
-							action_arg = "g2_tower_build_barrack",
-							action = "tw_upgrade",
-							halo = "glow_ico_main",
-							image = "g2_main_icons_0002",
-							place = 5,--2,
-							preview = "g2_barrack",
-							tt_title = _("G2_TOWER_BARRACK_1_NAME"),
-							tt_desc = _("G2_TOWER_BARRACK_1_DESCRIPTION")
-						},
-						{
-							check = "main_icons_0019",
-							action_arg = "g2_tower_build_mage",
-							action = "tw_upgrade",
-							halo = "glow_ico_main",
-							image = "g2_main_icons_0003",
-							place = 9,--3,
-							preview = "g2_mage",
-							tt_title = _("G2_TOWER_MAGE_1_NAME"),
-							tt_desc = _("G2_TOWER_MAGE_1_DESCRIPTION")
-						},
-						{
-							check = "main_icons_0019",
-							action_arg = "g2_tower_build_engineer",
-							action = "tw_upgrade",
-							halo = "glow_ico_main",
-							image = "g2_main_icons_0004",
-							place = 12,--4,
-							preview = "g2_engineer",
-							tt_title = _("G2_TOWER_ENGINEER_1_NAME"),
-							tt_desc = _("G2_TOWER_ENGINEER_1_DESCRIPTION")
-						},
-						{
-							check = "main_icons_0019",
-							action_arg = "g1_tower_build_mage",
-							action = "tw_upgrade",
-							halo = "glow_ico_main",
-							image = "g1_main_icons_0003",
-							place = 15,
-							preview = "g2_mage",
-							tt_title = _("G2_TOWER_MAGE_1_NAME"),
-							tt_desc = _("G2_TOWER_MAGE_1_DESCRIPTION")
-						},
-						{
-							check = "main_icons_0019",
-							action_arg = "g1_tower_build_engineer",
-							action = "tw_upgrade",
-							halo = "glow_ico_main",
-							image = "g1_main_icons_0004",
-							place = 21,
-							preview = "g2_engineer",
-							tt_title = _("G2_TOWER_ENGINEER_1_NAME"),
-							tt_desc = _("G2_TOWER_ENGINEER_1_DESCRIPTION")
-						},
-						{
-							check = "main_icons_0019",
-							action_arg = "g1_tower_build_archer",
-							action = "tw_upgrade",
-							halo = "glow_ico_main",
-							image = "g1_main_icons_0001",
-							place = 13,--1,
-							preview = "g2_archer",
-							tt_title = _("G2_TOWER_ARCHER_1_NAME"),
-							tt_desc = _("G2_TOWER_ARCHER_1_DESCRIPTION")
-						},
-						{
-							check = "main_icons_0019",
-							action_arg = "g1_tower_build_barrack",
-							action = "tw_upgrade",
-							halo = "glow_ico_main",
-							image = "g1_main_icons_0002",
-							place = 19,--2,
-							preview = "g2_barrack",
-							tt_title = _("G2_TOWER_BARRACK_1_NAME"),
-							tt_desc = _("G2_TOWER_BARRACK_1_DESCRIPTION")
-						},	
+					-- 3代	
+					{
+						check = "main_icons_0019",
+						action_arg = "2",
+						action = "tw_page",
+						halo = "glow_ico_main",
+						image = "main_icons_0005",
+						place = 5,
+						tt_title = _("TOWER_NEXT_PAGE_NAME"),
+						tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+					},
+					{
+						check = "main_icons_0019",
+						action_arg = "4",
+						action = "tw_page",
+						halo = "glow_ico_main",
+						image = "main_icons_0005",
+						place = 9,
+						tt_title = _("TOWER_NEXT_PAGE_NAME"),
+						tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+					},											
+					{
+						check = "main_icons_0019",
+						action_arg = "g1_tower_build_mage",
+						action = "tw_upgrade",
+						halo = "glow_ico_main",
+						image = "g1_main_icons_0003",
+						place = 15,
+						preview = "g1_mage",
+						tt_title = _("G2_TOWER_MAGE_1_NAME"),
+						tt_desc = _("G2_TOWER_MAGE_1_DESCRIPTION")
+					},		
+					{
+						check = "main_icons_0019",
+						action_arg = "g1_tower_build_engineer",
+						action = "tw_upgrade",
+						halo = "glow_ico_main",
+						image = "g1_main_icons_0004",
+						place = 21,
+						preview = "g1_engineer",
+						tt_title = _("G2_TOWER_ENGINEER_1_NAME"),
+						tt_desc = _("G2_TOWER_ENGINEER_1_DESCRIPTION")
+					},		
+					{
+						check = "main_icons_0019",
+						action_arg = "tower_build_mage",
+						action = "tw_upgrade",
+						halo = "glow_ico_main",
+						image = "main_icons_0102",
+						place = 3,
+						preview = "mage",
+						tt_title = _("TOWER_MAGE_1_NAME"),
+						tt_desc = _("TOWER_MAGE_1_DESCRIPTION")
+					},
+									
+					{
+						check = "main_icons_0019",
+						action_arg = "tower_build_rock_thrower",
+						action = "tw_upgrade",
+						halo = "glow_ico_main",
+						image = "main_icons_0103",
+						place = 4,
+						preview = "rock_thrower",
+						tt_title = _("TOWER_ROCK_THROWER_1_NAME"),
+						tt_desc = _("TOWER_ROCK_THROWER_1_DESCRIPTION")
+					},	
+					{
+						check = "main_icons_0019",
+						action_arg = "g2_tower_build_archer",
+						action = "tw_upgrade",
+						halo = "glow_ico_main",
+						image = "g2_main_icons_0001",
+						place = 14,--1,
+						preview = "g2_archer",
+						tt_title = _("G2_TOWER_ARCHER_1_NAME"),
+						tt_desc = _("G2_TOWER_ARCHER_1_DESCRIPTION")
+					},
+					{
+						check = "main_icons_0019",
+						action_arg = "g2_tower_build_barrack",
+						action = "tw_upgrade",
+						halo = "glow_ico_main",
+						image = "g2_main_icons_0002",
+						place = 20,--2,
+						preview = "g2_barrack",
+						tt_title = _("G2_TOWER_BARRACK_1_NAME"),
+						tt_desc = _("G2_TOWER_BARRACK_1_DESCRIPTION")
+					},	
+					{
+						check = "main_icons_0019",
+						action_arg = "g2_tower_build_mage",
+						action = "tw_upgrade",
+						halo = "glow_ico_main",
+						image = "g2_main_icons_0003",
+						place = 11,--3,
+						preview = "g2_mage",
+						tt_title = _("G2_TOWER_MAGE_1_NAME"),
+						tt_desc = _("G2_TOWER_MAGE_1_DESCRIPTION")
+					},						
+					{
+						check = "main_icons_0019",
+						action_arg = "g2_tower_build_engineer",
+						action = "tw_upgrade",
+						halo = "glow_ico_main",
+						image = "g2_main_icons_0004",
+						place = 12,--4,
+						preview = "g2_engineer",
+						tt_title = _("G2_TOWER_ENGINEER_1_NAME"),
+						tt_desc = _("G2_TOWER_ENGINEER_1_DESCRIPTION")
+					},
+					{
+						check = "main_icons_0019",
+						action_arg = "g1_tower_build_archer",
+						action = "tw_upgrade",
+						halo = "glow_ico_main",
+						image = "g1_main_icons_0001",
+						place = 13,--1,
+						preview = "g1_archer",
+						tt_title = _("G2_TOWER_ARCHER_1_NAME"),
+						tt_desc = _("G2_TOWER_ARCHER_1_DESCRIPTION")
+					},
+					{
+						check = "main_icons_0019",
+						action_arg = "g1_tower_build_barrack",
+						action = "tw_upgrade",
+						halo = "glow_ico_main",
+						image = "g1_main_icons_0002",
+						place = 19,--2,
+						preview = "g1_barrack",
+						tt_title = _("G2_TOWER_BARRACK_1_NAME"),
+						tt_desc = _("G2_TOWER_BARRACK_1_DESCRIPTION")
+					},
+					{
+						check = "main_icons_0019",
+						action_arg = "tower_build_archer",
+						action = "tw_upgrade",
+						halo = "glow_ico_main",
+						image = "main_icons_0100",
+						place = 1,
+						preview = "archer",
+						tt_title = _("TOWER_ARCHER_1_NAME"),
+						tt_desc = _("TOWER_ARCHER_1_DESCRIPTION")
+					},									
+					{
+						check = "main_icons_0019",
+						action_arg = "tower_build_barrack",
+						action = "tw_upgrade",
+						halo = "glow_ico_main",
+						image = "main_icons_0101",
+						place = 2,
+						preview = "barrack",
+						tt_title = _("TOWER_BARRACK_1_NAME"),
+						tt_desc = _("TOWER_BARRACK_1_DESCRIPTION")
+					},														
 				},
 				-- 5代
+--[[				
 				{
 					{
 						check = "kra_main_icons_0019",
@@ -204,10 +225,772 @@ return {
 						place = 5,
 					},
 				}
-
+]]--
 			}
 		}
 	},
+	holder_123 = {
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "2",
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "4",
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 9,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},											
+			{
+				check = "main_icons_0019",
+				action_arg = "g1_tower_build_mage",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "g1_main_icons_0003",
+				place = 15,
+				preview = "g1_mage",
+				tt_title = _("G2_TOWER_MAGE_1_NAME"),
+				tt_desc = _("G2_TOWER_MAGE_1_DESCRIPTION")
+			},		
+			{
+				check = "main_icons_0019",
+				action_arg = "g1_tower_build_engineer",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "g1_main_icons_0004",
+				place = 21,
+				preview = "g1_engineer",
+				tt_title = _("G2_TOWER_ENGINEER_1_NAME"),
+				tt_desc = _("G2_TOWER_ENGINEER_1_DESCRIPTION")
+			},		
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_build_mage",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0102",
+				place = 3,
+				preview = "mage",
+				tt_title = _("TOWER_MAGE_1_NAME"),
+				tt_desc = _("TOWER_MAGE_1_DESCRIPTION")
+			},
+							
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_build_rock_thrower",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0103",
+				place = 4,
+				preview = "rock_thrower",
+				tt_title = _("TOWER_ROCK_THROWER_1_NAME"),
+				tt_desc = _("TOWER_ROCK_THROWER_1_DESCRIPTION")
+			},	
+			{
+				check = "main_icons_0019",
+				action_arg = "g2_tower_build_archer",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "g2_main_icons_0001",
+				place = 14,--1,
+				preview = "g2_archer",
+				tt_title = _("G2_TOWER_ARCHER_1_NAME"),
+				tt_desc = _("G2_TOWER_ARCHER_1_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "g2_tower_build_barrack",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "g2_main_icons_0002",
+				place = 20,--2,
+				preview = "g2_barrack",
+				tt_title = _("G2_TOWER_BARRACK_1_NAME"),
+				tt_desc = _("G2_TOWER_BARRACK_1_DESCRIPTION")
+			},	
+			{
+				check = "main_icons_0019",
+				action_arg = "g2_tower_build_mage",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "g2_main_icons_0003",
+				place = 11,--3,
+				preview = "g2_mage",
+				tt_title = _("G2_TOWER_MAGE_1_NAME"),
+				tt_desc = _("G2_TOWER_MAGE_1_DESCRIPTION")
+			},						
+			{
+				check = "main_icons_0019",
+				action_arg = "g2_tower_build_engineer",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "g2_main_icons_0004",
+				place = 12,--4,
+				preview = "g2_engineer",
+				tt_title = _("G2_TOWER_ENGINEER_1_NAME"),
+				tt_desc = _("G2_TOWER_ENGINEER_1_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "g1_tower_build_archer",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "g1_main_icons_0001",
+				place = 13,--1,
+				preview = "g1_archer",
+				tt_title = _("G2_TOWER_ARCHER_1_NAME"),
+				tt_desc = _("G2_TOWER_ARCHER_1_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "g1_tower_build_barrack",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "g1_main_icons_0002",
+				place = 19,--2,
+				preview = "g1_barrack",
+				tt_title = _("G2_TOWER_BARRACK_1_NAME"),
+				tt_desc = _("G2_TOWER_BARRACK_1_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_build_archer",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0100",
+				place = 1,
+				preview = "archer",
+				tt_title = _("TOWER_ARCHER_1_NAME"),
+				tt_desc = _("TOWER_ARCHER_1_DESCRIPTION")
+			},									
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_build_barrack",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0101",
+				place = 2,
+				preview = "barrack",
+				tt_title = _("TOWER_BARRACK_1_NAME"),
+				tt_desc = _("TOWER_BARRACK_1_DESCRIPTION")
+			},														
+		},
+	},
+	holder_1 = {
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "2",
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "4",--"3",
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 9,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 15,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},						
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_build_archer",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0100",
+				place = 1,
+				preview = "archer",
+				tt_title = _("TOWER_ARCHER_1_NAME"),
+				tt_desc = _("TOWER_ARCHER_1_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_build_barrack",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0101",
+				place = 2,
+				preview = "barrack",
+				tt_title = _("TOWER_BARRACK_1_NAME"),
+				tt_desc = _("TOWER_BARRACK_1_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_build_mage",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0102",
+				place = 3,
+				preview = "mage",
+				tt_title = _("TOWER_MAGE_1_NAME"),
+				tt_desc = _("TOWER_MAGE_1_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_build_rock_thrower",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0103",
+				place = 4,
+				preview = "rock_thrower",
+				tt_title = _("TOWER_ROCK_THROWER_1_NAME"),
+				tt_desc = _("TOWER_ROCK_THROWER_1_DESCRIPTION")
+			},																		
+		},
+	},	
+	holder_2 = {
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "3",
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},	
+			{
+				check = "main_icons_0019",
+				action_arg = "1",							
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 9,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},	
+			{
+				check = "main_icons_0019",
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 15,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},	
+			{
+				check = "main_icons_0019",
+				action_arg = "g1_tower_build_mage",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "g1_main_icons_0003",
+				place = 3,
+				preview = "g1_mage",
+				tt_title = _("G2_TOWER_MAGE_1_NAME"),
+				tt_desc = _("G2_TOWER_MAGE_1_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "g1_tower_build_engineer",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "g1_main_icons_0004",
+				place = 4,
+				preview = "g1_engineer",
+				tt_title = _("G2_TOWER_ENGINEER_1_NAME"),
+				tt_desc = _("G2_TOWER_ENGINEER_1_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "g1_tower_build_archer",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "g1_main_icons_0001",
+				place = 1,
+				preview = "g1_archer",
+				tt_title = _("G2_TOWER_ARCHER_1_NAME"),
+				tt_desc = _("G2_TOWER_ARCHER_1_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "g1_tower_build_barrack",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "g1_main_icons_0002",
+				place = 2,
+				preview = "g1_barrack",
+				tt_title = _("G2_TOWER_BARRACK_1_NAME"),
+				tt_desc = _("G2_TOWER_BARRACK_1_DESCRIPTION")
+			},																	
+		},
+	},	
+	holder_3 = {
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "4",--"1",							
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},	
+			{
+				check = "main_icons_0019",
+				action_arg = "2",
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 9,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},	
+			{
+				check = "main_icons_0019",
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 15,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},	
+			{
+				check = "main_icons_0019",
+				action_arg = "g2_tower_build_archer",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "g2_main_icons_0001",
+				place = 1,
+				preview = "g2_archer",
+				tt_title = _("G2_TOWER_ARCHER_1_NAME"),
+				tt_desc = _("G2_TOWER_ARCHER_1_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "g2_tower_build_barrack",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "g2_main_icons_0002",
+				place = 2,
+				preview = "g2_barrack",
+				tt_title = _("G2_TOWER_BARRACK_1_NAME"),
+				tt_desc = _("G2_TOWER_BARRACK_1_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "g2_tower_build_mage",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "g2_main_icons_0003",
+				place = 3,
+				preview = "g2_mage",
+				tt_title = _("G2_TOWER_MAGE_1_NAME"),
+				tt_desc = _("G2_TOWER_MAGE_1_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "g2_tower_build_engineer",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "g2_main_icons_0004",
+				place = 4,
+				preview = "g2_engineer",
+				tt_title = _("G2_TOWER_ENGINEER_1_NAME"),
+				tt_desc = _("G2_TOWER_ENGINEER_1_DESCRIPTION")
+			},																
+		},
+	},	
+	holder_4 = {
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "1",							
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},				
+			{
+				check = "main_icons_0019",
+				action_arg = "3",
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 9,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},	
+			{
+				check = "main_icons_0019",
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 15,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},		
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_build_archer_v",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "tower_v_icons_0001",
+				place = 1,
+				preview = "archer_v",
+				tt_title = _("TOWER_ARCHER_1_V_NAME"),
+				tt_desc = _("TOWER_ARCHER_1_V_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_build_barrack_v",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "tower_v_icons_0002",
+				place = 2,
+				preview = "barrack_v",
+				tt_title = _("TOWER_BARRACK_1_V_NAME"),
+				tt_desc = _("TOWER_BARRACK_1_V_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_build_mage_v",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "tower_v_icons_0003",
+				place = 3,
+				preview = "mage_v",
+				tt_title = _("TOWER_MAGE_1_V_NAME"),
+				tt_desc = _("TOWER_MAGE_1_V_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_build_engineer_v",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "tower_v_icons_0004",
+				place = 4,
+				preview = "engineer_v",
+				tt_title = _("TOWER_ARTILLERY_1_NAME"),
+				tt_desc = _("TOWER_ARTILLERY_1_DESCRIPTION")
+			},					
+		}
+	},
+	archer_v = {
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_archer_2_v",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_ARCHER_2_V_NAME"),
+				tt_desc = _("TOWER_ARCHER_2_V_DESCRIPTION")
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}
+		},
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_archer_3_v",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_ARCHER_3_V_NAME"),
+				tt_desc = _("TOWER_ARCHER_3_V_DESCRIPTION")
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}
+		},
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_deathcoil",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "tower_v_icons_0006",
+				place = 1,
+				tt_title = _("TOWER_DEATHCOIL_NAME"),
+				tt_desc = _("TOWER_DEATHCOIL_DESCRIPTION_SHORT")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_musketeer",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0010",
+				place = 2,
+				tt_title = _("TOWER_MUSKETEERS_NAME"),
+				tt_desc = _("TOWER_MUSKETEERS_DESCRIPTION")
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}
+		}
+	},
+	barrack_v = {
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_barrack_2_v",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_BARRACK_2_V_NAME"),
+				tt_desc = _("TOWER_BARRACK_2_V_DESCRIPTION")
+			},
+			{
+				check = "sub_icons_0003",
+				action = "tw_rally",
+				halo = "glow_ico_sub",
+				image = "sub_icons_0001",
+				place = 8
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}
+		},
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_barrack_3_v",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_BARRACK_3_V_NAME"),
+				tt_desc = _("TOWER_BARRACK_3_V_DESCRIPTION")
+			},
+			{
+				check = "sub_icons_0003",
+				action = "tw_rally",
+				halo = "glow_ico_sub",
+				image = "sub_icons_0001",
+				place = 8
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}
+		},
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_redcap",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "tower_v_icons_0012",
+				place = 1,
+				tt_title = _("TOWER_REDCAP_NAME"),
+				tt_desc = _("TOWER_REDCAP_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_barrack_canibal",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "canibal_0004",
+				place = 2,
+				tt_title = _("TOWER_BARRACK_CANIBAL_NAME"),
+				tt_desc = _("TOWER_BARRACK_CANIBAL_DESCRIPTION")
+			},
+			{
+				check = "sub_icons_0003",
+				action = "tw_rally",
+				halo = "glow_ico_sub",
+				image = "sub_icons_0001",
+				place = 8
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}
+		}
+	},
+	mage_v = {
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_mage_2_v",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_MAGE_2_V_NAME"),
+				tt_desc = _("TOWER_MAGE_2_V_DESCRIPTION")
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}
+		},
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_mage_3_v",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_MAGE_3_V_NAME"),
+				tt_desc = _("TOWER_MAGE_3_V_DESCRIPTION")
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}
+		},
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_shaman",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "tower_v_icons_0016",
+				place = 1,
+				tt_title = _("TOWER_SHAMAN_NAME"),
+				tt_desc = _("TOWER_SHAMAN_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_sorcerer",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0007",
+				place = 2,
+				tt_title = _("TOWER_SORCERER_NAME"),
+				tt_desc = _("TOWER_SORCERER_DESCRIPTION")
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}
+		}
+	},	
+	artillery = {
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_artillery_2",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_ARTILLERY_2_NAME"),
+				tt_desc = _("TOWER_ARTILLERY_2_DESCRIPTION")
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}
+		},
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_artillery_3",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_ARTILLERY_3_NAME"),
+				tt_desc = _("TOWER_ARTILLERY_3_DESCRIPTION")
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}
+		},
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_rotshroom",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "tower_v_icons_0009",
+				place = 1,
+				tt_title = _("TOWER_ROTSHROOM_NAME"),
+				tt_desc = _("TOWER_ROTSHROOM_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_sandworm",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "sandworm_0004",
+				place = 2,
+				tt_title = _("SANDWORM_NAME"),
+				tt_desc = _("TOWER_SANDWORM_DESCRIPTION")
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}
+		}
+	},		
 	twilight_elves_barrack = {
 		{
 			{
@@ -6009,6 +6792,264 @@ return {
 			}
 		}
 	},
+	dragons = {
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_dragons_lvl2",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_DRAGONS_2_NAME"),
+				tt_desc = _("TOWER_DRAGONS_2_DESCRIPTION")
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			},
+		},
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_dragons_lvl3",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_DRAGONS_3_NAME"),
+				tt_desc = _("TOWER_DRAGONS_3_DESCRIPTION")
+			},
+			{
+				check = "ingame_ui_ico_sell_0002",
+				action = "tw_sell",
+				halo = "ingame_ui_ico_sell_0001_hover",
+				image = "ingame_ui_ico_sell_0001",
+				place = 9
+			}
+		},
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_dragons_lvl4",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_DRAGONS_4_NAME"),
+				tt_desc = _("TOWER_DRAGONS_4_DESCRIPTION")
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			},
+		},
+		{
+			{
+				check = "special_icons_0020",
+				action_arg = "dragon_split",
+				action = "upgrade_power",
+				image = "kra_special_icons_0046",
+				place = 6,
+				halo = "glow_ico_special",
+				sounds = {
+					"TowerDragonsSpitUnlockTaunt"
+				},
+				tt_phrase = _("TOWER_DRAGONS_4_DRAGON_SPLIT"),
+				tt_list = {
+					{
+						tt_title = _("TOWER_DRAGONS_4_DRAGON_SPLIT_1_NAME"),
+						tt_desc = _("TOWER_DRAGONS_4_DRAGON_SPLIT_1_DESCRIPTION")
+					},
+					{
+						tt_title = _("TOWER_DRAGONS_4_DRAGON_SPLIT_2_NAME"),
+						tt_desc = _("TOWER_DRAGONS_4_DRAGON_SPLIT_2_DESCRIPTION")
+					},
+					{
+						tt_title = _("TOWER_DRAGONS_4_DRAGON_SPLIT_3_NAME"),
+						tt_desc = _("TOWER_DRAGONS_4_DRAGON_SPLIT_3_DESCRIPTION")
+					}
+				}
+			},
+			{
+				check = "special_icons_0020",
+				action_arg = "massive_fear",
+				action = "upgrade_power",
+				image = "kra_special_icons_0045",
+				place = 7,
+				halo = "glow_ico_special",
+				sounds = {
+					"TowerDragonsScreechUnlockTaunt"
+				},
+				tt_phrase = _("TOWER_DRAGONS_4_MASSIVE_FEAR"),
+				tt_list = {
+					{
+						tt_title = _("TOWER_DRAGONS_4_MASSIVE_FEAR_1_NAME"),
+						tt_desc = _("TOWER_DRAGONS_4_MASSIVE_FEAR_1_DESCRIPTION")
+					},
+					{
+						tt_title = _("TOWER_DRAGONS_4_MASSIVE_FEAR_2_NAME"),
+						tt_desc = _("TOWER_DRAGONS_4_MASSIVE_FEAR_2_DESCRIPTION")
+					}
+				}
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			},
+		}
+	},
+	stage_37_barrack_dragon_wardens = {
+		{}
+	},
+	stage_37_tower_dragons_warden = {
+		{
+			{
+				check = "special_icons_0020",
+				action_arg = "increase_damage",
+				action = "upgrade_power",
+				image = "kra_special_icons_0044",
+				place = 6,
+				halo = "glow_ico_special",
+				sounds = {
+					"TowerPandasSkillBTaunt"
+				},
+				tt_phrase = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE"),
+				tt_list = {
+					{
+						tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_1_NAME"),
+						tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_1_DESCRIPTION")
+					},
+					{
+						tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_2_NAME"),
+						tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_2_DESCRIPTION")
+					},
+					{
+						tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_3_NAME"),
+						tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_3_DESCRIPTION")
+					}
+				}
+			},
+			{
+				check = "special_icons_0020",
+				action_arg = "increase_rate",
+				action = "upgrade_power",
+				image = "kra_special_icons_0043",
+				place = 7,
+				halo = "glow_ico_special",
+				sounds = {
+					"TowerPandasSkillCTaunt"
+				},
+				tt_phrase = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE"),
+				tt_list = {
+					{
+						tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_1_NAME"),
+						tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_1_DESCRIPTION")
+					},
+					{
+						tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_2_NAME"),
+						tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_2_DESCRIPTION")
+					},
+					{
+						tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_3_NAME"),
+						tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_3_DESCRIPTION")
+					}
+				}
+			}
+		}
+	},
+	stage_37_tower_dragons_warden_d = {
+		{
+			{
+				check = "special_icons_0020",
+				action_arg = "increase_damage",
+				action = "upgrade_power",
+				image = "kra_special_icons_0044",
+				place = 6,
+				halo = "glow_ico_special",
+				sounds = {
+					"TowerPandasSkillBTaunt"
+				},
+				tt_phrase = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE"),
+				tt_list = {
+					{
+						tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_1_NAME"),
+						tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_1_DESCRIPTION")
+					},
+					{
+						tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_2_NAME"),
+						tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_2_DESCRIPTION")
+					},
+					{
+						tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_3_NAME"),
+						tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_3_DESCRIPTION")
+					}
+				}
+			},
+			{
+				check = "special_icons_0020",
+				action_arg = "increase_rate",
+				action = "upgrade_power",
+				image = "kra_special_icons_0043",
+				place = 7,
+				halo = "glow_ico_special",
+				sounds = {
+					"TowerPandasSkillCTaunt"
+				},
+				tt_phrase = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE"),
+				tt_list = {
+					{
+						tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_1_NAME"),
+						tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_1_DESCRIPTION")
+					},
+					{
+						tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_2_NAME"),
+						tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_2_DESCRIPTION")
+					},
+					{
+						tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_3_NAME"),
+						tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_3_DESCRIPTION")
+					}
+				}
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			},
+		}
+	},
+	stage_38_tower_dragons_warden_barrack = {
+		{}
+	},
+	tower_broken_stage_37 = {
+		{}
+	},
+	tower_broken_stage_40 = {
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = "",
+				action = "tw_repair",
+				halo = "glow_ico_main",
+				image = "kra_main_icons_0052",
+				place = 5,
+				tt_title = _("SPECIAL_REPAIR_STAGE_40_NAME"),
+				tt_desc = _("SPECIAL_REPAIR_STAGE_40_DESCRIPTION")
+			}
+		}
+	},
 	mage = {
 		{
 			{
@@ -6444,6 +7485,16 @@ return {
 		{
 			{
 				check = "main_icons_0019",
+				action_arg = "2",
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},	
+			{
+				check = "main_icons_0019",
 				action_arg = "tower_drow_d",
 				action = "tw_upgrade",
 				halo = "glow_ico_main",
@@ -6471,17 +7522,7 @@ return {
 				place = 2,
 				tt_title = _("TOWER_FOREST_KEEPERS_NAME"),
 				tt_desc = _("TOWER_FOREST_KEEPERS_DESCRIPTION")
-			},
-			{
-				check = "main_icons_0019",
-				action_arg = "tower_barrack_3_a",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "main_icons_0005",
-				place = 5,
-				tt_title = _("TOWER_NEXT_PAGE_NAME"),
-				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
-			},			
+			},		
 			{
 				halo = "glow_ico_sub",
 				image = "sub_icons_0001",
@@ -6497,8 +7538,17 @@ return {
 			}
 		}
 	},
-	tower_barrack_3_a = {
+	barrack_2 = {
 		{
+			{
+				check = "main_icons_0019",
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},		
 			{
 				check = "main_icons_0020",
 				action_arg = "tower_elf_1",
@@ -6528,80 +7578,13 @@ return {
 				place = 2,
 				tt_title = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_NAME"),
 				tt_desc = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_DESCRIPTION")
-			},			
-			{
-				check = "main_icons_0019",
-				action_arg = "tower_barrack_3_b",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "main_icons_0005",
-				place = 5,
-				tt_title = _("TOWER_NEXT_PAGE_NAME"),
-				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
-			},
+			},				
 			{
 				halo = "glow_ico_sub",
 				image = "sub_icons_0001",
 				action = "tw_rally",
 				place = 8
 			},
-			{
-				check = "ico_sell_0002",
-				action = "tw_sell",
-				halo = "glow_ico_sell",
-				image = "ico_sell_0001",
-				place = 9
-			}
-		}
-	},
-	tower_barrack_3_b = {
-		{
-			{
-				check = "main_icons_0019",
-				action_arg = "tower_drow_d",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "special_icons_0301",
-				place = 3,
-				tt_title = _("ELVES_TOWER_SPECIAL_DROW_NAME"),
-				tt_desc = _("ELVES_TOWER_SPECIAL_DROW_DESCRIPTION")
-			},			
-			{
-				check = "main_icons_0019",
-				action_arg = "tower_blade",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "main_icons_0104",
-				place = 1,
-				tt_title = _("TOWER_BARRACKS_BLADE_NAME"),
-				tt_desc = _("TOWER_BARRACKS_BLADE_DESCRIPTION")
-			},
-			{
-				check = "main_icons_0019",
-				action_arg = "tower_forest",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "main_icons_0105",
-				place = 2,
-				tt_title = _("TOWER_FOREST_KEEPERS_NAME"),
-				tt_desc = _("TOWER_FOREST_KEEPERS_DESCRIPTION")
-			},
-			{
-				check = "main_icons_0019",
-				action_arg = "tower_barrack_3_a",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "main_icons_0005",
-				place = 5,
-				tt_title = _("TOWER_NEXT_PAGE_NAME"),
-				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
-			},
-			{
-				halo = "glow_ico_sub",
-				image = "sub_icons_0001",
-				action = "tw_rally",
-				place = 8
-			},						
 			{
 				check = "ico_sell_0002",
 				action = "tw_sell",
@@ -8026,7 +9009,7 @@ return {
 				place = 3,
 				tt_title = _("TOWER_TIME_WIZARD_NAME"),
 				tt_desc = _("TOWER_TIME_WIZARD_DESCRIPTION")
-			},
+			},	
 			{
 				check = "main_icons_0019",
 				action_arg = "tower_arcane_wizard",
@@ -8270,6 +9253,16 @@ return {
 		{
 			{
 				check = "main_icons_0019",
+				action_arg = "2",
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},		
+			{
+				check = "main_icons_0019",
 				action_arg = "tower_steam_troop",
 				action = "tw_upgrade",
 				halo = "glow_ico_main",
@@ -8297,7 +9290,8 @@ return {
 				place = 2,--3,
 				tt_title = _("TOWER_BARBARIANS_NAME"),
 				tt_desc = _("TOWER_BARBARIANS_DESCRIPTION")
-			},			
+			},
+--[[
 			{
 				check = "main_icons_0019",
 				action_arg = "g1_tower_barrack_3_a",
@@ -8308,6 +9302,7 @@ return {
 				tt_title = _("TOWER_NEXT_PAGE_NAME"),
 				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
 			},
+]]--
 			{
 				halo = "glow_ico_sub",
 				image = "sub_icons_0001",
@@ -8323,8 +9318,17 @@ return {
 			}
 		}
 	},
-	g1_tower_barrack_3_a = {
+	g1_barrack_2 = {
 		{
+			{
+				check = "main_icons_0019",
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},	
 			{
 				check = "main_icons_0019",
 				action_arg = "tower_paladin_rider",
@@ -8364,17 +9368,7 @@ return {
 				place = 2,--14,
 				tt_title = _("TOWER_BARRACK_SASQUATCH_NAME"),
 				tt_desc = _("TOWER_BARRACK_SASQUATCH_DESCRIPTION")
-			},
-			{
-				check = "main_icons_0019",
-				action_arg = "g1_tower_barrack_3_b",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "main_icons_0005",
-				place = 5,
-				tt_title = _("TOWER_NEXT_PAGE_NAME"),
-				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
-			},					
+			},		
 			{
 				action = "tw_rally",
 				check = "sub_icons_0003",
@@ -8390,64 +9384,6 @@ return {
 				place = 9,
 			},
 		}
-	},
-	g1_tower_barrack_3_b = {
-		{
-			{
-				check = "main_icons_0019",
-				action_arg = "tower_steam_troop",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "bloodlust_icons_0004",
-				place = 3,--12,
-				tt_title = _("TOWER_STEAM_TROOP_NAME"),
-				tt_desc = _("TOWER_STEAM_TROOP_DESCRIPTION")
-			},
-			{
-				check = "main_icons_0019",
-				action_arg = "tower_paladin",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "main_icons_0008",
-				place = 1,--11,
-				tt_title = _("TOWER_PALADINS_NAME"),
-				tt_desc = _("TOWER_PALADINS_DESCRIPTION")
-			},			
-			{
-				check = "main_icons_0019",
-				action_arg = "tower_barbarian",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "main_icons_0009",
-				place = 2,--3,
-				tt_title = _("TOWER_BARBARIANS_NAME"),
-				tt_desc = _("TOWER_BARBARIANS_DESCRIPTION")
-			},
-			{
-				check = "main_icons_0019",
-				action_arg = "g1_tower_barrack_3_a",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "main_icons_0005",
-				place = 5,
-				tt_title = _("TOWER_NEXT_PAGE_NAME"),
-				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
-			},
-			{
-				action = "tw_rally",
-				check = "sub_icons_0003",
-				halo = "glow_ico_sub",
-				image = "sub_icons_0001",
-				place = 8,
-			},
-			{
-				action = "tw_sell",
-				check = "ico_sell_0002",
-				halo = "glow_ico_sell",
-				image = "ico_sell_0001",
-				place = 9,
-			},
-		},
 	},
 	g2_mage = {
 		{
@@ -8597,7 +9533,7 @@ return {
 				place = 3,
 				tt_title = _("SANDWORM_NAME"),
 				tt_desc = _("TOWER_SANDWORM_DESCRIPTION")
-			},
+			},				
 			{
 				action = "tw_upgrade",
 				action_arg = "tower_dwaarp",
@@ -8617,7 +9553,7 @@ return {
 				place = 2,--12,
 				tt_title = _("TOWER_MECH_NAME"),
 				tt_desc = _("TOWER_MECH_DESCRIPTION"),
-			},
+			},		
 			{
 				check = "ico_sell_0002",
 				action = "tw_sell",
@@ -8822,6 +9758,16 @@ return {
 		{
 			{
 				check = "main_icons_0019",
+				action_arg = "2",
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
 				action_arg = "tower_barrack_dwarf_d",
 				action = "tw_upgrade",
 				halo = "glow_ico_main",
@@ -8849,16 +9795,6 @@ return {
 				place = 2,
 				tt_title = _("TOWER_TEMPLAR_NAME"),
 				tt_desc = _("TOWER_TEMPLAR_DESCRIPTION"),
-			},
-			{
-				check = "main_icons_0019",
-				action_arg = "g2_tower_barrack_3_a",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "main_icons_0005",
-				place = 5,
-				tt_title = _("TOWER_NEXT_PAGE_NAME"),
-				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
 			},			
 			{
 				halo = "glow_ico_sub",
@@ -8875,8 +9811,18 @@ return {
 			}
 		}
 	},
-	g2_tower_barrack_3_a = {
+	g2_barrack_2 = {
 		{
+			{
+				check = "main_icons_0019",
+				action_arg = "3",
+				action = "tw_page",
+				halo = "glow_ico_main",
+				image = "main_icons_0005",
+				place = 5,
+				tt_title = _("TOWER_NEXT_PAGE_NAME"),
+				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
+			},
 			{
 				check = "main_icons_0019",
 				action_arg = "tower_barrack_amazonas_re",
@@ -8886,27 +9832,7 @@ return {
 				place = 3,--15,
 				tt_title = _("TOWER_BARRACK_AMAZONAS_NAME"),
 				tt_desc = _("TOWER_BARRACK_AMAZONAS_DESCRIPTION")
-			},
-			{
-				check = "main_icons_0019",
-				action_arg = "tower_barrack_canibal",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "canibal_0004",
-				place = 11,
-				tt_title = _("TOWER_BARRACK_CANIBAL_NAME"),
-				tt_desc = _("TOWER_BARRACK_CANIBAL_DESCRIPTION")
-			},
-			{
-				check = "main_icons_0019",
-				action_arg = "tower_aladdin_lamp_holder",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "aladdin_lamp_0001",
-				place = 12,
-				tt_title = _("ALADDIN_LAMP_NAME"),
-				tt_desc = _("ALADDIN_LAMP_DESCRIPTION")
-			},							
+			},						
 			{
 				check = "main_icons_0019",
 				action_arg = "tower_barrack_mercenaries_2",
@@ -8928,16 +9854,6 @@ return {
 				tt_desc = _("TOWER_BARRACK_PIRATES_DESCRIPTION")
 			},	
 			{
-				check = "main_icons_0019",
-				action_arg = "g2_tower_barrack_3_b",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "main_icons_0005",
-				place = 5,
-				tt_title = _("TOWER_NEXT_PAGE_NAME"),
-				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
-			},			
-			{
 				halo = "glow_ico_sub",
 				image = "sub_icons_0001",
 				action = "tw_rally",
@@ -8952,48 +9868,37 @@ return {
 			}
 		}
 	},
-	g2_tower_barrack_3_b = {
+	g2_barrack_3 = {
 		{
 			{
 				check = "main_icons_0019",
-				action_arg = "tower_barrack_dwarf_d",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "special_icons_0201",
-				place = 3,
-				tt_title = _("SPECIAL_DWARF_HALL_NAME"),
-				tt_desc = _("SPECIAL_DWARF_HALL_DESCRIPTION")
-			},			
-			{
-				check = "main_icons_0019",
-				action_arg = "tower_assassin",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "main_icons_0024",
-				place = 1,--11,
-				tt_title = _("TOWER_ASSASSIN_NAME"),
-				tt_desc = _("TOWER_ASSASSIN_DESCRIPTION")
-			},
-			{
-				check = "main_icons_0019",
-				action_arg = "tower_templar",
-				action = "tw_upgrade",
-				halo = "glow_ico_main",
-				image = "main_icons_0023",
-				place = 2,--12,
-				tt_title = _("TOWER_TEMPLAR_NAME"),
-				tt_desc = _("TOWER_TEMPLAR_DESCRIPTION")
-			},
-			{
-				check = "main_icons_0019",
-				action_arg = "g2_tower_barrack_3_a",
-				action = "tw_upgrade",
+				action = "tw_page",
 				halo = "glow_ico_main",
 				image = "main_icons_0005",
 				place = 5,
 				tt_title = _("TOWER_NEXT_PAGE_NAME"),
 				tt_desc = _("TOWER_NEXT_PAGE_DESCRIPTION")
-			},			
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_barrack_canibal",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "canibal_0004",
+				place = 1,
+				tt_title = _("TOWER_BARRACK_CANIBAL_NAME"),
+				tt_desc = _("TOWER_BARRACK_CANIBAL_DESCRIPTION")
+			},	
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_aladdin_lamp_holder",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "aladdin_lamp_0001",
+				place = 2,
+				tt_title = _("ALADDIN_LAMP_NAME"),
+				tt_desc = _("ALADDIN_LAMP_DESCRIPTION")
+			},				
 			{
 				halo = "glow_ico_sub",
 				image = "sub_icons_0001",
@@ -9008,7 +9913,8 @@ return {
 				place = 9
 			}
 		}
-	},
+	},	
+
 	---lamp
 	aladdin_lamp_holder = {
 	    {
@@ -11342,8 +12248,7 @@ return {
 		},
 	},
 	barbarian = {
-		{
-			--[[
+		{	
 			{
 				check = "special_icons_0020",
 				action_arg = "nets",
@@ -11370,7 +12275,6 @@ return {
 					}
 				}
 			},
-			]]
 			{
 				action = "upgrade_power",
 				action_arg = "dual",
@@ -11902,6 +12806,49 @@ return {
 				place = 19,
 				tt_title = _("SPECIAL_ARBOREAN_OLDTREE_NAME"),
 				tt_desc = _("SPECIAL_ARBOREAN_OLDTREE_DESCRIPTION")
+			},
+---3.14
+			{
+				check = "main_icons_0019",
+				action_arg = "stage_37_barrack_dragon_wardens_d",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "kra_main_icons_barrack_dragon_wardens_d",
+				place = 20,
+				tt_title = _("STAGE_37_BARRACK_DRAGON_WARDENS_D_NAME"),
+				tt_desc = _("STAGE_37_BARRACK_DRAGON_WARDENS_D_DESC")
+			},
+---3.14			
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_stage_38_dragon_wardens_goal_d",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "kra_main_icons_barrack_dragon_wardens_goal_d",
+				place = 14,
+				tt_title = _("TOWER_STAGE_38_DRAGON_WARDENS_GOAL_D_NAME"),
+				tt_desc = _("TOWER_STAGE_38_DRAGON_WARDENS_GOAL_D_DESC")
+			},
+---
+			{
+				check = "main_icons_0019",
+				action_arg = "g1_tower_barrack_soldier_warden_stage_40",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "kra_main_icons_soldier_warden_stage_40_d",
+				place = 15,
+				tt_title = _("SOLDIER_WARDEN_STAGE_40_MOVING_ISLAND_NAME"),
+				tt_desc = _("SOLDIER_WARDEN_STAGE_40_MOVING_ISLAND_DESC")
+			},															
+			{
+				check = "main_icons_0019",
+				action_arg = "tower_dragons_warden_d",
+				action = "tw_upgrade",
+				halo = "glow_ico_main",
+				image = "kra_main_icons_tower_dragons_warden_d",--"kra_main_icons_0052",
+				place = 21,
+				tt_title = _("TOWER_DRAGONS_WARDEN_NAME"),
+				tt_desc = _("TOWER_DRAGONS_WARDEN_DESC")
 			},						
 			{
 				check = "main_icons_0019",
@@ -11928,7 +12875,7 @@ return {
 				action_arg = "tower_arborean_sentinels_d",
 				action = "tw_upgrade",
 				halo = "glow_ico_main",
-				image = "kra_main_icons_0105",
+				image = "kra_main_icons_sentinels_0105",
 				place = 5,
 				tt_title = _("SPECIAL_ARBOREAN_SENTINELS_SPEARMEN_NAME"),
 				tt_desc = _("SPECIAL_ARBOREAN_SENTINELS_SPEARMEN_DESCRIPTION")
@@ -11996,6 +12943,55 @@ return {
 				tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_FIRE_NAME"),
 				tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_FIRE_DESCRIPTION")
 			},				
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			},
+		}
+	},
+	stage_37_barrack_dragon_wardens_d = {
+		{
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			},
+		}
+	},
+	stage_38_dragon_wardens_goal_d = {
+		{
+			{
+				check = "main_icons_0019",
+				action_arg = 1,
+				action = "tw_buy_attack",
+				halo = "glow_ico_main",
+				image = "kra_main_icons_barrack_dragon_wardens_goal_d",
+				place = 5,
+				tt_title = _("TOWER_STAGE_38_DRAGON_WARDENS_GOAL_D_NAME"),
+				tt_desc = _("TOWER_STAGE_38_DRAGON_WARDENS_GOAL_D_DESC")
+			},					
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			},	
+		}
+	},
+	g1_tower_barrack_soldier_warden_stage_40 = {
+		{
+			{
+				halo = "glow_ico_sub",
+				image = "sub_icons_0001",
+				action = "tw_rally",
+				place = 8
+			},			
 			{
 				check = "ico_sell_0002",
 				action = "tw_sell",
@@ -12780,7 +13776,36 @@ return {
 				place = 1,
 				tt_title = _("HERO_RAELYN_NAME"),
 				tt_desc = _("HERO_RAELYN_DESC")
-			},																																				
+			},												{
+				check = "main_icons_0019",
+				action_arg = 18,
+				action = "tw_buy_attack",
+				halo = "glow_ico_main",
+				image = "kra_gui_heroes_0019",
+				place = 24,
+				tt_title = _("HERO_DRAGON_SUN_NAME"),
+				tt_desc = _("HERO_DRAGON_SUN_DESCRIPTION")
+			},	
+			{
+				check = "main_icons_0019",
+				action_arg = 19,
+				action = "tw_buy_attack",
+				halo = "glow_ico_main",
+				image = "kra_gui_heroes_0018",
+				place = 22,
+				tt_title = _("HERO_WUKONG_NAME"),
+				tt_desc = _("HERO_WUKONG_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = 20,
+				action = "tw_buy_attack",
+				halo = "glow_ico_main",
+				image = "kra_gui_heroes_0018",
+				place = 23,
+				tt_title = _("HERO_DOUZHANSHENGFO_NAME"),
+				tt_desc = _("HERO_DOUZHANSHENGFO_DESCRIPTION")
+			},						
 			{
 				check = "main_icons_0019",
 				action_arg = 1,
@@ -12817,20 +13842,20 @@ return {
 				action_arg = 5,
 				action = "tw_buy_attack",
 				halo = "glow_ico_main",
-				image = "kra_gui_heroes_0018",
-				place = 4,
-				tt_title = _("HERO_DOUZHANSHENGFO_NAME"),
-				tt_desc = _("HERO_DOUZHANSHENGFO_DESCRIPTION")
+				image = "krv_gui_heroes_0019",
+				place = 24,
+				tt_title = _("HERO_ISFET_NAME"),
+				tt_desc = _("HERO_ISFET_DESCRIPTION")
 			},
 			{
 				check = "main_icons_0019",
 				action_arg = 4,
 				action = "tw_buy_attack",
 				halo = "glow_ico_main",
-				image = "kra_gui_heroes_0018",
-				place = 3,
-				tt_title = _("HERO_WUKONG_NAME"),
-				tt_desc = _("HERO_WUKONG_DESCRIPTION")
+				image = "krv_gui_heroes_0018",
+				place = 23,
+				tt_title = _("HERO_MAMMOTH_NAME"),
+				tt_desc = _("HERO_MAMMOTH_DESCRIPTION")
 			},	
 			{
 				check = "main_icons_0019",
@@ -12931,6 +13956,66 @@ return {
 				place = 20,
 				tt_title = _("HERO_OLOCH_NAME"),
 				tt_desc = _("HERO_OLOCH_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = 13,
+				action = "tw_buy_attack",
+				halo = "glow_ico_main",
+				image = "krv_gui_heroes_0013",
+				place = 22,
+				tt_title = _("HERO_NAGA_NAME"),
+				tt_desc = _("HERO_NAGA_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = 14,
+				action = "tw_buy_attack",
+				halo = "glow_ico_main",
+				image = "krv_gui_heroes_0005",
+				place = 17,
+				tt_title = _("HERO_TRAMIS_NAME"),
+				tt_desc = _("HERO_TRAMIS_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = 15,
+				action = "tw_buy_attack",
+				halo = "glow_ico_main",
+				image = "krv_gui_heroes_0005",
+				place = 18,
+				tt_title = _("HERO_TRAMIN_SEVENTH_NAME"),
+				tt_desc = _("HERO_TRAMIN_SEVENTH_DESCRIPTION")
+			},	
+			{
+				check = "main_icons_0019",
+				action_arg = 16,
+				action = "tw_buy_attack",
+				halo = "glow_ico_main",
+				image = "krv_gui_heroes_0007",
+				place = 16,
+				tt_title = _("HERO_JIGOU_NAME"),
+				tt_desc = _("HERO_JIGOU_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = 17,
+				action = "tw_buy_attack",
+				halo = "glow_ico_main",
+				image = "krv_gui_heroes_0004",
+				place = 3,
+				tt_title = _("HERO_MORTEMIS_NAME"),
+				tt_desc = _("HERO_MORTEMIS_DESCRIPTION")
+			},
+			{
+				check = "main_icons_0019",
+				action_arg = 18,
+				action = "tw_buy_attack",
+				halo = "glow_ico_main",
+				image = "krv_gui_heroes_0006",
+				place = 4,
+				tt_title = _("HERO_MARGOSA_NAME"),
+				tt_desc = _("HERO_MARGOSA_DESCRIPTION")
 			},
 			{
 				check = "main_icons_0019",
@@ -14201,7 +15286,7 @@ return {
 				action_arg = "tower_ewok_archer_re",
 				action = "tw_upgrade",
 				halo = "glow_ico_main",
-				image = "main_icons_0005",
+				image = "main_icons_0112",
 				place = 5,
 				tt_title = _("ELVES_EWOK_TOWER_ARCHER_RE_NAME"),
 				tt_desc = _("ELVES_EWOK_TOWER_ARCHER_RE_DESCRIPTION")
@@ -14687,7 +15772,296 @@ return {
 				place = 9,
 			},
 		}
-	},		
+	},
+---蜥蜴人狙击塔	
+	deathcoil = {
+		{
+			{
+				check = "special_icons_0020",
+				action_arg = "charged",
+				action = "upgrade_power",
+				image = "tower_v_icons_0008",
+				place = 1,
+				halo = "glow_ico_special",
+				sounds = {
+					"TowerDeathcoilChargedTaunt"
+				},
+				tt_phrase = _("TOWER_DEATHCOIL_CHARGED_NOTE_1"),
+				tt_list = {
+					{
+						tt_title = _("TOWER_DEATHCOIL_CHARGED_NAME_1"),
+						tt_desc = _("TOWER_DEATHCOIL_CHARGED_DESCRIPTION_1")
+					},
+					{
+						tt_title = _("TOWER_DEATHCOIL_CHARGED_NAME_2"),
+						tt_desc = _("TOWER_DEATHCOIL_CHARGED_DESCRIPTION_2")
+					},
+					{
+						tt_title = _("TOWER_DEATHCOIL_CHARGED_NAME_3"),
+						tt_desc = _("TOWER_DEATHCOIL_CHARGED_DESCRIPTION_3")
+					}
+				}
+			},
+			{
+				check = "special_icons_0020",
+				action_arg = "stun",
+				action = "upgrade_power",
+				image = "tower_v_icons_0007",
+				place = 2,
+				halo = "glow_ico_special",
+				sounds = {
+					"TowerDeathcoilStunTaunt"
+				},
+				tt_phrase = _("TOWER_DEATHCOIL_STUN_NOTE_1"),
+				tt_list = {
+					{
+						tt_title = _("TOWER_DEATHCOIL_STUN_NAME_1"),
+						tt_desc = _("TOWER_DEATHCOIL_STUN_DESCRIPTION_1")
+					},
+					{
+						tt_title = _("TOWER_DEATHCOIL_STUN_NAME_2"),
+						tt_desc = _("TOWER_DEATHCOIL_STUN_DESCRIPTION_2")
+					},
+					{
+						tt_title = _("TOWER_DEATHCOIL_STUN_NAME_3"),
+						tt_desc = _("TOWER_DEATHCOIL_STUN_DESCRIPTION_3")
+					}
+				}
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}
+		}
+	},
+---腐毒菇林	
+	rotshroom = {
+		{
+			{
+				check = "special_icons_0020",
+				action_arg = "rot",
+				action = "upgrade_power",
+				image = "tower_v_icons_0011",
+				place = 1,
+				halo = "glow_ico_special",
+				sounds = {
+					"TowerRotshroomRotTaunt"
+				},
+				tt_phrase = _("TOWER_ROTSHROOM_ROT_NOTE_1"),
+				tt_list = {
+					{
+						tt_title = _("TOWER_ROTSHROOM_ROT_NAME_1"),
+						tt_desc = _("TOWER_ROTSHROOM_ROT_DESCRIPTION_1")
+					},
+					{
+						tt_title = _("TOWER_ROTSHROOM_ROT_NAME_2"),
+						tt_desc = _("TOWER_ROTSHROOM_ROT_DESCRIPTION_2")
+					},
+					{
+						tt_title = _("TOWER_ROTSHROOM_ROT_NAME_3"),
+						tt_desc = _("TOWER_ROTSHROOM_ROT_DESCRIPTION_3")
+					}
+				}
+			},
+			{
+				check = "special_icons_0020",
+				action_arg = "punch",
+				action = "upgrade_power",
+				image = "tower_v_icons_0010",
+				place = 2,
+				halo = "glow_ico_special",
+				sounds = {
+					"TowerRotshroomPunchTaunt"
+				},
+				tt_phrase = _("TOWER_ROTSHROOM_PUNCH_NOTE_1"),
+				tt_list = {
+					{
+						tt_title = _("TOWER_ROTSHROOM_PUNCH_NAME_1"),
+						tt_desc = _("TOWER_ROTSHROOM_PUNCH_DESCRIPTION_1")
+					},
+					{
+						tt_title = _("TOWER_ROTSHROOM_PUNCH_NAME_2"),
+						tt_desc = _("TOWER_ROTSHROOM_PUNCH_DESCRIPTION_2")
+					},
+					{
+						tt_title = _("TOWER_ROTSHROOM_PUNCH_NAME_3"),
+						tt_desc = _("TOWER_ROTSHROOM_PUNCH_DESCRIPTION_3")
+					}
+				}
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}
+		}
+	},
+---红帽地精	
+	redcap = {
+		{
+			{
+				check = "special_icons_0020",
+				action_arg = "reap",
+				action = "upgrade_power",
+				image = "tower_v_icons_0013",
+				place = 6,
+				halo = "glow_ico_special",
+				sounds = {
+					"TowerRedcapTauntReap"
+				},
+				tt_phrase = _("TOWER_REDCAP_REAP_NOTE"),
+				tt_list = {
+					{
+						tt_title = _("TOWER_REDCAP_REAP_NAME_1"),
+						tt_desc = _("TOWER_REDCAP_REAP_DESCRIPTION_1")
+					},
+					{
+						tt_title = _("TOWER_REDCAP_REAP_NAME_2"),
+						tt_desc = _("TOWER_REDCAP_REAP_DESCRIPTION_2")
+					},
+					{
+						tt_title = _("TOWER_REDCAP_REAP_NAME_3"),
+						tt_desc = _("TOWER_REDCAP_REAP_DESCRIPTION_3")
+					}
+				}
+			},
+			{
+				check = "special_icons_0020",
+				action_arg = "dodge",
+				action = "upgrade_power",
+				image = "tower_v_icons_0014",
+				place = 5,
+				halo = "glow_ico_special",
+				sounds = {
+					"TowerRedcapTauntDodge"
+				},
+				tt_phrase = _("TOWER_REDCAP_DODGE_NOTE"),
+				tt_list = {
+					{
+						tt_title = _("TOWER_REDCAP_DODGE_NAME_1"),
+						tt_desc = _("TOWER_REDCAP_DODGE_DESCRIPTION_1")
+					},
+					{
+						tt_title = _("TOWER_REDCAP_DODGE_NAME_2"),
+						tt_desc = _("TOWER_REDCAP_DODGE_DESCRIPTION_2")
+					},
+					{
+						tt_title = _("TOWER_REDCAP_DODGE_NAME_3"),
+						tt_desc = _("TOWER_REDCAP_DODGE_DESCRIPTION_3")
+					}
+				}
+			},
+			{
+				check = "special_icons_0020",
+				action_arg = "harvest",
+				action = "upgrade_power",
+				image = "tower_v_icons_0015",
+				place = 7,
+				halo = "glow_ico_special",
+				sounds = {
+					"TowerRedcapTauntHarvest"
+				},
+				tt_phrase = _("TOWER_REDCAP_HARVEST_NOTE"),
+				tt_list = {
+					{
+						tt_title = _("TOWER_REDCAP_HARVEST_NAME_1"),
+						tt_desc = _("TOWER_REDCAP_HARVEST_DESCRIPTION_1")
+					},
+					{
+						tt_title = _("TOWER_REDCAP_HARVEST_NAME_2"),
+						tt_desc = _("TOWER_REDCAP_HARVEST_DESCRIPTION_2")
+					},
+					{
+						tt_title = _("TOWER_REDCAP_HARVEST_NAME_3"),
+						tt_desc = _("TOWER_REDCAP_HARVEST_DESCRIPTION_3")
+					}
+				}
+			},
+			{
+				check = "sub_icons_0003",
+				action = "tw_rally",
+				halo = "glow_ico_sub",
+				image = "sub_icons_0001",
+				place = 8
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}
+		}
+	},
+---哥布林萨满	
+	shaman = {
+		{
+			{
+				check = "special_icons_0020",
+				action_arg = "healing",
+				action = "upgrade_power",
+				image = "tower_v_icons_0017",
+				place = 1,
+				halo = "glow_ico_special",
+				sounds = {
+					"TowerShamanHealTaunt"
+				},
+				tt_phrase = _("TOWER_SHAMAN_HEALING_NOTE"),
+				tt_list = {
+					{
+						tt_title = _("TOWER_SHAMAN_HEALING_NAME_1"),
+						tt_desc = _("TOWER_SHAMAN_HEALING_DESCRIPTION_1")
+					},
+					{
+						tt_title = _("TOWER_SHAMAN_HEALING_NAME_2"),
+						tt_desc = _("TOWER_SHAMAN_HEALING_DESCRIPTION_2")
+					},
+					{
+						tt_title = _("TOWER_SHAMAN_HEALING_NAME_3"),
+						tt_desc = _("TOWER_SHAMAN_HEALING_DESCRIPTION_3")
+					}
+				}
+			},
+			{
+				check = "special_icons_0020",
+				action_arg = "speed",
+				action = "upgrade_power",
+				image = "tower_v_icons_0018",
+				place = 2,
+				halo = "glow_ico_special",
+				sounds = {
+					"TowerShamanSpeedTaunt"
+				},
+				tt_phrase = _("TOWER_SHAMAN_SPEED_NOTE"),
+				tt_list = {
+					{
+						tt_title = _("TOWER_SHAMAN_SPEED_NAME_1"),
+						tt_desc = _("TOWER_SHAMAN_SPEED_DESCRIPTION_1")
+					},
+					{
+						tt_title = _("TOWER_SHAMAN_SPEED_NAME_2"),
+						tt_desc = _("TOWER_SHAMAN_SPEED_DESCRIPTION_2")
+					},
+					{
+						tt_title = _("TOWER_SHAMAN_SPEED_NAME_3"),
+						tt_desc = _("TOWER_SHAMAN_SPEED_DESCRIPTION_3")
+					}
+				}
+			},
+			{
+				check = "ico_sell_0002",
+				action = "tw_sell",
+				halo = "glow_ico_sell",
+				image = "ico_sell_0001",
+				place = 9
+			}
+		}
+	},				
 	--5代其他holder的补充
 	holder_blocked_sea_of_trees = {
 		{
@@ -14791,7 +16165,7 @@ return {
 				action_arg = "soldier_arborean_sentinels_spearmen",
 				action = "tw_buy_soldier",
 				halo = "glow_ico_main",
-				image = "kra_main_icons_0105",
+				image = "kra_main_icons_sentinels_0105",
 				place = 5,
 				tt_title = _("SPECIAL_ARBOREAN_SENTINELS_SPEARMEN_NAME"),
 				tt_desc = _("SPECIAL_ARBOREAN_SENTINELS_SPEARMEN_DESCRIPTION")
@@ -14811,7 +16185,7 @@ return {
 				action_arg = "soldier_arborean_sentinels_spearmen",
 				action = "tw_buy_soldier",
 				halo = "glow_ico_main",
-				image = "kra_main_icons_0105",
+				image = "kra_main_icons_sentinels_0105",
 				place = 5,
 				tt_title = _("SPECIAL_ARBOREAN_SENTINELS_SPEARMEN_NAME"),
 				tt_desc = _("SPECIAL_ARBOREAN_SENTINELS_SPEARMEN_DESCRIPTION")

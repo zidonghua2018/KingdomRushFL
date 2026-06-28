@@ -111,6 +111,11 @@ d.item_props = {
 		next = "map",
 		type = "screen"
 	},
+	boss_fight_11_end = {
+		src = "screen_boss_fight_11_end",
+		next = "map",
+		type = "screen"
+	},
 }
 d.loading_image_name = {
 	{
@@ -374,15 +379,17 @@ d.loading_image_name = {
 		},
 	},
 	{
-		"loading_images_desktop_9",
+		"loading_images_desktop_10",
 		{
-			131,
-			132,
-			133,
-			134,
-			135
+			136,
+			137,
+			138,
+			139,
+			140,
+			141
 		},
 	},
+	
 	{
 		"loading_bg_1",
 		{

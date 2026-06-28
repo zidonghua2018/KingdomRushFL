@@ -2,7 +2,7 @@
 
 local z1 = require("assets.images.fullhd." .. "gui_portraits_5")
 local z2 = require("assets.images.fullhd." .. "gui_portraits_123")
-local z3 = require("assets.images.fullhd." .. "gui_portraits_20251001")
+local z3 = require("assets.images.fullhd." .. "gui_portraits_20260307")
 local z4 = require("assets.images.fullhd." .. "gui_portraits_4")
 
 

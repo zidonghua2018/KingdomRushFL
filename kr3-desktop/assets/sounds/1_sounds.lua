@@ -1684,5 +1684,14 @@ return {
 		files = {
 			"80__-3R.wav"
 		}
-	},    
+	},  
+---吸魂
+	VeznanSoulDrain = {
+		loop = false,
+		gain = 1,
+		source_group = "BULLETS",
+		files = {
+			"Sound_EnemyVeznan_Soul_Drain.ogg"
+		}
+	},     
 }

@@ -1170,7 +1170,7 @@ tt.render.sprites[4].angles.shoot = {
 tt.render.sprites[4].offset = v(9, 51)
 tt.main_script.insert = scripts.tower_archer_kr.insert
 tt.main_script.update = scripts.tower_archer_kr.update
-tt.main_script.remove = scripts.tower_archer_kr.remove
+tt.main_script.remove = scripts.tower_archer.remove
 tt.attacks.range = 140
 tt.attacks.list[1] = E:clone_c("bullet_attack")
 tt.attacks.list[1].bullet = "g1_arrow_1"
@@ -1267,19 +1267,14 @@ tt.sound_events.insert = {
 	"BarrackTaunt",
 	"GUITowerUpgrade"
 }
+--[[
 tt = E:register_t("g1_tower_barrack_3_a", "g1_tower_barrack_3")
 tt.tower.price = 0
 tt.tower.level = 1
 tt.tower.type = "g1_tower_barrack_3_a"
 tt.tower.kind = TOWER_KIND_BARRACK
 tt.barrack.rally_range = 160
-tt = E:register_t("g1_tower_barrack_3_b", "g1_tower_barrack_3")
-tt.tower.price = 0
-tt.tower.level = 1
-tt.tower.type = "g1_tower_barrack_3_b"
-tt.tower.kind = TOWER_KIND_BARRACK
-tt.barrack.rally_range = 160
-
+]]--
 tt = E:register_t("g1_soldier_militia", "soldier")
 
 E:add_comps(tt, "melee")
@@ -1523,7 +1518,7 @@ image_y = 120
 tt.tower.type = "bfg"
 tt.tower.kind = TOWER_KIND_ENGINEER
 tt.tower.level = 1
-tt.tower.price = 400 --400
+tt.tower.price = 400
 tt.tower.size = TOWER_SIZE_LARGE
 tt.tower.menu_offset = v(0, 14)
 tt.info.enc_icon = 116
@@ -1590,7 +1585,7 @@ image_y = 96
 tt.tower.type = "tesla"
 tt.tower.kind = TOWER_KIND_ENGINEER
 tt.tower.level = 1
-tt.tower.price = 375 --375
+tt.tower.price = 375
 tt.tower.size = TOWER_SIZE_LARGE
 tt.tower.menu_offset = v(0, 14)
 tt.info.enc_icon = 120
@@ -1638,7 +1633,7 @@ tt.attacks.list[1].sound_shoot = "TeslaAttack"
 tt.attacks.list[2] = CC("aura_attack")
 tt.attacks.list[2].aura = "aura_tesla_overcharge"
 tt.attacks.list[2].bullet_start_offset = v(0, 15)
-tt = RT("tower_ranger", "g2_tower_archer_1")
+tt = RT("tower_ranger", "g1_tower_archer_1")
 
 AC(tt, "attacks", "powers")
 
@@ -1705,7 +1700,7 @@ tt.sound_events.insert = {
 	"ArcherRangerTaunt",
 	"GUITowerUpgrade"
 }
-tt = RT("tower_musketeer", "g2_tower_archer_1")
+tt = RT("tower_musketeer", "g1_tower_archer_1")
 
 AC(tt, "attacks", "powers")
 
@@ -1768,7 +1763,7 @@ tt.render.sprites[3].angles.cannon_fuse = {
 tt.render.sprites[3].offset = v(-8, 56)
 tt.render.sprites[4] = table.deepclone(tt.render.sprites[3])
 tt.render.sprites[4].offset.x = 8
-tt.main_script.update = scripts.tower_musketeer.update
+tt.main_script.update = scripts_rebbborn.tower_musketeer.update
 tt.sound_events.insert = {
 	"ArcherMusketeerTaunt",
 	"GUITowerUpgrade"
@@ -1824,7 +1819,7 @@ tt.render.sprites[1].scale = v(0.7, 0.7)
 tt.render.sprites[1].loop = false
 tt.main_script.update = scripts.mod_track_target.update
 tt.modifier.duration = 1
-tt = RT("tower_paladin", "g2_tower_barrack_1")
+tt = RT("tower_paladin", "g1_tower_barrack_1")
 
 AC(tt, "powers")
 
@@ -1864,7 +1859,7 @@ tt.sound_events.insert = {
 	"GUITowerUpgrade"
 }
 tt.sound_events.change_rally_point = "BarrackPaladinTaunt"
-tt = RT("tower_barbarian", "g2_tower_barrack_1")
+tt = RT("tower_barbarian", "g1_tower_barrack_1")
 
 AC(tt, "powers")
 
@@ -1889,7 +1884,7 @@ tt.powers.throwing.price_inc = 100
 tt.powers.throwing.enc_icon = 114
 tt.powers.throwing.name = "THROWING_AXES"
 tt.powers.nets = E.clone_c(E, "power")
-tt.powers.nets.price_base = 99999
+tt.powers.nets.price_base = 150
 tt.powers.nets.price_inc = 75
 tt.powers.nets.enc_icon = 124
 tt.powers.nets.name = "HUNTING_NETS"
@@ -1993,7 +1988,6 @@ tt.tower.terrain_style = nil
 tt.tower.type = "elf"
 tt.tower.kind = TOWER_KIND_BARRACK
 tt.ui.click_rect = r(-40, -10, 80, 90)
----12.30改了雇佣兵人数上限
 tt = RT("tower_elf_d", "tower_elf")
 tt.info.i18n_key = "SPECIAL_ELF"
 tt.barrack.max_soldiers = 5
@@ -2302,6 +2296,7 @@ tt.powers.dual.on_power_upgrade = scripts.soldier_barbarian.on_power_upgrade
 tt.powers.twister = E:clone_c("power")
 tt.powers.throwing = E:clone_c("power")
 tt.powers.nets = E.clone_c(E, "power")
+tt.main_script.update = scripts_rebbborn.soldier_barbarian.update
 tt.regen.health = 20
 tt.render.sprites[1].prefix = "soldier_barbarian"
 tt.render.sprites[1].anchor.y = anchor_y
@@ -2353,19 +2348,19 @@ tt.ranged.attacks[2].cooldown = 3
 tt.ranged.attacks[2].disabled = true
 tt.ranged.attacks[2].level = 0
 tt.ranged.attacks[2].max_range = 150
-tt.ranged.attacks[2].min_range = 0
+tt.ranged.attacks[2].min_range = 50
 tt.ranged.attacks[2].power_name = "nets"
 tt.ranged.attacks[2].range_inc = 0
 tt.ranged.attacks[2].shoot_time = fts(7)
-tt.ranged.attacks[2].vis_bans = bor(F_BOSS, F_MINIBOSS)
+tt.ranged.attacks[2].vis_bans = F_MELEE
 tt.ranged.attacks[2].vis_flags = bor(F_RANGED, F_MOD, F_NET)
 tt.ranged.attacks[2].animation = "net"
 tt = E.register_t(E, "net_barbarian", "bolt")
 tt.render.sprites[1].prefix = "barbarian_net"
-tt.bullet.damage_min = 15
-tt.bullet.damage_max = 15
---tt.bullet.damage_type = DAMAGE_NONE
-tt.bullet.damage_type = DAMAGE_PHYSICAL
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.bullet.damage_inc = 0
+tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.min_speed = 400
 tt.bullet.max_speed = 400
 tt.bullet.mod = "mod_barbarian_net"
@@ -2390,8 +2385,6 @@ tt.slow.factor = {
 }
 tt.render.sprites[1].name = "barbarian_net_effect_0001"
 tt.render.sprites[1].animated = false
-tt.modifier.vis_bans = bor(F_BOSS)
-tt.increase = 5
 tt = RT("soldier_elf", "g1_soldier_militia")
 
 AC(tt, "ranged")
@@ -3066,7 +3059,8 @@ tt.health_bar.offset = v(0, 33)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_alleria.level_up
 tt.hero.tombstone_show_time = fts(90)
---tt.info.damage_icon = "arrow"
+tt.info.damage_icon = "sword"
+tt.info.ranged_damage_icon = "arrow"
 tt.info.hero_portrait = "heroPortrait_portraits_0004"
 tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.i18n_key = "HERO_ARCHER"
@@ -3250,6 +3244,11 @@ tt.hero.skills.tar.duration = {
 	6,
 	8
 }
+tt.hero.skills.tar.slow = {
+	0.65,
+	0.55,
+	0.45
+}
 tt.hero.skills.tar.xp_level_steps = {
 	[10] = 3,
 	[4] = 1,
@@ -3269,7 +3268,7 @@ tt.health_bar.offset = v(0, 43)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_bolin.level_up
 tt.hero.tombstone_show_time = fts(60)
---tt.info.damage_icon = "shot"
+tt.info.damage_icon = "sword"
 tt.info.ranged_damage_icon = "shot"
 tt.info.hero_portrait = "heroPortrait_portraits_0003"
 tt.info.fn = scripts.hero_bolin.get_info
@@ -3346,6 +3345,9 @@ tt.timed_attacks.list[3].node_offset = {
 	-12,
 	12
 }
+
+tt.timed_attacks.list[3].vis_bans = bor(F_FLYING)
+
 tt = RT("hero_magnus", "hero")
 
 AC(tt, "melee", "ranged", "timed_attacks", "teleport")
@@ -3503,6 +3505,8 @@ tt.info.hero_portrait = "heroPortrait_portraits_0005"
 tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.i18n_key = "HERO_MAGE"
 tt.info.portrait = "info_portraits_hero_0004"
+tt.info.damage_icon = "sword"
+tt.info.ranged_damage_icon = "magic"
 tt.main_script.update = scripts.hero_magnus.update
 tt.motion.max_speed = 1.2 * FPS
 tt.regen.cooldown = 1
@@ -3709,6 +3713,8 @@ tt.info.hero_portrait = "heroPortrait_portraits_0006"
 tt.info.fn = scripts.hero_basic.get_info_melee
 tt.info.i18n_key = "HERO_FIRE"
 tt.info.portrait = "info_portraits_hero_0003"
+tt.info.damage_icon = "fireball"
+tt.info.ranged_damage_icon = "fireball"
 tt.main_script.update = scripts.hero_ignus.update
 tt.motion.max_speed = 3 * FPS
 tt.regen.cooldown = 1
@@ -3728,7 +3734,7 @@ tt.unit.mod_offset = v(0, 20)
 tt.vis.bans = bor(tt.vis.bans, F_BURN)
 tt.melee.range = 60
 tt.melee.attacks[1].cooldown = 1
-tt.melee.attacks[1].damage_type = DAMAGE_TRUE
+tt.melee.attacks[1].damage_type = DAMAGE_FIREBALL
 tt.melee.attacks[1].hit_time = fts(9)
 tt.melee.attacks[1].xp_gain_factor = 2
 tt.melee.attacks[1].sound_hit = "HeroReinforcementHit"
@@ -3737,7 +3743,7 @@ tt.timed_attacks.list[1].animation = "flamingFrenzy"
 tt.timed_attacks.list[1].cast_time = fts(8)
 tt.timed_attacks.list[1].chance = 0.25
 tt.timed_attacks.list[1].cooldown = 4 + fts(24)
-tt.timed_attacks.list[1].damage_type = DAMAGE_TRUE
+tt.timed_attacks.list[1].damage_type = DAMAGE_FIREBALL
 tt.timed_attacks.list[1].decal = "decal_ignus_flaming"
 tt.timed_attacks.list[1].disabled = true
 tt.timed_attacks.list[1].heal_factor = 0.2
@@ -4109,6 +4115,8 @@ tt.info.hero_portrait = "heroPortrait_portraits_0007"
 tt.info.i18n_key = "HERO_DENAS"
 tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.portrait = "info_portraits_hero_0008"
+tt.info.damage_icon = "sword"
+tt.info.ranged_damage_icon = "arrow"
 tt.main_script.update = scripts.hero_denas.update
 tt.motion.max_speed = 2 * FPS
 tt.regen.cooldown = 1
@@ -4577,6 +4585,8 @@ tt.info.hero_portrait = "heroPortrait_portraits_0008"
 tt.info.i18n_key = "HERO_FROST_SORCERER"
 tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.portrait = "info_portraits_hero_0009"
+tt.info.damage_icon = "sword"
+tt.info.ranged_damage_icon = "magic"
 tt.main_script.update = scripts.hero_elora.update
 tt.motion.max_speed = 3 * FPS
 tt.regen.cooldown = 1
@@ -5186,7 +5196,9 @@ tt.health_bar.offset = v(0, 53)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_thor.level_up
 tt.hero.tombstone_show_time = fts(150)
-tt.info.fn = scripts.hero_basic.get_info_melee
+
+tt.info.fn = scripts.hero_thor.get_info
+
 tt.info.i18n_key = "HERO_THOR"
 tt.info.hero_portrait = "heroPortrait_portraits_0012"
 tt.info.portrait = "info_portraits_hero_0014"
@@ -5421,6 +5433,8 @@ tt.info.hero_portrait = "heroPortrait_portraits_0013"
 tt.info.fn = scripts.hero_10yr.get_info
 tt.info.i18n_key = "HERO_10YR"
 tt.info.portrait = "info_portraits_hero_0015"
+tt.info.damage_icon = "meleetrue"
+tt.info.ranged_damage_icon = "rangedtrue"
 tt.main_script.update = scripts.hero_10yr.update
 tt.motion.max_speed_normal = 1.6 * FPS
 tt.motion.max_speed_buffed = 2.2 * FPS
@@ -6118,7 +6132,7 @@ image_x, image_y = 80, 88
 tt.enemy.gold = 30
 tt.enemy.melee_slot = v(18, 0)
 tt.health.hp_max = 340
-tt.health.on_damage = scripts.enemy_rocketeer.on_damage
+tt.health.on_damage = scripts_rebbborn.enemy_rocketeer.on_damage
 tt.health_bar.offset = v(0, 78)
 tt.info.i18n_key = "ENEMY_ROCKETEER"
 tt.info.enc_icon = 121
@@ -7542,7 +7556,7 @@ tt.enemy.gold = 40
 tt.enemy.melee_slot = v(26, 0)
 tt.health.armor = 1
 tt.health.hp_max = 400
-tt.health.immune_to = bor(DAMAGE_PHYSICAL, DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL)
+tt.health.immune_to = bor(DAMAGE_PHYSICAL, DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL, DAMAGE_SHOT)
 tt.health_bar.offset = v(0, 61)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.info.i18n_key = "ENEMY_SPECTRAL_KNIGHT"
@@ -7651,7 +7665,6 @@ tt.skate.walk_angles = {
 tt = RT("enemy_hobgoblin", "enemy")
 
 AC(tt, "melee", "death_spawns")
----12.30改了info.portrait图标
 anchor_x, anchor_y = 0.5, 0.17532467532467533
 image_x, image_y = 224, 154
 tt.death_spawns.concurrent_with_death = true
@@ -7694,7 +7707,7 @@ tt.vis.bans = bor(F_TELEPORT, F_THORN, F_POLYMORPH, F_DISINTEGRATED, F_INSTAKILL
 tt.vis.flags = bor(F_ENEMY, F_BOSS, F_MINIBOSS)
 tt = RT("eb_juggernaut", "boss")
 
-AC(tt, "melee", "timed_attacks")
+AC(tt, "melee", "timed_attacks", "auras")
 
 anchor_x, anchor_y = 0.5, 0.08
 image_x, image_y = 144, 128
@@ -7756,6 +7769,41 @@ tt.timed_attacks.list[1].vis_flags = F_RANGED
 tt.timed_attacks.list[2] = table.deepclone(tt.timed_attacks.list[1])
 tt.timed_attacks.list[2].bullet = "bomb_juggernaut"
 tt.timed_attacks.list[2].cooldown = 4
+---毁灭者召唤
+tt = RT("juggernaut_spawner_aura", "aura")
+tt.main_script.update = scripts.juggernaut_spawner_aura.update
+tt.aura.track_source = true
+tt.spawn_data = {
+	{
+		"enemy_dark_knight",
+		8,
+		0,
+		2,
+		1
+	},
+	{			
+		"enemy_shadow_archer",
+		8,
+		1,
+		2,
+		2
+	},
+	{
+		"enemy_dark_knight",
+		8,
+		0,
+		3,
+		1
+	},
+	{			
+		"enemy_shadow_archer",
+		8,
+		1,
+		3,
+		2
+	},			
+}
+---
 tt = RT("eb_jt", "boss")
 
 AC(tt, "melee", "timed_attacks", "auras")
@@ -7835,7 +7883,12 @@ tt.timed_attacks.list[1].sound = "JtAttack"
 tt.timed_attacks.list[1].sound_args = {
 	delay = fts(6)
 }
-tt = RT("eb_veznan", "boss")
+---大雪怪回血
+tt = E:register_t("mod_jt_lifesteal", "modifier")
+tt.heal_hp = 250
+tt.main_script.insert = scripts.mod_simple_lifesteal.insert
+---
+tt = RT("eb_veznan_new", "boss")
 
 AC(tt, "melee", "timed_attacks", "taunts")
 
@@ -8096,9 +8149,392 @@ tt.demon.unit_hit_offset = v(0, 55)
 tt.demon.unit_mod_offset = v(0, 45)
 tt.demon.unit_size = UNIT_SIZE_LARGE
 tt.demon.info_portrait = "info_portraits_sc_0093"
+
+tt = RT("eb_veznan", "boss")
+
+AC(tt, "melee", "timed_attacks", "taunts", "ranged")
+
+anchor_y = 0.17010309278350516
+anchor_x = 0.5
+image_y = 194
+image_x = 214
+tt.enemy.gold = 0
+tt.enemy.lives_cost = 20
+tt.enemy.melee_slot = v(20, 0)
+tt.health.hp_max = {
+	5333,
+	6666,
+	7999,
+	20000
+}
+tt.health.on_damage = scripts.eb_veznan.on_damage
+tt.health.ignore_damage = true
+tt.health_bar.hidden = true
+tt.health_bar.offset = v(0, 43)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_MEDIUM
+tt.info.i18n_key = "ENEMY_VEZNAN"
+tt.info.enc_icon = 134
+tt.info.portrait = (IS_PHONE_OR_TABLET and "portraits_sc_0056") or "info_portraits_sc_0056"
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts_rebbborn.eb_veznan.update
+tt.motion.max_speed = FPS*0.4
+tt.render.sprites[1].anchor = v(anchor_x, anchor_y)
+tt.render.sprites[1].prefix = "eb_veznan"
+tt.render.sprites[1].name = "idleDown"
+tt.render.sprites[1].angles_stickiness = {
+	walk = 10
+}
+tt.render.sprites[1].angles = {
+	walk = {
+		"walkingRightLeft",
+		"walkingUp",
+		"walkingDown"
+	}
+}
+tt.sound_events.death = "VeznanDeath"
+tt.ui.click_rect = r(-11, -2, 22, 38)
+tt.unit.hit_offset = v(0, 14)
+tt.unit.mod_offset = v(0, 12)
+tt.unit.marker_offset = v(0, 0)
+tt.health.immune_to = bor(DAMAGE_EAT)
+tt.vis.bans = bor(F_TELEPORT, F_THORN, F_POLYMORPH, F_ALL, F_EAT)
+tt.vis.flags = bor(F_ENEMY, F_BOSS)
+tt.pos_castle = v(518, 677)
+tt.souls_aura = "veznan_souls_aura"
+tt.white_circle = "decal_eb_veznan_white_circle"
+tt.taunts.animation = "laught"
+tt.taunts.delay_min = fts(400)
+tt.taunts.delay_max = fts(700)
+tt.taunts.duration = 4
+tt.taunts.decal_name = "decal_s12_shoutbox"
+tt.taunts.offset = v(0, 0)
+tt.taunts.pos = v(525, 608)
+tt.taunts.sets.welcome = CC("taunt_set")
+tt.taunts.sets.welcome.format = "VEZNAN_TAUNT_%04d"
+tt.taunts.sets.welcome.end_idx = 5
+tt.taunts.sets.welcome.delays = {
+	fts(60),
+	fts(140),
+	fts(450),
+	fts(250)
+}
+tt.taunts.sets.castle = CC("taunt_set")
+tt.taunts.sets.castle.format = "VEZNAN_TAUNT_%04d"
+tt.taunts.sets.castle.start_idx = 6
+tt.taunts.sets.castle.end_idx = 25
+tt.taunts.sets.damage = CC("taunt_set")
+tt.taunts.sets.damage.format = "VEZNAN_TAUNT_%04d"
+tt.taunts.sets.damage.start_idx = 26
+tt.taunts.sets.damage.end_idx = 29
+tt.taunts.sets.pre_battle = CC("taunt_set")
+tt.taunts.sets.pre_battle.format = "VEZNAN_TAUNT_%04d"
+tt.taunts.sets.pre_battle.start_idx = 30
+tt.taunts.sets.pre_battle.end_idx = 30
+tt.melee.attacks[1] = CC("area_attack")
+tt.melee.attacks[1].cooldown = 2
+tt.melee.attacks[1].count = 8
+tt.melee.attacks[1].damage_min = 666
+tt.melee.attacks[1].damage_max = 999
+tt.melee.attacks[1].damage_radius = 75
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_offset = v(-10, -2)
+tt.melee.attacks[1].hit_time = fts(17)
+tt.melee.attacks[1].hit_decal = "decal_veznan_strike"
+tt.melee.attacks[1].sound_hit = "VeznanAttack"
+tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
+tt.melee.attacks[2].cooldown = 2.5
+tt.melee.attacks[2].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[2].disabled = true
+tt.melee.attacks[2].hit_decal = nil
+tt.melee.attacks[2].hit_fx = "fx_veznan_demon_fire"
+tt.melee.attacks[2].hit_fx_offset = v(20, 9)
+tt.melee.attacks[2].hit_fx_once = true
+tt.melee.attacks[2].hit_fx_flip = true
+tt.melee.attacks[2].hit_times = {
+	fts(20),
+	fts(24),
+	fts(28),
+	fts(32),
+	fts(36),
+	fts(38),
+	fts(42),
+	fts(44)
+}
+tt.melee.attacks[2].hit_offset = v(40, 0)
+tt.melee.attacks[2].sound_hit = nil
+tt.melee.attacks[2].sound = "VeznanDemonFire"
+tt.ranged.attacks[1].bullet = "eb_veznan_soul_ik"
+tt.ranged.attacks[1].shoot_time = fts(9)
+tt.ranged.attacks[1].cooldown = {
+	1e+99,
+	1e+99,
+	5,
+	5
+}
+tt.ranged.attacks[1].max_range = 115
+tt.ranged.attacks[1].min_range = 50
+tt.ranged.attacks[1].animation = "soul_drain"
+tt.ranged.attacks[1].bullet_start_offset = {
+	v(20, 22)
+}
+tt.ranged.attacks[1].excluded_templates = {
+	"soldier_elemental",
+	"soldier_skeleton",
+	"soldier_skeleton_knight",
+	"soldier_frankenstein",
+	"soldier_ingvar_ancestor",
+	"soldier_magnus_illusion",
+	"soldier_gargoyle",
+	"soldier_spectral_knight_pos",
+	"soldier_skeleton_knight_pos",
+	"soldier_skeleton_pos",
+	"soldier_bone_golem",
+	"soldier_flingers_skeleton",
+	"soldier_flingers_skeleton_warrior",
+	"soldier_death_rider",
+	"soldier_zombie",
+	"soldier_zombie_medium",
+	"soldier_zombie_big"
+}
+tt.ranged.attacks[1].vis_bans = bor(F_FLYING, F_ENEMY, F_SKELETON, F_HERO)
+tt.ranged.attacks[1].vis_flags = bor(F_RANGED, F_INSTAKILL)
+tt.ranged.attacks[1].hold_advance = false
+---吸魂禁用
+tt.ranged.attacks[1].disabled = true
+tt.timed_attacks.list[1] = CC("custom_attack")
+tt.timed_attacks.list[1].cooldown = 13
+tt.timed_attacks.list[1].animation = "spellDown"
+tt.timed_attacks.list[1].hit_time = fts(14)
+tt.timed_attacks.list[1].mod = "mod_veznan_tower"
+tt.timed_attacks.list[1].sound = "VeznanHoldCast"
+tt.timed_attacks.list[1].attack_duration = fts(44)
+tt.timed_attacks.list[1].data = {
+	[9] = {
+		13,
+		2
+	},
+	[10] = {
+		13,
+		3
+	},
+	[11] = {
+		14,
+		4
+	},
+	[12] = {
+		14,
+		5
+	},
+	[13] = {
+		16,
+		6
+	},
+	[14] = {
+		16,
+		7
+	},
+	[15] = {
+		18,
+		8
+	}
+}
+tt.timed_attacks.list[2] = CC("custom_attack")
+tt.timed_attacks.list[2].animation = "spellDown"
+tt.timed_attacks.list[2].cooldown = 15
+tt.timed_attacks.list[2].hit_time = fts(14)
+tt.timed_attacks.list[2].portal_name = "veznan_portal"
+tt.timed_attacks.list[2].sound = "VeznanPortalSummon"
+tt.timed_attacks.list[2].attack_duration = fts(44)
+tt.timed_attacks.list[2].data = {
+	[6] = {
+		15,
+		3,
+		{
+			1,
+			0,
+			0
+		}
+	},
+	[7] = {
+		10,
+		2,
+		{
+			1,
+			0,
+			0
+		}
+	},
+	[8] = {
+		20,
+		3,
+		{
+			0,
+			1,
+			0
+		}
+	},
+	[9] = {
+		15,
+		3,
+		{
+			1,
+			0,
+			0
+		}
+	},
+	[10] = {
+		20,
+		3,
+		{
+			1,
+			1,
+			0
+		}
+	},
+	[11] = {
+		15,
+		3,
+		{
+			1,
+			1,
+			0
+		}
+	},
+	[12] = {
+		15,
+		3,
+		{
+			1,
+			1,
+			0
+		}
+	},
+	[13] = {
+		15,
+		3,
+		{
+			0,
+			0,
+			1
+		}
+	},
+	[14] = {
+		15,
+		3,
+		{
+			1,
+			1,
+			1
+		}
+	},
+	[15] = {
+		15,
+		3,
+		{
+			1,
+			1,
+			1
+		}
+	}
+}
+tt.battle = {
+	ba_animation = "spell",
+	pa_animation = "spell",
+	pa_cooldown = 10,
+	pa_max_count = 40
+}
+tt.demon = {
+	health_bar_offset = v(0, 118),
+	health_bar_scale = 1.8,
+	melee_slot = v(50, 0),
+	--[[
+	speed = {
+		FPS*0.6,
+		FPS*0.6,
+		FPS*0.6,
+		FPS*0.8
+	},
+	]]--
+	speed = 0.6 * FPS,
+	sprites_prefix = "eb_veznan_demon",
+	transform_sound = "VeznanToDemon",
+	ui_click_rect = r(-25, -5, 50, 110),
+	unit_hit_offset = v(0, 55),
+	unit_mod_offset = v(0, 45),
+	unit_size = UNIT_SIZE_LARGE,
+	info_portrait = (IS_PHONE_OR_TABLET and "portraits_sc_0056") or "info_portraits_sc_0093"
+}
+
+tt = E.register_t(E, "decal_veznan_soul_hit", "fx")
+tt.render.sprites[1].prefix = "decal_veznan_soul_hit"
+
+tt = RT("eb_veznan_soul_ik", "bolt")
+tt.bullet.damage_max = 1
+tt.bullet.damage_min = 1
+tt.extra_souls = 4
+tt.extra_souls_range = 50
+tt.main_script.insert = scripts_rebbborn.eb_veznan_soul.insert
+tt.main_script.update = scripts_rebbborn.eb_veznan_soul.update
+tt.excluded_templates = {
+	"soldier_elemental",
+	"soldier_skeleton",
+	"soldier_skeleton_knight",
+	"soldier_frankenstein",
+	"soldier_ingvar_ancestor",
+	"soldier_magnus_illusion",
+	"soldier_gargoyle",
+	"soldier_spectral_knight_pos",
+	"soldier_skeleton_knight_pos",
+	"soldier_skeleton_pos",
+	"soldier_bone_golem",
+	"soldier_flingers_skeleton",
+	"soldier_flingers_skeleton_warrior",
+	"soldier_death_rider",
+	"soldier_zombie",
+	"soldier_zombie_medium",
+	"soldier_zombie_big"
+}
+tt.bullet.damage_type = bor(DAMAGE_NONE, DAMAGE_NO_DODGE)
+tt.bullet.hit_fx = "decal_veznan_soul_hit"
+tt.bullet.max_speed = 1000
+tt.bullet.min_speed = 1000
+tt.bullet.mods = {
+	"mod_veznan_soul_drain"
+}
+tt.bullet.particles_name = nil
+tt.bullet.pop = nil
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].z = Z_EFFECTS
+tt.sound_events.insert = "VeznanSoulDrain"
+
+tt = E.register_t(E, "mod_veznan_soul_drain", "modifier")
+
+E.add_comps(E, tt, "render")
+
+tt.modifier.duration = 0.01
+tt.modifier.bullet = "eb_veznan_soul_re"
+tt.main_script.insert = scripts_rebbborn.mod_veznan_soul_drain.insert
+tt.main_script.update = scripts_rebbborn.mod_veznan_soul_drain.update
+tt.main_script.remove = scripts_rebbborn.mod_veznan_soul_drain.remove
+tt.render.sprites[1].hidden = true
+
+tt = RT("eb_veznan_soul_re", "bolt")
+tt.bullet.damage_max = 0
+tt.bullet.damage_min = 0
+tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.hit_fx = "decal_veznan_soul_hit"
+tt.bullet.align_with_trajectory = true
+tt.bullet.max_speed = 300
+tt.bullet.min_speed = 200
+tt.bullet.pop = nil
+tt.bullet.particles_name = "ps_veznan_soul"
+tt.render.sprites[1].prefix = "decal_veznan_soul"
+tt.render.sprites[1].z = Z_EFFECTS
+tt.sound_events.insert = nil
+
 tt = RT("eb_sarelgaz", "boss")
 
-AC(tt, "melee")
+AC(tt, "melee", "auras")
 
 anchor_x, anchor_y = 0.5, 0.1484375
 image_x, image_y = 220, 128
@@ -8146,6 +8582,27 @@ tt.unit.mod_offset = v(0, 45)
 tt.unit.size = UNIT_SIZE_LARGE
 tt.vis.bans = bor(F_TELEPORT, F_THORN, F_POLYMORPH)
 tt.vis.flags = bor(F_ENEMY, F_BOSS)
+---萨雷格兹召唤
+tt = RT("sarelgaz_spawner_aura", "aura")
+tt.main_script.update = scripts.juggernaut_spawner_aura.update
+tt.aura.track_source = true
+tt.spawn_data = {
+	{
+		"enemy_sarelgaz_big",
+		24,
+		0,
+		2,
+		2
+	},
+	{			
+		"enemy_sarelgaz_big",
+		24,
+		0,
+		3,
+		2
+	},	
+}
+---
 tt = RT("eb_gulthak", "boss")
 
 AC(tt, "melee", "timed_attacks")
@@ -8834,8 +9291,9 @@ tt.bullet.xp_gain_factor = 2.875
 tt.bullet.prediction_error = false
 tt = E:register_t("g1_arrow_multishot_hero_alleria", "g1_arrow_hero_alleria")
 tt.bullet.particles_name = "g1_ps_arrow_multishot_hero_alleria"
-tt.bullet.damage_min = 20--10
-tt.bullet.damage_max = 30--15
+--3.10
+tt.bullet.damage_min = 10
+tt.bullet.damage_max = 15
 tt.bullet.damage_type = DAMAGE_TRUE
 tt.bullet.prediction_error = false
 tt.extra_arrows_range = 100
@@ -9252,9 +9710,9 @@ tt.bounce_vis_flags = F_RANGED
 tt.bounce_vis_bans = 0
 tt.bounce_damage_min = 60
 tt.bounce_damage_max = 110
-tt.bounce_damage_factor = 1--0.5
+tt.bounce_damage_factor = 1
 tt.bounce_damage_factor_min = 0.5
-tt.bounce_damage_factor_inc = -0.25--0
+tt.bounce_damage_factor_inc = -0.25
 tt.bounce_delay = fts(2)
 tt.bounce_scale_y = 1
 tt.bounce_scale_y_factor = 0.88
@@ -9295,7 +9753,7 @@ tt = RT("ray_hero_thor", "ray_tesla")
 tt.bullet.mod = "mod_ray_hero_thor"
 tt.render.sprites[1].name = "ray_hero_thor"
 tt.main_script.update = scripts.ray_thor.update
-tt = RT("shotgun_musketeer", "shotgun")
+tt = RT("shotgun_musketeer", "shotgun_kr")
 tt.bullet.damage_max = 65
 tt.bullet.damage_min = 35
 tt.bullet.hit_blood_fx = "fx_blood_splat"
@@ -9307,7 +9765,7 @@ tt.sound_events.insert = "ShotgunSound"
 tt = RT("shotgun_musketeer_sniper", "shotgun_musketeer")
 tt.bullet.particles_name = "ps_shotgun_musketeer"
 tt.sound_events.insert = "SniperSound"
-tt.bullet.damage_type = bor(DAMAGE_PHYSICAL, DAMAGE_FX_EXPLODE)
+tt.bullet.damage_type = bor(DAMAGE_SHOT, DAMAGE_FX_EXPLODE)
 --tt.bullet.damage_type = bor(DAMAGE_TRUE, DAMAGE_FX_EXPLODE)
 tt.bullet.pop = nil
 tt.bullet.ignore_upgrades = true
@@ -9316,7 +9774,7 @@ tt.bullet.damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_FX_EXPLODE)
 tt.bullet.pop = {
 	"pop_headshot"
 }
-tt = RT("shotgun_bolin", "shotgun")
+tt = RT("shotgun_bolin", "shotgun_kr")
 tt.bullet.damage_max = 65
 tt.bullet.damage_min = 35
 tt.bullet.hit_blood_fx = "fx_blood_splat"
@@ -9559,7 +10017,7 @@ tt.aura.fx = "decal_malik_earthquake"
 tt.aura.damage_radius = 40
 tt.aura.damage_types = {
 	DAMAGE_TRUE,
-	DAMAGE_PHYSICAL
+	DAMAGE_TRUE
 }
 tt.aura.vis_flags = bor(F_RANGED)
 tt.aura.spread_delay = fts(4)
@@ -9679,7 +10137,7 @@ tt.aura.cycle_time = fts(1)
 tt.aura.duration = 0
 tt.aura.damage_min = nil
 tt.aura.damage_max = nil
-tt.aura.damage_type = DAMAGE_TRUE
+tt.aura.damage_type = DAMAGE_FIREBALL
 tt.aura.damage_radius = 25
 tt.aura.hit_fx = "fx_ignus_burn"
 tt.damage_state = "surgeOfFlame"
@@ -10275,6 +10733,7 @@ tt = E:register_t("mod_ray_tesla", "modifier")
 E:add_comps(tt, "render", "dps")
 
 tt.modifier.duration = fts(14)
+tt.modifier.allows_duplicates = true
 tt.modifier.vis_flags = F_MOD
 tt.dps.damage_min = nil
 tt.dps.damage_max = nil
@@ -10370,7 +10829,7 @@ tt.modifier.duration = fts(16)
 tt.dps.damage_every = fts(2)
 tt.dps.damage_min = 5
 tt.dps.damage_max = 5
-tt.dps.damage_type = DAMAGE_MAGICAL
+tt.dps.damage_type = DAMAGE_TRUE
 tt = RT("mod_hero_thor_chainlightning", "modifier")
 tt.chainlightning = {}
 tt.chainlightning.bullet = "ray_hero_thor"
@@ -10492,9 +10951,9 @@ tt = E:register_t("mod_rocketeer_speed_buff", "modifier")
 
 AC(tt, "fast")
 
-tt.main_script.insert = scripts.mod_rocketeer_speed_buff.insert
+tt.main_script.insert = scripts_rebbborn.mod_rocketeer_speed_buff.insert
 tt.main_script.remove = scripts.mod_rocketeer_speed_buff.remove
-tt.main_script.update = scripts.mod_track_target.update
+tt.main_script.update = scripts_rebbborn.mod_track_target.update
 tt.modifier.duration = 2
 tt.modifier.type = MOD_TYPE_FAST
 tt.sound_events.insert = "EnemyRocketeer"
@@ -11621,7 +12080,7 @@ tt.play_loops = 0
 ---KRREBORN的塔
 
 ---时间法师
-tt = RT("tower_time_wizard", "g2_tower_mage_1")
+tt = RT("tower_time_wizard", "g1_tower_mage_1")
 
 AC(tt, "attacks", "powers", "barrack")
 
@@ -12319,7 +12778,7 @@ tt.modifier.duration = 10
 tt.modifier.vis_flags = bor(F_MOD, F_BURN)
 tt.modifier.vis_bans = bor(F_BOSS)
 ---皇家骑士团
-tt = RT("tower_imperial_patrol", "g2_tower_barrack_1")
+tt = RT("tower_imperial_patrol", "g1_tower_barrack_1")
 
 AC(tt, "powers")
 
@@ -12443,7 +12902,7 @@ tt.info.portrait = (IS_PHONE_OR_TABLET and "info_portraits_towers_0105") or "inf
 tt.info.enc_icon = 14
 tt.info.i18n_key = "TOWER_IMPERIAL_PATROL_GUARD"
 tt.tower.type = "imperial_patrol_2"
-tt.tower.price = 260--600
+tt.tower.price = 260
 tt.barrack.max_soldiers = 2
 tt.barrack.soldier_type = "soldier_s6_imperial_guard_2"
 tt.barrack.rally_range = 2000
@@ -12572,7 +13031,7 @@ tt.editor.overrides = {
 	["health.hp"] = 250
 }
 ---圣骑兵
-tt = RT("tower_paladin_rider", "g2_tower_barrack_1")
+tt = RT("tower_paladin_rider", "g1_tower_barrack_1")
 
 AC(tt, "powers")
 
@@ -12834,7 +13293,7 @@ tt.render.sprites[1].name = "sand_wormteeth"
 tt.render.sprites[1].anchor.y = 0.13
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -2
-tt = E.register_t(E, "bomb_teeth", "g1_bomb")
+tt = E.register_t(E, "bomb_teeth", "g2_bomb")
 tt.bullet.damage_max = 20
 tt.bullet.damage_max_inc = 0
 tt.bullet.damage_min = 20
@@ -14107,7 +14566,8 @@ tt.health_bar.offset = v(0, 33)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_alleria.level_up
 tt.hero.tombstone_show_time = fts(90)
---tt.info.damage_icon = "arrow"
+tt.info.damage_icon = "sword"
+tt.info.ranged_damage_icon = "rangedtrue"
 tt.info.hero_portrait = nil
 tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.i18n_key = "HERO_MUNRA"
@@ -14294,7 +14754,7 @@ tt.health.hp_max = {
 tt.health.magic_armor = 0.85
 tt.health_bar.offset = v(0, 33)
 tt.info.i18n_key = "ENEMY_CURSED_SHAMAN"
-tt.info.enc_icon = 71
+tt.info.enc_icon = 144
 tt.info.portrait = (IS_PHONE_OR_TABLET and "portraits_sc_0095") or "info_portraits_sc_0095"
 tt.main_script.insert = scripts.enemy_basic.insert
 tt.main_script.update = scripts_rebbborn.enemy_cursed_shaman.update
@@ -14352,7 +14812,7 @@ tt.health.hp_max = {
 }
 tt.health_bar.offset = v(0, 30)
 tt.info.i18n_key = "ENEMY_HOBGOBLIN"
-tt.info.enc_icon = 70
+tt.info.enc_icon = 143--70
 tt.info.portrait = (IS_PHONE_OR_TABLET and "portraits_sc_0094") or "info_portraits_sc_0094"
 tt.melee.attacks[1].cooldown = 1
 tt.melee.attacks[1].damage_max = 50
@@ -14393,7 +14853,7 @@ tt.health_bar.offset = v(0, 48)
 tt.main_script.insert = scripts.enemy_basic.insert
 tt.main_script.update = scripts_rebbborn.enemy_hobgoblin_rider.update
 tt.info.i18n_key = "ENEMY_HOBGOBLIN_RIDER"
-tt.info.enc_icon = 73
+tt.info.enc_icon = 146
 tt.info.portrait = (IS_PHONE_OR_TABLET and "portraits_sc_0094") or "info_portraits_sc_0094"
 tt.melee.attacks[1].cooldown = 1e+99
 tt.melee.attacks[1].damage_max = 0
@@ -14449,7 +14909,7 @@ tt.health.hp_max = {
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.health_bar.offset = v(0, 54)
 tt.info.i18n_key = "ENEMY_HOBGOBLIN_SHIELD"
-tt.info.enc_icon = 72
+tt.info.enc_icon = 145
 tt.info.portrait = (IS_PHONE_OR_TABLET and "portraits_sc_0096") or "info_portraits_sc_0096"
 tt.main_script.insert = scripts.enemy_basic.insert
 tt.main_script.update = scripts_rebbborn.enemy_hobgoblin_shield.update
@@ -14524,7 +14984,7 @@ tt.health.magic_armor = {
 }
 tt.health_bar.offset = v(0, 31)
 tt.info.i18n_key = "ENEMY_GOBLIN_SPEAR"
-tt.info.enc_icon = 74
+tt.info.enc_icon = 147
 tt.info.portrait = (IS_PHONE_OR_TABLET and "portraits_sc_0025") or "info_portraits_sc_0097"
 tt.melee.attacks[1].cooldown = 1.5
 tt.melee.attacks[1].damage_max = 30
@@ -14570,7 +15030,7 @@ tt.health.armor = {
 tt.health_bar.offset = v(adx(29), ady(169))
 tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
 tt.info.i18n_key = "ENEMY_GOBLIN_BALLOON"
-tt.info.enc_icon = 75
+tt.info.enc_icon = 148
 tt.info.portrait = (IS_PHONE_OR_TABLET and "portraits_sc_0061") or "info_portraits_sc_0061"
 tt.main_script.insert = scripts.enemy_basic.insert
 tt.main_script.update = scripts.enemy_mixed.update
@@ -14624,7 +15084,7 @@ tt.health.armor = 0
 tt.health_bar.offset = v(adx(29), ady(189))
 tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
 tt.info.i18n_key = "ENEMY_GOBLIN_PLATFORM"
-tt.info.enc_icon = 80
+tt.info.enc_icon = 153
 tt.info.portrait = (IS_PHONE_OR_TABLET and "portraits_sc_0061") or "info_portraits_sc_0061"
 tt.main_script.insert = scripts.enemy_basic.insert
 tt.main_script.update = scripts.enemy_mixed.update
@@ -14701,7 +15161,7 @@ tt.health_bar.offset = v(0, 62)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.info.portrait = (IS_PHONE_OR_TABLET and "portraits_sc_0101") or "info_portraits_sc_0101"
 tt.info.i18n_key = "ENEMY_CURSED_GOLEM"
-tt.info.enc_icon = 76
+tt.info.enc_icon = 149
 tt.melee.attacks[1] = CC("area_attack")
 tt.melee.attacks[1].cooldown = 3
 tt.melee.attacks[1].count = 10
@@ -14772,7 +15232,7 @@ tt.health.hp_max = {
 }
 tt.health_bar.offset = v(0, 30)
 tt.info.i18n_key = "ENEMY_CURSED_SHARD"
-tt.info.enc_icon = 77
+tt.info.enc_icon = 150
 tt.info.portrait = (IS_PHONE_OR_TABLET and "portraits_sc_0102") or "info_portraits_sc_0102"
 tt.melee.attacks[1].cooldown = 1.5
 tt.melee.attacks[1].damage_max = 22
@@ -14823,7 +15283,7 @@ tt.health_bar.offset = v(0, 82)
 tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
 tt.info.i18n_key = "ENEMY_HOBGOBLIN_MINIBOSS"
 tt.info.portrait = (IS_PHONE_OR_TABLET and "portraits_sc_0098") or "info_portraits_sc_0098"
-tt.info.enc_icon = 78
+tt.info.enc_icon = 151
 tt.melee.attacks[1] = CC("area_attack")
 tt.melee.attacks[1].cooldown = 2
 tt.melee.attacks[1].count = 10
@@ -14892,7 +15352,7 @@ tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
 tt.health_bar.offset = v(0, ady(75))
 tt.info.fn = scripts.eb_juggernaut.get_info
 tt.info.i18n_key = "EB_HOBGOBLIN"
-tt.info.enc_icon = 79
+tt.info.enc_icon = 152
 tt.info.portrait = (IS_PHONE_OR_TABLET and "portraits_sc_0099") or "info_portraits_sc_0099"
 tt.main_script.insert = scripts.enemy_basic.insert
 tt.main_script.update = scripts_rebbborn.eb_hobgob.update

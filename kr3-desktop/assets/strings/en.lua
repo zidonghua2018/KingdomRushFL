@@ -43,6 +43,7 @@ for k, v in pairs(z3) do
 end
 
 z["BUTTON_NEXT_PAGE"] = "Next Page"
+z["BUTTON_PREV_PAGE"] = "Prev Page"
 z["Rush"] = "Rush"
 z["Frontier"] = "Frontier"
 z["Origin"] = "Origin"

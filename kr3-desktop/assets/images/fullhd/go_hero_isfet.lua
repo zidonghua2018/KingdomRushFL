@@ -2149,7 +2149,7 @@ return {
 		alias = {},
 		textureRotated = false
 	},
-	["hero_isfet_bolt_particle_"] = {
+	["hero_isfet_bolt_particle"] = {
 		a_name = "go_hero_isfet.dds",
 		size = {
 			44,

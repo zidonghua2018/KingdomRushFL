@@ -9891,6 +9891,16 @@ local a = {
 		to = 110,
 		from = 91
 	},
+	hero_vesper_vesper_ranged_attack_2 = {
+		prefix = "hero_vesper_vesper",
+		to = 110,
+		from = 91
+	},
+	hero_vesper_vesper_ranged_attack_1 = {
+		prefix = "hero_vesper_vesper",
+		to = 110,
+		from = 91
+	},
 	hero_vesper_vesper_arrow_to_the_knee = {
 		prefix = "hero_vesper_vesper",
 		to = 140,

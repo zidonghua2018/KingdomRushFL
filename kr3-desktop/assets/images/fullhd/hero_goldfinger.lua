@@ -2,143 +2,18 @@ local a = {
 	["kra_gui_heroes_0001"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			103,
-			1,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["kra_gui_heroes_0001_disabled"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			202,
-			1,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["kra_gui_heroes_0002"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			301,
-			1,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["kra_gui_heroes_0002_disabled"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			400,
-			1,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["kra_gui_heroes_0003"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			103,
-			99,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["kra_gui_heroes_0003_disabled"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
 			1,
@@ -149,121 +24,21 @@ local a = {
 		alias = {},
 		textureRotated = false
 	},
-	["kra_gui_heroes_0004"] = {
+	["kra_gui_heroes_0001_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			202,
-			99,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["kra_gui_heroes_0004_disabled"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			301,
-			99,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["kra_gui_heroes_0005"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			400,
-			99,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["kra_gui_heroes_0005_disabled"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			100,
-			197,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["kra_gui_heroes_0006"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
 			1,
@@ -274,121 +49,21 @@ local a = {
 		alias = {},
 		textureRotated = false
 	},
-	["kra_gui_heroes_0006_disabled"] = {
+	["kra_gui_heroes_0002"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			199,
-			197,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["kra_gui_heroes_0007"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			298,
-			197,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["kra_gui_heroes_0007_disabled"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			397,
-			197,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["kra_gui_heroes_0008"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			100,
-			295,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["kra_gui_heroes_0008_disabled"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
 			1,
@@ -399,21 +74,346 @@ local a = {
 		alias = {},
 		textureRotated = false
 	},
+	["kra_gui_heroes_0002_disabled"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			1,
+			396,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["kra_gui_heroes_0003"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			1,
+			494,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["kra_gui_heroes_0003_disabled"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			1,
+			592,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["kra_gui_heroes_0004"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			100,
+			102,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["kra_gui_heroes_0004_disabled"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			103,
+			1,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["kra_gui_heroes_0005"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			100,
+			200,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["kra_gui_heroes_0005_disabled"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			100,
+			298,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["kra_gui_heroes_0006"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			100,
+			396,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["kra_gui_heroes_0006_disabled"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			100,
+			494,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["kra_gui_heroes_0007"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			100,
+			592,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["kra_gui_heroes_0007_disabled"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			199,
+			99,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["kra_gui_heroes_0008"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			202,
+			1,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["kra_gui_heroes_0008_disabled"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			199,
+			197,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
 	["kra_gui_heroes_0009"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
 			199,
@@ -427,22 +427,22 @@ local a = {
 	["kra_gui_heroes_0009_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			298,
-			295,
+			199,
+			393,
 			97,
 			96
 		},
@@ -452,22 +452,22 @@ local a = {
 	["kra_gui_heroes_0010"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			397,
-			295,
+			199,
+			491,
 			97,
 			96
 		},
@@ -477,22 +477,22 @@ local a = {
 	["kra_gui_heroes_0010_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			100,
-			393,
+			199,
+			589,
 			97,
 			96
 		},
@@ -502,22 +502,22 @@ local a = {
 	["kra_gui_heroes_0011"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			1,
-			396,
+			199,
+			687,
 			97,
 			96
 		},
@@ -527,22 +527,22 @@ local a = {
 	["kra_gui_heroes_0011_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			199,
-			393,
+			298,
+			99,
 			97,
 			96
 		},
@@ -552,18 +552,93 @@ local a = {
 	["kra_gui_heroes_0012"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
+		},
+		f_quad = {
+			301,
+			1,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["kra_gui_heroes_0012_disabled"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			298,
+			197,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["kra_gui_heroes_0013"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			298,
+			295,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["kra_gui_heroes_0013_disabled"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
 		},
 		f_quad = {
 			298,
@@ -574,99 +649,24 @@ local a = {
 		alias = {},
 		textureRotated = false
 	},
-	["kra_gui_heroes_0012_disabled"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			397,
-			393,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["kra_gui_heroes_0013"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			100,
-			491,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["kra_gui_heroes_0013_disabled"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			1,
-			494,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
 	["kra_gui_heroes_0014"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			199,
+			298,
 			491,
 			97,
 			96
@@ -677,22 +677,22 @@ local a = {
 	["kra_gui_heroes_0014_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
 			298,
-			491,
+			589,
 			97,
 			96
 		},
@@ -702,22 +702,22 @@ local a = {
 	["kra_gui_heroes_0015"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			397,
-			491,
+			298,
+			687,
 			97,
 			96
 		},
@@ -727,22 +727,22 @@ local a = {
 	["kra_gui_heroes_0015_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			100,
-			589,
+			400,
+			1,
 			97,
 			96
 		},
@@ -752,22 +752,22 @@ local a = {
 	["kra_gui_heroes_0016"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
+			499,
 			1,
-			592,
 			97,
 			96
 		},
@@ -777,22 +777,22 @@ local a = {
 	["kra_gui_heroes_0016_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			199,
-			589,
+			598,
+			1,
 			97,
 			96
 		},
@@ -802,22 +802,22 @@ local a = {
 	["kra_gui_heroes_0017"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			298,
-			589,
+			697,
+			1,
 			97,
 			96
 		},
@@ -827,22 +827,22 @@ local a = {
 	["kra_gui_heroes_0017_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			397,
-			589,
+			796,
+			1,
 			97,
 			96
 		},
@@ -852,18 +852,18 @@ local a = {
 	["kra_gui_heroes_0018"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			132,
-			123
+			100,
+			99
 		},
 		trim = {
-			16,
-            16,
-            14,
-            14
+			0,
+            0,
+            0,
+            0
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
 			1,
@@ -877,18 +877,318 @@ local a = {
 	["kra_gui_heroes_0018_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
+		},
+		f_quad = {
+			796,
+			1,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["kra_gui_heroes_0019"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			397,
+			99,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["kra_gui_heroes_0019_disabled"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			796,
+			1,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["krv_gui_heroes_0001"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			496,
+			99,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["krv_gui_heroes_0001_disabled"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			595,
+			99,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["krv_gui_heroes_0002"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			694,
+			99,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["krv_gui_heroes_0002_disabled"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			793,
+			99,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["krv_gui_heroes_0003"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			892,
+			99,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["krv_gui_heroes_0003_disabled"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			397,
+			197,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["krv_gui_heroes_0004"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			397,
+			295,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["krv_gui_heroes_0004_disabled"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			397,
+			393,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["krv_gui_heroes_0005"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
+		},
+		f_quad = {
+			397,
+			491,
+			97,
+			96
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["krv_gui_heroes_0005_disabled"] = {
+		a_name = "hero_goldfinger.png",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			4,
+            4,
+            3,
+            4
+		},
+		a_size = {
+			990,
+			784
 		},
 		f_quad = {
 			397,
@@ -899,275 +1199,25 @@ local a = {
 		alias = {},
 		textureRotated = false
 	},
-	["krv_gui_heroes_0001"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			100,
-			687,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["krv_gui_heroes_0001_disabled"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			1,
-			690,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["krv_gui_heroes_0002"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			199,
-			687,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["krv_gui_heroes_0002_disabled"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			298,
-			687,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["krv_gui_heroes_0003"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			397,
-			687,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["krv_gui_heroes_0003_disabled"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			100,
-			785,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["krv_gui_heroes_0004"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			1,
-			788,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["krv_gui_heroes_0004_disabled"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			199,
-			785,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["krv_gui_heroes_0005"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			298,
-			785,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
-	["krv_gui_heroes_0005_disabled"] = {
-		a_name = "hero_goldfinger.png",
-		size = {
-			133,
-			122
-		},
-		trim = {
-			18,
-            18,
-            13,
-            13
-		},
-		a_size = {
-			498,
-			1473
-		},
-		f_quad = {
-			397,
-			785,
-			97,
-			96
-		},
-		alias = {},
-		textureRotated = false
-	},
 	["krv_gui_heroes_0006"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			100,
-			883,
+			397,
+			687,
 			97,
 			96
 		},
@@ -1177,22 +1227,22 @@ local a = {
 	["krv_gui_heroes_0006_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			1,
-			886,
+			496,
+			197,
 			97,
 			96
 		},
@@ -1202,22 +1252,22 @@ local a = {
 	["krv_gui_heroes_0007"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			199,
-			883,
+			595,
+			197,
 			97,
 			96
 		},
@@ -1227,22 +1277,22 @@ local a = {
 	["krv_gui_heroes_0007_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			298,
-			883,
+			694,
+			197,
 			97,
 			96
 		},
@@ -1252,22 +1302,22 @@ local a = {
 	["krv_gui_heroes_0008"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			397,
-			883,
+			793,
+			197,
 			97,
 			96
 		},
@@ -1277,22 +1327,22 @@ local a = {
 	["krv_gui_heroes_0008_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			100,
-			981,
+			892,
+			197,
 			97,
 			96
 		},
@@ -1302,22 +1352,22 @@ local a = {
 	["krv_gui_heroes_0009"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			1,
-			984,
+			496,
+			295,
 			97,
 			96
 		},
@@ -1327,22 +1377,22 @@ local a = {
 	["krv_gui_heroes_0009_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			199,
-			981,
+			496,
+			393,
 			97,
 			96
 		},
@@ -1352,22 +1402,22 @@ local a = {
 	["krv_gui_heroes_0010"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			298,
-			981,
+			496,
+			491,
 			97,
 			96
 		},
@@ -1377,22 +1427,22 @@ local a = {
 	["krv_gui_heroes_0010_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			397,
-			981,
+			496,
+			589,
 			97,
 			96
 		},
@@ -1402,22 +1452,22 @@ local a = {
 	["krv_gui_heroes_0011"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			100,
-			1079,
+			496,
+			687,
 			97,
 			96
 		},
@@ -1427,22 +1477,22 @@ local a = {
 	["krv_gui_heroes_0011_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			1,
-			1082,
+			595,
+			295,
 			97,
 			96
 		},
@@ -1452,22 +1502,22 @@ local a = {
 	["krv_gui_heroes_0012"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			199,
-			1079,
+			694,
+			295,
 			97,
 			96
 		},
@@ -1477,22 +1527,22 @@ local a = {
 	["krv_gui_heroes_0012_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			298,
-			1079,
+			793,
+			295,
 			97,
 			96
 		},
@@ -1502,22 +1552,22 @@ local a = {
 	["krv_gui_heroes_0013"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			397,
-			1079,
+			892,
+			295,
 			97,
 			96
 		},
@@ -1527,22 +1577,22 @@ local a = {
 	["krv_gui_heroes_0013_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			100,
-			1177,
+			595,
+			393,
 			97,
 			96
 		},
@@ -1552,22 +1602,22 @@ local a = {
 	["krv_gui_heroes_0014"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			1,
-			1180,
+			595,
+			491,
 			97,
 			96
 		},
@@ -1577,22 +1627,22 @@ local a = {
 	["krv_gui_heroes_0014_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			199,
-			1177,
+			595,
+			589,
 			97,
 			96
 		},
@@ -1602,22 +1652,22 @@ local a = {
 	["krv_gui_heroes_0015"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			298,
-			1177,
+			595,
+			687,
 			97,
 			96
 		},
@@ -1627,22 +1677,22 @@ local a = {
 	["krv_gui_heroes_0015_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			397,
-			1177,
+			694,
+			393,
 			97,
 			96
 		},
@@ -1652,22 +1702,22 @@ local a = {
 	["krv_gui_heroes_0016"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			100,
-			1275,
+			793,
+			393,
 			97,
 			96
 		},
@@ -1677,22 +1727,22 @@ local a = {
 	["krv_gui_heroes_0016_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			1,
-			1278,
+			892,
+			393,
 			97,
 			96
 		},
@@ -1702,22 +1752,22 @@ local a = {
 	["krv_gui_heroes_0017"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			199,
-			1275,
+			694,
+			491,
 			97,
 			96
 		},
@@ -1727,22 +1777,22 @@ local a = {
 	["krv_gui_heroes_0017_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			298,
-			1275,
+			793,
+			491,
 			97,
 			96
 		},
@@ -1752,22 +1802,22 @@ local a = {
 	["krv_gui_heroes_0018"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			397,
-			1275,
+			892,
+			491,
 			97,
 			96
 		},
@@ -1777,22 +1827,22 @@ local a = {
 	["krv_gui_heroes_0018_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			100,
-			1373,
+			694,
+			589,
 			97,
 			96
 		},
@@ -1802,22 +1852,22 @@ local a = {
 	["krv_gui_heroes_0019"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			1,
-			1376,
+			694,
+			687,
 			97,
 			96
 		},
@@ -1827,22 +1877,22 @@ local a = {
 	["krv_gui_heroes_0019_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			199,
-			1373,
+			793,
+			589,
 			97,
 			96
 		},
@@ -1852,22 +1902,22 @@ local a = {
 	["krv_gui_heroes_0020"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			298,
-			1373,
+			892,
+			589,
 			97,
 			96
 		},
@@ -1877,22 +1927,22 @@ local a = {
 	["krv_gui_heroes_0020_disabled"] = {
 		a_name = "hero_goldfinger.png",
 		size = {
-			133,
-			122
+			104,
+			104
 		},
 		trim = {
-			18,
-            18,
-            13,
-            13
+			4,
+            4,
+            3,
+            4
 		},
 		a_size = {
-			498,
-			1473
+			990,
+			784
 		},
 		f_quad = {
-			397,
-			1373,
+			793,
+			687,
 			97,
 			96
 		},

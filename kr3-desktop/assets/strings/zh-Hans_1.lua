@@ -2081,4 +2081,6 @@ return {
 	tower_mage_3 = "巫师塔",
 	["wOOt!"] = "噢吼！",
 	["you can adjust your soldiers rally point to make them defend a different area."] = "你可以更改士兵的集结点来使他们防御不同的区域。",
+	["%s sec."] = "%s 秒。",
+	["%s sec"] = "%s 秒",	
 }

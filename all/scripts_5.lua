@@ -747,6 +747,9 @@ function scripts.enemy_basic.get_info(this)
     local min, max
 	local yes_melee = true
     local no_ranged = true
+	local dodge_chance
+	local dodge = nil
+
     if this.melee and this.melee.attacks then
         attacks = this.melee.attacks
         for _, a in pairs(attacks) do
@@ -794,17 +797,6 @@ function scripts.enemy_basic.get_info(this)
         end
     end
 	
---[[	
-    if not ranged_damage_type and this.timed_attacks and this.timed_attacks.list[1].bullet then
-        local b = E:get_template(this.timed_attacks.list[1].bullet)
-
-        if b and b.bullet and b.bullet.damage_min and b.bullet.damage_max then
-            ranged_min, ranged_max = math.ceil((b.bullet.damage_min) * this.unit.damage_factor),
-                math.ceil((b.bullet.damage_max) * this.unit.damage_factor)
-            ranged_damage_type = b.bullet.damage_type
-        end
-    end
-]]--	
     if ranged_damage_type then
         no_ranged = false
     end
@@ -830,6 +822,14 @@ function scripts.enemy_basic.get_info(this)
         end
     end
 
+	if this.dodge then
+		dodge = true
+		dodge_chance = this.dodge.chance
+	end
+
+	local armor = band(this.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or this.health.armor
+	local magic_armor = band(this.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or this.health.magic_armor
+
     return {
         type = STATS_TYPE_ENEMY,
         hp = this.health.hp,
@@ -845,8 +845,10 @@ function scripts.enemy_basic.get_info(this)
         ranged_damage_type = ranged_damage_type,
 		ranged_damage_icon = this.info.ranged_damage_icon,
 
-        armor = this.health.armor,
-        magic_armor = this.health.magic_armor,
+        armor = armor,
+        magic_armor = magic_armor,
+		dodge = dodge,
+		dodge_chance = dodge_chance,		
 		lives = this.enemy and this.enemy.lives_cost or 1,
 		immune = this.health.immune_to == DAMAGE_ALL_TYPES,
 		no_ranged = no_ranged,
@@ -1365,6 +1367,9 @@ function scripts.soldier_reinforcement.get_info(this)
     local min, max
 	local yes_melee = true
     local no_ranged = true
+	local dodge_chance
+	local dodge = nil
+
     if this.melee and this.melee.attacks then
         attacks = this.melee.attacks
         for _, a in pairs(attacks) do
@@ -1411,17 +1416,7 @@ function scripts.soldier_reinforcement.get_info(this)
             ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
         end
     end
---[[
-    if not ranged_damage_type and this.timed_attacks and this.timed_attacks.list[1].bullet then
-        local b = E:get_template(this.timed_attacks.list[1].bullet)
 
-        if b and b.bullet and b.bullet.damage_min and b.bullet.damage_max then
-            ranged_min, ranged_max = math.ceil((b.bullet.damage_min) * this.unit.damage_factor),
-                math.ceil((b.bullet.damage_max) * this.unit.damage_factor)
-            ranged_damage_type = b.bullet.damage_type
-        end
-    end
-]]--
     if ranged_damage_type then
         no_ranged = false
     end
@@ -1447,6 +1442,14 @@ function scripts.soldier_reinforcement.get_info(this)
         end
     end
 
+	if this.dodge then
+		dodge = true
+		dodge_chance = this.dodge.chance
+	end
+
+	local armor = band(this.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or this.health.armor
+	local magic_armor = band(this.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or this.health.magic_armor
+
     return {
         type = STATS_TYPE_SOLDIER,
         hp = this.health.hp,
@@ -1462,8 +1465,10 @@ function scripts.soldier_reinforcement.get_info(this)
         ranged_damage_type = ranged_damage_type,
 		ranged_damage_icon = this.info.ranged_damage_icon,
 
-        armor = this.health.armor,
-        magic_armor = this.health.magic_armor,
+        armor = armor,
+        magic_armor = magic_armor,
+		dodge = dodge,
+		dodge_chance = dodge_chance,		
         no_ranged = no_ranged,
 		yes_melee = yes_melee
     }
@@ -1624,6 +1629,9 @@ function scripts.soldier_barrack.get_info(this)
     local min, max
 	local yes_melee = true
     local no_ranged = true
+	local dodge_chance
+	local dodge = nil
+
     if this.melee and this.melee.attacks then
         attacks = this.melee.attacks
         for _, a in pairs(attacks) do
@@ -1670,17 +1678,7 @@ function scripts.soldier_barrack.get_info(this)
             ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
         end
     end
---[[
-    if not ranged_damage_type and this.timed_attacks and this.timed_attacks.list[1].bullet then
-        local b = E:get_template(this.timed_attacks.list[1].bullet)
 
-        if b and b.bullet and b.bullet.damage_min and b.bullet.damage_max then
-            ranged_min, ranged_max = math.ceil((b.bullet.damage_min) * this.unit.damage_factor),
-                math.ceil((b.bullet.damage_max) * this.unit.damage_factor)
-            ranged_damage_type = b.bullet.damage_type
-        end
-    end
-]]--	
     if ranged_damage_type then
         no_ranged = false
     end
@@ -1706,6 +1704,14 @@ function scripts.soldier_barrack.get_info(this)
         end
     end
 
+	if this.dodge then
+		dodge = true
+		dodge_chance = this.dodge.chance
+	end
+
+	local armor = band(this.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or this.health.armor
+	local magic_armor = band(this.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or this.health.magic_armor
+
     return {
         type = STATS_TYPE_SOLDIER,
         hp = this.health.hp,
@@ -1721,8 +1727,10 @@ function scripts.soldier_barrack.get_info(this)
         ranged_damage_type = ranged_damage_type,
 		ranged_damage_icon = this.info.ranged_damage_icon,
 
-        armor = this.health.armor,
-        magic_armor = this.health.magic_armor,
+        armor = armor,
+        magic_armor = magic_armor,
+		dodge = dodge,
+		dodge_chance = dodge_chance,		
         respawn = this.health.dead_lifetime,
         no_ranged = no_ranged,
 		yes_melee = yes_melee
@@ -1948,6 +1956,9 @@ scripts.hero_basic = {}
 function scripts.hero_basic.get_info_melee(this)
 	local a = this.melee.attacks[1]
 	local min, max = a.damage_min, a.damage_max
+	local yes_melee = true
+    local no_ranged = true
+	local map_melee = true
 
 	min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
 
@@ -1961,7 +1972,10 @@ function scripts.hero_basic.get_info_melee(this)
 		damage_icon = this.info.damage_icon,
 		armor = this.health.armor,
         magic_armor = this.health.magic_armor,		
-		respawn = this.health.dead_lifetime
+		respawn = this.health.dead_lifetime,
+		yes_melee = yes_melee,
+		no_ranged = no_ranged,
+		map_melee = map_melee
 	}
 end
 
@@ -1972,6 +1986,10 @@ function scripts.hero_basic.get_info_melee(this)
     local min, max
 	local yes_melee = true
     local no_ranged = true
+	local dodge_chance
+	local dodge = nil
+	local map_melee = true
+
     if this.melee and this.melee.attacks then
         attacks = this.melee.attacks
         for _, a in pairs(attacks) do
@@ -2019,16 +2037,6 @@ function scripts.hero_basic.get_info_melee(this)
         end
     end
 
-    if not ranged_damage_type and this.timed_attacks and this.timed_attacks.list[1].bullet then
-        local b = E:get_template(this.timed_attacks.list[1].bullet)
-
-        if b and b.bullet and b.bullet.damage_min and b.bullet.damage_max then
-            ranged_min, ranged_max = math.ceil((b.bullet.damage_min) * this.unit.damage_factor),
-                math.ceil((b.bullet.damage_max) * this.unit.damage_factor)
-            ranged_damage_type = b.bullet.damage_type
-        end
-    end
-
     if ranged_damage_type then
         no_ranged = false
     end
@@ -2054,6 +2062,14 @@ function scripts.hero_basic.get_info_melee(this)
         end
     end
 
+	if this.dodge then
+		dodge = true
+		dodge_chance = this.dodge.chance
+	end
+
+	local armor = band(this.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or this.health.armor
+	local magic_armor = band(this.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or this.health.magic_armor
+
     return {
         type = STATS_TYPE_SOLDIER,
         hp = this.health.hp,
@@ -2069,31 +2085,15 @@ function scripts.hero_basic.get_info_melee(this)
         ranged_damage_type = ranged_damage_type,
 		ranged_damage_icon = this.info.ranged_damage_icon,
 
-        armor = this.health.armor,
-        magic_armor = this.health.magic_armor,
+        armor = armor,
+        magic_armor = magic_armor,
+		dodge = dodge,
+		dodge_chance = dodge_chance,	
         respawn = this.health.dead_lifetime,
         no_ranged = no_ranged,
-		yes_melee = yes_melee
+		yes_melee = yes_melee,
+		map_melee = map_melee
     }
-end
-]]--
---[[
-function scripts.hero_basic.get_info_ranged(this)
-	local a = this.ranged.attacks[1]
-	local b = E:get_template(a.bullet)
-	local min, max = b.bullet.damage_min, b.bullet.damage_max
-
-	return {
-		type = STATS_TYPE_SOLDIER,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		damage_type = b.bullet.damage_type,
-		damage_icon = this.info.damage_icon,
-		armor = this.health.armor,
-		respawn = this.health.dead_lifetime
-	}
 end
 ]]--
 ----本段代码来自DOVE版
@@ -2102,6 +2102,9 @@ function scripts.hero_basic.get_info_ranged(this)
     local min, max
 	local yes_melee = true
     local no_ranged = true
+	local dodge_chance
+	local dodge = nil
+
     if this.melee and this.melee.attacks then
         attacks = this.melee.attacks
         for _, a in pairs(attacks) do
@@ -2148,17 +2151,7 @@ function scripts.hero_basic.get_info_ranged(this)
             ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
         end
     end
---[[
-    if not ranged_damage_type and this.timed_attacks and this.timed_attacks.list[1].bullet then
-        local b = E:get_template(this.timed_attacks.list[1].bullet)
 
-        if b and b.bullet and b.bullet.damage_min and b.bullet.damage_max then
-            ranged_min, ranged_max = math.ceil((b.bullet.damage_min) * this.unit.damage_factor),
-                math.ceil((b.bullet.damage_max) * this.unit.damage_factor)
-            ranged_damage_type = b.bullet.damage_type
-        end
-    end
-]]--
     if ranged_damage_type then
         no_ranged = false
     end
@@ -2184,6 +2177,14 @@ function scripts.hero_basic.get_info_ranged(this)
         end
     end
 
+	if this.dodge then
+		dodge = true
+		dodge_chance = this.dodge.chance
+	end
+
+	local armor = band(this.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or this.health.armor
+	local magic_armor = band(this.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or this.health.magic_armor
+
     return {
         type = STATS_TYPE_SOLDIER,
         hp = this.health.hp,
@@ -2199,8 +2200,10 @@ function scripts.hero_basic.get_info_ranged(this)
         ranged_damage_type = ranged_damage_type,
 		ranged_damage_icon = this.info.ranged_damage_icon,
 
-        armor = this.health.armor,
-        magic_armor = this.health.magic_armor,
+        armor = armor,
+        magic_armor = magic_armor,
+		dodge = dodge,
+		dodge_chance = dodge_chance,	
         respawn = this.health.dead_lifetime,
         no_ranged = no_ranged,
 		yes_melee = yes_melee
@@ -2621,6 +2624,9 @@ function scripts.tower_barrack.get_info(this)
     local min, max
 	local yes_melee = true
     local no_ranged = true
+	local dodge_chance
+	local dodge = nil
+
     if s.melee and s.melee.attacks then
         attacks = s.melee.attacks
         for _, a in pairs(attacks) do
@@ -2669,17 +2675,7 @@ function scripts.tower_barrack.get_info(this)
             ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
         end
     end
---[[
-    if not ranged_damage_type and s.timed_attacks and s.timed_attacks.list[1].bullet then
-        local b = E:get_template(s.timed_attacks.list[1].bullet)
 
-        if b and b.bullet and b.bullet.damage_min and b.bullet.damage_max then
-            ranged_min, ranged_max = math.ceil((b.bullet.damage_min) * s.unit.damage_factor),
-                math.ceil((b.bullet.damage_max) * s.unit.damage_factor)
-            ranged_damage_type = b.bullet.damage_type
-        end
-    end
-]]--	
     if ranged_damage_type then
         no_ranged = false
     end
@@ -2705,6 +2701,14 @@ function scripts.tower_barrack.get_info(this)
         end
     end
 
+	if s.dodge then
+		dodge = true
+		dodge_chance = s.dodge.chance
+	end
+
+	local armor = band(s.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or s.health.armor
+	local magic_armor = band(s.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or s.health.magic_armor
+
     return {
         type = STATS_TYPE_TOWER_BARRACK,
         hp_max = s.health.hp_max,
@@ -2719,8 +2723,10 @@ function scripts.tower_barrack.get_info(this)
         ranged_damage_type = ranged_damage_type,
 		ranged_damage_icon = s.info.ranged_damage_icon,
 
-        armor = s.health.armor,
-        magic_armor = s.health.magic_armor,
+        armor = armor,
+        magic_armor = magic_armor,
+		dodge = dodge,
+		dodge_chance = dodge_chance,			
         respawn = s.health.dead_lifetime,
         no_ranged = no_ranged,
 		yes_melee = yes_melee
@@ -5364,7 +5370,7 @@ function scripts.mod_track_target.insert(this, store, script)
 		return false
 	end
 
-	if target and target.unit and this.render then
+	if target and target.unit and this.render and target.render then
 		for i = 1, #this.render.sprites do
 			local s = this.render.sprites[i]
 
@@ -6364,6 +6370,7 @@ function scripts.mod_tower_block.update(this, store, script)
 
 	U.y_animation_wait(this)
 	SU.tower_block_dec(target)
+	S:stop(this.sound_events.insert)
 	queue_remove(store, this)
 end
 

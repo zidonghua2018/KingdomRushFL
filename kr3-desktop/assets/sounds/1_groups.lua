@@ -216,6 +216,7 @@ return {
 			"Sound_EnemyVeznan_death.ogg",
 			"Sound_EnemyVeznan_demonFire.ogg",
 			"Sound_EnemyVeznan_toDemon.ogg",
+			"Sound_EnemyVeznan_Soul_Drain.ogg",
 			"Sound_SpellTowerHold_Cast.ogg",
 			"Sound_SpellTowerHold_Dissipate.ogg",
 			"Sound_SpellTowerHold_Hit.ogg",

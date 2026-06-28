@@ -4,6 +4,7 @@ return {
 	common5 = {
 		keep = true,
 		files = {
+			"kra_heroes_nyru_basicAttack_melee_var1_op1_v1.ogg",
 			"kra_sfx_tower_arcaneWizard_basicAttack_var1_v1.ogg",
 			"kra_sfx_tower_arcaneWizard_basicAttack_var2_v1.ogg",
 			"kra_sfx_tower_arcaneWizard_basicAttack_var3_v1.ogg",
@@ -212,6 +213,12 @@ return {
 			"kr4_hero_dianyun_taunt_4.ogg",
 			"kr5_bgmusic_t1_preparation1_v1.ogg",
 			"kr5_bgmusic_t1_preparation2_v1.ogg",
+			"kr_voice_dragonhatchery_02_b.ogg",
+			"kr_voice_dragonhatchery_03_a.ogg",
+			"kr_voice_dragonhatchery_04_b.ogg",
+			"kr_voice_dragonhatchery_05_a.ogg",
+			"kr_voice_dragonhatchery_01_a.ogg",
+			"kr_voice_aurion_01_b.ogg",
 		},
 		ids = {}
 	},
@@ -460,6 +467,43 @@ return {
 			"MusicBattlePrep_135",
 			"MusicBattle_135",
 			"MusicBossFight_135"
+		}
+	},
+	music_stage136 = {
+		sounds = {
+			"MusicBattlePrep_136",
+			"MusicBattle_136"
+		}
+	},
+	music_stage137 = {
+		sounds = {
+			"MusicBattlePrep_137",
+			"MusicBattle_137"
+		}
+	},
+	music_stage138 = {
+		sounds = {
+			"MusicBattlePrep_138",
+			"MusicBattle_138"
+		}
+	},
+	music_stage139 = {
+		sounds = {
+			"MusicBattlePrep_139",
+			"MusicBattle_139"
+		}
+	},
+	music_stage140 = {
+		sounds = {
+			"MusicBattlePrep_140",
+			"MusicBattle_140",
+			"MusicBossFight_140"
+		}
+	},
+	music_stage141 = {
+		sounds = {
+			"MusicBattlePrep_141",
+			"MusicBattle_141"
 		}
 	},
 	music_stage181 = {
@@ -1009,6 +1053,28 @@ return {
 			"kra_sfx_wukong_hero_zhu_smash_v1.ogg"
 		}
 	},
+	hero_dragon_sun = {
+		files = {
+			"kr_voice_aurion_03_a.ogg",
+			"kr_voice_aurion_04_a.ogg",
+			"kr_voice_aurion_05_a.ogg",
+			"kra_sfx_heroes_mineDrop_explosion_v2.ogg",
+			"kra_sfx_dragons_hero_worthyfoe_v1.ogg",
+			"kra_sfx_dragons_hero_attack_var1_v1.ogg",
+			"kra_sfx_dragons_hero_attack_var2_v1.ogg",
+			"kra_sfx_dragons_hero_attack_var3_v1.ogg",
+			"kra_sfx_dragons_hero_cleansing_v1.ogg",
+			"kra_sfx_dragons_hero_death_v1.ogg",
+			"kra_sfx_dragons_hero_overcharge_v1.ogg",
+			"kra_sfx_dragons_hero_stones_armed_v1.ogg",
+			"kra_sfx_dragons_hero_stones_drop_v1.ogg",
+			"kra_sfx_dragons_hero_stones_explosion_v1.ogg",
+			"kra_sfx_dragons_hero_stones_shot_v1.ogg",
+			"kra_sfx_dragons_hero_ultimate_op2_v_martin_begin.ogg",
+			"kra_sfx_dragons_hero_ultimate_op2_v_martin_loop.ogg",
+			"kra_sfx_dragons_hero_ultimate_op2_v_martin_end.ogg"
+		}
+	},
 	tower_royal_archers = {
 		files = {
 			"kr_voice_royalArchers_skill_a_var1a.ogg",
@@ -1382,6 +1448,25 @@ return {
 			"kra_sfx_wukong_tower_pandas_melee_var1_v1.ogg",
 			"kra_sfx_wukong_tower_pandas_melee_var2_v1.ogg",
 			"kra_sfx_wukong_tower_pandas_melee_var3_v1.ogg"
+		}
+	},
+	tower_dragons = {
+		files = {
+			"kr_voice_dragonhatchery_02_b.ogg",
+			"kr_voice_dragonhatchery_03_a.ogg",
+			"kr_voice_dragonhatchery_04_b.ogg",
+			"kr_voice_dragonhatchery_05_a.ogg",
+			"kr_voice_dragonhatchery_01_a.ogg",
+			"kra_sfx_dragons_tower_hatchery_attack_var1_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_attack_var2_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_attack_var3_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_skill_screech_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_skill_spit_impact_var1_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_skill_spit_impact_var2_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_skill_spit_impact_var3_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_skill_spit_out_var1_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_skill_spit_out_var2_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_skill_spit_out_var3_v1.ogg"
 		}
 	},
 	enemies_sea_of_trees = {
@@ -2315,6 +2400,200 @@ return {
 			"kra_sfx_wukong_mechanic_stage35_cinematic_4_part2_v1.ogg",
 			"kra_sfx_wukong_mechanic_stage35_cinematic_4_v1.ogg",
 			"kra_sfx_wukong_mechanic_stage35_cinematic_4_scream_v2.ogg"
+		}
+	},
+	stage_136 = {
+		files = {
+			"kra_sfx_dragons_mechanic_stage1_path_open_1_v1.ogg",
+			"kra_sfx_dragons_mechanic_stage1_path_open_2_v1.ogg",
+			"kra_sfx_dragons_ee_s1_spyro_1_v1.ogg",
+			"kra_sfx_dragons_ee_s1_spyro_2_fallOnly_v1.ogg",
+			"kra_sfx_dragons_ee_s1_granger_1_v1.ogg",
+			"kra_sfx_dragons_ee_s1_granger_2_fullSeq_v1.ogg",
+			"kra_sfx_enemy_noxiousHorror_death_op1_v1.ogg",
+		}
+	},
+	stage_137 = {
+		files = {
+			"kra_sfx_dragons_mechanic_stage2_cinematic_p1_roar_v1.ogg",
+			"kra_sfx_dragons_mechanic_stage2_cinematic_p1_arrive_v1.ogg",
+			"kra_sfx_dragons_mechanic_stage2_cinematic_p1_aleteo_v1.ogg",
+			"kra_sfx_dragons_mechanic_stage2_cinematic_p2_v1.ogg",
+			"kra_sfx_dragons_murglun_attack_var1_v1.ogg",
+			"kra_sfx_dragons_murglun_attack_var2_v1.ogg",
+			"kra_sfx_dragons_murglun_attack_var3_v1.ogg",
+			"kra_sfx_dragons_murglun_death_v1.ogg",
+			"kra_sfx_dragons_murglun_fire_spit_v1.ogg",
+			"kra_sfx_dragons_murglun_intro_roar_v1.ogg",
+			"kra_sfx_dragons_murglun_tower_block_impact_v1.ogg",
+			"kra_sfx_dragons_murglun_tower_block_spit_v1.ogg",
+			"kra_sfx_dragons_murglun_dive_v1.ogg",
+			"kra_sfx_dragons_wardens_growl_var1_v1.ogg",
+			"kra_sfx_dragons_wardens_growl_var2_v1.ogg",
+			"kra_sfx_dragons_wardens_growl_var3_v1.ogg",
+			"kra_sfx_dragons_ee_s2_daenerys_1_v1.ogg",
+			"kra_sfx_dragons_ee_s2_daenerys_2_v1.ogg",
+			"kra_sfx_dragons_ee_s2_httyd_1_growl_v1.ogg",
+			"kra_sfx_dragons_ee_s2_httyd_1_purr_v1.ogg",
+			"kr4_sfx_erudite_shot_op1_var1_v1.ogg",
+			"kr4_sfx_erudite_shot_op1_var2_v1.ogg",
+			"kr4_sfx_erudite_shot_op2_var1_v1.ogg",
+			"kr4_sfx_erudite_shot_op2_var2_v1.ogg"
+		}
+	},
+	stage_138 = {
+		files = {
+			"kra_sfx_dragons_mechanic_stage3_path_open_v1.ogg",
+			"kra_sfx_dragons_wardens_growl_var1_v1.ogg",
+			"kra_sfx_dragons_wardens_growl_var2_v1.ogg",
+			"kra_sfx_dragons_wardens_growl_var3_v1.ogg",
+			"kra_sfx_dragons_ee_s3_enderegg_v1.ogg",
+			"kra_sfx_wukong_mechanic_stage35_holder_active_steal_op2_v1.ogg",
+			"kr4_sfx_erudite_shot_op1_var1_v1.ogg",
+			"kr4_sfx_erudite_shot_op1_var2_v1.ogg",
+			"kr4_sfx_erudite_shot_op2_var1_v1.ogg",
+			"kr4_sfx_erudite_shot_op2_var2_v1.ogg",
+			"kra_heroes_nyru_basicAttack_melee_var1_op1_v1.ogg",
+			"kra_sfx_dragons_mechanic_stage1_path_open_1_v1.ogg",
+		}
+	},
+	stage_139 = {
+		files = {
+			"kra_sfx_dragons_mechanic_stage4_eggs_grow_v1.ogg",
+			"kra_sfx_dragons_mechanic_stage4_veins_extend_var_001.ogg",
+			"kra_sfx_dragons_mechanic_stage4_veins_extend_var_002.ogg",
+			"kra_sfx_dragons_mechanic_stage4_veins_extend_var_003.ogg",
+			"kra_sfx_dragons_mechanic_stage4_veins_extend_var_004.ogg",
+			"kra_sfx_dragons_mechanic_stage4_veins_extend_var_005.ogg",
+			"kra_sfx_dragons_broodmother_damaged_v1.ogg",
+			"kra_sfx_dragons_broodmother_death_fake_v1.ogg",
+			"kra_sfx_dragons_broodmother_death_v2.ogg",
+			"kra_sfx_dragons_broodmother_roar_intro_v1.ogg",
+			"kra_sfx_dragons_broodmother_roar_reanimate_v1.ogg",
+			"kra_sfx_dragons_broodmother_stomps_v1.ogg",
+			"kra_sfx_dragons_broodmother_veins_roar_v1.ogg",
+			"kra_sfx_dragons_enemy_miniboss_instakill_v1.ogg",
+			"kra_sfx_dragons_enemy_miniboss_death_v1.ogg",
+			"kra_sfx_dragons_ee_s4_sheepy_1_v1.ogg",
+			"kra_sfx_dragons_ee_s4_sheepy_2_v1.ogg",
+			"kra_sfx_spiders_mechanic_spawner_explode_v1.ogg",
+			"kra_sfx_crocs_killertile_bitemelee_v1.ogg",
+			"kra_sfx_enemy_razingRhino_basicAttack_var3_v1.ogg",
+		}
+	},
+	stage_140 = {
+		files = {
+			"kra_sfx_dragons_tyranthor_driveby_v1.ogg",
+			"kra_sfx_dragons_tyranthor_driveby_v4.ogg",
+			"kra_sfx_dragons_tyranthor_hyperbeam_v1.ogg",
+			"kra_sfx_dragons_tyranthor_intro_roar_v1.ogg",
+			"kra_sfx_dragons_tyranthor_roar_v1.ogg",
+			"kra_sfx_dragons_tyranthor_screech_v1.ogg",
+			"kra_sfx_dragons_tyranthor_step_v1.ogg",
+			"kra_sfx_dragons_mechanic_stage5_cannon_shot_success_v1.ogg",
+			"kra_sfx_dragons_mechanic_stage5_egg_movement_start_v1.ogg",
+			"kra_sfx_dragons_mechanic_stage5_mage_intro_fullSeq_v1.ogg",
+			"kra_sfx_dragons_mechanic_stage5_mage_rune_disappear_op1_v1.ogg",
+			"kra_sfx_dragons_mechanic_stage5_mage_rune_disappear_op2_v1.ogg",
+			"kra_sfx_dragons_mechanic_stage5_mage_statue_down_v1.ogg",
+			"kra_sfx_dragons_mechanic_stage5_mage_statue_start.ogg",
+			"kra_sfx_dragons_mechanic_stage5_path_open_v1.ogg",
+			"kra_sfx_dragons_mechanic_stage5_cannon_shot_failed_new_v3.ogg",
+			"kr4_sfx_erudite_shot_op1_var1_v1.ogg",
+			"kr4_sfx_erudite_shot_op1_var2_v1.ogg",
+			"kr4_sfx_erudite_shot_op2_var1_v1.ogg",
+			"kr4_sfx_erudite_shot_op2_var2_v1.ogg",
+			"kra_sfx_crocs_killertile_bitemelee_v1.ogg",
+			"kra_sfx_enemy_razingRhino_basicAttack_var3_v1.ogg"
+		}
+	},
+	stage_141 = {
+		files = {
+			"kra_sfx_dragons_mechanic_stage1_path_open_1_v1.ogg",
+			"kra_sfx_dragons_mechanic_stage1_path_open_2_v1.ogg",
+			"kra_sfx_dragons_ee_s1_spyro_1_v1.ogg",
+			"kra_sfx_dragons_ee_s1_spyro_2_fallOnly_v1.ogg",
+			"kra_sfx_dragons_ee_s1_granger_1_v1.ogg",
+			"kra_sfx_dragons_ee_s1_granger_2_fullSeq_v1.ogg",
+			"kra_sfx_enemy_noxiousHorror_death_op1_v1.ogg",
+		}
+	},
+	enemies_terrain_dragons_1 = {
+		files = {
+			"kra_sfx_enemy_noxiousHorror_death_op1_v1.ogg",
+			"kra_sfx_dragons_enemy_acid_alfa_attack_var1_v2.ogg",
+			"kra_sfx_dragons_enemy_acid_alfa_attack_var2_v2.ogg",
+			"kra_sfx_dragons_enemy_acid_alfa_attack_var3_v2.ogg",
+			"kra_sfx_dragons_enemy_acid_alfa_death_v1.ogg",
+			"kra_sfx_dragons_enemy_acid_basic_attack_var1_v1.ogg",
+			"kra_sfx_dragons_enemy_acid_basic_attack_var2_v1.ogg",
+			"kra_sfx_dragons_enemy_acid_basic_attack_var3_v1.ogg",
+			"kra_sfx_dragons_enemy_acid_basic_evolution_v1.ogg",
+			"kra_sfx_dragons_enemy_acid_evolved_attack_var1_v1.ogg",
+			"kra_sfx_dragons_enemy_acid_evolved_attack_var2_v1.ogg",
+			"kra_sfx_dragons_enemy_acid_evolved_attack_var3_v1.ogg",
+			"kra_sfx_dragons_enemy_acid_evolved_death_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_basic_flameb_var1_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_basic_flameb_var2_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_basic_flameb_var3_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_tanky_attack_var1_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_tanky_attack_var2_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_tanky_attack_var3_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_tanky_death_var1_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_tanky_death_var2_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_tanky_death_var3_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_basic_death_var1_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_basic_death_var2_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_basic_death_var3_v1.ogg",
+			"kra_sfx_dragons_enemy_acid_alfa_evolver-sheep_v2.ogg",
+			"kra_sfx_dragons_enemy_acid_alfa_evolver-spit_v2.ogg",
+			"kra_sfx_dragons_enemy_lava_alfa_attack_var1_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_alfa_attack_var2_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_alfa_attack_var3_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_alfa_evo_shot_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_basic_evolution_var1_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_basic_evolution_var2_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_basic_evolution_var3_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_evolved_flameb_var1_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_evolved_flameb_var2_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_evolved_flameb_var3_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_evolved_skyfall_var1_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_evolved_skyfall_var2_v1.ogg",
+			"kra_sfx_dragons_enemy_lava_evolved_skyfall_var3_v1.ogg",
+			"kra_sfx_dragons_enemy_shadow_alfa_attack_var1_v1.ogg",
+			"kra_sfx_dragons_enemy_shadow_alfa_attack_var2_v1.ogg",
+			"kra_sfx_dragons_enemy_shadow_alfa_attack_var3_v1.ogg",
+			"kra_sfx_dragons_enemy_shadow_alfa_death_v1.ogg",
+			"kra_sfx_dragons_enemy_shadow_alfa_evolve_scream_v1.ogg",
+			"kra_sfx_dragons_enemy_shadow_alfa_ranged_attack_var1_v1.ogg",
+			"kra_sfx_dragons_enemy_shadow_alfa_ranged_attack_var2_v1.ogg",
+			"kra_sfx_dragons_enemy_shadow_alfa_ranged_attack_var3_v1.ogg",
+			"kra_sfx_dragons_enemy_shadow_basic_cloack_var1_v1.ogg",
+			"kra_sfx_dragons_enemy_shadow_basic_cloack_var2_v1.ogg",
+			"kra_sfx_dragons_enemy_shadow_basic_cloack_var3_v1.ogg",
+			"kra_sfx_dragons_enemy_shadow_basic_evolution_v1.ogg",
+			"kra_sfx_dragons_enemy_shadow_evolved_attack_var1_v1.ogg",
+			"kra_sfx_dragons_enemy_shadow_evolved_attack_var2_v1.ogg",
+			"kra_sfx_dragons_enemy_shadow_evolved_attack_var3_v1.ogg",
+			"kra_sfx_dragons_enemy_shadow_evolved_death_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_alfa_death_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_alfa_evolution_LOOP_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_alfa_evolution_loopStart_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_alfa_evolution_oneShot_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_alfa_melee_var1_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_alfa_melee_var2_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_alfa_melee_var3_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_alfa_ranged_var1_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_alfa_ranged_var2_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_alfa_ranged_var3_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_alfa_stun_tower_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_alfa_stun_tower_shoot_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_basic_evolution_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_evolved_attack_var1_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_evolved_attack_var2_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_evolved_attack_var3_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_executhos_death_v1.ogg",
+			"kra_sfx_dragons_enemy_storm_executhos_special_attack_v1.ogg"
 		}
 	},
 	item_cluster_bomb = {

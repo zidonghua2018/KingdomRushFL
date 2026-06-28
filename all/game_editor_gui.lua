@@ -186,6 +186,10 @@ function gui:init(w, h, editor)
 	wid("paint_flag_flying_nw").on_click = function()
 		self:toggle_grid_paint_flag(TERRAIN_FLYING_NOWALK)
 	end
+	
+	wid("paint_flag_no_shadow").on_click = function()
+		self:toggle_grid_paint_flag(TERRAIN_NO_SHADOW)
+	end
 
 	wid("brush_size_inc").on_click = function()
 		self:grid_brush_size_change(2)

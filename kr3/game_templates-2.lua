@@ -509,7 +509,7 @@ axe_totem.sound_events.insert = "AxeSound"
 
 local multishot_crossbow = E:register_t("multishot_crossbow", "shotgun")
 
-multishot_crossbow.bullet.damage_type = DAMAGE_PHYSICAL
+multishot_crossbow.bullet.damage_type = DAMAGE_SHOT
 multishot_crossbow.bullet.min_speed = 20 * FPS
 multishot_crossbow.bullet.max_speed = 20 * FPS
 multishot_crossbow.bullet.damage_min = 30
@@ -522,14 +522,6 @@ multishot_crossbow.render.sprites[1].name = "proy_crossbow_special"
 multishot_crossbow.render.sprites[1].animated = false
 multishot_crossbow.sound_events.insert = "ArrowSound"
 
-local bomb_mecha = E:register_t("bomb_mecha", "bomb")
-
-bomb_mecha.render.sprites[1].name = "mech_bomb"
-bomb_mecha.bullet.flight_time = fts(26)
-bomb_mecha.bullet.hit_fx = "fx_explosion_fragment"
-bomb_mecha.bullet.damage_min = 25
-bomb_mecha.bullet.damage_max = 55
-bomb_mecha.bullet.damage_radius = 57.599999999999994
 tt = E:register_t("pirate_exploding_barrel", "bomb")
 tt.bullet.flight_time = fts(20)
 tt.bullet.g = -1 / (fts(1) * fts(1))
@@ -1506,7 +1498,7 @@ g2_tower_engineer_1.main_script.insert = scripts.tower_engineer.insert
 g2_tower_engineer_1.main_script.update = scripts.tower_engineer.update
 g2_tower_engineer_1.attacks.range = 160
 g2_tower_engineer_1.attacks.list[1] = E:clone_c("bullet_attack")
-g2_tower_engineer_1.attacks.list[1].bullet = "bomb"
+g2_tower_engineer_1.attacks.list[1].bullet = "g2_bomb"
 g2_tower_engineer_1.attacks.list[1].cooldown = 3
 g2_tower_engineer_1.attacks.list[1].shoot_time = fts(12)
 g2_tower_engineer_1.attacks.list[1].vis_bans = bor(F_FLYING)
@@ -1530,7 +1522,7 @@ local g2_tower_engineer_2 = E:register_t("g2_tower_engineer_2", "g2_tower_engine
 g2_tower_engineer_2.info.enc_icon = 208
 g2_tower_engineer_2.tower.level = 2
 g2_tower_engineer_2.tower.price = 220
-g2_tower_engineer_2.attacks.list[1].bullet = "bomb_dynamite"
+g2_tower_engineer_2.attacks.list[1].bullet = "g2_bomb_dynamite"
 g2_tower_engineer_2.attacks.list[1].cooldown = 3
 g2_tower_engineer_2.attacks.list[1].shoot_time = fts(12)
 g2_tower_engineer_2.attacks.list[1].bullet_start_offset = v(0, 53)
@@ -1548,7 +1540,7 @@ g2_tower_engineer_3.info.enc_icon = 212
 g2_tower_engineer_3.tower.level = 3
 g2_tower_engineer_3.tower.price = 320
 g2_tower_engineer_3.attacks.range = 179.20000000000002
-g2_tower_engineer_3.attacks.list[1].bullet = "bomb_black"
+g2_tower_engineer_3.attacks.list[1].bullet = "g2_bomb_black"
 g2_tower_engineer_3.attacks.list[1].cooldown = 3
 g2_tower_engineer_3.attacks.list[1].shoot_time = fts(12)
 g2_tower_engineer_3.attacks.list[1].bullet_start_offset = v(0, 57)
@@ -1559,6 +1551,56 @@ for i = 2, 8 do
 	g2_tower_engineer_3.render.sprites[i].name = "idle"
 	g2_tower_engineer_3.render.sprites[i].offset = v(0, 43)
 end
+
+local g2_bomb = E:register_t("g2_bomb", "bullet")
+
+E:add_comps(g2_bomb, "sound_events")
+
+g2_bomb.bullet.flight_time = fts(31)
+g2_bomb.bullet.rotation_speed = 20 * FPS * math.pi / 180
+g2_bomb.bullet.hit_fx = "fx_explosion_small"
+g2_bomb.bullet.hit_decal = "decal_bomb_crater"
+g2_bomb.bullet.hit_fx_water = "fx_explosion_water"
+g2_bomb.bullet.damage_type = DAMAGE_EXPLOSION
+g2_bomb.bullet.damage_min = 8
+g2_bomb.bullet.damage_max = 15
+g2_bomb.bullet.damage_radius = 62.400000000000006
+g2_bomb.bullet.pop = {
+	"pop_kboom"
+}
+g2_bomb.bullet.damage_flags = F_AREA
+g2_bomb.bullet.hide_radius = 8
+g2_bomb.render.sprites[1].name = "bombs_0001"
+g2_bomb.render.sprites[1].animated = false
+g2_bomb.main_script.insert = scripts.bomb.insert
+g2_bomb.main_script.update = scripts.bomb_krf.update
+g2_bomb.sound_events.insert = "BombShootSound"
+g2_bomb.sound_events.hit = "BombExplosionSound"
+g2_bomb.sound_events.hit_water = "RTWaterExplosion"
+
+local g2_bomb_dynamite = E:register_t("g2_bomb_dynamite", "g2_bomb")
+
+g2_bomb_dynamite.render.sprites[1].name = "bombs_0002"
+g2_bomb_dynamite.bullet.damage_min = 20
+g2_bomb_dynamite.bullet.damage_max = 40
+g2_bomb_dynamite.bullet.damage_radius = 62.400000000000006
+
+local g2_bomb_black = E:register_t("g2_bomb_black", "g2_bomb")
+
+g2_bomb_black.render.sprites[1].name = "bombs_0003"
+g2_bomb_black.bullet.align_with_trajectory = true
+g2_bomb_black.bullet.damage_min = 30
+g2_bomb_black.bullet.damage_max = 60
+g2_bomb_black.bullet.damage_radius = 67.2
+
+local bomb_mecha = E:register_t("bomb_mecha", "g2_bomb")
+
+bomb_mecha.render.sprites[1].name = "mech_bomb"
+bomb_mecha.bullet.flight_time = fts(26)
+bomb_mecha.bullet.hit_fx = "fx_explosion_fragment"
+bomb_mecha.bullet.damage_min = 25
+bomb_mecha.bullet.damage_max = 55
+bomb_mecha.bullet.damage_radius = 57.599999999999994
 
 local tower_dwaarp = E:register_t("tower_dwaarp", "tower")
 
@@ -1719,8 +1761,8 @@ g2_tower_archer_1.render.sprites[4].angles.shoot = {
 	"shootingDown"
 }
 g2_tower_archer_1.render.sprites[4].offset = v(9, 51)
-g2_tower_archer_1.main_script.insert = scripts.tower_archer.insert
-g2_tower_archer_1.main_script.update = scripts.tower_archer.update
+g2_tower_archer_1.main_script.insert = scripts.tower_archer_krf.insert
+g2_tower_archer_1.main_script.update = scripts.tower_archer_krf.update
 g2_tower_archer_1.main_script.remove = scripts.tower_archer.remove
 g2_tower_archer_1.attacks.range = 140
 g2_tower_archer_1.attacks.list[1] = E:clone_c("bullet_attack")
@@ -1877,18 +1919,12 @@ tower_crossbow.attacks.list[3].excluded_templates = {
 	"g1_tower_barrack_1",
 	"g1_tower_barrack_2",
 	"g1_tower_barrack_3",
-	"g1_tower_barrack_3_a",
-	"g1_tower_barrack_3_b",
 	"g2_tower_barrack_1",
 	"g2_tower_barrack_2",
 	"g2_tower_barrack_3",
-	"g2_tower_barrack_3_a",
-	"g2_tower_barrack_3_b",
 	"tower_barrack_1",
 	"tower_barrack_2",
 	"tower_barrack_3",
-	"tower_barrack_3_a",
-	"tower_barrack_3_b",
 	"tower_drow",
 	"tower_drow_2",
 	"Goldfinger",
@@ -2032,18 +2068,6 @@ g2_tower_barrack_3.render.sprites[2].name = "tower_barracks_lvl3_layer1_0001"
 g2_tower_barrack_3.render.sprites[3].prefix = "towerbarracklvl3_door"
 g2_tower_barrack_3.barrack.soldier_type = "soldier_knight"
 
-tt = E:register_t("g2_tower_barrack_3_a", "g2_tower_barrack_3")
-tt.tower.price = 0
-tt.tower.level = 1
-tt.tower.type = "g2_tower_barrack_3_a"
-tt.tower.kind = TOWER_KIND_BARRACK
-tt.barrack.rally_range = 160
-tt = E:register_t("g2_tower_barrack_3_b", "g2_tower_barrack_3")
-tt.tower.price = 0
-tt.tower.level = 1
-tt.tower.type = "g2_tower_barrack_3_b"
-tt.tower.kind = TOWER_KIND_BARRACK
-tt.barrack.rally_range = 160
 local tower_templar = E:register_t("tower_templar", "g2_tower_barrack_1")
 
 E:add_comps(tower_templar, "powers")
@@ -2149,8 +2173,8 @@ tt.render.sprites[3].angles.shoot = {
 	"shootingDown"
 }
 tt.render.sprites[3].offset = v(0, 59)
-tt.main_script.insert = scripts.tower_archer.insert
-tt.main_script.update = scripts.tower_archer.update
+tt.main_script.insert = scripts.tower_archer_krf.insert
+tt.main_script.update = scripts.tower_archer_krf.update
 tt.main_script.remove = scripts.tower_archer.remove
 tt.attacks.range = 166.4
 tt.attacks.list[1] = E:clone_c("bullet_attack")
@@ -2183,7 +2207,6 @@ tt.render.sprites[2].offset = v(0, 35)
 tt.barrack.soldier_type = "soldier_pirate_captain"
 tt.barrack.rally_range = 145.28
 tt.barrack.respawn_offset = v(0, 0)
----12.30改了雇佣兵人数上限
 tt = E:register_t("tower_barrack_pirates_d", "tower_barrack_pirates")
 tt.info.i18n_key = "TOWER_BARRACK_PIRATES"
 tt.tower.type = "mercenaries_pirates_d"
@@ -3173,6 +3196,9 @@ tt.timed_attacks.list[1].max_range = 150
 tt.timed_attacks.list[1].min_range = 16.5
 tt.timed_attacks.list[1].shoot_time = fts(13)
 tt.timed_attacks.list[1].valid_terrains = TERRAIN_WATER
+---
+tt.timed_attacks.list[1].vis_bans = bor(F_FLYING)
+---
 tt = E:register_t("steam_frigate_barrel", "bomb")
 tt.bullet.flight_time = fts(20)
 tt.bullet.g = -1.5 / (fts(1) * fts(1))
@@ -3753,7 +3779,8 @@ tt.idle_flip.cooldown = 1
 tt.info.fn = scripts.hero_basic.get_info_melee
 tt.info.hero_portrait = "hero_portraits_0202"
 tt.info.portrait = "info_portraits_heroes_0202"
---tt.info.damage_icon = "arrow"
+tt.info.damage_icon = "sword"
+tt.info.ranged_damage_icon = "arrow"
 tt.main_script.insert = scripts.hero_mirage.insert
 tt.main_script.update = scripts.hero_mirage.update
 tt.melee.attacks[1] = E:clone_c("melee_attack")
@@ -4095,6 +4122,7 @@ tt.melee.attacks[2].animation = "massive"
 tt.melee.attacks[2].hit_time = fts(15)
 tt.melee.attacks[2].cooldown = 12
 tt.melee.attacks[2].mod = "mod_giant_massivedamage"
+tt.melee.attacks[2].mods = nil
 tt.melee.attacks[2].vis_bans = bor(F_FLYING, F_CLIFF)
 tt.melee.attacks[2].vis_flags = F_BLOCK
 tt.melee.attacks[2].xp_from_skill = "massivedamage"
@@ -4459,7 +4487,8 @@ tt.idle_flip.cooldown = 1
 tt.info.fn = scripts.hero_wizard.get_info
 tt.info.hero_portrait = "hero_portraits_0206"
 tt.info.portrait = "info_portraits_heroes_0206"
---tt.info.damage_icon = "magic"
+tt.info.damage_icon = "sword"
+tt.info.ranged_damage_icon = "magic"
 tt.main_script.insert = scripts.hero_wizard.insert
 tt.main_script.update = scripts.hero_wizard.update
 tt.motion.max_speed = 45
@@ -4561,7 +4590,6 @@ tt.bounce_range = 75
 tt.bounce_vis_flags = F_RANGED
 tt.bounce_vis_bans = 0
 tt.bullet.xp_gain_factor = nil
----12.30修了纽维斯无法对魔抗怪造成伤害的bug
 tt = E:register_t("mod_ray_wizard", "modifier")
 tt.modifier.allows_duplicates = true
 tt.modifier.duration = fts(18)
@@ -5813,7 +5841,8 @@ tt.idle_flip.cooldown = 1
 tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.hero_portrait = "hero_portraits_0205"
 tt.info.portrait = "info_portraits_heroes_0205"
---tt.info.damage_icon = "magic"
+tt.info.damage_icon = "sword"
+tt.info.ranged_damage_icon = "magic"
 tt.main_script.insert = scripts.hero_priest.insert
 tt.main_script.update = scripts.hero_priest.update
 tt.motion.max_speed = 90
@@ -5898,16 +5927,15 @@ tt.timed_attacks.list[2].disabled = true
 tt.timed_attacks.list[2].animation = "consecrate"
 tt.timed_attacks.list[2].cooldown = 8
 tt.timed_attacks.list[2].excluded_templates = {
+	"g1_tower_barrack_1",
+	"g1_tower_barrack_2",
+	"g1_tower_barrack_3",
 	"g2_tower_barrack_1",
 	"g2_tower_barrack_2",
 	"g2_tower_barrack_3",
-	"g2_tower_barrack_3_a",
-	"g2_tower_barrack_3_b",
 	"tower_barrack_1",
 	"tower_barrack_2",
 	"tower_barrack_3",
-	"tower_barrack_3_a",
-	"tower_barrack_3_b",
 	"tower_drow",
 	"tower_drow_d",
 	"Goldfinger",
@@ -6196,8 +6224,8 @@ tt.info.fn = scripts.hero_dragon.get_info
 --tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.hero_portrait = "hero_portraits_0209"
 tt.info.portrait = "info_portraits_heroes_0209"
-tt.info.ranged_damage_icon = "fireball"
 tt.info.damage_icon = "fireball"
+tt.info.ranged_damage_icon = "fireball"
 tt.main_script.insert = scripts.hero_dragon.insert
 tt.main_script.update = scripts.hero_dragon.update
 tt.motion.max_speed = 90
@@ -6319,7 +6347,7 @@ tt.render.sprites[1].name = "hero_dragon_attack_proy"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BULLETS
 tt.render.sprites[1].anchor.x = 0.69
-tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.damage_type = DAMAGE_FIREBALL
 tt.bullet.min_speed = 390
 tt.bullet.max_speed = 390
 tt.bullet.hit_fx = "fx_fireball_dragon_hit"
@@ -6377,7 +6405,7 @@ E:add_comps(tt, "dps", "render")
 tt.modifier.duration = 3
 tt.dps.damage_min = nil
 tt.dps.damage_max = nil
-tt.dps.damage_type = DAMAGE_TRUE
+tt.dps.damage_type = DAMAGE_FIREBALL
 tt.dps.damage_every = fts(15)
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
@@ -6396,7 +6424,7 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].hidden = true
 tt.bullet.flight_time = fts(10)
-tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.damage_type = DAMAGE_FIREBALL
 tt.bullet.damage_max = nil
 tt.bullet.damage_min = nil
 tt.bullet.mod = nil
@@ -6444,7 +6472,7 @@ tt.render.sprites[1].size_scales = {
 tt = E:register_t("fierymist_dragon", "bullet")
 tt.render = nil
 tt.bullet.flight_time = fts(10)
-tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.damage_type = DAMAGE_FIREBALL
 tt.bullet.damage_max = 0
 tt.bullet.damage_min = 0
 tt.bullet.vis_flags = F_RANGED
@@ -6503,7 +6531,7 @@ tt = E:register_t("wildfirebarrage_dragon", "bullet")
 tt.render.sprites[1].name = "dragon_wildfirebarrage_projectile"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_BULLETS
-tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.damage_type = DAMAGE_FIREBALL
 tt.bullet.min_speed = 390
 tt.bullet.max_speed = 390
 tt.bullet.flight_time = fts(35)
@@ -6511,7 +6539,7 @@ tt.bullet.hit_fx = "fx_fireball_dragon_hit"
 tt.bullet.damage_max = 30
 tt.bullet.damage_min = 30
 tt.bullet.damage_radius = 40
-tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.damage_type = DAMAGE_FIREBALL
 tt.bullet.particles_name = "ps_wildbarrage_dragon"
 tt.bullet.damage_flags = F_AREA
 tt.bullet.mod = nil
@@ -7772,7 +7800,7 @@ tt.drag_line_origin_offset = v(0, 92)
 tt.info.fn = scripts.hero_dracolich.get_info
 tt.info.hero_portrait = "hero_portraits_0216"
 tt.info.portrait = "info_portraits_heroes_0217"
-tt.info.damage_icon = "rangedtrue"
+tt.info.damage_icon = "meleetrue"
 tt.info.ranged_damage_icon = "rangedtrue"
 tt.main_script.insert = scripts.hero_dracolich.insert
 tt.main_script.update = scripts.hero_dracolich.update
@@ -8314,7 +8342,8 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_van_helsing.level_up
 tt.hero.tombstone_show_time = fts(60)
 tt.idle_flip.cooldown = 10
-tt.info.fn = scripts.hero_van_helsing.get_info
+tt.info.fn = scripts.hero_basic.get_info_melee
+--tt.info.fn = scripts.hero_van_helsing.get_info
 tt.info.hero_portrait = "hero_portraits_0214"
 tt.info.hero_portrait_alive = "hero_portraits_0214"
 tt.info.hero_portrait_dead = "hero_portraits_0215"
@@ -8738,7 +8767,8 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_voodoo_witch.level_up
 tt.hero.tombstone_show_time = fts(90)
 tt.idle_flip.cooldown = 2
---tt.info.damage_icon = "magic"
+tt.info.damage_icon = "sword"
+tt.info.ranged_damage_icon = "magic"
 --tt.info.fn = scripts.hero_voodoo_witch.get_info
 tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.hero_portrait = "hero_portraits_0219"
@@ -12097,7 +12127,7 @@ tt.enemy.gold = 10
 tt.enemy.melee_slot = v(24, 0)
 tt.health.armor = 1
 tt.health.hp_max = 100
-tt.health.immune_to = bor(DAMAGE_PHYSICAL, DAMAGE_EXPLOSION)
+tt.health.immune_to = bor(DAMAGE_PHYSICAL, DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL)
 tt.health.magic_armor = 0
 tt.health_bar.offset = v(0, 37)
 tt.info.portrait = "info_portraits_enemies_0063"
@@ -12175,7 +12205,7 @@ tt.enemy.gold = 90
 tt.enemy.melee_slot = v(27, 0)
 tt.health.armor = 1
 tt.health.hp_max = 1000
-tt.health.immune_to = bor(DAMAGE_PHYSICAL, DAMAGE_EXPLOSION)
+tt.health.immune_to = bor(DAMAGE_PHYSICAL, DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL)
 tt.health.magic_armor = 0
 tt.health_bar.offset = v(0, 56)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
@@ -15136,7 +15166,7 @@ tt.bullet.hit_blood_fx = "fx_blood_splat"
 tt.bullet.miss_fx = "fx_smoke_bullet"
 tt.bullet.start_fx = "fx_rifle_smoke"
 tt.sound_events.insert = "ShotgunSound"
-tt = E:register_t("dwarf_barrel", "bomb")
+tt = E:register_t("dwarf_barrel", "g2_bomb")
 tt.bullet.damage_max = 40
 tt.bullet.damage_max_inc = 60
 tt.bullet.damage_min = 40
@@ -15377,7 +15407,7 @@ tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "decal_flying_shadow"
 tt.render.sprites[2].offset = v(0, 0)
 tt.owner = nil
-tt = E:register_t("pirate_watchtower_bomb", "bomb")
+tt = E:register_t("pirate_watchtower_bomb", "g2_bomb")
 tt.bullet.flight_time = fts(10)
 tt.bullet.rotation_speed = 0
 tt.bullet.damage_max = 40
@@ -15926,7 +15956,8 @@ tt.melee.attacks[2].cooldown = 6
 tt.melee.attacks[2].damage_max = 150
 tt.melee.attacks[2].damage_min = 150
 tt.melee.attacks[2].damage_radius = 65
-tt.melee.attacks[2].damage_type = DAMAGE_ELECTRICAL
+--3.10
+tt.melee.attacks[2].damage_type = DAMAGE_PHYSICAL
 tt.melee.attacks[2].disabled = true
 tt.melee.attacks[2].hit_time = fts(24)
 tt.melee.attacks[2].hit_fx = "fx_frankenstein_pound"
@@ -16925,7 +16956,9 @@ tt.timed_attacks.list[1].max_range = 150
 tt.timed_attacks.list[1].min_range = 16.5
 tt.timed_attacks.list[1].shoot_time = fts(13)
 --tt.timed_attacks.list[1].valid_terrains = TERRAIN_WATER
-
+---
+tt.timed_attacks.list[1].vis_bans = bor(F_FLYING)
+---
 -- -- 矮人 鲁林			hero_dwarf
 tt = E:register_t("hero_dwarf_2", "hero_dwarf")
 tt.hero_insert = false
@@ -17096,9 +17129,10 @@ tt.hero.skills.divinenature.level = 3
 tt.info.i18n_key = "HERO_MONKEY_GOD"
 
 ---KRREBORN的塔
-
+--3.10
 ---麻痹
 tt = E:register_t("mod_frankenstein_pound", "mod_shock_and_awe")
+tt.modifier.duration = 1
 tt.modifier.vis_bans = bor(F_BOSS)--bor(F_FLYING, F_BOSS)
 
 ---军团弓兵塔
@@ -17131,8 +17165,8 @@ tt.render.sprites[3].angles.shoot = {
 	"shootingDown"
 }
 tt.render.sprites[3].offset = v(0, 59)
-tt.main_script.insert = scripts.tower_archer.insert
-tt.main_script.update = scripts.tower_archer.update
+tt.main_script.insert = scripts.tower_archer_krf.insert
+tt.main_script.update = scripts.tower_archer_krf.update
 tt.main_script.remove = scripts.tower_archer.remove
 tt.attacks.range = 166.4--189
 tt.attacks.list[1] = E:clone_c("bullet_attack")
@@ -18120,7 +18154,7 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
 tt.health_bar.offset = vec_2(0, 82)
 tt.info.i18n_key = "ENEMY_SARELGAS_BIG"
 tt.info.enc_icon = 35
-tt.info.portrait = "info_portraits_enemies_0036"
+tt.info.portrait = "info_portraits_sc_0057"
 tt.main_script.insert = scripts.enemy_basic.insert
 tt.main_script.update = scripts.enemy_spider_big.update
 tt.melee.attacks[1].cooldown = 1
@@ -18559,7 +18593,7 @@ tt.enemy.gold = 120
 tt.enemy.melee_slot = vec_2(24, 0)
 tt.health.armor = 0
 tt.health.hp_max = 1250
-tt.health.immune_to = bor(DAMAGE_PHYSICAL, DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL)
+tt.health.immune_to = bor(DAMAGE_PHYSICAL, DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL, DAMAGE_SHOT)
 tt.health.magic_armor = 0.6
 tt.health_bar.offset = vec_2(0, 47)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM

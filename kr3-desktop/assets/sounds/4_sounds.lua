@@ -2,7 +2,7 @@ return {
 --关卡
 	MusicMap4 = {
 		source_group = "MUSIC",
-		gain = 0.15,
+		gain = 0.2,
 		loop = true,
 		files = {
 			"Mapa.ogg"
@@ -568,7 +568,7 @@ return {
 	fallen_ones_spirit_mausoleum_build_taunt = {
 		loop = false,
 		mode = "random",
-		gain = 1,
+		gain = 0.7,
 		source_group = "TAUNTS",
 		files = {
 			"kr4_fallen_ones_spirit_mausoleum_taunt_1.ogg",
@@ -579,7 +579,7 @@ return {
 	},
 	fallen_ones_spirit_mausoleum_communion_upgrade = {
 		loop = false,
-		gain = 1,
+		gain = 0.7,
 		source_group = "TAUNTS",
 		files = {
 			"kr4_fallen_ones_spirit_mausoleum_communion_upg.ogg"
@@ -587,7 +587,7 @@ return {
 	},
 	fallen_ones_spirit_mausoleum_possesion_upgrade = {
 		loop = false,
-		gain = 1,
+		gain = 0.7,
 		source_group = "TAUNTS",
 		files = {
 			"kr4_fallen_ones_spirit_mausoleum_possesion_upg.ogg"
@@ -595,7 +595,7 @@ return {
 	},
 	fallen_ones_spirit_mausoleum_gargoyles_upgrade = {
 		loop = false,
-		gain = 1,
+		gain = 0.7,
 		source_group = "TAUNTS",
 		files = {
 			"kr4_fallen_ones_spirit_mausoleum_gargoyles_upg.ogg"
@@ -734,7 +734,7 @@ return {
 --冰龙
 	HeroEiskaltBreath = {
 		loop = false,
-		gain = 1,
+		gain = 0.7,
 		source_group = "SFX",
 		files = {
 			"kr4_hero_jigou_breath.ogg"
@@ -742,7 +742,7 @@ return {
 	},
 	HeroEiskaltPeak = {
 		loop = false,
-		gain = 1,
+		gain = 0.4,
 		source_group = "SFX",
 		files = {
 			"kr4_hero_eiskalt_icepeaks.ogg"
@@ -750,7 +750,7 @@ return {
 	},
 	HeroEiskaltFury = {
 		loop = false,
-		gain = 1,
+		gain = 0.5,
 		source_group = "SFX",
 		files = {
 			"kr4_hero_beresad_attack_shot.ogg"
@@ -758,7 +758,7 @@ return {
 	},
 	HeroEiskaltFrosty = {
 		loop = false,
-		gain = 1,
+		gain = 0.5,
 		source_group = "SFX",
 		files = {
 			"kr4_hero_eiskalt_frosty_throw.ogg"
@@ -766,7 +766,7 @@ return {
 	},
 	HeroEiskaltTauntDeath = {
 		loop = false,
-		gain = 1,
+		gain = 0.7,
 		source_group = "TAUNTS",
 		files = {
 			"kr4_hero_eiskalt_taunt_death.ogg"
@@ -774,7 +774,7 @@ return {
 	},
 	HeroEiskaltTauntSelect = {
 		loop = false,
-		gain = 1,
+		gain = 0.7,
 		source_group = "TAUNTS",
 		files = {
 			"kr4_hero_eiskalt_taunt_1.ogg"
@@ -782,7 +782,7 @@ return {
 	},
 	HeroEiskaltTaunt = {
 		loop = false,
-		gain = 1,
+		gain = 0.7,
 		ignore = 1,
 		mode = "sequence",
 		source_group = "TAUNTS",
@@ -1383,7 +1383,7 @@ return {
 	},
 	DeepDevilLightning = {
 		loop = false,
-		gain = 0.4,
+		gain = 0.6,
 		source_group = "SFX",
 		files = {
 			"80__-3R.wav",
@@ -1494,7 +1494,7 @@ return {
 --杰克
 	hero_jacko_taunt_1 = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_jacko_taunt_1.ogg",
 		}
@@ -1503,7 +1503,7 @@ return {
 		source_group = "TAUNTS",
 		ignore = 1,
 		mode = "sequence",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_jacko_taunt_1.ogg",
 			"kr4_hero_jacko_taunt_2.ogg",
@@ -1522,7 +1522,7 @@ return {
 	},
 	hero_jacko_taunt_death = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_jacko_taunt_death.ogg"
 		}
@@ -1551,7 +1551,7 @@ return {
 --熔岩龙
 	hero_murglun_taunt_1 = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_murglun_taunt_1.ogg",
 		}
@@ -1560,7 +1560,7 @@ return {
 		source_group = "TAUNTS",
 		ignore = 1,
 		mode = "sequence",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_murglun_taunt_1.ogg",
 			"kr4_hero_murglun_taunt_2.ogg",
@@ -1570,7 +1570,7 @@ return {
 	},
 	hero_murglun_death = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_murglun_taunt_death.ogg"
 		}
@@ -1592,7 +1592,7 @@ return {
 --黑龙
 	hero_beresad_taunt_1 = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_beresad_taunt_1.ogg",
 		}
@@ -1601,7 +1601,7 @@ return {
 		source_group = "TAUNTS",
 		ignore = 1,
 		mode = "sequence",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_beresad_taunt_1.ogg",
             "kr4_hero_beresad_taunt_2.ogg",
@@ -1611,7 +1611,7 @@ return {
 	},
 	hero_beresad_death = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_beresad_taunt_death.ogg",
 		}
@@ -1682,7 +1682,7 @@ return {
 --幽灵船
 	hero_lucerna_taunt_1 = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr_voice_lucerna_select01_a.ogg",
 		}
@@ -1691,7 +1691,7 @@ return {
 		source_group = "TAUNTS",
 		ignore = 1,
 		mode = "sequence",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr_voice_lucerna_select01_a.ogg",
             "kr_voice_lucerna_select02_c.ogg",
@@ -1701,14 +1701,14 @@ return {
 	},
 	hero_lucerna_death = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr_voice_lucerna_death_b.ogg",
 		}
 	},
 	hero_lucerna_respawn = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"krv_sfx_hero_lucerna_respawn_v1.ogg",
 		}
@@ -1785,7 +1785,7 @@ return {
 --坦克      
 	hero_tank_taunt_1 = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_tank_taunt_1.ogg",
 		}
@@ -1794,7 +1794,7 @@ return {
 		source_group = "TAUNTS",
 		ignore = 1,
 		mode = "sequence",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_tank_taunt_1.ogg",
             "kr4_hero_tank_taunt_2.ogg",
@@ -1804,14 +1804,14 @@ return {
 	},
 	hero_tank_death = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_tank_taunt_death.ogg",
 		}
 	},
 	hero_tank_respawn = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_tank_taunt_1.ogg",
 		}
@@ -1875,7 +1875,7 @@ return {
 --阿斯拉
 	hero_asra_taunt_1 = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_asra_taunt_1.ogg",
 		}
@@ -1884,7 +1884,7 @@ return {
 		source_group = "TAUNTS",
 		ignore = 1,
 		mode = "sequence",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_asra_taunt_1.ogg",
 			"kr4_hero_asra_taunt_2.ogg",
@@ -1894,21 +1894,21 @@ return {
 	},
 	hero_asra_death = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_asra_taunt_death.ogg",
 		}
 	},
 	hero_asra_respawn = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_asra_taunt_1.ogg",
 		}
 	},
 	hero_asra_teleport = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_asra_shadowdance_teleport.ogg",
 		}
@@ -1940,7 +1940,7 @@ return {
 --维鲁克
 	hero_orc_taunt_1 = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_orc_taunt_1.ogg",
 		}
@@ -1949,7 +1949,7 @@ return {
 		source_group = "TAUNTS",
 		ignore = 1,
 		mode = "sequence",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_orc_taunt_1.ogg",
             "kr4_hero_orc_taunt_2.ogg",
@@ -1959,14 +1959,14 @@ return {
 	},
 	hero_orc_death = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_orc_taunt_death.ogg",
 		}
 	},
 	hero_orc_respawn = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_orc_taunt_1.ogg",
 		}
@@ -1998,7 +1998,7 @@ return {
 --奥洛克
 	hero_oloch_taunt_1 = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_oloch_taunt_1.ogg",
 		}
@@ -2007,7 +2007,7 @@ return {
 		source_group = "TAUNTS",
 		ignore = 1,
 		mode = "sequence",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_oloch_taunt_1.ogg",
             "kr4_hero_oloch_taunt_2.ogg",
@@ -2017,14 +2017,14 @@ return {
 	},
 	hero_oloch_death = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_oloch_taunt_death.ogg",
 		}
 	},
 	hero_oloch_respawn = {
 		source_group = "TAUNTS",
-		gain = 0.4,
+		gain = 0.6,
 		files = {
 			"kr4_hero_oloch_taunt_1.ogg",
 		}
@@ -2078,7 +2078,426 @@ return {
 			"kr4_hero_oloch_sealisolation.ogg",
 		}
 	}, 
-            
+--特拉敏
+	hero_tramin_taunt_1 = {
+		source_group = "TAUNTS",
+		gain = 0.6,
+		files = {
+			"kr4_hero_tramin_taunt_1.ogg",
+		}
+	},
+	group_tramin_taunt = {
+		source_group = "TAUNTS",
+		ignore = 1,
+		mode = "sequence",
+		gain = 0.6,
+		files = {
+			"kr4_hero_tramin_taunt_1.ogg",
+            "kr4_hero_tramin_taunt_2.ogg",
+            "kr4_hero_tramin_taunt_3.ogg",
+            "kr4_hero_tramin_taunt_4.ogg"
+		}
+	},
+	hero_tramin_death = {
+		source_group = "TAUNTS",
+		gain = 0.6,
+		files = {
+			"kr4_hero_tramin_taunt_death.ogg",
+		}
+	},
+	hero_tramin_respawn = {
+		source_group = "TAUNTS",
+		gain = 0.6,
+		files = {
+			"kr4_hero_oloch_taunt_1.ogg",
+		}
+	},
+	hero_tramin_jump = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_tramin_jump.ogg",
+		}
+	},
+	hero_tramin_land = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_tramin_land.ogg",
+		}
+	},
+	hero_tramin_nitro = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_tramin_nitro_drink.ogg",
+		}
+	},
+--极狗
+	hero_jigou_taunt_1 = {
+		source_group = "TAUNTS",
+		gain = 0.6,
+		files = {
+			"kr4_hero_jigou_taunt_1.ogg",
+		}
+	},
+	group_jigou_taunt = {
+		source_group = "TAUNTS",
+		ignore = 1,
+		mode = "sequence",
+		gain = 0.6,
+		files = {
+			"kr4_hero_jigou_taunt_1.ogg",
+            "kr4_hero_jigou_taunt_2.ogg",
+            "kr4_hero_jigou_taunt_3.ogg",
+            "kr4_hero_jigou_taunt_4.ogg",
+		}
+	},
+	hero_jigou_death = {
+		source_group = "TAUNTS",
+		gain = 0.6,
+		files = {
+			"kr4_hero_jigou_taunt_death.ogg"
+		}
+	},
+	hero_jigou_respawn = {
+		source_group = "TAUNTS",
+		gain = 0.6,
+		files = {
+			"kr4_hero_jigou_taunt_1.ogg",
+		}
+	},
+	hero_jigou_breath = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_jigou_breath.ogg",
+		}
+	},
+	hero_jigou_earthshake = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_jigou_earthshake.ogg",
+		}
+	},
+	hero_jigou_glacial = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_jigou_glacial.ogg",
+		}
+	},
+	hero_jigou_iceland = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_jigou_iceland.ogg",
+		}
+	},
+	hero_jigou_icezone = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_jigou_icezone.ogg",
+		}
+	},
+--墨忒弥斯
+	hero_mortemis_taunt_1 = {
+		source_group = "TAUNTS",
+		gain = 0.6,
+		files = {
+			"kr4_hero_mortemis_taunt_1.ogg",
+		}
+	},
+	group_mortemis_taunt = {
+		source_group = "TAUNTS",
+		ignore = 1,
+		mode = "sequence",
+		gain = 0.6,
+		files = {
+			"kr4_hero_mortemis_taunt_1.ogg",
+            "kr4_hero_mortemis_taunt_2.ogg",
+            "kr4_hero_mortemis_taunt_3.ogg",
+            "kr4_hero_mortemis_taunt_4.ogg",
+		}
+	},
+	hero_mortemis_death = {
+		source_group = "TAUNTS",
+		gain = 0.6,
+		files = {
+			"kr4_hero_mortemis_taunt_death.ogg",
+		}
+	},
+	hero_mortemis_respawn = {
+		source_group = "TAUNTS",
+		gain = 0.6,
+		files = {
+			"kr4_hero_mortemis_taunt_1.ogg",
+		}
+	},   
+	hero_mortemis_bodyguard = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_mortemis_bodyguard.ogg",
+		}
+	},
+	hero_mortemis_call = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_mortemis_call.ogg",
+		}
+	},
+	hero_mortemis_rotten = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_mortemis_rotten.ogg",
+		}
+	},
+	hero_mortemis_bodyguard = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_mortemis_bodyguard.ogg",
+		}
+	},
+--苦谏夫人
+	hero_margosa_taunt_1 = {
+		source_group = "TAUNTS",
+		gain = 0.8,
+		files = {
+			"kr4_hero_margosa_taunt_1.ogg",
+		}
+	},
+	group_margosa_taunt = {
+		source_group = "TAUNTS",
+		ignore = 1,
+		mode = "sequence",
+		gain = 0.8,
+		files = {
+			"kr4_hero_margosa_taunt_1.ogg",
+            "kr4_hero_margosa_taunt_2.ogg",
+            "kr4_hero_margosa_taunt_3.ogg",
+            "kr4_hero_margosa_taunt_4.ogg",
+		}
+	},
+	hero_margosa_death = {
+		source_group = "TAUNTS",
+		gain = 0.8,
+		files = {
+			"kr4_hero_margosa_taunt_death.ogg",
+		}
+	},
+	hero_margosa_respawn = {
+		source_group = "TAUNTS",
+		gain = 0.8,
+		files = {
+			"kr4_hero_margosa_taunt_1.ogg",
+		}
+	},   
+	hero_margosa_ancientform = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_margosa_ancientform.ogg",
+		}
+	},
+	hero_margosa_batfamiliar = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_margosa_batfamiliar.ogg",
+		}
+	},
+	hero_margosa_darkcall = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_margosa_darkcall.ogg",
+		}
+	},
+--浚湃
+	hero_naga_taunt_1 = {
+		source_group = "TAUNTS",
+		gain = 0.8,
+		files = {
+			"kr4_hero_naga_taunt_1.ogg",
+		}
+	},
+	group_naga_taunt = {
+		source_group = "TAUNTS",
+		ignore = 1,
+		mode = "sequence",
+		gain = 0.8,
+		files = {
+			"kr4_hero_naga_taunt_1.ogg",
+            "kr4_hero_naga_taunt_2.ogg",
+            "kr4_hero_naga_taunt_3.ogg", 
+            "kr4_hero_naga_taunt_4.ogg",
+		}
+	},
+	hero_naga_death = {
+		source_group = "TAUNTS",
+		gain = 0.8,
+		files = {
+			"kr4_hero_naga_taunt_death.ogg",
+		}
+	},
+	hero_naga_respawn = {
+		source_group = "TAUNTS",
+		gain = 0.8,
+		files = {
+			"kr4_hero_naga_taunt_1.ogg",
+            "kr4_hero_naga_taunt_2.ogg",
+            "kr4_hero_naga_taunt_3.ogg", 
+            "kr4_hero_naga_taunt_4.ogg",
+		}
+	},  
+	hero_junpai_banner_regeneration = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_junpai_banner_regeneration.ogg",
+		}
+	}, 
+	hero_junpai_banner_impact = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_junpai_banner-impact.ogg",
+		}
+	},
+	hero_junpai_karkan_loop_start = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_junpai_kraken-loop-start.ogg",
+		}
+	}, 
+	hero_junpai_karkan_loop = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_junpai_kraken-loop.ogg",
+		}
+	},
+	hero_junpai_tridenthit = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_junpai_tridenthit.ogg",
+		}
+	}, 
+	hero_junpai_ultimate_start = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_junpai_ultimate-loop-start.ogg",
+		}
+	},  
+	hero_junpai_ultimate_loop = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_junpai_ultimate-loop.ogg",
+		}
+	},
+--青蛙支线
+	frog_chaser_jump = {
+		source_group = "SFX",
+		files = {
+			"kr4_frog_chaser_jump.ogg"
+		}
+	},
+	frog_erudite_death = {
+		source_group = "SFX",
+		files = {
+			"kr4_frog_erudite_death.ogg"
+		}
+	},
+	frog_erudite_shot = {
+		source_group = "BULLETS",
+		files = {
+			"kr4_frog_erudite_shot.ogg"
+		}
+	},
+	["frog_infuser_crystal_blockedtower-loop-end"] = {
+		source_group = "SFX",
+		files = {
+			"kr4_frog_infuser_crystal_blockedtower-loop-end.ogg"
+		}
+	},
+	["frog_infuser_crystal_blockedtower-loop"] = {
+		source_group = "SFX",
+		loop = true,
+		gain = 0.6,
+		files = {
+			"kr4_frog_infuser_crystal_blockedtower-loop.ogg"
+		}
+	},
+	["frog_infuser_crystal_bolt-loopstart"] = {
+		source_group = "SFX",
+		files = {
+			"kr4_frog_infuser_crystal_bolt-loopstart.ogg"
+		}
+	},
+	frog_infuser_crystal_charged = {
+		source_group = "SFX",
+		files = {
+			"kr4_frog_infuser_crystal_charged.ogg"
+		}
+	},
+	["frog_infuser_crystalcharge-loop-end"] = {
+		source_group = "SFX",
+		files = {
+			"kr4_frog_infuser_crystalcharge-loop-end.ogg"
+		}
+	},
+	["frog_infuser_crystalcharge-loop-start"] = {
+		source_group = "SFX",
+		files = {
+			"kr4_frog_infuser_crystalcharge-loop-start.ogg"
+		}
+	},
+	["frog_infuser_crystalcharge-loop"] = {
+		source_group = "SFX",
+		gain = 0.3,
+		loop = true,
+		files = {
+			"kr4_frog_infuser_crystalcharge-loop.ogg"
+		}
+	},
+	["frog_infuser_shield-complete"] = {
+		source_group = "SFX",
+		files = {
+			"kr4_frog_infuser_shield-complete.ogg"
+		}
+	},
 --其他
 	dark_army_blazing_mage_attack_loopstart = {
 		source_group = "SFX",
@@ -2102,7 +2521,7 @@ return {
 	},
 	dwarves_sulfur_alchemist_death = {
 		loop = false,
-		gain = 1,
+		gain = 0.7,
 		source_group = "DEATH",
 		files = {
 			"kr4_dwarves_sulfur_alchemist_death.ogg"
@@ -2152,7 +2571,7 @@ return {
 	
 	HeroDianyunSon = {
 		loop = false,
-		gain = 1,
+		gain = 0.7,
 		source_group = "SFX",
 		files = {
 			"kr4_hero_dianyun_son.ogg"
@@ -2160,7 +2579,7 @@ return {
 	},
 	HeroDianyunTauntDeath = {
 		loop = false,
-		gain = 1,
+		gain = 0.7,
 		source_group = "TAUNTS",
 		files = {
 			"kr4_hero_dianyun_taunt_death.ogg"
@@ -2168,7 +2587,7 @@ return {
 	},
 	HeroDianyunTauntSelect = {
 		loop = false,
-		gain = 1,
+		gain = 0.7,
 		source_group = "TAUNTS",
 		files = {
 			"kr4_hero_dianyun_taunt_1.ogg"
@@ -2176,7 +2595,7 @@ return {
 	},
 	HeroDianyunTaunt = {
 		loop = false,
-		gain = 1,
+		gain = 0.7,
 		ignore = 1,
 		mode = "sequence",
 		source_group = "TAUNTS",
@@ -2189,10 +2608,196 @@ return {
 	},
 	BoltReleaseSound = {
 		loop = false,
-		gain = 1,
+		gain = 0.7,
 		source_group = "BULLETS",
 		files = {
 			"kr4_bolt_release.ogg"
+		}
+	},
+	group_hero_mammoth_taunt = {
+		loop = false,
+		gain = 0.75,
+		mode = "sequence",
+		source_group = "TAUNTS",
+		files = {
+			"kr4_hero_mammoth_taunt_1.ogg",
+			"kr4_hero_mammoth_taunt_2.ogg",
+			"kr4_hero_mammoth_taunt_3.ogg",
+			"kr4_hero_mammoth_taunt_4.ogg"
+		}
+	},
+	hero_mammoth_taunt_death = {
+		loop = false,
+		gain = 0.9,
+		source_group = "TAUNTS",
+		files = {
+			"kr4_hero_mammoth_taunt_death.ogg"
+		}
+	},
+	hero_mammoth_ancestral_force_impact = {
+		loop = false,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_mammoth_ancestral_force_impact.ogg"
+		}
+	},
+	hero_mammoth_combat_frenzy_on = {
+		loop = false,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_mammoth_combat_frenzy_on.ogg"
+		}
+	},
+	hero_mammoth_combat_frenzy_off = {
+		loop = false,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_mammoth_combat_frenzy_off.ogg"
+		}
+	},
+	hero_mammoth_whirlwind = {
+		loop = false,
+		gain = 0.7,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_mammoth_whirlwind.ogg"
+		}
+	},
+	hero_mammoth_primal_terror = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_mammoth_primal_terror.ogg"
+		}
+	},
+	hero_mammoth_legacy = {
+		loop = false,
+		gain = 0.7,
+		source_group = "SFX",
+		files = {
+			"kr4_hero_mammoth_legacy.ogg"
+		}
+	},
+	group_hero_isfet_taunt = {
+		loop = false,
+		gain = 0.75,
+		mode = "sequence",
+		source_group = "TAUNTS",
+		files = {
+			"kr_voice_isbet_taunt01_d.ogg",
+			"kr_voice_isbet_taunt02_c.ogg",
+			"kr_voice_isbet_taunt03_c.ogg",
+			"kr_voice_isbet_taunt04_a.ogg"
+		}
+	},
+	hero_isfet_taunt_death = {
+		loop = false,
+		gain = 0.75,
+		source_group = "TAUNTS",
+		files = {
+			"kr4_sfx_hero_isfet_death_v2.ogg"
+		}
+	},
+	hero_isfet_polymorph_spell = {
+		loop = false,
+		gain = 0.9,
+		source_group = "SFX",
+		files = {
+			"kr4_sfx_hero_isfet_polymorph_spell_v2.ogg"
+		}
+	},
+	hero_isfet_polymorph_spell_impact = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SFX",
+		files = {
+			"kr4_sfx_hero_isfet_polymorph_impact_v2.ogg"
+		}
+	},
+	hero_isfet_polymorph_spell_frog = {
+		loop = false,
+		source_group = "SFX",
+		files = {
+			"kr4_sfx_hero_isfet_polymorph_frogOnly_v1.ogg"
+		}
+	},
+	hero_isfet_fireice_cast = {
+		loop = false,
+		gain = 0.9,
+		source_group = "SFX",
+		files = {
+			"kr4_sfx_hero_isfet_fireandicerain-cast_v1.ogg"
+		}
+	},
+	group_hero_isfet_fire_proyectil = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_sfx_hero_isfet_fire-projectile_var1_v1.ogg",
+			"kr4_sfx_hero_isfet_fire-projectile_var2_v1.ogg",
+			"kr4_sfx_hero_isfet_fire-projectile_var3_v1.ogg"
+		}
+	},
+	group_hero_isfet_ice_proyectile = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SFX",
+		files = {
+			"kr4_sfx_hero_isfet_ice-projectile_var1_v1.ogg",
+			"kr4_sfx_hero_isfet_ice-projectile_var2_v1.ogg",
+			"kr4_sfx_hero_isfet_ice-projectile_var3_v1.ogg"
+		}
+	},
+	hero_isfet_blackcloud = {
+		loop = false,
+		gain = 1.5,
+		source_group = "SFX",
+		files = {
+			"kr4_sfx_hero_isfet_swarm_v2.ogg"
+		}
+	},
+	hero_isfet_bloodpool = {
+		loop = false,
+		gain = 0.3,
+		source_group = "SFX",
+		files = {
+			"kr4_sfx_hero_isfet_pool_of_lava_v1.ogg"
+		}
+	},
+	hero_isfet_ultimate = {
+		loop = false,
+		gain = 0.7,
+		source_group = "SFX",
+		files = {
+			"kr4_sfx_hero_isfet_ultimate_v1.ogg"
+		}
+	},
+	group_party_sarcophagus_mummy_moan = {
+		loop = false,
+		source_group = "SFX",
+		files = {
+			"kr4_power_party_sarcophagus_mummymoan1.ogg",
+			"kr4_power_party_sarcophagus_mummymoan2.ogg",
+			"kr4_power_party_sarcophagus_mummymoan3.ogg",
+			"kr4_power_party_sarcophagus_mummymoan4.ogg"
+		}
+	},
+	ember_lords_mage_attack = {
+		loop = false,
+		gain = 0.5,
+		source_group = "BULLETS",
+		files = {
+			"kr4_ember_lords_mage_attack.ogg"
+		}
+	},
+	bomb_hit_sound = {
+		loop = false,
+		gain = 0.35,
+		source_group = "SFX",
+		files = {
+			"kr4_bomb_hit.ogg"
 		}
 	},
 }

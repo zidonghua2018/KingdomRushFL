@@ -61,7 +61,7 @@ function CriketMenuButton:initialize(item)
 
     self:add_child(halo, 1)
 
-    if table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack"}, item.action) then
+    if table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack","tw_page",}, item.action) then
         local bo = KImageView:new("main_icons_over")
 
         bo.pos = v(math.floor(-0.5 * (bo.size.x - b.size.x)), math.floor(-0.5 * (bo.size.y - b.size.y)))
@@ -658,12 +658,14 @@ local function patch_cricket_ui(game_gui)
         local tower_5_data = map_data.tower_5_data
         local tower_menu_json = map_data.tower_menu_json
         local tower3_menu_json = map_data.tower3_menu_json
+        local tower123_menu_json = tower_menus.holder_123
         local rank = 2
-        if user_data.liuhui.use3tower ~= nil and user_data.liuhui.use3tower == false then
+        --if user_data.liuhui.use3tower ~= nil and user_data.liuhui.use3tower == false then
+        if (user_data.liuhui.use3tower ~= nil and user_data.liuhui.use3tower_count == 2) or (user_data.liuhui.use3tower ~= nil and user_data.liuhui.use3tower_count == 1) then
             table.remove(tower_menus["holder"][1]["pages"], 1)
-            rank = 1
+            rank = 1         
         else
-            tower_menus["holder"][1]["pages"][1] = tower3_menu_json[1]
+            tower_menus["holder"][1]["pages"][1] = tower123_menu_json[1]--tower3_menu_json[1]
             if #tower_menus["holder"][1]["pages"] == 1 then
                 local empty_table = {}
                 table.insert(tower_menus["holder"][1]["pages"], empty_table)
@@ -672,18 +674,22 @@ local function patch_cricket_ui(game_gui)
         end
 
         tower_menus["holder"][1]["pages"][rank] = {}
-        if user_data.tower_pick < 6 then
-            for i = 1, user_data.tower_pick do
-                table.insert(tower_menus["holder"][1]["pages"][rank], tower_menu_json[selected_holders[i]])
-                tower_menus["holder"][1]["pages"][rank][i]["place"] = i
-            end
-        else
-            local place_list = {1, 2, 3, 4, 11, 12, 5, 9, 13, 19}
-            for i = 1, user_data.tower_pick do
-                table.insert(tower_menus["holder"][1]["pages"][rank], tower_menu_json[selected_holders[i]])
-                tower_menus["holder"][1]["pages"][rank][i]["place"] = place_list[i]
-            end
-        end
+		if user_data.liuhui.use3tower_count == 1 then
+            tower_menus["holder"][1]["pages"][rank] = tower123_menu_json[1]
+		else        
+        	if user_data.tower_pick < 6 then
+        	    for i = 1, user_data.tower_pick do
+        	        table.insert(tower_menus["holder"][1]["pages"][rank], tower_menu_json[selected_holders[i]])
+        	        tower_menus["holder"][1]["pages"][rank][i]["place"] = i
+        	    end
+        	else
+        	    local place_list = {1, 2, 3, 4, 11, 12, 5, 9, 13, 19}
+        	    for i = 1, user_data.tower_pick do
+        	        table.insert(tower_menus["holder"][1]["pages"][rank], tower_menu_json[selected_holders[i]])
+        	        tower_menus["holder"][1]["pages"][rank][i]["place"] = place_list[i]
+        	    end
+        	end
+        end    
 
         if user_data.liuhui.cheat or user_data.liuhui.cheathero then
             table.insert(tower_menus["holder"][1]["pages"][rank], map_data.gold_json)
@@ -692,6 +698,9 @@ local function patch_cricket_ui(game_gui)
             if (user_data.liuhui.cheat or user_data.liuhui.cheathero) and user_data.tower_pick >= 11 and (screen_map.user_data.liuhui.rand_tower == nil or screen_map.user_data.liuhui.rand_tower == 0) then
                 tower_menus["holder"][1]["pages"][rank][cheat_rank]["place"] = 14
             end
+		    if (user_data.liuhui.use3tower_count == 1) and (screen_map.user_data.liuhui.rand_tower == nil or screen_map.user_data.liuhui.rand_tower == 0)  then
+		    	tower_menus["holder"][1]["pages"][rank][cheat_rank]["place"] = 18
+		    end	            
             if screen_map.user_data.liuhui.rand_tower and screen_map.user_data.liuhui.rand_tower >= 3 and screen_map.user_data.liuhui.rand_tower_mode == 4 then
                 tower_menus["holder"][1]["pages"][rank][cheat_rank]["place"] = 14
             end
@@ -704,6 +713,9 @@ local function patch_cricket_ui(game_gui)
             if (user_data.liuhui.cheat5 or liuhui.cheat5_dragon) and user_data.tower_pick == 12 and (screen_map.user_data.liuhui.rand_tower == nil or screen_map.user_data.liuhui.rand_tower == 0) then
                 tower_menus["holder"][1]["pages"][rank][cheat5_rank]["place"] = 20
             end
+		    if (user_data.liuhui.use3tower_count == 1) and (screen_map.user_data.liuhui.rand_tower == nil or screen_map.user_data.liuhui.rand_tower == 0) then
+		    	tower_menus["holder"][1]["pages"][rank][cheat5_rank]["place"] = 24
+		    end	            
             if screen_map.user_data.liuhui.rand_tower and screen_map.user_data.liuhui.rand_tower >= 3 and screen_map.user_data.liuhui.rand_tower_mode == 4 then
                 tower_menus["holder"][1]["pages"][rank][cheat5_rank]["place"] = 20
             end

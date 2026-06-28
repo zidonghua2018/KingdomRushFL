@@ -1,987 +1,987 @@
-﻿-- chunkname: @./_assets/kr5-desktop/images/ipad/go_enemies_sea_of_trees.lua
+﻿-- chunkname: @./_assets/kr5-desktop/images/ipadhd_bc3/go_enemies_sea_of_trees.lua
 
 local a = {
 	bear_vanguard_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			37,
-			30,
-			45,
-			71
+			75,
+			61,
+			91,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			1465,
-			68,
-			49
+			2186,
+			871,
+			134,
+			96
 		},
 		alias = {}
 	},
 	bear_vanguard_0002 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			38,
-			32,
-			45,
-			71
+			77,
+			66,
+			90,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1954,
-			536,
-			67,
-			47
+			3718,
+			871,
+			133,
+			91
 		},
 		alias = {
 			"bear_vanguard_0003"
 		}
 	},
 	bear_vanguard_0004 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			37,
-			30,
-			46,
-			71
+			74,
+			62,
+			93,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1735,
-			536,
-			67,
-			49
+			3162,
+			871,
+			133,
+			95
 		},
 		alias = {
 			"bear_vanguard_0005"
 		}
 	},
 	bear_vanguard_0006 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			36,
-			27,
-			47,
-			71
+			72,
+			56,
+			94,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1224,
-			536,
-			67,
-			52
+			1766,
+			871,
+			134,
+			101
 		},
 		alias = {
 			"bear_vanguard_0007"
 		}
 	},
 	bear_vanguard_0008 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			35,
-			26,
-			47,
-			71
+			72,
+			53,
+			95,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			1293,
-			68,
-			53
+			2745,
+			871,
+			133,
+			104
 		},
 		alias = {
 			"bear_vanguard_0009"
 		}
 	},
 	bear_vanguard_0010 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			38,
-			27,
-			45,
-			71
+			77,
+			55,
+			90,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1297,
-			536,
-			67,
-			52
+			2884,
+			871,
+			133,
+			102
 		},
 		alias = {
 			"bear_vanguard_0011"
 		}
 	},
 	bear_vanguard_0012 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			40,
-			30,
-			44,
-			71
+			80,
+			60,
+			89,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			1588,
-			66,
-			49
+			1745,
+			1003,
+			131,
+			97
 		},
 		alias = {
 			"bear_vanguard_0013"
 		}
 	},
 	bear_vanguard_0014 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			41,
-			32,
-			43,
-			71
+			82,
+			64,
+			86,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			1753,
-			66,
-			47
+			918,
+			3574,
+			132,
+			93
 		},
 		alias = {
 			"bear_vanguard_0015"
 		}
 	},
 	bear_vanguard_0016 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			42,
-			29,
-			42,
-			71
+			84,
+			59,
+			85,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			1420,
-			66,
-			50
+			1608,
+			1003,
+			131,
+			98
 		},
 		alias = {
 			"bear_vanguard_0017"
 		}
 	},
 	bear_vanguard_0018 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			42,
-			27,
-			42,
-			71
+			85,
+			54,
+			84,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			1190,
-			66,
-			52
+			1197,
+			1003,
+			131,
+			103
 		},
 		alias = {
 			"bear_vanguard_0019"
 		}
 	},
 	bear_vanguard_0020 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			43,
-			26,
-			41,
-			71
+			87,
+			53,
+			83,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			1131,
-			66,
-			53
+			2292,
+			1003,
+			130,
+			104
 		},
 		alias = {
 			"bear_vanguard_0021"
 		}
 	},
 	bear_vanguard_0022 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			43,
-			27,
-			41,
-			71
+			86,
+			55,
+			83,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			1248,
-			66,
-			52
+			1334,
+			1003,
+			131,
+			102
 		},
 		alias = {
 			"bear_vanguard_0023"
 		}
 	},
 	bear_vanguard_0024 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			40,
-			30,
-			44,
-			71
+			80,
+			60,
+			88,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			1643,
-			66,
-			49
+			918,
+			3266,
+			132,
+			97
 		},
 		alias = {
 			"bear_vanguard_0025"
 		}
 	},
 	bear_vanguard_0026 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			33,
-			32,
-			46,
-			71
+			67,
+			66,
+			93,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			800,
-			452,
-			71,
-			47
+			766,
+			1921,
+			140,
+			91
 		},
 		alias = {
 			"bear_vanguard_0027"
 		}
 	},
 	bear_vanguard_0028 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			32,
-			31,
-			47,
-			71
+			66,
+			62,
+			94,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			723,
-			452,
-			71,
-			48
+			766,
+			1820,
+			140,
+			95
 		},
 		alias = {
 			"bear_vanguard_0029"
 		}
 	},
 	bear_vanguard_0030 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			31,
-			28,
-			47,
-			71
+			64,
+			57,
+			95,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1378,
-			375,
-			72,
-			51
+			766,
+			1306,
+			141,
+			100
 		},
 		alias = {
 			"bear_vanguard_0031"
 		}
 	},
 	bear_vanguard_0032 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			31,
-			27,
-			48,
-			71
+			62,
+			54,
+			96,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1689,
-			375,
-			71,
-			52
+			604,
+			3990,
+			142,
+			103
 		},
 		alias = {
 			"bear_vanguard_0033"
 		}
 	},
 	bear_vanguard_0034 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			32,
-			28,
-			47,
-			71
+			66,
+			57,
+			94,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1766,
-			375,
-			71,
-			51
+			766,
+			1714,
+			140,
+			100
 		},
 		alias = {
 			"bear_vanguard_0035"
 		}
 	},
 	bear_vanguard_0036 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			33,
-			30,
-			46,
-			71
+			68,
+			62,
+			93,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1920,
-			375,
-			71,
-			49
+			766,
+			2709,
+			139,
+			95
 		},
 		alias = {
 			"bear_vanguard_0037"
 		}
 	},
 	bear_vanguard_0038 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			34,
-			33,
-			45,
-			71
+			70,
+			66,
+			91,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			877,
-			452,
-			71,
-			46
+			766,
+			3009,
+			139,
+			91
 		},
 		alias = {
 			"bear_vanguard_0039"
 		}
 	},
 	bear_vanguard_0040 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			35,
-			31,
-			45,
-			71
+			71,
+			64,
+			90,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1486,
-			452,
-			70,
-			48
+			766,
+			2910,
+			139,
+			93
 		},
 		alias = {
 			"bear_vanguard_0041"
 		}
 	},
 	bear_vanguard_0042 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			36,
-			28,
-			43,
-			71
+			74,
+			57,
+			87,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1843,
-			375,
-			71,
-			51
+			766,
+			2498,
+			139,
+			100
 		},
 		alias = {
 			"bear_vanguard_0043"
 		}
 	},
 	bear_vanguard_0044 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			37,
-			27,
-			43,
-			71
+			75,
+			54,
+			87,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1334,
-			452,
-			70,
-			52
+			766,
+			3399,
+			138,
+			103
 		},
 		alias = {
 			"bear_vanguard_0045"
 		}
 	},
 	bear_vanguard_0046 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			36,
-			29,
-			44,
-			71
+			73,
+			58,
+			88,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1410,
-			452,
-			70,
-			50
+			766,
+			2604,
+			139,
+			99
 		},
 		alias = {
 			"bear_vanguard_0047"
 		}
 	},
 	bear_vanguard_0048 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			35,
-			31,
-			45,
-			71
+			70,
+			63,
+			91,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1562,
-			452,
-			70,
-			48
+			766,
+			2810,
+			139,
+			94
 		},
 		alias = {
 			"bear_vanguard_0049"
 		}
 	},
 	bear_vanguard_0050 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			47,
-			35,
-			36,
-			71
+			95,
+			70,
+			73,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			722,
-			67,
-			44
+			918,
+			3864,
+			132,
+			87
 		},
 		alias = {
 			"bear_vanguard_0051"
 		}
 	},
 	bear_vanguard_0052 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			47,
-			33,
-			35,
-			71
+			96,
+			66,
+			70,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			1791,
-			68,
-			46
+			2326,
+			871,
+			134,
+			91
 		},
 		alias = {
 			"bear_vanguard_0053"
 		}
 	},
 	bear_vanguard_0054 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			48,
-			31,
-			34,
-			71
+			98,
+			63,
+			69,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			1630,
-			68,
-			48
+			3301,
+			871,
+			133,
+			94
 		},
 		alias = {
 			"bear_vanguard_0055"
 		}
 	},
 	bear_vanguard_0056 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			48,
-			29,
-			34,
-			71
+			98,
+			59,
+			68,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			1409,
-			68,
-			50
+			1906,
+			871,
+			134,
+			98
 		},
 		alias = {
 			"bear_vanguard_0057"
 		}
 	},
 	bear_vanguard_0058 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			48,
-			29,
-			33,
-			71
+			98,
+			60,
+			68,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1938,
-			452,
-			69,
-			50
+			2046,
+			871,
+			134,
+			97
 		},
 		alias = {
 			"bear_vanguard_0059"
 		}
 	},
 	bear_vanguard_0060 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			47,
-			31,
-			35,
-			71
+			96,
+			63,
+			71,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			1684,
-			68,
-			48
+			3440,
+			871,
+			133,
+			94
 		},
 		alias = {
 			"bear_vanguard_0061"
 		}
 	},
 	bear_vanguard_0062 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			47,
-			34,
-			36,
-			71
+			95,
+			69,
+			73,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			671,
-			67,
-			45
+			918,
+			3770,
+			132,
+			88
 		},
 		alias = {
 			"bear_vanguard_0063"
 		}
 	},
 	bear_vanguard_0064 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			46,
-			35,
-			37,
-			71
+			93,
+			71,
+			75,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			772,
-			67,
-			44
+			918,
+			3957,
+			132,
+			86
 		},
 		alias = {
 			"bear_vanguard_0065"
 		}
 	},
 	bear_vanguard_0066 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			44,
-			33,
-			38,
-			71
+			89,
+			66,
+			77,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			1843,
-			68,
-			46
+			2466,
+			871,
+			134,
+			91
 		},
 		alias = {
 			"bear_vanguard_0067"
 		}
 	},
 	bear_vanguard_0068 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			44,
-			29,
-			39,
-			71
+			89,
+			60,
+			79,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1443,
-			536,
-			67,
-			50
+			918,
+			3369,
+			132,
+			97
 		},
 		alias = {
 			"bear_vanguard_0069"
 		}
 	},
 	bear_vanguard_0070 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			44,
-			30,
-			39,
-			71
+			90,
+			61,
+			78,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1808,
-			536,
-			67,
-			49
+			918,
+			3472,
+			132,
+			96
 		},
 		alias = {
 			"bear_vanguard_0071"
 		}
 	},
 	bear_vanguard_0072 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			46,
-			33,
-			36,
-			71
+			94,
+			67,
+			73,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			1895,
-			68,
-			46
+			3857,
+			871,
+			133,
+			90
 		},
 		alias = {
 			"bear_vanguard_0073"
 		}
 	},
 	bear_vanguard_0074 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			37,
-			30,
-			45,
-			71
+			75,
+			61,
+			90,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			1520,
-			68,
-			49
+			1344,
+			871,
+			135,
+			96
 		},
 		alias = {
 			"bear_vanguard_0075",
@@ -994,104 +994,104 @@ local a = {
 		}
 	},
 	bear_vanguard_0076 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			27,
-			23,
-			51,
-			71
+			54,
+			47,
+			104,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1300,
-			375,
-			72,
-			56
+			3947,
+			700,
+			142,
+			110
 		},
 		alias = {
 			"bear_vanguard_0077"
 		}
 	},
 	bear_vanguard_0078 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			22,
-			12,
-			55,
-			71
+			45,
+			25,
+			112,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1221,
-			375,
-			73,
-			67
+			3502,
+			700,
+			143,
+			132
 		},
 		alias = {
 			"bear_vanguard_0079"
 		}
 	},
 	bear_vanguard_0080 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			19,
-			10,
-			55,
-			71
+			38,
+			21,
+			112,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			573,
-			375,
-			76,
-			69
+			604,
+			2730,
+			150,
+			136
 		},
 		alias = {
 			"bear_vanguard_0081"
 		}
 	},
 	bear_vanguard_0082 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			15,
-			9,
-			55,
-			71
+			31,
+			19,
+			112,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1648,
-			197,
-			80,
-			70
+			930,
+			527,
+			157,
+			138
 		},
 		alias = {
 			"bear_vanguard_0083",
@@ -1100,334 +1100,334 @@ local a = {
 		}
 	},
 	bear_vanguard_0086 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			54,
-			21,
-			19,
-			70
+			110,
+			43,
+			40,
+			142
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			1384,
-			77,
-			59
+			604,
+			2872,
+			150,
+			115
 		},
 		alias = {
 			"bear_vanguard_0087"
 		}
 	},
 	bear_vanguard_0088 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			54,
-			21,
-			18,
-			69
+			110,
+			44,
+			37,
+			139
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1600,
-			282,
-			78,
-			60
+			3498,
+			527,
+			153,
+			117
 		},
 		alias = {
 			"bear_vanguard_0089"
 		}
 	},
 	bear_vanguard_0090 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			54,
-			35,
-			16,
-			70
+			110,
+			70,
+			34,
+			141
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1734,
-			197,
-			80,
-			45
+			1255,
+			527,
+			156,
+			89
 		},
 		alias = {
 			"bear_vanguard_0091"
 		}
 	},
 	bear_vanguard_0092 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			54,
-			36,
-			16,
-			70
+			110,
+			73,
+			33,
+			141
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1820,
-			197,
-			80,
-			44
+			430,
+			3959,
+			157,
+			86
 		},
 		alias = {
 			"bear_vanguard_0093"
 		}
 	},
 	bear_vanguard_0094 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			54,
-			30,
-			15,
-			69
+			110,
+			62,
+			31,
+			140
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1216,
-			197,
-			81,
-			51
+			3009,
+			356,
+			159,
+			98
 		},
 		alias = {
 			"bear_vanguard_0095"
 		}
 	},
 	bear_vanguard_0096 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			45,
-			31,
-			14,
-			71
+			90,
+			63,
+			29,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			925,
-			105,
-			91,
-			48
+			1193,
+			196,
+			181,
+			94
 		},
 		alias = {}
 	},
 	bear_vanguard_0097 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			45,
-			31,
-			14,
-			71
+			90,
+			63,
+			29,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1022,
-			105,
-			91,
-			48
+			1380,
+			196,
+			181,
+			94
 		},
 		alias = {}
 	},
 	bear_vanguard_0098 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			40,
-			31,
-			12,
-			71
+			81,
+			63,
+			25,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			1251,
-			98,
-			48
+			2157,
+			194,
+			94
 		},
 		alias = {
 			"bear_vanguard_0099"
 		}
 	},
 	bear_vanguard_0104 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			37,
-			35,
-			46,
-			71
+			75,
+			70,
+			92,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			822,
-			67,
-			44
+			918,
+			2228,
+			133,
+			87
 		},
 		alias = {
 			"bear_vanguard_0105"
 		}
 	},
 	bear_vanguard_0106 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			37,
-			37,
-			46,
-			71
+			75,
+			74,
+			92,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			872,
-			67,
-			42
+			918,
+			2321,
+			133,
+			83
 		},
 		alias = {
 			"bear_vanguard_0107"
 		}
 	},
 	bear_vanguard_0108 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			37,
-			31,
-			46,
-			71
+			75,
+			63,
+			92,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1881,
-			536,
-			67,
-			48
+			3579,
+			871,
+			133,
+			94
 		},
 		alias = {
 			"bear_vanguard_0109"
 		}
 	},
 	bear_vanguard_0110 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			39,
-			11,
-			44,
-			71
+			79,
+			22,
+			89,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			859,
-			536,
-			67,
-			68
+			918,
+			2410,
+			132,
+			135
 		},
 		alias = {
 			"bear_vanguard_0111"
 		}
 	},
 	bear_vanguard_0112 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			37,
-			3,
-			46,
-			71
+			75,
+			6,
+			92,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			536,
-			67,
-			76
+			918,
+			1644,
+			133,
+			151
 		},
 		alias = {
 			"bear_vanguard_0113",
@@ -1439,26 +1439,26 @@ local a = {
 		}
 	},
 	bear_vanguard_0114 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			37,
-			6,
-			46,
-			71
+			75,
+			13,
+			92,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			713,
-			536,
-			67,
-			73
+			918,
+			1801,
+			133,
+			144
 		},
 		alias = {
 			"bear_vanguard_0115",
@@ -1471,388 +1471,388 @@ local a = {
 		}
 	},
 	bear_vanguard_0127 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			37,
-			28,
-			46,
-			71
+			75,
+			57,
+			92,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1370,
-			536,
-			67,
-			51
+			3023,
+			871,
+			133,
+			100
 		},
 		alias = {
 			"bear_vanguard_0128"
 		}
 	},
 	bear_vanguard_0131 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			37,
-			30,
-			45,
-			71
+			75,
+			61,
+			90,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			1575,
-			68,
-			49
+			1485,
+			871,
+			135,
+			96
 		},
 		alias = {
 			"bear_vanguard_0132"
 		}
 	},
 	bear_vanguard_0133 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			44,
-			24,
-			38,
-			71
+			88,
+			49,
+			76,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			1232,
-			68,
-			55
+			1061,
+			871,
+			136,
+			108
 		},
 		alias = {
 			"bear_vanguard_0134"
 		}
 	},
 	bear_vanguard_0135 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			49,
-			5,
-			37,
-			71
+			99,
+			10,
+			76,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			1228,
-			64,
-			74
+			1196,
+			1580,
+			125,
+			147
 		},
 		alias = {
 			"bear_vanguard_0136"
 		}
 	},
 	bear_vanguard_0137 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			49,
-			4,
-			37,
-			71
+			100,
+			8,
+			75,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			1147,
-			64,
-			75
+			1196,
+			1425,
+			125,
+			149
 		},
 		alias = {
 			"bear_vanguard_0138"
 		}
 	},
 	bear_vanguard_0139 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			48,
-			9,
-			37,
-			71
+			97,
+			19,
+			75,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1983,
-			105,
-			65,
-			70
+			3921,
+			1003,
+			128,
+			138
 		},
 		alias = {
 			"bear_vanguard_0140"
 		}
 	},
 	bear_vanguard_0141 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			49,
-			14,
-			37,
-			71
+			100,
+			30,
+			75,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			1452,
-			64,
-			65
+			1196,
+			2571,
+			125,
+			127
 		},
 		alias = {
 			"bear_vanguard_0142"
 		}
 	},
 	bear_vanguard_0143 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			49,
-			35,
-			37,
-			63
+			100,
+			70,
+			75,
+			127
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			1912,
-			64,
-			52
+			2648,
+			1150,
+			125,
+			103
 		},
 		alias = {
 			"bear_vanguard_0144"
 		}
 	},
 	bear_vanguard_0145 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			49,
-			35,
-			37,
-			63
+			100,
+			70,
+			75,
+			127
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			1970,
-			64,
-			52
+			2779,
+			1150,
+			125,
+			103
 		},
 		alias = {
 			"bear_vanguard_0146"
 		}
 	},
 	bear_vanguard_0147 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			50,
-			33,
-			36,
-			61
+			101,
+			67,
+			73,
+			124
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			1730,
-			64,
-			56
+			1196,
+			1150,
+			126,
+			109
 		},
 		alias = {
 			"bear_vanguard_0148"
 		}
 	},
 	bear_vanguard_0149 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			52,
-			34,
-			34,
-			61
+			105,
+			68,
+			69,
+			124
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			1792,
-			64,
-			55
+			1328,
+			1150,
+			126,
+			108
 		},
 		alias = {}
 	},
 	bear_vanguard_0150 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			68,
-			46,
-			19,
-			61
+			137,
+			92,
+			39,
+			124
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			920,
-			619,
-			63,
-			43
+			1196,
+			3395,
+			124,
+			84
 		},
 		alias = {
 			"bear_vanguard_0151"
 		}
 	},
 	bear_vanguard_0152 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			68,
-			46,
-			19,
-			61
+			137,
+			92,
+			39,
+			124
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			989,
-			619,
-			63,
-			43
+			1196,
+			3485,
+			124,
+			84
 		},
 		alias = {
 			"bear_vanguard_0153"
 		}
 	},
 	bear_vanguard_0154 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			68,
-			46,
-			19,
-			61
+			137,
+			92,
+			39,
+			124
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1058,
-			619,
-			63,
-			43
+			1196,
+			3575,
+			124,
+			84
 		},
 		alias = {
 			"bear_vanguard_0155"
 		}
 	},
 	bear_vanguard_0156 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			150,
-			150
+			300,
+			300
 		},
 		trim = {
-			68,
-			46,
-			19,
-			61
+			137,
+			92,
+			39,
+			124
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1127,
-			619,
-			63,
-			43
+			1196,
+			3665,
+			124,
+			84
 		},
 		alias = {
 			"bear_vanguard_0157",
@@ -1860,50 +1860,50 @@ local a = {
 		}
 	},
 	bear_vanguard_buffFX_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			130,
-			130
+			260,
+			260
 		},
 		trim = {
-			33,
-			52,
-			34,
-			55
+			66,
+			105,
+			70,
+			110
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1077,
-			74,
-			63,
-			23
+			2076,
+			131,
+			124,
+			45
 		},
 		alias = {}
 	},
 	bear_vanguard_buffFX_0002 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			130,
-			130
+			260,
+			260
 		},
 		trim = {
-			38,
-			37,
-			31,
-			59
+			77,
+			75,
+			63,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			1815,
-			61,
-			34
+			1327,
+			3278,
+			120,
+			66
 		},
 		alias = {
 			"bear_vanguard_buffFX_0003",
@@ -1911,26 +1911,26 @@ local a = {
 		}
 	},
 	bear_vanguard_buffFX_0005 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			130,
-			130
+			260,
+			260
 		},
 		trim = {
-			37,
-			37,
-			41,
-			58
+			74,
+			75,
+			83,
+			117
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1229,
-			52,
-			35
+			3033,
+			1671,
+			103,
+			68
 		},
 		alias = {
 			"bear_vanguard_buffFX_0006",
@@ -1938,26 +1938,26 @@ local a = {
 		}
 	},
 	bear_vanguard_buffFX_0008 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			130,
-			130
+			260,
+			260
 		},
 		trim = {
-			36,
-			37,
-			41,
-			58
+			74,
+			75,
+			83,
+			117
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1632,
-			974,
-			53,
-			35
+			3142,
+			1671,
+			103,
+			68
 		},
 		alias = {
 			"bear_vanguard_buffFX_0009",
@@ -1965,26 +1965,26 @@ local a = {
 		}
 	},
 	bear_vanguard_buffFX_0011 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			130,
-			130
+			260,
+			260
 		},
 		trim = {
-			37,
-			37,
-			40,
-			58
+			75,
+			75,
+			82,
+			117
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1691,
-			974,
-			53,
-			35
+			3251,
+			1671,
+			103,
+			68
 		},
 		alias = {
 			"bear_vanguard_buffFX_0012",
@@ -1992,1394 +1992,1394 @@ local a = {
 		}
 	},
 	bear_vanguard_decal_anim_decal_animation_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			62,
-			68
+			124,
+			136
 		},
 		trim = {
-			17,
-			21,
-			20,
-			30
+			35,
+			43,
+			41,
+			61
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			2023,
-			1035,
-			25,
-			17
+			1407,
+			1111,
+			48,
+			32
 		},
 		alias = {}
 	},
 	bear_vanguard_decal_anim_decal_animation_0002 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			62,
-			68
+			124,
+			136
 		},
 		trim = {
-			17,
-			21,
-			19,
-			31
+			34,
+			43,
+			39,
+			62
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1965,
-			430,
-			26,
-			16
+			1272,
+			1112,
+			51,
+			31
 		},
 		alias = {}
 	},
 	bear_vanguard_decal_anim_decal_animation_0003 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			62,
-			68
+			124,
+			136
 		},
 		trim = {
-			17,
-			15,
-			18,
-			31
+			34,
+			31,
+			38,
+			63
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1735,
-			347,
-			27,
-			22
+			3598,
+			650,
+			52,
+			42
 		},
 		alias = {}
 	},
 	bear_vanguard_decal_anim_decal_animation_0004 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			62,
-			68
+			124,
+			136
 		},
 		trim = {
-			16,
-			11,
-			17,
-			31
+			34,
+			24,
+			36,
+			63
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1871,
-			1703,
-			29,
-			26
+			3410,
+			2559,
+			54,
+			49
 		},
 		alias = {}
 	},
 	bear_vanguard_decal_anim_decal_animation_0005 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			62,
-			68
+			124,
+			136
 		},
 		trim = {
-			16,
-			11,
-			17,
-			32
+			33,
+			24,
+			34,
+			64
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1976,
-			1703,
-			29,
-			25
+			2523,
+			4048,
+			57,
+			48
 		},
 		alias = {}
 	},
 	bear_vanguard_decal_anim_decal_animation_0006 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			62,
-			68
+			124,
+			136
 		},
 		trim = {
-			16,
-			10,
-			16,
-			31
+			33,
+			21,
+			33,
+			64
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			380,
-			249,
-			30,
-			27
+			2656,
+			2559,
+			58,
+			51
 		},
 		alias = {}
 	},
 	bear_vanguard_decal_anim_decal_animation_0007 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			62,
-			68
+			124,
+			136
 		},
 		trim = {
-			16,
-			10,
-			16,
-			32
+			33,
+			21,
+			33,
+			64
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1690,
-			1984,
-			30,
-			26
+			2720,
+			2559,
+			58,
+			51
 		},
 		alias = {}
 	},
 	bear_vanguard_decal_anim_decal_animation_0008 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			62,
-			68
+			124,
+			136
 		},
 		trim = {
-			16,
-			9,
-			16,
-			32
+			33,
+			20,
+			32,
+			64
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1991,
-			1667,
-			30,
-			27
+			2523,
+			3657,
+			59,
+			52
 		},
 		alias = {}
 	},
 	bear_vanguard_decal_anim_decal_animation_0009 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			62,
-			68
+			124,
+			136
 		},
 		trim = {
-			16,
-			9,
-			15,
-			32
+			32,
+			20,
+			32,
+			64
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1917,
-			1667,
-			31,
-			27
+			4036,
+			1411,
+			60,
+			52
 		},
 		alias = {}
 	},
 	bear_vanguard_decal_anim_decal_animation_0010 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			62,
-			68
+			124,
+			136
 		},
 		trim = {
-			15,
-			11,
-			15,
-			32
+			32,
+			22,
+			31,
+			64
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1890,
-			1549,
-			32,
-			25
+			2523,
+			3439,
+			61,
+			50
 		},
 		alias = {}
 	},
 	bear_vanguard_decal_anim_decal_animation_0011 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			62,
-			68
+			124,
+			136
 		},
 		trim = {
-			15,
-			11,
-			15,
-			32
+			32,
+			22,
+			31,
+			64
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1928,
-			1549,
-			32,
-			25
+			2523,
+			3495,
+			61,
+			50
 		},
 		alias = {}
 	},
 	bear_vanguard_decal_anim_decal_animation_0012 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			62,
-			68
+			124,
+			136
 		},
 		trim = {
-			15,
-			13,
-			15,
-			32
+			32,
+			28,
+			30,
+			64
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1966,
-			1549,
-			32,
-			23
+			2523,
+			2998,
+			62,
+			44
 		},
 		alias = {}
 	},
 	bear_vanguard_decal_anim_decal_animation_0013 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			62,
-			68
+			124,
+			136
 		},
 		trim = {
-			15,
-			13,
-			15,
-			32
+			31,
+			28,
+			30,
+			64
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			2004,
-			1549,
-			32,
-			23
+			3809,
+			1999,
+			63,
+			44
 		},
 		alias = {}
 	},
 	bear_vanguard_decal_anim_decal_animation_0014 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			62,
-			68
+			124,
+			136
 		},
 		trim = {
-			15,
-			16,
-			14,
-			32
+			31,
+			32,
+			29,
+			64
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1245,
-			2028,
-			33,
-			20
+			3108,
+			1102,
+			64,
+			40
 		},
 		alias = {}
 	},
 	bear_vanguard_decal_anim_decal_animation_0015 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			62,
-			68
+			124,
+			136
 		},
 		trim = {
-			15,
-			16,
-			14,
-			32
+			31,
+			32,
+			29,
+			64
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1775,
-			1549,
-			33,
-			20
+			2101,
+			1363,
+			64,
+			40
 		},
 		alias = {}
 	},
 	bear_vanguard_decal_anim_decal_animation_0016 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			62,
-			68
+			124,
+			136
 		},
 		trim = {
 			0,
 			0,
-			60,
-			66
+			122,
+			134
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			620,
-			97,
+			1009,
+			180,
 			2,
 			2
 		},
 		alias = {}
 	},
 	bear_vanguard_decal_ground_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			70,
-			54
+			140,
+			108
 		},
 		trim = {
-			9,
-			9,
-			11,
-			12
+			20,
+			20,
+			24,
+			25
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1902,
-			50,
-			33
+			1808,
+			2414,
+			96,
+			63
 		},
 		alias = {}
 	},
 	bear_woodcutter_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			36,
-			35,
-			41,
-			78
+			73,
+			71,
+			84,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			1781,
-			63,
-			47
+			2101,
+			1265,
+			123,
+			92
 		},
 		alias = {}
 	},
 	bear_woodcutter_0002 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			37,
-			37,
-			40,
-			78
+			75,
+			76,
+			81,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			782,
-			619,
-			63,
-			45
+			1196,
+			3302,
+			124,
+			87
 		},
 		alias = {
 			"bear_woodcutter_0003"
 		}
 	},
 	bear_woodcutter_0004 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			35,
-			35,
-			42,
-			78
+			71,
+			71,
+			85,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			1834,
-			63,
-			47
+			1196,
+			2910,
+			124,
+			92
 		},
 		alias = {
 			"bear_woodcutter_0005"
 		}
 	},
 	bear_woodcutter_0006 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			34,
-			32,
-			42,
-			78
+			69,
+			66,
+			86,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			851,
-			670,
-			64,
-			50
+			3041,
+			1150,
+			125,
+			97
 		},
 		alias = {
 			"bear_woodcutter_0007"
 		}
 	},
 	bear_woodcutter_0008 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			34,
-			31,
-			43,
-			78
+			68,
+			63,
+			87,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1271,
-			670,
-			63,
-			51
+			2910,
+			1150,
+			125,
+			100
 		},
 		alias = {
 			"bear_woodcutter_0009"
 		}
 	},
 	bear_woodcutter_0010 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			37,
-			32,
-			40,
-			78
+			75,
+			66,
+			81,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1478,
-			670,
-			63,
-			50
+			1196,
+			2704,
+			124,
+			97
 		},
 		alias = {
 			"bear_woodcutter_0011"
 		}
 	},
 	bear_woodcutter_0012 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			39,
-			35,
-			39,
-			78
+			79,
+			70,
+			79,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			918,
-			728,
-			62,
-			47
+			1327,
+			1411,
+			122,
+			93
 		},
 		alias = {
 			"bear_woodcutter_0013"
 		}
 	},
 	bear_woodcutter_0014 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			41,
-			37,
-			38,
-			77
+			82,
+			75,
+			77,
+			155
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1394,
-			728,
-			61,
-			46
+			1327,
+			2514,
+			121,
+			90
 		},
 		alias = {
 			"bear_woodcutter_0015"
 		}
 	},
 	bear_woodcutter_0016 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			41,
-			34,
-			37,
-			78
+			84,
+			69,
+			75,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			1526,
-			62,
-			48
+			1327,
+			2414,
+			121,
+			94
 		},
 		alias = {
 			"bear_woodcutter_0017"
 		}
 	},
 	bear_woodcutter_0018 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			40,
-			32,
-			37,
-			78
+			82,
+			64,
+			74,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1547,
-			670,
-			63,
-			50
+			3827,
+			1150,
+			124,
+			99
 		},
 		alias = {
 			"bear_woodcutter_0019"
 		}
 	},
 	bear_woodcutter_0020 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			41,
-			31,
-			36,
-			78
+			84,
+			63,
+			73,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1340,
-			670,
-			63,
-			51
+			1585,
+			1265,
+			123,
+			100
 		},
 		alias = {
 			"bear_woodcutter_0021"
 		}
 	},
 	bear_woodcutter_0022 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			40,
-			32,
-			36,
-			78
+			82,
+			66,
+			74,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			921,
-			670,
-			64,
-			50
+			1196,
+			2807,
+			124,
+			97
 		},
 		alias = {
 			"bear_woodcutter_0023"
 		}
 	},
 	bear_woodcutter_0024 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			39,
-			35,
-			39,
-			78
+			79,
+			70,
+			79,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			986,
-			728,
-			62,
-			47
+			1327,
+			1510,
+			122,
+			93
 		},
 		alias = {
 			"bear_woodcutter_0025"
 		}
 	},
 	bear_woodcutter_0026 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			33,
-			37,
-			41,
-			78
+			66,
+			74,
+			84,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			1964,
-			66,
-			45
+			3244,
+			1003,
+			130,
+			89
 		},
 		alias = {
 			"bear_woodcutter_0027"
 		}
 	},
 	bear_woodcutter_0028 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			32,
-			35,
-			42,
-			78
+			64,
+			70,
+			85,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			1806,
-			66,
-			47
+			1882,
+			1003,
+			131,
+			93
 		},
 		alias = {
 			"bear_woodcutter_0029"
 		}
 	},
 	bear_woodcutter_0030 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			30,
-			32,
-			43,
-			78
+			61,
+			65,
+			87,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1516,
-			536,
-			67,
-			50
+			918,
+			3058,
+			132,
+			98
 		},
 		alias = {
 			"bear_woodcutter_0031"
 		}
 	},
 	bear_woodcutter_0032 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			29,
-			31,
-			43,
-			78
+			60,
+			63,
+			88,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			1352,
-			68,
-			51
+			918,
+			2952,
+			132,
+			100
 		},
 		alias = {
 			"bear_woodcutter_0033"
 		}
 	},
 	bear_woodcutter_0034 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			31,
-			32,
-			42,
-			78
+			63,
+			65,
+			85,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1589,
-			536,
-			67,
-			50
+			918,
+			3162,
+			132,
+			98
 		},
 		alias = {
 			"bear_woodcutter_0035"
 		}
 	},
 	bear_woodcutter_0036 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			33,
-			35,
-			41,
-			78
+			66,
+			70,
+			84,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			1859,
-			66,
-			47
+			3108,
+			1003,
+			130,
+			93
 		},
 		alias = {
 			"bear_woodcutter_0037"
 		}
 	},
 	bear_woodcutter_0038 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			34,
-			37,
-			40,
-			78
+			68,
+			74,
+			82,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			619,
-			66,
-			45
+			3380,
+			1003,
+			130,
+			89
 		},
 		alias = {
 			"bear_woodcutter_0039"
 		}
 	},
 	bear_woodcutter_0040 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			34,
-			36,
-			40,
-			78
+			70,
+			72,
+			81,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			1912,
-			66,
-			46
+			3786,
+			1003,
+			129,
+			91
 		},
 		alias = {
 			"bear_woodcutter_0041"
 		}
 	},
 	bear_woodcutter_0042 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			35,
-			32,
-			38,
-			78
+			72,
+			66,
+			78,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1662,
-			536,
-			67,
-			50
+			2564,
+			1003,
+			130,
+			97
 		},
 		alias = {
 			"bear_woodcutter_0043"
 		}
 	},
 	bear_woodcutter_0044 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			36,
-			31,
-			38,
-			78
+			73,
+			63,
+			77,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			1306,
-			66,
-			51
+			2428,
+			1003,
+			130,
+			100
 		},
 		alias = {
 			"bear_woodcutter_0045"
 		}
 	},
 	bear_woodcutter_0046 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			35,
-			33,
-			39,
-			78
+			71,
+			67,
+			79,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			1698,
-			66,
-			49
+			2972,
+			1003,
+			130,
+			96
 		},
 		alias = {
 			"bear_woodcutter_0047"
 		}
 	},
 	bear_woodcutter_0048 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			32,
-			35,
-			40,
-			78
+			66,
+			72,
+			82,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			1738,
-			68,
-			47
+			918,
+			3673,
+			132,
+			91
 		},
 		alias = {
 			"bear_woodcutter_0049"
 		}
 	},
 	bear_woodcutter_0050 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			43,
-			37,
-			35,
-			78
+			87,
+			75,
+			70,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1817,
-			619,
-			62,
-			45
+			2617,
+			1265,
+			123,
+			88
 		},
 		alias = {
 			"bear_woodcutter_0051"
 		}
 	},
 	bear_woodcutter_0052 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			44,
-			35,
-			34,
-			78
+			89,
+			72,
+			69,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1054,
-			728,
-			62,
-			47
+			1327,
+			1609,
+			122,
+			91
 		},
 		alias = {
 			"bear_woodcutter_0053"
 		}
 	},
 	bear_woodcutter_0054 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			44,
-			34,
-			33,
-			78
+			90,
+			68,
+			68,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1961,
-			670,
-			63,
-			48
+			3905,
+			1265,
+			122,
+			95
 		},
 		alias = {
 			"bear_woodcutter_0055"
 		}
 	},
 	bear_woodcutter_0056 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			45,
-			31,
-			33,
-			78
+			90,
+			63,
+			67,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			1303,
-			62,
-			51
+			1714,
+			1265,
+			123,
+			100
 		},
 		alias = {
 			"bear_woodcutter_0057"
 		}
 	},
 	bear_woodcutter_0058 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			45,
-			32,
-			33,
-			78
+			90,
+			65,
+			67,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			1360,
-			62,
-			50
+			1843,
+			1265,
+			123,
+			98
 		},
 		alias = {
 			"bear_woodcutter_0059"
 		}
 	},
 	bear_woodcutter_0060 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			41,
-			34,
-			34,
-			78
+			84,
+			69,
+			70,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			925,
-			65,
-			48
+			2384,
+			1150,
+			126,
+			94
 		},
 		alias = {
 			"bear_woodcutter_0061"
 		}
 	},
 	bear_woodcutter_0062 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			43,
-			37,
-			35,
-			78
+			87,
+			75,
+			71,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1885,
-			619,
-			62,
-			45
+			1327,
+			1803,
+			122,
+			88
 		},
 		alias = {
 			"bear_woodcutter_0063"
 		}
 	},
 	bear_woodcutter_0064 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			42,
-			37,
-			35,
-			78
+			86,
+			75,
+			71,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			851,
-			619,
-			63,
-			45
+			2746,
+			1265,
+			123,
+			88
 		},
 		alias = {
 			"bear_woodcutter_0065"
 		}
 	},
 	bear_woodcutter_0066 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			37,
-			36,
-			36,
-			78
+			76,
+			72,
+			73,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			619,
-			67,
-			46
+			2019,
+			1003,
+			131,
+			91
 		},
 		alias = {
 			"bear_woodcutter_0067"
 		}
 	},
 	bear_woodcutter_0068 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			41,
-			33,
-			37,
-			78
+			82,
+			66,
+			75,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			1416,
-			62,
-			49
+			1972,
+			1265,
+			123,
+			97
 		},
 		alias = {
 			"bear_woodcutter_0069"
 		}
 	},
 	bear_woodcutter_0070 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			41,
-			33,
-			37,
-			78
+			84,
+			67,
+			74,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			1471,
-			62,
-			49
+			3777,
+			1265,
+			122,
+			96
 		},
 		alias = {
 			"bear_woodcutter_0071"
 		}
 	},
 	bear_woodcutter_0072 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			43,
-			36,
-			35,
-			78
+			87,
+			72,
+			71,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1122,
-			728,
-			62,
-			46
+			1327,
+			1706,
+			122,
+			91
 		},
 		alias = {
 			"bear_woodcutter_0073"
 		}
 	},
 	bear_woodcutter_0074 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			36,
-			35,
-			41,
-			78
+			73,
+			71,
+			83,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			1887,
-			63,
-			47
+			1196,
+			3008,
+			124,
+			92
 		},
 		alias = {
 			"bear_woodcutter_0075",
@@ -3390,104 +3390,104 @@ local a = {
 		}
 	},
 	bear_woodcutter_0076 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			27,
-			26,
-			46,
-			78
+			56,
+			53,
+			94,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1151,
-			536,
-			67,
-			56
+			2156,
+			1003,
+			130,
+			110
 		},
 		alias = {
 			"bear_woodcutter_0077"
 		}
 	},
 	bear_woodcutter_0078 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			22,
-			14,
-			51,
-			78
+			45,
+			30,
+			102,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			932,
-			536,
-			67,
-			68
+			918,
+			1951,
+			133,
+			133
 		},
 		alias = {
 			"bear_woodcutter_0079"
 		}
 	},
 	bear_woodcutter_0080 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			18,
-			12,
-			51,
-			78
+			38,
+			26,
+			102,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1612,
-			375,
-			71,
-			70
+			766,
+			1571,
+			140,
+			137
 		},
 		alias = {
 			"bear_woodcutter_0081"
 		}
 	},
 	bear_woodcutter_0082 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			15,
-			11,
-			51,
-			78
+			30,
+			23,
+			102,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			981,
-			375,
-			74,
-			71
+			1228,
+			700,
+			148,
+			140
 		},
 		alias = {
 			"bear_woodcutter_0083",
@@ -3496,360 +3496,360 @@ local a = {
 		}
 	},
 	bear_woodcutter_0086 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
+			99,
 			49,
-			24,
-			15,
-			77
+			30,
+			156
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			655,
-			375,
-			76,
-			59
+			604,
+			1974,
+			151,
+			115
 		},
 		alias = {
 			"bear_woodcutter_0087"
 		}
 	},
 	bear_woodcutter_0088 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			49,
-			24,
-			13,
-			77
+			99,
+			50,
+			27,
+			155
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1684,
-			282,
-			78,
-			59
+			2223,
+			527,
+			154,
+			115
 		},
 		alias = {
 			"bear_woodcutter_0089"
 		}
 	},
 	bear_woodcutter_0090 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			49,
-			40,
-			12,
-			77
+			99,
+			80,
+			25,
+			155
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			1989,
-			79,
-			43
+			1417,
+			527,
+			156,
+			85
 		},
 		alias = {
 			"bear_woodcutter_0091"
 		}
 	},
 	bear_woodcutter_0092 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			49,
-			41,
-			11,
-			76
+			99,
+			82,
+			23,
+			154
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1906,
-			197,
-			80,
-			43
+			3831,
+			356,
+			158,
+			84
 		},
 		alias = {
 			"bear_woodcutter_0093"
 		}
 	},
 	bear_woodcutter_0094 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			49,
-			38,
-			10,
-			77
+			99,
+			77,
+			22,
+			154
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1303,
-			197,
-			81,
-			45
+			3174,
+			356,
+			159,
+			89
 		},
 		alias = {
 			"bear_woodcutter_0095"
 		}
 	},
 	bear_woodcutter_0096 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			43,
-			36,
-			9,
-			78
+			87,
+			73,
+			19,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			1999,
-			88,
-			46
+			3767,
+			196,
+			174,
+			90
 		},
 		alias = {}
 	},
 	bear_woodcutter_0097 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			43,
-			36,
-			9,
-			78
+			87,
+			73,
+			19,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			322,
-			197,
-			88,
-			46
+			239,
+			3593,
+			174,
+			90
 		},
 		alias = {}
 	},
 	bear_woodcutter_0098 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			39,
-			36,
-			7,
-			78
+			79,
+			73,
+			16,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			431,
-			105,
-			94,
-			46
+			622,
+			196,
+			185,
+			90
 		},
 		alias = {
 			"bear_woodcutter_0099"
 		}
 	},
 	bear_woodcutter_0100 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			36,
-			35,
-			41,
-			78
+			73,
+			71,
+			83,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			1940,
-			63,
-			47
+			1196,
+			3106,
+			124,
+			92
 		},
 		alias = {
 			"bear_woodcutter_0101"
 		}
 	},
 	bear_woodcutter_0104 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			36,
-			40,
-			41,
-			78
+			74,
+			80,
+			83,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1472,
-			619,
-			63,
-			42
+			3391,
+			1265,
+			123,
+			83
 		},
 		alias = {
 			"bear_woodcutter_0105"
 		}
 	},
 	bear_woodcutter_0106 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			36,
-			41,
-			41,
-			78
+			73,
+			83,
+			83,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1541,
-			619,
-			63,
-			41
+			1196,
+			3843,
+			124,
+			80
 		},
 		alias = {
 			"bear_woodcutter_0107"
 		}
 	},
 	bear_woodcutter_0108 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			36,
-			35,
-			41,
-			78
+			74,
+			71,
+			83,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			1993,
-			63,
-			47
+			2230,
+			1265,
+			123,
+			92
 		},
 		alias = {
 			"bear_woodcutter_0109"
 		}
 	},
 	bear_woodcutter_0110 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			35,
-			10,
-			38,
-			78
+			72,
+			20,
+			78,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			786,
-			536,
-			67,
-			72
+			1060,
+			1473,
+			130,
+			143
 		},
 		alias = {
 			"bear_woodcutter_0111"
 		}
 	},
 	bear_woodcutter_0112 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			33,
-			2,
-			40,
-			78
+			68,
+			4,
+			82,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			1947,
-			67,
-			80
+			1060,
+			1150,
+			130,
+			159
 		},
 		alias = {
 			"bear_woodcutter_0113",
@@ -3861,26 +3861,26 @@ local a = {
 		}
 	},
 	bear_woodcutter_0114 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			33,
-			5,
-			40,
-			78
+			68,
+			11,
+			82,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			536,
-			67,
-			77
+			1060,
+			1315,
+			130,
+			152
 		},
 		alias = {
 			"bear_woodcutter_0115",
@@ -3893,388 +3893,388 @@ local a = {
 		}
 	},
 	bear_woodcutter_0127 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			36,
-			31,
-			41,
-			78
+			73,
+			64,
+			83,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1409,
-			670,
-			63,
-			51
+			3957,
+			1150,
+			124,
+			99
 		},
 		alias = {
 			"bear_woodcutter_0128"
 		}
 	},
 	bear_woodcutter_0131 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			36,
-			35,
-			41,
-			78
+			73,
+			71,
+			83,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			728,
-			63,
-			47
+			1196,
+			3204,
+			124,
+			92
 		},
 		alias = {
 			"bear_woodcutter_0132"
 		}
 	},
 	bear_woodcutter_0133 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			35,
-			33,
-			33,
-			78
+			71,
+			68,
+			67,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1456,
-			375,
-			72,
-			49
+			766,
+			1044,
+			142,
+			95
 		},
 		alias = {
 			"bear_woodcutter_0134"
 		}
 	},
 	bear_woodcutter_0135 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			41,
-			11,
-			33,
-			78
+			83,
+			22,
+			66,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			920,
-			66,
-			71
+			1060,
+			1003,
+			131,
+			141
 		},
 		alias = {
 			"bear_woodcutter_0136"
 		}
 	},
 	bear_woodcutter_0137 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			44,
-			4,
-			32,
-			78
+			89,
+			9,
+			65,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			979,
-			64,
-			78
+			1060,
+			3526,
+			126,
+			154
 		},
 		alias = {
 			"bear_woodcutter_0138"
 		}
 	},
 	bear_woodcutter_0139 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			43,
-			12,
-			32,
-			78
+			87,
+			25,
+			65,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			670,
-			65,
-			70
+			1060,
+			1622,
+			128,
+			138
 		},
 		alias = {
 			"bear_woodcutter_0140"
 		}
 	},
 	bear_woodcutter_0141 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			44,
-			17,
-			32,
-			78
+			89,
+			36,
+			65,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			1523,
-			64,
-			65
+			1060,
+			3823,
+			126,
+			127
 		},
 		alias = {
 			"bear_woodcutter_0142"
 		}
 	},
 	bear_woodcutter_0143 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			44,
-			40,
-			32,
-			70
+			89,
+			80,
+			65,
+			141
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			991,
-			670,
-			64,
-			50
+			1856,
+			1150,
+			126,
+			99
 		},
 		alias = {
 			"bear_woodcutter_0144"
 		}
 	},
 	bear_woodcutter_0145 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			44,
-			40,
-			32,
-			67
+			89,
+			80,
+			65,
+			136
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			1853,
-			64,
-			53
+			1460,
+			1150,
+			126,
+			104
 		},
 		alias = {
 			"bear_woodcutter_0146"
 		}
 	},
 	bear_woodcutter_0147 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			45,
-			38,
-			31,
-			70
+			90,
+			77,
+			64,
+			141
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			670,
-			64,
-			52
+			1592,
+			1150,
+			126,
+			102
 		},
 		alias = {
 			"bear_woodcutter_0148"
 		}
 	},
 	bear_woodcutter_0149 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			47,
-			39,
-			29,
-			70
+			94,
+			79,
+			60,
+			141
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			781,
-			670,
-			64,
-			51
+			1724,
+			1150,
+			126,
+			100
 		},
 		alias = {}
 	},
 	bear_woodcutter_0150 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			63,
-			47,
-			14,
-			70
+			127,
+			95,
+			30,
+			141
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1196,
-			619,
-			63,
-			43
+			2875,
+			1265,
+			123,
+			84
 		},
 		alias = {
 			"bear_woodcutter_0151"
 		}
 	},
 	bear_woodcutter_0152 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			63,
-			47,
-			14,
-			70
+			127,
+			95,
+			30,
+			141
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
+			3004,
 			1265,
-			619,
-			63,
-			43
+			123,
+			84
 		},
 		alias = {
 			"bear_woodcutter_0153"
 		}
 	},
 	bear_woodcutter_0154 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			63,
-			47,
-			14,
-			70
+			127,
+			95,
+			30,
+			141
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1334,
-			619,
-			63,
-			43
+			3133,
+			1265,
+			123,
+			84
 		},
 		alias = {
 			"bear_woodcutter_0155"
 		}
 	},
 	bear_woodcutter_0156 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			140,
-			160
+			280,
+			320
 		},
 		trim = {
-			63,
-			47,
-			14,
-			70
+			127,
+			95,
+			30,
+			141
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1403,
-			619,
-			63,
-			43
+			3262,
+			1265,
+			123,
+			84
 		},
 		alias = {
 			"bear_woodcutter_0157",
@@ -4282,26 +4282,26 @@ local a = {
 		}
 	},
 	cutthroat_rat_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			32,
-			27,
-			33,
-			47
+			65,
+			55,
+			68,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1655,
-			1549,
-			35,
-			26
+			3351,
+			2403,
+			67,
+			50
 		},
 		alias = {
 			"cutthroat_rat_0042",
@@ -4315,364 +4315,364 @@ local a = {
 		}
 	},
 	cutthroat_rat_0002 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			28,
-			33,
-			47
+			64,
+			58,
+			67,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1613,
-			1549,
-			36,
-			25
+			3129,
+			2403,
+			69,
+			47
 		},
 		alias = {
 			"cutthroat_rat_0003"
 		}
 	},
 	cutthroat_rat_0004 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			33,
-			26,
-			33,
-			47
+			68,
+			53,
+			68,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1772,
-			1581,
-			34,
-			27
+			2447,
+			4037,
+			64,
+			52
 		},
 		alias = {
 			"cutthroat_rat_0005"
 		}
 	},
 	cutthroat_rat_0006 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			32,
-			22,
-			33,
-			47
+			66,
+			44,
+			68,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1571,
-			1796,
-			35,
-			31
+			3424,
+			2403,
+			66,
+			61
 		},
 		alias = {
 			"cutthroat_rat_0007"
 		}
 	},
 	cutthroat_rat_0008 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			33,
-			23,
-			34,
-			47
+			67,
+			47,
+			69,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1851,
-			1581,
-			33,
-			30
+			3928,
+			2403,
+			64,
+			58
 		},
 		alias = {
 			"cutthroat_rat_0009"
 		}
 	},
 	cutthroat_rat_0010 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			26,
-			39,
-			47
+			64,
+			54,
+			78,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1690,
-			1819,
-			30,
-			27
+			2784,
+			2559,
+			58,
+			51
 		},
 		alias = {
 			"cutthroat_rat_0011"
 		}
 	},
 	cutthroat_rat_0012 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			26,
-			39,
-			47
+			63,
+			53,
+			79,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1690,
-			1852,
-			30,
-			27
+			2523,
+			3990,
+			58,
+			52
 		},
 		alias = {
 			"cutthroat_rat_0013"
 		}
 	},
 	cutthroat_rat_0014 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			32,
-			23,
-			39,
-			47
+			66,
+			46,
+			79,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1488,
-			66,
-			29,
-			30
+			2592,
+			2907,
+			55,
+			59
 		},
 		alias = {
 			"cutthroat_rat_0015"
 		}
 	},
 	cutthroat_rat_0016 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			34,
-			22,
-			40,
-			47
+			69,
+			46,
+			80,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1928,
-			1769,
-			26,
-			31
+			2592,
+			3763,
+			51,
+			59
 		},
 		alias = {
 			"cutthroat_rat_0017"
 		}
 	},
 	cutthroat_rat_0018 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			26,
-			39,
-			47
+			64,
+			54,
+			78,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1690,
-			1885,
-			30,
-			27
+			2848,
+			2559,
+			58,
+			51
 		},
 		alias = {
 			"cutthroat_rat_0019"
 		}
 	},
 	cutthroat_rat_0020 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			26,
-			39,
-			47
+			63,
+			53,
+			79,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1690,
-			1918,
-			30,
-			27
+			2592,
+			2559,
+			58,
+			52
 		},
 		alias = {
 			"cutthroat_rat_0021"
 		}
 	},
 	cutthroat_rat_0022 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			32,
-			23,
-			39,
-			47
+			66,
+			46,
+			79,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1727,
-			1817,
-			29,
-			30
+			2592,
+			2972,
+			55,
+			59
 		},
 		alias = {
 			"cutthroat_rat_0023"
 		}
 	},
 	cutthroat_rat_0024 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			34,
-			22,
-			40,
-			47
+			69,
+			46,
+			80,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1960,
-			1769,
-			26,
-			31
+			2592,
+			3828,
+			51,
+			59
 		},
 		alias = {
 			"cutthroat_rat_0025"
 		}
 	},
 	cutthroat_rat_0026 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			39,
-			27,
-			32,
-			47
+			79,
+			56,
+			64,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1906,
-			1703,
-			29,
-			26
+			3103,
+			2559,
+			57,
+			49
 		},
 		alias = {
 			"cutthroat_rat_0027"
 		}
 	},
 	cutthroat_rat_0028 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			39,
-			27,
-			31,
-			47
+			79,
+			55,
+			64,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1690,
-			2016,
-			30,
-			26
+			3040,
+			2559,
+			57,
+			50
 		},
 		alias = {
 			"cutthroat_rat_0029",
@@ -4681,698 +4681,698 @@ local a = {
 		}
 	},
 	cutthroat_rat_0030 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			40,
-			22,
-			32,
-			47
+			81,
+			45,
+			66,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1762,
-			1866,
-			28,
-			31
+			2592,
+			3440,
+			53,
+			60
 		},
 		alias = {
 			"cutthroat_rat_0031"
 		}
 	},
 	cutthroat_rat_0032 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			39,
-			22,
-			34,
-			47
+			80,
+			46,
+			69,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1796,
-			1769,
-			27,
-			31
+			2592,
+			3893,
+			51,
+			59
 		},
 		alias = {
 			"cutthroat_rat_0033"
 		}
 	},
 	cutthroat_rat_0034 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			39,
-			27,
-			32,
-			47
+			79,
+			56,
+			64,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1941,
-			1703,
-			29,
-			26
+			3166,
+			2559,
+			57,
+			49
 		},
 		alias = {
 			"cutthroat_rat_0035"
 		}
 	},
 	cutthroat_rat_0038 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			40,
-			22,
-			32,
-			47
+			81,
+			45,
+			66,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1762,
-			1903,
-			28,
-			31
+			2592,
+			3506,
+			53,
+			60
 		},
 		alias = {
 			"cutthroat_rat_0039"
 		}
 	},
 	cutthroat_rat_0040 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			39,
-			22,
-			34,
-			47
+			80,
+			46,
+			69,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1829,
-			1769,
-			27,
-			31
+			2592,
+			3958,
+			51,
+			59
 		},
 		alias = {
 			"cutthroat_rat_0041"
 		}
 	},
 	cutthroat_rat_0044 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			27,
-			35,
-			47
+			63,
+			55,
+			71,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1696,
-			1549,
-			34,
-			26
+			3856,
+			2403,
+			66,
+			50
 		},
 		alias = {
 			"cutthroat_rat_0045"
 		}
 	},
 	cutthroat_rat_0046 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			30,
-			24,
-			35,
-			47
+			62,
+			50,
+			72,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1702,
-			69,
-			35,
-			29
+			3568,
+			2403,
+			66,
+			55
 		},
 		alias = {
 			"cutthroat_rat_0047"
 		}
 	},
 	cutthroat_rat_0048 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			21,
-			11,
-			47
+			64,
+			42,
+			23,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			330,
-			159,
-			58,
-			32
+			1455,
+			4031,
+			113,
+			63
 		},
 		alias = {
 			"cutthroat_rat_0049"
 		}
 	},
 	cutthroat_rat_0050 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			33,
-			18,
-			11,
-			47
+			68,
+			36,
+			23,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			1656,
-			56,
-			35
+			1935,
+			1593,
+			109,
+			69
 		},
 		alias = {}
 	},
 	cutthroat_rat_0051 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			33,
-			18,
-			30,
-			47
+			68,
+			37,
+			60,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1836,
-			1507,
-			37,
-			35
+			4024,
+			2148,
+			72,
+			68
 		},
 		alias = {}
 	},
 	cutthroat_rat_0052 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			35,
-			27,
-			8,
-			45
+			71,
+			55,
+			17,
+			90
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1523,
-			71,
-			57,
-			28
+			2292,
+			135,
+			112,
+			55
 		},
 		alias = {
 			"cutthroat_rat_0053"
 		}
 	},
 	cutthroat_rat_0054 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			35,
-			28,
-			11,
-			45
+			72,
+			57,
+			23,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1743,
-			72,
-			54,
-			27
+			3357,
+			128,
+			105,
+			51
 		},
 		alias = {
 			"cutthroat_rat_0055"
 		}
 	},
 	cutthroat_rat_0056 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			34,
-			25,
-			13,
-			47
+			70,
+			51,
+			28,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			925,
-			159,
-			53,
-			28
+			1697,
+			1606,
+			102,
+			54
 		},
 		alias = {
 			"cutthroat_rat_0057"
 		}
 	},
 	cutthroat_rat_0058 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			33,
-			26,
-			30,
-			47
+			68,
+			52,
+			60,
+			94
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1528,
-			1549,
-			37,
-			27
+			2365,
+			3944,
+			72,
+			54
 		},
 		alias = {
 			"cutthroat_rat_0059"
 		}
 	},
 	cutthroat_rat_0060 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			28,
-			31,
-			47
+			64,
+			58,
+			64,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1792,
-			1507,
-			38,
-			25
+			2365,
+			4004,
+			72,
+			47
 		},
 		alias = {
 			"cutthroat_rat_0061"
 		}
 	},
 	cutthroat_rat_0066 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			27,
-			33,
-			47
+			64,
+			56,
+			67,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1528,
-			2004,
-			36,
-			26
+			1491,
+			296,
+			69,
+			49
 		},
 		alias = {
 			"cutthroat_rat_0067"
 		}
 	},
 	cutthroat_rat_0068 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			26,
-			33,
-			47
+			63,
+			52,
+			66,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1528,
-			1971,
-			36,
-			27
+			2601,
+			2403,
+			71,
+			53
 		},
 		alias = {
 			"cutthroat_rat_0069"
 		}
 	},
 	cutthroat_rat_0070 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			30,
-			26,
-			32,
-			47
+			62,
+			53,
+			65,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1748,
-			1507,
-			38,
-			27
+			350,
+			4040,
+			73,
+			52
 		},
 		alias = {
 			"cutthroat_rat_0071"
 		}
 	},
 	cutthroat_rat_0072 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
+			71,
 			35,
-			17,
-			36,
-			47
+			72,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1727,
-			1735,
-			29,
-			36
+			2592,
+			2617,
+			57,
+			70
 		},
 		alias = {
 			"cutthroat_rat_0073"
 		}
 	},
 	cutthroat_rat_0074 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			40,
-			8,
-			25,
-			47
+			81,
+			16,
+			51,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1571,
-			1581,
-			35,
-			45
+			2447,
+			2729,
+			68,
+			89
 		},
 		alias = {
 			"cutthroat_rat_0075"
 		}
 	},
 	cutthroat_rat_0076 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			39,
-			6,
-			27,
-			47
+			79,
+			12,
+			55,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1571,
-			1833,
-			34,
-			47
+			2447,
+			3393,
+			66,
+			93
 		},
 		alias = {
 			"cutthroat_rat_0077"
 		}
 	},
 	cutthroat_rat_0078 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			38,
-			5,
-			27,
-			47
+			78,
+			11,
+			56,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			2013,
-			452,
-			35,
-			48
+			2447,
+			3293,
+			66,
+			94
 		},
 		alias = {
 			"cutthroat_rat_0079"
 		}
 	},
 	cutthroat_rat_0080 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			37,
-			6,
-			29,
-			47
+			75,
+			14,
+			59,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1571,
-			1886,
-			34,
-			47
+			2447,
+			3492,
+			66,
+			91
 		},
 		alias = {
 			"cutthroat_rat_0081"
 		}
 	},
 	cutthroat_rat_0082 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			33,
-			6,
-			17,
-			45
+			67,
+			13,
+			35,
+			90
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1621,
-			50,
-			49
+			1696,
+			3741,
+			98,
+			97
 		},
 		alias = {
 			"cutthroat_rat_0083"
 		}
 	},
 	cutthroat_rat_0084 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			33,
-			18,
-			15,
-			44
+			67,
+			38,
+			31,
+			89
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1143,
-			52,
-			38
+			1696,
+			2569,
+			102,
+			73
 		},
 		alias = {
 			"cutthroat_rat_0085"
 		}
 	},
 	cutthroat_rat_0086 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			32,
-			27,
-			18,
-			46
+			65,
+			55,
+			37,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			2019,
-			50,
-			27
+			1912,
+			1766,
+			98,
+			53
 		},
 		alias = {
 			"cutthroat_rat_0087"
 		}
 	},
 	cutthroat_rat_0088 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			32,
-			27,
-			28,
-			47
+			65,
+			55,
+			57,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1437,
-			1540,
-			40,
-			26
+			3150,
+			1992,
+			78,
+			50
 		},
 		alias = {
 			"cutthroat_rat_0089",
@@ -5385,460 +5385,460 @@ local a = {
 		}
 	},
 	cutthroat_rat_0098 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			25,
-			36,
-			47
+			62,
+			52,
+			72,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1968,
-			1581,
-			33,
-			28
+			3640,
+			2403,
+			66,
+			53
 		},
 		alias = {
 			"cutthroat_rat_0099"
 		}
 	},
 	cutthroat_rat_0100 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			33,
-			21,
-			35,
-			47
+			67,
+			43,
+			70,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			984,
-			159,
-			32,
-			32
+			4033,
+			1335,
+			63,
+			62
 		},
 		alias = {
 			"cutthroat_rat_0101"
 		}
 	},
 	cutthroat_rat_0102 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			33,
-			16,
-			33,
-			47
+			67,
+			34,
+			66,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1571,
-			1939,
-			34,
-			37
+			2447,
+			2895,
+			67,
+			71
 		},
 		alias = {
 			"cutthroat_rat_0103"
 		}
 	},
 	cutthroat_rat_0104 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			15,
-			29,
-			47
+			60,
+			31,
+			59,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1487,
-			1269,
-			42,
-			38
+			2193,
+			2654,
+			81,
+			74
 		},
 		alias = {
 			"cutthroat_rat_0105"
 		}
 	},
 	cutthroat_rat_0106 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			14,
-			31,
-			47
+			60,
+			30,
+			63,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1575,
-			1414,
-			40,
-			39
+			2365,
+			2322,
+			77,
+			75
 		},
 		alias = {
 			"cutthroat_rat_0107"
 		}
 	},
 	cutthroat_rat_0108 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			15,
+			60,
 			30,
-			47
+			62,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1954,
-			1314,
-			41,
-			38
+			2280,
+			3030,
+			78,
+			75
 		},
 		alias = {
 			"cutthroat_rat_0109"
 		}
 	},
 	cutthroat_rat_0110 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			18,
-			30,
-			47
+			60,
+			36,
+			62,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1390,
-			1414,
-			41,
-			35
+			2280,
+			3269,
+			78,
+			69
 		},
 		alias = {
 			"cutthroat_rat_0111"
 		}
 	},
 	cutthroat_rat_0112 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			22,
-			30,
-			45
+			60,
+			44,
+			62,
+			90
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1390,
-			1536,
-			41,
-			33
+			2280,
+			3419,
+			78,
+			66
 		},
 		alias = {
 			"cutthroat_rat_0113"
 		}
 	},
 	cutthroat_rat_0114 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			36,
-			30,
-			45
+			60,
+			72,
+			62,
+			90
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1695,
-			172,
-			41,
-			19
+			1003,
+			312,
+			78,
+			38
 		},
 		alias = {
 			"cutthroat_rat_0115"
 		}
 	},
 	cutthroat_rat_0116 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			36,
-			30,
-			45
+			60,
+			72,
+			62,
+			90
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1742,
-			172,
-			41,
-			19
+			1087,
+			312,
+			78,
+			38
 		},
 		alias = {
 			"cutthroat_rat_0117"
 		}
 	},
 	cutthroat_rat_0118 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			36,
-			43,
-			44,
-			42
+			74,
+			88,
+			89,
+			86
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			793,
-			422,
-			20,
-			15
+			1673,
+			322,
+			37,
+			26
 		},
 		alias = {}
 	},
 	cutthroat_rat_0119 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			33,
-			30,
-			38,
-			42
+			68,
+			62,
+			77,
+			85
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1727,
-			1924,
-			29,
-			28
+			2592,
+			3100,
+			55,
+			53
 		},
 		alias = {
 			"cutthroat_rat_0120"
 		}
 	},
 	cutthroat_rat_0121 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			41,
-			25,
-			38,
-			43
+			83,
+			51,
+			77,
+			87
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			2027,
-			536,
-			21,
-			32
+			4055,
+			1003,
+			40,
+			62
 		},
 		alias = {}
 	},
 	cutthroat_rat_0122 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			53,
-			35,
-			40,
-			44
+			107,
+			72,
+			80,
+			89
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			113,
-			733,
-			7,
-			21
+			4083,
+			144,
+			13,
+			39
 		},
 		alias = {}
 	},
 	cutthroat_rat_0123 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			45,
-			27,
-			39,
-			41
+			91,
+			55,
+			79,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1796,
-			1893,
-			16,
-			32
+			203,
+			2548,
+			30,
+			61
 		},
 		alias = {
 			"cutthroat_rat_0124"
 		}
 	},
 	cutthroat_rat_0125 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			41,
-			26,
-			39,
-			48
+			84,
+			54,
+			79,
+			96
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1973,
-			1735,
-			20,
-			26
+			3747,
+			2559,
+			37,
+			50
 		},
 		alias = {
 			"cutthroat_rat_0126"
 		}
 	},
 	cutthroat_rat_0127 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			42,
-			27,
-			40,
-			55
+			85,
+			56,
+			82,
+			111
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1269,
-			594,
-			18,
-			18
+			200,
+			3625,
+			33,
+			33
 		},
 		alias = {}
 	},
 	cutthroat_rat_0128 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			38,
-			38,
-			38,
-			44
+			77,
+			78,
+			78,
+			89
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1778,
-			591,
-			24,
-			18
+			1524,
+			1111,
+			45,
+			33
 		},
 		alias = {
 			"cutthroat_rat_0129",
@@ -5846,1204 +5846,1204 @@ local a = {
 		}
 	},
 	cutthroat_rat_0130 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			35,
-			34,
-			36,
-			38
+			72,
+			70,
+			74,
+			78
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1727,
-			1958,
-			29,
-			28
+			3290,
+			2559,
+			54,
+			52
 		},
 		alias = {}
 	},
 	cutthroat_rat_0131 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			35,
-			34,
-			32,
-			38
+			72,
+			70,
+			66,
+			78
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			2007,
-			1581,
-			33,
-			28
+			2523,
+			2940,
+			62,
+			52
 		},
 		alias = {}
 	},
 	cutthroat_rat_0132 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			33,
-			32,
-			37
+			64,
+			67,
+			66,
+			76
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1879,
-			1507,
-			37,
-			30
+			2678,
+			2403,
+			70,
+			57
 		},
 		alias = {}
 	},
 	cutthroat_rat_0133 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			33,
-			30,
-			34
+			64,
+			67,
+			62,
+			70
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1978,
-			1460,
-			39,
-			33
+			2365,
+			3331,
+			74,
+			63
 		},
 		alias = {}
 	},
 	cutthroat_rat_0134 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			41,
-			38,
-			30,
-			34
+			83,
+			78,
+			62,
+			70
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1727,
-			1992,
-			29,
-			28
+			3229,
+			2559,
+			55,
+			52
 		},
 		alias = {}
 	},
 	cutthroat_rat_0135 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			37,
-			37,
-			30,
-			33
+			76,
+			75,
+			62,
+			68
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1890,
-			1581,
-			33,
-			30
+			2523,
+			2752,
+			62,
+			57
 		},
 		alias = {
 			"cutthroat_rat_0136"
 		}
 	},
 	cutthroat_rat_0138 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			39,
-			30,
-			34,
-			48
+			79,
+			60,
+			70,
+			98
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1818,
-			347,
-			27,
-			22
+			2171,
+			1363,
+			51,
+			42
 		},
 		alias = {
 			"cutthroat_rat_0139"
 		}
 	},
 	cutthroat_rat_0140 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			28,
-			16,
-			24,
-			44
+			56,
+			33,
+			48,
+			88
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1251,
-			1073,
-			48,
-			40
+			1808,
+			2258,
+			96,
+			79
 		},
 		alias = {
 			"cutthroat_rat_0141"
 		}
 	},
 	cutthroat_rat_0142 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			24,
-			12,
-			21,
-			41
+			49,
+			25,
+			43,
+			83
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1037,
-			920,
-			55,
-			47
+			1578,
+			2794,
+			108,
+			92
 		},
 		alias = {
 			"cutthroat_rat_0143"
 		}
 	},
 	cutthroat_rat_0144 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
+			46,
 			23,
-			11,
-			18,
-			40
+			38,
+			80
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1507,
-			781,
-			59,
-			49
+			2817,
+			1411,
+			116,
+			97
 		},
 		alias = {
 			"cutthroat_rat_0145"
 		}
 	},
 	cutthroat_rat_0146 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
+			46,
 			23,
-			11,
-			18,
-			40
+			37,
+			81
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1572,
-			781,
-			59,
-			49
+			2571,
+			1411,
+			117,
+			96
 		},
 		alias = {
 			"cutthroat_rat_0147"
 		}
 	},
 	cutthroat_rat_0148 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
+			48,
 			23,
-			11,
-			18,
-			40
+			37,
+			82
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1637,
-			781,
-			59,
-			49
+			3915,
+			1411,
+			115,
+			95
 		},
 		alias = {
 			"cutthroat_rat_0149"
 		}
 	},
 	cutthroat_rat_0150 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			24,
-			10,
-			18,
-			63
+			50,
+			21,
+			38,
+			127
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1189,
-			72,
-			58,
-			27
+			2507,
+			132,
+			112,
+			52
 		},
 		alias = {
 			"cutthroat_rat_0151"
 		}
 	},
 	dreadeye_viper_arrow = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			38,
-			26
+			76,
+			52
 		},
 		trim = {
-			12,
-			9,
-			10,
-			10
+			26,
+			20,
+			20,
+			21
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1983,
-			181,
-			16,
-			7
+			1197,
+			179,
+			30,
+			11
 		},
 		alias = {}
 	},
 	dreadeye_viper_arrow2 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			32,
-			26
+			64,
+			52
 		},
 		trim = {
-			9,
-			9,
-			10,
-			10
+			20,
+			20,
+			20,
+			21
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			108,
-			1603,
-			13,
-			7
+			1233,
+			179,
+			24,
+			11
 		},
 		alias = {}
 	},
 	dreadeye_viper_creep_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			27,
-			24,
-			30,
-			56
+			55,
+			49,
+			60,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			2001,
-			1314,
-			41,
-			38
+			2193,
+			2734,
+			81,
+			74
 		},
 		alias = {}
 	},
 	dreadeye_viper_creep_0002 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			27,
-			24,
-			30,
-			56
+			55,
+			49,
+			60,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1343,
-			1370,
-			41,
-			38
+			2193,
+			2814,
+			81,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0003"
 		}
 	},
 	dreadeye_viper_creep_0004 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			26,
-			23,
-			31,
-			56
+			54,
+			48,
+			62,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1531,
-			1314,
-			41,
-			39
+			2624,
+			2225,
+			80,
+			75
 		},
 		alias = {
 			"dreadeye_viper_creep_0005"
 		}
 	},
 	dreadeye_viper_creep_0006 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			26,
-			24,
-			31,
-			56
+			53,
+			48,
+			62,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1343,
-			1414,
-			41,
-			38
+			2193,
+			2492,
+			81,
+			75
 		},
 		alias = {
 			"dreadeye_viper_creep_0007"
 		}
 	},
 	dreadeye_viper_creep_0008 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			26,
-			23,
-			31,
-			56
+			52,
+			48,
+			63,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1578,
-			1314,
-			41,
-			39
+			2193,
+			2573,
+			81,
+			75
 		},
 		alias = {
 			"dreadeye_viper_creep_0009"
 		}
 	},
 	dreadeye_viper_creep_0010 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			25,
-			23,
-			31,
-			56
+			51,
+			47,
+			63,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1269,
-			42,
-			39
+			2103,
+			3003,
+			82,
+			76
 		},
 		alias = {
 			"dreadeye_viper_creep_0011"
 		}
 	},
 	dreadeye_viper_creep_0012 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			25,
-			23,
-			31,
-			56
+			51,
+			47,
+			63,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1343,
-			1269,
-			42,
-			39
+			2103,
+			3085,
+			82,
+			76
 		},
 		alias = {
 			"dreadeye_viper_creep_0013"
 		}
 	},
 	dreadeye_viper_creep_0014 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			26,
-			24,
-			31,
-			56
+			52,
+			48,
+			62,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1343,
-			1458,
-			41,
-			38
+			2103,
+			3331,
+			82,
+			75
 		},
 		alias = {
 			"dreadeye_viper_creep_0015"
 		}
 	},
 	dreadeye_viper_creep_0016 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			26,
-			24,
-			30,
-			56
+			54,
+			49,
+			61,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1535,
-			1269,
-			42,
-			38
+			2193,
+			2894,
+			81,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0017"
 		}
 	},
 	dreadeye_viper_creep_0018 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			27,
-			24,
-			30,
-			56
+			54,
+			49,
+			60,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1343,
-			1502,
-			41,
-			38
+			2103,
+			3412,
+			82,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0019"
 		}
 	},
 	dreadeye_viper_creep_0020 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			27,
-			23,
-			30,
-			56
+			55,
+			48,
+			61,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1625,
-			1314,
-			41,
-			39
+			2710,
+			2225,
+			80,
+			75
 		},
 		alias = {}
 	},
 	dreadeye_viper_creep_0021 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			26,
-			23,
-			30,
-			56
+			54,
+			47,
+			61,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1391,
-			1269,
-			42,
-			39
+			2193,
+			2410,
+			81,
+			76
 		},
 		alias = {
 			"dreadeye_viper_creep_0022"
 		}
 	},
 	dreadeye_viper_creep_0023 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			26,
-			24,
-			30,
-			56
+			54,
+			49,
+			61,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1583,
-			1269,
-			42,
-			38
+			2193,
+			2974,
+			81,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0024"
 		}
 	},
 	dreadeye_viper_creep_0025 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			26,
-			25,
-			30,
-			56
+			54,
+			51,
+			60,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1314,
-			42,
-			37
+			2103,
+			3812,
+			82,
+			72
 		},
 		alias = {
 			"dreadeye_viper_creep_0026"
 		}
 	},
 	dreadeye_viper_creep_0027 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			27,
-			24,
-			29,
-			56
+			55,
+			49,
+			59,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1631,
-			1269,
-			42,
-			38
+			2103,
+			3492,
+			82,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0028"
 		}
 	},
 	dreadeye_viper_creep_0029 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			28,
-			24,
-			28,
-			56
+			56,
+			49,
+			56,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1679,
-			1269,
-			42,
-			38
+			3192,
+			2049,
+			84,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0030"
 		}
 	},
 	dreadeye_viper_creep_0031 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			28,
-			23,
-			27,
-			56
+			58,
+			47,
+			55,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1245,
-			1627,
-			43,
-			39
+			3821,
+			2049,
+			83,
+			76
 		},
 		alias = {
 			"dreadeye_viper_creep_0032"
 		}
 	},
 	dreadeye_viper_creep_0033 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			28,
-			24,
-			28,
-			56
+			57,
+			49,
+			56,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1727,
-			1269,
-			42,
-			38
+			3910,
+			2049,
+			83,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0034"
 		}
 	},
 	dreadeye_viper_creep_0035 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			28,
-			24,
-			29,
-			56
+			57,
+			50,
+			58,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1343,
-			1546,
-			41,
-			38
+			2193,
+			3534,
+			81,
+			73
 		},
 		alias = {
 			"dreadeye_viper_creep_0036"
 		}
 	},
 	dreadeye_viper_creep_0037 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			27,
-			24,
-			30,
-			56
+			56,
+			50,
+			60,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1343,
-			1590,
-			41,
-			38
+			3484,
+			2225,
+			80,
+			73
 		},
 		alias = {
 			"dreadeye_viper_creep_0038"
 		}
 	},
 	dreadeye_viper_creep_0039 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			27,
-			24,
-			30,
-			56
+			54,
+			49,
+			61,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1343,
-			1634,
-			41,
-			38
+			2193,
+			3054,
+			81,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0040"
 		}
 	},
 	dreadeye_viper_creep_0041 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			33,
-			23,
-			24,
-			56
+			67,
+			47,
+			49,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1672,
-			1314,
-			41,
-			39
+			2538,
+			2225,
+			80,
+			76
 		},
 		alias = {
 			"dreadeye_viper_creep_0042"
 		}
 	},
 	dreadeye_viper_creep_0043 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			33,
-			24,
-			24,
-			56
+			66,
+			49,
+			49,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1343,
-			1678,
-			41,
-			38
+			2193,
+			3134,
+			81,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0044"
 		}
 	},
 	dreadeye_viper_creep_0045 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			32,
-			25,
-			25,
-			56
+			64,
+			51,
+			50,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1578,
-			1370,
-			41,
-			37
+			2103,
+			3890,
+			82,
+			72
 		},
 		alias = {
 			"dreadeye_viper_creep_0046"
 		}
 	},
 	dreadeye_viper_creep_0047 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			31,
-			24,
-			26,
-			56
+			63,
+			49,
+			52,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1343,
-			1722,
-			41,
-			38
+			2193,
+			3214,
+			81,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0048"
 		}
 	},
 	dreadeye_viper_creep_0049 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			29,
-			24,
-			26,
-			56
+			60,
+			49,
+			54,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1245,
-			1672,
-			43,
-			38
+			2103,
+			3572,
+			82,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0050"
 		}
 	},
 	dreadeye_viper_creep_0051 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			29,
-			23,
-			28,
-			56
+			58,
+			47,
+			56,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1719,
-			1314,
-			41,
-			39
+			2103,
+			3167,
+			82,
+			76
 		},
 		alias = {
 			"dreadeye_viper_creep_0052"
 		}
 	},
 	dreadeye_viper_creep_0053 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			29,
-			24,
-			27,
-			56
+			60,
+			49,
+			56,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1775,
-			1269,
-			42,
-			38
+			2968,
+			2225,
+			80,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0054"
 		}
 	},
 	dreadeye_viper_creep_0055 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			30,
-			24,
-			27,
-			56
+			61,
+			50,
+			54,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1343,
-			1766,
-			41,
-			38
+			2193,
+			3613,
+			81,
+			73
 		},
 		alias = {
 			"dreadeye_viper_creep_0056"
 		}
 	},
 	dreadeye_viper_creep_0057 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			32,
-			24,
-			26,
-			56
+			64,
+			50,
+			52,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1621,
-			1414,
-			40,
-			38
+			3570,
+			2225,
+			80,
+			73
 		},
 		alias = {
 			"dreadeye_viper_creep_0058"
 		}
 	},
 	dreadeye_viper_creep_0059 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			32,
-			24,
-			25,
-			56
+			66,
+			49,
+			50,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1343,
-			1810,
-			41,
-			38
+			3054,
+			2225,
+			80,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0060"
 		}
 	},
 	dreadeye_viper_creep_0061 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			27,
-			24,
-			30,
-			56
+			55,
+			49,
+			61,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1343,
-			1854,
-			41,
-			38
+			3140,
+			2225,
+			80,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0062",
@@ -7052,364 +7052,364 @@ local a = {
 		}
 	},
 	dreadeye_viper_creep_0063 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			30,
-			19,
-			23,
-			56
+			60,
+			40,
+			46,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1384,
-			45,
-			43
+			3968,
+			1834,
+			90,
+			83
 		},
 		alias = {
 			"dreadeye_viper_creep_0064"
 		}
 	},
 	dreadeye_viper_creep_0065 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			27,
-			14,
+			54,
 			30,
-			56
+			61,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1390,
-			1314,
-			41,
-			48
+			2193,
+			2225,
+			81,
+			93
 		},
 		alias = {
 			"dreadeye_viper_creep_0066"
 		}
 	},
 	dreadeye_viper_creep_0067 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			24,
-			14,
-			31,
-			56
+			49,
+			29,
+			64,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1245,
-			1474,
-			43,
-			48
+			2103,
+			2402,
+			83,
+			94
 		},
 		alias = {
 			"dreadeye_viper_creep_0068"
 		}
 	},
 	dreadeye_viper_creep_0069 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			23,
-			14,
-			31,
-			56
+			47,
+			30,
+			64,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1202,
-			44,
-			48
+			2103,
+			2049,
+			85,
+			93
 		},
 		alias = {
 			"dreadeye_viper_creep_0070"
 		}
 	},
 	dreadeye_viper_creep_0071 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			23,
-			17,
-			31,
-			56
+			47,
+			35,
+			62,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1545,
-			1202,
-			44,
-			45
+			4009,
+			1671,
+			87,
+			88
 		},
 		alias = {
 			"dreadeye_viper_creep_0072"
 		}
 	},
 	dreadeye_viper_creep_0073 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			25,
-			17,
-			28,
-			56
+			51,
+			36,
+			57,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			2003,
-			920,
-			45,
-			45
+			3245,
+			1923,
+			88,
+			87
 		},
 		alias = {
 			"dreadeye_viper_creep_0074"
 		}
 	},
 	dreadeye_viper_creep_0075 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			28,
-			29,
-			26,
-			56
+			56,
+			59,
+			54,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1930,
-			1122,
-			44,
-			33
+			2010,
+			3493,
+			86,
+			64
 		},
 		alias = {
 			"dreadeye_viper_creep_0076"
 		}
 	},
 	dreadeye_viper_creep_0077 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			26,
-			24,
-			31,
-			56
+			53,
+			49,
+			63,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1343,
-			1898,
-			41,
-			38
+			3226,
+			2225,
+			80,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0078"
 		}
 	},
 	dreadeye_viper_creep_0079 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			27,
-			25,
-			30,
-			56
+			55,
+			51,
+			61,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1625,
-			1370,
-			41,
-			37
+			3656,
+			2225,
+			80,
+			72
 		},
 		alias = {
 			"dreadeye_viper_creep_0080"
 		}
 	},
 	dreadeye_viper_creep_0083 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			27,
-			24,
-			30,
-			56
+			55,
+			49,
+			60,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1343,
-			1942,
-			41,
-			38
+			2193,
+			3294,
+			81,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0084"
 		}
 	},
 	dreadeye_viper_creep_0085 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			25,
-			24,
-			32,
-			56
+			52,
+			49,
+			64,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1343,
-			1986,
-			41,
-			38
+			3312,
+			2225,
+			80,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0086"
 		}
 	},
 	dreadeye_viper_creep_0087 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			22,
-			27,
-			32,
-			56
+			45,
+			54,
+			65,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1505,
-			1161,
-			44,
-			35
+			2010,
+			3273,
+			86,
+			69
 		},
 		alias = {
 			"dreadeye_viper_creep_0088"
 		}
 	},
 	dreadeye_viper_creep_0089 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			21,
-			25,
-			32,
-			56
+			43,
+			51,
+			65,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1616,
-			45,
-			37
+			3715,
+			1923,
+			88,
+			72
 		},
 		alias = {
 			"dreadeye_viper_creep_0090"
 		}
 	},
 	dreadeye_viper_creep_0091 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			21,
-			25,
-			32,
-			56
+			43,
+			50,
+			65,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1659,
-			45,
-			37
+			3621,
+			1923,
+			88,
+			73
 		},
 		alias = {
 			"dreadeye_viper_creep_0092",
@@ -7417,516 +7417,516 @@ local a = {
 		}
 	},
 	dreadeye_viper_creep_0094 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			32,
-			23,
-			19,
-			56
+			66,
+			47,
+			39,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1560,
-			47,
-			39
+			3095,
+			1834,
+			91,
+			76
 		},
 		alias = {
 			"dreadeye_viper_creep_0095"
 		}
 	},
 	dreadeye_viper_creep_0096 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			33,
-			23,
-			21,
-			56
+			67,
+			47,
+			42,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1845,
-			1202,
-			44,
-			39
+			2010,
+			2049,
+			87,
+			76
 		},
 		alias = {
 			"dreadeye_viper_creep_0097"
 		}
 	},
 	dreadeye_viper_creep_0098 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			33,
-			29,
-			20,
-			56
+			67,
+			60,
+			40,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1777,
-			1122,
-			45,
-			33
+			3055,
+			1923,
+			89,
+			63
 		},
 		alias = {}
 	},
 	dreadeye_viper_creep_0099 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			33,
-			29,
-			20,
-			56
+			67,
+			60,
+			40,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1828,
-			1122,
-			45,
-			33
+			3150,
+			1923,
+			89,
+			63
 		},
 		alias = {}
 	},
 	dreadeye_viper_creep_0100 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			33,
-			27,
-			21,
-			56
+			67,
+			54,
+			44,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1555,
-			1161,
-			44,
-			35
+			2558,
+			2049,
+			85,
+			69
 		},
 		alias = {
 			"dreadeye_viper_creep_0101"
 		}
 	},
 	dreadeye_viper_creep_0102 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			29,
-			24,
-			25,
-			56
+			59,
+			49,
+			52,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1895,
-			1202,
-			44,
-			38
+			2376,
+			2049,
+			85,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0103"
 		}
 	},
 	dreadeye_viper_creep_0104 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			28,
-			25,
-			28,
-			56
+			57,
+			52,
+			57,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1357,
-			42,
-			37
+			2193,
+			2148,
+			82,
+			71
 		},
 		alias = {
 			"dreadeye_viper_creep_0105"
 		}
 	},
 	dreadeye_viper_creep_0106 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			27,
-			23,
-			30,
-			56
+			55,
+			48,
+			61,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1766,
-			1314,
-			41,
-			39
+			2796,
+			2225,
+			80,
+			75
 		},
 		alias = {
 			"dreadeye_viper_creep_0107"
 		}
 	},
 	dreadeye_viper_creep_0108 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			27,
-			24,
-			30,
-			56
+			55,
+			49,
+			60,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1390,
-			1370,
-			41,
-			38
+			2193,
+			3374,
+			81,
+			74
 		},
 		alias = {
 			"dreadeye_viper_creep_0109"
 		}
 	},
 	dreadeye_viper_creep_0110 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			31,
-			15,
-			28,
-			56
+			64,
+			30,
+			57,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1437,
-			1698,
-			39,
-			47
+			2365,
+			2571,
+			75,
+			93
 		},
 		alias = {
 			"dreadeye_viper_creep_0111"
 		}
 	},
 	dreadeye_viper_creep_0112 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			30,
-			10,
-			28,
-			56
+			61,
+			22,
+			56,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1390,
-			1614,
-			40,
-			52
+			2280,
+			2322,
+			79,
+			101
 		},
 		alias = {
 			"dreadeye_viper_creep_0113"
 		}
 	},
 	dreadeye_viper_creep_0114 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			29,
-			9,
-			28,
-			56
+			58,
+			20,
+			56,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1970,
-			41,
-			53
+			2103,
+			2808,
+			82,
+			103
 		},
 		alias = {
 			"dreadeye_viper_creep_0115"
 		}
 	},
 	dreadeye_viper_creep_0116 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			26,
-			16,
-			28,
-			56
+			54,
+			33,
+			56,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1445,
-			1202,
-			44,
-			46
+			2010,
+			2904,
+			86,
+			90
 		},
 		alias = {
 			"dreadeye_viper_creep_0117"
 		}
 	},
 	dreadeye_viper_creep_0118 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			26,
-			26,
-			26,
-			56
+			53,
+			52,
+			52,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1767,
-			46,
-			36
+			3289,
+			1834,
+			91,
+			71
 		},
 		alias = {
 			"dreadeye_viper_creep_0119"
 		}
 	},
 	dreadeye_viper_creep_0120 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			30,
-			25,
-			14,
-			56
+			62,
+			52,
+			29,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1943,
-			920,
-			54,
-			37
+			2592,
+			1671,
+			105,
+			71
 		},
 		alias = {
 			"dreadeye_viper_creep_0121"
 		}
 	},
 	dreadeye_viper_creep_0122 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			33,
-			25,
-			11,
-			55
+			67,
+			52,
+			24,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1883,
-			920,
-			54,
-			38
+			2481,
+			1671,
+			105,
+			72
 		},
 		alias = {
 			"dreadeye_viper_creep_0123"
 		}
 	},
 	dreadeye_viper_creep_0124 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			37,
-			36,
-			9,
-			53
+			76,
+			73,
+			20,
+			108
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1022,
-			159,
-			52,
-			29
+			3226,
+			1603,
+			100,
+			55
 		},
 		alias = {
 			"dreadeye_viper_creep_0125"
 		}
 	},
 	dreadeye_viper_creep_0126 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			37,
-			39,
-			9,
-			53
+			76,
+			79,
+			20,
+			108
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1303,
-			248,
-			52,
-			26
+			1696,
+			3120,
+			100,
+			49
 		},
 		alias = {
 			"dreadeye_viper_creep_0127"
 		}
 	},
 	dreadeye_viper_creep_0128 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			37,
-			37,
-			9,
-			53
+			76,
+			75,
+			20,
+			108
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			778,
-			247,
-			52,
-			28
+			3342,
+			1599,
+			100,
+			53
 		},
 		alias = {
 			"dreadeye_viper_creep_0129"
 		}
 	},
 	dreadeye_viper_creep_0130 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			118
+			196,
+			236
 		},
 		trim = {
-			37,
-			38,
-			9,
-			53
+			76,
+			77,
+			20,
+			108
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			322,
-			249,
-			52,
-			27
+			1696,
+			3063,
+			100,
+			51
 		},
 		alias = {
 			"dreadeye_viper_creep_0131",
@@ -7937,282 +7937,282 @@ local a = {
 		}
 	},
 	dreadeye_viper_ranged_attack_hit_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			48,
-			44
+			96,
+			88
 		},
 		trim = {
-			16,
-			17,
-			19,
-			16
+			33,
+			35,
+			39,
+			34
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			108,
-			1569,
-			13,
-			11
+			3306,
+			169,
+			24,
+			19
 		},
 		alias = {
 			"dreadeye_viper_ranged_attack_hit_0002"
 		}
 	},
 	dreadeye_viper_ranged_attack_hit_0003 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			48,
-			44
+			96,
+			88
 		},
 		trim = {
-			14,
-			14,
-			16,
-			14
+			29,
+			30,
+			33,
+			30
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1342,
-			594,
-			18,
-			16
+			2604,
+			837,
+			34,
+			28
 		},
 		alias = {
 			"dreadeye_viper_ranged_attack_hit_0004"
 		}
 	},
 	dreadeye_viper_ranged_attack_hit_0005 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			48,
-			44
+			96,
+			88
 		},
 		trim = {
-			12,
-			13,
-			14,
-			13
+			25,
+			28,
+			29,
+			27
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1792,
-			248,
-			22,
-			18
+			2748,
+			1106,
+			42,
+			33
 		},
 		alias = {
 			"dreadeye_viper_ranged_attack_hit_0006"
 		}
 	},
 	dreadeye_viper_ranged_attack_hit_0007 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			48,
-			44
+			96,
+			88
 		},
 		trim = {
-			11,
-			14,
-			13,
-			12
+			22,
+			29,
+			27,
+			26
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1851,
-			591,
-			24,
-			18
+			1471,
+			1111,
+			47,
+			33
 		},
 		alias = {
 			"dreadeye_viper_ranged_attack_hit_0008"
 		}
 	},
 	dreadeye_viper_ranged_attack_hit_0009 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			48,
-			44
+			96,
+			88
 		},
 		trim = {
-			10,
-			15,
-			12,
-			11
+			21,
+			31,
+			26,
+			24
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1727,
-			2026,
-			26,
-			18
+			3119,
+			460,
+			49,
+			33
 		},
 		alias = {
 			"dreadeye_viper_ranged_attack_hit_0010"
 		}
 	},
 	dreadeye_viper_ranged_attack_hit_0011 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			48,
-			44
+			96,
+			88
 		},
 		trim = {
 			0,
 			0,
-			46,
-			42
+			94,
+			86
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			628,
-			97,
+			1009,
+			188,
 			2,
 			2
 		},
 		alias = {}
 	},
 	dreadeye_viper_ranged_attack_particle_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			26,
-			26
+			52,
+			52
 		},
 		trim = {
-			9,
-			10,
-			10,
-			9
+			20,
+			20,
+			20,
+			19
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			113,
-			777,
-			7,
-			7
+			1474,
+			173,
+			12,
+			13
 		},
 		alias = {
 			"dreadeye_viper_ranged_attack_particle_0002"
 		}
 	},
 	dreadeye_viper_ranged_attack_particle_0003 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			26,
-			26
+			52,
+			52
 		},
 		trim = {
-			10,
-			10,
-			10,
-			10
+			20,
+			21,
+			21,
+			20
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			964,
-			93,
-			6,
-			6
+			1263,
+			179,
+			11,
+			11
 		},
 		alias = {
 			"dreadeye_viper_ranged_attack_particle_0004"
 		}
 	},
 	dreadeye_viper_ranged_attack_particle_0005 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			26,
-			26
+			52,
+			52
 		},
 		trim = {
-			10,
-			10,
-			10,
-			10
+			22,
+			22,
+			22,
+			22
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			93,
-			6,
-			6
+			970,
+			180,
+			8,
+			8
 		},
 		alias = {
 			"dreadeye_viper_ranged_attack_particle_0006"
 		}
 	},
 	dreadeye_viper_ranged_attack_particle_0007 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			26,
-			26
+			52,
+			52
 		},
 		trim = {
-			10,
-			11,
-			11,
-			11
+			22,
+			22,
+			23,
+			23
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			988,
-			93,
-			5,
-			4
+			984,
+			180,
+			7,
+			7
 		},
 		alias = {
 			"dreadeye_viper_ranged_attack_particle_0008"
 		}
 	},
 	dreadeye_viper_ranged_attack_particle_0009 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			26,
-			26
+			52,
+			52
 		},
 		trim = {
 			0,
 			0,
-			24,
-			24
+			50,
+			50
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			636,
-			97,
+			1017,
+			180,
 			2,
 			2
 		},
@@ -8221,26 +8221,26 @@ local a = {
 		}
 	},
 	hog_invader_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			26,
-			41,
-			47
+			80,
+			52,
+			82,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1690,
-			1951,
-			30,
-			27
+			2523,
+			3931,
+			58,
+			53
 		},
 		alias = {
 			"hog_invader_0062",
@@ -8249,1094 +8249,1094 @@ local a = {
 		}
 	},
 	hog_invader_0002 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			41,
-			25,
-			40,
-			47
+			83,
+			51,
+			81,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1762,
-			1735,
-			29,
-			28
+			2592,
+			2757,
+			56,
+			54
 		},
 		alias = {
 			"hog_invader_0003"
 		}
 	},
 	hog_invader_0004 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			42,
-			24,
-			41,
-			47
+			85,
+			48,
+			82,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1895,
-			1769,
-			27,
-			29
+			2592,
+			3572,
+			53,
+			57
 		},
 		alias = {}
 	},
 	hog_invader_0005 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			43,
-			23,
-			40,
-			47
+			88,
+			46,
+			81,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1862,
-			1769,
-			27,
-			30
+			2592,
+			4023,
+			51,
+			59
 		},
 		alias = {
 			"hog_invader_0006"
 		}
 	},
 	hog_invader_0007 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			43,
-			22,
-			39,
-			47
+			88,
+			45,
+			80,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1762,
-			1940,
-			28,
-			31
+			2592,
+			3697,
+			52,
+			60
 		},
 		alias = {}
 	},
 	hog_invader_0008 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			43,
-			24,
-			39,
-			47
+			88,
+			49,
+			79,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1762,
-			2013,
-			28,
-			29
+			2592,
+			3635,
+			53,
+			56
 		},
 		alias = {
 			"hog_invader_0009"
 		}
 	},
 	hog_invader_0010 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			43,
-			28,
-			39,
-			47
+			88,
+			57,
+			78,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			2011,
-			1703,
-			28,
-			25
+			3470,
+			2559,
+			54,
+			48
 		},
 		alias = {
 			"hog_invader_0011"
 		}
 	},
 	hog_invader_0012 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			43,
-			26,
-			39,
-			47
+			88,
+			54,
+			78,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1831,
-			1735,
-			28,
-			27
+			3350,
+			2559,
+			54,
+			51
 		},
 		alias = {
 			"hog_invader_0013"
 		}
 	},
 	hog_invader_0014 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			43,
-			23,
-			39,
-			47
+			87,
+			46,
+			79,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1762,
-			1977,
-			28,
-			30
+			2592,
+			3315,
+			54,
+			59
 		},
 		alias = {}
 	},
 	hog_invader_0015 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			43,
-			21,
-			40,
-			47
+			86,
+			44,
+			80,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			2021,
-			619,
-			27,
-			32
+			2592,
+			3248,
+			54,
+			61
 		},
 		alias = {
 			"hog_invader_0016"
 		}
 	},
 	hog_invader_0017 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			41,
-			23,
-			40,
-			47
+			83,
+			47,
+			81,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1727,
-			1853,
-			29,
-			30
+			2592,
+			2693,
+			56,
+			58
 		},
 		alias = {}
 	},
 	hog_invader_0018 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			41,
-			25,
-			39,
-			47
+			82,
+			51,
+			80,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			2018,
-			328,
-			30,
-			28
+			2523,
+			3871,
+			58,
+			54
 		},
 		alias = {
 			"hog_invader_0019"
 		}
 	},
 	hog_invader_0020 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			41,
-			28,
-			39,
-			47
+			82,
+			56,
+			80,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1763,
-			1703,
-			30,
-			25
+			2976,
+			2559,
+			58,
+			49
 		},
 		alias = {
 			"hog_invader_0021"
 		}
 	},
 	hog_invader_0022 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			24,
-			40,
-			47
+			79,
+			49,
+			80,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1880,
-			1667,
-			31,
-			29
+			2523,
+			3377,
+			61,
+			56
 		},
 		alias = {
 			"hog_invader_0023"
 		}
 	},
 	hog_invader_0024 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			22,
-			40,
-			47
+			78,
+			44,
+			80,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			394,
-			159,
-			31,
-			31
+			2523,
+			2685,
+			62,
+			61
 		},
 		alias = {}
 	},
 	hog_invader_0025 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			20,
-			40,
-			47
+			79,
+			41,
+			80,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1690,
-			1743,
-			31,
-			33
+			2523,
+			3048,
+			61,
+			64
 		},
 		alias = {
 			"hog_invader_0026"
 		}
 	},
 	hog_invader_0027 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			19,
+			78,
 			40,
-			47
+			80,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1690,
-			1703,
-			31,
-			34
+			2523,
+			2614,
+			62,
+			65
 		},
 		alias = {}
 	},
 	hog_invader_0028 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			38,
-			23,
-			40,
-			47
+			77,
+			47,
+			80,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1690,
-			1667,
-			32,
-			30
+			3878,
+			292,
+			63,
+			58
 		},
 		alias = {
 			"hog_invader_0029"
 		}
 	},
 	hog_invader_0030 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			38,
-			26,
-			39,
-			47
+			77,
+			54,
+			80,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1651,
-			1871,
-			33,
-			27
+			3992,
+			2472,
+			63,
+			51
 		},
 		alias = {
 			"hog_invader_0031"
 		}
 	},
 	hog_invader_0032 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			23,
-			39,
-			47
+			78,
+			48,
+			80,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1728,
-			1667,
-			32,
-			30
+			2523,
+			2815,
+			62,
+			57
 		},
 		alias = {
 			"hog_invader_0033"
 		}
 	},
 	hog_invader_0034 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			38,
-			21,
-			39,
-			47
+			78,
+			43,
+			79,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1080,
-			159,
-			33,
-			32
+			3923,
+			2472,
+			63,
+			62
 		},
 		alias = {}
 	},
 	hog_invader_0035 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			20,
-			39,
-			47
+			78,
+			41,
+			79,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1651,
-			1970,
-			32,
-			33
+			4033,
+			1265,
+			63,
+			64
 		},
 		alias = {
 			"hog_invader_0036"
 		}
 	},
 	hog_invader_0037 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			21,
-			39,
-			47
+			79,
+			43,
+			80,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1651,
-			2009,
-			32,
-			32
+			2523,
+			3118,
+			61,
+			62
 		},
 		alias = {}
 	},
 	hog_invader_0038 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			24,
-			39,
-			47
+			78,
+			49,
+			80,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1766,
-			1667,
-			32,
-			29
+			2523,
+			2878,
+			62,
+			56
 		},
 		alias = {
 			"hog_invader_0039"
 		}
 	},
 	hog_invader_0040 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			38,
-			27,
-			39,
-			47
+			78,
+			56,
+			79,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1736,
-			1549,
-			33,
-			26
+			2523,
+			2559,
+			63,
+			49
 		},
 		alias = {
 			"hog_invader_0041"
 		}
 	},
 	hog_invader_0042 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			24,
-			37,
-			47
+			79,
+			49,
+			74,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1732,
-			1581,
-			34,
-			29
+			3278,
+			2403,
+			67,
+			56
 		},
 		alias = {
 			"hog_invader_0043"
 		}
 	},
 	hog_invader_0044 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			22,
-			37,
-			47
+			79,
+			44,
+			75,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1692,
-			1581,
-			34,
-			31
+			3496,
+			2403,
+			66,
+			61
 		},
 		alias = {}
 	},
 	hog_invader_0045 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			20,
-			37,
-			47
+			79,
+			41,
+			74,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1612,
-			1581,
-			34,
-			33
+			2447,
+			3047,
+			67,
+			64
 		},
 		alias = {
 			"hog_invader_0046"
 		}
 	},
 	hog_invader_0047 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			19,
-			36,
-			47
+			79,
+			40,
+			73,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1571,
-			1718,
-			35,
-			34
+			2447,
+			2824,
+			68,
+			65
 		},
 		alias = {}
 	},
 	hog_invader_0048 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			23,
-			34,
-			47
+			79,
+			47,
+			69,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1922,
-			1507,
-			37,
-			30
+			2365,
+			3695,
+			72,
+			58
 		},
 		alias = {
 			"hog_invader_0049"
 		}
 	},
 	hog_invader_0050 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			26,
-			34,
-			47
+			79,
+			54,
+			68,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1528,
-			1582,
-			37,
-			27
+			2365,
+			3555,
+			73,
+			51
 		},
 		alias = {
 			"hog_invader_0051"
 		}
 	},
 	hog_invader_0052 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			23,
-			35,
-			47
+			78,
+			48,
+			70,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1528,
-			1794,
-			36,
-			30
+			2365,
+			3759,
+			72,
+			57
 		},
 		alias = {
 			"hog_invader_0053"
 		}
 	},
 	hog_invader_0054 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			21,
-			36,
-			47
+			78,
+			43,
+			73,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1571,
-			1758,
-			35,
-			32
+			2754,
+			2403,
+			69,
+			62
 		},
 		alias = {}
 	},
 	hog_invader_0055 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			20,
-			37,
-			47
+			78,
+			41,
+			75,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1652,
-			1581,
-			34,
-			33
+			2447,
+			3117,
+			67,
+			64
 		},
 		alias = {
 			"hog_invader_0056"
 		}
 	},
 	hog_invader_0057 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			21,
-			38,
-			47
+			79,
+			43,
+			76,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1812,
-			1581,
-			33,
-			32
+			4031,
+			1517,
+			65,
+			62
 		},
 		alias = {}
 	},
 	hog_invader_0058 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			24,
-			38,
-			47
+			79,
+			49,
+			77,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1929,
-			1581,
-			33,
-			29
+			3998,
+			2403,
+			64,
+			56
 		},
 		alias = {
 			"hog_invader_0059"
 		}
 	},
 	hog_invader_0060 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			38,
-			27,
-			36,
-			47
+			78,
+			56,
+			74,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1571,
-			1549,
-			36,
-			26
+			3204,
+			2403,
+			68,
+			49
 		},
 		alias = {
 			"hog_invader_0061"
 		}
 	},
 	hog_invader_0063 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			39,
-			27,
-			41,
-			47
+			79,
+			55,
+			83,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1727,
-			1703,
-			30,
-			26
+			2912,
+			2559,
+			58,
+			50
 		},
 		alias = {
 			"hog_invader_0064"
 		}
 	},
 	hog_invader_0065 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			22,
-			22,
-			40,
-			47
+			45,
+			45,
+			81,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1591,
-			1035,
-			48,
-			31
+			2629,
+			1766,
+			94,
+			60
 		},
 		alias = {
 			"hog_invader_0066"
 		}
 	},
 	hog_invader_0067 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			20,
-			21,
 			40,
-			47
+			43,
+			82,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1035,
-			50,
-			32
+			1808,
+			1766,
+			98,
+			62
 		},
 		alias = {
 			"hog_invader_0068"
 		}
 	},
 	hog_invader_0069 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			19,
-			20,
-			41,
-			47
+			38,
+			42,
+			83,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1941,
-			50,
-			33
+			1696,
+			3513,
+			99,
+			63
 		},
 		alias = {
 			"hog_invader_0070"
 		}
 	},
 	hog_invader_0071 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			43,
-			14,
-			20,
-			43
+			88,
+			29,
+			42,
+			87
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1415,
-			47,
-			43
+			1911,
+			2902,
+			90,
+			84
 		},
 		alias = {
 			"hog_invader_0072"
 		}
 	},
 	hog_invader_0073 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			43,
-			20,
-			20,
-			46
+			88,
+			41,
+			41,
+			94
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1859,
-			47,
-			34
+			3871,
+			1834,
+			91,
+			65
 		},
 		alias = {
 			"hog_invader_0074"
 		}
 	},
 	hog_invader_0075 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			43,
-			29,
-			20,
-			45
+			88,
+			59,
+			41,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			2018,
-			47,
-			26
+			2410,
+			135,
+			91,
+			49
 		},
 		alias = {
 			"hog_invader_0076",
@@ -9345,338 +9345,338 @@ local a = {
 		}
 	},
 	hog_invader_0079 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			43,
-			24,
-			28,
-			47
+			88,
+			48,
+			57,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1483,
-			1546,
-			39,
-			29
+			3684,
+			2322,
+			75,
+			57
 		},
 		alias = {
 			"hog_invader_0080"
 		}
 	},
 	hog_invader_0081 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			43,
-			24,
-			38,
-			47
+			88,
+			48,
+			77,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1727,
-			1889,
-			29,
-			29
+			2592,
+			3037,
+			55,
+			57
 		},
 		alias = {
 			"hog_invader_0082"
 		}
 	},
 	hog_invader_0083 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			42,
-			25,
-			40,
-			47
+			84,
+			51,
+			82,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1797,
-			1735,
-			28,
-			28
+			2592,
+			3380,
+			54,
+			54
 		},
 		alias = {
 			"hog_invader_0084"
 		}
 	},
 	hog_invader_0087 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			35,
-			13,
-			45,
-			47
+			70,
+			27,
+			92,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			2018,
-			282,
-			30,
-			40
+			2523,
+			3715,
+			58,
+			78
 		},
 		alias = {
 			"hog_invader_0088"
 		}
 	},
 	hog_invader_0089 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			27,
-			10,
-			55,
-			47
+			54,
+			21,
+			111,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1762,
-			1769,
-			28,
-			43
+			2592,
+			2817,
+			55,
+			84
 		},
 		alias = {
 			"hog_invader_0090"
 		}
 	},
 	hog_invader_0091 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
+			44,
 			22,
-			11,
-			60,
-			47
+			122,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1762,
-			1818,
-			28,
-			42
+			2592,
+			3159,
+			54,
+			83
 		},
 		alias = {
 			"hog_invader_0092"
 		}
 	},
 	hog_invader_0093 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			13,
-			19,
-			59,
-			38
+			27,
+			39,
+			119,
+			78
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1483,
-			1742,
-			38,
-			43
+			2365,
+			3090,
+			74,
+			83
 		},
 		alias = {
 			"hog_invader_0094"
 		}
 	},
 	hog_invader_0095 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			11,
-			32,
-			60,
-			40
+			22,
+			65,
+			120,
+			81
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1483,
-			1581,
-			39,
-			28
+			4018,
+			1766,
+			78,
+			54
 		},
 		alias = {
 			"hog_invader_0096"
 		}
 	},
 	hog_invader_0097 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			9,
-			39,
-			57,
-			39
+			20,
+			79,
+			115,
+			78
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1768,
-			347,
-			44,
-			22
+			2770,
+			1999,
+			85,
+			43
 		},
 		alias = {
 			"hog_invader_0098"
 		}
 	},
 	hog_invader_0099 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			9,
-			39,
-			57,
-			39
+			20,
+			79,
+			114,
+			78
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1410,
-			508,
-			44,
-			22
+			2675,
+			2000,
+			86,
+			43
 		},
 		alias = {
 			"hog_invader_0100"
 		}
 	},
 	hog_invader_0101 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			9,
-			39,
-			56,
-			39
+			20,
+			79,
+			112,
+			78
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1216,
-			254,
-			45,
-			22
+			2625,
+			132,
+			88,
+			43
 		},
 		alias = {
 			"hog_invader_0102"
 		}
 	},
 	hog_invader_0103 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			100
+			220,
+			200
 		},
 		trim = {
-			9,
-			39,
-			56,
-			39
+			20,
+			79,
+			112,
+			78
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1684,
-			347,
-			45,
-			22
+			1911,
+			4051,
+			88,
+			43
 		},
 		alias = {
 			"hog_invader_0104"
 		}
 	},
 	patrolling_vulture_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			28,
-			9,
-			23,
-			46
+			58,
+			19,
+			48,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1183,
-			49,
-			45
+			1808,
+			3985,
+			94,
+			89
 		},
 		alias = {
 			"patrolling_vulture_0002",
@@ -9685,26 +9685,26 @@ local a = {
 		}
 	},
 	patrolling_vulture_0003 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			25,
-			22,
-			34
+			59,
+			50,
+			46,
+			70
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1282,
-			49,
-			41
+			1808,
+			3190,
+			95,
+			80
 		},
 		alias = {
 			"patrolling_vulture_0004",
@@ -9713,26 +9713,26 @@ local a = {
 		}
 	},
 	patrolling_vulture_0005 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			23,
-			22,
-			37
+			60,
+			48,
+			45,
+			76
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1470,
-			49,
-			40
+			1808,
+			3276,
+			95,
+			76
 		},
 		alias = {
 			"patrolling_vulture_0006",
@@ -9741,26 +9741,26 @@ local a = {
 		}
 	},
 	patrolling_vulture_0007 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			23,
-			22,
-			46
+			60,
+			46,
+			45,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1426,
-			1035,
-			49,
-			31
+			2326,
+			1766,
+			95,
+			62
 		},
 		alias = {
 			"patrolling_vulture_0008",
@@ -9769,26 +9769,26 @@ local a = {
 		}
 	},
 	patrolling_vulture_0009 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			23,
-			22,
-			49
+			60,
+			46,
+			45,
+			100
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1536,
-			1035,
-			49,
-			28
+			2427,
+			1766,
+			95,
+			54
 		},
 		alias = {
 			"patrolling_vulture_0010",
@@ -9797,26 +9797,26 @@ local a = {
 		}
 	},
 	patrolling_vulture_0011 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			30,
-			10,
-			23,
-			47
+			60,
+			22,
+			46,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1464,
-			47,
-			43
+			1911,
+			1834,
+			94,
+			83
 		},
 		alias = {
 			"patrolling_vulture_0012",
@@ -9825,26 +9825,26 @@ local a = {
 		}
 	},
 	patrolling_vulture_0013 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			28,
-			5,
-			23,
-			46
+			58,
+			12,
+			47,
+			93
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1073,
-			49,
-			49
+			1808,
+			2810,
+			95,
+			95
 		},
 		alias = {
 			"patrolling_vulture_0014",
@@ -9853,26 +9853,26 @@ local a = {
 		}
 	},
 	patrolling_vulture_0015 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			5,
-			23,
-			46
+			59,
+			10,
+			48,
+			93
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1891,
-			48,
-			49
+			1911,
+			1923,
+			93,
+			97
 		},
 		alias = {
 			"patrolling_vulture_0016",
@@ -9881,648 +9881,648 @@ local a = {
 		}
 	},
 	patrolling_vulture_0033 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			23,
-			8,
-			19,
-			44
+			46,
+			17,
+			39,
+			89
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			1999,
-			58,
-			48
+			1455,
+			3236,
+			115,
+			94
 		},
 		alias = {
 			"patrolling_vulture_0034"
 		}
 	},
 	patrolling_vulture_0035 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			26,
-			25,
-			22,
-			34
+			53,
+			51,
+			46,
+			70
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1925,
-			974,
-			52,
-			41
+			1696,
+			2828,
+			101,
+			79
 		},
 		alias = {
 			"patrolling_vulture_0036"
 		}
 	},
 	patrolling_vulture_0037 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			24,
-			25,
-			36
+			60,
+			49,
+			52,
+			74
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1494,
-			46,
-			40
+			3527,
+			1923,
+			88,
+			77
 		},
 		alias = {
 			"patrolling_vulture_0038"
 		}
 	},
 	patrolling_vulture_0039 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			25,
-			23,
-			21,
-			42
+			51,
+			47,
+			43,
+			85
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1336,
-			974,
-			54,
-			35
+			2147,
+			1671,
+			106,
+			68
 		},
 		alias = {
 			"patrolling_vulture_0040"
 		}
 	},
 	patrolling_vulture_0041 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			21,
-			22,
-			17,
-			47
+			43,
+			46,
+			35,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1852,
-			67,
-			62,
-			31
+			3147,
+			127,
+			122,
+			59
 		},
 		alias = {
 			"patrolling_vulture_0042"
 		}
 	},
 	patrolling_vulture_0043 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			22,
-			9,
-			18,
-			46
+			45,
+			19,
+			37,
+			93
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1178,
-			781,
-			60,
-			45
+			1951,
+			1411,
+			118,
+			88
 		},
 		alias = {
 			"patrolling_vulture_0044"
 		}
 	},
 	patrolling_vulture_0045 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			22,
-			3,
-			18,
-			45
+			46,
+			8,
+			38,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			781,
-			60,
-			52
+			1455,
+			2557,
+			116,
+			101
 		},
 		alias = {
 			"patrolling_vulture_0046"
 		}
 	},
 	patrolling_vulture_0047 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			25,
-			2,
-			21,
-			44
+			50,
+			5,
+			43,
+			90
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1036,
-			974,
-			54,
-			54
+			1578,
+			3484,
+			107,
+			105
 		},
 		alias = {
 			"patrolling_vulture_0048"
 		}
 	},
 	patrolling_vulture_0049 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			22,
-			8,
-			18,
-			43
+			45,
+			17,
+			37,
+			87
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1112,
-			781,
-			60,
-			49
+			1827,
+			1411,
+			118,
+			96
 		},
 		alias = {
 			"patrolling_vulture_0050"
 		}
 	},
 	patrolling_vulture_0051 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			25,
-			23,
-			22,
-			35
+			52,
+			47,
+			44,
+			71
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1514,
-			974,
-			53,
-			42
+			2813,
+			1671,
+			104,
+			82
 		},
 		alias = {
 			"patrolling_vulture_0052"
 		}
 	},
 	patrolling_vulture_0053 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			20,
-			25,
-			38
+			59,
+			42,
+			51,
+			78
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1399,
-			46,
-			42
+			1911,
+			2992,
+			90,
+			80
 		},
 		alias = {
 			"patrolling_vulture_0054"
 		}
 	},
 	patrolling_vulture_0055 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			27,
-			19,
-			23,
-			46
+			55,
+			40,
+			47,
+			94
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1820,
-			50,
-			35
+			1696,
+			4022,
+			98,
+			66
 		},
 		alias = {
 			"patrolling_vulture_0056"
 		}
 	},
 	patrolling_vulture_0057 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			20,
-			19,
-			17,
-			51
+			42,
+			38,
+			34,
+			102
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1633,
-			69,
-			63,
-			30
+			2935,
+			123,
+			124,
+			60
 		},
 		alias = {
 			"patrolling_vulture_0058"
 		}
 	},
 	patrolling_vulture_0059 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			21,
-			7,
-			17,
-			49
+			44,
+			15,
+			36,
+			98
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1953,
-			619,
-			62,
-			44
+			1327,
+			3013,
+			120,
+			87
 		},
 		alias = {
 			"patrolling_vulture_0060"
 		}
 	},
 	patrolling_vulture_0061 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			22,
-			3,
-			18,
-			45
+			45,
+			8,
+			37,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			914,
-			781,
-			60,
-			52
+			1455,
+			1411,
+			118,
+			100
 		},
 		alias = {
 			"patrolling_vulture_0062"
 		}
 	},
 	patrolling_vulture_0063 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			24,
-			2,
-			20,
-			44
+			49,
+			5,
+			42,
+			90
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			1346,
-			56,
-			54
+			3573,
+			1517,
+			109,
+			105
 		},
 		alias = {
 			"patrolling_vulture_0064"
 		}
 	},
 	patrolling_vulture_0065 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
+			57,
 			28,
-			13,
-			28,
-			41
+			58,
+			83
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1495,
-			1202,
-			44,
-			46
+			2285,
+			2049,
+			85,
+			89
 		},
 		alias = {
 			"patrolling_vulture_0066"
 		}
 	},
 	patrolling_vulture_0067 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			28,
-			13,
-			28,
-			40
+			57,
+			26,
+			58,
+			82
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1345,
-			1202,
-			44,
-			47
+			2194,
+			2049,
+			85,
+			92
 		},
 		alias = {
 			"patrolling_vulture_0068"
 		}
 	},
 	patrolling_vulture_0069 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			28,
-			13,
-			28,
-			40
+			57,
+			26,
+			58,
+			80
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1395,
-			1202,
-			44,
-			47
+			2010,
+			3983,
+			85,
+			94
 		},
 		alias = {
 			"patrolling_vulture_0070"
 		}
 	},
 	patrolling_vulture_0071 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			32,
-			13,
-			28,
-			39
+			65,
+			26,
+			57,
+			79
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1390,
-			1672,
-			40,
-			48
+			2280,
+			2670,
+			78,
+			95
 		},
 		alias = {
 			"patrolling_vulture_0072"
 		}
 	},
 	patrolling_vulture_0073 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
+			65,
 			32,
-			15,
-			29,
-			43
+			60,
+			87
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1437,
-			1751,
-			39,
-			42
+			2365,
+			2670,
+			75,
+			81
 		},
 		alias = {
 			"patrolling_vulture_0074"
 		}
 	},
 	patrolling_vulture_0075 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			42,
-			14,
-			33,
-			41
+			86,
+			30,
+			68,
+			83
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1796,
-			1806,
-			25,
-			45
+			2655,
+			2687,
+			46,
+			87
 		},
 		alias = {
 			"patrolling_vulture_0076"
 		}
 	},
 	patrolling_vulture_0077 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			44,
-			13,
-			45,
-			62
+			88,
+			28,
+			90,
+			126
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			110,
-			1143,
-			11,
-			25
+			206,
+			2004,
+			22,
+			46
 		},
 		alias = {
 			"patrolling_vulture_0078"
 		}
 	},
 	patrolling_vulture_0079 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			50,
-			13,
-			46,
-			84
+			101,
+			27,
+			93,
+			169
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			999,
-			93,
-			4,
-			3
+			997,
+			180,
+			6,
+			4
 		},
 		alias = {
 			"patrolling_vulture_0080"
 		}
 	},
 	patrolling_vulture_0081 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
 			0,
 			0,
-			98,
-			98
+			198,
+			198
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			644,
-			97,
+			1017,
+			188,
 			2,
 			2
 		},
@@ -10536,180 +10536,180 @@ local a = {
 		}
 	},
 	razing_rhino_razign_rhino_instakill_fx_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			92,
-			66
+			184,
+			132
 		},
 		trim = {
-			26,
-			17,
-			26,
-			15
+			52,
+			36,
+			52,
+			32
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1437,
-			1460,
-			40,
-			34
+			3767,
+			2148,
+			80,
+			64
 		},
 		alias = {}
 	},
 	razing_rhino_razign_rhino_instakill_fx_0002 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			92,
-			66
+			184,
+			132
 		},
 		trim = {
-			20,
-			12,
-			23,
-			19
+			42,
+			26,
+			47,
+			40
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1516,
-			49,
-			35
+			1808,
+			3591,
+			95,
+			66
 		},
 		alias = {
 			"razing_rhino_razign_rhino_instakill_fx_0003"
 		}
 	},
 	razing_rhino_razign_rhino_instakill_fx_0004 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			92,
-			66
+			184,
+			132
 		},
 		trim = {
-			14,
-			11,
-			20,
-			19
+			29,
+			22,
+			40,
+			40
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1425,
-			839,
-			58,
-			36
+			1455,
+			3609,
+			115,
+			70
 		},
 		alias = {
 			"razing_rhino_razign_rhino_instakill_fx_0005"
 		}
 	},
 	razing_rhino_razign_rhino_instakill_fx_0006 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			92,
-			66
+			184,
+			132
 		},
 		trim = {
-			12,
-			12,
-			17,
-			19
+			24,
+			25,
+			35,
+			38
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1748,
-			619,
-			63,
-			35
+			1255,
+			622,
+			125,
+			69
 		},
 		alias = {
 			"razing_rhino_razign_rhino_instakill_fx_0007"
 		}
 	},
 	razing_rhino_razign_rhino_instakill_fx_0008 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			92,
-			66
+			184,
+			132
 		},
 		trim = {
-			10,
-			17,
-			14,
-			15
+			21,
+			34,
+			29,
+			30
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			431,
-			157,
-			68,
-			34
+			3174,
+			451,
+			134,
+			68
 		},
 		alias = {
 			"razing_rhino_razign_rhino_instakill_fx_0009"
 		}
 	},
 	razing_rhino_razign_rhino_instakill_fx_0010 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			92,
-			66
+			184,
+			132
 		},
 		trim = {
-			9,
-			24,
-			13,
-			9
+			20,
+			48,
+			28,
+			20
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1412,
-			66,
-			70,
-			33
+			2721,
+			119,
+			136,
+			64
 		},
 		alias = {
 			"razing_rhino_razign_rhino_instakill_fx_0011"
 		}
 	},
 	razing_rhino_razing_rhino_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			60,
-			24,
-			56,
-			94
+			122,
+			49,
+			113,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			1683,
-			76,
-			80
+			604,
+			3158,
+			149,
+			158
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0098",
@@ -10719,5932 +10719,5932 @@ local a = {
 		}
 	},
 	razing_rhino_razing_rhino_0002 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			55,
-			26,
-			54,
-			94
+			112,
+			52,
+			109,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			689,
-			197,
-			83,
-			78
+			2175,
+			356,
+			163,
+			155
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0003"
 		}
 	},
 	razing_rhino_razing_rhino_0004 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			56,
-			26,
+			112,
 			54,
-			94
+			108,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			867,
-			197,
-			82,
-			78
+			2005,
+			356,
+			164,
+			153
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0005"
 		}
 	},
 	razing_rhino_razing_rhino_0006 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			57,
-			25,
-			55,
-			94
+			115,
+			51,
+			110,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1390,
-			197,
-			80,
-			79
+			2844,
+			356,
+			159,
+			156
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0007"
 		}
 	},
 	razing_rhino_razing_rhino_0008 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			59,
-			24,
-			55,
-			94
+			119,
+			49,
+			112,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1264,
-			282,
-			78,
-			80
+			3021,
+			527,
+			153,
+			158
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0009"
 		}
 	},
 	razing_rhino_razing_rhino_0010 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			60,
-			23,
-			56,
-			94
+			121,
+			48,
+			113,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			1596,
-			76,
-			81
+			604,
+			2263,
+			150,
+			159
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0011"
 		}
 	},
 	razing_rhino_razing_rhino_0012 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			60,
-			21,
-			57,
-			94
+			122,
+			43,
+			114,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			452,
-			75,
-			83
+			920,
+			700,
+			148,
+			164
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0013"
 		}
 	},
 	razing_rhino_razing_rhino_0014 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			60,
-			20,
-			58,
-			94
+			122,
+			40,
+			116,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			1141,
-			74,
-			84
+			766,
+			871,
+			146,
+			167
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0015"
 		}
 	},
 	razing_rhino_razing_rhino_0016 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			60,
-			21,
-			58,
-			94
+			122,
+			44,
+			118,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			1231,
-			74,
-			83
+			2755,
+			700,
+			144,
+			163
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0017"
 		}
 	},
 	razing_rhino_razing_rhino_0018 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			61,
-			26,
-			59,
-			94
+			124,
+			52,
+			119,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			452,
-			72,
-			78
+			766,
+			1145,
+			141,
+			155
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0019"
 		}
 	},
 	razing_rhino_razing_rhino_0020 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			62,
-			26,
-			60,
-			94
+			124,
+			54,
+			121,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			954,
-			452,
-			70,
-			78
+			766,
+			2180,
+			139,
+			153
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0021"
 		}
 	},
 	razing_rhino_razing_rhino_0022 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			61,
-			25,
-			60,
-			94
+			124,
+			51,
+			121,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			536,
-			71,
-			79
+			766,
+			2018,
+			139,
+			156
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0023"
 		}
 	},
 	razing_rhino_razing_rhino_0024 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			60,
-			24,
-			59,
-			94
+			122,
+			49,
+			119,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			1576,
-			73,
-			80
+			3204,
+			700,
+			143,
+			158
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0025"
 		}
 	},
 	razing_rhino_razing_rhino_0026 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			59,
-			23,
-			58,
-			94
+			119,
+			48,
+			117,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			630,
-			75,
-			81
+			1074,
+			700,
+			148,
+			159
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0027"
 		}
 	},
 	razing_rhino_razing_rhino_0028 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			58,
-			21,
-			57,
-			94
+			116,
+			43,
+			115,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1852,
-			282,
-			77,
-			83
+			2703,
+			527,
+			153,
+			164
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0029"
 		}
 	},
 	razing_rhino_razing_rhino_0030 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			57,
-			20,
-			55,
-			94
+			115,
+			40,
+			112,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			585,
-			282,
-			80,
-			84
+			604,
+			527,
+			157,
+			167
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0031"
 		}
 	},
 	razing_rhino_razing_rhino_0032 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			56,
-			21,
-			55,
-			94
+			114,
+			44,
+			110,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			498,
-			282,
-			81,
-			83
+			2512,
+			356,
+			160,
+			163
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0033"
 		}
 	},
 	razing_rhino_razing_rhino_0034 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			61,
-			26,
+			122,
 			54,
-			94
+			109,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			1056,
-			77,
-			78
+			3180,
+			527,
+			153,
+			153
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0035"
 		}
 	},
 	razing_rhino_razing_rhino_0036 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			61,
-			27,
+			123,
 			54,
-			94
+			109,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			1140,
-			77,
-			77
+			604,
+			877,
+			152,
+			153
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0037"
 		}
 	},
 	razing_rhino_razing_rhino_0038 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			61,
-			27,
+			123,
 			54,
-			94
+			110,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			1223,
-			77,
-			77
+			604,
+			1669,
+			151,
+			153
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0039"
 		}
 	},
 	razing_rhino_razing_rhino_0040 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			60,
-			25,
-			55,
-			94
+			122,
+			51,
+			110,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			971,
-			77,
-			79
+			3815,
+			527,
+			152,
+			156
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0041"
 		}
 	},
 	razing_rhino_razing_rhino_0042 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			60,
-			24,
-			55,
-			94
+			121,
+			50,
+			112,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			799,
-			77,
-			80
+			604,
+			1506,
+			151,
+			157
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0043"
 		}
 	},
 	razing_rhino_razing_rhino_0044 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			59,
-			22,
-			56,
-			94
+			119,
+			45,
+			113,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1935,
-			282,
-			77,
-			82
+			3657,
+			527,
+			152,
+			162
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0045"
 		}
 	},
 	razing_rhino_razing_rhino_0046 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			60,
-			21,
-			57,
-			94
+			121,
+			42,
+			115,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			541,
-			75,
-			83
+			766,
+			700,
+			148,
+			165
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0047"
 		}
 	},
 	razing_rhino_razing_rhino_0048 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			62,
-			22,
-			58,
-			94
+			125,
+			46,
+			117,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			1829,
-			72,
-			82
+			3799,
+			700,
+			142,
+			161
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0049"
 		}
 	},
 	razing_rhino_razing_rhino_0050 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			63,
-			27,
-			59,
-			94
+			127,
+			54,
+			118,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1106,
-			452,
-			70,
-			77
+			766,
+			2339,
+			139,
+			153
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0051"
 		}
 	},
 	razing_rhino_razing_rhino_0052 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			63,
-			27,
-			59,
-			94
+			128,
+			56,
+			119,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1182,
-			452,
-			70,
-			77
+			766,
+			3855,
+			137,
+			151
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0053"
 		}
 	},
 	razing_rhino_razing_rhino_0054 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			63,
-			26,
-			59,
-			94
+			127,
+			53,
+			119,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1030,
-			452,
-			70,
-			78
+			766,
+			3106,
+			138,
+			154
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0055"
 		}
 	},
 	razing_rhino_razing_rhino_0056 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			61,
-			25,
-			58,
-			94
+			123,
+			51,
+			117,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			1662,
-			73,
-			79
+			2905,
+			700,
+			144,
+			156
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0057"
 		}
 	},
 	razing_rhino_razing_rhino_0058 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			60,
-			24,
-			57,
-			94
+			121,
+			50,
+			116,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			891,
-			75,
-			80
+			1535,
+			700,
+			147,
+			157
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0059"
 		}
 	},
 	razing_rhino_razing_rhino_0060 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			58,
-			22,
-			56,
-			94
+			117,
+			45,
+			114,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1180,
-			282,
-			78,
-			82
+			2862,
+			527,
+			153,
+			162
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0061"
 		}
 	},
 	razing_rhino_razing_rhino_0062 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			59,
-			21,
-			55,
-			94
+			119,
+			42,
+			110,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1096,
-			282,
-			78,
-			83
+			1579,
+			527,
+			155,
+			165
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0063"
 		}
 	},
 	razing_rhino_razing_rhino_0064 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			59,
-			22,
-			54,
-			94
+			120,
+			46,
+			109,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			756,
-			282,
-			79,
-			82
+			1740,
+			527,
+			155,
+			161
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0065"
 		}
 	},
 	razing_rhino_razing_rhino_0066 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			56,
-			28,
-			61,
-			94
+			113,
+			57,
+			122,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			977,
-			75,
-			76
+			3947,
+			196,
+			149,
+			150
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0067"
 		}
 	},
 	razing_rhino_razing_rhino_0068 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			56,
-			28,
-			61,
-			94
+			113,
+			58,
+			124,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			1059,
-			75,
-			76
+			1841,
+			700,
+			147,
+			149
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0069"
 		}
 	},
 	razing_rhino_razing_rhino_0070 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
+			114,
 			57,
-			28,
-			62,
-			94
+			124,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			1747,
-			73,
-			76
+			2452,
+			700,
+			146,
+			150
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0071"
 		}
 	},
 	razing_rhino_razing_rhino_0072 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			57,
-			26,
-			61,
-			94
+			115,
+			54,
+			123,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			1320,
-			74,
-			78
+			2300,
+			700,
+			146,
+			153
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0073"
 		}
 	},
 	razing_rhino_razing_rhino_0074 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			58,
-			26,
-			60,
-			94
+			116,
+			52,
+			121,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			1404,
-			74,
-			78
+			1688,
+			700,
+			147,
+			155
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0075"
 		}
 	},
 	razing_rhino_razing_rhino_0076 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			58,
-			23,
-			59,
-			94
+			118,
+			48,
+			119,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			717,
-			75,
-			81
+			1382,
+			700,
+			147,
+			159
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0077"
 		}
 	},
 	razing_rhino_razing_rhino_0078 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			59,
-			22,
-			60,
-			94
+			120,
+			45,
+			121,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			1488,
-			73,
-			82
+			3055,
+			700,
+			143,
+			162
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0079"
 		}
 	},
 	razing_rhino_razing_rhino_0080 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			60,
-			24,
-			62,
-			94
+			121,
+			48,
+			126,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			621,
-			70,
-			80
+			766,
+			3690,
+			137,
+			159
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0081"
 		}
 	},
 	razing_rhino_razing_rhino_0082 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			60,
-			28,
-			63,
-			94
+			121,
+			57,
+			127,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1713,
-			452,
-			69,
-			76
+			918,
+			1176,
+			136,
+			150
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0083"
 		}
 	},
 	razing_rhino_razing_rhino_0084 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			61,
-			29,
-			63,
-			94
+			122,
+			58,
+			128,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			940,
-			68,
-			75
+			918,
+			1489,
+			134,
+			149
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0085"
 		}
 	},
 	razing_rhino_razing_rhino_0086 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			60,
-			27,
-			63,
-			94
+			122,
+			56,
+			127,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1638,
-			452,
-			69,
-			77
+			918,
+			1332,
+			135,
+			151
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0087"
 		}
 	},
 	razing_rhino_razing_rhino_0088 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			60,
-			26,
-			61,
-			94
+			121,
+			54,
+			123,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			646,
-			452,
-			71,
-			78
+			766,
+			1412,
+			140,
+			153
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0089"
 		}
 	},
 	razing_rhino_razing_rhino_0090 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			60,
-			26,
-			60,
-			94
+			120,
+			52,
+			121,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			568,
-			452,
-			72,
-			78
+			3353,
+			700,
+			143,
+			155
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0091"
 		}
 	},
 	razing_rhino_razing_rhino_0092 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			59,
-			23,
-			58,
-			94
+			118,
+			48,
+			117,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			804,
-			75,
-			81
+			604,
+			2993,
+			149,
+			159
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0093"
 		}
 	},
 	razing_rhino_razing_rhino_0094 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			57,
-			22,
-			59,
-			94
+			115,
+			45,
+			119,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			1508,
-			76,
-			82
+			604,
+			2095,
+			150,
+			162
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0095"
 		}
 	},
 	razing_rhino_razing_rhino_0096 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			56,
-			24,
-			59,
-			94
+			113,
+			48,
+			120,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			885,
-			77,
-			80
+			604,
+			1341,
+			151,
+			159
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0097"
 		}
 	},
 	razing_rhino_razing_rhino_0100 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			59,
-			28,
-			54,
-			94
+			119,
+			56,
+			110,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			841,
-			282,
-			79,
-			76
+			1901,
+			527,
+			155,
+			151
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0101"
 		}
 	},
 	razing_rhino_razing_rhino_0102 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			62,
-			22,
-			58,
-			94
+			126,
+			45,
+			116,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			1917,
-			72,
-			82
+			3651,
+			700,
+			142,
+			162
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0103"
 		}
 	},
 	razing_rhino_razing_rhino_0104 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			60,
-			15,
-			63,
-			94
+			121,
+			31,
+			126,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			707,
-			69,
-			89
+			766,
+			3508,
+			137,
+			176
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0105"
 		}
 	},
 	razing_rhino_razing_rhino_0106 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			29,
-			25,
-			75,
-			94
+			59,
+			51,
+			152,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			197,
-			88,
-			79
+			239,
+			3878,
+			173,
+			156
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0107"
 		}
 	},
 	razing_rhino_razing_rhino_0108 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			26,
-			23,
-			76,
-			94
+			54,
+			47,
+			153,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1503,
-			105,
-			90,
-			81
+			239,
+			2590,
+			177,
+			160
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0109"
 		}
 	},
 	razing_rhino_razing_rhino_0110 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			27,
-			23,
-			76,
-			94
+			54,
+			48,
+			153,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			1580,
-			89,
-			81
+			239,
+			2756,
+			177,
+			159
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0111"
 		}
 	},
 	razing_rhino_razing_rhino_0112 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			27,
-			21,
-			76,
-			94
+			56,
+			42,
+			152,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			1315,
-			89,
-			83
+			239,
+			2921,
+			176,
+			165
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0113"
 		}
 	},
 	razing_rhino_razing_rhino_0114 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			65,
-			15,
-			12,
-			87
+			131,
+			32,
+			26,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			105,
-			115,
-			96
+			196,
+			227,
+			189
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0115"
 		}
 	},
 	razing_rhino_razing_rhino_0116 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			76,
-			30,
-			9,
-			87
+			153,
+			60,
+			19,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			964,
+			1424,
 			6,
-			107,
-			81
+			212,
+			161
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0117"
 		}
 	},
 	razing_rhino_razing_rhino_0118 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			76,
-			51,
-			10,
-			87
+			153,
+			102,
+			21,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1189,
+			2076,
 			6,
-			106,
-			60
+			210,
+			119
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0119"
 		}
 	},
 	razing_rhino_razing_rhino_0120 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			76,
-			49,
-			10,
-			87
+			153,
+			99,
+			22,
+			174
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1077,
+			2292,
 			6,
-			106,
-			62
+			209,
+			123
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0121"
 		}
 	},
 	razing_rhino_razing_rhino_0122 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			76,
-			51,
-			11,
-			86
+			153,
+			103,
+			23,
+			173
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1301,
+			2507,
 			6,
-			105,
-			61
+			208,
+			120
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0123"
 		}
 	},
 	razing_rhino_razing_rhino_0124 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			76,
-			50,
-			14,
-			93
+			153,
+			100,
+			30,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1852,
 			6,
-			102,
-			55
+			1402,
+			201,
+			110
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0125"
 		}
 	},
 	razing_rhino_razing_rhino_0126 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			76,
-			50,
-			15,
-			93
+			153,
+			100,
+			30,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			1022,
-			101,
-			55
+			1518,
+			201,
+			110
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0127"
 		}
 	},
 	razing_rhino_razing_rhino_0128 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			76,
-			50,
-			23,
-			93
+			153,
+			100,
+			46,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			630,
-			105,
-			93,
-			55
+			431,
+			196,
+			185,
+			110
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0129"
 		}
 	},
 	razing_rhino_razing_rhino_0130 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			76,
-			50,
-			23,
-			93
+			153,
+			100,
+			47,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			729,
-			105,
-			93,
-			55
+			1003,
+			196,
+			184,
+			110
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0131"
 		}
 	},
 	razing_rhino_razing_rhino_0132 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			76,
-			50,
-			26,
-			93
+			153,
+			100,
+			52,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			1254,
-			90,
-			55
+			1752,
+			196,
+			179,
+			110
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0133"
 		}
 	},
 	razing_rhino_razing_rhino_0134 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			75,
-			50,
-			28,
-			93
+			152,
+			100,
+			57,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			1938,
-			89,
-			55
+			3586,
+			196,
+			175,
+			110
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0135"
 		}
 	},
 	razing_rhino_razing_rhino_0136 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			72,
-			47,
-			30,
-			94
+			146,
+			95,
+			61,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			1191,
-			90,
-			57
+			3221,
+			196,
+			177,
+			112
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0137"
 		}
 	},
 	razing_rhino_razing_rhino_0138 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			67,
-			45,
-			35,
-			94
+			136,
+			91,
+			72,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1791,
-			105,
-			90,
-			59
+			3404,
+			196,
+			176,
+			116
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0139"
 		}
 	},
 	razing_rhino_razing_rhino_0140 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			63,
-			19,
-			60,
-			94
+			127,
+			40,
+			121,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			802,
-			69,
-			85
+			918,
+			1003,
+			136,
+			167
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0141"
 		}
 	},
 	razing_rhino_razing_rhino_0142 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			59,
-			27,
-			55,
-			94
+			119,
+			56,
+			112,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1432,
-			282,
-			78,
-			77
+			3339,
+			527,
+			153,
+			151
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0143"
 		}
 	},
 	razing_rhino_razing_rhino_0146 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			58,
-			29,
-			54,
-			94
+			117,
+			59,
+			109,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1476,
-			197,
-			80,
-			75
+			3503,
+			356,
+			158,
+			148
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0147"
 		}
 	},
 	razing_rhino_razing_rhino_0148 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			53,
-			12,
-			51,
-			94
+			107,
+			24,
+			104,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1960,
-			6,
-			88,
-			92
+			239,
+			3689,
+			173,
+			183
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0149"
 		}
 	},
 	razing_rhino_razing_rhino_0150 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			52,
-			10,
-			49,
-			94
+			104,
+			22,
+			100,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			599,
-			91,
-			94
+			239,
+			945,
+			180,
+			185
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0151"
 		}
 	},
 	razing_rhino_razing_rhino_0152 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			52,
-			9,
-			50,
-			94
+			106,
+			20,
+			101,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			997,
-			90,
-			95
+			239,
+			2219,
+			177,
+			187
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0153"
 		}
 	},
 	razing_rhino_razing_rhino_0154 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			52,
-			17,
-			50,
-			94
+			106,
+			35,
+			101,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			1098,
-			90,
-			87
+			239,
+			2412,
+			177,
+			172
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0155"
 		}
 	},
 	razing_rhino_razing_rhino_0156 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			52,
-			36,
-			51,
-			94
+			104,
+			73,
+			103,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			1667,
-			89,
-			68
+			2489,
+			196,
+			177,
+			134
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0157"
 		}
 	},
 	razing_rhino_razing_rhino_0158 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			53,
-			39,
-			49,
-			94
+			107,
+			80,
+			99,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1599,
-			105,
-			90,
-			65
+			2121,
+			196,
+			178,
+			127
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0159"
 		}
 	},
 	razing_rhino_razing_rhino_0160 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			54,
-			46,
-			45,
-			94
+			108,
+			93,
+			92,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			531,
-			105,
-			93,
-			58
+			813,
+			196,
+			184,
+			114
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0161"
 		}
 	},
 	razing_rhino_razing_rhino_0162 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			55,
-			45,
-			47,
-			94
+			111,
+			91,
+			95,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1887,
-			105,
-			90,
-			59
+			2305,
+			196,
+			178,
+			116
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0163"
 		}
 	},
 	razing_rhino_razing_rhino_0164 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			55,
-			45,
-			48,
-			94
+			110,
+			90,
+			97,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			1873,
-			89,
-			59
+			2672,
+			196,
+			177,
+			117
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0165"
 		}
 	},
 	razing_rhino_razing_rhino_0166 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			55,
-			44,
-			48,
-			94
+			110,
+			90,
+			97,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			1741,
-			89,
-			60
+			2855,
+			196,
+			177,
+			117
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0167"
 		}
 	},
 	razing_rhino_razing_rhino_0168 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			54,
-			44,
-			49,
-			94
+			109,
+			90,
+			98,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			1807,
-			89,
-			60
+			3038,
+			196,
+			177,
+			117
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0169"
 		}
 	},
 	razing_rhino_razing_rhino_0170 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			55,
-			43,
-			47,
-			94
+			111,
+			87,
+			94,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1695,
-			105,
-			90,
-			61
+			1567,
+			196,
+			179,
+			120
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0171"
 		}
 	},
 	razing_rhino_razing_rhino_0172 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			57,
-			43,
-			51,
-			94
+			114,
+			88,
+			104,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			599,
-			197,
-			84,
-			61
+			1662,
+			356,
+			166,
+			119
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0173"
 		}
 	},
 	razing_rhino_razing_rhino_0174 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			63,
-			45,
-			51,
-			94
+			128,
+			92,
+			102,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1768,
-			282,
-			78,
-			59
+			2383,
+			527,
+			154,
+			115
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0175"
 		}
 	},
 	razing_rhino_razing_rhino_0176 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			66,
-			60,
-			26,
-			84
+			134,
+			121,
+			54,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			1083,
-			100,
-			54
+			1837,
+			196,
+			105
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0177"
 		}
 	},
 	razing_rhino_razing_rhino_0178 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			65,
-			59,
-			22,
-			85
+			131,
+			119,
+			45,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1412,
+			2721,
 			6,
-			105,
-			54
+			208,
+			107
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0179"
 		}
 	},
 	razing_rhino_razing_rhino_0180 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			64,
-			57,
-			24,
-			84
+			130,
+			115,
+			48,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1633,
+			2935,
 			6,
-			104,
-			57
+			206,
+			111
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0181"
 		}
 	},
 	razing_rhino_razing_rhino_0182 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			64,
-			55,
-			24,
-			84
+			130,
+			112,
+			50,
+			169
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1523,
+			3147,
 			6,
-			104,
-			59
+			204,
+			115
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0183"
 		}
 	},
 	razing_rhino_razing_rhino_0184 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			64,
-			55,
-			25,
-			83
+			130,
+			112,
+			52,
+			168
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1743,
+			3357,
 			6,
-			103,
-			60
+			202,
+			116
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0185"
 		}
 	},
 	razing_rhino_razing_rhino_0186 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			68,
-			54,
-			27,
-			88
+			137,
+			110,
+			55,
+			178
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			1489,
-			97,
-			56
+			2434,
+			192,
+			108
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0187"
 		}
 	},
 	razing_rhino_razing_rhino_0188 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			69,
-			62,
-			28,
-			88
+			140,
+			126,
+			56,
+			178
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			330,
-			105,
-			95,
-			48
+			6,
+			3981,
+			188,
+			92
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0189"
 		}
 	},
 	razing_rhino_razing_rhino_0190 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			74,
-			66,
-			35,
-			88
+			148,
+			133,
+			71,
+			178
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			778,
-			197,
-			83,
-			44
+			1834,
+			356,
+			165,
+			85
 		},
 		alias = {
 			"razing_rhino_razing_rhino_0191"
 		}
 	},
 	razing_rhino_razing_rhino_0192 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			43,
-			23,
-			56,
-			88
+			88,
+			47,
+			113,
+			178
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			506,
-			93,
-			87
+			239,
+			768,
+			183,
+			171
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0193 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			57,
-			23,
-			56,
-			88
+			115,
+			47,
+			113,
+			178
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			671,
-			282,
-			79,
-			87
+			604,
+			700,
+			156,
+			171
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0194 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			57,
-			26,
+			115,
 			53,
-			88
+			107,
+			178
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			410,
-			282,
-			82,
-			84
+			2344,
+			356,
+			162,
+			165
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0195 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			52,
-			26,
+			105,
 			53,
-			88
+			107,
+			178
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			282,
-			87,
-			84
+			430,
+			356,
+			172,
+			165
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0196 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			51,
-			28,
-			50,
-			92
+			104,
+			57,
+			102,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			828,
-			105,
-			91,
-			78
+			1937,
+			196,
+			178,
+			154
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0197 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			47,
-			28,
-			50,
-			92
+			96,
+			57,
+			102,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			229,
-			105,
-			95,
-			78
+			239,
+			196,
+			186,
+			154
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0198 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			50,
-			24,
-			52,
-			91
+			101,
+			48,
+			105,
+			183
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1119,
-			105,
-			90,
-			83
+			239,
+			1506,
+			178,
+			165
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0199 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			43,
-			24,
-			52,
-			91
+			88,
+			48,
+			105,
+			183
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			1400,
-			97,
-			83
+			2915,
+			191,
+			165
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0200 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			51,
-			23,
-			55,
-			94
+			103,
+			47,
+			110,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			458,
-			86,
-			81
+			786,
+			356,
+			171,
+			160
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0201 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			52,
-			23,
-			55,
-			94
+			104,
+			47,
+			110,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			823,
-			85,
-			81
+			963,
+			356,
+			170,
+			160
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0202 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			36,
-			18,
-			38,
-			87
+			73,
+			37,
+			76,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
 			6,
-			118,
-			93
+			235,
+			184
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0203 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			53,
-			18,
-			55,
-			87
+			106,
+			37,
+			110,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			1114,
-			84,
-			93
+			430,
+			527,
+			168,
+			184
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0204 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			53,
-			21,
-			54,
-			87
+			108,
+			42,
+			109,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			631,
-			85,
-			90
+			430,
+			907,
+			167,
+			179
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0205 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			50,
-			21,
-			51,
-			87
+			101,
+			42,
+			104,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			699,
-			91,
-			90
+			239,
+			1136,
+			179,
+			179
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0206 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			45,
-			22,
+			90,
 			46,
-			91
+			93,
+			183
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
+			3772,
 			6,
-			931,
-			101,
-			85
+			201,
+			167
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0207 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			39,
-			22,
-			41,
-			91
+			80,
+			46,
+			83,
+			183
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			620,
+			1197,
 			6,
-			112,
-			85
+			221,
+			167
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0208 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			42,
-			19,
-			43,
-			89
+			85,
+			38,
+			88,
+			179
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			738,
+			1859,
 			6,
-			107,
-			90
+			211,
+			179
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0209 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			36,
-			19,
+			73,
 			38,
-			89
+			76,
+			179
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			254,
+			729,
 			6,
-			118,
-			90
+			235,
+			179
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0210 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			53,
-			18,
-			56,
-			93
+			107,
+			37,
+			112,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			1896,
-			83,
-			87
+			430,
+			2427,
+			165,
+			173
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0211 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			53,
-			18,
-			56,
-			93
+			107,
+			37,
+			112,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			282,
-			83,
-			87
+			430,
+			2606,
+			165,
+			173
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0212 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			36,
-			18,
-			38,
-			87
+			73,
+			37,
+			76,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			130,
+			247,
 			6,
-			118,
-			93
+			235,
+			184
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0213 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			53,
-			18,
-			55,
-			87
+			106,
+			37,
+			110,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			1213,
-			84,
-			93
+			430,
+			717,
+			168,
+			184
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0214 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			53,
-			21,
-			54,
-			87
+			108,
+			42,
+			109,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			727,
-			85,
-			90
+			430,
+			1092,
+			167,
+			179
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0215 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			50,
-			21,
-			51,
-			87
+			101,
+			42,
+			104,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			795,
-			91,
-			90
+			239,
+			1321,
+			179,
+			179
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0216 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			45,
-			22,
+			90,
 			46,
-			90
+			93,
+			182
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
+			3565,
 			6,
-			839,
-			101,
-			86
+			201,
+			168
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0217 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			39,
-			22,
-			41,
-			90
+			80,
+			46,
+			83,
+			182
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			502,
+			970,
 			6,
-			112,
-			86
+			221,
+			168
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0218 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			42,
-			19,
-			43,
-			89
+			85,
+			38,
+			88,
+			178
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			851,
+			1642,
 			6,
-			107,
-			90
+			211,
+			180
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0219 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			36,
-			19,
+			73,
 			38,
-			89
+			76,
+			178
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			378,
+			488,
 			6,
-			118,
-			90
+			235,
+			180
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0220 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			53,
-			18,
-			56,
-			92
+			107,
+			37,
+			112,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			1708,
-			83,
-			88
+			430,
+			2785,
+			165,
+			173
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0221 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			53,
-			18,
-			56,
-			92
+			107,
+			37,
+			112,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			1802,
-			83,
-			88
+			430,
+			2964,
+			165,
+			173
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0222 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
+			82,
 			40,
-			19,
-			45,
-			83
+			91,
+			167
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			525,
-			107,
-			96
+			1004,
+			211,
+			189
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0223 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			55,
-			19,
-			53,
-			83
+			111,
+			40,
+			107,
+			167
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			910,
-			84,
-			96
+			430,
+			1277,
+			166,
+			189
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0224 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			55,
-			22,
-			53,
-			83
+			111,
+			45,
+			108,
+			167
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			1312,
-			84,
-			93
+			430,
+			1667,
+			165,
+			184
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0225 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			55,
-			22,
-			53,
-			83
+			111,
+			45,
+			108,
+			167
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			1411,
-			84,
-			93
+			430,
+			1857,
+			165,
+			184
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0226 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			49,
-			23,
-			53,
-			75
+			100,
+			47,
+			107,
+			152
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			891,
-			90,
-			100
+			239,
+			2016,
+			177,
+			197
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0227 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			43,
-			23,
-			48,
-			75
+			87,
+			47,
+			97,
+			152
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			733,
-			101,
-			100
+			1634,
+			200,
+			197
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0228 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			47,
-			20,
-			51,
-			76
+			95,
+			40,
+			104,
+			153
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			292,
-			94,
-			102
+			239,
+			356,
+			185,
+			203
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0229 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
+			82,
 			40,
-			20,
-			45,
-			76
+			91,
+			153
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			417,
-			107,
-			102
+			795,
+			211,
+			203
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0230 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			57,
-			19,
-			53,
-			78
+			115,
+			39,
+			107,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			375,
-			82,
-			101
+			430,
+			3143,
+			162,
+			200
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0231 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			57,
-			19,
-			53,
-			80
+			115,
+			39,
+			107,
+			161
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			589,
-			82,
-			99
+			430,
+			3555,
+			162,
+			196
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0232 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
+			82,
 			40,
-			19,
-			40,
-			83
+			82,
+			167
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			315,
-			112,
-			96
+			600,
+			220,
+			189
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0233 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			55,
-			19,
-			53,
-			83
+			111,
+			40,
+			107,
+			167
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			1012,
-			84,
-			96
+			430,
+			1472,
+			166,
+			189
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0234 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			55,
-			22,
-			53,
-			83
+			111,
+			45,
+			108,
+			167
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			1510,
-			84,
-			93
+			430,
+			2047,
+			165,
+			184
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0235 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			55,
-			22,
-			53,
-			83
+			111,
+			45,
+			108,
+			167
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			1609,
-			84,
-			93
+			430,
+			2237,
+			165,
+			184
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0236 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			49,
-			23,
-			49,
-			75
+			100,
+			47,
+			100,
+			152
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			400,
-			94,
-			100
+			239,
+			565,
+			184,
+			197
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0237 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			43,
-			23,
-			43,
-			75
+			87,
+			47,
+			88,
+			152
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			627,
-			106,
-			100
+			1199,
+			209,
+			197
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0238 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			47,
-			20,
-			47,
-			76
+			95,
+			40,
+			95,
+			153
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			1143,
-			98,
-			102
+			1948,
+			194,
+			203
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0239 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
+			82,
 			40,
-			20,
-			40,
-			76
+			82,
+			153
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			207,
-			112,
-			102
+			391,
+			220,
+			203
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0240 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			57,
-			19,
-			53,
-			78
+			115,
+			39,
+			107,
+			157
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			482,
-			82,
-			101
+			430,
+			3349,
+			162,
+			200
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_0241 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			192,
-			198
+			384,
+			396
 		},
 		trim = {
-			57,
-			19,
-			53,
-			80
+			115,
+			39,
+			107,
+			161
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			694,
-			82,
-			99
+			430,
+			3757,
+			162,
+			196
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_a_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			68,
-			64
+			136,
+			128
 		},
 		trim = {
-			10,
-			16,
-			10,
-			15
+			22,
+			32,
+			21,
+			32
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1521,
-			1073,
-			48,
-			33
+			2410,
+			1834,
+			93,
+			64
 		},
 		alias = {
 			"razing_rhino_razing_rhino_charge_dust_a_0002"
 		}
 	},
 	razing_rhino_razing_rhino_charge_dust_a_0003 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			68,
-			64
+			136,
+			128
 		},
 		trim = {
-			10,
-			14,
-			9,
-			17
+			21,
+			28,
+			19,
+			35
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1557,
-			49,
-			33
+			1808,
+			2343,
+			96,
+			65
 		},
 		alias = {
 			"razing_rhino_razing_rhino_charge_dust_a_0004"
 		}
 	},
 	razing_rhino_razing_rhino_charge_dust_a_0005 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			68,
-			64
+			136,
+			128
 		},
 		trim = {
-			11,
-			12,
-			10,
-			21
+			24,
+			25,
+			20,
+			43
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1195,
-			1122,
-			47,
-			31
+			3920,
+			1766,
+			92,
+			60
 		},
 		alias = {
 			"razing_rhino_razing_rhino_charge_dust_a_0006"
 		}
 	},
 	razing_rhino_razing_rhino_charge_dust_a_0007 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			68,
-			64
+			136,
+			128
 		},
 		trim = {
-			12,
-			11,
-			10,
-			22
+			25,
+			23,
+			21,
+			46
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1725,
-			1122,
-			46,
-			31
+			1911,
+			3986,
+			90,
+			59
 		},
 		alias = {
 			"razing_rhino_razing_rhino_charge_dust_a_0008"
 		}
 	},
 	razing_rhino_razing_rhino_charge_dust_a_0009 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			68,
-			64
+			136,
+			128
 		},
 		trim = {
-			13,
-			11,
-			11,
-			25
+			27,
+			23,
+			23,
+			50
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			2019,
-			44,
-			28
+			2010,
+			3695,
+			86,
+			55
 		},
 		alias = {
 			"razing_rhino_razing_rhino_charge_dust_a_0010"
 		}
 	},
 	razing_rhino_razing_rhino_charge_dust_a_0011 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			68,
-			64
+			136,
+			128
 		},
 		trim = {
-			14,
-			10,
-			12,
-			27
+			30,
+			21,
+			26,
+			54
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1253,
-			72,
-			42,
-			27
+			2206,
+			131,
+			80,
+			53
 		},
 		alias = {
 			"razing_rhino_razing_rhino_charge_dust_a_0012"
 		}
 	},
 	razing_rhino_razing_rhino_charge_dust_a_0013 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			68,
-			64
+			136,
+			128
 		},
 		trim = {
-			15,
-			10,
-			11,
-			28
+			31,
+			22,
+			24,
+			57
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1938,
-			42,
-			26
+			3055,
+			1992,
+			81,
+			49
 		},
 		alias = {
 			"razing_rhino_razing_rhino_charge_dust_a_0014"
 		}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			29,
-			26,
-			31,
-			26
+			59,
+			54,
+			63,
+			53
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			1664,
-			64,
-			60
+			1060,
+			3956,
+			126,
+			117
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0002 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			29,
-			26,
-			30,
-			26
+			59,
+			53,
+			62,
+			53
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			746,
-			65,
-			60
+			1060,
+			3196,
+			127,
+			118
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0003 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			28,
-			25,
-			30,
-			26
+			58,
+			52,
+			61,
+			52
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			997,
-			66,
-			61
+			3516,
+			1003,
+			129,
+			120
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0004 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			28,
-			26,
-			30,
-			25
+			56,
+			52,
+			60,
+			51
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			1064,
-			66,
-			61
+			918,
+			2825,
+			132,
+			121
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0005 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			27,
-			25,
-			29,
-			25
+			56,
+			51,
+			59,
+			51
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			1164,
-			68,
-			62
+			2606,
+			871,
+			133,
+			122
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0006 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			27,
-			25,
-			29,
-			24
+			55,
+			51,
+			59,
+			50
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			1095,
-			68,
-			63
+			1626,
+			871,
+			134,
+			123
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0007 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			26,
-			25,
-			29,
-			24
+			54,
+			50,
+			59,
+			50
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1863,
-			452,
-			69,
-			63
+			1203,
+			871,
+			135,
+			124
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0008 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			26,
-			24,
-			29,
-			24
+			53,
+			49,
+			58,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1788,
-			452,
-			69,
-			64
+			918,
+			871,
+			137,
+			126
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0009 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			26,
-			24,
-			28,
-			24
+			52,
+			48,
+			58,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1258,
-			452,
-			70,
-			64
+			766,
+			3266,
+			138,
+			127
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0010 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			23,
-			23,
-			27,
-			23
+			47,
+			47,
+			56,
+			46
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1141,
-			375,
-			74,
-			66
+			2604,
+			700,
+			145,
+			131
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0011 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			23,
-			23,
-			27,
-			22
+			46,
+			46,
+			55,
+			46
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1061,
-			375,
-			74,
-			67
+			2147,
+			700,
+			147,
+			132
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0012 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			22,
-			22,
-			27,
-			22
+			45,
+			46,
+			54,
+			45
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			900,
-			375,
-			75,
-			68
+			604,
+			3766,
+			149,
+			133
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0013 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			21,
-			22,
-			28,
-			20
+			44,
+			46,
+			57,
+			41
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			819,
-			375,
-			75,
-			70
+			1994,
+			700,
+			147,
+			137
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0014 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			21,
-			22,
-			27,
-			19
+			43,
+			46,
+			56,
+			40
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			1934,
-			76,
-			71
+			604,
+			3478,
+			149,
+			138
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0015 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			21,
-			22,
-			27,
-			19
+			42,
+			45,
+			56,
+			40
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			375,
-			76,
-			71
+			604,
+			2585,
+			150,
+			139
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0016 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			21,
-			21,
-			27,
-			21
+			43,
+			43,
+			56,
+			43
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			491,
-			375,
-			76,
-			70
+			604,
+			3622,
+			149,
+			138
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0017 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			20,
-			20,
-			27,
-			20
+			42,
+			42,
+			55,
+			42
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			1306,
-			77,
-			72
+			604,
+			1828,
+			151,
+			140
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0018 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			20,
-			20,
-			26,
-			20
+			42,
+			42,
+			54,
+			42
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1516,
-			282,
-			78,
-			72
+			604,
+			1195,
+			152,
+			140
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0019 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			20,
-			19,
-			25,
-			19
+			42,
+			40,
+			51,
+			39
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1011,
-			282,
-			79,
-			74
+			2062,
+			527,
+			155,
+			145
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0020 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			20,
-			19,
-			24,
-			18
+			41,
+			39,
+			50,
+			38
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1562,
-			197,
-			80,
-			75
+			767,
+			527,
+			157,
+			147
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0021 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			19,
-			19,
-			24,
-			18
+			40,
+			39,
+			50,
+			37
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1129,
-			197,
-			81,
-			75
+			3667,
+			356,
+			158,
+			148
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0022 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			22,
-			16,
-			26,
-			20
+			46,
+			33,
+			53,
+			41
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			1852,
-			76,
-			76
+			604,
+			3322,
+			149,
+			150
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0023 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			22,
-			16,
-			26,
-			19
+			45,
+			33,
+			53,
+			40
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			1769,
-			76,
-			77
+			604,
+			2428,
+			150,
+			151
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0024 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			21,
-			15,
-			25,
-			19
+			44,
+			32,
+			52,
+			39
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1348,
-			282,
-			78,
-			78
+			604,
+			1036,
+			152,
+			153
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0025 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			22,
-			16,
-			23,
-			21
+			45,
+			33,
+			47,
+			43
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			926,
-			282,
-			79,
-			75
+			1093,
+			527,
+			156,
+			148
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0026 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			21,
-			15,
-			22,
-			20
+			44,
+			32,
+			46,
+			42
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			955,
-			197,
-			81,
-			77
+			3339,
+			356,
+			158,
+			150
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0027 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			21,
-			15,
-			22,
-			20
+			43,
+			31,
+			45,
+			42
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1042,
-			197,
-			81,
-			77
+			2678,
+			356,
+			160,
+			151
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0028 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			18,
-			16,
-			21,
-			17
+			38,
+			34,
+			43,
+			36
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			508,
-			197,
-			85,
-			79
+			1489,
+			356,
+			167,
+			154
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0029 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			18,
-			16,
-			20,
-			17
+			38,
+			33,
+			42,
+			35
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			416,
-			197,
-			86,
-			79
+			1315,
+			356,
+			168,
+			156
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0030 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			18,
-			16,
-			20,
-			16
+			37,
+			33,
+			41,
+			34
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			545,
-			86,
-			80
+			1139,
+			356,
+			170,
+			157
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0031 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			17,
-			16,
-			20,
-			16
+			35,
+			33,
+			41,
+			33
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			228,
-			372,
-			87,
-			80
+			608,
+			356,
+			172,
+			158
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0032 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			16,
-			15,
-			19,
-			15
+			34,
+			32,
+			40,
+			32
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			1404,
-			89,
-			82
+			239,
+			3427,
+			174,
+			160
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0033 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			16,
-			15,
-			19,
-			15
+			33,
+			31,
+			39,
+			32
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			1492,
-			89,
-			82
+			239,
+			3260,
+			176,
+			161
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0034 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			15,
-			15,
-			19,
-			15
+			32,
+			30,
+			40,
+			32
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1407,
-			105,
-			90,
-			82
+			239,
+			3092,
+			176,
+			162
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0035 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			15,
-			14,
-			19,
-			15
+			31,
+			30,
+			39,
+			31
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1215,
-			105,
-			90,
-			83
+			239,
+			1847,
+			178,
+			163
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0036 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			15,
-			14,
-			19,
-			15
+			31,
+			29,
+			39,
+			31
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1311,
-			105,
-			90,
-			83
+			239,
+			1677,
+			178,
+			164
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0037 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			11,
-			13,
-			17,
-			13
+			24,
+			27,
+			36,
+			28
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			1929,
-			96,
-			86
+			3806,
+			188,
+			169
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0038 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			11,
-			13,
-			17,
-			13
+			23,
+			27,
+			35,
+			27
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			105,
-			96,
-			86
+			6,
+			3449,
+			190,
+			170
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0039 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			11,
-			12,
-			17,
-			13
+			22,
+			26,
+			34,
+			27
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			1836,
-			96,
-			87
+			2257,
+			192,
+			171
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0040 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			10,
-			13,
-			19,
-			10
+			21,
+			27,
+			39,
+			22
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			127,
-			197,
-			95,
-			89
+			6,
+			3625,
+			188,
+			175
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0041 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			10,
-			13,
-			18,
-			10
+			20,
+			27,
+			38,
+			21
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			1551,
-			96,
-			89
+			3086,
+			190,
+			176
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0042 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			9,
-			13,
-			18,
-			10
+			20,
+			26,
+			37,
+			20
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			1305,
-			97,
-			89
+			2548,
+			191,
+			178
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0043 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			10,
-			11,
-			18,
-			12
+			21,
+			24,
+			37,
+			25
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			1646,
-			96,
-			89
+			3268,
+			190,
+			175
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_dust_b_0044 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			124,
-			112
+			248,
+			224
 		},
 		trim = {
-			10,
-			11,
-			18,
-			12
+			20,
+			23,
+			37,
+			24
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
 			6,
-			1741,
-			96,
-			89
+			2732,
+			191,
+			177
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_hit_fx_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			94
+			196,
+			188
 		},
 		trim = {
-			26,
-			25,
-			27,
-			25
+			53,
+			50,
+			55,
+			51
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1334,
-			45,
-			44
+			3339,
+			1923,
+			88,
+			87
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_hit_fx_0002 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			94
+			196,
+			188
 		},
 		trim = {
-			24,
-			22,
-			25,
-			23
+			48,
+			44,
+			50,
+			47
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1128,
-			49,
-			49
+			1696,
+			3844,
+			98,
+			97
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_hit_fx_0003 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			94
+			196,
+			188
 		},
 		trim = {
-			22,
-			19,
-			22,
-			21
+			44,
+			38,
+			44,
+			43
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1096,
-			974,
-			54,
-			54
+			3917,
+			1517,
+			108,
+			107
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_hit_fx_0004 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			94
+			196,
+			188
 		},
 		trim = {
-			19,
-			16,
-			20,
-			19
+			39,
+			33,
+			40,
+			38
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			1280,
-			59,
-			59
+			1455,
+			1517,
+			117,
+			117
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_hit_fx_0005 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			94
+			196,
+			188
 		},
 		trim = {
-			18,
-			15,
-			18,
-			18
+			37,
+			30,
+			37,
+			37
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			1236,
-			62,
-			61
+			3649,
+			1265,
+			122,
+			121
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_hit_fx_0006 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			94
+			196,
+			188
 		},
 		trim = {
-			17,
-			13,
-			17,
-			17
+			35,
+			27,
+			34,
+			35
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			1594,
-			64,
-			64
+			1060,
+			3064,
+			127,
+			126
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_charge_hit_fx_0007 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			98,
-			94
+			196,
+			188
 		},
 		trim = {
-			24,
-			15,
-			17,
-			18
+			49,
+			31,
+			35,
+			36
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1553,
-			839,
-			57,
-			61
+			2054,
+			1517,
+			112,
+			121
 		},
 		alias = {}
 	},
 	razing_rhino_razing_rhino_hit_fx_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			116
+			200,
+			232
 		},
 		trim = {
-			33,
-			38,
-			29,
-			43
+			66,
+			76,
+			58,
+			87
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1572,
-			1507,
-			38,
-			35
+			3439,
+			2322,
+			76,
+			69
 		},
 		alias = {
 			"razing_rhino_razing_rhino_hit_fx_0002"
 		}
 	},
 	razing_rhino_razing_rhino_hit_fx_0003 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			116
+			200,
+			232
 		},
 		trim = {
-			27,
-			28,
-			21,
-			31
+			54,
+			55,
+			42,
+			63
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1035,
-			52,
-			57
+			1696,
+			2082,
+			104,
+			114
 		},
 		alias = {
 			"razing_rhino_razing_rhino_hit_fx_0004"
 		}
 	},
 	razing_rhino_razing_rhino_hit_fx_0005 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			116
+			200,
+			232
 		},
 		trim = {
-			20,
-			24,
-			17,
-			26
+			40,
+			49,
+			34,
+			52
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			1655,
-			63,
-			66
+			1060,
+			3686,
+			126,
+			131
 		},
 		alias = {
 			"razing_rhino_razing_rhino_hit_fx_0006"
 		}
 	},
 	rottenfang_hyena_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			46,
-			32,
-			37,
-			59
+			93,
+			65,
+			76,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1780,
-			42,
-			34
+			3335,
+			2148,
+			81,
+			66
 		},
 		alias = {}
 	},
 	rottenfang_hyena_0002 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			46,
-			32,
-			37,
-			59
+			93,
+			66,
+			76,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1820,
-			42,
-			34
+			3422,
+			2148,
+			81,
+			65
 		},
 		alias = {
 			"rottenfang_hyena_0003"
 		}
 	},
 	rottenfang_hyena_0004 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			46,
-			30,
-			39,
-			59
+			94,
+			62,
+			78,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1897,
-			1414,
-			40,
-			36
+			2280,
+			3344,
+			78,
+			69
 		},
 		alias = {
 			"rottenfang_hyena_0005"
 		}
 	},
 	rottenfang_hyena_0006 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			46,
-			27,
-			37,
-			59
+			92,
+			55,
+			76,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1439,
-			1269,
-			42,
-			39
+			2103,
+			3249,
+			82,
+			76
 		},
 		alias = {
 			"rottenfang_hyena_0007"
 		}
 	},
 	rottenfang_hyena_0008 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			45,
-			26,
-			36,
-			59
+			92,
+			54,
+			74,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1745,
-			1202,
-			44,
-			40
+			3102,
+			2049,
+			84,
+			77
 		},
 		alias = {
 			"rottenfang_hyena_0009"
 		}
 	},
 	rottenfang_hyena_0010 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			46,
-			29,
-			35,
-			59
+			93,
+			59,
+			72,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1245,
-			1269,
-			44,
-			37
+			2467,
+			2049,
+			85,
+			72
 		},
 		alias = {
 			"rottenfang_hyena_0011"
 		}
 	},
 	rottenfang_hyena_0012 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			46,
-			33,
-			38,
-			59
+			93,
+			67,
+			77,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1390,
-			1575,
-			41,
-			33
+			3853,
+			2148,
+			80,
+			64
 		},
 		alias = {
 			"rottenfang_hyena_0013"
 		}
 	},
 	rottenfang_hyena_0014 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			47,
-			30,
-			38,
-			59
+			96,
+			62,
+			78,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1943,
-			1414,
-			40,
-			36
+			3521,
+			2322,
+			76,
+			69
 		},
 		alias = {
 			"rottenfang_hyena_0015"
 		}
 	},
 	rottenfang_hyena_0016 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			47,
-			26,
-			38,
-			59
+			95,
+			54,
+			78,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1390,
-			1969,
-			40,
-			40
+			2280,
+			3931,
+			77,
+			77
 		},
 		alias = {
 			"rottenfang_hyena_0017"
 		}
 	},
 	rottenfang_hyena_0018 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			47,
-			26,
-			38,
-			59
+			95,
+			54,
+			78,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1437,
-			1414,
-			40,
-			40
+			2280,
+			4014,
+			77,
+			77
 		},
 		alias = {
 			"rottenfang_hyena_0019"
 		}
 	},
 	rottenfang_hyena_0020 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			47,
-			28,
-			39,
-			59
+			95,
+			58,
+			78,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1618,
-			1460,
-			39,
-			38
+			2531,
+			2322,
+			77,
+			73
 		},
 		alias = {
 			"rottenfang_hyena_0021"
 		}
 	},
 	rottenfang_hyena_0022 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			44,
-			32,
-			43,
-			59
+			89,
+			65,
+			87,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1616,
-			1507,
-			38,
-			34
+			3845,
+			2322,
+			74,
+			66
 		},
 		alias = {
 			"rottenfang_hyena_0023"
 		}
 	},
 	rottenfang_hyena_0024 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			44,
-			28,
-			42,
-			59
+			88,
+			57,
+			86,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1663,
-			1460,
-			39,
-			38
+			3029,
+			2322,
+			76,
+			74
 		},
 		alias = {
 			"rottenfang_hyena_0025"
 		}
 	},
 	rottenfang_hyena_0026 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			43,
-			25,
-			42,
-			59
+			87,
+			50,
+			85,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1390,
-			1875,
-			40,
-			41
+			2280,
+			2771,
+			78,
+			81
 		},
 		alias = {
 			"rottenfang_hyena_0027"
 		}
 	},
 	rottenfang_hyena_0028 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			43,
-			24,
-			43,
-			59
+			86,
+			50,
+			87,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1437,
-			1799,
-			39,
-			42
+			2280,
+			3587,
+			77,
+			81
 		},
 		alias = {
 			"rottenfang_hyena_0029"
 		}
 	},
 	rottenfang_hyena_0030 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			42,
-			26,
-			44,
-			59
+			85,
+			53,
+			90,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1528,
-			1460,
-			39,
-			40
+			2365,
+			2757,
+			75,
+			78
 		},
 		alias = {
 			"rottenfang_hyena_0031"
 		}
 	},
 	rottenfang_hyena_0032 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			42,
-			32,
-			45,
-			59
+			86,
+			65,
+			90,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1660,
-			1507,
-			38,
-			34
+			3925,
+			2322,
+			74,
+			66
 		},
 		alias = {
 			"rottenfang_hyena_0033"
 		}
 	},
 	rottenfang_hyena_0034 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			42,
-			28,
-			44,
-			59
+			85,
+			57,
+			89,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1708,
-			1460,
-			39,
-			38
+			3111,
+			2322,
+			76,
+			74
 		},
 		alias = {
 			"rottenfang_hyena_0035"
 		}
 	},
 	rottenfang_hyena_0036 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			42,
-			25,
-			43,
-			59
+			84,
+			50,
+			88,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1390,
-			1922,
-			40,
-			41
+			2280,
+			2858,
+			78,
+			81
 		},
 		alias = {
 			"rottenfang_hyena_0037"
 		}
 	},
 	rottenfang_hyena_0038 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			43,
-			24,
-			43,
-			59
+			86,
+			50,
+			87,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1437,
-			1847,
-			39,
-			42
+			2280,
+			3674,
+			77,
+			81
 		},
 		alias = {
 			"rottenfang_hyena_0039"
 		}
 	},
 	rottenfang_hyena_0040 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			44,
-			26,
-			43,
-			59
+			89,
+			53,
+			86,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1483,
-			1791,
-			38,
-			40
+			2365,
+			2841,
+			75,
+			78
 		},
 		alias = {
 			"rottenfang_hyena_0041"
 		}
 	},
 	rottenfang_hyena_0042 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			43,
-			33,
-			44,
-			59
+			87,
+			67,
+			89,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1704,
-			1507,
-			38,
-			33
+			4005,
+			2322,
+			74,
+			64
 		},
 		alias = {
 			"rottenfang_hyena_0043"
 		}
 	},
 	rottenfang_hyena_0044 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			42,
-			29,
-			44,
-			58
+			85,
+			59,
+			88,
+			117
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1753,
-			1460,
-			39,
-			38
+			2448,
+			2322,
+			77,
+			74
 		},
 		alias = {
 			"rottenfang_hyena_0045"
 		}
 	},
 	rottenfang_hyena_0046 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			42,
-			26,
-			43,
-			59
+			85,
+			52,
+			87,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1483,
-			1414,
-			40,
-			40
+			2280,
+			2945,
+			78,
+			79
 		},
 		alias = {
 			"rottenfang_hyena_0047"
 		}
 	},
 	rottenfang_hyena_0048 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			43,
-			25,
-			43,
-			59
+			87,
+			52,
+			86,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1437,
-			1895,
-			39,
-			41
+			2280,
+			3761,
+			77,
+			79
 		},
 		alias = {
 			"rottenfang_hyena_0049"
 		}
 	},
 	rottenfang_hyena_0050 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			44,
-			27,
-			42,
-			59
+			90,
+			55,
+			86,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1573,
-			1460,
-			39,
-			39
+			2365,
+			3179,
+			74,
+			76
 		},
 		alias = {
 			"rottenfang_hyena_0051"
 		}
 	},
 	rottenfang_hyena_0052 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			44,
-			33,
-			42,
-			59
+			90,
+			67,
+			86,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1483,
-			1507,
-			39,
-			33
+			2365,
+			3261,
+			74,
+			64
 		},
 		alias = {
 			"rottenfang_hyena_0053"
 		}
 	},
 	rottenfang_hyena_0054 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			44,
-			29,
-			42,
-			58
+			89,
+			59,
+			85,
+			117
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1798,
-			1460,
-			39,
-			38
+			3193,
+			2322,
+			76,
+			74
 		},
 		alias = {
 			"rottenfang_hyena_0055"
 		}
 	},
 	rottenfang_hyena_0056 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			43,
-			26,
-			42,
-			59
+			87,
+			52,
+			84,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1529,
-			1414,
-			40,
-			40
+			3998,
+			2225,
+			79,
+			79
 		},
 		alias = {
 			"rottenfang_hyena_0057"
 		}
 	},
 	rottenfang_hyena_0058 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			43,
-			25,
-			43,
-			59
+			87,
+			52,
+			86,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1437,
-			1942,
-			39,
-			41
+			2280,
+			3846,
+			77,
+			79
 		},
 		alias = {
 			"rottenfang_hyena_0059"
 		}
 	},
 	rottenfang_hyena_0060 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			43,
-			27,
-			44,
-			59
+			86,
+			55,
+			89,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1483,
-			1837,
-			38,
-			39
+			2365,
+			3008,
+			75,
+			76
 		},
 		alias = {
 			"rottenfang_hyena_0061"
 		}
 	},
 	rottenfang_hyena_0062 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			46,
-			32,
-			33,
-			59
+			93,
+			65,
+			68,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1246,
-			1161,
-			46,
-			34
+			2960,
+			1923,
+			89,
+			66
 		},
 		alias = {
 			"rottenfang_hyena_0063",
@@ -16659,442 +16659,442 @@ local a = {
 		}
 	},
 	rottenfang_hyena_0064 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			44,
-			32,
-			34,
-			59
+			89,
+			65,
+			70,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1899,
-			47,
-			34
+			3774,
+			1834,
+			91,
+			66
 		},
 		alias = {
 			"rottenfang_hyena_0065"
 		}
 	},
 	rottenfang_hyena_0066 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			27,
-			16,
-			38,
-			59
+			54,
+			33,
+			78,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			980,
-			781,
-			60,
-			50
+			1579,
+			1411,
+			118,
+			98
 		},
 		alias = {
 			"rottenfang_hyena_0067"
 		}
 	},
 	rottenfang_hyena_0068 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			21,
-			14,
-			43,
-			59
+			44,
+			30,
+			87,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			1757,
-			61,
-			52
+			1327,
+			3350,
+			119,
+			101
 		},
 		alias = {
 			"rottenfang_hyena_0069"
 		}
 	},
 	rottenfang_hyena_0070 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			48,
-			16,
-			18,
-			57
+			96,
+			34,
+			37,
+			114
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1442,
-			781,
-			59,
-			52
+			1455,
+			1640,
+			117,
+			102
 		},
 		alias = {
 			"rottenfang_hyena_0071"
 		}
 	},
 	rottenfang_hyena_0072 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			47,
-			18,
-			18,
-			57
+			95,
+			38,
+			37,
+			114
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1046,
-			781,
-			60,
-			50
+			1703,
+			1411,
+			118,
+			98
 		},
 		alias = {
 			"rottenfang_hyena_0073"
 		}
 	},
 	rottenfang_hyena_0074 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			46,
-			13,
-			20,
-			57
+			93,
+			28,
+			41,
+			114
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			1345,
-			59,
-			55
+			1455,
+			2443,
+			116,
+			108
 		},
 		alias = {
 			"rottenfang_hyena_0075"
 		}
 	},
 	rottenfang_hyena_0076 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			46,
-			9,
-			28,
-			57
+			93,
+			19,
+			56,
+			115
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1997,
-			375,
-			51,
-			59
+			3995,
+			356,
+			101,
+			116
 		},
 		alias = {
 			"rottenfang_hyena_0077"
 		}
 	},
 	rottenfang_hyena_0078 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			39,
-			23,
-			21,
-			51
+			79,
+			48,
+			43,
+			102
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			812,
-			65,
-			51
+			1060,
+			1766,
+			128,
+			100
 		},
 		alias = {
 			"rottenfang_hyena_0079"
 		}
 	},
 	rottenfang_hyena_0080 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			39,
-			24,
-			21,
-			51
+			78,
+			49,
+			43,
+			103
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			869,
-			65,
-			50
+			3651,
+			1003,
+			129,
+			98
 		},
 		alias = {
 			"rottenfang_hyena_0081"
 		}
 	},
 	rottenfang_hyena_0082 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			38,
-			32,
-			25,
-			52
+			76,
+			64,
+			50,
+			104
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1258,
-			728,
-			62,
-			41
+			1196,
+			3755,
+			124,
+			82
 		},
 		alias = {
 			"rottenfang_hyena_0083"
 		}
 	},
 	rottenfang_hyena_0084 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			43,
-			32,
-			38,
-			53
+			86,
+			66,
+			77,
+			106
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1795,
-			1202,
-			44,
-			40
+			3997,
+			1923,
+			87,
+			78
 		},
 		alias = {
 			"rottenfang_hyena_0085"
 		}
 	},
 	rottenfang_hyena_0086 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			46,
-			32,
-			32,
-			59
+			92,
+			65,
+			65,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1939,
-			47,
-			34
+			2311,
+			1834,
+			93,
+			66
 		},
 		alias = {
 			"rottenfang_hyena_0087"
 		}
 	},
 	rottenfang_hyena_0092 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			45,
-			33,
-			33,
-			59
+			92,
+			68,
+			68,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1979,
-			47,
-			33
+			1911,
+			3917,
+			90,
+			63
 		},
 		alias = {
 			"rottenfang_hyena_0093"
 		}
 	},
 	rottenfang_hyena_0094 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			38,
-			25,
-			38,
-			59
+			78,
+			51,
+			78,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1329,
-			49,
-			41
+			2111,
+			1834,
+			94,
+			80
 		},
 		alias = {
 			"rottenfang_hyena_0095"
 		}
 	},
 	rottenfang_hyena_0096 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			42,
-			24,
-			34,
-			59
+			86,
+			48,
+			68,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1234,
-			49,
-			42
+			1808,
+			2169,
+			96,
+			83
 		},
 		alias = {
 			"rottenfang_hyena_0097"
 		}
 	},
 	rottenfang_hyena_0098 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			45,
-			32,
-			35,
-			58
+			91,
+			65,
+			72,
+			118
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1454,
-			1161,
-			45,
-			35
+			2010,
+			2444,
+			87,
+			67
 		},
 		alias = {
 			"rottenfang_hyena_0099"
 		}
 	},
 	rottenfang_hyena_0100 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			45,
-			33,
-			33,
-			59
+			91,
+			67,
+			67,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1122,
-			47,
-			33
+			2803,
+			1834,
+			92,
+			64
 		},
 		alias = {
 			"rottenfang_hyena_0101",
@@ -17105,52 +17105,52 @@ local a = {
 		}
 	},
 	rottenfang_hyena_0102 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			45,
-			29,
-			28,
-			57
+			91,
+			58,
+			57,
+			116
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1983,
-			974,
-			52,
-			39
+			1696,
+			2405,
+			102,
+			76
 		},
 		alias = {
 			"rottenfang_hyena_0103"
 		}
 	},
 	rottenfang_hyena_0104 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			45,
-			27,
-			24,
-			59
+			91,
+			55,
+			49,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			1611,
-			56,
-			39
+			3342,
+			1517,
+			110,
+			76
 		},
 		alias = {
 			"rottenfang_hyena_0105",
@@ -17161,26 +17161,26 @@ local a = {
 		}
 	},
 	rottenfang_hyena_0106 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			45,
-			32,
-			27,
-			58
+			91,
+			65,
+			56,
+			118
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1750,
-			974,
-			53,
-			35
+			3360,
+			1671,
+			103,
+			67
 		},
 		alias = {
 			"rottenfang_hyena_0107",
@@ -17189,26 +17189,26 @@ local a = {
 		}
 	},
 	rottenfang_hyena_0110 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			45,
-			29,
-			28,
-			57
+			91,
+			58,
+			57,
+			116
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1098,
-			52,
-			39
+			1696,
+			2487,
+			102,
+			76
 		},
 		alias = {
 			"rottenfang_hyena_0111",
@@ -17217,468 +17217,468 @@ local a = {
 		}
 	},
 	rottenfang_hyena_0122 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			45,
-			27,
-			39,
-			59
+			91,
+			54,
+			79,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1813,
-			1314,
-			41,
-			39
+			2452,
+			2225,
+			80,
+			77
 		},
 		alias = {
 			"rottenfang_hyena_0123"
 		}
 	},
 	rottenfang_hyena_0124 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			42,
-			23,
-			38,
-			59
+			85,
+			47,
+			77,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1433,
-			45,
-			43
+			3433,
+			1923,
+			88,
+			84
 		},
 		alias = {
 			"rottenfang_hyena_0125"
 		}
 	},
 	rottenfang_hyena_0126 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			44,
-			33,
-			31,
-			59
+			89,
+			68,
+			64,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1980,
-			50,
-			33
+			1808,
+			2008,
+			97,
+			63
 		},
 		alias = {
 			"rottenfang_hyena_0127"
 		}
 	},
 	rottenfang_hyena_0132 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			36,
-			31,
-			41,
-			59
+			73,
+			64,
+			83,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1467,
-			1073,
-			48,
-			35
+			2211,
+			1834,
+			94,
+			67
 		},
 		alias = {
 			"rottenfang_hyena_0133"
 		}
 	},
 	rottenfang_hyena_0134 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			39,
-			25,
-			38,
-			59
+			79,
+			50,
+			77,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1197,
-			1073,
-			48,
-			41
+			2011,
+			1834,
+			94,
+			81
 		},
 		alias = {
 			"rottenfang_hyena_0135"
 		}
 	},
 	rottenfang_hyena_0136 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			42,
-			7,
-			38,
-			59
+			85,
+			16,
+			76,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1269,
-			45,
-			59
+			2105,
+			1923,
+			89,
+			115
 		},
 		alias = {
 			"rottenfang_hyena_0137"
 		}
 	},
 	rottenfang_hyena_0138 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			47,
-			2,
-			36,
-			59
+			94,
+			5,
+			73,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1245,
-			1861,
-			42,
-			64
+			2103,
+			2270,
+			83,
+			126
 		},
 		alias = {
 			"rottenfang_hyena_0139"
 		}
 	},
 	rottenfang_hyena_0140 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			47,
+			95,
 			0,
-			31,
-			56
+			64,
+			114
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1122,
-			47,
-			69
+			1911,
+			2320,
+			91,
+			136
 		},
 		alias = {
 			"rottenfang_hyena_0141"
 		}
 	},
 	rottenfang_hyena_0142 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			37,
-			1,
-			34,
-			56
+			74,
+			3,
+			69,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1994,
-			839,
-			54,
-			68
+			1578,
+			3344,
+			107,
+			134
 		},
 		alias = {
 			"rottenfang_hyena_0143"
 		}
 	},
 	rottenfang_hyena_0144 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			44,
-			16,
-			34,
-			56
+			90,
+			33,
+			69,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1197,
-			47,
-			53
+			1911,
+			2699,
+			91,
+			104
 		},
 		alias = {
 			"rottenfang_hyena_0145"
 		}
 	},
 	rottenfang_hyena_0146 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			48,
-			23,
-			34,
-			53
+			96,
+			46,
+			69,
+			107
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1245,
-			1419,
-			43,
-			49
+			2010,
+			3880,
+			85,
+			97
 		},
 		alias = {
 			"rottenfang_hyena_0147"
 		}
 	},
 	rottenfang_hyena_0148 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			48,
-			43,
-			34,
-			53
+			96,
+			87,
+			69,
+			107
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1245,
-			1826,
-			43,
-			29
+			2831,
+			2049,
+			85,
+			56
 		},
 		alias = {
 			"rottenfang_hyena_0149"
 		}
 	},
 	rottenfang_hyena_0150 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			48,
-			41,
-			34,
-			53
+			96,
+			84,
+			69,
+			107
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			2002,
-			1161,
-			43,
-			31
+			2740,
+			2049,
+			85,
+			59
 		},
 		alias = {
 			"rottenfang_hyena_0151"
 		}
 	},
 	rottenfang_hyena_0152 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			56,
-			54,
-			54,
-			56
+			113,
+			109,
+			108,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			2033,
-			15,
-			15
+			204,
+			2257,
+			29,
+			29
 		},
 		alias = {
 			"rottenfang_hyena_0153"
 		}
 	},
 	rottenfang_hyena_0154 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			48,
-			44,
-			43,
-			47
+			97,
+			87,
+			86,
+			94
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1571,
-			1982,
-			34,
-			34
+			2447,
+			2972,
+			67,
+			69
 		},
 		alias = {
 			"rottenfang_hyena_0155"
 		}
 	},
 	rottenfang_hyena_0156 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			44,
-			41,
-			40,
-			43
+			88,
+			83,
+			80,
+			87
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			2007,
-			1073,
-			41,
-			41
+			2103,
+			2917,
+			82,
+			80
 		},
 		alias = {
 			"rottenfang_hyena_0157"
 		}
 	},
 	rottenfang_hyena_0158 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			125,
-			125
+			250,
+			250
 		},
 		trim = {
-			41,
-			39,
-			37,
-			41
+			83,
+			78,
+			74,
+			82
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1364,
-			47,
-			45
+			1911,
+			2224,
+			93,
+			90
 		},
 		alias = {
 			"rottenfang_hyena_0159"
 		}
 	},
 	skunk_bombardier_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			32,
-			32,
-			32,
-			62
+			64,
+			65,
+			66,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1809,
-			46,
-			36
+			1911,
+			3246,
+			90,
+			70
 		},
 		alias = {
 			"skunk_bombardier_0128",
@@ -17686,52 +17686,52 @@ local a = {
 		}
 	},
 	skunk_bombardier_0002 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			33,
-			30,
-			32,
-			62
+			66,
+			62,
+			65,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1572,
-			45,
-			38
+			2580,
+			1923,
+			89,
+			73
 		},
 		alias = {
 			"skunk_bombardier_0003"
 		}
 	},
 	skunk_bombardier_0004 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			33,
-			29,
-			32,
-			62
+			66,
+			59,
+			65,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1482,
-			45,
-			39
+			2390,
+			1923,
+			89,
+			76
 		},
 		alias = {
 			"skunk_bombardier_0005",
@@ -17739,156 +17739,156 @@ local a = {
 		}
 	},
 	skunk_bombardier_0007 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			32,
-			28,
-			32,
-			62
+			65,
+			57,
+			65,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1540,
-			46,
-			40
+			1911,
+			3078,
+			90,
+			78
 		},
 		alias = {
 			"skunk_bombardier_0008"
 		}
 	},
 	skunk_bombardier_0009 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			32,
-			28,
-			32,
-			62
+			65,
+			57,
+			66,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1586,
-			46,
-			40
+			2295,
+			1923,
+			89,
+			78
 		},
 		alias = {
 			"skunk_bombardier_0010"
 		}
 	},
 	skunk_bombardier_0011 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			32,
-			34,
-			32,
-			62
+			65,
+			69,
+			65,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1298,
-			1161,
-			46,
-			34
+			1911,
+			3701,
+			90,
+			66
 		},
 		alias = {
 			"skunk_bombardier_0012"
 		}
 	},
 	skunk_bombardier_0013 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			33,
-			31,
-			32,
-			62
+			66,
+			64,
+			65,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1702,
-			45,
-			37
+			2675,
+			1923,
+			89,
+			71
 		},
 		alias = {
 			"skunk_bombardier_0014"
 		}
 	},
 	skunk_bombardier_0015 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			33,
-			29,
-			32,
-			62
+			66,
+			60,
+			65,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1527,
-			45,
-			39
+			2485,
+			1923,
+			89,
+			75
 		},
 		alias = {
 			"skunk_bombardier_0016"
 		}
 	},
 	skunk_bombardier_0017 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			32,
-			28,
-			32,
-			62
+			65,
+			57,
+			65,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1632,
-			46,
-			40
+			1911,
+			3162,
+			90,
+			78
 		},
 		alias = {
 			"skunk_bombardier_0018",
@@ -17896,104 +17896,104 @@ local a = {
 		}
 	},
 	skunk_bombardier_0020 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			31,
-			27,
-			32,
-			62
+			63,
+			55,
+			66,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1513,
-			47,
-			41
+			2901,
+			1834,
+			91,
+			80
 		},
 		alias = {
 			"skunk_bombardier_0021"
 		}
 	},
 	skunk_bombardier_0022 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			32,
-			33,
-			32,
-			62
+			66,
+			67,
+			65,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1161,
-			46,
-			35
+			2865,
+			1923,
+			89,
+			68
 		},
 		alias = {
 			"skunk_bombardier_0023"
 		}
 	},
 	skunk_bombardier_0024 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			31,
-			38,
-			62
+			79,
+			63,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1651,
-			1667,
-			33,
-			37
+			3433,
+			2472,
+			64,
+			72
 		},
 		alias = {
 			"skunk_bombardier_0025"
 		}
 	},
 	skunk_bombardier_0026 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			29,
-			38,
-			62
+			79,
+			59,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			2015,
-			1269,
-			33,
-			39
+			2873,
+			2472,
+			64,
+			76
 		},
 		alias = {
 			"skunk_bombardier_0027",
@@ -18001,156 +18001,156 @@ local a = {
 		}
 	},
 	skunk_bombardier_0029 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			27,
-			38,
-			62
+			79,
+			56,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1612,
-			1970,
-			33,
-			41
+			2593,
+			2472,
+			64,
+			79
 		},
 		alias = {
 			"skunk_bombardier_0030"
 		}
 	},
 	skunk_bombardier_0031 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			26,
-			38,
-			62
+			79,
+			54,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1612,
-			1778,
-			33,
-			42
+			2447,
+			3950,
+			64,
+			81
 		},
 		alias = {
 			"skunk_bombardier_0032"
 		}
 	},
 	skunk_bombardier_0033 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			30,
-			38,
-			62
+			79,
+			61,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1924,
-			1620,
-			33,
-			38
+			3223,
+			2472,
+			64,
+			74
 		},
 		alias = {
 			"skunk_bombardier_0034"
 		}
 	},
 	skunk_bombardier_0035 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			31,
-			38,
-			62
+			79,
+			62,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1651,
-			1710,
-			33,
-			37
+			3363,
+			2472,
+			64,
+			73
 		},
 		alias = {
 			"skunk_bombardier_0036"
 		}
 	},
 	skunk_bombardier_0037 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			29,
-			38,
-			62
+			79,
+			59,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1807,
-			1620,
-			33,
-			39
+			2943,
+			2472,
+			64,
+			76
 		},
 		alias = {
 			"skunk_bombardier_0038"
 		}
 	},
 	skunk_bombardier_0039 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			28,
-			38,
-			62
+			79,
+			56,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1690,
-			1620,
-			33,
-			40
+			2663,
+			2472,
+			64,
+			79
 		},
 		alias = {
 			"skunk_bombardier_0040",
@@ -18158,104 +18158,104 @@ local a = {
 		}
 	},
 	skunk_bombardier_0042 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			27,
-			38,
-			62
+			79,
+			55,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1651,
-			1620,
-			33,
-			41
+			4031,
+			1585,
+			64,
+			80
 		},
 		alias = {
 			"skunk_bombardier_0043"
 		}
 	},
 	skunk_bombardier_0044 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			31,
-			38,
-			62
+			79,
+			63,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1651,
-			1753,
-			33,
-			37
+			3503,
+			2472,
+			64,
+			72
 		},
 		alias = {
 			"skunk_bombardier_0045"
 		}
 	},
 	skunk_bombardier_0046 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			30,
-			38,
-			62
+			79,
+			60,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1963,
-			1620,
-			33,
-			38
+			3083,
+			2472,
+			64,
+			75
 		},
 		alias = {
 			"skunk_bombardier_0047"
 		}
 	},
 	skunk_bombardier_0048 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			28,
-			38,
-			62
+			79,
+			56,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1729,
-			1620,
-			33,
-			40
+			2733,
+			2472,
+			64,
+			79
 		},
 		alias = {
 			"skunk_bombardier_0049",
@@ -18263,156 +18263,156 @@ local a = {
 		}
 	},
 	skunk_bombardier_0051 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			26,
-			38,
-			62
+			79,
+			53,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1612,
-			1826,
-			33,
-			42
+			2447,
+			3774,
+			64,
+			82
 		},
 		alias = {
 			"skunk_bombardier_0052"
 		}
 	},
 	skunk_bombardier_0053 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			25,
-			38,
-			62
+			79,
+			51,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1612,
-			1729,
-			33,
-			43
+			2447,
+			3684,
+			64,
+			84
 		},
 		alias = {
 			"skunk_bombardier_0054"
 		}
 	},
 	skunk_bombardier_0055 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			29,
-			38,
-			62
+			79,
+			59,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1846,
-			1620,
-			33,
-			39
+			3013,
+			2472,
+			64,
+			76
 		},
 		alias = {
 			"skunk_bombardier_0056"
 		}
 	},
 	skunk_bombardier_0057 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			29,
-			38,
-			62
+			79,
+			60,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1885,
-			1620,
-			33,
-			39
+			3153,
+			2472,
+			64,
+			75
 		},
 		alias = {
 			"skunk_bombardier_0058"
 		}
 	},
 	skunk_bombardier_0059 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			28,
-			38,
-			62
+			79,
+			57,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1768,
-			1620,
-			33,
-			40
+			2803,
+			2472,
+			64,
+			78
 		},
 		alias = {
 			"skunk_bombardier_0060"
 		}
 	},
 	skunk_bombardier_0061 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			26,
-			38,
-			62
+			79,
+			54,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1612,
-			1874,
-			33,
-			42
+			2523,
+			2472,
+			64,
+			81
 		},
 		alias = {
 			"skunk_bombardier_0062",
@@ -18420,78 +18420,78 @@ local a = {
 		}
 	},
 	skunk_bombardier_0064 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			26,
-			38,
-			62
+			79,
+			53,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1612,
-			1922,
-			33,
-			42
+			2447,
+			3862,
+			64,
+			82
 		},
 		alias = {
 			"skunk_bombardier_0065"
 		}
 	},
 	skunk_bombardier_0066 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			39,
-			30,
-			38,
-			62
+			79,
+			61,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			2002,
-			1620,
-			33,
-			38
+			3293,
+			2472,
+			64,
+			74
 		},
 		alias = {
 			"skunk_bombardier_0067"
 		}
 	},
 	skunk_bombardier_0068 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			31,
-			32,
-			32,
-			62
+			64,
+			65,
+			66,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1692,
-			47,
-			36
+			1911,
+			3322,
+			90,
+			70
 		},
 		alias = {
 			"skunk_bombardier_0069",
@@ -18500,130 +18500,130 @@ local a = {
 		}
 	},
 	skunk_bombardier_0070 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			31,
-			33,
-			32,
-			62
+			64,
+			66,
+			66,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1818,
-			47,
-			35
+			1911,
+			3626,
+			90,
+			69
 		},
 		alias = {
 			"skunk_bombardier_0071"
 		}
 	},
 	skunk_bombardier_0072 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			31,
-			30,
-			33,
-			62
+			62,
+			62,
+			66,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1723,
-			46,
-			38
+			2607,
+			1834,
+			92,
+			73
 		},
 		alias = {
 			"skunk_bombardier_0073"
 		}
 	},
 	skunk_bombardier_0074 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			29,
-			29,
-			35,
-			62
+			58,
+			60,
+			71,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1678,
-			46,
-			39
+			3192,
+			1834,
+			91,
+			75
 		},
 		alias = {
 			"skunk_bombardier_0075"
 		}
 	},
 	skunk_bombardier_0076 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			26,
-			30,
-			37,
-			62
+			53,
+			61,
+			75,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1605,
-			47,
-			38
+			2509,
+			1834,
+			92,
+			74
 		},
 		alias = {
 			"skunk_bombardier_0077"
 		}
 	},
 	skunk_bombardier_0078 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			26,
-			31,
-			37,
-			62
+			52,
+			63,
+			76,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1649,
-			47,
-			37
+			2705,
+			1834,
+			92,
+			72
 		},
 		alias = {
 			"skunk_bombardier_0079",
@@ -18632,104 +18632,104 @@ local a = {
 		}
 	},
 	skunk_bombardier_0082 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			48,
-			30,
-			21,
-			62
+			98,
+			62,
+			43,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1437,
-			1370,
-			41,
-			38
+			2280,
+			2591,
+			79,
+			73
 		},
 		alias = {
 			"skunk_bombardier_0083"
 		}
 	},
 	skunk_bombardier_0084 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			48,
-			32,
-			20,
-			62
+			98,
+			65,
+			41,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1529,
-			42,
-			36
+			3161,
+			2148,
+			81,
+			70
 		},
 		alias = {
 			"skunk_bombardier_0085"
 		}
 	},
 	skunk_bombardier_0086 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			49,
-			32,
-			19,
-			62
+			98,
+			65,
+			40,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1571,
-			42,
-			36
+			2281,
+			2148,
+			82,
+			70
 		},
 		alias = {
 			"skunk_bombardier_0087"
 		}
 	},
 	skunk_bombardier_0088 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			49,
-			32,
-			19,
-			62
+			99,
+			66,
+			38,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1613,
-			42,
-			36
+			2103,
+			2660,
+			83,
+			69
 		},
 		alias = {
 			"skunk_bombardier_0089",
@@ -18738,78 +18738,78 @@ local a = {
 		}
 	},
 	skunk_bombardier_0092 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			38,
-			31,
-			24,
-			62
+			77,
+			63,
+			48,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1305,
-			1073,
-			48,
-			37
+			1808,
+			3437,
+			95,
+			72
 		},
 		alias = {
 			"skunk_bombardier_0093"
 		}
 	},
 	skunk_bombardier_0094 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			32,
-			32,
-			32,
-			62
+			65,
+			65,
+			65,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1851,
-			46,
-			36
+			1911,
+			3398,
+			90,
+			70
 		},
 		alias = {
 			"skunk_bombardier_0095"
 		}
 	},
 	skunk_bombardier_0098 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			31,
-			32,
-			32,
-			62
+			64,
+			65,
+			66,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1734,
-			47,
-			36
+			1911,
+			3474,
+			90,
+			70
 		},
 		alias = {
 			"skunk_bombardier_0099",
@@ -18818,1092 +18818,1092 @@ local a = {
 		}
 	},
 	skunk_bombardier_0100 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			31,
-			32,
-			34,
-			62
+			62,
+			65,
+			68,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1745,
-			45,
-			36
+			1911,
+			3550,
+			90,
+			70
 		},
 		alias = {
 			"skunk_bombardier_0101"
 		}
 	},
 	skunk_bombardier_0102 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			27,
-			32,
-			38,
-			62
+			54,
+			65,
+			77,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1787,
-			45,
-			36
+			2770,
+			1923,
+			89,
+			70
 		},
 		alias = {
 			"skunk_bombardier_0103"
 		}
 	},
 	skunk_bombardier_0104 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			25,
-			32,
-			39,
-			62
+			51,
+			65,
+			78,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1893,
-			46,
-			36
+			3483,
+			1834,
+			91,
+			70
 		},
 		alias = {
 			"skunk_bombardier_0105"
 		}
 	},
 	skunk_bombardier_0106 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			25,
-			32,
-			39,
-			62
+			50,
+			66,
+			79,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1935,
-			46,
-			36
+			3677,
+			1834,
+			91,
+			69
 		},
 		alias = {
 			"skunk_bombardier_0107"
 		}
 	},
 	skunk_bombardier_0108 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			34,
-			31,
-			18,
-			62
+			68,
+			64,
+			38,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			2010,
-			58,
-			37
+			1455,
+			3794,
+			114,
+			71
 		},
 		alias = {
 			"skunk_bombardier_0109"
 		}
 	},
 	skunk_bombardier_0110 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			36,
-			32,
-			16,
-			62
+			73,
+			65,
+			34,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1489,
-			839,
-			58,
-			36
+			1935,
+			1517,
+			113,
+			70
 		},
 		alias = {
 			"skunk_bombardier_0111"
 		}
 	},
 	skunk_bombardier_0112 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			36,
-			32,
-			22,
-			62
+			73,
+			65,
+			46,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1187,
-			52,
-			36
+			1696,
+			2913,
+			101,
+			70
 		},
 		alias = {
 			"skunk_bombardier_0113"
 		}
 	},
 	skunk_bombardier_0114 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			36,
-			32,
-			24,
-			62
+			74,
+			66,
+			48,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1778,
-			50,
-			36
+			1696,
+			3947,
+			98,
+			69
 		},
 		alias = {
 			"skunk_bombardier_0115"
 		}
 	},
 	skunk_bombardier_0116 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			35,
-			32,
-			27,
-			62
+			71,
+			65,
+			54,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1413,
-			1073,
-			48,
-			36
+			1808,
+			3515,
+			95,
+			70
 		},
 		alias = {
 			"skunk_bombardier_0117"
 		}
 	},
 	skunk_bombardier_0118 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			34,
-			32,
-			29,
-			62
+			70,
+			64,
+			59,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1776,
-			47,
-			36
+			3386,
+			1834,
+			91,
+			71
 		},
 		alias = {
 			"skunk_bombardier_0119"
 		}
 	},
 	skunk_bombardier_0120 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			34,
-			32,
-			31,
-			62
+			69,
+			64,
+			64,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1829,
-			45,
-			36
+			2010,
+			2291,
+			87,
+			71
 		},
 		alias = {
 			"skunk_bombardier_0121"
 		}
 	},
 	skunk_bombardier_0122 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			30,
-			32,
-			35,
-			62
+			60,
+			65,
+			72,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1871,
-			45,
-			36
+			3809,
+			1923,
+			88,
+			70
 		},
 		alias = {
 			"skunk_bombardier_0123"
 		}
 	},
 	skunk_bombardier_0124 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			31,
-			32,
-			33,
-			62
+			63,
+			65,
+			66,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1977,
-			46,
-			36
+			3580,
+			1834,
+			91,
+			70
 		},
 		alias = {
 			"skunk_bombardier_0125"
 		}
 	},
 	skunk_bombardier_0130 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			32,
-			34,
-			32,
-			62
+			64,
+			69,
+			66,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1350,
-			1161,
-			46,
-			34
+			1911,
+			3773,
+			90,
+			66
 		},
 		alias = {
 			"skunk_bombardier_0131"
 		}
 	},
 	skunk_bombardier_0132 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			31,
-			34,
-			33,
-			62
+			63,
+			69,
+			67,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1402,
-			1161,
-			46,
-			34
+			1911,
+			3845,
+			90,
+			66
 		},
 		alias = {
 			"skunk_bombardier_0133"
 		}
 	},
 	skunk_bombardier_0134 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			21,
-			22,
-			39,
-			62
+			43,
+			45,
+			78,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1676,
-			50,
-			46
+			1696,
+			3336,
+			99,
+			90
 		},
 		alias = {
 			"skunk_bombardier_0135"
 		}
 	},
 	skunk_bombardier_0136 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			13,
-			12,
-			49,
-			62
+			27,
+			25,
+			99,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1596,
-			48,
-			56
+			1808,
+			3663,
+			94,
+			110
 		},
 		alias = {
 			"skunk_bombardier_0137"
 		}
 	},
 	skunk_bombardier_0138 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			12,
-			9,
-			55,
-			62
+			25,
+			19,
+			111,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1245,
-			1354,
-			43,
-			59
+			2103,
+			2148,
+			84,
+			116
 		},
 		alias = {
 			"skunk_bombardier_0139"
 		}
 	},
 	skunk_bombardier_0140 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			10,
-			6,
-			56,
-			62
+			21,
+			14,
+			113,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1913,
-			44,
-			62
+			2010,
+			2651,
+			86,
+			121
 		},
 		alias = {
 			"skunk_bombardier_0141"
 		}
 	},
 	skunk_bombardier_0142 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			9,
-			7,
-			56,
-			62
+			19,
+			15,
+			112,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1202,
-			45,
-			61
+			2010,
+			1923,
+			89,
+			120
 		},
 		alias = {
 			"skunk_bombardier_0143"
 		}
 	},
 	skunk_bombardier_0144 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			8,
-			13,
-			56,
-			62
+			16,
+			27,
+			113,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1227,
-			46,
-			55
+			1911,
+			2585,
+			91,
+			108
 		},
 		alias = {
 			"skunk_bombardier_0145"
 		}
 	},
 	skunk_bombardier_0146 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			7,
 			15,
-			57,
-			60
+			32,
+			116,
+			120
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1288,
-			46,
-			55
+			2200,
+			1923,
+			89,
+			108
 		},
 		alias = {
 			"skunk_bombardier_0147"
 		}
 	},
 	skunk_bombardier_0148 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			6,
-			31,
-			58,
-			58
+			13,
+			63,
+			116,
+			117
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1447,
-			46,
-			41
+			2998,
+			1834,
+			91,
+			80
 		},
 		alias = {
 			"skunk_bombardier_0149"
 		}
 	},
 	skunk_bombardier_0150 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			4,
-			42,
-			57,
-			58
+			9,
+			85,
+			115,
+			116
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1481,
-			1035,
-			49,
-			30
+			2224,
+			1766,
+			96,
+			59
 		},
 		alias = {
 			"skunk_bombardier_0151"
 		}
 	},
 	skunk_bombardier_0152 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			7,
-			37,
-			59,
-			59
+			15,
+			76,
+			119,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1655,
-			1161,
-			44,
-			34
+			2010,
+			3422,
+			86,
+			65
 		},
 		alias = {}
 	},
 	skunk_bombardier_0153 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
 			0,
-			17,
-			47,
-			42
+			34,
+			93,
+			83
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			812,
-			63,
-			71
+			1060,
+			1872,
+			127,
+			143
 		},
 		alias = {}
 	},
 	skunk_bombardier_0154 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
 			0,
-			17,
-			47,
-			42
+			34,
+			93,
+			83
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			889,
-			63,
-			71
+			1060,
+			2021,
+			127,
+			143
 		},
 		alias = {}
 	},
 	skunk_bombardier_0155 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
 			0,
-			17,
-			47,
-			42
+			34,
+			93,
+			83
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			966,
-			63,
-			71
+			1060,
+			2170,
+			127,
+			143
 		},
 		alias = {}
 	},
 	skunk_bombardier_0156 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
 			0,
-			17,
-			47,
-			42
+			34,
+			93,
+			83
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			1043,
-			63,
-			71
+			1060,
+			2319,
+			127,
+			143
 		},
 		alias = {}
 	},
 	skunk_bombardier_0157 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
 			0,
-			17,
-			47,
-			42
+			34,
+			93,
+			83
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			1120,
-			63,
-			71
+			1060,
+			2468,
+			127,
+			143
 		},
 		alias = {}
 	},
 	skunk_bombardier_0158 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
 			0,
-			17,
-			47,
-			42
+			34,
+			93,
+			83
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			1197,
-			63,
-			71
+			1060,
+			2617,
+			127,
+			143
 		},
 		alias = {}
 	},
 	skunk_bombardier_0159 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
 			0,
-			17,
-			47,
-			42
+			34,
+			93,
+			83
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			1274,
-			63,
-			71
+			1060,
+			2766,
+			127,
+			143
 		},
 		alias = {
 			"skunk_bombardier_0160"
 		}
 	},
 	skunk_bombardier_0161 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
 			0,
-			17,
-			47,
-			42
+			34,
+			93,
+			83
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			1351,
-			63,
-			71
+			1060,
+			2915,
+			127,
+			143
 		},
 		alias = {}
 	},
 	skunk_bombardier_0162 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
 			0,
-			18,
-			48,
-			43
+			37,
+			95,
+			87
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			940,
-			62,
-			69
+			1196,
+			1733,
+			125,
+			136
 		},
 		alias = {}
 	},
 	skunk_bombardier_0163 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
 			0,
-			18,
-			48,
-			43
+			37,
+			95,
+			87
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			1015,
-			62,
-			69
+			1196,
+			1875,
+			125,
+			136
 		},
 		alias = {}
 	},
 	skunk_bombardier_0164 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
 			0,
-			18,
-			47,
-			43
+			37,
+			95,
+			87
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			1505,
-			63,
-			69
+			1196,
+			2017,
+			125,
+			136
 		},
 		alias = {}
 	},
 	skunk_bombardier_0165 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
 			0,
-			18,
-			47,
-			43
+			37,
+			95,
+			87
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			1580,
-			63,
-			69
+			1196,
+			2159,
+			125,
+			136
 		},
 		alias = {}
 	},
 	skunk_bombardier_0166 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
 			0,
-			20,
-			48,
-			45
+			40,
+			97,
+			90
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			1165,
-			62,
-			65
+			1456,
+			1265,
+			123,
+			130
 		},
 		alias = {}
 	},
 	skunk_bombardier_0167 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
 			0,
-			21,
-			49,
-			46
+			42,
+			99,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			1688,
-			61,
-			63
+			1327,
+			2282,
+			121,
+			126
 		},
 		alias = {}
 	},
 	skunk_bombardier_0168 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			0,
-			22,
-			52,
-			48
+			1,
+			46,
+			104,
+			97
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			977,
-			839,
-			58,
-			60
+			1455,
+			3113,
+			115,
+			117
 		},
 		alias = {}
 	},
 	skunk_bombardier_0169 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			12,
-			22,
-			61,
-			87
+			24,
+			46,
+			122,
+			176
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1146,
+			3586,
+			312,
 			74,
-			37,
-			21
+			38
 		},
 		alias = {}
 	},
 	skunk_bombardier_0170 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
-			12,
-			22,
-			61,
-			87
+			24,
+			46,
+			122,
+			176
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1589,
-			592,
-			37,
-			21
+			3666,
+			312,
+			74,
+			38
 		},
 		alias = {}
 	},
 	skunk_bombardier_0171 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			110,
-			130
+			220,
+			260
 		},
 		trim = {
 			0,
 			0,
-			108,
-			128
+			218,
+			258
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			652,
-			97,
+			1025,
+			180,
 			2,
 			2
 		},
 		alias = {}
 	},
 	skunk_bombardier_bomb_ = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			18,
-			19
+			35,
+			37
 		},
 		trim = {
 			0,
@@ -19912,588 +19912,588 @@ local a = {
 			0
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1460,
-			508,
-			18,
-			19
+			1972,
+			1102,
+			35,
+			37
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			25,
-			27,
-			23,
-			24
+			51,
+			55,
+			48,
+			48
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1804,
-			1667,
-			32,
-			29
+			2523,
+			3251,
+			61,
+			57
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0002 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			25,
-			27,
-			23,
-			24
+			51,
+			55,
+			48,
+			48
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1842,
-			1667,
-			32,
-			29
+			2523,
+			3314,
+			61,
+			57
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0003 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			22,
-			23,
-			22,
-			24
+			44,
+			48,
+			45,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1528,
-			1716,
-			36,
-			33
+			2447,
+			2403,
+			71,
+			63
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0004 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			22,
-			23,
-			22,
-			24
+			44,
+			48,
+			45,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1528,
-			1755,
-			36,
-			33
+			2524,
+			2403,
+			71,
+			63
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0005 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			24,
-			20,
-			21,
-			23
+			49,
+			42,
+			42,
+			47
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1571,
-			1632,
-			35,
-			37
+			2447,
+			2575,
+			69,
+			71
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0006 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			24,
-			20,
-			21,
-			23
+			49,
+			42,
+			42,
+			47
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1571,
-			1675,
-			35,
-			37
+			2447,
+			2652,
+			69,
+			71
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0007 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			22,
-			17,
-			19,
-			22
+			45,
+			36,
+			39,
+			46
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1437,
-			1989,
-			39,
-			41
+			2365,
+			2403,
+			76,
+			78
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0008 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			22,
-			17,
-			19,
-			22
+			45,
+			36,
+			39,
+			46
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1483,
-			1460,
-			39,
-			41
+			2365,
+			2487,
+			76,
+			78
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0009 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			22,
-			16,
-			18,
-			22
+			45,
+			33,
+			36,
+			44
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1390,
-			1779,
-			40,
-			42
+			3828,
+			2225,
+			79,
+			83
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0010 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			22,
-			16,
-			18,
-			22
+			45,
+			33,
+			36,
+			44
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1390,
-			1827,
-			40,
-			42
+			3913,
+			2225,
+			79,
+			83
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0011 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			21,
-			15,
-			15,
-			21
+			43,
+			32,
+			31,
+			43
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1595,
-			1202,
-			44,
-			44
+			2010,
+			3000,
+			86,
+			85
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0012 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			21,
-			15,
-			15,
-			21
+			43,
+			32,
+			31,
+			43
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1645,
-			1202,
-			44,
-			44
+			2010,
+			3091,
+			86,
+			85
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0013 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			19,
-			17,
-			13,
-			20
+			39,
+			35,
+			26,
+			41
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1073,
-			48,
-			43
+			1808,
+			3010,
+			95,
+			84
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0014 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			19,
-			17,
-			13,
-			20
+			39,
+			35,
+			26,
+			41
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1143,
-			1073,
-			48,
-			43
+			1808,
+			3100,
+			95,
+			84
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0015 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			19,
-			19,
-			12,
-			20
+			38,
+			38,
+			25,
+			41
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1376,
-			49,
-			41
+			1808,
+			1834,
+			97,
+			81
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0016 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			19,
-			19,
-			12,
-			20
+			38,
+			38,
+			25,
+			41
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1423,
-			49,
-			41
+			1808,
+			1921,
+			97,
+			81
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0017 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			17,
-			18,
-			11,
-			20
+			36,
+			36,
+			23,
+			40
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1867,
-			974,
-			52,
-			42
+			1696,
+			2648,
+			101,
+			84
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0018 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			18,
-			18,
-			11,
-			20
+			36,
+			36,
+			23,
+			40
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1301,
-			51,
-			42
+			1696,
+			2738,
+			101,
+			84
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0019 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			16,
-			17,
-			10,
-			19
+			32,
+			34,
+			20,
+			39
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1583,
-			920,
-			54,
-			44
+			1578,
+			2987,
+			108,
+			87
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0020 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			16,
-			17,
-			10,
-			20
+			32,
+			34,
+			20,
+			40
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1643,
-			920,
-			54,
-			43
+			1578,
+			3080,
+			108,
+			86
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0021 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
+			23,
+			28,
 			11,
-			14,
-			5,
-			18
+			36
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1201,
-			670,
-			64,
-			48
+			1988,
+			1150,
+			126,
+			96
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0022 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			12,
-			14,
-			5,
-			18
+			24,
+			28,
+			11,
+			36
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			1727,
-			63,
-			48
+			3434,
+			1150,
+			125,
+			96
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0023 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
-			10,
-			12,
-			4,
-			17
+			21,
+			24,
+			8,
+			34
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			1363,
-			66,
-			51
+			1471,
+			1003,
+			131,
+			102
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_0024 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			80,
-			80
+			160,
+			160
 		},
 		trim = {
 			0,
 			0,
-			78,
-			78
+			158,
+			158
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			660,
-			97,
+			1025,
+			188,
 			2,
 			2
 		},
@@ -20502,24 +20502,24 @@ local a = {
 		}
 	},
 	skunk_bombardier_explosion_smoke_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			50,
-			50
+			100,
+			100
 		},
 		trim = {
 			0,
 			0,
-			48,
-			48
+			98,
+			98
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			668,
-			97,
+			1033,
+			180,
 			2,
 			2
 		},
@@ -20528,812 +20528,812 @@ local a = {
 		}
 	},
 	skunk_bombardier_explosion_smoke_0002 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			50,
-			50
+			100,
+			100
 		},
 		trim = {
-			13,
-			21,
-			15,
-			21
+			26,
+			42,
+			30,
+			42
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1661,
-			176,
-			22,
-			8
+			1424,
+			173,
+			44,
+			16
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_smoke_0003 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			50,
-			50
+			100,
+			100
 		},
 		trim = {
-			11,
-			17,
-			14,
-			20
+			24,
+			34,
+			29,
+			41
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1599,
-			176,
-			25,
-			13
+			1567,
+			322,
+			47,
+			25
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_smoke_0004 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			50,
-			50
+			100,
+			100
 		},
 		trim = {
-			11,
-			17,
-			14,
-			20
+			24,
+			34,
+			29,
+			41
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1630,
-			176,
-			25,
-			13
+			1620,
+			322,
+			47,
+			25
 		},
 		alias = {}
 	},
 	skunk_bombardier_explosion_smoke_0005 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			50,
-			50
+			100,
+			100
 		},
 		trim = {
-			10,
-			15,
-			13,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1501,
-			430,
-			27,
-			16
-		},
-		alias = {}
-	},
-	skunk_bombardier_explosion_smoke_0006 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			50,
-			50
-		},
-		trim = {
-			10,
-			15,
-			13,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1845,
-			1247,
-			27,
-			16
-		},
-		alias = {}
-	},
-	skunk_bombardier_explosion_smoke_0007 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			50,
-			50
-		},
-		trim = {
-			9,
-			12,
-			12,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1295,
-			2029,
-			29,
-			18
-		},
-		alias = {}
-	},
-	skunk_bombardier_explosion_smoke_0008 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			50,
-			50
-		},
-		trim = {
-			9,
-			12,
-			12,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1343,
-			2030,
-			29,
-			18
-		},
-		alias = {}
-	},
-	skunk_bombardier_explosion_smoke_0009 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			50,
-			50
-		},
-		trim = {
-			8,
-			10,
-			12,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1267,
-			254,
-			30,
-			22
-		},
-		alias = {}
-	},
-	skunk_bombardier_explosion_smoke_0010 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			50,
-			50
-		},
-		trim = {
-			8,
-			10,
-			12,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1799,
-			1703,
-			30,
-			22
-		},
-		alias = {}
-	},
-	skunk_bombardier_explosion_smoke_0011 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			50,
-			50
-		},
-		trim = {
-			8,
-			8,
-			11,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1571,
-			2022,
+			20,
 			31,
-			24
-		},
-		alias = {}
-	},
-	skunk_bombardier_explosion_smoke_0012 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			50,
-			50
-		},
-		trim = {
-			8,
-			8,
-			11,
-			18
+			26,
+			39
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1954,
-			1667,
-			31,
-			24
-		},
-		alias = {}
-	},
-	skunk_bombardier_explosion_smoke_0013 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			50,
-			50
-		},
-		trim = {
-			7,
-			6,
-			11,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1814,
-			1549,
-			32,
-			26
-		},
-		alias = {}
-	},
-	skunk_bombardier_explosion_smoke_0014 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			50,
-			50
-		},
-		trim = {
-			7,
-			6,
-			11,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1852,
-			1549,
-			32,
-			26
-		},
-		alias = {}
-	},
-	skunk_bombardier_explosion_smoke_0015 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			50,
-			50
-		},
-		trim = {
-			6,
-			5,
-			11,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1651,
-			1904,
-			33,
-			27
-		},
-		alias = {}
-	},
-	skunk_bombardier_explosion_smoke_0016 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			50,
-			50
-		},
-		trim = {
-			6,
-			5,
-			11,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1651,
-			1937,
-			33,
-			27
-		},
-		alias = {}
-	},
-	skunk_bombardier_explosion_smoke_0017 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			50,
-			50
-		},
-		trim = {
-			6,
-			4,
-			11,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1612,
-			2017,
-			33,
-			28
-		},
-		alias = {}
-	},
-	skunk_bombardier_explosion_smoke_0018 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			50,
-			50
-		},
-		trim = {
-			6,
-			4,
-			11,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1651,
-			1837,
-			33,
-			28
-		},
-		alias = {}
-	},
-	skunk_bombardier_explosion_smoke_0019 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			50,
-			50
-		},
-		trim = {
-			4,
-			4,
-			9,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1965,
-			1507,
-			37,
-			28
-		},
-		alias = {}
-	},
-	skunk_bombardier_explosion_smoke_0020 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			50,
-			50
-		},
-		trim = {
-			4,
-			4,
-			9,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2008,
-			1507,
-			37,
-			28
-		},
-		alias = {}
-	},
-	skunk_bombardier_explosion_smoke_0021 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			50,
-			50
-		},
-		trim = {
-			1,
-			1,
-			6,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1245,
-			1716,
-			43,
-			31
-		},
-		alias = {}
-	},
-	skunk_bombardier_explosion_smoke_0022 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			50,
-			50
-		},
-		trim = {
-			1,
-			2,
-			6,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1245,
-			1790,
-			43,
+			3857,
+			967,
+			54,
 			30
 		},
 		alias = {}
 	},
-	skunk_bombardier_explosion_smoke_0023 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+	skunk_bombardier_explosion_smoke_0006 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			50,
-			50
+			100,
+			100
 		},
 		trim = {
-			0,
-			0,
-			5,
-			17
+			20,
+			31,
+			26,
+			39
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1879,
-			1122,
-			45,
-			33
+			3917,
+			967,
+			54,
+			30
+		},
+		alias = {}
+	},
+	skunk_bombardier_explosion_smoke_0007 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			100,
+			100
+		},
+		trim = {
+			18,
+			24,
+			24,
+			40
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1681,
+			1107,
+			58,
+			36
+		},
+		alias = {}
+	},
+	skunk_bombardier_explosion_smoke_0008 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			100,
+			100
+		},
+		trim = {
+			18,
+			24,
+			24,
+			40
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1809,
+			1106,
+			58,
+			36
+		},
+		alias = {}
+	},
+	skunk_bombardier_explosion_smoke_0009 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			100,
+			100
+		},
+		trim = {
+			17,
+			20,
+			25,
+			38
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2230,
+			1363,
+			58,
+			42
+		},
+		alias = {}
+	},
+	skunk_bombardier_explosion_smoke_0010 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			100,
+			100
+		},
+		trim = {
+			17,
+			20,
+			25,
+			38
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2294,
+			1363,
+			58,
+			42
+		},
+		alias = {}
+	},
+	skunk_bombardier_explosion_smoke_0011 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			100,
+			100
+		},
+		trim = {
+			16,
+			16,
+			24,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2523,
+			3551,
+			60,
+			47
+		},
+		alias = {}
+	},
+	skunk_bombardier_explosion_smoke_0012 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			100,
+			100
+		},
+		trim = {
+			16,
+			16,
+			24,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2523,
+			3604,
+			60,
+			47
+		},
+		alias = {}
+	},
+	skunk_bombardier_explosion_smoke_0013 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			100,
+			100
+		},
+		trim = {
+			14,
+			13,
+			22,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3783,
+			2472,
+			64,
+			50
+		},
+		alias = {}
+	},
+	skunk_bombardier_explosion_smoke_0014 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			100,
+			100
+		},
+		trim = {
+			14,
+			13,
+			22,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3853,
+			2472,
+			64,
+			50
+		},
+		alias = {}
+	},
+	skunk_bombardier_explosion_smoke_0015 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			100,
+			100
+		},
+		trim = {
+			13,
+			11,
+			23,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3643,
+			2472,
+			64,
+			52
+		},
+		alias = {}
+	},
+	skunk_bombardier_explosion_smoke_0016 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			100,
+			100
+		},
+		trim = {
+			13,
+			11,
+			23,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3713,
+			2472,
+			64,
+			52
+		},
+		alias = {}
+	},
+	skunk_bombardier_explosion_smoke_0017 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			100,
+			100
+		},
+		trim = {
+			12,
+			10,
+			22,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3712,
+			2403,
+			66,
+			53
+		},
+		alias = {}
+	},
+	skunk_bombardier_explosion_smoke_0018 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			100,
+			100
+		},
+		trim = {
+			12,
+			10,
+			22,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3784,
+			2403,
+			66,
+			53
+		},
+		alias = {}
+	},
+	skunk_bombardier_explosion_smoke_0019 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			100,
+			100
+		},
+		trim = {
+			9,
+			8,
+			19,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2365,
+			3822,
+			72,
+			55
+		},
+		alias = {}
+	},
+	skunk_bombardier_explosion_smoke_0020 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			100,
+			100
+		},
+		trim = {
+			9,
+			8,
+			19,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2365,
+			3883,
+			72,
+			55
+		},
+		alias = {}
+	},
+	skunk_bombardier_explosion_smoke_0021 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			100,
+			100
+		},
+		trim = {
+			2,
+			3,
+			12,
+			36
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2010,
+			3563,
+			86,
+			61
+		},
+		alias = {}
+	},
+	skunk_bombardier_explosion_smoke_0022 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			100,
+			100
+		},
+		trim = {
+			2,
+			4,
+			12,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2010,
+			3630,
+			86,
+			59
+		},
+		alias = {}
+	},
+	skunk_bombardier_explosion_smoke_0023 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			100,
+			100
+		},
+		trim = {
+			1,
+			0,
+			11,
+			34
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3903,
+			1923,
+			88,
+			66
 		},
 		alias = {}
 	},
 	skunk_bombardier_modifier_modifier_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			90,
-			50
+			180,
+			100
 		},
 		trim = {
-			16,
-			16,
-			59,
-			22
+			32,
+			32,
+			118,
+			44
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			599,
-			264,
-			15,
-			12
+			203,
+			2861,
+			30,
+			24
 		},
 		alias = {
 			"skunk_bombardier_modifier_modifier_0002"
 		}
 	},
 	skunk_bombardier_modifier_modifier_0003 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			90,
-			50
+			180,
+			100
 		},
 		trim = {
-			14,
-			16,
-			53,
-			17
+			30,
+			33,
+			107,
+			35
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1361,
-			248,
-			23,
-			17
+			2653,
+			637,
+			43,
+			32
 		},
 		alias = {
 			"skunk_bombardier_modifier_modifier_0004"
 		}
 	},
 	skunk_bombardier_modifier_modifier_0005 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			90,
-			50
+			180,
+			100
 		},
 		trim = {
-			14,
-			16,
-			46,
-			14
+			29,
+			32,
+			92,
+			29
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1646,
-			348,
-			30,
-			20
+			3178,
+			1102,
+			59,
+			39
 		},
 		alias = {
 			"skunk_bombardier_modifier_modifier_0006"
 		}
 	},
 	skunk_bombardier_modifier_modifier_0007 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			90,
-			50
+			180,
+			100
 		},
 		trim = {
-			17,
-			18,
 			36,
-			13
+			37,
+			73,
+			28
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1662,
-			592,
-			37,
-			19
+			1752,
+			481,
+			71,
+			35
 		},
 		alias = {
 			"skunk_bombardier_modifier_modifier_0008"
 		}
 	},
 	skunk_bombardier_modifier_modifier_0009 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			90,
-			50
+			180,
+			100
 		},
 		trim = {
-			26,
-			17,
-			29,
-			14
+			54,
+			36,
+			59,
+			29
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1805,
-			892,
-			35,
-			19
+			1608,
+			1107,
+			67,
+			35
 		},
 		alias = {
 			"skunk_bombardier_modifier_modifier_0010"
 		}
 	},
 	skunk_bombardier_modifier_modifier_0011 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			90,
-			50
+			180,
+			100
 		},
 		trim = {
-			32,
-			16,
-			23,
-			13
+			64,
+			33,
+			47,
+			28
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			2013,
-			506,
-			35,
-			21
+			2972,
+			1105,
+			69,
+			39
 		},
 		alias = {
 			"skunk_bombardier_modifier_modifier_0012"
 		}
 	},
 	skunk_bombardier_modifier_modifier_0013 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			90,
-			50
+			180,
+			100
 		},
 		trim = {
-			34,
-			15,
-			15,
-			15
+			69,
+			30,
+			30,
+			32
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			583,
-			169,
-			41,
-			20
+			519,
+			312,
+			81,
+			38
 		},
 		alias = {
 			"skunk_bombardier_modifier_modifier_0014"
 		}
 	},
 	skunk_bombardier_modifier_modifier_0015 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			90,
-			50
+			180,
+			100
 		},
 		trim = {
-			46,
-			12,
-			14,
-			18
+			93,
+			25,
+			29,
+			37
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1835,
-			1703,
-			30,
-			20
+			1745,
+			1106,
+			58,
+			38
 		},
 		alias = {
 			"skunk_bombardier_modifier_modifier_0016"
 		}
 	},
 	skunk_bombardier_modifier_modifier_0017 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			90,
-			50
+			180,
+			100
 		},
 		trim = {
-			51,
-			11,
-			17,
-			22
+			103,
+			22,
+			35,
+			44
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1878,
-			247,
-			22,
-			17
+			2700,
+			1106,
+			42,
+			34
 		},
 		alias = {
 			"skunk_bombardier_modifier_modifier_0018"
 		}
 	},
 	skunk_bombardier_modifier_modifier_0019 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			90,
-			50
+			180,
+			100
 		},
 		trim = {
-			55,
-			10,
-			22,
-			29
+			110,
+			21,
+			45,
+			60
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			108,
-			1586,
-			13,
-			11
+			3275,
+			169,
+			25,
+			19
 		},
 		alias = {
 			"skunk_bombardier_modifier_modifier_0020"
 		}
 	},
 	skunk_bombardier_modifier_modifier_0021 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			90,
-			50
+			180,
+			100
 		},
 		trim = {
 			0,
 			0,
-			88,
-			48
+			178,
+			98
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			676,
-			97,
+			1033,
+			188,
 			2,
 			2
 		},
@@ -21342,154 +21342,154 @@ local a = {
 		}
 	},
 	skunk_bombardier_particle_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			18,
-			18
+			36,
+			36
 		},
 		trim = {
-			0,
 			2,
-			0,
-			2
+			5,
+			2,
+			5
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1378,
-			432,
-			18,
-			14
+			200,
+			3729,
+			32,
+			26
 		},
 		alias = {
 			"skunk_bombardier_particle_0002"
 		}
 	},
 	skunk_bombardier_particle_0003 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			18,
-			18
+			36,
+			36
 		},
 		trim = {
-			3,
-			3,
-			2,
-			3
+			7,
+			7,
+			6,
+			7
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			108,
-			1551,
-			13,
-			12
+			206,
+			1948,
+			23,
+			22
 		},
 		alias = {
 			"skunk_bombardier_particle_0004"
 		}
 	},
 	skunk_bombardier_particle_0005 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			18,
-			18
+			36,
+			36
 		},
 		trim = {
-			6,
-			3,
-			5,
-			4
+			12,
+			7,
+			10,
+			10
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			113,
-			760,
-			7,
-			11
+			3336,
+			169,
+			14,
+			19
 		},
 		alias = {
 			"skunk_bombardier_particle_0006"
 		}
 	},
 	skunk_bombardier_particle_0007 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			18,
-			18
+			36,
+			36
 		},
 		trim = {
-			6,
-			6,
-			5,
-			5
+			14,
+			13,
+			11,
+			12
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			113,
-			790,
-			7,
-			7
+			1280,
+			179,
+			11,
+			11
 		},
 		alias = {
 			"skunk_bombardier_particle_0008"
 		}
 	},
 	skunk_bombardier_particle_0009 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			18,
-			18
+			36,
+			36
 		},
 		trim = {
 			0,
 			0,
-			16,
-			16
+			34,
+			34
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			684,
-			97,
+			1041,
+			180,
 			2,
 			2
 		},
 		alias = {}
 	},
 	turtle_shaman_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			62,
-			66,
-			95
+			151,
+			124,
+			133,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1897,
-			781,
-			59,
-			43
+			3061,
+			1411,
+			116,
+			84
 		},
 		alias = {
 			"turtle_shaman_0074",
@@ -21505,1384 +21505,1384 @@ local a = {
 		}
 	},
 	turtle_shaman_0002 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			62,
-			68,
-			95
+			149,
+			125,
+			136,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1169,
-			839,
-			58,
-			43
+			1455,
+			3520,
+			115,
+			83
 		},
 		alias = {
 			"turtle_shaman_0003"
 		}
 	},
 	turtle_shaman_0004 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			64,
-			71,
-			95
+			150,
+			128,
+			142,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1823,
-			920,
-			54,
-			41
+			1578,
+			3172,
+			108,
+			80
 		},
 		alias = {
 			"turtle_shaman_0005"
 		}
 	},
 	turtle_shaman_0006 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			60,
-			72,
-			95
+			150,
+			121,
+			146,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1403,
-			920,
-			54,
-			45
+			2703,
+			1671,
+			104,
+			87
 		},
 		alias = {
 			"turtle_shaman_0007"
 		}
 	},
 	turtle_shaman_0008 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			57,
-			71,
-			95
+			150,
+			115,
+			143,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			920,
-			55,
-			48
+			1578,
+			3910,
+			107,
+			93
 		},
 		alias = {
 			"turtle_shaman_0009"
 		}
 	},
 	turtle_shaman_0010 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			56,
-			70,
-			95
+			150,
+			112,
+			142,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			1943,
-			55,
-			49
+			1578,
+			2590,
+			108,
+			96
 		},
 		alias = {
 			"turtle_shaman_0011"
 		}
 	},
 	turtle_shaman_0012 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			56,
-			70,
-			95
+			151,
+			112,
+			142,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			1998,
-			55,
-			49
+			1578,
+			3808,
+			107,
+			96
 		},
 		alias = {
 			"turtle_shaman_0013"
 		}
 	},
 	turtle_shaman_0014 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			58,
-			69,
-			95
+			149,
+			116,
+			139,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1742,
-			839,
-			57,
-			47
+			2290,
+			1517,
+			112,
+			92
 		},
 		alias = {
 			"turtle_shaman_0015"
 		}
 	},
 	turtle_shaman_0016 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			64,
-			68,
-			95
+			150,
+			128,
+			137,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1931,
-			839,
-			57,
-			41
+			1816,
+			1517,
+			113,
+			80
 		},
 		alias = {
 			"turtle_shaman_0017"
 		}
 	},
 	turtle_shaman_0018 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			62,
-			68,
-			95
+			150,
+			125,
+			138,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1233,
-			839,
-			58,
-			43
+			2408,
+			1517,
+			112,
+			83
 		},
 		alias = {
 			"turtle_shaman_0019"
 		}
 	},
 	turtle_shaman_0020 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			62,
-			68,
-			95
+			150,
+			125,
+			137,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1297,
-			839,
-			58,
-			43
+			1697,
+			1517,
+			113,
+			83
 		},
 		alias = {
 			"turtle_shaman_0021"
 		}
 	},
 	turtle_shaman_0022 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			62,
-			66,
-			95
+			150,
+			125,
+			134,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1962,
-			781,
-			59,
-			43
+			3671,
+			1411,
+			116,
+			83
 		},
 		alias = {
 			"turtle_shaman_0023"
 		}
 	},
 	turtle_shaman_0024 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			62,
-			66,
-			95
+			151,
+			125,
+			133,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			1406,
-			59,
-			43
+			3793,
+			1411,
+			116,
+			83
 		},
 		alias = {
 			"turtle_shaman_0025"
 		}
 	},
 	turtle_shaman_0026 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			61,
-			65,
-			95
+			151,
+			122,
+			131,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1244,
-			781,
-			60,
-			44
+			2075,
+			1411,
+			118,
+			86
 		},
 		alias = {
 			"turtle_shaman_0027"
 		}
 	},
 	turtle_shaman_0028 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			76,
-			60,
-			66,
-			95
+			152,
+			120,
+			133,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1105,
-			839,
-			58,
-			45
+			1455,
+			3336,
+			115,
+			88
 		},
 		alias = {
 			"turtle_shaman_0029"
 		}
 	},
 	turtle_shaman_0030 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			58,
-			68,
-			95
+			152,
+			118,
+			137,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1805,
-			839,
-			57,
-			47
+			2761,
+			1517,
+			111,
+			90
 		},
 		alias = {
 			"turtle_shaman_0031"
 		}
 	},
 	turtle_shaman_0032 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			57,
-			68,
-			95
+			152,
+			114,
+			138,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1679,
-			839,
-			57,
-			48
+			2994,
+			1517,
+			110,
+			94
 		},
 		alias = {
 			"turtle_shaman_0033"
 		}
 	},
 	turtle_shaman_0034 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			76,
-			55,
-			68,
-			95
+			152,
+			111,
+			138,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			1406,
-			56,
-			50
+			2878,
+			1517,
+			110,
+			97
 		},
 		alias = {
 			"turtle_shaman_0035"
 		}
 	},
 	turtle_shaman_0036 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			76,
-			55,
-			70,
-			95
+			152,
+			112,
+			140,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1216,
-			974,
-			54,
-			50
+			1578,
+			2692,
+			108,
+			96
 		},
 		alias = {
 			"turtle_shaman_0037"
 		}
 	},
 	turtle_shaman_0038 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			60,
-			72,
-			95
+			151,
+			122,
+			144,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1455,
-			974,
-			53,
-			45
+			2259,
+			1671,
+			105,
+			86
 		},
 		alias = {
 			"turtle_shaman_0039"
 		}
 	},
 	turtle_shaman_0040 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			76,
-			67,
-			73,
-			93
+			152,
+			134,
+			146,
+			187
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1396,
-			51,
-			40
+			3685,
+			1671,
+			102,
+			79
 		},
 		alias = {
 			"turtle_shaman_0041"
 		}
 	},
 	turtle_shaman_0042 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			64,
-			72,
-			94
+			152,
+			129,
+			144,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1573,
-			974,
-			53,
-			42
+			2923,
+			1671,
+			104,
+			82
 		},
 		alias = {
 			"turtle_shaman_0043"
 		}
 	},
 	turtle_shaman_0044 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			63,
-			70,
-			95
+			152,
+			127,
+			141,
+			191
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1281,
-			920,
-			55,
-			42
+			1809,
+			1671,
+			107,
+			82
 		},
 		alias = {
 			"turtle_shaman_0045"
 		}
 	},
 	turtle_shaman_0046 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			76,
-			63,
-			67,
-			95
+			152,
+			126,
+			136,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1868,
-			839,
-			57,
-			42
+			2526,
+			1517,
+			112,
+			82
 		},
 		alias = {
 			"turtle_shaman_0047"
 		}
 	},
 	turtle_shaman_0048 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			76,
-			62,
-			66,
-			95
+			152,
+			124,
+			133,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1361,
-			839,
-			58,
-			43
+			1455,
+			3430,
+			115,
+			84
 		},
 		alias = {
 			"turtle_shaman_0049"
 		}
 	},
 	turtle_shaman_0050 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			68,
-			61,
-			77,
-			94
+			137,
+			123,
+			155,
+			188
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1220,
-			920,
-			55,
-			45
+			1578,
+			2892,
+			108,
+			89
 		},
 		alias = {
 			"turtle_shaman_0051"
 		}
 	},
 	turtle_shaman_0052 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			69,
-			62,
-			77,
-			93
+			138,
+			125,
+			156,
+			187
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1463,
-			920,
-			54,
-			45
+			2035,
+			1671,
+			106,
+			88
 		},
 		alias = {
 			"turtle_shaman_0053"
 		}
 	},
 	turtle_shaman_0054 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			68,
-			60,
-			77,
-			94
+			138,
+			120,
+			156,
+			188
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1098,
-			920,
-			55,
-			46
+			1696,
+			1984,
+			106,
+			92
 		},
 		alias = {
 			"turtle_shaman_0055"
 		}
 	},
 	turtle_shaman_0056 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			69,
-			54,
-			77,
-			95
+			138,
+			109,
+			156,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1156,
-			974,
-			54,
-			51
+			1696,
+			1879,
+			106,
+			99
 		},
 		alias = {
 			"turtle_shaman_0057"
 		}
 	},
 	turtle_shaman_0058 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			68,
-			52,
-			77,
-			95
+			137,
+			104,
+			156,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			1828,
-			55,
-			53
+			1578,
+			3595,
+			107,
+			104
 		},
 		alias = {
 			"turtle_shaman_0059"
 		}
 	},
 	turtle_shaman_0060 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			68,
-			50,
-			78,
-			95
+			138,
+			101,
+			156,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			974,
-			54,
-			55
+			1696,
+			1766,
+			106,
+			107
 		},
 		alias = {
 			"turtle_shaman_0061"
 		}
 	},
 	turtle_shaman_0062 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			69,
-			51,
-			76,
-			94
+			138,
+			104,
+			153,
+			188
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			1767,
-			55,
-			55
+			3458,
+			1517,
+			109,
+			108
 		},
 		alias = {
 			"turtle_shaman_0063"
 		}
 	},
 	turtle_shaman_0064 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			68,
-			58,
-			76,
-			93
+			137,
+			116,
+			154,
+			187
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			1462,
-			56,
-			49
+			3688,
+			1517,
+			109,
+			97
 		},
 		alias = {
 			"turtle_shaman_0065"
 		}
 	},
 	turtle_shaman_0066 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			69,
-			57,
-			77,
-			94
+			139,
+			115,
+			154,
+			188
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1276,
-			974,
-			54,
-			49
+			1578,
+			3705,
+			107,
+			97
 		},
 		alias = {
 			"turtle_shaman_0067"
 		}
 	},
 	turtle_shaman_0068 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			70,
-			58,
-			77,
-			95
+			142,
+			117,
+			156,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1396,
-			974,
-			53,
-			47
+			1696,
+			2308,
+			102,
+			91
 		},
 		alias = {
 			"turtle_shaman_0069"
 		}
 	},
 	turtle_shaman_0070 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			68,
-			59,
-			77,
-			95
+			137,
+			119,
+			156,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1159,
-			920,
-			55,
-			46
+			1696,
+			1671,
+			107,
+			89
 		},
 		alias = {
 			"turtle_shaman_0071"
 		}
 	},
 	turtle_shaman_0072 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			68,
-			60,
-			78,
-			95
+			137,
+			121,
+			156,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1523,
-			920,
-			54,
-			45
+			1578,
+			4009,
+			107,
+			87
 		},
 		alias = {
 			"turtle_shaman_0073"
 		}
 	},
 	turtle_shaman_0076 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			63,
-			65,
-			95
+			149,
+			126,
+			132,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1461,
-			728,
-			61,
-			42
+			1327,
+			3457,
+			119,
+			82
 		},
 		alias = {}
 	},
 	turtle_shaman_0077 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			63,
-			65,
-			95
+			149,
+			126,
+			132,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1528,
-			728,
-			61,
-			42
+			1327,
+			3545,
+			119,
+			82
 		},
 		alias = {}
 	},
 	turtle_shaman_0078 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			63,
-			65,
-			95
+			149,
+			128,
+			131,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1595,
-			728,
-			61,
-			42
+			1327,
+			3106,
+			120,
+			80
 		},
 		alias = {}
 	},
 	turtle_shaman_0079 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			63,
-			65,
-			95
+			149,
+			128,
+			131,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1662,
-			728,
-			61,
-			42
+			1327,
+			3192,
+			120,
+			80
 		},
 		alias = {}
 	},
 	turtle_shaman_0080 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			62,
-			66,
-			95
+			148,
+			126,
+			133,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1310,
-			781,
-			60,
-			43
+			1327,
+			3633,
+			119,
+			82
 		},
 		alias = {}
 	},
 	turtle_shaman_0081 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			62,
-			66,
-			95
+			148,
+			126,
+			133,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1376,
-			781,
-			60,
-			43
+			1327,
+			3721,
+			119,
+			82
 		},
 		alias = {}
 	},
 	turtle_shaman_0082 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			39,
-			61,
-			95
+			152,
+			79,
+			123,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			1308,
-			64,
-			66
+			1196,
+			2301,
+			125,
+			129
 		},
 		alias = {}
 	},
 	turtle_shaman_0083 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			39,
-			61,
-			95
+			152,
+			79,
+			123,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			1380,
-			64,
-			66
+			1196,
+			2436,
+			125,
+			129
 		},
 		alias = {}
 	},
 	turtle_shaman_0084 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			38,
-			58,
-			95
+			151,
+			77,
+			117,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1005,
-			536,
-			67,
-			67
+			918,
+			2551,
+			132,
+			131
 		},
 		alias = {}
 	},
 	turtle_shaman_0085 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			38,
-			58,
-			95
+			151,
+			77,
+			117,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1078,
-			536,
-			67,
-			67
+			918,
+			2688,
+			132,
+			131
 		},
 		alias = {}
 	},
 	turtle_shaman_0086 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			37,
-			57,
-			95
+			151,
+			76,
+			116,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			1021,
-			68,
-			68
+			918,
+			2090,
+			133,
+			132
 		},
 		alias = {
 			"turtle_shaman_0087"
 		}
 	},
 	turtle_shaman_0088 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			45,
-			66,
-			95
+			151,
+			90,
+			133,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			1148,
-			59,
-			60
+			1455,
+			2195,
+			116,
+			118
 		},
 		alias = {
 			"turtle_shaman_0089"
 		}
 	},
 	turtle_shaman_0090 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			45,
-			66,
-			95
+			151,
+			90,
+			133,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			1214,
-			59,
-			60
+			1455,
+			2319,
+			116,
+			118
 		},
 		alias = {
 			"turtle_shaman_0091"
 		}
 	},
 	turtle_shaman_0092 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			41,
-			66,
-			95
+			152,
+			84,
+			132,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			1078,
-			59,
-			64
+			1455,
+			2065,
+			116,
+			124
 		},
 		alias = {
 			"turtle_shaman_0093"
 		}
 	},
 	turtle_shaman_0094 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			76,
-			40,
-			65,
-			95
+			153,
+			81,
+			132,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			1007,
-			59,
-			65
+			1455,
+			2980,
+			115,
+			127
 		},
 		alias = {
 			"turtle_shaman_0095"
 		}
 	},
 	turtle_shaman_0096 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			51,
-			68,
-			95
+			151,
+			103,
+			137,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1616,
-			839,
-			57,
-			54
+			2172,
+			1517,
+			112,
+			105
 		},
 		alias = {
 			"turtle_shaman_0097"
 		}
 	},
 	turtle_shaman_0098 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			64,
-			63,
-			95
+			148,
+			128,
+			128,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1610,
-			619,
-			63,
-			41
+			1196,
+			3929,
+			124,
+			80
 		},
 		alias = {
 			"turtle_shaman_0099"
 		}
 	},
 	turtle_shaman_0100 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			63,
-			65,
-			95
+			149,
+			126,
+			132,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1729,
-			728,
-			61,
-			42
+			1327,
+			3809,
+			119,
+			82
 		},
 		alias = {
 			"turtle_shaman_0101",
@@ -22891,26 +22891,26 @@ local a = {
 		}
 	},
 	turtle_shaman_0102 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			62,
-			66,
-			95
+			151,
+			124,
+			133,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			1455,
-			59,
-			43
+			3183,
+			1411,
+			116,
+			84
 		},
 		alias = {
 			"turtle_shaman_0170",
@@ -22918,50 +22918,50 @@ local a = {
 		}
 	},
 	turtle_shaman_0103 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			62,
-			66,
-			95
+			151,
+			124,
+			133,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			1504,
-			59,
-			43
+			3305,
+			1411,
+			116,
+			84
 		},
 		alias = {}
 	},
 	turtle_shaman_0106 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			62,
-			66,
-			95
+			151,
+			124,
+			133,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			1553,
-			59,
-			43
+			3427,
+			1411,
+			116,
+			84
 		},
 		alias = {
 			"turtle_shaman_0107",
@@ -22970,2934 +22970,2934 @@ local a = {
 		}
 	},
 	turtle_shaman_0108 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			63,
-			64,
-			95
+			149,
+			127,
+			130,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1190,
-			728,
-			62,
-			42
+			1327,
+			2786,
+			121,
+			81
 		},
 		alias = {
 			"turtle_shaman_0109"
 		}
 	},
 	turtle_shaman_0110 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			55,
-			71,
-			95
+			150,
+			111,
+			142,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			1887,
-			55,
-			50
+			1578,
+			2487,
+			108,
+			97
 		},
 		alias = {
 			"turtle_shaman_0111"
 		}
 	},
 	turtle_shaman_0112 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			45,
-			80,
-			95
+			148,
+			91,
+			161,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1161,
-			46,
-			60
+			1911,
+			2462,
+			91,
+			117
 		},
 		alias = {
 			"turtle_shaman_0113"
 		}
 	},
 	turtle_shaman_0114 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			44,
-			82,
-			95
+			149,
+			90,
+			166,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1194,
-			1981,
-			44,
-			61
+			2010,
+			3756,
+			85,
+			118
 		},
 		alias = {
 			"turtle_shaman_0115"
 		}
 	},
 	turtle_shaman_0116 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			44,
-			82,
-			95
+			148,
+			88,
+			166,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1245,
-			1202,
-			44,
-			61
+			2010,
+			2778,
+			86,
+			120
 		},
 		alias = {
 			"turtle_shaman_0117"
 		}
 	},
 	turtle_shaman_0118 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			78,
-			52,
-			45,
-			95
+			156,
+			105,
+			90,
+			191
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			1449,
-			77,
-			53
+			2543,
+			527,
+			154,
+			104
 		},
 		alias = {
 			"turtle_shaman_0119"
 		}
 	},
 	turtle_shaman_0120 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			78,
-			64,
-			46,
-			95
+			158,
+			130,
+			93,
+			191
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			737,
-			375,
-			76,
-			41
+			604,
+			3905,
+			149,
+			79
 		},
 		alias = {
 			"turtle_shaman_0121"
 		}
 	},
 	turtle_shaman_0122 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			77,
-			68,
-			48,
-			95
+			155,
+			137,
+			97,
+			191
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			321,
-			2011,
-			75,
-			37
+			1834,
+			447,
+			148,
+			72
 		},
 		alias = {
 			"turtle_shaman_0123"
 		}
 	},
 	turtle_shaman_0124 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			77,
-			68,
-			51,
-			94
+			155,
+			137,
+			104,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1534,
-			375,
-			72,
-			38
+			3831,
+			446,
+			141,
+			74
 		},
 		alias = {
 			"turtle_shaman_0125"
 		}
 	},
 	turtle_shaman_0126 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			64,
-			61,
-			95
+			150,
+			128,
+			124,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			712,
-			619,
-			64,
-			41
+			2516,
+			1150,
+			126,
+			80
 		},
 		alias = {
 			"turtle_shaman_0127"
 		}
 	},
 	turtle_shaman_0128 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			62,
-			66,
-			95
+			151,
+			124,
+			133,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			1602,
-			59,
-			43
+			3549,
+			1411,
+			116,
+			84
 		},
 		alias = {
 			"turtle_shaman_0129"
 		}
 	},
 	turtle_shaman_0134 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			58,
-			67,
-			95
+			149,
+			117,
+			135,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1702,
-			781,
-			59,
-			47
+			2939,
+			1411,
+			116,
+			91
 		},
 		alias = {
 			"turtle_shaman_0135"
 		}
 	},
 	turtle_shaman_0136 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			66,
-			55,
-			95
+			149,
+			133,
+			111,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			409,
-			2005,
-			71,
-			39
+			1417,
+			618,
+			140,
+			75
 		},
 		alias = {
 			"turtle_shaman_0137"
 		}
 	},
 	turtle_shaman_0138 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			69,
-			57,
-			90
+			148,
+			140,
+			116,
+			181
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			490,
-			893,
-			69,
-			41
+			766,
+			4012,
+			136,
+			79
 		},
 		alias = {
 			"turtle_shaman_0139"
 		}
 	},
 	turtle_shaman_0140 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			64,
-			76,
-			92
+			150,
+			128,
+			154,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1728,
-			50,
-			44
+			1808,
+			2077,
+			96,
+			86
 		},
 		alias = {
 			"turtle_shaman_0141"
 		}
 	},
 	turtle_shaman_0142 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			41,
-			70,
-			95
+			152,
+			82,
+			140,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			1697,
-			55,
-			64
+			3803,
+			1517,
+			108,
+			126
 		},
 		alias = {
 			"turtle_shaman_0143"
 		}
 	},
 	turtle_shaman_0144 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			28,
-			67,
-			95
+			151,
+			57,
+			134,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			1916,
-			58,
-			77
+			1455,
+			2823,
+			115,
+			151
 		},
 		alias = {}
 	},
 	turtle_shaman_0145 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			27,
-			67,
-			95
+			151,
+			55,
+			134,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			1832,
-			58,
-			78
+			1455,
+			2664,
+			115,
+			153
 		},
 		alias = {}
 	},
 	turtle_shaman_0146 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			26,
-			67,
-			95
+			151,
+			54,
+			136,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			1747,
-			58,
-			79
+			1455,
+			3871,
+			113,
+			154
 		},
 		alias = {}
 	},
 	turtle_shaman_0147 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			26,
-			66,
-			95
+			151,
+			53,
+			133,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			839,
-			59,
-			79
+			1455,
+			1748,
+			116,
+			155
 		},
 		alias = {}
 	},
 	turtle_shaman_0148 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			30,
-			65,
-			95
+			151,
+			61,
+			131,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			1855,
-			60,
-			75
+			1327,
+			3897,
+			118,
+			147
 		},
 		alias = {}
 	},
 	turtle_shaman_0149 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			28,
-			63,
-			95
+			151,
+			58,
+			128,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			781,
-			62,
-			77
+			1327,
+			1983,
+			121,
+			150
 		},
 		alias = {}
 	},
 	turtle_shaman_0150 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			27,
-			62,
-			95
+			151,
+			56,
+			126,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			728,
-			63,
-			78
+			3973,
+			527,
+			123,
+			152
 		},
 		alias = {}
 	},
 	turtle_shaman_0151 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			27,
-			61,
-			95
+			151,
+			54,
+			124,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			1063,
-			64,
-			78
+			1196,
+			1265,
+			125,
+			154
 		},
 		alias = {}
 	},
 	turtle_shaman_0152 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			26,
-			69,
-			95
+			151,
+			53,
+			140,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1992,
-			197,
-			56,
-			79
+			1578,
+			2326,
+			109,
+			155
 		},
 		alias = {}
 	},
 	turtle_shaman_0153 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			25,
-			69,
-			95
+			151,
+			52,
+			140,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			1094,
-			56,
-			80
+			1578,
+			2164,
+			109,
+			156
 		},
 		alias = {}
 	},
 	turtle_shaman_0154 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			25,
-			69,
-			95
+			151,
+			51,
+			140,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			1180,
-			56,
-			80
+			1578,
+			2001,
+			109,
+			157
 		},
 		alias = {}
 	},
 	turtle_shaman_0155 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			24,
-			69,
-			95
+			151,
+			50,
+			138,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			1007,
-			56,
-			81
+			1578,
+			1837,
+			111,
+			158
 		},
 		alias = {}
 	},
 	turtle_shaman_0156 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			24,
-			68,
-			95
+			151,
+			48,
+			137,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			920,
-			57,
-			81
+			1578,
+			1671,
+			112,
+			160
 		},
 		alias = {}
 	},
 	turtle_shaman_0157 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			31,
-			69,
-			95
+			151,
+			63,
+			138,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			1266,
-			56,
-			74
+			2644,
+			1517,
+			111,
+			145
 		},
 		alias = {}
 	},
 	turtle_shaman_0158 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			30,
-			67,
-			95
+			151,
+			60,
+			136,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			839,
-			58,
-			75
+			1578,
+			1517,
+			113,
+			148
 		},
 		alias = {}
 	},
 	turtle_shaman_0159 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			28,
-			66,
-			95
+			151,
+			58,
+			133,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			924,
-			59,
-			77
+			1455,
+			1909,
+			116,
+			150
 		},
 		alias = {}
 	},
 	turtle_shaman_0160 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			37,
-			65,
-			95
+			152,
+			76,
+			131,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			1936,
-			60,
-			68
+			3979,
+			6,
+			117,
+			132
 		},
 		alias = {}
 	},
 	turtle_shaman_0161 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			36,
-			63,
-			95
+			152,
+			74,
+			128,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			1090,
-			62,
-			69
+			1327,
+			2873,
+			120,
+			134
 		},
 		alias = {}
 	},
 	turtle_shaman_0162 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			76,
-			35,
-			62,
-			95
+			153,
+			71,
+			126,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			864,
-			62,
-			70
+			1327,
+			2139,
+			121,
+			137
 		},
 		alias = {}
 	},
 	turtle_shaman_0163 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			76,
-			34,
-			61,
-			95
+			153,
+			68,
+			124,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			711,
-			1428,
-			63,
-			71
+			1327,
+			1265,
+			123,
+			140
 		},
 		alias = {}
 	},
 	turtle_shaman_0164 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			52,
-			67,
-			95
+			151,
+			105,
+			135,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1041,
-			839,
-			58,
-			53
+			1455,
+			3685,
+			114,
+			103
 		},
 		alias = {
 			"turtle_shaman_0165"
 		}
 	},
 	turtle_shaman_0166 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			64,
-			64,
-			95
+			148,
+			128,
+			129,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1326,
-			728,
-			62,
-			41
+			3520,
+			1265,
+			123,
+			80
 		},
 		alias = {
 			"turtle_shaman_0167"
 		}
 	},
 	turtle_shaman_0176 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			64,
-			65,
-			95
+			148,
+			128,
+			130,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1930,
-			728,
-			61,
-			41
+			1327,
+			1897,
+			122,
+			80
 		},
 		alias = {
 			"turtle_shaman_0177"
 		}
 	},
 	turtle_shaman_0178 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			72,
-			65,
-			65,
-			95
+			145,
+			130,
+			131,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1679,
-			619,
-			63,
-			40
+			1196,
+			4015,
+			124,
+			78
 		},
 		alias = {
 			"turtle_shaman_0179"
 		}
 	},
 	turtle_shaman_0180 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			63,
-			67,
-			95
+			148,
+			128,
+			134,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			1651,
-			59,
-			42
+			2323,
+			1411,
+			118,
+			80
 		},
 		alias = {}
 	},
 	turtle_shaman_0181 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			63,
-			67,
-			95
+			148,
+			128,
+			134,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			848,
-			1699,
-			59,
-			42
+			2447,
+			1411,
+			118,
+			80
 		},
 		alias = {}
 	},
 	turtle_shaman_0182 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			72,
-			63,
-			67,
-			95
+			145,
+			128,
+			134,
+			190
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1796,
-			728,
-			61,
-			42
+			1327,
+			2610,
+			121,
+			82
 		},
 		alias = {}
 	},
 	turtle_shaman_0183 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			72,
-			63,
-			67,
-			95
+			145,
+			128,
+			134,
+			190
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1863,
-			728,
-			61,
-			42
+			1327,
+			2698,
+			121,
+			82
 		},
 		alias = {}
 	},
 	turtle_shaman_0184 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			63,
-			67,
-			93
+			148,
+			127,
+			134,
+			187
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1767,
-			781,
-			59,
-			44
+			2199,
+			1411,
+			118,
+			86
 		},
 		alias = {}
 	},
 	turtle_shaman_0185 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			63,
-			67,
-			93
+			148,
+			127,
+			135,
+			187
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1832,
-			781,
-			59,
-			44
+			2694,
+			1411,
+			117,
+			86
 		},
 		alias = {}
 	},
 	turtle_shaman_0186 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			60,
-			64,
-			92
+			148,
+			122,
+			129,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			1580,
-			62,
-			48
+			2359,
+			1265,
+			123,
+			92
 		},
 		alias = {}
 	},
 	turtle_shaman_0187 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			60,
-			64,
-			92
+			148,
+			122,
+			129,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			780,
-			1634,
-			62,
-			48
+			2488,
+			1265,
+			123,
+			92
 		},
 		alias = {}
 	},
 	turtle_shaman_0188 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			59,
-			63,
-			92
+			148,
+			119,
+			127,
+			184
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1616,
-			670,
-			63,
-			49
+			3172,
+			1150,
+			125,
+			97
 		},
 		alias = {}
 	},
 	turtle_shaman_0189 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			59,
-			63,
-			92
+			148,
+			119,
+			127,
+			184
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1685,
-			670,
-			63,
-			49
+			3303,
+			1150,
+			125,
+			97
 		},
 		alias = {}
 	},
 	turtle_shaman_0190 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			58,
-			62,
-			92
+			148,
+			117,
+			125,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1061,
-			670,
-			64,
-			50
+			1060,
+			3320,
+			127,
+			97
 		},
 		alias = {}
 	},
 	turtle_shaman_0191 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			58,
-			62,
-			92
+			148,
+			117,
+			125,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1131,
-			670,
-			64,
-			50
+			1060,
+			3423,
+			127,
+			97
 		},
 		alias = {}
 	},
 	turtle_shaman_0192 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			72,
-			58,
-			62,
-			92
+			145,
+			117,
+			125,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			1476,
-			66,
-			50
+			2700,
+			1003,
+			130,
+			97
 		},
 		alias = {}
 	},
 	turtle_shaman_0193 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			72,
-			58,
-			62,
-			92
+			145,
+			117,
+			125,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			567,
-			1532,
-			66,
-			50
+			2836,
+			1003,
+			130,
+			97
 		},
 		alias = {}
 	},
 	turtle_shaman_0194 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			58,
-			63,
-			93
+			148,
+			117,
+			126,
+			187
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1754,
-			670,
-			63,
-			49
+			2120,
+			1150,
+			126,
+			96
 		},
 		alias = {}
 	},
 	turtle_shaman_0195 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			58,
-			63,
-			93
+			148,
+			117,
+			126,
+			187
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1823,
-			670,
-			63,
-			49
+			2252,
+			1150,
+			126,
+			96
 		},
 		alias = {}
 	},
 	turtle_shaman_0196 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			58,
-			63,
-			95
+			148,
+			118,
+			127,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			849,
-			728,
-			63,
-			47
+			3696,
+			1150,
+			125,
+			90
 		},
 		alias = {}
 	},
 	turtle_shaman_0197 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			58,
-			63,
-			93
+			148,
+			118,
+			127,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1892,
-			670,
-			63,
-			49
+			3565,
+			1150,
+			125,
+			96
 		},
 		alias = {}
 	},
 	turtle_shaman_0198 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			68,
-			75,
-			93
+			148,
+			137,
+			150,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1488,
-			51,
-			39
+			3901,
+			1671,
+			102,
+			77
 		},
 		alias = {}
 	},
 	turtle_shaman_0199 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			68,
-			75,
-			92
+			148,
+			137,
+			150,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1442,
-			51,
-			40
+			3793,
+			1671,
+			102,
+			78
 		},
 		alias = {
 			"turtle_shaman_0200"
 		}
 	},
 	turtle_shaman_0201 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			68,
-			75,
-			91
+			148,
+			137,
+			150,
+			182
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1349,
-			51,
-			41
+			3577,
+			1671,
+			102,
+			81
 		},
 		alias = {
 			"turtle_shaman_0202"
 		}
 	},
 	turtle_shaman_0203 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			64,
-			75,
-			92
+			148,
+			129,
+			150,
+			184
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1997,
-			728,
-			51,
-			44
+			3469,
+			1671,
+			102,
+			87
 		},
 		alias = {}
 	},
 	turtle_shaman_0204 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			77,
-			64,
-			77,
-			92
+			154,
+			129,
+			155,
+			184
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1142,
-			1349,
-			46,
-			44
+			1911,
+			2809,
+			91,
+			87
 		},
 		alias = {}
 	},
 	turtle_shaman_0205 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			76,
-			61,
-			76,
-			92
+			152,
+			123,
+			153,
+			184
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			2001,
-			48,
-			47
+			1808,
+			2911,
+			95,
+			93
 		},
 		alias = {}
 	},
 	turtle_shaman_0206 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			76,
-			56,
-			76,
-			92
+			152,
+			113,
+			153,
+			184
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1718,
-			48,
-			52
+			1808,
+			2594,
+			95,
+			103
 		},
 		alias = {}
 	},
 	turtle_shaman_0207 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			56,
-			77,
-			92
+			151,
+			113,
+			154,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1776,
-			48,
-			52
+			1808,
+			2703,
+			95,
+			101
 		},
 		alias = {}
 	},
 	turtle_shaman_0208 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			54,
-			77,
-			92
+			151,
+			109,
+			154,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1658,
-			48,
-			54
+			1808,
+			2483,
+			95,
+			105
 		},
 		alias = {}
 	},
 	turtle_shaman_0209 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			54,
-			77,
-			95
+			151,
+			109,
+			155,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1834,
-			48,
-			51
+			1808,
+			3779,
+			94,
+			99
 		},
 		alias = {}
 	},
 	turtle_shaman_0210 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			75,
-			56,
-			77,
-			95
+			151,
+			113,
+			155,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1034,
-			1946,
-			48,
-			49
+			1808,
+			3884,
+			94,
+			95
 		},
 		alias = {}
 	},
 	turtle_shaman_0211 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			76,
-			56,
-			77,
-			95
+			152,
+			113,
+			155,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1256,
-			47,
-			49
+			1911,
+			2026,
+			93,
+			95
 		},
 		alias = {}
 	},
 	turtle_shaman_0212 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			76,
-			58,
-			77,
-			95
+			152,
+			117,
+			155,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1089,
-			1311,
-			47,
-			47
+			1911,
+			2127,
+			93,
+			91
 		},
 		alias = {}
 	},
 	turtle_shaman_0213 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			79,
-			58,
-			80,
-			95
+			159,
+			117,
+			161,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1437,
-			1314,
-			41,
-			47
+			2280,
+			2225,
+			80,
+			91
 		},
 		alias = {}
 	},
 	turtle_shaman_0214 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			79,
-			58,
-			78,
-			95
+			159,
+			117,
+			158,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1245,
-			1528,
-			43,
-			47
+			3732,
+			2049,
+			83,
+			91
 		},
 		alias = {}
 	},
 	turtle_shaman_0215 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			80,
-			58,
-			80,
-			95
+			162,
+			118,
+			161,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1390,
-			1726,
-			40,
-			47
+			2280,
+			3491,
+			77,
+			90
 		},
 		alias = {
 			"turtle_shaman_0216"
 		}
 	},
 	turtle_shaman_0217 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			81,
-			77,
-			80,
-			95
+			162,
+			154,
+			160,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1483,
-			1615,
-			39,
-			28
+			2193,
+			4031,
+			78,
+			54
 		},
 		alias = {
 			"turtle_shaman_0218"
 		}
 	},
 	turtle_shaman_0219 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			81,
-			79,
-			79,
-			95
+			164,
+			159,
+			159,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1437,
-			1572,
-			40,
-			26
+			2863,
+			2322,
+			77,
+			49
 		},
 		alias = {
 			"turtle_shaman_0220"
 		}
 	},
 	turtle_shaman_0221 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			81,
-			79,
-			80,
-			95
+			162,
+			158,
+			160,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1483,
-			1649,
-			39,
-			26
+			2103,
+			4046,
+			78,
+			50
 		},
 		alias = {
 			"turtle_shaman_0222"
 		}
 	},
 	turtle_shaman_0223 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			80,
-			80,
-			80,
-			95
+			162,
+			161,
+			161,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1437,
-			1636,
-			40,
-			25
+			2946,
+			2322,
+			77,
+			47
 		},
 		alias = {
 			"turtle_shaman_0224"
 		}
 	},
 	turtle_shaman_0225 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			80,
-			79,
-			80,
-			95
+			162,
+			159,
+			162,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1437,
-			1604,
-			40,
-			26
+			3065,
+			123,
+			76,
+			49
 		},
 		alias = {
 			"turtle_shaman_0226"
 		}
 	},
 	turtle_shaman_0227 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			80,
-			80,
-			80,
-			95
+			162,
+			161,
+			160,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1437,
-			1667,
-			40,
-			25
+			2960,
+			1995,
+			78,
+			47
 		},
 		alias = {
 			"turtle_shaman_0228"
 		}
 	},
 	turtle_shaman_0229 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			80,
-			82,
-			79,
-			95
+			161,
+			165,
+			158,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1586,
-			71,
-			41,
-			23
+			2865,
+			1997,
+			81,
+			43
 		},
 		alias = {
 			"turtle_shaman_0230"
 		}
 	},
 	turtle_shaman_0231 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			81,
-			80,
-			80,
-			95
+			164,
+			161,
+			162,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1483,
-			1681,
-			39,
-			25
+			733,
+			292,
+			74,
+			47
 		},
 		alias = {
 			"turtle_shaman_0232"
 		}
 	},
 	turtle_shaman_0233 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			81,
-			81,
-			80,
-			95
+			162,
+			163,
+			160,
+			192
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1483,
-			1712,
-			39,
-			24
+			3903,
+			1995,
+			78,
+			45
 		},
 		alias = {
 			"turtle_shaman_0234"
 		}
 	},
 	turtle_shaman_0235 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			71,
-			92,
-			92,
-			92
+			144,
+			184,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1735,
-			591,
-			37,
-			16
+			3117,
+			319,
+			72,
+			31
 		},
 		alias = {}
 	},
 	turtle_shaman_0236 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			71,
-			92,
-			92,
-			92
+			142,
+			184,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1808,
-			591,
-			37,
-			16
+			2936,
+			319,
+			74,
+			31
 		},
 		alias = {}
 	},
 	turtle_shaman_0237 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			70,
-			92,
-			92,
-			92
+			141,
+			184,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1443,
-			592,
-			38,
-			16
+			2754,
+			319,
+			75,
+			31
 		},
 		alias = {}
 	},
 	turtle_shaman_0238 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			69,
-			92,
-			92,
-			92
+			140,
+			184,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1456,
-			430,
-			39,
-			16
+			2387,
+			318,
+			76,
+			31
 		},
 		alias = {}
 	},
 	turtle_shaman_0239 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			92,
-			92,
-			92
+			149,
+			184,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			689,
-			166,
-			34,
-			16
+			1334,
+			1111,
+			67,
+			31
 		},
 		alias = {}
 	},
 	turtle_shaman_0240 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			72,
-			92,
-			92,
-			92
+			146,
+			184,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1041,
-			898,
-			36,
-			16
+			1304,
+			296,
+			70,
+			31
 		},
 		alias = {}
 	},
 	turtle_shaman_0241 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			71,
-			92,
-			92,
-			92
+			143,
+			184,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			2028,
-			37,
-			16
+			3038,
+			319,
+			73,
+			31
 		},
 		alias = {}
 	},
 	turtle_shaman_0242 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			70,
-			92,
-			92,
-			92
+			141,
+			184,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1516,
-			592,
-			38,
-			16
+			2855,
+			319,
+			75,
+			31
 		},
 		alias = {}
 	},
 	turtle_shaman_0243 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			69,
-			92,
-			92,
-			92
+			140,
+			184,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1920,
-			430,
-			39,
-			16
+			2672,
+			319,
+			76,
+			31
 		},
 		alias = {}
 	},
 	turtle_shaman_0244 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			69,
-			92,
-			92,
-			92
+			139,
+			184,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1297,
-			594,
-			39,
-			16
+			1836,
+			312,
+			77,
+			31
 		},
 		alias = {}
 	},
 	turtle_shaman_0245 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			68,
-			91,
-			92,
-			92
+			137,
+			183,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1934,
-			170,
-			40,
-			17
+			899,
+			316,
+			79,
+			32
 		},
 		alias = {}
 	},
 	turtle_shaman_0246 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			67,
-			90,
-			92,
-			92
+			136,
+			181,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1887,
-			170,
-			41,
-			18
+			813,
+			316,
+			80,
+			34
 		},
 		alias = {}
 	},
 	turtle_shaman_0247 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			67,
-			89,
-			92,
-			92
+			134,
+			180,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1840,
-			170,
-			41,
-			19
+			431,
+			312,
+			82,
+			35
 		},
 		alias = {}
 	},
 	turtle_shaman_0248 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			74,
-			92,
-			92,
-			92
+			150,
+			184,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			788,
-			166,
-			34,
-			16
+			532,
+			4051,
+			66,
+			31
 		},
 		alias = {}
 	},
 	turtle_shaman_0249 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			73,
-			91,
-			92,
-			92
+			147,
+			184,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1895,
-			1246,
-			35,
-			17
+			1197,
+			1112,
+			69,
+			31
 		},
 		alias = {}
 	},
 	turtle_shaman_0250 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			72,
-			91,
-			92,
-			92
+			144,
+			184,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1679,
-			893,
-			36,
-			17
+			3404,
+			318,
+			72,
+			31
 		},
 		alias = {}
 	},
 	turtle_shaman_0251 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			70,
-			91,
-			92,
-			92
+			142,
+			183,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1370,
-			593,
-			38,
-			17
+			3303,
+			314,
+			74,
+			32
 		},
 		alias = {}
 	},
 	turtle_shaman_0252 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			69,
-			91,
-			92,
-			92
+			140,
+			183,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1224,
-			594,
-			39,
-			17
+			2305,
+			318,
+			76,
+			32
 		},
 		alias = {}
 	},
 	turtle_shaman_0253 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			68,
-			91,
-			92,
-			92
+			138,
+			183,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1600,
-			348,
-			40,
-			17
+			1752,
+			312,
+			78,
+			32
 		},
 		alias = {}
 	},
 	turtle_shaman_0254 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			72,
-			92,
-			92,
-			92
+			145,
+			184,
+			184,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1742,
-			892,
-			36,
-			16
+			3482,
+			318,
+			71,
+			31
 		},
 		alias = {}
 	},
 	turtle_shaman_0255 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			92,
-			92,
-			93,
-			93
+			185,
+			185,
+			186,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			511,
-			2033,
-			15,
-			15
+			204,
+			2292,
+			29,
+			29
 		},
 		alias = {
 			"turtle_shaman_0256"
 		}
 	},
 	turtle_shaman_0257 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			94,
-			94,
-			94,
-			94
+			188,
+			188,
+			189,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			109,
-			1343,
-			12,
-			12
+			208,
+			1896,
+			23,
+			23
 		},
 		alias = {
 			"turtle_shaman_0258"
 		}
 	},
 	turtle_shaman_0259 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			95,
-			95,
-			95,
-			95
+			190,
+			190,
+			191,
+			191
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			110,
-			1174,
-			10,
-			10
+			213,
+			1402,
+			19,
+			19
 		},
 		alias = {
 			"turtle_shaman_0260"
 		}
 	},
 	turtle_shaman_0261 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			89,
-			86,
-			91,
-			88
+			180,
+			173,
+			183,
+			176
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1999,
-			1735,
-			20,
-			26
+			3618,
+			2559,
+			37,
+			51
 		},
 		alias = {}
 	},
 	turtle_shaman_0262 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			79,
-			80,
-			78,
-			80
+			159,
+			160,
+			157,
+			161
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1245,
-			1581,
-			43,
-			40
+			3012,
+			2049,
+			84,
+			79
 		},
 		alias = {}
 	},
 	turtle_shaman_0263 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			84,
-			84,
-			85,
-			85
+			169,
+			169,
+			170,
+			172
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1690,
-			1782,
-			31,
-			31
+			2523,
+			3186,
+			61,
+			59
 		},
 		alias = {}
 	},
 	turtle_shaman_0264 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			83,
-			83,
-			83,
-			85
+			167,
+			166,
+			167,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1920,
-			67,
-			34,
-			32
+			2863,
+			119,
+			66,
+			64
 		},
 		alias = {}
 	},
 	turtle_shaman_0265 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			79,
-			79,
-			80,
-			81
+			159,
+			158,
+			160,
+			162
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1484,
-			1314,
-			41,
-			40
+			2193,
+			2324,
+			81,
+			80
 		},
 		alias = {}
 	},
 	turtle_shaman_0266 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			79,
-			78,
-			79,
-			80
+			158,
+			156,
+			158,
+			161
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1245,
-			1980,
-			42,
-			42
+			2922,
+			2049,
+			84,
+			83
 		},
 		alias = {}
 	},
 	turtle_shaman_0267 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			78,
-			77,
-			78,
-			80
+			157,
+			154,
+			157,
+			161
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1695,
-			1202,
-			44,
-			43
+			2010,
+			3182,
+			86,
+			85
 		},
 		alias = {}
 	},
 	turtle_shaman_0268 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			82,
-			81,
-			80,
-			83
+			165,
+			162,
+			162,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1483,
-			1927,
-			38,
-			36
+			2365,
+			3400,
+			73,
+			73
 		},
 		alias = {}
 	},
 	turtle_shaman_0269 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			82,
-			81,
-			79,
-			81
+			164,
+			163,
+			159,
+			164
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1843,
-			1460,
-			39,
-			38
+			2614,
+			2322,
+			77,
+			73
 		},
 		alias = {
 			"turtle_shaman_0270"
 		}
 	},
 	turtle_shaman_0271 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			82,
-			81,
-			80,
-			83
+			164,
+			163,
+			160,
+			167
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1483,
-			1969,
-			38,
-			36
+			3357,
+			2322,
+			76,
+			70
 		},
 		alias = {
 			"turtle_shaman_0272"
 		}
 	},
 	turtle_shaman_0273 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			82,
-			81,
-			80,
-			83
+			166,
+			163,
+			161,
+			167
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1483,
-			2011,
-			38,
-			36
+			2365,
+			3479,
+			73,
+			70
 		},
 		alias = {
 			"turtle_shaman_0274"
 		}
 	},
 	turtle_shaman_0275 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			87,
-			81,
-			80,
-			84
+			174,
+			164,
+			162,
+			169
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1651,
-			1796,
-			33,
-			35
+			3573,
+			2472,
+			64,
+			67
 		},
 		alias = {
 			"turtle_shaman_0276"
 		}
 	},
 	turtle_shaman_0277 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
 			0,
 			0,
-			198,
-			198
+			398,
+			398
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			692,
-			97,
+			1041,
+			188,
 			2,
 			2
 		},
@@ -25909,3446 +25909,3446 @@ local a = {
 		}
 	},
 	turtle_shaman_0278 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			93,
-			90,
-			92,
-			93
+			186,
+			180,
+			184,
+			187
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			779,
-			506,
-			15,
-			17
+			203,
+			2680,
+			30,
+			33
 		},
 		alias = {
 			"turtle_shaman_0279"
 		}
 	},
 	turtle_shaman_0280 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			88,
-			81,
-			83,
-			85
+			176,
+			163,
+			166,
+			171
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1727,
-			1777,
-			29,
-			34
+			2523,
+			3799,
+			58,
+			66
 		},
 		alias = {
 			"turtle_shaman_0281"
 		}
 	},
 	turtle_shaman_0282 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			84,
-			79,
-			80,
-			82
+			168,
+			159,
+			160,
+			164
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1528,
-			1671,
-			36,
-			39
+			2365,
+			3612,
+			72,
+			77
 		},
 		alias = {
 			"turtle_shaman_0283"
 		}
 	},
 	turtle_shaman_0285 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			200,
-			200
+			400,
+			400
 		},
 		trim = {
-			81,
-			90,
-			80,
-			91
+			163,
+			181,
+			161,
+			183
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1334,
-			510,
-			39,
-			19
-		},
-		alias = {}
-	},
-	turtle_shaman_0286 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			79,
-			89,
-			78,
-			90
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1803,
-			72,
-			43,
-			21
-		},
-		alias = {}
-	},
-	turtle_shaman_0287 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			77,
-			88,
-			77,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1360,
-			73,
-			46,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0288 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			75,
-			87,
-			75,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			737,
-			422,
-			50,
-			24
-		},
-		alias = {}
-	},
-	turtle_shaman_0289 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			86,
-			73,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1301,
-			73,
-			53,
-			26
-		},
-		alias = {}
-	},
-	turtle_shaman_0290 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1734,
-			248,
-			52,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0291 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1820,
-			247,
-			52,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0292 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1906,
-			246,
-			52,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0293 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1534,
-			419,
-			52,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0294 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			800,
-			505,
-			52,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0295 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			75,
-			87,
-			75,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1090,
-			1035,
-			50,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0296 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			75,
-			87,
-			75,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			723,
-			506,
-			50,
-			24
-		},
-		alias = {}
-	},
-	turtle_shaman_0297 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			75,
-			87,
-			75,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1486,
-			506,
-			50,
-			24
-		},
-		alias = {}
-	},
-	turtle_shaman_0298 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
+			3275,
+			127,
 			76,
-			87,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1645,
-			1035,
-			48,
-			24
-		},
-		alias = {}
-	},
-	turtle_shaman_0299 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			76,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1699,
-			1035,
-			48,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0300 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			76,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1753,
-			1035,
-			48,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0301 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			77,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1248,
-			1122,
-			47,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0302 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			77,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1301,
-			1122,
-			47,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0303 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			77,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1354,
-			1122,
-			47,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0304 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			77,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1407,
-			1122,
-			47,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0305 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			77,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1460,
-			1122,
-			47,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0306 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			76,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1807,
-			1035,
-			48,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0307 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			76,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1861,
-			1035,
-			48,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0308 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			76,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1915,
-			1035,
-			48,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0309 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			76,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1969,
-			1035,
-			48,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0312 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			81,
-			90,
-			80,
-			91
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1938,
-			508,
-			39,
-			19
-		},
-		alias = {}
-	},
-	turtle_shaman_0313 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			79,
-			89,
-			78,
-			90
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1791,
-			170,
-			43,
-			21
-		},
-		alias = {}
-	},
-	turtle_shaman_0314 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			77,
-			89,
-			77,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			531,
-			169,
-			46,
-			22
-		},
-		alias = {}
-	},
-	turtle_shaman_0315 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			75,
-			87,
-			75,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1562,
-			506,
-			50,
-			24
-		},
-		alias = {}
-	},
-	turtle_shaman_0316 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			73,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			6,
-			2021,
-			53,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0317 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			877,
-			504,
-			52,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0318 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			567,
-			2015,
-			52,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0319 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1169,
-			888,
-			52,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0320 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1233,
-			888,
-			52,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0321 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1297,
-			888,
-			52,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0322 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			75,
-			87,
-			75,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1146,
-			1035,
-			50,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0323 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			75,
-			87,
-			75,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1954,
-			589,
-			50,
-			24
-		},
-		alias = {}
-	},
-	turtle_shaman_0324 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			75,
-			87,
-			75,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1105,
-			890,
-			50,
-			24
-		},
-		alias = {}
-	},
-	turtle_shaman_0325 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			76,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1575,
-			1073,
-			48,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0326 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			76,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1629,
-			1073,
-			48,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0327 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			76,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1683,
-			1073,
-			48,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0328 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			77,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1513,
-			1122,
-			47,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0329 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			77,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1566,
-			1122,
-			47,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0330 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			77,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1619,
-			1122,
-			47,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0331 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			77,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1672,
-			1122,
-			47,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0332 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			76,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1737,
-			1073,
-			48,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0333 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			76,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1791,
-			1073,
-			48,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0334 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			76,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1845,
-			1073,
-			48,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0335 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			76,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1899,
-			1073,
-			48,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0336 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			75,
-			88,
-			75,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1881,
-			590,
-			50,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0337 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			75,
-			87,
-			75,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1202,
-			1035,
-			50,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0338 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			75,
-			87,
-			75,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1258,
-			1035,
-			50,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0339 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1361,
-			888,
-			52,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0340 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1425,
-			881,
-			52,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0341 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1489,
-			881,
-			52,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0342 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			73,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			65,
-			2021,
-			53,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0343 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			73,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			630,
-			166,
-			53,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0344 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			73,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			729,
-			166,
-			53,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0345 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1868,
-			887,
-			52,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0346 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1931,
-			886,
-			52,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0347 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			74,
-			87,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			976,
-			1270,
-			52,
-			25
-		},
-		alias = {}
-	},
-	turtle_shaman_0348 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			75,
-			87,
-			75,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1314,
-			1035,
-			50,
-			24
-		},
-		alias = {}
-	},
-	turtle_shaman_0349 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			75,
-			88,
-			75,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1370,
-			1035,
-			50,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0350 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			76,
-			88,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1953,
-			1073,
-			48,
-			23
-		},
-		alias = {}
-	},
-	turtle_shaman_0352 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			98,
-			62,
-			82,
-			111
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2027,
-			781,
-			20,
-			27
-		},
-		alias = {}
-	},
-	turtle_shaman_0353 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			98,
-			60,
-			82,
-			113
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2027,
-			1667,
-			20,
-			27
-		},
-		alias = {}
-	},
-	turtle_shaman_0354 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			98,
-			58,
-			82,
-			114
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			505,
-			157,
-			20,
-			28
-		},
-		alias = {}
-	},
-	turtle_shaman_0355 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			98,
-			57,
-			82,
-			116
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1895,
-			1735,
-			20,
-			27
-		},
-		alias = {}
-	},
-	turtle_shaman_0356 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			98,
-			55,
-			82,
-			118
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1921,
-			1735,
-			20,
-			27
-		},
-		alias = {}
-	},
-	turtle_shaman_0357 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			98,
-			53,
-			82,
-			120
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1947,
-			1735,
-			20,
-			27
-		},
-		alias = {}
-	},
-	turtle_shaman_0358 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			94,
-			52,
-			82,
-			115
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2023,
-			1460,
-			24,
-			33
-		},
-		alias = {}
-	},
-	turtle_shaman_0359 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			94,
-			65,
-			82,
-			117
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1865,
-			1735,
-			24,
-			18
-		},
-		alias = {}
-	},
-	turtle_shaman_0360 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			94,
-			63,
-			82,
-			118
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1983,
-			508,
-			24,
-			19
-		},
-		alias = {}
-	},
-	turtle_shaman_0361 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			94,
-			61,
-			82,
-			120
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1632,
-			592,
-			24,
-			19
-		},
-		alias = {}
-	},
-	turtle_shaman_0362 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			93,
-			59,
-			82,
-			122
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			836,
-			247,
-			25,
-			19
-		},
-		alias = {}
-	},
-	turtle_shaman_0363 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			93,
-			58,
-			82,
-			123
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1379,
-			510,
-			25,
-			19
-		},
-		alias = {}
-	},
-	turtle_shaman_0364 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			93,
-			56,
-			83,
-			125
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1705,
-			592,
-			24,
-			19
-		},
-		alias = {}
-	},
-	turtle_shaman_0365 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			89,
-			61,
-			94,
-			109
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1992,
-			1769,
-			17,
-			30
-		},
-		alias = {}
-	},
-	turtle_shaman_0366 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			89,
-			59,
-			94,
-			111
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2015,
-			1769,
-			17,
-			30
-		},
-		alias = {}
-	},
-	turtle_shaman_0367 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			89,
-			57,
-			94,
-			112
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2030,
-			670,
-			17,
-			31
-		},
-		alias = {}
-	},
-	turtle_shaman_0368 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			89,
-			55,
-			94,
-			114
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2030,
-			1122,
-			17,
-			31
-		},
-		alias = {}
-	},
-	turtle_shaman_0369 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			89,
-			54,
-			94,
-			116
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1796,
-			1857,
-			17,
-			30
-		},
-		alias = {}
-	},
-	turtle_shaman_0370 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			89,
-			53,
-			95,
-			117
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1796,
-			1931,
-			16,
-			30
-		},
-		alias = {}
-	},
-	turtle_shaman_0371 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			89,
-			69,
-			99,
-			119
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			109,
-			1361,
-			12,
-			12
-		},
-		alias = {}
-	},
-	turtle_shaman_0372 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			89,
-			67,
-			99,
-			121
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			109,
-			1379,
-			12,
-			12
-		},
-		alias = {}
-	},
-	turtle_shaman_0373 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			89,
-			65,
-			99,
-			123
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			109,
-			1400,
-			12,
-			12
-		},
-		alias = {}
-	},
-	turtle_shaman_0374 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			89,
-			63,
-			99,
-			124
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			109,
-			1305,
-			12,
-			13
-		},
-		alias = {}
-	},
-	turtle_shaman_0375 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			89,
-			61,
-			99,
-			126
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			109,
-			1324,
-			12,
-			13
-		},
-		alias = {}
-	},
-	turtle_shaman_0376 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			89,
-			60,
-			90,
-			116
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1964,
-			246,
-			21,
-			24
-		},
-		alias = {}
-	},
-	turtle_shaman_0377 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			89,
-			59,
-			90,
-			117
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2027,
-			574,
-			21,
-			24
-		},
-		alias = {}
-	},
-	turtle_shaman_0378 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			98,
-			69,
-			90,
-			119
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			109,
-			1418,
-			12,
-			12
-		},
-		alias = {}
-	},
-	turtle_shaman_0379 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			98,
-			68,
-			90,
-			120
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			109,
-			1436,
-			12,
-			12
-		},
-		alias = {}
-	},
-	turtle_shaman_0380 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			98,
-			66,
-			90,
-			122
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			109,
-			1454,
-			12,
-			12
-		},
-		alias = {}
-	},
-	turtle_shaman_0381 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			200,
-			200
-		},
-		trim = {
-			98,
-			64,
-			90,
-			124
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			109,
-			1489,
-			12,
-			12
-		},
-		alias = {}
-	},
-	tusked_brawler_0001 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
-		size = {
-			100,
-			100
-		},
-		trim = {
-			32,
-			18,
-			27,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1766,
-			1370,
-			41,
 			36
 		},
 		alias = {}
 	},
-	tusked_brawler_0002 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+	turtle_shaman_0286 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			400,
+			400
 		},
 		trim = {
-			32,
-			17,
-			27,
-			46
+			159,
+			179,
+			157,
+			181
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1672,
-			1370,
-			41,
-			37
+			1662,
+			481,
+			84,
+			40
+		},
+		alias = {}
+	},
+	turtle_shaman_0287 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			155,
+			178,
+			154,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3468,
+			128,
+			91,
+			43
+		},
+		alias = {}
+	},
+	turtle_shaman_0288 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			151,
+			175,
+			151,
+			178
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2016,
+			1766,
+			98,
+			47
+		},
+		alias = {}
+	},
+	turtle_shaman_0289 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			148,
+			174,
+			147,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3767,
+			292,
+			105,
+			49
+		},
+		alias = {}
+	},
+	turtle_shaman_0290 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			148,
+			174,
+			148,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2543,
+			637,
+			104,
+			49
+		},
+		alias = {}
+	},
+	turtle_shaman_0291 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			148,
+			174,
+			148,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3947,
+			816,
+			104,
+			49
+		},
+		alias = {}
+	},
+	turtle_shaman_0292 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			148,
+			174,
+			148,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2875,
+			1355,
+			104,
+			49
+		},
+		alias = {}
+	},
+	turtle_shaman_0293 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			149,
+			174,
+			149,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1816,
+			1603,
+			102,
+			49
+		},
+		alias = {}
+	},
+	turtle_shaman_0294 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			149,
+			175,
+			149,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2290,
+			1615,
+			102,
+			48
+		},
+		alias = {}
+	},
+	turtle_shaman_0295 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			150,
+			175,
+			150,
+			178
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			918,
+			4049,
+			100,
+			47
+		},
+		alias = {}
+	},
+	turtle_shaman_0296 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			151,
+			175,
+			150,
+			178
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1696,
+			3582,
+			99,
+			47
+		},
+		alias = {}
+	},
+	turtle_shaman_0297 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			151,
+			176,
+			151,
+			178
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3979,
+			144,
+			98,
+			46
+		},
+		alias = {}
+	},
+	turtle_shaman_0298 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			152,
+			176,
+			152,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			430,
+			4051,
+			96,
+			45
+		},
+		alias = {}
+	},
+	turtle_shaman_0299 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			153,
+			176,
+			152,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3996,
+			952,
+			95,
+			45
+		},
+		alias = {}
+	},
+	turtle_shaman_0300 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			153,
+			176,
+			153,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2729,
+			1766,
+			94,
+			45
+		},
+		alias = {}
+	},
+	turtle_shaman_0301 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			154,
+			177,
+			153,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3029,
+			1766,
+			93,
+			44
+		},
+		alias = {}
+	},
+	turtle_shaman_0302 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			154,
+			177,
+			153,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3128,
+			1766,
+			93,
+			44
+		},
+		alias = {}
+	},
+	turtle_shaman_0303 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			154,
+			177,
+			153,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3227,
+			1766,
+			93,
+			44
+		},
+		alias = {}
+	},
+	turtle_shaman_0304 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			154,
+			177,
+			153,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3326,
+			1766,
+			93,
+			44
+		},
+		alias = {}
+	},
+	turtle_shaman_0305 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			154,
+			177,
+			153,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3425,
+			1766,
+			93,
+			44
+		},
+		alias = {}
+	},
+	turtle_shaman_0306 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			153,
+			176,
+			153,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2829,
+			1766,
+			94,
+			45
+		},
+		alias = {}
+	},
+	turtle_shaman_0307 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			153,
+			176,
+			153,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2929,
+			1766,
+			94,
+			45
+		},
+		alias = {}
+	},
+	turtle_shaman_0308 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			153,
+			176,
+			152,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1327,
+			4050,
+			95,
+			45
+		},
+		alias = {}
+	},
+	turtle_shaman_0309 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			152,
+			176,
+			153,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2878,
+			1620,
+			95,
+			45
+		},
+		alias = {}
+	},
+	turtle_shaman_0312 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			163,
+			181,
+			161,
+			183
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3221,
+			314,
+			76,
+			36
+		},
+		alias = {}
+	},
+	turtle_shaman_0313 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			159,
+			179,
+			157,
+			181
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1882,
+			1102,
+			84,
+			40
+		},
+		alias = {}
+	},
+	turtle_shaman_0314 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			155,
+			178,
+			154,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3995,
+			478,
+			91,
+			43
+		},
+		alias = {}
+	},
+	turtle_shaman_0315 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			151,
+			175,
+			151,
+			178
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2120,
+			1766,
+			98,
+			47
+		},
+		alias = {}
+	},
+	turtle_shaman_0316 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			148,
+			174,
+			147,
+			176
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			622,
+			292,
+			105,
+			50
+		},
+		alias = {}
+	},
+	turtle_shaman_0317 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			148,
+			174,
+			148,
+			176
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3009,
+			460,
+			104,
+			50
+		},
+		alias = {}
+	},
+	turtle_shaman_0318 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			148,
+			174,
+			148,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3004,
+			1355,
+			104,
+			49
+		},
+		alias = {}
+	},
+	turtle_shaman_0319 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			148,
+			174,
+			148,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3133,
+			1355,
+			104,
+			49
+		},
+		alias = {}
+	},
+	turtle_shaman_0320 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			149,
+			175,
+			149,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2408,
+			1606,
+			102,
+			48
+		},
+		alias = {}
+	},
+	turtle_shaman_0321 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			149,
+			175,
+			149,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2526,
+			1605,
+			102,
+			48
+		},
+		alias = {}
+	},
+	turtle_shaman_0322 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			150,
+			175,
+			150,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1696,
+			3175,
+			100,
+			48
+		},
+		alias = {}
+	},
+	turtle_shaman_0323 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			151,
+			175,
+			150,
+			178
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1696,
+			3635,
+			99,
+			47
+		},
+		alias = {}
+	},
+	turtle_shaman_0324 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			151,
+			176,
+			151,
+			178
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2223,
+			648,
+			98,
+			46
+		},
+		alias = {}
+	},
+	turtle_shaman_0325 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			152,
+			176,
+			152,
+			178
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3380,
+			1098,
+			96,
+			46
+		},
+		alias = {}
+	},
+	turtle_shaman_0326 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			153,
+			176,
+			152,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3688,
+			1620,
+			95,
+			45
+		},
+		alias = {}
+	},
+	turtle_shaman_0327 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			153,
+			177,
+			153,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3498,
+			650,
+			94,
+			44
+		},
+		alias = {}
+	},
+	turtle_shaman_0328 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			154,
+			177,
+			153,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3524,
+			1766,
+			93,
+			44
+		},
+		alias = {}
+	},
+	turtle_shaman_0329 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			154,
+			177,
+			153,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3623,
+			1766,
+			93,
+			44
+		},
+		alias = {}
+	},
+	turtle_shaman_0330 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			154,
+			177,
+			153,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3722,
+			1766,
+			93,
+			44
+		},
+		alias = {}
+	},
+	turtle_shaman_0331 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			154,
+			177,
+			153,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3821,
+			1766,
+			93,
+			44
+		},
+		alias = {}
+	},
+	turtle_shaman_0332 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			153,
+			177,
+			153,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2019,
+			1100,
+			94,
+			44
+		},
+		alias = {}
+	},
+	turtle_shaman_0333 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			153,
+			177,
+			153,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3786,
+			1100,
+			94,
+			44
+		},
+		alias = {}
+	},
+	turtle_shaman_0334 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			153,
+			176,
+			152,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2528,
+			1766,
+			95,
+			45
+		},
+		alias = {}
+	},
+	turtle_shaman_0335 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			152,
+			176,
+			152,
+			178
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2617,
+			1359,
+			96,
+			46
+		},
+		alias = {}
+	},
+	turtle_shaman_0336 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			151,
+			176,
+			151,
+			178
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2383,
+			648,
+			98,
+			46
+		},
+		alias = {}
+	},
+	turtle_shaman_0337 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			150,
+			175,
+			151,
+			178
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1696,
+			3688,
+			99,
+			47
+		},
+		alias = {}
+	},
+	turtle_shaman_0338 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			150,
+			175,
+			150,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1696,
+			3229,
+			100,
+			48
+		},
+		alias = {}
+	},
+	turtle_shaman_0339 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			149,
+			175,
+			149,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2761,
+			1613,
+			102,
+			48
+		},
+		alias = {}
+	},
+	turtle_shaman_0340 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			148,
+			175,
+			149,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3520,
+			1351,
+			103,
+			48
+		},
+		alias = {}
+	},
+	turtle_shaman_0341 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			148,
+			174,
+			149,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3391,
+			1354,
+			103,
+			49
+		},
+		alias = {}
+	},
+	turtle_shaman_0342 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			147,
+			174,
+			148,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			239,
+			4040,
+			105,
+			49
+		},
+		alias = {}
+	},
+	turtle_shaman_0343 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			147,
+			174,
+			148,
+			176
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1193,
+			296,
+			105,
+			50
+		},
+		alias = {}
+	},
+	turtle_shaman_0344 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			148,
+			174,
+			147,
+			176
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1380,
+			296,
+			105,
+			50
+		},
+		alias = {}
+	},
+	turtle_shaman_0345 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			148,
+			174,
+			148,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3262,
+			1355,
+			104,
+			49
+		},
+		alias = {}
+	},
+	turtle_shaman_0346 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			149,
+			175,
+			149,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2994,
+			1617,
+			102,
+			48
+		},
+		alias = {}
+	},
+	turtle_shaman_0347 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			149,
+			175,
+			149,
+			177
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3110,
+			1603,
+			102,
+			48
+		},
+		alias = {}
+	},
+	turtle_shaman_0348 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			150,
+			175,
+			150,
+			178
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1696,
+			3283,
+			100,
+			47
+		},
+		alias = {}
+	},
+	turtle_shaman_0349 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			151,
+			176,
+			151,
+			178
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3244,
+			1098,
+			98,
+			46
+		},
+		alias = {}
+	},
+	turtle_shaman_0350 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			152,
+			176,
+			152,
+			178
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2746,
+			1359,
+			96,
+			46
+		},
+		alias = {}
+	},
+	turtle_shaman_0352 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			197,
+			125,
+			166,
+			224
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3661,
+			2559,
+			37,
+			51
+		},
+		alias = {}
+	},
+	turtle_shaman_0353 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			197,
+			122,
+			166,
+			227
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3704,
+			2559,
+			37,
+			51
+		},
+		alias = {}
+	},
+	turtle_shaman_0354 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			197,
+			118,
+			166,
+			230
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3575,
+			2559,
+			37,
+			52
+		},
+		alias = {}
+	},
+	turtle_shaman_0355 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			196,
+			114,
+			165,
+			233
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2708,
+			2617,
+			39,
+			53
+		},
+		alias = {}
+	},
+	turtle_shaman_0356 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			196,
+			111,
+			165,
+			237
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3530,
+			2559,
+			39,
+			52
+		},
+		alias = {}
+	},
+	turtle_shaman_0357 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			196,
+			107,
+			165,
+			240
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2753,
+			2617,
+			39,
+			53
+		},
+		alias = {}
+	},
+	turtle_shaman_0358 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			188,
+			104,
+			165,
+			232
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2655,
+			2617,
+			47,
+			64
+		},
+		alias = {}
+	},
+	turtle_shaman_0359 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			188,
+			130,
+			165,
+			235
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2428,
+			1109,
+			47,
+			35
+		},
+		alias = {}
+	},
+	turtle_shaman_0360 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			188,
+			127,
+			165,
+			238
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2481,
+			1109,
+			47,
+			35
+		},
+		alias = {}
+	},
+	turtle_shaman_0361 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			188,
+			123,
+			165,
+			241
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2564,
+			1106,
+			47,
+			36
+		},
+		alias = {}
+	},
+	turtle_shaman_0362 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			188,
+			119,
+			164,
+			245
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2327,
+			648,
+			48,
+			36
+		},
+		alias = {}
+	},
+	turtle_shaman_0363 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			188,
+			116,
+			164,
+			248
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2487,
+			648,
+			48,
+			36
+		},
+		alias = {}
+	},
+	turtle_shaman_0364 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			187,
+			113,
+			166,
+			251
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2617,
+			1106,
+			47,
+			36
+		},
+		alias = {}
+	},
+	turtle_shaman_0365 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			180,
+			123,
+			190,
+			220
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			203,
+			2915,
+			30,
+			57
+		},
+		alias = {}
+	},
+	turtle_shaman_0366 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			180,
+			119,
+			190,
+			223
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			203,
+			2797,
+			30,
+			58
+		},
+		alias = {}
+	},
+	turtle_shaman_0367 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			180,
+			115,
+			190,
+			226
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			203,
+			2615,
+			30,
+			59
+		},
+		alias = {}
+	},
+	turtle_shaman_0368 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			180,
+			112,
+			189,
+			229
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			202,
+			3086,
+			31,
+			59
+		},
+		alias = {}
+	},
+	turtle_shaman_0369 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			179,
+			108,
+			189,
+			233
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			200,
+			3664,
+			32,
+			59
+		},
+		alias = {}
+	},
+	turtle_shaman_0370 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			179,
+			105,
+			191,
+			236
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			203,
+			2732,
+			30,
+			59
+		},
+		alias = {}
+	},
+	turtle_shaman_0371 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			179,
+			138,
+			199,
+			239
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			206,
+			2056,
+			22,
+			23
+		},
+		alias = {}
+	},
+	turtle_shaman_0372 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			179,
+			135,
+			198,
+			243
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			206,
+			1976,
+			23,
+			22
+		},
+		alias = {}
+	},
+	turtle_shaman_0373 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			179,
+			131,
+			199,
+			246
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			206,
+			2085,
+			22,
+			23
+		},
+		alias = {}
+	},
+	turtle_shaman_0374 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			178,
+			127,
+			198,
+			249
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			208,
+			1837,
+			24,
+			24
+		},
+		alias = {}
+	},
+	turtle_shaman_0375 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			178,
+			124,
+			198,
+			253
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			208,
+			1867,
+			24,
+			23
+		},
+		alias = {}
+	},
+	turtle_shaman_0376 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			178,
+			120,
+			182,
+			233
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4055,
+			1071,
+			40,
+			47
+		},
+		alias = {}
+	},
+	turtle_shaman_0377 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			179,
+			117,
+			182,
+			236
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4057,
+			816,
+			39,
+			47
+		},
+		alias = {}
+	},
+	turtle_shaman_0378 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			198,
+			140,
+			181,
+			239
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			212,
+			1662,
+			21,
+			21
+		},
+		alias = {}
+	},
+	turtle_shaman_0379 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			198,
+			136,
+			181,
+			242
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			212,
+			1634,
+			21,
+			22
+		},
+		alias = {}
+	},
+	turtle_shaman_0380 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			197,
+			133,
+			181,
+			246
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			206,
+			2157,
+			22,
+			21
+		},
+		alias = {}
+	},
+	turtle_shaman_0381 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			400,
+			400
+		},
+		trim = {
+			197,
+			129,
+			181,
+			249
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			206,
+			2114,
+			22,
+			22
+		},
+		alias = {}
+	},
+	tusked_brawler_0001 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			200,
+			200
+		},
+		trim = {
+			64,
+			38,
+			54,
+			93
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2369,
+			2148,
+			82,
+			69
+		},
+		alias = {}
+	},
+	tusked_brawler_0002 = {
+		a_name = "go_enemies_sea_of_trees-1.dds",
+		size = {
+			200,
+			200
+		},
+		trim = {
+			65,
+			35,
+			54,
+			93
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2193,
+			3771,
+			81,
+			72
 		},
 		alias = {
 			"tusked_brawler_0003"
 		}
 	},
 	tusked_brawler_0004 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			32,
-			21,
-			26,
-			43
+			65,
+			44,
+			53,
+			87
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1655,
-			42,
-			36
+			2457,
+			2148,
+			82,
+			69
 		},
 		alias = {
 			"tusked_brawler_0005"
 		}
 	},
 	tusked_brawler_0006 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			32,
-			19,
-			26,
-			44
+			65,
+			38,
+			53,
+			88
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1400,
-			42,
-			37
+			2103,
+			3652,
+			82,
+			74
 		},
 		alias = {
 			"tusked_brawler_0007"
 		}
 	},
 	tusked_brawler_0008 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			34,
-			16,
-			26,
-			47
+			68,
+			33,
+			52,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1759,
-			1414,
-			40,
-			37
+			3742,
+			2225,
+			80,
+			72
 		},
 		alias = {
 			"tusked_brawler_0009"
 		}
 	},
 	tusked_brawler_0010 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			34,
-			14,
-			25,
-			47
+			69,
+			30,
+			52,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1860,
-			1314,
-			41,
-			39
+			2280,
+			2429,
+			79,
+			75
 		},
 		alias = {
 			"tusked_brawler_0011"
 		}
 	},
 	tusked_brawler_0012 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			35,
-			16,
-			25,
-			47
+			71,
+			32,
+			51,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1805,
-			1414,
-			40,
-			37
+			2280,
+			3111,
+			78,
+			73
 		},
 		alias = {
 			"tusked_brawler_0013"
 		}
 	},
 	tusked_brawler_0014 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			34,
-			18,
-			25,
-			47
+			68,
+			37,
+			51,
+			94
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1390,
-			1455,
-			41,
-			35
+			3248,
+			2148,
+			81,
+			69
 		},
 		alias = {
 			"tusked_brawler_0015"
 		}
 	},
 	tusked_brawler_0016 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			22,
-			26,
-			44
+			63,
+			45,
+			53,
+			88
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1904,
-			1161,
-			43,
-			34
+			3372,
+			2049,
+			84,
+			67
 		},
 		alias = {
 			"tusked_brawler_0017"
 		}
 	},
 	tusked_brawler_0018 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			19,
-			27,
-			44
+			63,
+			40,
+			55,
+			88
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1443,
-			42,
-			37
+			2103,
+			3968,
+			82,
+			72
 		},
 		alias = {
 			"tusked_brawler_0019"
 		}
 	},
 	tusked_brawler_0020 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			16,
-			27,
-			46
+			63,
+			34,
+			55,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1823,
-			1269,
-			42,
-			38
+			2103,
+			3732,
+			82,
+			74
 		},
 		alias = {
 			"tusked_brawler_0021"
 		}
 	},
 	tusked_brawler_0022 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
+			64,
 			32,
-			15,
-			27,
-			47
+			55,
+			94
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1484,
-			1370,
-			41,
-			38
+			2193,
+			3454,
+			81,
+			74
 		},
 		alias = {
 			"tusked_brawler_0023"
 		}
 	},
 	tusked_brawler_0024 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			18,
-			29,
-			47
+			59,
+			37,
+			59,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1739,
-			42,
-			35
+			2897,
+			2148,
+			82,
+			68
 		},
 		alias = {
 			"tusked_brawler_0025"
 		}
 	},
 	tusked_brawler_0026 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			21,
-			29,
-			47
+			59,
+			42,
+			59,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1900,
-			42,
-			32
+			3073,
+			2148,
+			82,
+			63
 		},
 		alias = {
 			"tusked_brawler_0027"
 		}
 	},
 	tusked_brawler_0028 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			30,
-			19,
-			30,
-			47
+			61,
+			38,
+			62,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1437,
-			1500,
-			40,
-			34
+			2780,
+			2322,
+			77,
+			67
 		},
 		alias = {
 			"tusked_brawler_0029"
 		}
 	},
 	tusked_brawler_0030 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			30,
-			15,
+			62,
 			31,
-			47
+			62,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1888,
-			1460,
-			39,
-			38
+			3275,
+			2322,
+			76,
+			74
 		},
 		alias = {
 			"tusked_brawler_0031"
 		}
 	},
 	tusked_brawler_0032 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			14,
-			31,
-			47
+			62,
+			28,
+			63,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1483,
-			1882,
-			38,
-			39
+			2365,
+			2925,
+			75,
+			77
 		},
 		alias = {
 			"tusked_brawler_0033"
 		}
 	},
 	tusked_brawler_0034 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
+			61,
 			30,
-			15,
-			30,
-			47
+			60,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1667,
-			1414,
-			40,
-			38
+			2280,
+			2510,
+			79,
+			75
 		},
 		alias = {
 			"tusked_brawler_0035"
 		}
 	},
 	tusked_brawler_0036 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			17,
-			29,
-			47
+			58,
+			35,
+			58,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1697,
-			42,
-			36
+			3282,
+			2049,
+			84,
+			70
 		},
 		alias = {
 			"tusked_brawler_0037"
 		}
 	},
 	tusked_brawler_0038 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			28,
-			22,
-			28,
-			47
+			57,
+			45,
+			58,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1755,
-			1161,
-			44,
-			31
+			2649,
+			2049,
+			85,
+			60
 		},
 		alias = {
 			"tusked_brawler_0039"
 		}
 	},
 	tusked_brawler_0040 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			28,
-			19,
-			28,
-			47
+			58,
+			39,
+			58,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1705,
-			1161,
-			44,
-			34
+			3552,
+			2049,
+			84,
+			66
 		},
 		alias = {
 			"tusked_brawler_0041"
 		}
 	},
 	tusked_brawler_0042 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			30,
-			15,
-			29,
-			47
+			60,
+			31,
+			60,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1531,
-			1370,
-			41,
-			38
+			3398,
+			2225,
+			80,
+			74
 		},
 		alias = {
 			"tusked_brawler_0043"
 		}
 	},
 	tusked_brawler_0044 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
+			60,
 			30,
-			14,
-			29,
-			47
+			60,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1907,
-			1314,
-			41,
-			39
+			2882,
+			2225,
+			80,
+			75
 		},
 		alias = {
 			"tusked_brawler_0045"
 		}
 	},
 	tusked_brawler_0046 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			28,
-			19,
-			29,
-			47
+			58,
+			38,
+			58,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1953,
-			1161,
-			43,
-			34
+			3462,
+			2049,
+			84,
+			67
 		},
 		alias = {
 			"tusked_brawler_0047"
 		}
 	},
 	tusked_brawler_0048 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			22,
-			28,
-			47
+			58,
+			44,
+			58,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1245,
-			1753,
-			43,
-			31
+			3642,
+			2049,
+			84,
+			61
 		},
 		alias = {
 			"tusked_brawler_0049"
 		}
 	},
 	tusked_brawler_0050 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			30,
-			20,
-			30,
-			47
+			60,
+			40,
+			61,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1390,
-			2015,
-			40,
-			33
+			3939,
+			2148,
+			79,
+			65
 		},
 		alias = {
 			"tusked_brawler_0051"
 		}
 	},
 	tusked_brawler_0052 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			30,
-			16,
-			30,
-			47
+			61,
+			33,
+			62,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1851,
-			1414,
-			40,
-			37
+			2697,
+			2322,
+			77,
+			72
 		},
 		alias = {
 			"tusked_brawler_0053"
 		}
 	},
 	tusked_brawler_0054 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
+			62,
 			30,
-			15,
-			31,
-			47
+			63,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1933,
-			1460,
-			39,
-			38
+			3603,
+			2322,
+			75,
+			75
 		},
 		alias = {
 			"tusked_brawler_0055"
 		}
 	},
 	tusked_brawler_0056 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			16,
-			30,
-			47
+			59,
+			32,
+			60,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1719,
-			1370,
-			41,
-			37
+			2193,
+			3692,
+			81,
+			73
 		},
 		alias = {
 			"tusked_brawler_0057"
 		}
 	},
 	tusked_brawler_0058 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			28,
-			18,
-			28,
-			47
+			57,
+			37,
+			57,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1605,
-			1161,
-			44,
-			35
+			2010,
+			3348,
+			86,
+			68
 		},
 		alias = {
 			"tusked_brawler_0059"
 		}
 	},
 	tusked_brawler_0060 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			28,
-			23,
-			28,
-			47
+			56,
+			47,
+			57,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1805,
-			1161,
-			44,
-			30
+			2010,
+			2587,
+			87,
+			58
 		},
 		alias = {
 			"tusked_brawler_0061"
 		}
 	},
 	tusked_brawler_0062 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			28,
-			20,
-			28,
-			47
+			56,
+			41,
+			57,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1980,
-			1122,
-			44,
-			33
+			2010,
+			2517,
+			87,
+			64
 		},
 		alias = {
 			"tusked_brawler_0063"
 		}
 	},
 	tusked_brawler_0064 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			16,
-			29,
-			47
+			59,
+			33,
+			60,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1486,
-			42,
-			37
+			2193,
+			3849,
+			81,
+			72
 		},
 		alias = {
 			"tusked_brawler_0065"
 		}
 	},
 	tusked_brawler_0066 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			29,
-			15,
-			29,
-			47
+			58,
+			32,
+			59,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1871,
-			1269,
-			42,
-			38
+			2103,
+			2502,
+			83,
+			73
 		},
 		alias = {
 			"tusked_brawler_0067"
 		}
 	},
 	tusked_brawler_0068 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			18,
-			29,
-			47
+			62,
+			36,
+			58,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1989,
-			1414,
-			40,
-			35
+			3595,
+			2148,
+			80,
+			69
 		},
 		alias = {
 			"tusked_brawler_0069"
 		}
 	},
 	tusked_brawler_0070 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			27,
-			17,
-			29,
-			47
+			54,
+			35,
+			59,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1245,
-			1312,
-			44,
-			36
+			2010,
+			2368,
+			87,
+			70
 		},
 		alias = {
 			"tusked_brawler_0071"
 		}
 	},
 	tusked_brawler_0072 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			16,
-			10,
-			30,
-			47
+			33,
+			22,
+			62,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1703,
-			920,
-			54,
-			43
+			2370,
+			1671,
+			105,
+			83
 		},
 		alias = {
 			"tusked_brawler_0073"
 		}
 	},
 	tusked_brawler_0074 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			13,
-			12,
-			31,
-			47
+			27,
+			25,
+			63,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
+			3110,
 			1517,
-			56,
-			41
+			110,
+			80
 		},
 		alias = {
 			"tusked_brawler_0075"
 		}
 	},
 	tusked_brawler_0076 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			12,
-			12,
-			32,
-			47
+			25,
+			25,
+			65,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			913,
-			1564,
-			56,
-			41
+			3226,
+			1517,
+			110,
+			80
 		},
 		alias = {
 			"tusked_brawler_0077"
 		}
 	},
 	tusked_brawler_0078 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			36,
-			6,
-			12,
-			43
+			72,
+			13,
+			26,
+			87
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1809,
-			974,
-			52,
-			51
+			1696,
+			2202,
+			102,
+			100
 		},
 		alias = {
 			"tusked_brawler_0079"
 		}
 	},
 	tusked_brawler_0080 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			36,
-			18,
-			10,
-			40
+			72,
+			38,
+			21,
+			82
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1763,
-			920,
-			54,
-			42
+			1922,
+			1671,
+			107,
+			80
 		},
 		alias = {}
 	},
 	tusked_brawler_0081 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			36,
-			18,
-			9,
-			40
+			72,
+			38,
+			20,
+			82
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1342,
-			920,
-			55,
-			42
+			1578,
+			3258,
+			108,
+			80
 		},
 		alias = {}
 	},
 	tusked_brawler_0082 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			36,
-			21,
-			14,
-			44
+			72,
+			43,
+			28,
+			89
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1861,
-			50,
-			35
+			1696,
+			2989,
+			100,
+			68
 		},
 		alias = {
 			"tusked_brawler_0083",
@@ -29357,104 +29357,104 @@ local a = {
 		}
 	},
 	tusked_brawler_0086 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			36,
-			19,
-			24,
-			43
+			72,
+			40,
+			50,
+			87
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1713,
-			1414,
-			40,
-			38
+			2280,
+			3190,
+			78,
+			73
 		},
 		alias = {
 			"tusked_brawler_0087"
 		}
 	},
 	tusked_brawler_0088 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			34,
-			19,
-			28,
-			45
+			69,
+			39,
+			57,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1528,
-			1507,
-			38,
-			36
+			3765,
+			2322,
+			74,
+			70
 		},
 		alias = {
 			"tusked_brawler_0089"
 		}
 	},
 	tusked_brawler_0090 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			32,
-			18,
-			27,
-			46
+			64,
+			38,
+			54,
+			93
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1813,
-			1370,
-			41,
-			36
+			2545,
+			2148,
+			82,
+			69
 		},
 		alias = {
 			"tusked_brawler_0091"
 		}
 	},
 	tusked_brawler_0092 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			30,
-			18,
-			29,
-			46
+			60,
+			38,
+			58,
+			93
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1860,
-			1370,
-			41,
-			36
+			2633,
+			2148,
+			82,
+			69
 		},
 		alias = {
 			"tusked_brawler_0093",
@@ -29463,52 +29463,52 @@ local a = {
 		}
 	},
 	tusked_brawler_0094 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			27,
-			19,
-			32,
-			47
+			54,
+			39,
+			66,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1390,
-			1496,
-			41,
-			34
+			3681,
+			2148,
+			80,
+			66
 		},
 		alias = {
 			"tusked_brawler_0095"
 		}
 	},
 	tusked_brawler_0096 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			25,
-			19,
-			33,
-			47
+			51,
+			39,
+			67,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1295,
-			1860,
-			42,
-			34
+			2985,
+			2148,
+			82,
+			66
 		},
 		alias = {
 			"tusked_brawler_0097",
@@ -29517,226 +29517,226 @@ local a = {
 		}
 	},
 	tusked_brawler_0100 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			35,
-			16,
-			17,
-			47
+			71,
+			32,
+			34,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1359,
-			1073,
-			48,
-			37
+			1808,
+			3358,
+			95,
+			73
 		},
 		alias = {
 			"tusked_brawler_0101"
 		}
 	},
 	tusked_brawler_0102 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			35,
-			15,
-			14,
-			47
+			71,
+			30,
+			30,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1533,
-			51,
-			38
+			1696,
+			3432,
+			99,
+			75
 		},
 		alias = {}
 	},
 	tusked_brawler_0103 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			35,
-			15,
-			14,
-			47
+			71,
+			30,
+			29,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			976,
-			1577,
-			51,
-			38
+			3996,
+			871,
+			100,
+			75
 		},
 		alias = {}
 	},
 	tusked_brawler_0104 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			35,
-			15,
-			21,
-			47
+			70,
+			31,
+			43,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1945,
-			1202,
-			44,
-			38
+			2010,
+			2131,
+			87,
+			74
 		},
 		alias = {}
 	},
 	tusked_brawler_0105 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			35,
-			15,
-			21,
-			47
+			70,
+			31,
+			43,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1995,
-			1202,
-			44,
-			38
+			2010,
+			2211,
+			87,
+			74
 		},
 		alias = {}
 	},
 	tusked_brawler_0106 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			33,
-			15,
-			25,
-			47
+			67,
+			31,
+			50,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1919,
-			1269,
-			42,
-			38
+			3999,
+			2049,
+			83,
+			74
 		},
 		alias = {
 			"tusked_brawler_0107"
 		}
 	},
 	tusked_brawler_0108 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
+			64,
 			32,
-			15,
-			26,
-			47
+			53,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1967,
-			1269,
-			42,
-			38
+			2103,
+			2581,
+			83,
+			73
 		},
 		alias = {
 			"tusked_brawler_0109"
 		}
 	},
 	tusked_brawler_0110 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			17,
-			28,
-			47
+			63,
+			35,
+			57,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1907,
-			1370,
-			41,
-			36
+			3509,
+			2148,
+			80,
+			70
 		},
 		alias = {
 			"tusked_brawler_0111"
 		}
 	},
 	tusked_brawler_0112 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			30,
-			18,
-			29,
-			46
+			60,
+			38,
+			58,
+			93
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1954,
-			1370,
-			41,
-			36
+			2721,
+			2148,
+			82,
+			69
 		},
 		alias = {
 			"tusked_brawler_0113",
@@ -29744,284 +29744,284 @@ local a = {
 		}
 	},
 	tusked_brawler_0117 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			32,
-			18,
-			27,
-			46
+			64,
+			38,
+			54,
+			93
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			2001,
-			1370,
-			41,
-			36
+			2809,
+			2148,
+			82,
+			69
 		},
 		alias = {
 			"tusked_brawler_0118"
 		}
 	},
 	tusked_brawler_0119 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			31,
-			20,
-			26,
-			45
+			63,
+			41,
+			54,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1855,
-			1161,
-			43,
-			35
+			2103,
+			2735,
+			83,
+			67
 		},
 		alias = {
 			"tusked_brawler_0120"
 		}
 	},
 	tusked_brawler_0121 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			19,
-			10,
-			39,
-			47
+			40,
+			21,
+			80,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1245,
-			1931,
-			42,
-			43
+			2366,
+			2225,
+			80,
+			84
 		},
 		alias = {
 			"tusked_brawler_0122"
 		}
 	},
 	tusked_brawler_0123 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			18,
-			3,
-			41,
-			47
+			37,
+			7,
+			83,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1343,
-			1314,
-			41,
-			50
+			2193,
+			3927,
+			80,
+			98
 		},
 		alias = {
 			"tusked_brawler_0124"
 		}
 	},
 	tusked_brawler_0125 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			23,
-			3,
-			41,
-			47
+			46,
+			8,
+			84,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1528,
-			1615,
-			36,
-			50
+			2447,
+			2472,
+			70,
+			97
 		},
 		alias = {
 			"tusked_brawler_0126"
 		}
 	},
 	tusked_brawler_0127 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			23,
-			2,
-			44,
-			47
+			46,
+			5,
+			88,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1612,
-			1620,
-			33,
-			51
+			2447,
+			3187,
+			66,
+			100
 		},
 		alias = {
 			"tusked_brawler_0128"
 		}
 	},
 	tusked_brawler_0129 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			18,
-			7,
-			49,
-			47
+			37,
+			16,
+			99,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1612,
-			1677,
-			33,
-			46
+			2447,
+			3589,
+			64,
+			89
 		},
 		alias = {}
 	},
 	tusked_brawler_0130 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			11,
-			25,
-			53,
-			46
+			23,
+			51,
+			108,
+			93
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1528,
-			1866,
-			36,
-			29
+			2979,
+			2403,
+			69,
+			56
 		},
 		alias = {
 			"tusked_brawler_0131"
 		}
 	},
 	tusked_brawler_0132 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			11,
-			25,
-			53,
-			45
+			23,
+			50,
+			108,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1528,
-			1830,
-			36,
-			30
+			2829,
+			2403,
+			69,
+			58
 		},
 		alias = {
 			"tusked_brawler_0133"
 		}
 	},
 	tusked_brawler_0134 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			11,
-			25,
-			53,
-			46
+			23,
+			51,
+			108,
+			93
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1528,
-			1901,
-			36,
-			29
+			3054,
+			2403,
+			69,
+			56
 		},
 		alias = {
 			"tusked_brawler_0135"
 		}
 	},
 	tusked_brawler_0136 = {
-		a_name = "go_enemies_sea_of_trees-1.png",
+		a_name = "go_enemies_sea_of_trees-1.dds",
 		size = {
-			100,
-			100
+			200,
+			200
 		},
 		trim = {
-			11,
-			25,
-			53,
-			46
+			23,
+			51,
+			108,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			4096
 		},
 		f_quad = {
-			1528,
-			1936,
-			36,
-			29
+			2904,
+			2403,
+			69,
+			57
 		},
 		alias = {
 			"tusked_brawler_0137",
@@ -30034,7 +30034,7 @@ local a = {
 }
 
 for k, v in pairs(a) do
-	local rate = 45 / 32
+	local rate = 32 / 45
 	a[k]["size"][1] = math.ceil(a[k]["size"][1]*rate)
 	a[k]["size"][2] = math.ceil(a[k]["size"][2]*rate)
 

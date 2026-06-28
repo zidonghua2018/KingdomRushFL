@@ -4611,7 +4611,7 @@ local a = {
 		},
 		alias = {}
 	},
-	UnderwaterParticle = {
+	Underwater_Particle = {
 		a_name = "go_stage122-1.dds",
 		size = {
 			14,
@@ -4635,7 +4635,7 @@ local a = {
 		},
 		alias = {}
 	},
-	UnderwaterParticle2 = {
+	Underwater_Particle2 = {
 		a_name = "go_stage122-1.dds",
 		size = {
 			28,

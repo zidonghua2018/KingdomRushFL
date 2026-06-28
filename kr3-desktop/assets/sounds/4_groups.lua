@@ -104,6 +104,13 @@ return{
             "kr4_hero_orc_taunt_1.ogg",
             "kr4_hero_asra_taunt_1.ogg",
             "kr4_hero_oloch_taunt_1.ogg",
+            "kr4_hero_tramin_taunt_1.ogg",
+            "kr4_hero_jigou_taunt_1.ogg",
+            "kr4_hero_mortemis_taunt_1.ogg",
+            "kr4_hero_margosa_taunt_1.ogg",
+            "kr4_hero_naga_taunt_1.ogg",
+            "kr4_hero_mammoth_taunt_1.ogg",
+            "kr_voice_isbet_taunt01_d.ogg",
         }
     },
     tower_twilight_elves_barrack = {
@@ -447,6 +454,50 @@ return{
         "kr4_hero_beresad_attack_shot.ogg",
 		}
 	},
+	hero_mammoth = {
+		files = {
+			"kr4_hero_mammoth_taunt_1.ogg",
+			"kr4_hero_mammoth_taunt_2.ogg",
+			"kr4_hero_mammoth_taunt_3.ogg",
+			"kr4_hero_mammoth_taunt_4.ogg",
+			"kr4_hero_mammoth_taunt_death.ogg",
+			"kr4_hero_mammoth_ancestral_force_impact.ogg",
+			"kr4_hero_mammoth_combat_frenzy_on.ogg",
+			"kr4_hero_mammoth_combat_frenzy_off.ogg",
+			"kr4_hero_mammoth_whirlwind.ogg",
+			"kr4_hero_mammoth_primal_terror.ogg",
+			"kr4_hero_mammoth_legacy.ogg"
+		}
+	},
+	hero_isfet = {
+		files = {
+			"kr_voice_isbet_taunt01_d.ogg",
+			"kr_voice_isbet_taunt02_c.ogg",
+			"kr_voice_isbet_taunt03_c.ogg",
+			"kr_voice_isbet_taunt04_a.ogg",
+			"kr4_sfx_hero_isfet_death_v2.ogg",
+			"kr4_sfx_hero_isfet_polymorph_spell_v2.ogg",
+			"kr4_sfx_hero_isfet_polymorph_impact_v2.ogg",
+			"kr4_sfx_hero_isfet_polymorph_frogOnly_v1.ogg",
+			"kr4_sfx_hero_isfet_fireandicerain-cast_v1.ogg",
+			"kr4_sfx_hero_isfet_fire-projectile_var1_v1.ogg",
+			"kr4_sfx_hero_isfet_fire-projectile_var2_v1.ogg",
+			"kr4_sfx_hero_isfet_fire-projectile_var3_v1.ogg",
+			"kr4_sfx_hero_isfet_ice-projectile_var1_v1.ogg",
+			"kr4_sfx_hero_isfet_ice-projectile_var2_v1.ogg",
+			"kr4_sfx_hero_isfet_ice-projectile_var3_v1.ogg",
+			"kr4_sfx_hero_isfet_swarm_v2.ogg",
+			"kr4_sfx_hero_isfet_pool_of_lava_v1.ogg",
+			"kr4_sfx_hero_isfet_ultimate_v1.ogg",
+			"kr4_hero_mortemis_rotten.ogg",
+			"kr4_power_party_sarcophagus_mummymoan1.ogg",
+			"kr4_power_party_sarcophagus_mummymoan2.ogg",
+			"kr4_power_party_sarcophagus_mummymoan3.ogg",
+			"kr4_power_party_sarcophagus_mummymoan4.ogg",
+			"kr4_ember_lords_mage_attack.ogg",
+			"kr4_bomb_hit.ogg",
+		}
+	},
     hero_jack_o_lantern = {
         files = {
 			"kr4_hero_jacko_taunt_1.ogg",
@@ -579,6 +630,112 @@ return{
             "kr4_ember_lords_mage_attack.ogg",
         }
     },
+    hero_tramin = {
+        files = {
+            "kr4_hero_tramin_barrage.ogg",
+            "kr4_hero_tramin_flash.ogg",
+            "kr4_hero_tramin_giganticbomb_boxdrop.ogg",
+            "kr4_hero_tramin_jump.ogg",
+            "kr4_hero_tramin_land.ogg",
+            "kr4_hero_tramin_nitro_drink.ogg",
+            "kr4_hero_tramin_taunt_1.ogg",
+            "kr4_hero_tramin_taunt_2.ogg",
+            "kr4_hero_tramin_taunt_3.ogg",
+            "kr4_hero_tramin_taunt_4.ogg",
+            "kr4_hero_tramin_taunt_death.ogg",
+        }
+    },
+    hero_tramin_seventh = {
+        files = {
+            "kr4_hero_tramin_barrage.ogg",
+            "kr4_hero_tramin_flash.ogg",
+            "kr4_hero_tramin_giganticbomb_boxdrop.ogg",
+            "kr4_hero_tramin_jump.ogg",
+            "kr4_hero_tramin_land.ogg",
+            "kr4_hero_tramin_nitro_drink.ogg",
+            "kr4_hero_tramin_taunt_1.ogg",
+            "kr4_hero_tramin_taunt_2.ogg",
+            "kr4_hero_tramin_taunt_3.ogg",
+            "kr4_hero_tramin_taunt_4.ogg",
+            "kr4_hero_tramin_taunt_death.ogg",
+            "kra_sfx_heroes_onagro_deathFromAbove_cast_v1.ogg",
+            "kra_sfx_heroes_onagro_deathFromAbove_attack_shot_var1_v1.ogg",
+			"kra_sfx_heroes_onagro_deathFromAbove_attack_shot_var2_v1.ogg",
+			"kra_sfx_heroes_onagro_deathFromAbove_attack_shot_var3_v1.ogg",
+            "kra_sfx_heroes_onagro_deathFromAbove_attack_explosion_var1_v1.ogg",
+			"kra_sfx_heroes_onagro_deathFromAbove_attack_explosion_var2_v1.ogg",
+			"kra_sfx_heroes_onagro_deathFromAbove_attack_explosion_var3_v1.ogg",
+        }
+    },
+    hero_jigou = {
+        files = {
+            "kr4_hero_jigou_breath.ogg",
+            "kr4_hero_jigou_earthshake.ogg",
+            "kr4_hero_jigou_glacial.ogg",
+            "kr4_hero_jigou_iceland.ogg",
+            "kr4_hero_jigou_icezone.ogg",
+            "kr4_hero_jigou_taunt_1.ogg",
+            "kr4_hero_jigou_taunt_2.ogg",
+            "kr4_hero_jigou_taunt_3.ogg",
+            "kr4_hero_jigou_taunt_4.ogg",
+            "kr4_hero_jigou_taunt_death.ogg"
+        }
+    },
+    hero_mortemis = {
+        files = {
+            "kr4_hero_mortemis_bodyguard.ogg",
+            "kr4_hero_mortemis_call.ogg",
+            "kr4_hero_mortemis_rotten.ogg",
+            "kr4_hero_mortemis_taunt_1.ogg",
+            "kr4_hero_mortemis_taunt_2.ogg",
+            "kr4_hero_mortemis_taunt_3.ogg",
+            "kr4_hero_mortemis_taunt_4.ogg",
+            "kr4_hero_mortemis_taunt_death.ogg",
+        }
+    },
+    hero_margosa = {
+        files = {
+            "kr4_hero_margosa_ancientform.ogg",
+            "kr4_hero_margosa_batfamiliar.ogg",
+            "kr4_hero_margosa_darkcall.ogg",
+            "kr4_hero_margosa_taunt_1.ogg",
+            "kr4_hero_margosa_taunt_2.ogg",
+            "kr4_hero_margosa_taunt_3.ogg",
+            "kr4_hero_margosa_taunt_4.ogg",
+            "kr4_hero_margosa_taunt_death.ogg",
+        }
+    },
+    hero_naga = {
+        files = {
+            "kr4_hero_naga_taunt_1.ogg",
+            "kr4_hero_naga_taunt_2.ogg",
+            "kr4_hero_naga_taunt_3.ogg", 
+            "kr4_hero_naga_taunt_4.ogg",
+            "kr4_hero_naga_taunt_death.ogg",
+            "kr4_hero_junpai_banner_regeneration.ogg",
+            "kr4_hero_junpai_banner-impact.ogg",
+            "kr4_hero_junpai_kraken-loop-start.ogg",
+            "kr4_hero_junpai_kraken-loop.ogg",
+            "kr4_hero_junpai_tridenthit.ogg",
+            "kr4_hero_junpai_ultimate-loop-start.ogg",
+            "kr4_hero_junpai_ultimate-loop.ogg",
+        }
+    },
+    enemy_sapos = {
+        files = {
+            "kr4_frog_chaser_jump.ogg",
+            "kr4_frog_erudite_death.ogg",
+            "kr4_frog_erudite_shot.ogg",
+            "kr4_frog_infuser_crystal_blockedtower-loop-end.ogg",
+            "kr4_frog_infuser_crystal_blockedtower-loop.ogg",
+            "kr4_frog_infuser_crystal_bolt-loopstart.ogg",
+            "kr4_frog_infuser_crystal_charged.ogg",
+            "kr4_frog_infuser_crystalcharge-loop-end.ogg",
+            "kr4_frog_infuser_crystalcharge-loop-start.ogg",
+            "kr4_frog_infuser_crystalcharge-loop.ogg",
+            "kr4_frog_infuser_shield-complete.ogg",
+        }
+    },
     sounds_stage150 = {
 		sounds = {
 			"MusicBattlePrep_150",
@@ -595,6 +752,24 @@ return{
 		sounds = {
 			"MusicBattlePrep_152",
 			"MusicBattle_152",
+		}
+	},
+    sounds_stage167 = {
+		sounds = {
+			"MusicBattlePrep_167",
+			"MusicBattle_167",
+		}
+	},
+    sounds_stage168 = {
+		sounds = {
+			"MusicBattlePrep_168",
+			"MusicBattle_168",
+		}
+	},
+    sounds_stage169 = {
+		sounds = {
+			"MusicBattlePrep_169",
+			"MusicBattle_169",
 		}
 	},
     sounds_stage176 = {

@@ -1,4 +1,74 @@
 local a = {
+---旧版维兹南
+	eb_veznan_soul_drain = {
+		prefix = "boss_veznan",
+		frames = {
+		186,
+		187,
+		188,
+		189,
+		190,
+		191,
+		192,
+		193,
+		194,
+		195,
+		196,
+		197,
+		198,
+		199,
+		200,
+		201,
+		202,
+		203,
+		204,
+		205,
+		206,
+		196,
+		197,
+		198,
+		199,
+		200,
+		201,
+		202,
+		203,
+		204,
+		205,
+		206,
+		207,
+		208,
+		195,
+		194,
+		193,
+		192,
+		191,
+		190,
+		189,
+		188,
+		187,
+		186
+		}
+	},	
+	decal_veznan_soul_idle = {
+		prefix = "boss_veznan_soul",
+		to = 19,
+		from = 11
+	},
+	decal_veznan_soul_flying = {
+		prefix = "boss_veznan_soul",
+		to = 19,
+		from = 11
+	},
+	decal_veznan_soul_hit = {
+		prefix = "boss_veznan_soul",
+		to = 10,
+		from = 1
+	},
+	decal_veznan_soul_hit_idle = {
+		prefix = "boss_veznan_soul",
+		to = 10,
+		from = 1
+	},	
 ---海盗炮
 	pirate_cannon_1_idle = {
 		prefix = "pirate_cannon_1",

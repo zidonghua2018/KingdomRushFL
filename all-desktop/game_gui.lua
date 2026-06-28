@@ -392,6 +392,21 @@ function game_gui:init(w, h, game)
 
 	tower_range_upgrade.hidden = true
 
+	--英雄距离显示
+
+	if screen_map.user_data.true_melee_range == nil then
+		screen_map.user_data.true_melee_range = false
+	end
+
+	local meleerange = RangeCircle:new("rally_circle")
+
+    meleerange.hidden = true
+
+    local rangedrange = RangeCircle:new("range_circle")
+
+    rangedrange.hidden = true
+
+	--
 	local point_confirm = KImageView:new("confirm_feedback_0001")
 
 	point_confirm.animation = {
@@ -501,16 +516,18 @@ function game_gui:init(w, h, game)
 	local tower_menu_json = map_data.tower_menu_json
 	local tower_random_json = map_data.tower_random_json
 	local tower3_menu_json = map_data.tower3_menu_json
+	local tower123_menu_json = tower_menus.holder_123
 	--确定总页数
 	local rank = 2
-	if user_data.liuhui.use3tower ~= nil and user_data.liuhui.use3tower == false then
+	--if user_data.liuhui.use3tower ~= nil and user_data.liuhui.use3tower == false then
+	if (user_data.liuhui.use3tower ~= nil and user_data.liuhui.use3tower_count == 2) or (user_data.liuhui.use3tower ~= nil and user_data.liuhui.use3tower_count == 1) then
 		table.remove(tower_menus["holder"][1]["pages"], 1)
-		rank = 1
+		rank = 1	
 	elseif user_data.liuhui.rand_tower ~= nil and user_data.liuhui.rand_tower > 0 then
 		table.remove(tower_menus["holder"][1]["pages"], 1)
 		rank = 1
 	else
-		tower_menus["holder"][1]["pages"][1] = tower3_menu_json[1]
+		tower_menus["holder"][1]["pages"][1] = tower123_menu_json[1]
 		if #tower_menus["holder"][1]["pages"] == 1 then
 			local empty_table = {}
 			table.insert(tower_menus["holder"][1]["pages"], empty_table)
@@ -545,19 +562,23 @@ function game_gui:init(w, h, game)
 		end
 	else
 		tower_menus["holder"][1]["pages"][rank] = {}
-		if user_data.tower_pick < 6 then
-			for i = 1, user_data.tower_pick do
-				table.insert(tower_menus["holder"][1]["pages"][rank], tower_menu_json[selected_holders[i]])
-				tower_menus["holder"][1]["pages"][rank][i]["place"] = i
+		if user_data.liuhui.use3tower_count == 1 then
+            tower_menus["holder"][1]["pages"][rank] = tower123_menu_json[1]
+		else 		
+			if user_data.tower_pick < 6 then
+				for i = 1, user_data.tower_pick do
+					table.insert(tower_menus["holder"][1]["pages"][rank], tower_menu_json[selected_holders[i]])
+					tower_menus["holder"][1]["pages"][rank][i]["place"] = i
+				end
+			else
+				local place_list = {1,2,3,4,11,12,5,9,13,19,15,21}
+				local rank_minus = 0
+				for i = 1, user_data.tower_pick do
+					table.insert(tower_menus["holder"][1]["pages"][rank], tower_menu_json[selected_holders[i]])
+					tower_menus["holder"][1]["pages"][rank][i]["place"] = place_list[i]
+				end
 			end
-		else
-			local place_list = {1,2,3,4,11,12,5,9,13,19,15,21}
-			local rank_minus = 0
-			for i = 1, user_data.tower_pick do
-				table.insert(tower_menus["holder"][1]["pages"][rank], tower_menu_json[selected_holders[i]])
-				tower_menus["holder"][1]["pages"][rank][i]["place"] = place_list[i]
-			end
-		end
+		end	
 	end
 
 	--确定作弊按钮
@@ -568,6 +589,9 @@ function game_gui:init(w, h, game)
 		if (user_data.liuhui.cheat or user_data.liuhui.cheathero) and user_data.tower_pick >= 11 and (screen_map.user_data.liuhui.rand_tower == nil or screen_map.user_data.liuhui.rand_tower == 0) then
 			tower_menus["holder"][1]["pages"][rank][cheat_rank]["place"] = 14
 		end
+		if (user_data.liuhui.use3tower_count == 1) and (screen_map.user_data.liuhui.rand_tower == nil or screen_map.user_data.liuhui.rand_tower == 0)  then
+			tower_menus["holder"][1]["pages"][rank][cheat_rank]["place"] = 18
+		end		
 		if screen_map.user_data.liuhui.rand_tower and screen_map.user_data.liuhui.rand_tower >= 3 and screen_map.user_data.liuhui.rand_tower_mode == 4 then
 			tower_menus["holder"][1]["pages"][rank][cheat_rank]["place"] = 14
 		end
@@ -580,6 +604,9 @@ function game_gui:init(w, h, game)
 		if (user_data.liuhui.cheat5 or user_data.liuhui.cheat5_dragon) and user_data.tower_pick == 12 and (screen_map.user_data.liuhui.rand_tower == nil or screen_map.user_data.liuhui.rand_tower == 0) then
 			tower_menus["holder"][1]["pages"][rank][cheat5_rank]["place"] = 20
 		end
+		if (user_data.liuhui.use3tower_count == 1) and (screen_map.user_data.liuhui.rand_tower == nil or screen_map.user_data.liuhui.rand_tower == 0) then
+			tower_menus["holder"][1]["pages"][rank][cheat5_rank]["place"] = 24
+		end		
 		if screen_map.user_data.liuhui.rand_tower and screen_map.user_data.liuhui.rand_tower >= 3 and screen_map.user_data.liuhui.rand_tower_mode == 4 then
 			tower_menus["holder"][1]["pages"][rank][cheat5_rank]["place"] = 20
 		end
@@ -656,6 +683,10 @@ function game_gui:init(w, h, game)
 	layer_gui_game:add_child(rallyrange)
 	layer_gui_game:add_child(tower_range)
 	layer_gui_game:add_child(tower_range_upgrade)
+	--英雄距离显示	
+	layer_gui_game:add_child(meleerange)
+    layer_gui_game:add_child(rangedrange)
+	--	
 	layer_gui_game:add_child(towertooltip)
 	layer_gui_game:add_child(towermenu)
 	layer_gui_game:add_child(incoming_tooltip)
@@ -688,6 +719,10 @@ function game_gui:init(w, h, game)
 	self.rallyrange = rallyrange
 	self.tower_range = tower_range
 	self.tower_range_upgrade = tower_range_upgrade
+	--英雄距离显示
+	self.melee_range = meleerange
+    self.ranged_range = rangedrange
+	--	
 	self.point_confirm = point_confirm
 	self.rallyflag = rallyflag
 	self.hud_bottom = hud_bottom
@@ -767,6 +802,23 @@ end
 
 function game_gui:update(dt)
 	timer:update(dt)
+	--英雄距离显示	
+	local e = game_gui.selected_entity
+	local a = screen_map.user_data.true_melee_range
+    if e and a then
+        if e.melee and e.melee.range then
+            local ux, uy = game_gui:g2u(e.pos)
+            game_gui:show_melee_range(ux, uy, e.melee.range)
+        end
+        if e.ranged and e.ranged.attacks[1] and e.ranged.attacks[1].max_range and not e.ranged.attacks[1].disabled then
+            local ux, uy = game_gui:g2u(e.pos)
+            game_gui:show_ranged_range(ux, uy, e.ranged.attacks[1].max_range)
+        elseif e.timed_attacks and e.timed_attacks.list[1] and e.timed_attacks.list[1].max_range and not e.timed_attacks.list[1].disabled then
+            local ux, uy = game_gui:g2u(e.pos)
+            game_gui:show_ranged_range(ux, uy, e.timed_attacks.list[1].max_range)
+        end
+    end
+	--	
 	self.window:update(dt)
 
 	local st = game_gui.swap_entity
@@ -983,7 +1035,7 @@ function game_gui:keypressed(key, isrepeat)
 		self.power_2:toggle_selection()
 	elseif IS_KR3 and key == ks.pow_3 and not self.power_3:is_disabled() then
 		self.power_3:toggle_selection()
-	--[[
+	
 	elseif key == KEYPRESS_HERO_MAIN or key == ks.hero_1 then
 		if self.heroes and self.heroes[1] then
 			self.heroes[1]:on_click(1, 0, 0)
@@ -992,7 +1044,7 @@ function game_gui:keypressed(key, isrepeat)
 		if self.heroes and self.heroes[2] then
 			self.heroes[2]:on_click(1, 0, 0)
 		end
-		]]--
+		--[[
 	elseif key == ks.hero_1 then
 		if self.heroes and self.heroes[1] then
 			self.heroes[1]:on_click(1, 0, 0)
@@ -1013,6 +1065,7 @@ function game_gui:keypressed(key, isrepeat)
 		else
 			self.heroes_space_state_machine = 0
 		end 
+	]]--
 	elseif key == ks.hero_3 then
 		local list = LU.list_entities(self.game.store.entities, "hero_durax_clone")
 
@@ -1192,6 +1245,37 @@ function game_gui:hide_tower_ranges()
 	self.tower_range_upgrade.hidden = true
 	self.tower_range_upgrade.range_shown = nil
 end
+
+--英雄距离显示
+function game_gui:show_melee_range(x, y, range)
+    local r = self.melee_range
+
+    r.range_shown = range
+    r.pos.x, r.pos.y = x, y
+    r.scale.x = range * self.game.game_scale / (r.actual_radius.x * self.gui_scale)
+    r.scale.y = range * self.game.game_scale * ASPECT / (r.actual_radius.y * self.gui_scale)
+    r.hidden = false
+end
+
+function game_gui:show_ranged_range(x, y, range)
+    local r = self.ranged_range
+
+    r.range_shown = range
+    r.pos.x, r.pos.y = x, y
+    r.scale.x = range * self.game.game_scale / (r.actual_radius.x * self.gui_scale)
+    r.scale.y = range * self.game.game_scale * ASPECT / (r.actual_radius.y * self.gui_scale)
+    r.hidden = false
+end
+function game_gui:hide_melee_range()
+    self.melee_range.hidden = true
+    self.melee_range.range_shown = nil
+end
+
+function game_gui:hide_ranged_range()
+    self.ranged_range.hidden = true
+    self.ranged_range.range_shown = nil
+end
+--
 
 function game_gui:show_invalid_point_cross(x, y)
 	self.mouse_pointer:show_cross()
@@ -1451,7 +1535,10 @@ function game_gui:deselect_entity()
 	if self.selected_entity_marker then
 		self.selected_entity_marker.done = true
 	end
-
+	--英雄距离显示
+	self:hide_melee_range()
+    self:hide_ranged_range()
+	--
 	if self.mode == GUI_MODE_SWAP_TOWER then
 		game_gui:hide_ghost_hover()
 	end
@@ -2962,8 +3049,8 @@ function Power2Button:fire(wx, wy)
 		e.pos.x, e.pos.y = wx, wy
 		Power1Button.super.fire(self, wx, wy)
 		game_gui.game.simulation:insert_entity(e)
-	elseif level_idx <= 100 or level_idx >= 160 then
-		if screen_map.reinforcement_count and screen_map.reinforcement_count ~= 0 then
+	elseif level_idx <= 100 or level_idx >= 149 then
+		if screen_map.user_data.reinforcement_count and screen_map.user_data.reinforcement_count ~= 0 then
 			local e = E:create_entity(re_str .. i)
 	
 			e.pos.x = wx
@@ -3019,6 +3106,28 @@ function Power2Button:fire(wx, wy)
 		e.pos.y = wy
 
 		game_gui.game.simulation:insert_entity(e)
+
+		if level_idx == 140 and (game_gui.game.store.level_mode == GAME_MODE_CAMPAIGN and game_gui.game.store.wave_group_number >= 15) then
+
+			local entity_string = "soldier_dragon_warden_warrior_reinforcement"
+
+			if user_data.liuhui.reinforcement_5 ~= "dark" then
+				entity_string = "soldier_warden_stage_40_reinforcement"
+			end
+			
+			local e = E:create_entity(entity_string)
+			e.pos.x, e.pos.y = wx - 30, wy - 20
+			e.nav_rally.center = V.v(wx, wy)
+			e.nav_rally.pos = V.vclone(e.pos)
+			game_gui.game.simulation:insert_entity(e)
+			
+
+			local e = E:create_entity(entity_string)
+			e.pos.x, e.pos.y = wx - 30, wy + 20
+			e.nav_rally.center = V.v(wx, wy)
+			e.nav_rally.pos = V.vclone(e.pos)
+			game_gui.game.simulation:insert_entity(e)
+		end
 	end
 
 	--[[
@@ -3590,22 +3699,25 @@ function InfoBar:initialize()
 	}
 ]]--
 ----本段代码来自DOVE版
-    stat_labels[STATS_TYPE_TOWER_BARRACK] = {{"label", "l_hp", "base_info_icons_0009", 0.80 * s_4},
-                                       {"label", "l_damage", "base_info_icons_0001", 0.80 * s_4},
-                                       {"label", "l_ranged_damage", "base_info_icons_0001", 0.80 * s_4},
-                                       {"label", "l_armor", "base_info_icons_0003", 0.50 * s_4},
-                                       {"label", "l_magic_armor", "base_info_icons_0004", 0.50 * s_4},
-                                       {"label", "l_respawn", "base_info_icons_0007", 0.60 * s_4}}	
+    stat_labels[STATS_TYPE_TOWER_BARRACK] = {{"label", "l_hp", "base_info_icons_0009", 2 * s_12},
+                                       {"label", "l_damage", "base_info_icons_0001", 2.5 * s_12},
+                                       {"label", "l_ranged_damage", "base_info_icons_0001", 2.5 * s_12},
+                                       {"label", "l_armor", "base_info_icons_0003", 3 * s_12},
+                                       {"label", "l_magic_armor", "base_info_icons_0004", 3 * s_12},
+									   {"label","l_dodge","base_info_icons_0021",1.8 * s_12},								   
+                                       {"label", "l_respawn", "base_info_icons_0007", 2 * s_12}}	
     stat_labels[STATS_TYPE_SOLDIER] = {{"bar", "b_hp", "base_info_bar_bg", "base_info_bar", 3.3 * s_12},
                                        {"label", "l_hp", nil, 3.3 * s_12, "center", true, v(0, CJK(1, -2, 3, -1))},
-                                       {"label", "l_damage", "base_info_icons_0001", 2.2 * s_12},
-                                       {"label", "l_ranged_damage", "base_info_icons_0001", 2.2 * s_12},
-                                       {"label", "l_armor", "base_info_icons_0003", 1.4 * s_12},
-                                       {"label", "l_magic_armor", "base_info_icons_0004", 1.4 * s_12},
-                                       {"label", "l_respawn", "base_info_icons_0007", 1.5 * s_12}}
+                                       {"label", "l_damage", "base_info_icons_0001", 2.5 * s_12},
+                                       {"label", "l_ranged_damage", "base_info_icons_0001", 2.5 * s_12},
+                                       {"label", "l_armor", "base_info_icons_0003", 3 * s_12},
+                                       {"label", "l_magic_armor", "base_info_icons_0004", 3 * s_12},
+									   {"label","l_dodge","base_info_icons_0021",1.8 * s_12},
+                                       {"label", "l_respawn", "base_info_icons_0007", 2 * s_12}}
 
 	stat_labels[STATS_TYPE_ENEMY] = table.deepclone(stat_labels[STATS_TYPE_SOLDIER])
-    stat_labels[STATS_TYPE_ENEMY][7] = {"label", "l_lives", "base_info_icons_0008", 1.5 * s_9}									   	
+    stat_labels[STATS_TYPE_ENEMY][8] = {"label", "l_lives", "base_info_icons_0008", 1.5 * s_9}	
+--[[									   	
 	stat_labels[STATS_TYPE_TOWER] = {
 		{
 			"label",
@@ -3640,6 +3752,16 @@ function InfoBar:initialize()
 			s_2
 		}
 	}
+]]--
+	stat_labels[STATS_TYPE_TOWER] = {
+		{"label","l_damage","base_info_icons_0001",s_3},
+		{"label","l_range","base_info_icons_0005",s_3},
+		{"label","l_cooldown","base_info_icons_0006",s_3}
+	}
+	stat_labels[STATS_TYPE_TOWER_NO_RANGE] = {
+		{"label","l_damage","base_info_icons_0001",s_2},
+		{"label","l_cooldown","base_info_icons_0006",s_2}
+}
 	stat_labels[STATS_TYPE_TOWER_MAGE] = table.deepclone(stat_labels[STATS_TYPE_TOWER])
 	stat_labels[STATS_TYPE_TOWER_MAGE][1][3] = "base_info_icons_0002"
 	stat_labels[STATS_TYPE_TEXT] = {
@@ -3870,7 +3992,11 @@ function InfoBar:update_stats()
     if stats.damage_type and stats.yes_melee and band(stats.damage_type, DAMAGE_ELECTRICAL) ~= 0 then
         stats.damage_icon = "meleeelectrical"
     end	
-
+    if stats.type == STATS_TYPE_TOWER or stats.type == STATS_TYPE_TOWER_MAGE or stats.type == STATS_TYPE_TOWER_NO_RANGE then		
+    	if stats.damage_type and band(stats.damage_type, DAMAGE_PHYSICAL) ~= 0 then
+    	    stats.damage_icon = "arrow"
+    	end		
+	end	
 	local damage_icon = ddi[stats.damage_icon] or ddi[band(DAMAGE_BASE_TYPES, stats.damage_type or 0)] or ddi.default
 ----本段代码来自DOVE版
     if stats.ranged_damage_type and not stats.no_ranged and band(stats.ranged_damage_type, DAMAGE_PHYSICAL) ~= 0 then
@@ -3911,9 +4037,11 @@ function InfoBar:update_stats()
 		sv.l_ranged_damage.text = GU.damage_value_desc(stats.ranged_damage_min, stats.ranged_damage_max)
         sv.l_ranged_damage:set_image(ranged_damage_icon, V.v(sv.l_ranged_damage.size.x, sv.l_ranged_damage.size.y))
 
-		sv.l_armor.text = GU.armor_value_desc(stats.armor)
-		sv.l_magic_armor.text = GU.armor_value_desc(stats.magic_armor)
-
+--		sv.l_armor.text = GU.armor_value_desc(stats.armor)
+		sv.l_armor.text = stats.armor and string.format(_("%i%%"), stats.armor * 100) .. "" .. GU.armor_value_desc(stats.armor) or GU.armor_value_desc(stats.armor)
+		sv.l_magic_armor.text =  stats.magic_armor and string.format(_("%i%%"), stats.magic_armor * 100) .. "" .. GU.armor_value_desc(stats.magic_armor) or GU.armor_value_desc(stats.magic_armor)
+--		sv.l_magic_armor.text = GU.armor_value_desc(stats.magic_armor)
+		sv.l_dodge.text = stats.dodge and string.format(_("%i%%"), stats.dodge_chance * 100) or "-"
 		sv.l_respawn.text = stats.respawn and string.format(_("%i sec."), stats.respawn) or "-"	
 
 	elseif stats.type == STATS_TYPE_TOWER or stats.type == STATS_TYPE_TOWER_MAGE then
@@ -3921,14 +4049,14 @@ function InfoBar:update_stats()
 
 		sv.l_damage:set_image(damage_icon, V.v(sv.l_damage.size.x, sv.l_damage.size.y))
 
-		sv.l_range.text = GU.range_value_desc(stats.range)
-		sv.l_cooldown.text = GU.cooldown_value_desc(stats.cooldown)
+		sv.l_range.text = stats.range and string.format(_("%i"), stats.range * 2) .. " / " .. GU.range_value_desc(stats.range) or GU.range_value_desc(stats.range)
+		sv.l_cooldown.text = stats.cooldown and string.format(_("%s sec"), stats.cooldown * 1) .. " / " .. GU.cooldown_value_desc(stats.cooldown) or GU.cooldown_value_desc(stats.cooldown)
 	elseif stats.type == STATS_TYPE_TOWER_NO_RANGE then
 		sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
 
 		sv.l_damage:set_image(damage_icon, V.v(sv.l_damage.size.x, sv.l_damage.size.y))
 
-		sv.l_cooldown.text = GU.cooldown_value_desc(stats.cooldown)
+		sv.l_cooldown.text = stats.cooldown and string.format(_("%s sec"), stats.cooldown * 1) .. " / " .. GU.cooldown_value_desc(stats.cooldown) or GU.cooldown_value_desc(stats.cooldown)
 --[[		
 	elseif stats.type == STATS_TYPE_ENEMY then
 		sv.b_hp.bar.scale.x = stats.hp / stats.hp_max
@@ -4005,9 +4133,9 @@ function InfoBar:update_stats()
         sv.l_ranged_damage.text = GU.damage_value_desc(stats.ranged_damage_min, stats.ranged_damage_max)
         sv.l_ranged_damage:set_image(ranged_damage_icon, V.v(sv.l_ranged_damage.size.x, sv.l_ranged_damage.size.y))
 
-        sv.l_armor.text = GU.armor_value_desc(stats.armor)
-        sv.l_magic_armor.text = GU.armor_value_desc(stats.magic_armor)
-
+		sv.l_armor.text = stats.armor and string.format(_("%i%%"), stats.armor * 100) .. "" .. GU.armor_value_desc(stats.armor) or GU.armor_value_desc(stats.armor)
+		sv.l_magic_armor.text =  stats.magic_armor and string.format(_("%i%%"), stats.magic_armor * 100) .. "" .. GU.armor_value_desc(stats.magic_armor) or GU.armor_value_desc(stats.magic_armor)
+		sv.l_dodge.text = stats.dodge and string.format(_("%i%%"), stats.dodge_chance * 100) or "-"
         sv.l_lives.text = type(stats.lives) == "number" and stats.lives > 0 and stats.lives or "-"		
 	elseif stats.type == STATS_TYPE_SOLDIER then
 		sv.b_hp.bar.scale.x = stats.hp / stats.hp_max
@@ -4016,8 +4144,9 @@ function InfoBar:update_stats()
 		sv.l_damage:set_image(damage_icon, V.v(sv.l_damage.size.x, sv.l_damage.size.y))
         sv.l_ranged_damage.text = GU.damage_value_desc(stats.ranged_damage_min, stats.ranged_damage_max)
         sv.l_ranged_damage:set_image(ranged_damage_icon, V.v(sv.l_ranged_damage.size.x, sv.l_ranged_damage.size.y))
-        sv.l_armor.text = GU.armor_value_desc(stats.armor)
-        sv.l_magic_armor.text = GU.armor_value_desc(stats.magic_armor)
+		sv.l_armor.text = stats.armor and string.format(_("%i%%"), stats.armor * 100) .. "" .. GU.armor_value_desc(stats.armor) or GU.armor_value_desc(stats.armor)
+		sv.l_magic_armor.text =  stats.magic_armor and string.format(_("%i%%"), stats.magic_armor * 100) .. "" .. GU.armor_value_desc(stats.magic_armor) or GU.armor_value_desc(stats.magic_armor)
+		sv.l_dodge.text = stats.dodge and string.format(_("%i%%"), stats.dodge_chance * 100) or "-"
 		sv.l_respawn.text = stats.respawn and string.format(_("%i sec."), stats.respawn) or "-"		
 	elseif stats.type == STATS_TYPE_TEXT then
 		sv.l_desc.text = _(stats.desc)
@@ -4508,6 +4637,17 @@ function PauseView:initialize()
 	function b.on_click(this, button, x, y)
 		S:queue("GUIButtonCommon")
 		self:hide()
+	end
+	--英雄距离显示
+	b = GGOptionsButton:new(_("BUTTON_MELEE_RANGE"))
+	b.pos = V.v( 2 * mx + b.size.x - self.size.x / 2, y)
+
+	self:add_child(b)
+
+	function b.on_click(this, button, x, y)
+		S:queue("GUIButtonCommon")
+		screen_map.user_data.true_melee_range =  not screen_map.user_data.true_melee_range
+		storage:save_slot(screen_map.user_data)
 	end
 
 	local settings = storage:load_settings()
@@ -6988,10 +7128,10 @@ function PickView:rally_tower(x, y)
 			game_gui:hide_rally_range()
 			game_gui:deselect_entity()
 			return true
-		--else
-			--if U.is_inside_ellipse(v(lx, ly), rc, b.rally_range) then
-			--	print(string.format("%.4f, %.4f", lx, ly))
-			--end
+		else 
+			if U.is_inside_ellipse(v(lx, ly), rc, b.rally_range) then
+				--print(string.format("%.4f, %.4f", lx, ly))
+			end
 		end
 	end
 	game_gui:show_invalid_point_cross(x, y)
@@ -7001,6 +7141,8 @@ end
 function PickView:rally_hero(x, y)
 	local wx, wy = game_gui:u2g(v(x, y))
 	local e = game_gui.selected_entity
+
+	--print("rally hero 7044")
 
 	if (not e.nav_rally.requires_node_nearby or P:valid_node_nearby(wx, wy, nil, NF_RALLY)) and GR:cell_is_only(wx, wy, e.nav_grid.valid_terrains_dest) and (e.teleport and V.dist(wx, wy, e.pos.x, e.pos.y) > e.teleport.min_distance or e.nav_grid.ignore_waypoints or GR:find_waypoints(e.pos, e.nav_rally.pos, V.v(wx, wy), e.nav_grid.valid_terrains)) then
 		if not e.nav_grid.ignore_waypoints then
@@ -7016,9 +7158,14 @@ function PickView:rally_hero(x, y)
 		return true
 	end
 
+	local search_point = 200
+
 	local cx, cy = e.pos.x, e.pos.y
-	for it = 1, 199 do
-		local lx, ly = (cx * it + wx * (200-it))/ 200, (cy * it + wy * (200-it))/ 200
+	if game_gui.game.store.level_idx == 71 or game_gui.game.store.level_idx == 72 or (game_gui.game.store.level_idx >= 150 and game_gui.game.store.level_idx <= 200) then
+		search_point = 10
+	end
+	for it = 1, search_point - 1 do
+		local lx, ly = (cx * it + wx * (search_point-it))/ search_point, (cy * it + wy * (search_point-it))/ search_point
 		if (not e.nav_rally.requires_node_nearby or P:valid_node_nearby(lx, ly, nil, NF_RALLY)) and GR:cell_is_only(lx, ly, e.nav_grid.valid_terrains_dest) and (e.teleport and V.dist(lx, ly, e.pos.x, e.pos.y) > e.teleport.min_distance or e.nav_grid.ignore_waypoints or GR:find_waypoints(e.pos, e.nav_rally.pos, V.v(lx, ly), e.nav_grid.valid_terrains)) then
 			if not e.nav_grid.ignore_waypoints then
 				e.nav_grid.waypoints = GR:find_waypoints(e.pos, e.nav_rally.pos, V.v(lx, ly), e.nav_grid.valid_terrains)
@@ -7033,6 +7180,7 @@ function PickView:rally_hero(x, y)
 			return true
 		end
 	end
+	::label_7079_0::
 	game_gui:show_invalid_point_cross(x, y)
 	return false
 end
@@ -7174,7 +7322,12 @@ function TowerMenu:show()
 	end
 
 	local tm = tower_menus[entity.tower.type][entity.tower.level]
-
+---重生	
+	if entity.tower.page then
+		tm = tower_menus[entity.tower.type .. "_" .. entity.tower.page][1]
+	else
+		tm = tower_menus[entity.tower.type][entity.tower.level]
+	end
 	--改动
 	if tm.page then
 		tm.page = (tm.page % #tm.pages) + 1
@@ -7481,7 +7634,7 @@ function TowerMenuTooltip:show(entity, item)
 			self.damage_label:set_image("tooltip_icons_0007", V.v(self.damage_label.size.x, self.damage_label.size.y))
 
 			self.health_label.text = stats.hp_max
-			self.armor_label.text = GU.armor_value_desc(stats.armor)
+			self.armor_label.text = stats.armor and string.format(_("%i%%"), stats.armor * 100) .. "" .. GU.armor_value_desc(stats.armor) or GU.armor_value_desc(stats.armor)
 			self.damage_label.hidden = false
 			self.health_label.hidden = false
 			self.armor_label.hidden = false
@@ -7490,7 +7643,7 @@ function TowerMenuTooltip:show(entity, item)
 
 			self.damage_label:set_image(stats.type == STATS_TYPE_TOWER_MAGE and "tooltip_icons_0010" or "tooltip_icons_0007", V.v(self.damage_label.size.x, self.damage_label.size.y))
 
-			self.cooldown_label.text = GU.cooldown_value_desc(stats.cooldown)
+			self.cooldown_label.text =  stats.cooldown and string.format(_("%s sec"), stats.cooldown * 1) .. " / " .. GU.cooldown_value_desc(stats.cooldown) or GU.cooldown_value_desc(stats.cooldown)
 			self.damage_label.hidden = false
 			self.cooldown_label.hidden = false
 		end
@@ -7549,7 +7702,8 @@ function TowerMenuTooltip:show(entity, item)
 				self.desc.text = GU.balance_format(item.tt_desc, balance) or ""
 			end
 		end
-	elseif item.action == "tw_buy_attack" or item.action == "tw_unblock" or item.action == "tw_free_action" or item.action == "tw_overseer_recover" or item.action == "tw_repair" then
+---重生		
+	elseif item.action == "tw_buy_attack" or item.action == "tw_unblock" or item.action == "tw_free_action" or item.action == "tw_overseer_recover" or item.action == "tw_repair" or item.action == "tw_page" then
 		if item.tt_title then
 			self.title.text = item.tt_title
 		end
@@ -7685,7 +7839,8 @@ function TowerMenuButton:initialize(item, entity)
 		"tw_upgrade",
 		"tw_buy_soldier",
 		"tw_buy_attack",
-		"tw_repair"
+		"tw_repair",
+		"tw_page",
 	}, item.action) then
 		local bo = KImageView:new("main_icons_over")
 		bo.pos = v(math.floor(-0.5 * (bo.size.x - button.size.x)), math.floor(-0.5 * (bo.size.y - button.size.y)))
@@ -8212,6 +8367,11 @@ function TowerMenuButton:on_click()
 		else
 			game_gui:deselect_entity()
 		end
+---重生		
+	elseif item.action == "tw_page" then
+		entity.tower.page = item.action_arg
+
+		self.parent:show()		
 	end
 
 	if item.sounds and not inhibit_sounds then

@@ -9,7 +9,7 @@ GS.url_policy = "https://www.ironhidegames.com/PrivacyPolicy"
 GS.gameplay_tips_count = 84
 GS.early_wave_reward_per_second = 1--需要判断是不是5代关卡，是的话需要乘以1.8
 GS.early_wave_reward_per_second5 = 1.8
-GS.max_stars = 640
+GS.max_stars = 655
 GS.max_difficulty = DIFFICULTY_IMPOSSIBLE
 GS.difficulty_soldier_hp_max_factor = {
 	1.2,
@@ -43,8 +43,8 @@ GS.main_campaign_levels4 = 152
 GS.last_level = 22
 GS.last_level3 = 22
 GS.last_level2 = 44
-GS.last_level1 = 75---重生--72
-GS.last_level5 = 135
+GS.last_level1 = 76---重生--72
+GS.last_level5 = 141
 GS.last_level4 = 191
 GS.jnum1 = 44
 GS.max_level1 = 32
@@ -53,7 +53,7 @@ GS.max_level2 = 27
 GS.jnum3 = 0
 GS.max_level3 = 23
 GS.jnum5 = 100
-GS.max_level5 = 35
+GS.max_level5 = 41
 GS.jnum4 = 149
 GS.max_level4 = 42
 GS.endless_levels_count = 2
@@ -200,6 +200,10 @@ GS.level_ranges5 = {
 		131,
 		135
 	},
+	{
+		136,
+		141
+	},
 }
 GS.level_ranges4 = {
 	{
@@ -208,6 +212,7 @@ GS.level_ranges4 = {
 	},
 	{
 		167,
+		169
 	},
 	{
 		176,
@@ -1502,36 +1507,75 @@ GS.encyclopedia_enemies = {
 		always_shown = false,
 		name = "enemy_pumpkin_witch"
 	},
-	--4代
 	{
 		always_shown = false,
-		name = "enemy_human_woodcutter"
+		name = "enemy_basic_lava"
 	},
 	{
 		always_shown = false,
-		name = "enemy_human_worker"
+		name = "enemy_evolved_lava"
 	},
 	{
 		always_shown = false,
-		name = "enemy_kr4_ghost"
+		name = "enemy_alfa_lava"
 	},
 	{
 		always_shown = false,
-		name = "enemy_haunted_skeleton"
+		name = "enemy_basic_acid"
 	},
 	{
 		always_shown = false,
-		name = "enemy_corrosive_soul"
+		name = "enemy_evolved_acid"
 	},
 	{
 		always_shown = false,
-		name = "enemy_lich"
+		name = "enemy_alfa_acid"
 	},
 	{
 		always_shown = false,
-		name = "enemy_bone_carrier"
+		name = "enemy_basic_shadow"
 	},
-	---重生
+	{
+		always_shown = false,
+		name = "enemy_evolved_shadow"
+	},
+	{
+		always_shown = false,
+		name = "enemy_alfa_shadow"
+	},
+	{
+		always_shown = false,
+		name = "enemy_basic_storm"
+	},
+	{
+		always_shown = false,
+		name = "enemy_evolved_storm"
+	},
+	{
+		always_shown = false,
+		name = "enemy_alfa_storm"
+	},
+	{
+		always_shown = false,
+		name = "enemy_executioner_storm"
+	},
+	{
+		always_shown = false,
+		name = "boss_murglum"
+	},
+	{
+		always_shown = false,
+		name = "enemy_miniboss_stage_39"
+	},
+	{
+		always_shown = false,
+		name = "controller_stage_39_boss"
+	},
+	{
+		always_shown = false,
+		name = "controller_stage_40_boss"
+	},
+	--重生
 	{
 		name = "enemy_hobgoblin_small"
 	},
@@ -1565,11 +1609,90 @@ GS.encyclopedia_enemies = {
 	{
 		name = "enemy_goblin_platform"
 	},
-	---			
+	--4代
+	--主线1
+	{
+		always_shown = false,
+		name = "enemy_human_woodcutter"
+	},
+	{
+		always_shown = false,
+		name = "enemy_human_worker"
+	},
+	{
+		always_shown = false,
+		name = "enemy_bruiser"
+	},
+	{
+		always_shown = false,
+		name = "enemy_warhammer_guard"
+	},
+	{
+		always_shown = false,
+		name = "enemy_clockwork_spider"
+	},
+	{
+		always_shown = false,
+		name = "enemy_chomp_bot"
+	},
+	--青蛙
+	{
+		always_shown = false,
+		name = "enemy_chaser"
+	},
+	{
+		always_shown = false,
+		name = "enemy_warden"
+	},
+	{
+		always_shown = false,
+		name = "enemy_amphiptere"
+	},
+	{
+		always_shown = false,
+		name = "enemy_bullywags_golem"
+	},
+	{
+		always_shown = false,
+		name = "enemy_infuser"
+	},
+	{
+		always_shown = false,
+		name = "enemy_bullywags_channeler"
+	},
+	{
+		always_shown = false,
+		name = "enemy_bullywags_erudite"
+	},
+	{
+		always_shown = false,
+		name = "boss_anurian"
+	},
+	--鬼王
+	{
+		always_shown = false,
+		name = "enemy_kr4_ghost"
+	},
+	{
+		always_shown = false,
+		name = "enemy_haunted_skeleton"
+	},
+	{
+		always_shown = false,
+		name = "enemy_corrosive_soul"
+	},
+	{
+		always_shown = false,
+		name = "enemy_lich"
+	},
+	{
+		always_shown = false,
+		name = "enemy_bone_carrier"
+	},			
 }
 
 GS.towers_required_exoskeletons = {
-	[23] = {
+	[24] = {
 		"ignis_altar_lava_golem",
 		"ignis_altar_lvl1",
 		"ignis_altar_lvl2",

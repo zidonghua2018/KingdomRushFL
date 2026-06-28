@@ -15,6 +15,7 @@ local tt, b
 local scripts = require("game_scripts-1")
 local scripts3 = require("game_scripts")
 local scripts4 = require("game_scripts-40")
+local scripts_45 = require("game_scripts-45")
 
 require("templates")
 
@@ -103,6 +104,9 @@ if game and game.store and game.store.level and game.store.level.test_case and g
 end
 
 --本文件：使用rebbborn底层代码实现4代防御塔
+tt = E:register_t("tower_kr4", "tower")
+tt.tower.team = TEAM_DARK_ARMY
+
 ----------------------------------------------
 ------------------暗黑弓箭手-------------------
 ----------------------------------------------
@@ -120,7 +124,7 @@ tt.render.sprites[2].offset = v(0, 33)--v(0, 30)
 tt.render.sprites[3].offset.y = 62
 tt.render.sprites[4].offset.y = 62
 --1级黑弓
-tt = E.register_t(E, "tower_shadow_archer_lvl1", "tower")
+tt = E.register_t(E, "tower_shadow_archer_lvl1", "tower_kr4")
 E.add_comps(E, tt, "attacks")
 tt.info.i18n_key = "TOWER_DARK_ARMY_ARCHER_LEVEL1"
 tt.info.enc_icon = 18
@@ -462,6 +466,7 @@ tt.info.portrait = "gui4_bottom_info_image_towers_0009"
 tt.tower.type = "dark_knights"
 tt.tower.price = 110
 tt.tower.level = 1
+tt.tower.team = TEAM_DARK_ARMY
 tt.barrack.max_soldiers = 2
 tt.barrack.soldier_type = "dark_army_soldier_knight_lvl1"
 tt.barrack.rally_range = 159.5
@@ -1305,7 +1310,7 @@ tt.render.sprites[2].offset = v(0, 28)
 tt.render.sprites[3].offset.y = 62
 tt.render.sprites[4].offset.y = 62
 
-tt = E:register_t("tower_melting_furnace_lvl1", "tower")
+tt = E:register_t("tower_melting_furnace_lvl1", "tower_kr4")
 E:add_comps(tt, "attacks")
 tt.info.portrait = "gui4_bottom_info_image_towers_0007"
 tt.info.i18n_key = "TOWER_DARK_ARMY_MELTING_FURNACE_LEVEL1"
@@ -2018,6 +2023,7 @@ tt.info.fn = scripts4.tower_bone_flingers.get_info
 tt.tower.type = "bone_flingers"
 tt.tower.price = 180
 tt.tower.level = 4
+tt.tower.team = TEAM_DARK_ARMY
 tt.powers.skeleton = E.clone_c(E, "power")
 tt.powers.skeleton.price_base = 153--180
 tt.powers.skeleton.price_inc = 153--180
@@ -2472,6 +2478,7 @@ tt.info.i18n_key = "TOWER_WARMONGER_BARRACK_LEVEL4"
 tt.info.portrait = "gui4_bottom_info_image_towers_0001"
 tt.barrack.soldier_type = "soldier_orc_warrior_lvl4"
 tt.barrack.rally_range = 159.5
+tt.tower.team = TEAM_DARK_ARMY
 tt.powers.seal = E.clone_c(E, "power")
 tt.powers.seal.price_base = 102--120
 tt.powers.seal.price_inc = 102--120
@@ -2666,7 +2673,7 @@ tt.render.sprites[2].offset = v(0, 33)--v(0, 30)
 tt.render.sprites[3].offset.y = 62
 tt.render.sprites[4].offset.y = 62
 
-tt = E.register_t(E, "tower_orc_shaman_lvl4", "tower")
+tt = E.register_t(E, "tower_orc_shaman_lvl4", "tower_kr4")
 E.add_comps(E, tt, "attacks", "powers")
 tt.info.i18n_key = "TOWER_WARMONGER_MAGE_LEVEL4"
 tt.tower.type = "orc_shaman"
@@ -3040,7 +3047,7 @@ tt.render.sprites[2].offset = v(0, 45)--v(0, 30)
 tt.render.sprites[3].offset.y = 62
 tt.render.sprites[4].offset.y = 62
 
-tt = RT("tower_rocket_riders_lvl1", "tower")
+tt = RT("tower_rocket_riders_lvl1", "tower_kr4")
 
 AC(tt, "attacks", "powers")
 
@@ -3289,6 +3296,7 @@ tt.bullet.damage_min = 8
 tt.bullet.damage_radius = 54
 tt.bullet.flight_time = fts(25)
 tt.main_script.update = scripts4.bomb_kro.update
+tt.bullet.hit_payload = nil
 tt.bullet.hit_fx = "fx_explosion_fragment"
 tt.render.sprites[1].name = "warmongers_rocket_missile_lvl1_travel"
 tt.render.sprites[1].animated = true
@@ -3312,6 +3320,76 @@ tt = RT("bomb_rr_lvl4", "bomb_rr_lvl1")
 tt.bullet.damage_max = 114--104
 tt.bullet.damage_min = 81--74
 tt.render.sprites[1].name = "warmongers_rocket_missile_lvl4_travel"
+
+tt = RT("soldier_hover_rr", "soldier_militia")
+E:add_comps(tt, "nav_path", "tween")
+tt.hover = {}
+tt.hover.oni = 1
+tt.hover.ts = 0
+tt.hover.cooldown_min = 10
+tt.hover.cooldown_max = 10
+tt.hover.random_ni = 0
+tt.hover.random_subpath = true
+tt.tween.props[1].keys = {
+    {
+        0,
+		0
+	},
+	{
+        1,
+		255
+	}
+}
+tt.tween.disabled = true
+tt.fade_in = nil
+tt.fade_out = nil
+tt.main_script.update = scripts_45.soldier_hover.update
+
+tt = RT("bomb_rr_lvl1_payload", "soldier_hover_rr")
+E:add_comps(tt, "reinforcement")
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.health.hp_max = 1
+tt.health_bar.offset = v(0, 32)
+tt.unit.hit_offset = v(0, 16)
+tt.unit.head_offset = v(0, 29)
+tt.unit.mod_offset = v(0, 16)
+tt.unit.marker_offset = v(0, 0)
+tt.info.fn = scripts.soldier_reinforcement.get_info
+tt.info.portrait = "info_portraits_sc_0006"
+tt.info.i18n_key = "ENEMY_GOBLIN"
+tt.info.random_name_format = nil
+tt.info.random_name_count = nil
+tt.motion.max_speed = 30
+tt.render.sprites[1].anchor = v(0.5, anchor_y)
+tt.render.sprites[1].scale = v(1.4,1.4)
+tt.render.sprites[1].prefix = "goblin"
+tt.soldier.melee_slot_offset = v(16, 0)
+tt.melee.range = 75
+tt.melee.attacks[1].damage_min = 8
+tt.melee.attacks[1].damage_max = 14
+tt.melee.attacks[1].cooldown = 0.8
+tt.melee.attacks[1].hit_time = fts(8)
+tt.regen.health = 0
+tt.regen.cooldown = 2
+tt.reinforcement.duration = 20
+tt.ui.click_rect = r(-20, -5, 40, 28)
+tt.hover.cooldown_min = 5
+tt.hover.cooldown_max = 15
+tt.hover.random_ni = 6
+tt.fade_out = true
+tt.insert_delay = 1.2
+
+tt = RT("bomb_rr_lvl2_payload","bomb_rr_lvl1_payload")
+tt.melee.attacks[1].damage_min = 25
+tt.melee.attacks[1].damage_max = 36
+
+tt = RT("bomb_rr_lvl3_payload","bomb_rr_lvl1_payload")
+tt.melee.attacks[1].damage_min = 50
+tt.melee.attacks[1].damage_max = 74
+tt = RT("bomb_rr_lvl4_payload","bomb_rr_lvl1_payload")
+tt.melee.attacks[1].damage_min = 81
+tt.melee.attacks[1].damage_max = 114
 
 tt = RT("bomb_rr_nitro", "bomb")
 tt.bullet.damage_max = 0
@@ -3449,7 +3527,7 @@ tt.render.sprites[2].offset = v(0, 23)--v(0, 30)
 tt.render.sprites[3].offset.y = 62
 tt.render.sprites[4].offset.y = 62
 
-tt = E.register_t(E, "tower_grim_cemetery_lvl1", "tower")
+tt = E.register_t(E, "tower_grim_cemetery_lvl1", "tower_kr4")
 
 E.add_comps(E, tt, "attacks", "powers", "auras", "tween", "tower_upgrade_persistent_data")
 

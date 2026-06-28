@@ -10,10 +10,12 @@ package.loaded["game_templates-45e"] = nil
 package.loaded["game_templates-51"] = nil
 package.loaded["game_templates-55"] = nil
 package.loaded["game_templates-56"] = nil
+package.loaded["game_templates-57"] = nil
 package.loaded["game_templates_hero_boss"] = nil
 package.loaded["custom_templates_0"] = nil
 package.loaded["custom_templates_1"] = nil
 package.loaded["custom_templates_2"] = nil
+package.loaded["game_templates-v"] = nil
 --package.loaded["game_templates-4"] = nil
 
 local d3 = require("game_templates-3")
@@ -28,10 +30,12 @@ local d45e = require("game_templates-45e")
 local d51 = require("game_templates-51")
 local d55 = require("game_templates-55")
 local d56 = require("game_templates-56")
+local d57 = require("game_templates-57")
 local dc0 = require("custom_templates_0")
 local dc1 = require("custom_templates_1")
 local dc2 = require("custom_templates_2")
 local dhb = require("game_templates_hero_boss")
+local dhd = require("game_templates-v")
 --local d4 = require("game_templates-4")
 
 -- 拖拽功能，实体字段补充
@@ -64,7 +68,8 @@ if true then
         "soldier_ancient_guardian", "soldier_steam_troop",
         "soldier_s6_imperial_guard", "soldier_s6_imperial_guard_2",
         "soldier_imperial_guard", "soldier_tremor", "soldier_elf_kr1",
-        "soldier_ewok_re_1",
+        "soldier_ewok_re_1","tower_barrack_1_v","tower_barrack_2_v","tower_barrack_3_v",
+        "tower_redcap","tower_barrack_canibal",
     }
     for _, item in pairs(items) do
         local e = T(item)

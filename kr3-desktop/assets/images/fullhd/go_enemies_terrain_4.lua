@@ -1,1289 +1,1289 @@
-﻿-- chunkname: @./_assets/kr5-desktop/images/ipad/go_enemies_terrain_4.lua
+﻿-- chunkname: @./_assets/kr5-desktop/images/ipadhd_bc3/go_enemies_terrain_4.lua
 
 local a = {
 	armor_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			97,
-			55,
-			100,
-			98
+			195,
+			111,
+			201,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1970,
-			555,
-			57,
-			51
+			2454,
+			724,
+			112,
+			100
 		},
 		alias = {
 			"armor_0114"
 		}
 	},
 	armor_0002 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			97,
-			55,
-			100,
-			98
+			195,
+			111,
+			201,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			917,
-			57,
-			51
+			2572,
+			724,
+			112,
+			100
 		},
 		alias = {
 			"armor_0115"
 		}
 	},
 	armor_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			97,
-			55,
-			100,
-			98
+			196,
+			111,
+			201,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			974,
-			57,
-			51
+			3978,
+			724,
+			111,
+			100
 		},
 		alias = {
 			"armor_0116"
 		}
 	},
 	armor_0004 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			97,
-			55,
-			100,
-			98
+			196,
+			111,
+			202,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			1031,
-			57,
-			51
+			1628,
+			3122,
+			110,
+			100
 		},
 		alias = {
 			"armor_0117"
 		}
 	},
 	armor_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			97,
-			55,
-			100,
-			98
+			195,
+			111,
+			202,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			1088,
-			57,
-			51
+			1628,
+			879,
+			111,
+			100
 		},
 		alias = {
 			"armor_0118"
 		}
 	},
 	armor_0006 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			97,
-			55,
-			101,
-			98
+			195,
+			111,
+			202,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1126,
-			622,
-			56,
-			51
+			1628,
+			985,
+			111,
+			100
 		},
 		alias = {
 			"armor_0119"
 		}
 	},
 	armor_0007 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			98,
-			55,
-			101,
-			98
+			196,
+			110,
+			202,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1927,
-			622,
-			55,
-			51
+			1628,
+			3015,
+			110,
+			101
 		},
 		alias = {
 			"armor_0120"
 		}
 	},
 	armor_0008 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			98,
-			55,
-			100,
-			98
+			196,
+			110,
+			200,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1188,
-			622,
-			56,
-			51
+			2336,
+			724,
+			112,
+			101
 		},
 		alias = {
 			"armor_0121"
 		}
 	},
 	armor_0009 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			98,
-			55,
-			100,
-			98
+			197,
+			109,
+			200,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			622,
-			56,
-			51
+			3861,
+			724,
+			111,
+			102
 		},
 		alias = {}
 	},
 	armor_0010 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			98,
-			55,
-			100,
-			98
+			197,
+			109,
+			201,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1312,
-			622,
-			56,
-			51
+			1628,
+			2799,
+			110,
+			102
 		},
 		alias = {}
 	},
 	armor_0011 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			97,
-			54,
-			100,
-			98
+			195,
+			109,
+			201,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1718,
-			555,
-			57,
-			52
+			1982,
+			724,
+			112,
+			102
 		},
 		alias = {}
 	},
 	armor_0012 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			97,
-			54,
-			100,
-			98
+			195,
+			109,
+			201,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1781,
-			555,
-			57,
-			52
+			2100,
+			724,
+			112,
+			102
 		},
 		alias = {}
 	},
 	armor_0013 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			97,
-			57,
-			100,
-			98
+			196,
+			116,
+			201,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			1258,
-			57,
-			49
+			1628,
+			1302,
+			111,
+			95
 		},
 		alias = {}
 	},
 	armor_0014 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			97,
-			57,
-			100,
-			98
+			196,
+			116,
+			202,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			1313,
-			57,
-			49
+			1977,
+			879,
+			110,
+			95
 		},
 		alias = {}
 	},
 	armor_0015 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			97,
-			58,
-			100,
-			98
+			195,
+			116,
+			202,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			1368,
-			57,
-			48
+			1628,
+			1403,
+			111,
+			95
 		},
 		alias = {}
 	},
 	armor_0016 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			97,
-			58,
-			101,
-			98
+			195,
+			116,
+			202,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1560,
-			622,
-			56,
-			48
+			1628,
+			1504,
+			111,
+			95
 		},
 		alias = {}
 	},
 	armor_0017 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			98,
-			56,
-			101,
-			98
+			196,
+			114,
+			202,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			989,
-			55,
-			50
+			1861,
+			879,
+			110,
+			97
 		},
 		alias = {}
 	},
 	armor_0018 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			98,
-			56,
-			100,
-			98
+			196,
+			114,
+			200,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1498,
-			622,
-			56,
-			50
+			2690,
+			724,
+			112,
+			97
 		},
 		alias = {}
 	},
 	armor_0019 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			98,
-			55,
-			100,
-			98
+			197,
+			112,
+			200,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1374,
-			622,
-			56,
-			51
+			1628,
+			1197,
+			111,
+			99
 		},
 		alias = {}
 	},
 	armor_0020 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			98,
-			55,
-			100,
-			98
+			197,
+			112,
+			201,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1436,
-			622,
-			56,
-			51
+			1745,
+			879,
+			110,
+			99
 		},
 		alias = {}
 	},
 	armor_0021 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			55,
-			99,
-			98
+			192,
+			112,
+			199,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			769,
-			490,
-			60,
-			51
+			1381,
+			2894,
+			117,
+			99
 		},
 		alias = {}
 	},
 	armor_0022 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			55,
-			99,
-			98
+			192,
+			112,
+			200,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			835,
-			490,
-			60,
-			51
+			1506,
+			1364,
+			116,
+			99
 		},
 		alias = {}
 	},
 	armor_0023 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			53,
-			98,
-			98
+			189,
+			107,
+			197,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1192,
-			431,
-			62,
-			53
+			1252,
+			1515,
+			122,
+			104
 		},
 		alias = {}
 	},
 	armor_0024 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			53,
-			98,
-			96
+			189,
+			107,
+			197,
+			193
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			824,
-			62,
-			55
+			1252,
+			1401,
+			122,
+			108
 		},
 		alias = {}
 	},
 	armor_0025 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			49,
-			95,
-			96
+			190,
+			99,
+			190,
+			193
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			1781,
-			65,
-			59
+			1387,
+			258,
+			128,
+			116
 		},
 		alias = {}
 	},
 	armor_0026 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			49,
-			95,
-			93
+			190,
+			99,
+			190,
+			188
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			1645,
-			65,
-			62
+			1253,
+			258,
+			128,
+			121
 		},
 		alias = {}
 	},
 	armor_0027 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			44,
-			95,
-			93
+			191,
+			89,
+			190,
+			188
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			853,
-			352,
-			64,
-			67
+			1119,
+			1390,
+			127,
+			131
 		},
 		alias = {}
 	},
 	armor_0028 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			44,
-			95,
-			94
+			191,
+			89,
+			190,
+			190
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			923,
-			352,
-			64,
-			66
+			1119,
+			1527,
+			127,
+			129
 		},
 		alias = {}
 	},
 	armor_0029 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			40,
-			95,
-			94
+			191,
+			82,
+			190,
+			190
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			352,
-			64,
-			70
+			1119,
+			824,
+			127,
+			136
 		},
 		alias = {}
 	},
 	armor_0030 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			40,
-			95,
-			94
+			191,
+			82,
+			190,
+			190
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			503,
-			352,
-			64,
-			70
+			1119,
+			966,
+			127,
+			136
 		},
 		alias = {}
 	},
 	armor_0031 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			37,
-			95,
-			94
+			191,
+			76,
+			190,
+			190
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			352,
-			64,
-			73
+			1119,
+			386,
+			127,
+			142
 		},
 		alias = {}
 	},
 	armor_0032 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			37,
-			95,
-			98
+			191,
+			76,
+			190,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			713,
-			352,
-			64,
-			69
+			1119,
+			1108,
+			127,
+			135
 		},
 		alias = {}
 	},
 	armor_0033 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			36,
-			95,
-			98
+			191,
+			72,
+			190,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			573,
-			352,
-			64,
-			70
+			1119,
+			534,
+			127,
+			139
 		},
 		alias = {
 			"armor_0034"
 		}
 	},
 	armor_0035 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			50,
-			95,
-			98
+			191,
+			101,
+			190,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1215,
-			290,
-			64,
-			56
+			2055,
+			258,
+			127,
+			110
 		},
 		alias = {
 			"armor_0036"
 		}
 	},
 	armor_0037 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			50,
-			94,
-			98
+			190,
+			101,
+			190,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			1846,
-			65,
-			56
+			1521,
+			258,
+			128,
+			110
 		},
 		alias = {
 			"armor_0038"
 		}
 	},
 	armor_0039 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			50,
-			95,
-			98
+			191,
+			100,
+			190,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1285,
-			290,
-			64,
-			56
+			1922,
+			258,
+			127,
+			111
 		},
 		alias = {
 			"armor_0040"
 		}
 	},
 	armor_0041 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			48,
-			96,
-			98
+			191,
+			97,
+			193,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			1378,
-			63,
-			58
+			3217,
+			386,
+			124,
+			114
 		},
 		alias = {
 			"armor_0042"
 		}
 	},
 	armor_0043 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			64,
-			99,
-			98
+			191,
+			129,
+			199,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1759,
-			490,
-			60,
-			42
+			1381,
+			2135,
+			118,
+			82
 		},
 		alias = {
 			"armor_0044"
 		}
 	},
 	armor_0045 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			71,
-			100,
-			98
+			191,
+			144,
+			200,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			153,
-			6,
-			59,
-			35
+			1506,
+			651,
+			117,
+			67
 		},
 		alias = {
 			"armor_0046"
 		}
 	},
 	armor_0047 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			98,
-			77,
-			101,
-			88
+			197,
+			154,
+			203,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			2008,
-			55,
-			39
+			2093,
+			879,
+			108,
+			77
 		},
 		alias = {}
 	},
 	armor_0048 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			98,
-			77,
-			101,
-			88
+			197,
+			154,
+			203,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			1045,
-			55,
-			39
+			2207,
+			879,
+			108,
+			77
 		},
 		alias = {}
 	},
 	armor_0049 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			74,
-			103,
-			88
+			200,
+			149,
+			208,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1833,
-			689,
-			51,
-			42
+			1971,
+			1395,
+			100,
+			82
 		},
 		alias = {}
 	},
 	armor_0050 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			74,
-			103,
-			88
+			200,
+			149,
+			208,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1890,
-			689,
-			51,
-			42
+			1971,
+			1483,
+			100,
+			82
 		},
 		alias = {}
 	},
 	armor_0051 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			76,
-			103,
-			88
+			200,
+			152,
+			207,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1947,
-			689,
-			51,
-			40
+			2840,
+			984,
+			101,
+			79
 		},
 		alias = {}
 	},
 	armor_0052 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			76,
-			103,
-			88
+			200,
+			152,
+			207,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			759,
-			51,
-			40
+			2947,
+			984,
+			101,
+			79
 		},
 		alias = {}
 	},
 	armor_0053 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			76,
-			103,
-			88
+			200,
+			152,
+			207,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			807,
-			759,
-			51,
-			40
+			3054,
+			984,
+			101,
+			79
 		},
 		alias = {}
 	},
 	armor_0054 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			76,
-			103,
-			88
+			200,
+			152,
+			207,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			864,
-			759,
-			51,
-			40
+			3161,
+			984,
+			101,
+			79
 		},
 		alias = {}
 	},
 	armor_0055 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			76,
-			103,
-			88
+			200,
+			152,
+			207,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			921,
-			759,
-			51,
-			40
+			3268,
+			984,
+			101,
+			79
 		},
 		alias = {
 			"armor_0056"
 		}
 	},
 	armor_0057 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			76,
-			103,
-			88
+			200,
+			152,
+			207,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			978,
-			759,
-			51,
-			40
+			3375,
+			984,
+			101,
+			79
 		},
 		alias = {
 			"armor_0058"
 		}
 	},
 	armor_0059 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			76,
-			103,
-			88
+			200,
+			152,
+			207,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1035,
-			759,
-			51,
-			40
+			3482,
+			984,
+			101,
+			79
 		},
 		alias = {
 			"armor_0060"
 		}
 	},
 	armor_0061 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			74,
-			101,
-			88
+			200,
+			148,
+			203,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1325,
-			53,
-			42
+			3110,
+			879,
+			105,
+			83
 		},
 		alias = {
 			"armor_0062"
 		}
 	},
 	armor_0063 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			63,
-			99,
-			98
+			191,
+			126,
+			199,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1693,
-			490,
-			60,
-			43
+			1381,
+			2044,
+			118,
+			85
 		},
 		alias = {
 			"armor_0064",
@@ -1292,26 +1292,26 @@ local a = {
 		}
 	},
 	armor_0065 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			48,
-			96,
-			98
+			191,
+			97,
+			193,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			1442,
-			63,
-			58
+			3347,
+			386,
+			124,
+			114
 		},
 		alias = {
 			"armor_0066",
@@ -1320,26 +1320,26 @@ local a = {
 		}
 	},
 	armor_0067 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			92,
-			50,
-			95,
-			98
+			186,
+			100,
+			190,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			437,
-			220,
-			67,
-			56
+			2804,
+			6,
+			132,
+			111
 		},
 		alias = {
 			"armor_0068",
@@ -1348,26 +1348,26 @@ local a = {
 		}
 	},
 	armor_0069 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			50,
-			94,
-			98
+			190,
+			101,
+			190,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			1908,
-			65,
-			56
+			1655,
+			258,
+			128,
+			110
 		},
 		alias = {
 			"armor_0070",
@@ -1376,26 +1376,26 @@ local a = {
 		}
 	},
 	armor_0071 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			45,
-			95,
-			98
+			191,
+			92,
+			190,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1483,
-			352,
-			64,
-			61
+			1789,
+			258,
+			127,
+			119
 		},
 		alias = {
 			"armor_0072",
@@ -1404,26 +1404,26 @@ local a = {
 		}
 	},
 	armor_0073 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			36,
-			95,
-			98
+			191,
+			72,
+			190,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			643,
-			352,
-			64,
-			70
+			1119,
+			679,
+			127,
+			139
 		},
 		alias = {
 			"armor_0074",
@@ -1432,26 +1432,26 @@ local a = {
 		}
 	},
 	armor_0075 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			37,
-			95,
-			98
+			191,
+			76,
+			190,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			783,
-			352,
-			64,
-			69
+			1119,
+			1249,
+			127,
+			135
 		},
 		alias = {
 			"armor_0076",
@@ -1460,26 +1460,26 @@ local a = {
 		}
 	},
 	armor_0077 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			40,
-			95,
-			98
+			191,
+			82,
+			190,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			993,
-			352,
-			64,
-			66
+			1119,
+			1662,
+			127,
+			129
 		},
 		alias = {
 			"armor_0078",
@@ -1488,26 +1488,26 @@ local a = {
 		}
 	},
 	armor_0079 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			44,
-			95,
-			98
+			191,
+			88,
+			190,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1343,
-			352,
-			64,
-			62
+			1119,
+			1928,
+			127,
+			123
 		},
 		alias = {
 			"armor_0080",
@@ -1516,26 +1516,26 @@ local a = {
 		}
 	},
 	armor_0081 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			44,
-			95,
-			98
+			190,
+			89,
+			190,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			1713,
-			65,
-			62
+			1119,
+			258,
+			128,
+			122
 		},
 		alias = {
 			"armor_0082",
@@ -1544,26 +1544,26 @@ local a = {
 		}
 	},
 	armor_0083 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			46,
-			98,
-			98
+			189,
+			93,
+			197,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			632,
-			62,
-			60
+			1252,
+			1277,
+			122,
+			118
 		},
 		alias = {
 			"armor_0084",
@@ -1572,768 +1572,768 @@ local a = {
 		}
 	},
 	armor_0085 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			93,
-			59,
-			97,
-			98
+			187,
+			118,
+			195,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			431,
-			64,
-			47
+			1930,
+			152,
+			126,
+			93
 		},
 		alias = {
 			"armor_0263"
 		}
 	},
 	armor_0086 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			93,
-			59,
-			97,
-			98
+			187,
+			118,
+			196,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			484,
-			64,
-			47
+			2326,
+			152,
+			125,
+			93
 		},
 		alias = {
 			"armor_0264"
 		}
 	},
 	armor_0087 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			53,
-			101,
-			98
+			200,
+			106,
+			203,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1047,
-			53,
-			53
+			1860,
+			1488,
+			105,
+			105
 		},
 		alias = {
 			"armor_0265"
 		}
 	},
 	armor_0088 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			53,
-			102,
-			98
+			200,
+			106,
+			204,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1675,
-			52,
-			53
+			1860,
+			1741,
+			104,
+			105
 		},
 		alias = {
 			"armor_0266"
 		}
 	},
 	armor_0089 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			76,
-			103,
-			88
+			200,
+			152,
+			207,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1092,
-			759,
-			51,
-			40
+			3589,
+			984,
+			101,
+			79
 		},
 		alias = {}
 	},
 	armor_0090 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			76,
-			103,
-			88
+			200,
+			152,
+			207,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1149,
-			759,
-			51,
-			40
+			3696,
+			984,
+			101,
+			79
 		},
 		alias = {}
 	},
 	armor_0091 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			76,
-			103,
-			88
+			200,
+			152,
+			207,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1206,
-			759,
-			51,
-			40
+			3803,
+			984,
+			101,
+			79
 		},
 		alias = {}
 	},
 	armor_0092 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			76,
-			103,
-			88
+			200,
+			152,
+			207,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1263,
-			759,
-			51,
-			40
+			3910,
+			984,
+			101,
+			79
 		},
 		alias = {}
 	},
 	armor_0093 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			76,
-			103,
-			88
+			200,
+			152,
+			207,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1320,
-			759,
-			51,
-			40
+			1860,
+			3213,
+			101,
+			79
 		},
 		alias = {}
 	},
 	armor_0094 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			76,
-			103,
-			88
+			200,
+			152,
+			207,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1377,
-			759,
-			51,
-			40
+			2078,
+			1091,
+			101,
+			79
 		},
 		alias = {}
 	},
 	armor_0095 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			76,
-			103,
-			88
+			200,
+			152,
+			207,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1434,
-			759,
-			51,
-			40
+			2185,
+			1091,
+			101,
+			79
 		},
 		alias = {}
 	},
 	armor_0096 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			76,
-			103,
-			88
+			200,
+			152,
+			207,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1491,
-			759,
-			51,
-			40
+			2292,
+			1091,
+			101,
+			79
 		},
 		alias = {}
 	},
 	armor_0097 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			76,
-			103,
-			88
+			200,
+			152,
+			207,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1548,
-			759,
-			51,
-			40
+			2399,
+			1091,
+			101,
+			79
 		},
 		alias = {}
 	},
 	armor_0098 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			76,
-			103,
-			88
+			200,
+			152,
+			207,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1605,
-			759,
-			51,
-			40
+			2506,
+			1091,
+			101,
+			79
 		},
 		alias = {}
 	},
 	armor_0099 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			98,
-			74,
-			102,
-			89
+			197,
+			148,
+			204,
+			180
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			1845,
-			54,
-			41
+			2773,
+			879,
+			107,
+			80
 		},
 		alias = {
 			"armor_0100"
 		}
 	},
 	armor_0101 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			98,
-			72,
-			102,
-			90
+			197,
+			145,
+			204,
+			181
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			1749,
-			54,
-			42
+			2660,
+			879,
+			107,
+			82
 		},
 		alias = {
 			"armor_0102"
 		}
 	},
 	armor_0103 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			98,
-			67,
-			102,
-			90
+			197,
+			135,
+			204,
+			182
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			1696,
-			54,
-			47
+			2547,
+			879,
+			107,
+			91
 		},
 		alias = {
 			"armor_0104"
 		}
 	},
 	armor_0105 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			99,
-			63,
-			102,
-			89
+			199,
+			128,
+			205,
+			180
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1106,
-			53,
-			52
+			2086,
+			984,
+			104,
+			100
 		},
 		alias = {
 			"armor_0106"
 		}
 	},
 	armor_0107 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			98,
-			60,
-			102,
-			88
+			198,
+			122,
+			205,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			1291,
-			54,
-			56
+			1860,
+			1373,
+			105,
+			109
 		},
 		alias = {
 			"armor_0108"
 		}
 	},
 	armor_0109 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			99,
-			59,
-			103,
-			88
+			199,
+			119,
+			206,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1486,
-			52,
-			57
+			1860,
+			2254,
+			103,
+			112
 		},
 		alias = {
 			"armor_0110"
 		}
 	},
 	armor_0111 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			99,
-			59,
-			103,
-			88
+			199,
+			119,
+			206,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1549,
-			52,
-			57
+			1860,
+			2372,
+			103,
+			112
 		},
 		alias = {
 			"armor_0112"
 		}
 	},
 	armor_0113 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			10,
-			80,
-			103,
-			88
+			20,
+			161,
+			206,
+			177
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
 			6,
-			141,
-			36
+			282,
+			70
 		},
 		alias = {}
 	},
 	armor_0122 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			99,
-			53,
-			101,
-			98
+			198,
+			106,
+			202,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			1353,
-			54,
-			53
+			1745,
+			2571,
+			108,
+			105
 		},
 		alias = {}
 	},
 	armor_0123 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			99,
-			53,
-			101,
-			98
+			198,
+			106,
+			203,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			1412,
-			54,
-			53
+			1745,
+			3057,
+			107,
+			105
 		},
 		alias = {}
 	},
 	armor_0124 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			99,
-			55,
-			97,
-			98
+			200,
+			112,
+			195,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1019,
-			555,
-			58,
-			51
+			1506,
+			2992,
+			113,
+			99
 		},
 		alias = {}
 	},
 	armor_0125 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			99,
-			55,
-			97,
-			98
+			200,
+			112,
+			195,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1083,
-			555,
-			58,
-			51
+			1506,
+			3097,
+			113,
+			99
 		},
 		alias = {}
 	},
 	armor_0126 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			57,
-			100,
-			98
+			200,
+			116,
+			201,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			1586,
-			54,
-			49
+			2321,
+			879,
+			107,
+			95
 		},
 		alias = {}
 	},
 	armor_0127 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			57,
-			100,
-			98
+			200,
+			116,
+			201,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			1641,
-			54,
-			49
+			2434,
+			879,
+			107,
+			95
 		},
 		alias = {}
 	},
 	armor_0128 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			45,
-			106,
-			98
+			188,
+			92,
+			213,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			1090,
-			54,
-			61
+			1745,
+			2682,
+			107,
+			119
 		},
 		alias = {}
 	},
 	armor_0129 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			45,
-			106,
-			98
+			188,
+			92,
+			213,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			1157,
-			54,
-			61
+			1745,
+			2807,
+			107,
+			119
 		},
 		alias = {}
 	},
 	armor_0130 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			89,
-			45,
-			106,
-			98
+			180,
+			92,
+			213,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			1944,
-			59,
-			61
+			1506,
+			2032,
+			115,
+			119
 		},
 		alias = {
 			"armor_0131",
@@ -2341,26 +2341,26 @@ local a = {
 		}
 	},
 	armor_0133 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			89,
-			45,
-			106,
-			98
+			179,
+			92,
+			213,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			555,
-			59,
-			61
+			1506,
+			1130,
+			116,
+			119
 		},
 		alias = {
 			"armor_0134",
@@ -2368,26 +2368,26 @@ local a = {
 		}
 	},
 	armor_0136 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			88,
-			46,
-			106,
-			98
+			178,
+			92,
+			213,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			1300,
-			60,
-			60
+			1381,
+			2769,
+			117,
+			119
 		},
 		alias = {
 			"armor_0137",
@@ -2395,26 +2395,26 @@ local a = {
 		}
 	},
 	armor_0139 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			90,
-			45,
-			110,
-			98
+			180,
+			92,
+			221,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			1224,
-			54,
-			61
+			1745,
+			2932,
+			107,
+			119
 		},
 		alias = {
 			"armor_0140",
@@ -2423,1850 +2423,1850 @@ local a = {
 		}
 	},
 	armor_0143 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			91,
-			17,
-			40,
-			82
+			183,
+			35,
+			82,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			160,
-			123,
-			105
+			300,
+			243,
+			208
 		},
 		alias = {
 			"armor_0144"
 		}
 	},
 	armor_0145 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			92,
-			16,
-			39,
-			82
+			185,
+			32,
+			78,
+			164
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			48,
-			123,
-			106
+			82,
+			245,
+			212
 		},
 		alias = {
 			"armor_0146"
 		}
 	},
 	armor_0147 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			14,
-			38,
-			82
+			200,
+			29,
+			77,
+			164
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			940,
-			116,
-			108
+			1784,
+			231,
+			215
 		},
 		alias = {
 			"armor_0148"
 		}
 	},
 	armor_0149 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			107,
-			13,
-			37,
-			82
+			215,
+			26,
+			76,
+			164
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			6,
-			1731,
-			110,
-			109
+			294,
+			1813,
+			217,
+			218
 		},
 		alias = {
 			"armor_0150"
 		}
 	},
 	armor_0151 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			105,
-			12,
-			36,
-			82
+			211,
+			24,
+			74,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			1314,
-			113,
-			110
+			2501,
+			223,
+			219
 		},
 		alias = {
 			"armor_0152"
 		}
 	},
 	armor_0153 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			103,
-			11,
-			35,
-			85
+			207,
+			22,
+			72,
+			172
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			1054,
-			116,
-			108
+			2005,
+			229,
+			214
 		},
 		alias = {
 			"armor_0154"
 		}
 	},
 	armor_0155 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			99,
-			10,
-			35,
-			86
+			200,
+			20,
+			70,
+			173
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			386,
-			120,
-			108
+			737,
+			238,
+			215
 		},
 		alias = {
 			"armor_0156"
 		}
 	},
 	armor_0157 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			99,
-			10,
-			34,
-			85
+			198,
+			19,
+			68,
+			172
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			271,
-			121,
-			109
+			514,
+			242,
+			217
 		},
 		alias = {
 			"armor_0158"
 		}
 	},
 	armor_0159 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			97,
-			51,
-			75,
-			91
+			195,
+			79,
+			151,
+			183
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			789,
-			130,
-			82,
-			62
+			519,
+			848,
+			162,
+			146
 		},
 		alias = {
 			"armor_0160"
 		}
 	},
 	armor_0161 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			56,
-			100,
-			98
+			202,
+			112,
+			200,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			1530,
-			54,
-			50
+			2886,
+			879,
+			106,
+			99
 		},
 		alias = {
 			"armor_0162"
 		}
 	},
 	armor_0163 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			101,
-			56,
-			101,
-			98
+			203,
+			113,
+			203,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1734,
-			52,
-			50
+			3552,
+			879,
+			102,
+			98
 		},
 		alias = {
 			"armor_0164"
 		}
 	},
 	armor_0165 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			102,
-			56,
-			100,
-			98
+			204,
+			111,
+			201,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1790,
-			52,
-			50
+			2196,
+			984,
+			103,
+			100
 		},
 		alias = {
 			"armor_0166"
 		}
 	},
 	armor_0167 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			54,
-			101,
-			98
+			201,
+			108,
+			203,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1164,
-			53,
-			52
+			1860,
+			1852,
+			104,
+			103
 		},
 		alias = {
 			"armor_0168"
 		}
 	},
 	armor_0169 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			99,
-			53,
-			101,
-			98
+			199,
+			107,
+			202,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			1471,
-			54,
-			53
+			1745,
+			3168,
+			107,
+			104
 		},
 		alias = {
 			"armor_0170"
 		}
 	},
 	armor_0171 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			97,
-			54,
-			98,
-			98
+			194,
+			108,
+			198,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1825,
-			490,
-			59,
-			52
+			1506,
+			1255,
+			116,
+			103
 		},
 		alias = {
 			"armor_0172"
 		}
 	},
 	armor_0173 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			54,
-			98,
-			98
+			192,
+			110,
+			197,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1804,
-			431,
-			61,
-			52
+			3138,
+			518,
+			119,
+			101
 		},
 		alias = {
 			"armor_0174"
 		}
 	},
 	armor_0175 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			96,
-			59,
-			97,
-			98
+			192,
+			119,
+			195,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			702,
-			490,
-			61,
-			47
+			1252,
+			2596,
+			121,
+			92
 		},
 		alias = {
 			"armor_0176"
 		}
 	},
 	armor_0177 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			97,
-			58,
-			97,
-			98
+			194,
+			117,
+			195,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1297,
-			490,
-			60,
-			48
+			3388,
+			518,
+			119,
+			94
 		},
 		alias = {
 			"armor_0178"
 		}
 	},
 	armor_0179 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			97,
-			56,
-			97,
-			98
+			195,
+			113,
+			196,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			901,
-			490,
-			60,
-			50
+			1381,
+			2999,
+			117,
+			98
 		},
 		alias = {
 			"armor_0180"
 		}
 	},
 	armor_0181 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			98,
-			54,
-			99,
-			98
+			197,
+			109,
+			199,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1844,
-			555,
-			57,
-			52
+			2218,
+			724,
+			112,
+			102
 		},
 		alias = {
 			"armor_0182"
 		}
 	},
 	armor_0183 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			99,
-			55,
-			100,
-			98
+			199,
+			110,
+			202,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1988,
-			622,
-			55,
-			51
+			1860,
+			984,
+			107,
+			101
 		},
 		alias = {}
 	},
 	armor_0184 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			99,
-			55,
-			100,
-			98
+			199,
+			110,
+			202,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			932,
-			55,
-			51
+			1973,
+			984,
+			107,
+			101
 		},
 		alias = {}
 	},
 	armor_0185 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			93,
-			52,
-			97,
-			98
+			187,
+			104,
+			194,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1495,
-			290,
-			64,
-			54
+			2720,
+			258,
+			127,
+			107
 		},
 		alias = {}
 	},
 	armor_0186 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			93,
-			52,
-			97,
-			98
+			187,
+			104,
+			194,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1565,
-			290,
-			64,
-			54
+			2853,
+			258,
+			127,
+			107
 		},
 		alias = {}
 	},
 	armor_0187 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			50,
-			97,
-			98
+			188,
+			101,
+			195,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1985,
-			290,
-			63,
-			56
+			2169,
+			386,
+			125,
+			110
 		},
 		alias = {}
 	},
 	armor_0188 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			50,
-			97,
-			98
+			188,
+			101,
+			195,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			1826,
-			63,
-			56
+			2300,
+			386,
+			125,
+			110
 		},
 		alias = {}
 	},
 	armor_0189 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			53,
-			97,
-			98
+			189,
+			107,
+			194,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			431,
-			63,
-			53
+			2693,
+			386,
+			125,
+			104
 		},
 		alias = {}
 	},
 	armor_0190 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			53,
-			97,
-			98
+			189,
+			107,
+			194,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			502,
-			431,
-			63,
-			53
+			2824,
+			386,
+			125,
+			104
 		},
 		alias = {}
 	},
 	armor_0191 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			53,
-			96,
-			98
+			189,
+			107,
+			193,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1623,
-			352,
-			64,
-			53
+			1119,
+			2719,
+			126,
+			104
 		},
 		alias = {}
 	},
 	armor_0192 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			53,
-			96,
-			98
+			189,
+			107,
+			193,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1693,
-			352,
-			64,
-			53
+			1119,
+			2829,
+			126,
+			104
 		},
 		alias = {}
 	},
 	armor_0193 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			53,
-			95,
-			98
+			189,
+			107,
+			190,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			576,
-			290,
-			65,
-			53
+			984,
+			1310,
+			129,
+			104
 		},
 		alias = {}
 	},
 	armor_0194 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			53,
-			95,
-			98
+			189,
+			107,
+			190,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			647,
-			290,
-			65,
-			53
+			984,
+			1420,
+			129,
+			104
 		},
 		alias = {}
 	},
 	armor_0195 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			52,
-			94,
-			98
+			190,
+			105,
+			189,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1379,
-			220,
-			66,
-			54
+			984,
+			1086,
+			129,
+			106
 		},
 		alias = {}
 	},
 	armor_0196 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			52,
-			94,
-			98
+			190,
+			105,
+			189,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1451,
-			220,
-			66,
-			54
+			984,
+			1198,
+			129,
+			106
 		},
 		alias = {}
 	},
 	armor_0197 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			50,
-			95,
-			98
+			190,
+			101,
+			191,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1355,
-			290,
-			64,
-			56
+			2188,
+			258,
+			127,
+			110
 		},
 		alias = {}
 	},
 	armor_0198 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			50,
-			95,
-			98
+			190,
+			101,
+			191,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1425,
-			290,
-			64,
-			56
+			2321,
+			258,
+			127,
+			110
 		},
 		alias = {}
 	},
 	armor_0199 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			52,
-			95,
-			98
+			191,
+			106,
+			192,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1635,
-			290,
-			64,
-			54
+			2431,
+			386,
+			125,
+			105
 		},
 		alias = {}
 	},
 	armor_0200 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			52,
-			95,
-			98
+			191,
+			106,
+			192,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1705,
-			290,
-			64,
-			54
+			2562,
+			386,
+			125,
+			105
 		},
 		alias = {}
 	},
 	armor_0201 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			52,
-			96,
-			98
+			191,
+			106,
+			193,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			1888,
-			63,
-			54
+			3607,
+			386,
+			124,
+			105
 		},
 		alias = {}
 	},
 	armor_0202 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			52,
-			96,
-			98
+			191,
+			106,
+			193,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			1948,
-			63,
-			54
+			3737,
+			386,
+			124,
+			105
 		},
 		alias = {}
 	},
 	armor_0203 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			53,
-			96,
-			98
+			189,
+			107,
+			192,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1763,
-			352,
-			64,
-			53
+			3252,
+			258,
+			127,
+			104
 		},
 		alias = {}
 	},
 	armor_0204 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			53,
-			96,
-			98
+			189,
+			107,
+			192,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1833,
-			352,
-			64,
-			53
+			3385,
+			258,
+			127,
+			104
 		},
 		alias = {}
 	},
 	armor_0205 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			93,
-			54,
-			96,
-			98
+			187,
+			108,
+			192,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1002,
-			290,
-			65,
-			52
+			984,
+			2190,
+			129,
+			103
 		},
 		alias = {}
 	},
 	armor_0206 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			93,
-			54,
-			96,
-			98
+			187,
+			108,
+			192,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1073,
-			290,
-			65,
-			52
+			984,
+			2299,
+			129,
+			103
 		},
 		alias = {}
 	},
 	armor_0207 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			92,
-			53,
-			96,
-			98
+			186,
+			107,
+			193,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1667,
-			220,
-			66,
-			53
+			984,
+			1530,
+			129,
+			104
 		},
 		alias = {}
 	},
 	armor_0208 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			92,
-			53,
-			96,
-			98
+			186,
+			107,
+			193,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1739,
-			220,
-			66,
-			53
+			984,
+			1640,
+			129,
+			104
 		},
 		alias = {}
 	},
 	armor_0209 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			93,
-			52,
-			96,
-			98
+			186,
+			104,
+			193,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			434,
-			290,
-			65,
-			54
+			984,
+			860,
+			129,
+			107
 		},
 		alias = {}
 	},
 	armor_0210 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			93,
-			52,
-			96,
-			98
+			186,
+			104,
+			193,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			505,
-			290,
-			65,
-			54
+			984,
+			973,
+			129,
+			107
 		},
 		alias = {}
 	},
 	armor_0211 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			93,
-			50,
-			96,
-			98
+			187,
+			101,
+			194,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			1970,
-			65,
-			56
+			2454,
+			258,
+			127,
+			110
 		},
 		alias = {}
 	},
 	armor_0212 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			93,
-			50,
-			96,
-			98
+			187,
+			101,
+			194,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			290,
-			65,
-			56
+			2587,
+			258,
+			127,
+			110
 		},
 		alias = {}
 	},
 	armor_0213 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			53,
-			96,
-			98
+			188,
+			107,
+			193,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1903,
-			352,
-			64,
-			53
+			3518,
+			258,
+			127,
+			104
 		},
 		alias = {}
 	},
 	armor_0214 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			53,
-			96,
-			98
+			188,
+			107,
+			193,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1973,
-			352,
-			64,
-			53
+			3651,
+			258,
+			127,
+			104
 		},
 		alias = {}
 	},
 	armor_0215 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			93,
-			53,
-			96,
-			98
+			187,
+			107,
+			192,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			718,
-			290,
-			65,
-			53
+			984,
+			1750,
+			129,
+			104
 		},
 		alias = {}
 	},
 	armor_0216 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			93,
-			53,
-			96,
-			98
+			187,
+			107,
+			192,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			789,
-			290,
-			65,
-			53
+			984,
+			1860,
+			129,
+			104
 		},
 		alias = {}
 	},
 	armor_0217 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			93,
-			53,
-			94,
-			98
+			187,
+			107,
+			189,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			510,
-			220,
-			67,
-			53
+			3218,
+			6,
+			132,
+			104
 		},
 		alias = {}
 	},
 	armor_0218 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			93,
-			53,
-			94,
-			98
+			187,
+			107,
+			189,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			583,
-			220,
-			67,
-			53
+			3356,
+			6,
+			132,
+			104
 		},
 		alias = {}
 	},
 	armor_0219 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			52,
-			94,
-			98
+			188,
+			105,
+			188,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1523,
-			220,
-			66,
-			54
+			2942,
+			6,
+			132,
+			106
 		},
 		alias = {}
 	},
 	armor_0220 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			52,
-			94,
-			98
+			188,
+			105,
+			188,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1595,
-			220,
-			66,
-			54
+			3080,
+			6,
+			132,
+			106
 		},
 		alias = {}
 	},
 	armor_0221 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			50,
-			94,
-			98
+			189,
+			101,
+			189,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1235,
-			220,
-			66,
-			56
+			843,
+			3020,
+			130,
+			110
 		},
 		alias = {}
 	},
 	armor_0222 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			50,
-			94,
-			98
+			189,
+			101,
+			189,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1307,
-			220,
-			66,
-			56
+			843,
+			3136,
+			130,
+			110
 		},
 		alias = {}
 	},
 	armor_0223 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			52,
-			95,
-			98
+			190,
+			106,
+			191,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1775,
-			290,
-			64,
-			54
+			2986,
+			258,
+			127,
+			105
 		},
 		alias = {}
 	},
 	armor_0224 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			95,
-			52,
-			95,
-			98
+			190,
+			106,
+			191,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1845,
-			290,
-			64,
-			54
+			3119,
+			258,
+			127,
+			105
 		},
 		alias = {}
 	},
 	armor_0225 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			52,
-			96,
-			98
+			190,
+			106,
+			192,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1915,
-			290,
-			64,
-			54
+			3784,
+			258,
+			126,
+			105
 		},
 		alias = {}
 	},
 	armor_0226 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			52,
-			96,
-			98
+			190,
+			106,
+			192,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1553,
-			352,
-			64,
-			54
+			3916,
+			258,
+			126,
+			105
 		},
 		alias = {}
 	},
 	armor_0227 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			53,
-			95,
-			98
+			188,
+			107,
+			191,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			860,
-			290,
-			65,
-			53
+			984,
+			1970,
+			129,
+			104
 		},
 		alias = {}
 	},
 	armor_0228 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			94,
-			53,
-			95,
-			98
+			188,
+			107,
+			191,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			931,
-			290,
-			65,
-			53
+			984,
+			2080,
+			129,
+			104
 		},
 		alias = {}
 	},
 	armor_0229 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			92,
-			54,
-			95,
-			98
+			186,
+			108,
+			191,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			1996,
-			67,
-			52
+			843,
+			2301,
+			131,
+			103
 		},
 		alias = {}
 	},
 	armor_0230 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			92,
-			54,
-			95,
-			98
+			186,
+			108,
+			191,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			656,
-			220,
-			67,
-			52
+			843,
+			2410,
+			131,
+			103
 		},
 		alias = {}
 	},
 	armor_0231 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			92,
-			53,
-			96,
-			98
+			185,
+			107,
+			192,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1811,
-			220,
-			66,
-			53
+			843,
+			2081,
+			131,
+			104
 		},
 		alias = {}
 	},
 	armor_0232 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			92,
-			53,
-			96,
-			98
+			185,
+			107,
+			192,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1883,
-			220,
-			66,
-			53
+			843,
+			2191,
+			131,
+			104
 		},
 		alias = {}
 	},
 	armor_0233 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			110,
-			85,
-			111,
-			98
+			220,
+			171,
+			222,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1964,
-			1246,
-			33,
-			21
+			3861,
+			832,
+			66,
+			40
 		},
 		alias = {
 			"armor_0234"
 		}
 	},
 	armor_0235 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			100,
-			85,
-			110,
-			97
+			202,
+			171,
+			221,
+			196
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1543,
-			6,
-			44,
-			22
+			3756,
+			651,
+			85,
+			41
 		},
 		alias = {
 			"armor_0236"
 		}
 	},
 	armor_0237 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			104,
-			82,
-			105,
-			98
+			209,
+			166,
+			210,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			6,
-			45,
-			24
+			3200,
+			651,
+			89,
+			45
 		},
 		alias = {
 			"armor_0238"
 		}
 	},
 	armor_0239 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			254,
-			204
+			508,
+			408
 		},
 		trim = {
-			102,
-			74,
-			101,
-			98
+			206,
+			148,
+			203,
+			197
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			647,
-			6,
-			51,
-			32
+			2194,
+			651,
+			99,
+			63
 		},
 		alias = {
 			"armor_0240"
 		}
 	},
 	bane_wolf_creep_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			24,
-			19,
-			23,
-			41
+			49,
+			38,
+			47,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1872,
-			1016,
-			41,
-			32
+			3372,
+			1498,
+			80,
+			62
 		},
 		alias = {
 			"bane_wolf_creep_0044",
@@ -4278,884 +4278,884 @@ local a = {
 		}
 	},
 	bane_wolf_creep_0002 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			22,
-			10,
-			22,
-			41
+			45,
+			21,
+			45,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1619,
-			805,
-			44,
-			41
+			2476,
+			2534,
+			86,
+			79
 		},
 		alias = {
 			"bane_wolf_creep_0003"
 		}
 	},
 	bane_wolf_creep_0004 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			21,
-			13,
-			22,
-			41
+			43,
+			27,
+			44,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1868,
-			759,
-			45,
-			38
+			3877,
+			1213,
+			89,
+			73
 		},
 		alias = {
 			"bane_wolf_creep_0005"
 		}
 	},
 	bane_wolf_creep_0006 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			26,
-			20,
-			20,
-			41
+			54,
+			41,
+			42,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1980,
-			6,
-			42,
-			31
+			3865,
+			1503,
+			80,
+			59
 		},
 		alias = {
 			"bane_wolf_creep_0007"
 		}
 	},
 	bane_wolf_creep_0008 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			24,
-			21,
-			24,
-			41
+			49,
+			44,
+			48,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1214,
-			40,
-			30
+			3767,
+			1507,
+			79,
+			56
 		},
 		alias = {
 			"bane_wolf_creep_0009"
 		}
 	},
 	bane_wolf_creep_0010 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			23,
-			16,
-			24,
-			41
+			46,
+			33,
+			48,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1496,
-			1016,
-			41,
-			35
+			3847,
+			651,
+			82,
+			67
 		},
 		alias = {
 			"bane_wolf_creep_0011"
 		}
 	},
 	bane_wolf_creep_0012 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			19,
-			15,
-			23,
-			41
+			39,
+			30,
+			46,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1086,
-			6,
-			46,
-			36
+			3780,
+			1213,
+			91,
+			70
 		},
 		alias = {
 			"bane_wolf_creep_0013"
 		}
 	},
 	bane_wolf_creep_0014 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			22,
-			12,
-			23,
-			41
+			45,
+			25,
+			47,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1818,
-			805,
-			43,
-			39
+			2569,
+			2120,
+			84,
+			75
 		},
 		alias = {
 			"bane_wolf_creep_0015"
 		}
 	},
 	bane_wolf_creep_0016 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			27,
-			10,
-			27,
-			41
+			55,
+			21,
+			54,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2014,
-			805,
-			34,
-			41
+			3463,
+			2284,
+			67,
+			79
 		},
 		alias = {
 			"bane_wolf_creep_0017"
 		}
 	},
 	bane_wolf_creep_0018 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
+			55,
 			27,
-			13,
-			27,
-			41
+			54,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			1869,
-			34,
-			38
+			3755,
+			2284,
+			67,
+			73
 		},
 		alias = {
 			"bane_wolf_creep_0019"
 		}
 	},
 	bane_wolf_creep_0020 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			27,
-			17,
-			27,
-			41
+			55,
+			35,
+			54,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1246,
-			34,
-			34
+			3551,
+			1911,
+			67,
+			65
 		},
 		alias = {
 			"bane_wolf_creep_0021"
 		}
 	},
 	bane_wolf_creep_0022 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			27,
-			18,
-			27,
-			41
+			55,
+			37,
+			54,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1411,
-			1246,
-			34,
-			33
+			3770,
+			1911,
+			67,
+			63
 		},
 		alias = {
 			"bane_wolf_creep_0023"
 		}
 	},
 	bane_wolf_creep_0024 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			27,
-			17,
-			27,
-			41
+			55,
+			36,
+			54,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1331,
-			1246,
-			34,
-			34
+			3697,
+			1911,
+			67,
+			64
 		},
 		alias = {
 			"bane_wolf_creep_0025"
 		}
 	},
 	bane_wolf_creep_0026 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			27,
-			15,
-			27,
-			41
+			55,
+			31,
+			54,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			1956,
-			34,
-			36
+			3901,
+			2284,
+			67,
+			69
 		},
 		alias = {
 			"bane_wolf_creep_0027"
 		}
 	},
 	bane_wolf_creep_0028 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			27,
-			12,
-			27,
-			41
+			55,
+			25,
+			54,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			1824,
-			34,
-			39
+			3682,
+			2284,
+			67,
+			75
 		},
 		alias = {
 			"bane_wolf_creep_0029"
 		}
 	},
 	bane_wolf_creep_0030 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			27,
-			10,
-			27,
-			41
+			55,
+			21,
+			54,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2014,
-			960,
-			34,
-			41
+			3536,
+			2284,
+			67,
+			79
 		},
 		alias = {
 			"bane_wolf_creep_0031"
 		}
 	},
 	bane_wolf_creep_0032 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			27,
-			14,
-			27,
-			41
+			55,
+			29,
+			54,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			1913,
-			34,
-			37
+			3828,
+			2284,
+			67,
+			71
 		},
 		alias = {
 			"bane_wolf_creep_0033"
 		}
 	},
 	bane_wolf_creep_0034 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			27,
-			18,
-			27,
-			41
+			55,
+			37,
+			54,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1451,
-			1246,
-			34,
-			33
+			3843,
+			1911,
+			67,
+			63
 		},
 		alias = {
 			"bane_wolf_creep_0035"
 		}
 	},
 	bane_wolf_creep_0036 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			27,
-			20,
-			27,
-			41
+			55,
+			42,
+			54,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1531,
-			1246,
-			34,
-			31
+			3989,
+			1911,
+			67,
+			58
 		},
 		alias = {
 			"bane_wolf_creep_0037"
 		}
 	},
 	bane_wolf_creep_0038 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			27,
-			19,
-			27,
-			41
+			55,
+			38,
+			54,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1491,
-			1246,
-			34,
-			32
+			3916,
+			1911,
+			67,
+			62
 		},
 		alias = {
 			"bane_wolf_creep_0039"
 		}
 	},
 	bane_wolf_creep_0040 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			27,
-			15,
-			27,
-			41
+			55,
+			32,
+			54,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			1998,
-			34,
-			36
+			3974,
+			2284,
+			67,
+			68
 		},
 		alias = {
 			"bane_wolf_creep_0041"
 		}
 	},
 	bane_wolf_creep_0042 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			27,
-			11,
-			27,
-			41
+			55,
+			24,
+			54,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			1778,
-			34,
-			40
+			3609,
+			2284,
+			67,
+			76
 		},
 		alias = {
 			"bane_wolf_creep_0043"
 		}
 	},
 	bane_wolf_creep_0046 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			24,
-			19,
-			24,
-			41
+			48,
+			40,
+			48,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1176,
-			40,
-			32
+			3471,
+			1497,
+			80,
+			60
 		},
 		alias = {
 			"bane_wolf_creep_0047"
 		}
 	},
 	bane_wolf_creep_0048 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			20,
-			15,
-			28,
-			41
+			42,
+			31,
+			56,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1853,
-			1063,
-			40,
-			36
+			3754,
+			1983,
+			78,
+			69
 		},
 		alias = {
 			"bane_wolf_creep_0049"
 		}
 	},
 	bane_wolf_creep_0050 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			18,
-			10,
-			28,
-			41
+			37,
+			21,
+			56,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1943,
-			909,
-			42,
-			41
+			2569,
+			2885,
+			83,
+			79
 		},
 		alias = {
 			"bane_wolf_creep_0051"
 		}
 	},
 	bane_wolf_creep_0052 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			18,
-			10,
-			28,
-			41
+			37,
+			21,
+			56,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1991,
-			909,
-			42,
-			41
+			2569,
+			2970,
+			83,
+			79
 		},
 		alias = {
 			"bane_wolf_creep_0053"
 		}
 	},
 	bane_wolf_creep_0054 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			22,
-			9,
-			28,
-			41
+			44,
+			20,
+			56,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1823,
-			1189,
-			38,
-			42
+			2830,
+			3146,
+			76,
+			80
 		},
 		alias = {
 			"bane_wolf_creep_0055"
 		}
 	},
 	bane_wolf_creep_0056 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			26,
-			14,
-			10,
-			39
+			53,
+			29,
+			22,
+			79
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1946,
-			52,
-			39
+			2613,
+			1091,
+			101,
+			76
 		},
 		alias = {
 			"bane_wolf_creep_0057"
 		}
 	},
 	bane_wolf_creep_0058 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			26,
-			23,
-			10,
-			39
+			54,
+			47,
+			22,
+			80
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			589,
-			6,
-			52,
-			30
+			2088,
+			651,
+			100,
+			57
 		},
 		alias = {
 			"bane_wolf_creep_0059"
 		}
 	},
 	bane_wolf_creep_0060 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			26,
-			25,
-			9,
-			39
+			54,
+			50,
+			19,
+			80
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			530,
-			6,
-			53,
-			28
+			1979,
+			651,
+			103,
+			54
 		},
 		alias = {
 			"bane_wolf_creep_0061"
 		}
 	},
 	bane_wolf_creep_0062 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			26,
-			25,
-			11,
-			39
+			54,
+			51,
+			23,
+			80
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			704,
-			6,
-			51,
-			28
+			2299,
+			651,
+			99,
+			53
 		},
 		alias = {
 			"bane_wolf_creep_0063"
 		}
 	},
 	bane_wolf_creep_0064 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			25,
-			22,
-			18,
-			41
+			52,
+			45,
+			37,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1138,
-			6,
-			45,
-			29
+			3389,
+			651,
+			87,
+			55
 		},
 		alias = {
 			"bane_wolf_creep_0065"
 		}
 	},
 	bane_wolf_creep_0066 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			24,
-			18,
-			23,
-			41
+			49,
+			37,
+			47,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1825,
-			1016,
-			41,
-			33
+			3273,
+			1498,
+			80,
+			63
 		},
 		alias = {
 			"bane_wolf_creep_0067"
 		}
 	},
 	bane_wolf_creep_0072 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			23,
-			25,
-			21,
-			41
+			47,
+			52,
+			44,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1493,
-			6,
-			44,
-			26
+			3665,
+			651,
+			85,
+			48
 		},
 		alias = {
 			"bane_wolf_creep_0073"
 		}
 	},
 	bane_wolf_creep_0074 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			24,
-			21,
-			22,
-			41
+			49,
+			44,
+			45,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1392,
-			182,
-			42,
-			30
+			3935,
+			651,
+			82,
+			56
 		},
 		alias = {
 			"bane_wolf_creep_0075",
@@ -5164,542 +5164,542 @@ local a = {
 		}
 	},
 	bane_wolf_creep_0078 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			23,
-			21,
-			23,
-			41
+			48,
+			44,
+			46,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			2017,
-			42,
-			30
+			2877,
+			1500,
+			82,
+			56
 		},
 		alias = {
 			"bane_wolf_creep_0079"
 		}
 	},
 	bane_wolf_creep_0080 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			20,
-			16,
-			27,
-			41
+			42,
+			33,
+			55,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1543,
-			1016,
-			41,
-			35
+			2745,
+			3051,
+			79,
+			67
 		},
 		alias = {
 			"bane_wolf_creep_0081"
 		}
 	},
 	bane_wolf_creep_0082 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			19,
-			14,
-			28,
-			41
+			39,
+			30,
+			56,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1402,
-			1016,
-			41,
-			37
+			3709,
+			1793,
+			81,
+			70
 		},
 		alias = {
 			"bane_wolf_creep_0083"
 		}
 	},
 	bane_wolf_creep_0084 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			18,
-			13,
-			26,
-			41
+			36,
+			27,
+			53,
+			84
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1719,
-			805,
-			44,
-			38
+			2476,
+			1982,
+			87,
+			73
 		},
 		alias = {
 			"bane_wolf_creep_0085"
 		}
 	},
 	bane_wolf_creep_0086 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			25,
-			30,
-			15,
-			40
+			51,
+			61,
+			29,
+			81
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			926,
-			6,
-			48,
-			22
+			2610,
+			651,
+			96,
+			42
 		},
 		alias = {
 			"bane_wolf_creep_0087"
 		}
 	},
 	bane_wolf_creep_0088 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			88,
-			92
+			176,
+			184
 		},
 		trim = {
-			25,
-			28,
-			14,
-			40
+			51,
+			58,
+			29,
+			81
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			817,
-			6,
-			49,
-			24
+			2508,
+			651,
+			96,
+			45
 		},
 		alias = {
 			"bane_wolf_creep_0089"
 		}
 	},
 	corrupted_ranger_arrow = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			40,
-			26
+			80,
+			52
 		},
 		trim = {
-			9,
-			9,
-			10,
-			9
+			19,
+			20,
+			20,
+			20
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			926,
-			34,
-			21,
-			8
+			247,
+			1007,
+			41,
+			12
 		},
 		alias = {}
 	},
 	corrupted_ranger_arrow_miss = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			40,
-			26
+			80,
+			52
 		},
 		trim = {
-			9,
-			9,
-			15,
-			9
+			19,
+			20,
+			32,
+			20
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			953,
-			34,
-			16,
-			8
+			257,
+			190,
+			29,
+			12
 		},
 		alias = {}
 	},
 	corrupted_ranger_arrow_particle_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			36,
-			36
+			72,
+			72
 		},
 		trim = {
-			14,
-			15,
-			15,
-			15
+			29,
+			31,
+			30,
+			30
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			468,
-			35,
-			7,
-			6
+			257,
+			277,
+			13,
+			11
 		},
 		alias = {}
 	},
 	corrupted_ranger_arrow_particle_0002 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			36,
-			36
+			72,
+			72
 		},
 		trim = {
-			14,
-			15,
-			15,
-			15
+			29,
+			31,
+			31,
+			30
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			481,
-			35,
+			276,
+			277,
+			12,
+			11
+		},
+		alias = {}
+	},
+	corrupted_ranger_arrow_particle_0003 = {
+		a_name = "go_enemies_terrain_4-1.dds",
+		size = {
+			72,
+			72
+		},
+		trim = {
+			29,
+			32,
+			31,
+			30
+		},
+		a_size = {
+			4096,
+			3300
+		},
+		f_quad = {
+			247,
+			1236,
+			12,
+			10
+		},
+		alias = {}
+	},
+	corrupted_ranger_arrow_particle_0004 = {
+		a_name = "go_enemies_terrain_4-1.dds",
+		size = {
+			72,
+			72
+		},
+		trim = {
+			30,
+			32,
+			31,
+			31
+		},
+		a_size = {
+			4096,
+			3300
+		},
+		f_quad = {
+			265,
+			1236,
+			11,
+			9
+		},
+		alias = {}
+	},
+	corrupted_ranger_arrow_particle_0005 = {
+		a_name = "go_enemies_terrain_4-1.dds",
+		size = {
+			72,
+			72
+		},
+		trim = {
+			30,
+			32,
+			32,
+			31
+		},
+		a_size = {
+			4096,
+			3300
+		},
+		f_quad = {
+			247,
+			1252,
+			10,
+			9
+		},
+		alias = {}
+	},
+	corrupted_ranger_arrow_particle_0006 = {
+		a_name = "go_enemies_terrain_4-1.dds",
+		size = {
+			72,
+			72
+		},
+		trim = {
+			30,
+			32,
+			33,
+			31
+		},
+		a_size = {
+			4096,
+			3300
+		},
+		f_quad = {
+			263,
+			1252,
+			9,
+			9
+		},
+		alias = {}
+	},
+	corrupted_ranger_arrow_particle_0007 = {
+		a_name = "go_enemies_terrain_4-1.dds",
+		size = {
+			72,
+			72
+		},
+		trim = {
+			31,
+			33,
+			33,
+			32
+		},
+		a_size = {
+			4096,
+			3300
+		},
+		f_quad = {
+			247,
+			1267,
+			8,
+			7
+		},
+		alias = {}
+	},
+	corrupted_ranger_arrow_particle_0008 = {
+		a_name = "go_enemies_terrain_4-1.dds",
+		size = {
+			72,
+			72
+		},
+		trim = {
+			31,
+			33,
+			32,
+			32
+		},
+		a_size = {
+			4096,
+			3300
+		},
+		f_quad = {
+			278,
+			1252,
+			9,
+			7
+		},
+		alias = {}
+	},
+	corrupted_ranger_arrow_particle_0009 = {
+		a_name = "go_enemies_terrain_4-1.dds",
+		size = {
+			72,
+			72
+		},
+		trim = {
+			32,
+			33,
+			34,
+			32
+		},
+		a_size = {
+			4096,
+			3300
+		},
+		f_quad = {
+			282,
+			672,
+			6,
+			7
+		},
+		alias = {}
+	},
+	corrupted_ranger_arrow_particle_0010 = {
+		a_name = "go_enemies_terrain_4-1.dds",
+		size = {
+			72,
+			72
+		},
+		trim = {
+			32,
+			33,
+			33,
+			33
+		},
+		a_size = {
+			4096,
+			3300
+		},
+		f_quad = {
+			261,
+			1267,
 			7,
 			6
 		},
 		alias = {}
 	},
-	corrupted_ranger_arrow_particle_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
-		size = {
-			36,
-			36
-		},
-		trim = {
-			14,
-			16,
-			15,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			281,
-			37,
-			7,
-			5
-		},
-		alias = {}
-	},
-	corrupted_ranger_arrow_particle_0004 = {
-		a_name = "go_enemies_terrain_4-1.png",
-		size = {
-			36,
-			36
-		},
-		trim = {
-			15,
-			16,
-			16,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			294,
-			37,
-			5,
-			5
-		},
-		alias = {}
-	},
-	corrupted_ranger_arrow_particle_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
-		size = {
-			36,
-			36
-		},
-		trim = {
-			15,
-			16,
-			16,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			305,
-			37,
-			5,
-			5
-		},
-		alias = {}
-	},
-	corrupted_ranger_arrow_particle_0006 = {
-		a_name = "go_enemies_terrain_4-1.png",
-		size = {
-			36,
-			36
-		},
-		trim = {
-			15,
-			16,
-			16,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			316,
-			37,
-			5,
-			5
-		},
-		alias = {}
-	},
-	corrupted_ranger_arrow_particle_0007 = {
-		a_name = "go_enemies_terrain_4-1.png",
-		size = {
-			36,
-			36
-		},
-		trim = {
-			15,
-			16,
-			16,
-			16
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			327,
-			37,
-			5,
-			4
-		},
-		alias = {}
-	},
-	corrupted_ranger_arrow_particle_0008 = {
-		a_name = "go_enemies_terrain_4-1.png",
-		size = {
-			36,
-			36
-		},
-		trim = {
-			16,
-			16,
-			16,
-			16
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			494,
-			35,
-			4,
-			4
-		},
-		alias = {}
-	},
-	corrupted_ranger_arrow_particle_0009 = {
-		a_name = "go_enemies_terrain_4-1.png",
-		size = {
-			36,
-			36
-		},
-		trim = {
-			16,
-			16,
-			17,
-			16
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			504,
-			35,
-			3,
-			4
-		},
-		alias = {}
-	},
-	corrupted_ranger_arrow_particle_0010 = {
-		a_name = "go_enemies_terrain_4-1.png",
-		size = {
-			36,
-			36
-		},
-		trim = {
-			16,
-			17,
-			17,
-			16
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			35,
-			3,
-			3
-		},
-		alias = {}
-	},
 	corrupted_ranger_arrow_particle_0011 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			36,
-			36
+			72,
+			72
 		},
 		trim = {
-			16,
-			17,
-			17,
-			16
+			33,
+			34,
+			34,
+			33
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			761,
-			37,
-			3,
-			3
+			255,
+			503,
+			5,
+			5
 		},
 		alias = {}
 	},
 	corrupted_ranger_arrow_particle_0012 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			36,
-			36
+			72,
+			72
 		},
 		trim = {
-			17,
-			17,
-			17,
-			17
+			35,
+			35,
+			36,
+			35
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			522,
-			35,
-			2,
+			287,
+			440,
+			1,
 			2
 		},
 		alias = {}
 	},
 	corrupted_ranger_arrow_particle_0013 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			36,
-			36
+			72,
+			72
 		},
 		trim = {
 			0,
 			0,
-			34,
-			34
+			70,
+			70
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			530,
-			40,
+			284,
+			473,
 			2,
 			2
 		},
 		alias = {}
 	},
 	corrupted_ranger_creep_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			28,
-			32,
-			27,
-			55
+			58,
+			64,
+			55,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1440,
-			182,
-			31,
-			31
+			3301,
+			2707,
+			59,
+			60
 		},
 		alias = {
 			"corrupted_ranger_creep_0090",
@@ -5707,1244 +5707,1244 @@ local a = {
 		}
 	},
 	corrupted_ranger_creep_0002 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			26,
-			36,
-			27,
-			55
+			54,
+			73,
+			56,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1847,
-			1246,
-			33,
-			27
+			3373,
+			2371,
+			62,
+			51
 		},
 		alias = {
 			"corrupted_ranger_creep_0003"
 		}
 	},
 	corrupted_ranger_creep_0004 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			28,
-			32,
-			28,
-			55
+			58,
+			64,
+			56,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1551,
-			1286,
-			30,
-			31
+			3301,
+			3053,
+			58,
+			60
 		},
 		alias = {
 			"corrupted_ranger_creep_0005"
 		}
 	},
 	corrupted_ranger_creep_0006 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			28,
-			30,
-			27,
-			55
+			58,
+			61,
+			56,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1928,
-			31,
-			33
+			3301,
+			2984,
+			58,
+			63
 		},
 		alias = {
 			"corrupted_ranger_creep_0007"
 		}
 	},
 	corrupted_ranger_creep_0008 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			28,
-			29,
-			27,
-			55
+			58,
+			59,
+			55,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1888,
-			31,
-			34
+			3301,
+			2566,
+			59,
+			65
 		},
 		alias = {}
 	},
 	corrupted_ranger_creep_0009 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			28,
-			30,
-			27,
-			55
+			58,
+			60,
+			55,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1967,
-			31,
-			33
+			3301,
+			2637,
+			59,
+			64
 		},
 		alias = {
 			"corrupted_ranger_creep_0010"
 		}
 	},
 	corrupted_ranger_creep_0011 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			28,
-			32,
-			27,
-			55
+			58,
+			64,
+			54,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			2006,
-			31,
-			31
+			4035,
+			2174,
+			60,
+			60
 		},
 		alias = {
 			"corrupted_ranger_creep_0012"
 		}
 	},
 	corrupted_ranger_creep_0013 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			26,
-			36,
-			27,
-			55
+			54,
+			73,
+			55,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1886,
-			1246,
-			33,
-			27
+			3304,
+			2371,
+			63,
+			51
 		},
 		alias = {
 			"corrupted_ranger_creep_0014"
 		}
 	},
 	corrupted_ranger_creep_0015 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			26,
-			32,
-			28,
-			55
+			53,
+			64,
+			56,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1511,
-			32,
-			31
+			3865,
+			2429,
+			63,
+			60
 		},
 		alias = {
 			"corrupted_ranger_creep_0016"
 		}
 	},
 	corrupted_ranger_creep_0017 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			26,
-			29,
-			28,
-			55
+			53,
+			59,
+			56,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2003,
-			1246,
-			32,
-			34
+			3796,
+			2429,
+			63,
+			65
 		},
 		alias = {
 			"corrupted_ranger_creep_0018"
 		}
 	},
 	corrupted_ranger_creep_0019 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			26,
-			31,
-			28,
-			55
+			52,
+			62,
+			56,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1473,
-			32,
-			32
+			3586,
+			2429,
+			64,
+			62
 		},
 		alias = {}
 	},
 	corrupted_ranger_creep_0020 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			25,
-			31,
-			28,
-			55
+			51,
+			63,
+			56,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1730,
-			1246,
-			33,
-			32
+			3302,
+			2429,
+			65,
+			61
 		},
 		alias = {
 			"corrupted_ranger_creep_0021"
 		}
 	},
 	corrupted_ranger_creep_0022 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			25,
-			35,
-			28,
-			55
+			51,
+			70,
+			56,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1808,
-			1246,
-			33,
-			28
+			3444,
+			2429,
+			65,
+			54
 		},
 		alias = {
 			"corrupted_ranger_creep_0023"
 		}
 	},
 	corrupted_ranger_creep_0024 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			27,
-			35,
-			29,
-			54
+			55,
+			72,
+			60,
+			108
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1695,
-			1286,
-			30,
-			29
+			231,
+			3019,
+			57,
+			56
 		},
 		alias = {
 			"corrupted_ranger_creep_0025"
 		}
 	},
 	corrupted_ranger_creep_0026 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			27,
-			32,
-			29,
-			55
+			55,
+			64,
+			58,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1587,
-			1286,
-			30,
-			31
+			3301,
+			2773,
+			59,
+			60
 		},
 		alias = {
 			"corrupted_ranger_creep_0027"
 		}
 	},
 	corrupted_ranger_creep_0028 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			28,
-			30,
-			29,
-			55
+			57,
+			61,
+			59,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1507,
-			1323,
-			29,
-			33
+			3301,
+			3185,
+			56,
+			63
 		},
 		alias = {
 			"corrupted_ranger_creep_0029"
 		}
 	},
 	corrupted_ranger_creep_0030 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			28,
-			30,
-			29,
-			55
+			57,
+			60,
+			58,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1542,
-			1323,
-			29,
-			33
+			231,
+			2862,
+			57,
+			64
 		},
 		alias = {
 			"corrupted_ranger_creep_0031"
 		}
 	},
 	corrupted_ranger_creep_0032 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			27,
-			32,
-			29,
-			55
+			56,
+			64,
+			58,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1623,
-			1286,
-			30,
-			31
+			3301,
+			3119,
+			58,
+			60
 		},
 		alias = {
 			"corrupted_ranger_creep_0033"
 		}
 	},
 	corrupted_ranger_creep_0034 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			28,
-			35,
-			30,
-			54
+			56,
+			72,
+			60,
+			108
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2015,
-			1286,
-			28,
-			29
+			232,
+			2798,
+			56,
+			56
 		},
 		alias = {
 			"corrupted_ranger_creep_0035"
 		}
 	},
 	corrupted_ranger_creep_0036 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			27,
-			32,
-			30,
-			54
+			55,
+			64,
+			60,
+			110
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1682,
-			1323,
-			29,
-			32
+			231,
+			2932,
+			57,
+			62
 		},
 		alias = {
 			"corrupted_ranger_creep_0037"
 		}
 	},
 	corrupted_ranger_creep_0038 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			27,
-			30,
-			30,
-			55
+			55,
+			61,
+			61,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1577,
-			1323,
-			29,
-			33
+			3366,
+			2566,
+			56,
+			63
 		},
 		alias = {
 			"corrupted_ranger_creep_0039"
 		}
 	},
 	corrupted_ranger_creep_0040 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			26,
-			28,
-			30,
-			55
+			53,
+			56,
+			61,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2018,
-			1137,
-			30,
-			35
+			455,
+			3200,
+			58,
+			68
 		},
 		alias = {
 			"corrupted_ranger_creep_0041"
 		}
 	},
 	corrupted_ranger_creep_0042 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			26,
-			30,
-			30,
-			55
+			52,
+			60,
+			60,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1401,
-			1323,
-			30,
-			33
+			4035,
+			2088,
+			60,
+			64
 		},
 		alias = {
 			"corrupted_ranger_creep_0043"
 		}
 	},
 	corrupted_ranger_creep_0044 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			29,
-			34,
-			28,
-			55
+			59,
+			69,
+			57,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1911,
-			1286,
-			29,
-			29
+			3627,
+			2501,
+			56,
+			55
 		},
 		alias = {
 			"corrupted_ranger_creep_0045"
 		}
 	},
 	corrupted_ranger_creep_0046 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			28,
-			30,
-			29,
-			55
+			58,
+			61,
+			58,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1612,
-			1323,
-			29,
-			33
+			3366,
+			2635,
+			56,
+			63
 		},
 		alias = {
 			"corrupted_ranger_creep_0047"
 		}
 	},
 	corrupted_ranger_creep_0048 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			29,
-			29,
-			29,
-			55
+			59,
+			58,
+			60,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2020,
-			490,
-			28,
-			34
+			235,
+			2501,
+			53,
+			66
 		},
 		alias = {
 			"corrupted_ranger_creep_0049"
 		}
 	},
 	corrupted_ranger_creep_0050 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			28,
-			29,
-			29,
-			55
+			58,
+			59,
+			59,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1437,
-			1323,
-			29,
-			34
+			3366,
+			2772,
+			55,
+			65
 		},
 		alias = {
 			"corrupted_ranger_creep_0051"
 		}
 	},
 	corrupted_ranger_creep_0052 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			29,
-			30,
-			30,
-			55
+			58,
+			62,
+			60,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1853,
-			1323,
-			27,
-			33
+			3366,
+			2979,
+			54,
+			62
 		},
 		alias = {
 			"corrupted_ranger_creep_0053"
 		}
 	},
 	corrupted_ranger_creep_0054 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			29,
-			34,
-			30,
-			55
+			59,
+			69,
+			61,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1886,
-			1323,
-			27,
-			29
+			235,
+			2633,
+			52,
+			55
 		},
 		alias = {
 			"corrupted_ranger_creep_0055"
 		}
 	},
 	corrupted_ranger_creep_0056 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			29,
-			30,
-			28,
-			55
+			59,
+			61,
+			58,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1647,
-			1323,
-			29,
-			33
+			3366,
+			2843,
+			55,
+			63
 		},
 		alias = {
 			"corrupted_ranger_creep_0057"
 		}
 	},
 	corrupted_ranger_creep_0058 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			29,
-			29,
-			28,
-			55
+			59,
+			58,
+			57,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1472,
-			1323,
-			29,
-			34
+			232,
+			2726,
+			56,
+			66
 		},
 		alias = {
 			"corrupted_ranger_creep_0059"
 		}
 	},
 	corrupted_ranger_creep_0060 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			29,
-			28,
-			27,
-			55
+			59,
+			56,
+			55,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1323,
-			30,
-			35
+			3301,
+			2839,
+			58,
+			68
 		},
 		alias = {
 			"corrupted_ranger_creep_0061"
 		}
 	},
 	corrupted_ranger_creep_0062 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			29,
-			29,
-			27,
-			55
+			59,
+			59,
+			55,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1365,
-			1323,
-			30,
-			34
+			3301,
+			2913,
+			58,
+			65
 		},
 		alias = {
 			"corrupted_ranger_creep_0063"
 		}
 	},
 	corrupted_ranger_creep_0064 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			25,
-			35,
-			27,
-			55
+			51,
+			71,
+			56,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1571,
-			1246,
-			34,
-			28
+			3515,
+			2429,
+			65,
+			53
 		},
 		alias = {
 			"corrupted_ranger_creep_0065"
 		}
 	},
 	corrupted_ranger_creep_0066 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			17,
-			27,
-			26,
-			55
+			36,
+			55,
+			53,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1593,
-			6,
-			43,
-			36
+			2569,
+			3055,
+			83,
+			69
 		},
 		alias = {
 			"corrupted_ranger_creep_0067"
 		}
 	},
 	corrupted_ranger_creep_0068 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			15,
-			28,
-			30,
-			55
+			31,
+			58,
+			62,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1590,
-			1016,
-			41,
-			35
+			2745,
+			3124,
+			79,
+			66
 		},
 		alias = {
 			"corrupted_ranger_creep_0069"
 		}
 	},
 	corrupted_ranger_creep_0070 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			14,
-			31,
-			30,
-			55
+			29,
+			63,
+			62,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1836,
-			6,
-			42,
-			32
+			2976,
+			1500,
+			81,
+			61
 		},
 		alias = {
 			"corrupted_ranger_creep_0071"
 		}
 	},
 	corrupted_ranger_creep_0072 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			17,
-			27,
-			26,
-			55
+			36,
+			55,
+			53,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1642,
-			6,
-			43,
-			36
+			2569,
+			3130,
+			83,
+			69
 		},
 		alias = {
 			"corrupted_ranger_creep_0073"
 		}
 	},
 	corrupted_ranger_creep_0074 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			15,
-			28,
-			30,
-			55
+			31,
+			58,
+			62,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1637,
-			1016,
-			41,
-			35
+			2745,
+			3196,
+			79,
+			66
 		},
 		alias = {
 			"corrupted_ranger_creep_0075"
 		}
 	},
 	corrupted_ranger_creep_0076 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			14,
-			31,
-			30,
-			55
+			29,
+			63,
+			62,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1884,
-			6,
-			42,
-			32
+			3075,
+			1499,
+			81,
+			61
 		},
 		alias = {
 			"corrupted_ranger_creep_0077"
 		}
 	},
 	corrupted_ranger_creep_0078 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			17,
-			27,
-			26,
-			55
+			36,
+			55,
+			53,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1691,
-			6,
-			43,
-			36
+			2569,
+			3205,
+			83,
+			69
 		},
 		alias = {
 			"corrupted_ranger_creep_0079"
 		}
 	},
 	corrupted_ranger_creep_0080 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			15,
-			28,
-			30,
-			55
+			31,
+			58,
+			62,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1684,
-			1016,
-			41,
-			35
+			2830,
+			1911,
+			79,
+			66
 		},
 		alias = {
 			"corrupted_ranger_creep_0081"
 		}
 	},
 	corrupted_ranger_creep_0082 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			14,
-			31,
-			30,
-			55
+			29,
+			63,
+			62,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1932,
-			6,
-			42,
-			32
+			3174,
+			1498,
+			81,
+			61
 		},
 		alias = {
 			"corrupted_ranger_creep_0083"
 		}
 	},
 	corrupted_ranger_creep_0084 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			14,
-			28,
 			30,
-			55
+			57,
+			62,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1788,
-			6,
-			42,
-			35
+			3570,
+			1495,
+			80,
+			67
 		},
 		alias = {
 			"corrupted_ranger_creep_0085"
 		}
 	},
 	corrupted_ranger_creep_0086 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			21,
-			27,
-			27,
-			54
+			43,
+			55,
+			54,
+			110
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1955,
-			1189,
-			38,
-			37
+			3481,
+			2088,
+			75,
+			71
 		},
 		alias = {
 			"corrupted_ranger_creep_0087"
 		}
 	},
 	corrupted_ranger_creep_0088 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			25,
-			31,
-			24,
-			55
+			51,
+			62,
+			49,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			1392,
-			37,
-			32
+			3325,
+			1911,
+			72,
+			62
 		},
 		alias = {
 			"corrupted_ranger_creep_0089"
 		}
 	},
 	corrupted_ranger_creep_0092 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			27,
-			29,
-			24,
-			55
+			56,
+			59,
+			49,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			1545,
-			35,
-			34
+			3624,
+			1911,
+			67,
+			65
 		},
 		alias = {
 			"corrupted_ranger_creep_0093"
 		}
 	},
 	corrupted_ranger_creep_0094 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			29,
-			33,
-			26,
-			55
+			59,
+			66,
+			53,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1440,
-			1286,
-			31,
-			30
+			3367,
+			2501,
+			60,
+			58
 		},
 		alias = {
 			"corrupted_ranger_creep_0095"
 		}
 	},
 	corrupted_ranger_creep_0096 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			29,
-			33,
-			25,
-			55
+			59,
+			67,
+			51,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1622,
-			32,
-			30
+			3934,
+			2429,
+			62,
+			57
 		},
 		alias = {
 			"corrupted_ranger_creep_0097",
@@ -6953,26 +6953,26 @@ local a = {
 		}
 	},
 	corrupted_ranger_creep_0100 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			21,
-			35,
-			30,
-			55
+			42,
+			70,
+			62,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			1622,
-			35,
-			28
+			3477,
+			1911,
+			68,
+			54
 		},
 		alias = {
 			"corrupted_ranger_creep_0101",
@@ -6980,986 +6980,986 @@ local a = {
 		}
 	},
 	corrupted_ranger_creep_0103 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			16,
-			33,
-			30,
-			55
+			34,
+			68,
+			62,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1250,
-			40,
-			30
+			3084,
+			1911,
+			76,
+			56
 		},
 		alias = {
 			"corrupted_ranger_creep_0104"
 		}
 	},
 	corrupted_ranger_creep_0105 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			16,
-			34,
-			30,
-			55
+			32,
+			68,
+			62,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1286,
-			40,
-			29
+			3963,
+			1502,
+			78,
+			56
 		},
 		alias = {
 			"corrupted_ranger_creep_0106"
 		}
 	},
 	corrupted_ranger_creep_0107 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			15,
-			34,
-			30,
-			55
+			32,
+			68,
+			62,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			2018,
-			41,
-			29
+			2281,
+			3244,
+			78,
+			56
 		},
 		alias = {
 			"corrupted_ranger_creep_0108"
 		}
 	},
 	corrupted_ranger_creep_0109 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			29,
-			35,
-			9,
-			55
+			59,
+			70,
+			20,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			872,
-			6,
-			48,
-			28
+			2910,
+			651,
+			93,
+			54
 		},
 		alias = {
 			"corrupted_ranger_creep_0110"
 		}
 	},
 	corrupted_ranger_creep_0111 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			29,
-			35,
-			12,
-			55
+			59,
+			70,
+			24,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1189,
-			6,
-			45,
-			28
+			3105,
+			651,
+			89,
+			54
 		},
 		alias = {
 			"corrupted_ranger_creep_0112"
 		}
 	},
 	corrupted_ranger_creep_0113 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			29,
-			35,
-			12,
-			55
+			59,
+			70,
+			25,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1240,
-			6,
-			45,
-			28
+			3295,
+			651,
+			88,
+			54
 		},
 		alias = {
 			"corrupted_ranger_creep_0114"
 		}
 	},
 	corrupted_ranger_creep_0115 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			29,
-			34,
-			18,
-			55
+			59,
+			69,
+			38,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1928,
-			1137,
-			39,
-			29
+			3166,
+			1911,
+			75,
+			55
 		},
 		alias = {
 			"corrupted_ranger_creep_0116"
 		}
 	},
 	corrupted_ranger_creep_0117 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			29,
-			32,
-			27,
-			55
+			59,
+			65,
+			54,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1659,
-			1286,
-			30,
-			31
+			3433,
+			2501,
+			59,
+			59
 		},
 		alias = {
 			"corrupted_ranger_creep_0118"
 		}
 	},
 	corrupted_ranger_creep_0119 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			28,
-			32,
-			27,
-			55
+			58,
+			64,
+			54,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1286,
-			31,
-			31
+			3231,
+			3150,
+			60,
+			60
 		},
 		alias = {
 			"corrupted_ranger_creep_0120"
 		}
 	},
 	corrupted_ranger_creep_0121 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			28,
-			35,
-			26,
-			55
+			57,
+			70,
+			53,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1693,
-			32,
-			28
+			3231,
+			3031,
+			62,
+			54
 		},
 		alias = {
 			"corrupted_ranger_creep_0122"
 		}
 	},
 	corrupted_ranger_creep_0123 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			24,
-			32,
-			27,
-			55
+			49,
+			64,
+			55,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			1585,
-			35,
-			31
+			3403,
+			1911,
+			68,
+			60
 		},
 		alias = {
 			"corrupted_ranger_creep_0124"
 		}
 	},
 	corrupted_ranger_creep_0125 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			27,
-			27,
-			24,
-			55
+			56,
+			56,
+			49,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			1503,
-			35,
-			36
+			3155,
+			3221,
+			67,
+			68
 		},
 		alias = {
 			"corrupted_ranger_creep_0126"
 		}
 	},
 	corrupted_ranger_creep_0127 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			29,
-			34,
-			25,
-			55
+			59,
+			68,
+			51,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1658,
-			32,
-			29
+			4002,
+			2429,
+			62,
+			56
 		},
 		alias = {
 			"corrupted_ranger_creep_0128"
 		}
 	},
 	corrupted_ranger_creep_0129 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			28,
-			32,
-			27,
-			55
+			58,
+			65,
+			54,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1366,
-			1286,
-			31,
-			31
+			3301,
+			2501,
+			60,
+			59
 		},
 		alias = {
 			"corrupted_ranger_creep_0130"
 		}
 	},
 	corrupted_ranger_creep_0131 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			28,
-			34,
-			25,
-			55
+			56,
+			69,
+			51,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1769,
-			1246,
-			33,
-			29
+			3373,
+			2429,
+			65,
+			55
 		},
 		alias = {
 			"corrupted_ranger_creep_0132"
 		}
 	},
 	corrupted_ranger_creep_0133 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			27,
-			35,
-			25,
-			55
+			55,
+			72,
+			50,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1611,
-			1246,
-			34,
-			28
+			3231,
+			2371,
+			67,
+			52
 		},
 		alias = {
 			"corrupted_ranger_creep_0134"
 		}
 	},
 	corrupted_ranger_creep_0135 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			23,
-			9,
-			28,
-			55
+			47,
+			20,
+			57,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			1246,
-			35,
-			54
+			3155,
+			2726,
+			68,
+			104
 		},
 		alias = {
 			"corrupted_ranger_creep_0136"
 		}
 	},
 	corrupted_ranger_creep_0137 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			23,
-			14,
-			27,
-			55
+			48,
+			28,
+			56,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			1459,
-			36,
-			49
+			3155,
+			2836,
+			68,
+			96
 		},
 		alias = {}
 	},
 	corrupted_ranger_creep_0138 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			23,
-			14,
-			27,
-			55
+			48,
+			28,
+			56,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			1514,
-			36,
-			49
+			3155,
+			2938,
+			68,
+			96
 		},
 		alias = {}
 	},
 	corrupted_ranger_creep_0139 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			20,
-			19,
-			27,
-			55
+			41,
+			38,
+			56,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1208,
-			1137,
-			39,
-			44
+			2994,
+			2682,
+			75,
+			86
 		},
 		alias = {}
 	},
 	corrupted_ranger_creep_0140 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			20,
-			19,
-			27,
-			55
+			41,
+			38,
+			56,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1253,
-			1137,
-			39,
-			44
+			2994,
+			2774,
+			75,
+			86
 		},
 		alias = {}
 	},
 	corrupted_ranger_creep_0141 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			19,
-			19,
-			26,
-			55
+			38,
+			39,
+			54,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1070,
-			1412,
-			41,
-			44
+			3968,
+			1793,
+			80,
+			85
 		},
 		alias = {}
 	},
 	corrupted_ranger_creep_0142 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			19,
-			18,
-			26,
-			55
+			38,
+			36,
+			54,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1070,
-			1361,
-			41,
-			45
+			3882,
+			1793,
+			80,
+			88
 		},
 		alias = {}
 	},
 	corrupted_ranger_creep_0143 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			22,
-			17,
-			27,
-			55
+			45,
+			35,
+			56,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			1299,
-			37,
-			46
+			3075,
+			3005,
+			71,
+			89
 		},
 		alias = {}
 	},
 	corrupted_ranger_creep_0144 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			22,
-			16,
-			27,
-			55
+			45,
+			33,
+			56,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			1246,
-			37,
-			47
+			3075,
+			2908,
+			71,
+			91
 		},
 		alias = {}
 	},
 	corrupted_ranger_creep_0145 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			25,
-			13,
-			27,
-			51
+			52,
+			28,
+			56,
+			103
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			1718,
-			34,
-			54
+			3231,
+			2501,
+			64,
+			105
 		},
 		alias = {}
 	},
 	corrupted_ranger_creep_0146 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			25,
-			11,
-			27,
-			51
+			52,
+			24,
+			56,
+			103
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			1656,
-			34,
-			56
+			224,
+			3176,
+			64,
+			109
 		},
 		alias = {}
 	},
 	corrupted_ranger_creep_0147 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			26,
-			10,
-			28,
-			52
+			53,
+			22,
+			57,
+			105
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1349,
-			32,
-			56
+			3231,
+			2801,
+			62,
+			109
 		},
 		alias = {}
 	},
 	corrupted_ranger_creep_0148 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			26,
-			10,
-			28,
-			52
+			53,
+			22,
+			57,
+			105
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1411,
-			32,
-			56
+			3231,
+			2916,
+			62,
+			109
 		},
 		alias = {}
 	},
 	corrupted_ranger_creep_0149 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			26,
-			10,
-			28,
-			51
+			53,
+			22,
+			57,
+			104
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1286,
-			32,
-			57
+			3231,
+			2685,
+			62,
+			110
 		},
 		alias = {}
 	},
 	corrupted_ranger_creep_0150 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			26,
-			46,
-			28,
-			51
+			53,
+			93,
+			57,
+			104
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1760,
-			32,
-			21
+			3669,
+			1515,
+			62,
+			39
 		},
 		alias = {}
 	},
 	corrupted_ranger_creep_0151 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			118
+			172,
+			236
 		},
 		trim = {
-			26,
-			47,
-			28,
-			51
+			53,
+			95,
+			57,
+			103
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1787,
-			32,
-			20
+			3441,
+			2371,
+			62,
+			38
 		},
 		alias = {
 			"corrupted_ranger_creep_0152"
 		}
 	},
 	deathwood_ball_fx_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			92,
-			52
+			184,
+			104
 		},
 		trim = {
-			13,
-			15,
-			39,
-			16
+			27,
+			31,
+			79,
+			32
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			2023,
-			40,
-			21
+			1982,
+			832,
+			78,
+			41
 		},
 		alias = {
 			"deathwood_ball_fx_0002"
 		}
 	},
 	deathwood_ball_fx_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			92,
-			52
+			184,
+			104
 		},
 		trim = {
-			16,
-			16,
-			41,
-			16
+			32,
+			32,
+			82,
+			33
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1715,
-			1111,
-			35,
-			20
+			2100,
+			832,
+			70,
+			39
 		},
 		alias = {
 			"deathwood_ball_fx_0004"
 		}
 	},
 	deathwood_ball_fx_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			92,
-			52
+			184,
+			104
 		},
 		trim = {
-			15,
-			16,
-			41,
-			17
+			30,
+			32,
+			82,
+			34
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1669,
-			1112,
-			36,
-			19
+			1864,
+			833,
+			72,
+			38
 		},
 		alias = {
 			"deathwood_ball_fx_0006"
 		}
 	},
 	deathwood_ball_fx_0007 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			92,
-			52
+			184,
+			104
 		},
 		trim = {
-			22,
-			15,
-			42,
-			16
+			45,
+			30,
+			84,
+			33
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1819,
-			1323,
-			28,
-			21
+			3700,
+			2371,
+			55,
+			41
 		},
 		alias = {
 			"deathwood_ball_fx_0008"
 		}
 	},
 	deathwood_ball_fx_0009 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			92,
-			52
+			184,
+			104
 		},
 		trim = {
-			20,
-			15,
-			42,
-			16
+			41,
+			31,
+			85,
+			32
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1839,
-			1286,
-			30,
-			21
+			3574,
+			2371,
+			58,
+			41
 		},
 		alias = {
 			"deathwood_ball_fx_0010"
 		}
 	},
 	deathwood_ball_fx_0011 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			92,
-			52
+			184,
+			104
 		},
 		trim = {
-			17,
-			16,
-			41,
-			16
+			35,
+			32,
+			82,
+			33
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1651,
-			1246,
-			34,
-			20
+			2218,
+			832,
+			67,
+			39
 		},
 		alias = {
 			"deathwood_ball_fx_0012"
 		}
 	},
 	deathwood_creep_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			37,
-			40,
-			48,
-			82
+			75,
+			81,
+			96,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			1277,
-			61,
-			64
+			1252,
+			1821,
+			121,
+			126
 		},
 		alias = {
 			"deathwood_creep_0002",
@@ -7972,520 +7972,520 @@ local a = {
 		}
 	},
 	deathwood_creep_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			37,
-			40,
-			48,
-			82
+			75,
+			80,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			1347,
-			61,
-			64
+			1381,
+			518,
+			120,
+			127
 		},
 		alias = {
 			"deathwood_creep_0004"
 		}
 	},
 	deathwood_creep_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			37,
-			39,
-			48,
-			82
+			76,
+			80,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			1135,
-			61,
-			65
+			2263,
+			518,
+			119,
+			127
 		},
 		alias = {
 			"deathwood_creep_0006"
 		}
 	},
 	deathwood_creep_0007 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			38,
-			39,
-			48,
-			82
+			77,
+			79,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			805,
-			60,
-			65
+			1381,
+			1443,
+			118,
+			128
 		},
 		alias = {
 			"deathwood_creep_0008"
 		}
 	},
 	deathwood_creep_0009 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			38,
-			39,
-			48,
-			82
+			77,
+			79,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			876,
-			60,
-			65
+			1381,
+			1577,
+			118,
+			128
 		},
 		alias = {
 			"deathwood_creep_0010"
 		}
 	},
 	deathwood_creep_0011 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			39,
-			38,
-			48,
-			82
+			78,
+			78,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			1512,
-			59,
-			66
+			1381,
+			2634,
+			117,
+			129
 		},
 		alias = {
 			"deathwood_creep_0012"
 		}
 	},
 	deathwood_creep_0013 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			39,
-			38,
-			48,
-			82
+			79,
+			78,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			1584,
-			59,
-			66
+			1506,
+			860,
+			116,
+			129
 		},
 		alias = {
 			"deathwood_creep_0014"
 		}
 	},
 	deathwood_creep_0015 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			39,
-			38,
-			48,
-			82
+			80,
+			77,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			1656,
-			59,
-			66
+			1506,
+			1761,
+			115,
+			130
 		},
 		alias = {
 			"deathwood_creep_0016"
 		}
 	},
 	deathwood_creep_0017 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			39,
-			38,
-			48,
-			82
+			79,
+			77,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			1728,
-			59,
-			66
+			1506,
+			724,
+			116,
+			130
 		},
 		alias = {
 			"deathwood_creep_0018"
 		}
 	},
 	deathwood_creep_0019 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			39,
-			37,
-			48,
-			82
+			78,
+			76,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			1366,
-			59,
-			67
+			1381,
+			2361,
+			117,
+			131
 		},
 		alias = {
 			"deathwood_creep_0020"
 		}
 	},
 	deathwood_creep_0021 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			39,
-			37,
-			48,
-			82
+			78,
+			75,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			1439,
-			59,
-			67
+			1381,
+			2223,
+			117,
+			132
 		},
 		alias = {
 			"deathwood_creep_0022"
 		}
 	},
 	deathwood_creep_0023 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			38,
-			37,
-			48,
-			82
+			76,
+			75,
+			96,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			732,
-			60,
-			67
+			1252,
+			3043,
+			120,
+			132
 		},
 		alias = {
 			"deathwood_creep_0024"
 		}
 	},
 	deathwood_creep_0025 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			37,
-			38,
-			47,
-			82
+			75,
+			76,
+			95,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			490,
-			62,
-			66
+			1252,
+			1007,
+			122,
+			131
 		},
 		alias = {
 			"deathwood_creep_0026"
 		}
 	},
 	deathwood_creep_0027 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			36,
-			38,
-			47,
-			82
+			73,
+			77,
+			94,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			831,
-			63,
-			66
+			1119,
+			2939,
+			125,
+			130
 		},
 		alias = {
 			"deathwood_creep_0028"
 		}
 	},
 	deathwood_creep_0029 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			35,
-			39,
-			46,
-			82
+			72,
+			78,
+			94,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			1433,
-			65,
-			65
+			1119,
+			2057,
+			126,
+			129
 		},
 		alias = {
 			"deathwood_creep_0030"
 		}
 	},
 	deathwood_creep_0031 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			35,
-			39,
-			46,
-			82
+			71,
+			80,
+			93,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			1504,
-			65,
-			65
+			984,
+			3171,
+			128,
+			127
 		},
 		alias = {
 			"deathwood_creep_0032"
 		}
 	},
 	deathwood_creep_0033 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			35,
-			40,
-			45,
-			82
+			71,
+			81,
+			92,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			875,
-			220,
-			66,
-			64
+			984,
+			728,
+			129,
+			126
 		},
 		alias = {
 			"deathwood_creep_0034"
 		}
 	},
 	deathwood_creep_0035 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			35,
-			41,
-			45,
-			82
+			70,
+			82,
+			91,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			947,
-			220,
-			66,
-			63
+			3770,
+			6,
+			131,
+			125
 		},
 		alias = {
 			"deathwood_creep_0036"
 		}
 	},
 	deathwood_creep_0037 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			35,
-			41,
-			45,
-			82
+			70,
+			82,
+			92,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1019,
-			220,
-			66,
-			63
+			843,
+			2889,
+			130,
+			125
 		},
 		alias = {
 			"deathwood_creep_0038"
 		}
 	},
 	deathwood_creep_0039 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			36,
-			40,
-			46,
-			82
+			73,
+			81,
+			94,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1133,
-			352,
-			64,
-			64
+			1252,
+			386,
+			125,
+			126
 		},
 		alias = {
 			"deathwood_creep_0040"
 		}
 	},
 	deathwood_creep_0041 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			38,
-			47,
-			82
+			86,
+			77,
+			94,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			703,
-			57,
-			66
+			1746,
+			724,
+			112,
+			130
 		},
 		alias = {
 			"deathwood_creep_0042",
@@ -8493,26 +8493,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0044 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			38,
-			47,
-			82
+			86,
+			78,
+			95,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			775,
-			57,
-			66
+			2925,
+			724,
+			111,
+			129
 		},
 		alias = {
 			"deathwood_creep_0045",
@@ -8520,26 +8520,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0047 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			39,
-			41,
-			46,
-			82
+			79,
+			82,
+			92,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			1697,
-			61,
-			63
+			1252,
+			1953,
+			121,
+			125
 		},
 		alias = {
 			"deathwood_creep_0048",
@@ -8547,26 +8547,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0050 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			37,
-			39,
-			43,
-			82
+			75,
+			80,
+			87,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			620,
-			66,
-			65
+			843,
+			2624,
+			130,
+			127
 		},
 		alias = {
 			"deathwood_creep_0051",
@@ -8574,26 +8574,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0053 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			32,
-			38,
-			41,
-			82
+			65,
+			77,
+			83,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			292,
-			73,
-			66
+			519,
+			3064,
+			144,
+			130
 		},
 		alias = {
 			"deathwood_creep_0054",
@@ -8601,26 +8601,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0056 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			31,
-			38,
-			40,
-			82
+			63,
+			78,
+			81,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1969,
-			130,
-			75,
-			66
+			519,
+			2794,
+			148,
+			129
 		},
 		alias = {
 			"deathwood_creep_0057",
@@ -8628,26 +8628,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0059 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			35,
-			40,
-			44,
-			82
+			71,
+			82,
+			88,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			1915,
-			67,
-			64
+			2251,
+			6,
+			133,
+			125
 		},
 		alias = {
 			"deathwood_creep_0060",
@@ -8655,26 +8655,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0062 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			37,
-			40,
-			47,
-			82
+			76,
+			80,
+			94,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			562,
-			62,
-			64
+			1252,
+			1144,
+			122,
+			127
 		},
 		alias = {
 			"deathwood_creep_0063",
@@ -8682,26 +8682,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0065 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			36,
-			38,
-			38,
-			82
+			73,
+			78,
+			77,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			791,
-			72,
-			66
+			694,
+			278,
+			142,
+			129
 		},
 		alias = {
 			"deathwood_creep_0066",
@@ -8709,26 +8709,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0068 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			36,
-			39,
-			39,
-			82
+			73,
+			79,
+			78,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			1291,
-			71,
-			65
+			694,
+			1486,
+			141,
+			128
 		},
 		alias = {
 			"deathwood_creep_0069",
@@ -8736,26 +8736,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0071 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			36,
-			40,
-			39,
-			82
+			73,
+			82,
+			80,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			1504,
-			71,
-			64
+			694,
+			2214,
+			139,
+			125
 		},
 		alias = {
 			"deathwood_creep_0072",
@@ -8763,26 +8763,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0074 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			36,
-			39,
-			39,
-			82
+			73,
+			80,
+			78,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			1362,
-			71,
-			65
+			694,
+			1754,
+			141,
+			127
 		},
 		alias = {
 			"deathwood_creep_0075",
@@ -8790,26 +8790,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0077 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			36,
-			38,
-			38,
-			82
+			73,
+			78,
+			77,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			863,
-			72,
-			66
+			694,
+			413,
+			142,
+			129
 		},
 		alias = {
 			"deathwood_creep_0078",
@@ -8817,26 +8817,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0080 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			37,
-			39,
-			37,
-			82
+			75,
+			79,
+			76,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			1007,
-			72,
-			65
+			694,
+			1620,
+			141,
+			128
 		},
 		alias = {
 			"deathwood_creep_0081",
@@ -8844,26 +8844,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0083 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			39,
-			41,
-			37,
-			82
+			78,
+			82,
+			75,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			1828,
-			70,
-			63
+			694,
+			2345,
+			139,
+			125
 		},
 		alias = {
 			"deathwood_creep_0084",
@@ -8871,26 +8871,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0086 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			37,
-			39,
-			37,
-			82
+			75,
+			80,
+			75,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			1078,
-			72,
-			65
+			694,
+			548,
+			142,
+			127
 		},
 		alias = {
 			"deathwood_creep_0087",
@@ -8898,26 +8898,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0089 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			37,
-			38,
-			37,
-			82
+			76,
+			78,
+			75,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			935,
-			72,
-			66
+			694,
+			1351,
+			141,
+			129
 		},
 		alias = {
 			"deathwood_creep_0090",
@@ -8925,26 +8925,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0092 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			40,
-			39,
-			38,
-			82
+			80,
+			79,
+			78,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			1367,
-			68,
-			65
+			1971,
+			6,
+			134,
+			128
 		},
 		alias = {
 			"deathwood_creep_0093",
@@ -8952,26 +8952,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0095 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			41,
-			41,
-			41,
-			82
+			83,
+			82,
+			82,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1273,
-			352,
-			64,
-			63
+			1119,
+			1797,
+			127,
+			125
 		},
 		alias = {
 			"deathwood_creep_0096",
@@ -8979,26 +8979,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0098 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			39,
-			39,
-			38,
-			82
+			78,
+			80,
+			77,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			472,
-			69,
-			65
+			694,
+			2766,
+			137,
+			127
 		},
 		alias = {
 			"deathwood_creep_0099",
@@ -9006,26 +9006,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0101 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			35,
-			38,
-			38,
-			82
+			70,
+			78,
+			77,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			364,
-			73,
-			66
+			519,
+			2929,
+			145,
+			129
 		},
 		alias = {
 			"deathwood_creep_0102",
@@ -9033,26 +9033,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0104 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			36,
-			39,
-			39,
-			82
+			74,
+			79,
+			79,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			1433,
-			71,
-			65
+			694,
+			2080,
+			139,
+			128
 		},
 		alias = {
 			"deathwood_creep_0105",
@@ -9060,26 +9060,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0107 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			39,
-			40,
-			40,
-			82
+			78,
+			82,
+			82,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			220,
-			67,
-			64
+			2390,
+			6,
+			132,
+			125
 		},
 		alias = {
 			"deathwood_creep_0108",
@@ -9087,26 +9087,26 @@ local a = {
 		}
 	},
 	deathwood_creep_0110 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			36,
-			39,
-			38,
-			82
+			73,
+			80,
+			77,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			1149,
-			72,
-			65
+			694,
+			681,
+			142,
+			127
 		},
 		alias = {
 			"deathwood_creep_0111",
@@ -9114,542 +9114,542 @@ local a = {
 		}
 	},
 	deathwood_creep_0114 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			37,
-			39,
-			48,
-			82
+			75,
+			80,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			1206,
-			61,
-			65
+			1507,
+			518,
+			120,
+			127
 		},
 		alias = {}
 	},
 	deathwood_creep_0115 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			38,
-			40,
-			48,
-			82
+			77,
+			80,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			1160,
-			60,
-			64
+			3638,
+			518,
+			118,
+			127
 		},
 		alias = {}
 	},
 	deathwood_creep_0116 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			38,
-			41,
-			47,
-			82
+			78,
+			84,
+			95,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			1766,
-			61,
-			63
+			2888,
+			518,
+			119,
+			123
 		},
 		alias = {}
 	},
 	deathwood_creep_0117 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			39,
-			43,
-			46,
-			82
+			79,
+			88,
+			93,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			1835,
-			61,
-			61
+			1252,
+			3181,
+			120,
+			119
 		},
 		alias = {}
 	},
 	deathwood_creep_0118 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			36,
-			42,
-			46,
-			82
+			73,
+			84,
+			93,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1413,
-			352,
-			64,
-			62
+			1119,
+			2590,
+			126,
+			123
 		},
 		alias = {}
 	},
 	deathwood_creep_0119 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			35,
-			40,
-			46,
-			82
+			70,
+			81,
+			92,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			1575,
-			65,
-			64
+			843,
+			2757,
+			130,
+			126
 		},
 		alias = {
 			"deathwood_creep_0120"
 		}
 	},
 	deathwood_creep_0121 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			21,
-			38,
-			48,
-			82
+			43,
+			77,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1477,
-			130,
-			77,
-			66
+			519,
+			1836,
+			152,
+			130
 		},
 		alias = {}
 	},
 	deathwood_creep_0122 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			19,
 			38,
-			48,
-			82
+			78,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1222,
-			130,
-			79,
-			66
+			519,
+			1289,
+			157,
+			129
 		},
 		alias = {}
 	},
 	deathwood_creep_0123 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			17,
-			38,
-			48,
-			82
+			35,
+			78,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			964,
-			130,
-			81,
-			66
+			519,
+			1000,
+			160,
+			129
 		},
 		alias = {}
 	},
 	deathwood_creep_0124 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			16,
-			39,
-			48,
-			82
+			32,
+			79,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			701,
-			130,
-			82,
-			65
+			519,
+			558,
+			163,
+			128
 		},
 		alias = {}
 	},
 	deathwood_creep_0125 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			15,
-			39,
-			48,
-			82
+			31,
+			79,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			524,
-			130,
-			83,
-			65
+			519,
+			424,
+			164,
+			128
 		},
 		alias = {}
 	},
 	deathwood_creep_0126 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			14,
-			39,
-			48,
-			82
+			30,
+			79,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			344,
-			130,
-			84,
-			65
+			519,
+			290,
+			165,
+			128
 		},
 		alias = {}
 	},
 	deathwood_creep_0127 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			14,
-			39,
-			48,
-			82
+			29,
+			79,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			434,
-			130,
-			84,
-			65
+			519,
+			156,
+			166,
+			128
 		},
 		alias = {}
 	},
 	deathwood_creep_0128 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			18,
-			39,
-			48,
-			82
+			38,
+			79,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1051,
-			130,
-			80,
-			65
+			519,
+			1424,
+			157,
+			128
 		},
 		alias = {}
 	},
 	deathwood_creep_0129 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			23,
-			39,
-			44,
-			82
+			47,
+			79,
+			88,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1307,
-			130,
-			79,
-			65
+			519,
+			1558,
+			157,
+			128
 		},
 		alias = {
 			"deathwood_creep_0130"
 		}
 	},
 	deathwood_creep_0131 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			31,
-			11,
-			79
+			86,
+			63,
+			23,
+			159
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1721,
-			48,
-			93,
-			76
+			294,
+			2887,
+			183,
+			150
 		},
 		alias = {
 			"deathwood_creep_0132"
 		}
 	},
 	deathwood_creep_0133 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			42,
-			9,
-			75
+			86,
+			85,
+			20,
+			151
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1620,
-			48,
-			95,
-			69
+			294,
+			2745,
+			186,
+			136
 		},
 		alias = {
 			"deathwood_creep_0134"
 		}
 	},
 	deathwood_creep_0135 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			40,
-			23,
-			71
+			86,
+			80,
+			47,
+			144
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			877,
-			130,
-			81,
-			75
+			519,
+			1135,
+			159,
+			148
 		},
 		alias = {}
 	},
 	deathwood_creep_0136 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			40,
-			38,
-			73
+			86,
+			80,
+			78,
+			147
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			385,
-			66,
-			73
+			984,
+			2592,
+			128,
+			145
 		},
 		alias = {}
 	},
 	deathwood_creep_0137 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			40,
-			44,
-			81
+			86,
+			80,
+			90,
+			163
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			947,
-			60,
-			65
+			1506,
+			995,
+			116,
+			129
 		},
 		alias = {
 			"deathwood_creep_0138"
 		}
 	},
 	deathwood_creep_0139 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			40,
-			43,
-			82
+			86,
+			81,
+			87,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			1417,
-			61,
-			64
+			2763,
+			518,
+			119,
+			126
 		},
 		alias = {
 			"deathwood_creep_0140"
 		}
 	},
 	deathwood_creep_0141 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			44,
-			41,
-			82
+			86,
+			88,
+			83,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			1246,
-			63,
-			60
+			1252,
+			646,
+			123,
+			119
 		},
 		alias = {
 			"deathwood_creep_0142",
@@ -9658,1926 +9658,1926 @@ local a = {
 		}
 	},
 	deathwood_creep_0145 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			43,
-			43,
-			82
+			86,
+			88,
+			87,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			1902,
-			61,
-			61
+			3013,
+			518,
+			119,
+			119
 		},
 		alias = {
 			"deathwood_creep_0146"
 		}
 	},
 	deathwood_creep_0147 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			36,
-			43,
-			43,
-			82
+			74,
+			87,
+			87,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			364,
-			220,
-			67,
-			61
+			3907,
+			6,
+			131,
+			120
 		},
 		alias = {}
 	},
 	deathwood_creep_0148 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			35,
-			42,
-			44,
-			82
+			71,
+			85,
+			89,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			1985,
-			67,
-			62
+			2666,
+			6,
+			132,
+			122
 		},
 		alias = {}
 	},
 	deathwood_creep_0149 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			33,
-			42,
-			45,
-			82
+			68,
+			84,
+			90,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			1438,
-			68,
-			62
+			2111,
+			6,
+			134,
+			123
 		},
 		alias = {}
 	},
 	deathwood_creep_0150 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			36,
-			40,
-			46,
-			82
+			73,
+			80,
+			94,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1203,
-			352,
-			64,
-			64
+			1119,
+			3075,
+			125,
+			127
 		},
 		alias = {}
 	},
 	deathwood_creep_0151 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			39,
-			38,
-			48,
-			82
+			78,
+			77,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			1800,
-			59,
-			66
+			1381,
+			2498,
+			117,
+			130
 		},
 		alias = {}
 	},
 	deathwood_creep_0152 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			38,
-			39,
-			48,
-			82
+			76,
+			79,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			1018,
-			60,
-			65
+			1381,
+			1138,
+			119,
+			128
 		},
 		alias = {}
 	},
 	deathwood_creep_0155 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			36,
-			41,
-			47,
-			82
+			73,
+			83,
+			96,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			903,
-			63,
-			63
+			3867,
+			386,
+			123,
+			124
 		},
 		alias = {}
 	},
 	deathwood_creep_0156 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			36,
-			42,
-			47,
-			82
+			72,
+			85,
+			95,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			1110,
-			63,
-			62
+			1383,
+			386,
+			125,
+			122
 		},
 		alias = {}
 	},
 	deathwood_creep_0157 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			36,
-			39,
-			46,
-			82
+			73,
+			79,
+			93,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1063,
-			352,
-			64,
-			65
+			1119,
+			2192,
+			126,
+			128
 		},
 		alias = {}
 	},
 	deathwood_creep_0158 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			36,
-			35,
-			45,
-			82
+			73,
+			71,
+			91,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			1358,
-			65,
-			69
+			984,
+			3029,
+			128,
+			136
 		},
 		alias = {
 			"deathwood_creep_0159"
 		}
 	},
 	deathwood_creep_0160 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			42,
-			48,
-			82
+			86,
+			85,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
 			1745,
-			56,
-			62
+			1287,
+			109,
+			122
 		},
 		alias = {}
 	},
 	deathwood_creep_0161 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			42,
-			48,
-			82
+			86,
+			85,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			1813,
-			56,
-			62
+			1745,
+			1415,
+			109,
+			122
 		},
 		alias = {}
 	},
 	deathwood_creep_0162 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			42,
-			48,
-			82
+			86,
+			86,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			1881,
-			56,
-			62
+			1745,
+			1543,
+			109,
+			121
 		},
 		alias = {}
 	},
 	deathwood_creep_0163 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			42,
-			48,
-			82
+			86,
+			86,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			1949,
-			56,
-			62
+			1745,
+			1670,
+			109,
+			121
 		},
 		alias = {}
 	},
 	deathwood_creep_0164 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			43,
-			48,
-			82
+			86,
+			87,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			622,
-			56,
-			61
+			1745,
+			1797,
+			109,
+			120
 		},
 		alias = {}
 	},
 	deathwood_creep_0165 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			43,
-			48,
-			82
+			86,
+			87,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			692,
-			622,
-			56,
-			61
+			1745,
+			1923,
+			109,
+			120
 		},
 		alias = {}
 	},
 	deathwood_creep_0166 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			43,
-			48,
-			82
+			86,
+			88,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			754,
-			622,
-			56,
-			61
+			1745,
+			2049,
+			109,
+			119
 		},
 		alias = {}
 	},
 	deathwood_creep_0167 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			43,
-			48,
-			82
+			86,
+			88,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			816,
-			622,
-			56,
-			61
+			1745,
+			2174,
+			109,
+			119
 		},
 		alias = {}
 	},
 	deathwood_creep_0168 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			44,
-			48,
-			82
+			86,
+			89,
+			96,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			878,
-			622,
-			56,
-			60
+			1628,
+			2078,
+			110,
+			118
 		},
 		alias = {}
 	},
 	deathwood_creep_0169 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			44,
-			48,
-			82
+			86,
+			89,
+			96,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			940,
-			622,
-			56,
-			60
+			1628,
+			2202,
+			110,
+			118
 		},
 		alias = {}
 	},
 	deathwood_creep_0170 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			44,
-			47,
-			82
+			86,
+			90,
+			95,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1403,
-			555,
-			57,
-			60
+			3159,
+			724,
+			111,
+			117
 		},
 		alias = {}
 	},
 	deathwood_creep_0171 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			44,
-			47,
-			82
+			86,
+			90,
+			95,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1466,
-			555,
-			57,
-			60
+			3276,
+			724,
+			111,
+			117
 		},
 		alias = {}
 	},
 	deathwood_creep_0172 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			44,
-			47,
-			82
+			86,
+			90,
+			95,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1529,
-			555,
-			57,
-			60
+			3393,
+			724,
+			111,
+			117
 		},
 		alias = {}
 	},
 	deathwood_creep_0173 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			44,
-			47,
-			82
+			86,
+			90,
+			95,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1592,
-			555,
-			57,
-			60
+			3510,
+			724,
+			111,
+			117
 		},
 		alias = {}
 	},
 	deathwood_creep_0174 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			33,
-			48,
-			82
+			86,
+			68,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			1668,
-			56,
-			71
+			1745,
+			1142,
+			109,
+			139
 		},
 		alias = {}
 	},
 	deathwood_creep_0175 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			27,
-			48,
-			82
+			86,
+			55,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			1506,
-			56,
-			77
+			1745,
+			984,
+			109,
+			152
 		},
 		alias = {}
 	},
 	deathwood_creep_0176 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			26,
-			48,
-			82
+			86,
+			52,
+			96,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			1422,
-			56,
-			78
+			1628,
+			1605,
+			110,
+			155
 		},
 		alias = {}
 	},
 	deathwood_creep_0177 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			41,
-			22,
-			45,
-			82
+			82,
+			44,
+			91,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			644,
-			60,
-			82
+			1381,
+			651,
+			119,
+			163
 		},
 		alias = {}
 	},
 	deathwood_creep_0178 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			41,
-			21,
-			45,
-			82
+			83,
+			42,
+			91,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			555,
-			60,
-			83
+			1381,
+			1272,
+			118,
+			165
 		},
 		alias = {}
 	},
 	deathwood_creep_0179 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			38,
-			15,
-			42,
-			82
+			78,
+			31,
+			85,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			290,
-			66,
-			89
+			984,
+			258,
+			129,
+			176
 		},
 		alias = {}
 	},
 	deathwood_creep_0180 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			39,
-			14,
-			42,
-			82
+			78,
+			29,
+			86,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			958,
-			65,
-			90
+			984,
+			2408,
+			128,
+			178
 		},
 		alias = {}
 	},
 	deathwood_creep_0181 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			37,
-			12,
-			40,
-			82
+			76,
+			24,
+			80,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			220,
-			69,
-			92
+			694,
+			3089,
+			136,
+			183
 		},
 		alias = {}
 	},
 	deathwood_creep_0182 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			38,
-			11,
-			40,
-			82
+			76,
+			24,
+			81,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			614,
-			68,
-			93
+			843,
+			152,
+			135,
+			183
 		},
 		alias = {}
 	},
 	deathwood_creep_0183 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			38,
-			11,
-			39,
-			82
+			76,
+			23,
+			80,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			1897,
-			69,
-			93
+			694,
+			2899,
+			136,
+			184
 		},
 		alias = {}
 	},
 	deathwood_creep_0184 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			38,
-			11,
-			40,
-			82
+			77,
+			23,
+			81,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			713,
-			68,
-			93
+			843,
+			518,
+			134,
+			184
 		},
 		alias = {}
 	},
 	deathwood_creep_0185 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			39,
-			11,
-			40,
-			82
+			79,
+			22,
+			82,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			1572,
-			67,
-			93
+			843,
+			1174,
+			131,
+			185
 		},
 		alias = {}
 	},
 	deathwood_creep_0186 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			35,
-			10,
-			41,
-			82
+			70,
+			20,
+			82,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			1574,
-			70,
-			94
+			694,
+			1887,
+			140,
+			187
 		},
 		alias = {}
 	},
 	deathwood_creep_0187 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			35,
-			41,
-			45,
-			82
+			70,
+			83,
+			90,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1091,
-			220,
-			66,
-			63
+			2528,
+			6,
+			132,
+			124
 		},
 		alias = {}
 	},
 	deathwood_creep_0188 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			33,
-			44,
-			45,
-			82
+			67,
+			90,
+			90,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			1506,
-			68,
-			60
+			1550,
+			6,
+			135,
+			117
 		},
 		alias = {
 			"deathwood_creep_0189"
 		}
 	},
 	deathwood_creep_0190 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			36,
-			42,
-			47,
-			82
+			74,
+			85,
+			95,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			1178,
-			63,
-			62
+			1252,
+			518,
+			123,
+			122
 		},
 		alias = {}
 	},
 	deathwood_creep_0191 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			38,
-			40,
-			48,
-			82
+			77,
+			81,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			1230,
-			60,
-			64
+			3762,
+			518,
+			118,
+			126
 		},
 		alias = {}
 	},
 	deathwood_creep_0192 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			39,
-			38,
-			48,
-			82
+			80,
+			78,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			1872,
-			59,
-			66
+			1506,
+			1897,
+			115,
+			129
 		},
 		alias = {}
 	},
 	deathwood_creep_0193 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			38,
-			39,
-			48,
-			82
+			77,
+			79,
+			97,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			1089,
-			60,
-			65
+			1381,
+			1711,
+			118,
+			128
 		},
 		alias = {}
 	},
 	deathwood_creep_0197 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			35,
-			43,
-			45,
-			82
+			70,
+			87,
+			91,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			220,
-			66,
-			61
+			843,
+			1955,
+			131,
+			120
 		},
 		alias = {
 			"deathwood_creep_0198"
 		}
 	},
 	deathwood_creep_0199 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			40,
-			47,
-			82
+			86,
+			81,
+			95,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			847,
-			57,
-			64
+			3042,
+			724,
+			111,
+			126
 		},
 		alias = {
 			"deathwood_creep_0200"
 		}
 	},
 	deathwood_creep_0201 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			34,
-			40,
-			43,
-			81
+			70,
+			81,
+			87,
+			162
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			543,
-			69,
-			65
+			1409,
+			6,
+			135,
+			129
 		},
 		alias = {
 			"deathwood_creep_0202"
 		}
 	},
 	deathwood_creep_0203 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			29,
-			39,
-			38,
-			77
+			60,
+			78,
+			77,
+			156
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1137,
-			130,
-			79,
-			70
+			519,
+			1692,
+			155,
+			138
 		},
 		alias = {
 			"deathwood_creep_0204"
 		}
 	},
 	deathwood_creep_0205 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			26,
-			37,
-			34,
-			76
+			54,
+			74,
+			69,
+			154
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1913,
-			48,
-			86,
-			73
+			519,
+			6,
+			169,
+			144
 		},
 		alias = {
 			"deathwood_creep_0206"
 		}
 	},
 	deathwood_creep_0207 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			26,
-			34,
-			33,
-			76
+			53,
+			68,
+			67,
+			153
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1820,
-			48,
-			87,
-			76
+			294,
+			3043,
+			172,
+			151
 		},
 		alias = {
 			"deathwood_creep_0208"
 		}
 	},
 	deathwood_creep_0209 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			32,
-			29,
-			32,
-			81
+			66,
+			59,
+			64,
+			163
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			613,
-			130,
-			82,
-			76
+			519,
+			692,
+			162,
+			150
 		},
 		alias = {
 			"deathwood_creep_0210"
 		}
 	},
 	deathwood_creep_0211 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			42,
-			20,
-			32,
-			84
+			86,
+			41,
+			65,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			630,
-			72,
-			82
+			694,
+			1184,
+			141,
+			161
 		},
 		alias = {
 			"deathwood_creep_0212"
 		}
 	},
 	deathwood_creep_0213 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			40,
-			15,
-			38,
-			84
+			80,
+			31,
+			77,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			812,
-			68,
-			87
+			843,
+			341,
+			135,
+			171
 		},
 		alias = {
 			"deathwood_creep_0214"
 		}
 	},
 	deathwood_creep_0215 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			38,
-			11,
-			36,
-			84
+			77,
+			23,
+			74,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			436,
-			72,
-			91
+			694,
+			814,
+			141,
+			179
 		},
 		alias = {}
 	},
 	deathwood_creep_0216 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			38,
-			11,
-			36,
-			84
+			77,
+			23,
+			74,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			533,
-			72,
-			91
+			694,
+			999,
+			141,
+			179
 		},
 		alias = {}
 	},
 	deathwood_creep_0217 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			12,
-			47,
-			84
+			103,
+			26,
+			94,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			861,
-			853,
-			48,
-			90
+			2180,
+			1405,
+			95,
+			176
 		},
 		alias = {}
 	},
 	deathwood_creep_0218 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			12,
-			47,
-			84
+			103,
+			26,
+			94,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			861,
-			949,
-			48,
-			90
+			2180,
+			1587,
+			95,
+			176
 		},
 		alias = {}
 	},
 	deathwood_creep_0219 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			11,
-			46,
-			84
+			103,
+			24,
+			93,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			853,
-			49,
-			91
+			2077,
+			2168,
+			96,
+			178
 		},
 		alias = {}
 	},
 	deathwood_creep_0220 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			11,
-			46,
-			84
+			103,
+			24,
+			93,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			950,
-			49,
-			91
+			2077,
+			2352,
+			96,
+			178
 		},
 		alias = {}
 	},
 	deathwood_creep_0221 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			47,
-			56,
-			84
+			103,
+			96,
+			114,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1452,
-			39,
-			55
+			2913,
+			2174,
+			75,
+			106
 		},
 		alias = {}
 	},
 	deathwood_creep_0222 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			47,
-			56,
-			84
+			103,
+			96,
+			114,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1513,
-			39,
-			55
+			2913,
+			2286,
+			75,
+			106
 		},
 		alias = {
 			"deathwood_creep_0223"
 		}
 	},
 	deathwood_creep_0224 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			47,
-			56,
-			84
+			103,
+			96,
+			114,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1574,
-			39,
-			55
+			2913,
+			2398,
+			75,
+			106
 		},
 		alias = {
 			"deathwood_creep_0225"
 		}
 	},
 	deathwood_creep_0226 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			47,
-			56,
-			84
+			103,
+			96,
+			114,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1635,
-			39,
-			55
+			2913,
+			2510,
+			75,
+			106
 		},
 		alias = {
 			"deathwood_creep_0227"
 		}
 	},
 	deathwood_creep_0228 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			47,
-			56,
-			84
+			103,
+			96,
+			114,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1696,
-			39,
-			55
+			2913,
+			2622,
+			75,
+			106
 		},
 		alias = {
 			"deathwood_creep_0229"
 		}
 	},
 	deathwood_creep_0230 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			47,
-			56,
-			84
+			103,
+			96,
+			114,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1757,
-			39,
-			55
+			2913,
+			2734,
+			75,
+			106
 		},
 		alias = {
 			"deathwood_creep_0231"
 		}
 	},
 	deathwood_creep_0232 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			61,
-			56,
-			84
+			103,
+			123,
+			114,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1478,
-			1137,
-			39,
-			41
+			3076,
+			2088,
+			75,
+			79
 		},
 		alias = {
 			"deathwood_creep_0233"
 		}
 	},
 	deathwood_creep_0234 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			61,
-			56,
-			84
+			103,
+			123,
+			114,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1523,
-			1137,
-			39,
-			41
+			3157,
+			2088,
+			75,
+			79
 		},
 		alias = {
 			"deathwood_creep_0235"
 		}
 	},
 	deathwood_creep_0236 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			60,
-			56,
-			84
+			103,
+			121,
+			114,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1433,
-			1137,
-			39,
-			42
+			2994,
+			2866,
+			75,
+			81
 		},
 		alias = {
 			"deathwood_creep_0237"
 		}
 	},
 	deathwood_creep_0238 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			65,
-			56,
-			84
+			103,
+			131,
+			114,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1748,
-			1137,
-			39,
-			37
+			3562,
+			2088,
+			75,
+			71
 		},
 		alias = {
 			"deathwood_creep_0239"
 		}
 	},
 	deathwood_creep_0240 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			79,
-			56,
-			84
+			103,
+			160,
+			114,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1807,
-			1107,
-			39,
-			23
+			2572,
+			830,
+			75,
+			42
 		},
 		alias = {
 			"deathwood_creep_0241"
 		}
 	},
 	deathwood_creep_0242 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			76,
-			56,
-			84
+			103,
+			153,
+			114,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1853,
-			1105,
-			39,
-			26
+			2679,
+			1511,
+			75,
+			49
 		},
 		alias = {
 			"deathwood_creep_0243"
 		}
 	},
 	deathwood_creep_0244 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			77,
-			56,
-			84
+			103,
+			155,
+			114,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1899,
-			1105,
-			39,
-			25
+			1971,
+			3252,
+			75,
+			47
 		},
 		alias = {
 			"deathwood_creep_0245"
 		}
 	},
 	deathwood_creep_0246 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			146,
-			186
+			292,
+			372
 		},
 		trim = {
-			51,
-			78,
-			56,
-			84
+			103,
+			157,
+			114,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1761,
-			1107,
-			39,
-			24
+			2077,
+			3253,
+			75,
+			45
 		},
 		alias = {}
 	},
 	deathwood_fx_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			78,
-			80
+			156,
+			160
 		},
 		trim = {
-			24,
-			23,
-			23,
-			26
+			49,
+			47,
+			47,
+			53
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1403,
-			1286,
-			31,
-			31
+			3231,
+			3216,
+			60,
+			60
 		},
 		alias = {
 			"deathwood_fx_0002"
 		}
 	},
 	deathwood_fx_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			78,
-			80
+			156,
+			160
 		},
 		trim = {
-			20,
-			22,
-			19,
-			19
+			42,
+			45,
+			39,
+			40
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1658,
-			1137,
-			39,
-			39
+			3319,
+			2088,
+			75,
+			75
 		},
 		alias = {
 			"deathwood_fx_0004"
 		}
 	},
 	deathwood_fx_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			78,
-			80
+			156,
+			160
 		},
 		trim = {
-			14,
-			15,
-			13,
-			14
+			28,
+			31,
+			27,
+			30
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1991,
-			51,
-			51
+			3768,
+			879,
+			101,
+			99
 		},
 		alias = {}
 	},
 	deathwood_fx_0006 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			78,
-			80
+			156,
+			160
 		},
 		trim = {
-			9,
-			10,
-			9,
-			23
+			20,
+			21,
+			20,
+			48
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1561,
-			490,
-			60,
-			47
+			1506,
+			1567,
+			116,
+			91
 		},
 		alias = {}
 	},
 	deathwood_spirit_ball_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			88
+			160,
+			176
 		},
 		trim = {
-			30,
-			34,
-			31,
-			36
+			62,
+			70,
+			64,
+			72
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1585,
-			19,
-			18
+			254,
+			555,
+			34,
+			34
 		},
 		alias = {
 			"deathwood_spirit_ball_0002",
@@ -11585,414 +11585,414 @@ local a = {
 		}
 	},
 	deathwood_spirit_ball_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			88
+			160,
+			176
 		},
 		trim = {
-			30,
-			35,
-			31,
-			36
+			61,
+			72,
+			63,
+			73
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1609,
-			19,
-			17
+			250,
+			920,
+			36,
+			31
 		},
 		alias = {
 			"deathwood_spirit_ball_0004"
 		}
 	},
 	deathwood_spirit_ball_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			88
+			160,
+			176
 		},
 		trim = {
-			30,
-			35,
-			31,
-			36
+			61,
+			71,
+			63,
+			73
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1632,
-			19,
-			17
+			250,
+			882,
+			36,
+			32
 		},
 		alias = {
 			"deathwood_spirit_ball_0006"
 		}
 	},
 	deathwood_spirit_ball_0007 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			88
+			160,
+			176
 		},
 		trim = {
-			29,
-			35,
-			31,
-			36
+			60,
+			72,
+			63,
+			73
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1511,
-			20,
-			17
+			250,
+			782,
+			37,
+			31
 		},
 		alias = {
 			"deathwood_spirit_ball_0008"
 		}
 	},
 	deathwood_spirit_ball_0009 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			88
+			160,
+			176
 		},
 		trim = {
-			29,
-			36,
-			31,
-			36
+			60,
+			73,
+			63,
+			73
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1862,
-			737,
-			20,
-			16
+			250,
+			819,
+			37,
+			30
 		},
 		alias = {
 			"deathwood_spirit_ball_0010"
 		}
 	},
 	deathwood_spirit_ball_0011 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			88
+			160,
+			176
 		},
 		trim = {
-			31,
-			36,
-			31,
-			35
+			63,
+			73,
+			63,
+			72
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1704,
-			18,
-			17
+			254,
+			635,
+			34,
+			31
 		},
 		alias = {
 			"deathwood_spirit_ball_0012"
 		}
 	},
 	deathwood_spirit_ball_0013 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			88
+			160,
+			176
 		},
 		trim = {
-			31,
-			35,
-			31,
-			35
+			63,
+			71,
+			63,
+			71
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1680,
-			18,
-			18
+			254,
+			595,
+			34,
+			34
 		},
 		alias = {
 			"deathwood_spirit_ball_0014"
 		}
 	},
 	deathwood_spirit_ball_0015 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			88
+			160,
+			176
 		},
 		trim = {
-			30,
-			34,
-			31,
-			35
+			62,
+			70,
+			64,
+			71
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1560,
-			19,
-			19
+			254,
+			514,
+			34,
+			35
 		},
 		alias = {
 			"deathwood_spirit_ball_0016"
 		}
 	},
 	deathwood_spirit_ball_0018 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			88
+			160,
+			176
 		},
 		trim = {
-			27,
-			40,
-			28,
-			36
+			56,
+			82,
+			58,
+			73
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			964,
-			202,
-			25,
-			12
+			241,
+			2060,
+			46,
+			21
 		},
 		alias = {}
 	},
 	deathwood_spirit_ball_0019 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			88
+			160,
+			176
 		},
 		trim = {
-			18,
-			17,
-			21,
-			33
+			38,
+			35,
+			43,
+			67
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1355,
-			1016,
-			41,
-			38
+			2745,
+			2671,
+			79,
+			74
 		},
 		alias = {
 			"deathwood_spirit_ball_0020"
 		}
 	},
 	deathwood_spirit_ball_0021 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			88
+			160,
+			176
 		},
 		trim = {
-			12,
-			14,
-			15,
-			28
+			26,
+			29,
+			32,
+			57
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1222,
-			53,
-			46
+			3660,
+			879,
+			102,
+			90
 		},
 		alias = {
 			"deathwood_spirit_ball_0022"
 		}
 	},
 	deathwood_spirit_ball_0023 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			88
+			160,
+			176
 		},
 		trim = {
-			9,
-			12,
-			14,
-			26
+			19,
+			24,
+			28,
+			54
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			1202,
-			57,
-			50
+			1506,
+			3202,
+			113,
+			98
 		},
 		alias = {
 			"deathwood_spirit_ball_0024"
 		}
 	},
 	deathwood_spirit_ball_0025 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			88
+			160,
+			176
 		},
 		trim = {
-			9,
-			11,
-			12,
-			25
+			20,
+			23,
+			25,
+			52
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1890,
-			490,
-			59,
-			52
+			1506,
+			2275,
+			115,
+			101
 		},
 		alias = {
 			"deathwood_spirit_ball_0026"
 		}
 	},
 	deathwood_spirit_ball_0027 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			88
+			160,
+			176
 		},
 		trim = {
-			11,
-			11,
-			13,
-			42
+			23,
+			22,
+			27,
+			86
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			344,
-			6,
-			56,
-			35
+			1628,
+			3228,
+			110,
+			68
 		},
 		alias = {
 			"deathwood_spirit_ball_0028"
 		}
 	},
 	deathwood_spirit_ball_0029 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			88
+			160,
+			176
 		},
 		trim = {
-			11,
-			11,
-			13,
-			43
+			23,
+			22,
+			27,
+			87
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			406,
-			6,
-			56,
-			34
+			1747,
+			651,
+			110,
+			67
 		},
 		alias = {
 			"deathwood_spirit_ball_0030"
 		}
 	},
 	deathwood_spirit_ball_0031 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			88
+			160,
+			176
 		},
 		trim = {
-			11,
-			10,
-			12,
-			45
+			22,
+			21,
+			26,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			218,
-			6,
-			57,
-			33
+			1629,
+			651,
+			112,
+			64
 		},
 		alias = {
 			"deathwood_spirit_ball_0032"
 		}
 	},
 	dust_cryptid_creep_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			34,
-			29,
-			34,
-			54
+			69,
+			58,
+			69,
+			109
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1070,
-			1016,
-			42,
-			41
+			2923,
+			1793,
+			82,
+			81
 		},
 		alias = {
 			"dust_cryptid_creep_0002",
@@ -12001,26 +12001,26 @@ local a = {
 		}
 	},
 	dust_cryptid_creep_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			36,
-			47,
-			34,
-			44
+			74,
+			95,
+			68,
+			89
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1137,
-			40,
-			33
+			3000,
+			1911,
+			78,
+			64
 		},
 		alias = {
 			"dust_cryptid_creep_0004",
@@ -12029,26 +12029,26 @@ local a = {
 		}
 	},
 	dust_cryptid_creep_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			40,
-			45,
-			34,
-			44
+			81,
+			91,
+			68,
+			90
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			2001,
-			36,
-			35
+			3386,
+			2284,
+			71,
+			67
 		},
 		alias = {
 			"dust_cryptid_creep_0006",
@@ -12057,26 +12057,26 @@ local a = {
 		}
 	},
 	dust_cryptid_creep_0007 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			37,
-			43,
-			34,
-			58
+			76,
+			86,
+			68,
+			118
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1945,
-			1105,
-			39,
-			23
+			2690,
+			827,
+			76,
+			44
 		},
 		alias = {
 			"dust_cryptid_creep_0008",
@@ -12085,26 +12085,26 @@ local a = {
 		}
 	},
 	dust_cryptid_creep_0009 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			29,
-			40,
-			31,
-			59
+			59,
+			81,
+			63,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			761,
-			6,
-			50,
-			25
+			2404,
+			651,
+			98,
+			48
 		},
 		alias = {
 			"dust_cryptid_creep_0010",
@@ -12113,26 +12113,26 @@ local a = {
 		}
 	},
 	dust_cryptid_creep_0011 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			34,
-			27,
-			35,
-			57
+			69,
+			56,
+			71,
+			114
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1214,
-			1016,
-			41,
-			40
+			2659,
+			2279,
+			80,
+			78
 		},
 		alias = {
 			"dust_cryptid_creep_0012",
@@ -12141,26 +12141,26 @@ local a = {
 		}
 	},
 	dust_cryptid_creep_0013 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			35,
-			27,
-			34,
-			54
+			71,
+			56,
+			70,
+			110
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1070,
-			1562,
-			41,
-			43
+			2745,
+			2583,
+			79,
+			82
 		},
 		alias = {
 			"dust_cryptid_creep_0014",
@@ -12169,1722 +12169,1722 @@ local a = {
 		}
 	},
 	dust_cryptid_creep_0029 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			32,
-			29,
-			32,
-			54
+			65,
+			59,
+			64,
+			109
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1464,
-			805,
-			46,
-			41
+			3295,
+			1213,
+			91,
+			80
 		},
 		alias = {
 			"dust_cryptid_creep_0030"
 		}
 	},
 	dust_cryptid_creep_0031 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			33,
-			48,
-			33,
-			44
+			67,
+			96,
+			67,
+			89
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1443,
-			6,
-			44,
-			32
+			3482,
+			651,
+			86,
+			63
 		},
 		alias = {
 			"dust_cryptid_creep_0032"
 		}
 	},
 	dust_cryptid_creep_0033 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			36,
-			46,
-			36,
-			44
+			74,
+			93,
+			74,
+			89
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1999,
-			1189,
-			38,
-			34
+			3247,
+			1911,
+			72,
+			66
 		},
 		alias = {
 			"dust_cryptid_creep_0034"
 		}
 	},
 	dust_cryptid_creep_0035 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			34,
-			44,
-			34,
-			58
+			70,
+			89,
+			70,
+			117
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1514,
-			100,
-			42,
-			22
+			2454,
+			830,
+			80,
+			42
 		},
 		alias = {
 			"dust_cryptid_creep_0036"
 		}
 	},
 	dust_cryptid_creep_0037 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			27,
-			42,
-			27,
-			59
+			55,
+			86,
+			55,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			468,
-			6,
-			56,
-			23
+			1863,
+			651,
+			110,
+			43
 		},
 		alias = {
 			"dust_cryptid_creep_0038"
 		}
 	},
 	dust_cryptid_creep_0039 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			32,
-			27,
-			32,
-			58
+			65,
+			56,
+			64,
+			117
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1714,
-			759,
-			46,
-			39
+			3586,
+			1213,
+			91,
+			75
 		},
 		alias = {
 			"dust_cryptid_creep_0040"
 		}
 	},
 	dust_cryptid_creep_0041 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			33,
-			27,
-			33,
-			56
+			66,
+			56,
+			66,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1669,
-			805,
-			44,
-			41
+			3514,
+			1569,
+			88,
+			79
 		},
 		alias = {
 			"dust_cryptid_creep_0042"
 		}
 	},
 	dust_cryptid_creep_0043 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			32,
-			29,
-			32,
-			54
+			64,
+			59,
+			65,
+			109
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1516,
-			805,
-			46,
-			41
+			3392,
+			1213,
+			91,
+			80
 		},
 		alias = {
 			"dust_cryptid_creep_0044"
 		}
 	},
 	dust_cryptid_creep_0045 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			33,
-			48,
-			33,
-			43
+			67,
+			96,
+			68,
+			87
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1393,
-			6,
-			44,
-			33
+			3574,
+			651,
+			85,
+			65
 		},
 		alias = {
 			"dust_cryptid_creep_0046"
 		}
 	},
 	dust_cryptid_creep_0047 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			36,
-			46,
-			37,
-			43
+			73,
+			93,
+			75,
+			87
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			1351,
-			37,
-			35
+			3880,
+			2088,
+			72,
+			68
 		},
 		alias = {
 			"dust_cryptid_creep_0048"
 		}
 	},
 	dust_cryptid_creep_0049 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			34,
-			44,
-			35,
-			58
+			69,
+			89,
+			70,
+			117
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1562,
-			100,
-			41,
-			22
+			2336,
+			831,
+			81,
+			42
 		},
 		alias = {
 			"dust_cryptid_creep_0050"
 		}
 	},
 	dust_cryptid_creep_0051 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			26,
-			40,
-			27,
-			59
+			54,
+			82,
+			55,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			281,
-			6,
-			57,
-			25
+			843,
+			3252,
+			111,
+			47
 		},
 		alias = {
 			"dust_cryptid_creep_0052"
 		}
 	},
 	dust_cryptid_creep_0053 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			32,
-			26,
-			32,
-			58
+			64,
+			53,
+			65,
+			117
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1662,
-			759,
-			46,
-			40
+			3489,
+			1213,
+			91,
+			78
 		},
 		alias = {
 			"dust_cryptid_creep_0054"
 		}
 	},
 	dust_cryptid_creep_0055 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			32,
-			26,
-			33,
-			56
+			66,
+			53,
+			67,
+			113
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1568,
-			805,
-			45,
-			42
+			2476,
+			1813,
+			87,
+			82
 		},
 		alias = {
 			"dust_cryptid_creep_0056"
 		}
 	},
 	dust_cryptid_creep_0057 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			30,
-			35,
-			36,
-			45
+			61,
+			70,
+			73,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1650,
-			909,
-			44,
-			44
+			2476,
+			2442,
+			86,
+			86
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0058 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			30,
-			34,
-			36,
-			45
+			61,
+			69,
+			73,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1600,
-			909,
-			44,
-			45
+			2476,
+			2349,
+			86,
+			87
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0059 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			30,
-			34,
-			36,
-			44
+			61,
+			69,
+			72,
+			89
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1425,
-			960,
-			44,
-			46
+			3983,
+			1569,
+			87,
+			90
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0060 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			30,
-			34,
-			35,
-			42
+			61,
+			69,
+			71,
+			85
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1071,
-			960,
-			45,
-			48
+			3044,
+			1569,
+			88,
+			94
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0061 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			30,
-			34,
-			35,
-			42
+			61,
+			69,
+			71,
+			85
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1122,
-			960,
-			45,
-			48
+			3138,
+			1569,
+			88,
+			94
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0062 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			30,
-			34,
-			33,
-			37
+			61,
+			70,
+			67,
+			74
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1033,
-			47,
-			53
+			3669,
+			1405,
+			92,
+			104
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0063 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			30,
-			35,
-			33,
-			37
+			60,
+			70,
+			67,
+			74
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1092,
-			47,
-			52
+			2580,
+			1405,
+			93,
+			104
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0064 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			30,
-			35,
-			33,
-			33
+			61,
+			71,
+			66,
+			67
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			909,
-			47,
-			56
+			2481,
+			1405,
+			93,
+			110
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0065 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			30,
-			35,
-			33,
-			33
+			60,
+			72,
+			66,
+			67
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			971,
-			47,
-			56
+			2381,
+			1405,
+			94,
+			109
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0066 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			30,
-			36,
-			32,
-			30
+			60,
+			72,
+			64,
+			61
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			861,
-			1772,
-			48,
-			58
+			2077,
+			3012,
+			96,
+			115
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0067 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			30,
-			36,
-			32,
-			30
+			60,
+			73,
+			64,
+			61
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			861,
-			1836,
-			48,
-			58
+			2077,
+			3133,
+			96,
+			114
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0068 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			30,
-			37,
-			30,
-			28
+			60,
+			74,
+			61,
+			56
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			875,
-			50,
-			59
+			1971,
+			1571,
+			99,
+			118
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0069 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			29,
-			37,
-			30,
-			28
+			59,
+			75,
+			61,
+			56
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			807,
-			689,
-			51,
-			59
+			3996,
+			386,
+			100,
+			117
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0070 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			29,
-			38,
-			30,
-			27
+			59,
+			77,
+			60,
+			54
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			864,
-			689,
-			51,
-			59
+			1860,
+			3090,
+			101,
+			117
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0071 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			29,
-			39,
-			30,
-			27
+			59,
+			78,
+			60,
+			54
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			921,
-			689,
-			51,
-			58
+			1971,
+			1091,
+			101,
+			116
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0072 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			29,
-			39,
-			29,
-			26
+			59,
+			80,
+			59,
+			52
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1421,
-			52,
-			59
+			1860,
+			2604,
+			102,
+			116
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0073 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			29,
-			41,
-			29,
-			26
+			59,
+			82,
+			59,
+			52
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1612,
-			52,
-			57
+			1860,
+			2970,
+			102,
+			114
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0074 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			28,
-			42,
-			27,
-			24
+			56,
+			84,
+			54,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1744,
-			622,
-			55,
-			58
+			1628,
+			2449,
+			110,
+			115
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0075 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			28,
-			43,
-			27,
-			24
+			56,
+			86,
+			54,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1805,
-			622,
-			55,
-			57
+			1628,
+			2570,
+			110,
+			113
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0076 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			22,
-			52,
-			21,
-			21
+			45,
+			105,
+			43,
+			42
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			802,
-			220,
-			67,
-			51
+			3632,
+			6,
+			132,
+			101
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0077 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			23,
-			52,
-			22,
-			21
+			46,
+			105,
+			44,
+			43
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1144,
-			290,
-			65,
-			51
+			984,
+			152,
+			130,
+			100
 		},
 		alias = {}
 	},
 	dust_cryptid_creep_0078 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			110,
-			124
+			220,
+			248
 		},
 		trim = {
-			22,
-			52,
-			21,
-			20
+			45,
+			104,
+			43,
+			40
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			729,
-			220,
-			67,
-			52
+			3494,
+			6,
+			132,
+			104
 		},
 		alias = {}
 	},
 	dust_cryptid_dust_fx_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			19,
-			17,
-			19,
-			45
+			39,
+			35,
+			39,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1211,
-			555,
-			58,
-			46
+			1506,
+			2776,
+			114,
+			90
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0002"
 		}
 	},
 	dust_cryptid_dust_fx_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			19,
-			17,
-			19,
-			45
+			38,
+			34,
+			38,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1275,
-			555,
-			58,
-			46
+			1506,
+			1664,
+			116,
+			91
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0004"
 		}
 	},
 	dust_cryptid_dust_fx_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			18,
-			17,
-			19,
-			45
+			37,
+			33,
+			38,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			632,
-			555,
-			59,
-			46
+			1381,
+			3202,
+			117,
+			92
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0006"
 		}
 	},
 	dust_cryptid_dust_fx_0007 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			18,
-			16,
-			18,
-			45
+			37,
+			32,
+			37,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1627,
-			490,
-			60,
-			47
+			1381,
+			1945,
+			118,
+			93
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0008"
 		}
 	},
 	dust_cryptid_dust_fx_0009 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			18,
-			15,
-			18,
-			45
+			36,
+			31,
+			37,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1363,
-			490,
-			60,
-			48
+			3513,
+			518,
+			119,
+			94
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0010"
 		}
 	},
 	dust_cryptid_dust_fx_0011 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			18,
-			15,
-			18,
-			45
+			36,
+			30,
+			36,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1429,
-			490,
-			60,
-			48
+			2137,
+			518,
+			120,
+			95
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0012"
 		}
 	},
 	dust_cryptid_dust_fx_0013 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			17,
-			14,
-			18,
-			45
+			35,
+			29,
+			36,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1871,
-			431,
-			61,
-			49
+			1252,
+			2292,
+			121,
+			96
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0014"
 		}
 	},
 	dust_cryptid_dust_fx_0015 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			17,
-			14,
-			18,
-			45
+			35,
+			28,
+			36,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1938,
-			431,
-			61,
-			49
+			1252,
+			2189,
+			121,
+			97
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0016"
 		}
 	},
 	dust_cryptid_dust_fx_0017 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			17,
-			13,
-			17,
-			45
+			35,
+			27,
+			35,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1260,
-			431,
-			62,
-			50
+			3755,
+			152,
+			122,
+			98
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0018"
 		}
 	},
 	dust_cryptid_dust_fx_0019 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			17,
-			13,
-			17,
-			45
+			34,
+			26,
+			35,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1328,
-			431,
-			62,
-			50
+			3112,
+			152,
+			123,
+			99
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0020"
 		}
 	},
 	dust_cryptid_dust_fx_0021 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			17,
-			13,
-			17,
-			46
+			35,
+			26,
+			35,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1464,
-			431,
-			62,
-			49
+			3499,
+			152,
+			122,
+			99
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0022"
 		}
 	},
 	dust_cryptid_dust_fx_0023 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			17,
-			13,
-			17,
-			45
+			35,
+			26,
+			35,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1396,
-			431,
-			62,
-			50
+			3627,
+			152,
+			122,
+			99
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0024"
 		}
 	},
 	dust_cryptid_dust_fx_0025 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			18,
-			13,
-			18,
-			45
+			36,
+			26,
+			35,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			967,
-			490,
-			60,
-			50
+			1252,
+			2084,
+			121,
+			99
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0026"
 		}
 	},
 	dust_cryptid_dust_fx_0027 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			18,
-			13,
-			18,
-			45
+			36,
+			27,
+			36,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1033,
-			490,
-			60,
-			50
+			1885,
+			518,
+			120,
+			98
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0028"
 		}
 	},
 	dust_cryptid_dust_fx_0029 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			18,
-			13,
-			18,
-			45
+			36,
+			27,
+			36,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1099,
-			490,
-			60,
-			50
+			2011,
+			518,
+			120,
+			98
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0030"
 		}
 	},
 	dust_cryptid_dust_fx_0031 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			18,
-			14,
-			18,
-			45
+			37,
+			29,
+			36,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1165,
-			490,
-			60,
-			49
+			3263,
+			518,
+			119,
+			96
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0032"
 		}
 	},
 	dust_cryptid_dust_fx_0033 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			18,
-			14,
-			18,
-			45
+			37,
+			29,
+			37,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1231,
-			490,
-			60,
-			49
+			3886,
+			518,
+			118,
+			96
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0034"
 		}
 	},
 	dust_cryptid_dust_fx_0035 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			18,
-			15,
-			18,
-			45
+			37,
+			31,
+			37,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1495,
-			490,
-			60,
-			48
+			1381,
+			1845,
+			118,
+			94
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0036"
 		}
 	},
 	dust_cryptid_dust_fx_0037 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			19,
-			16,
-			18,
-			45
+			38,
+			32,
+			37,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1955,
-			490,
-			59,
-			47
+			1381,
+			3103,
+			117,
+			93
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0038"
 		}
 	},
 	dust_cryptid_dust_fx_0039 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			19,
-			16,
-			19,
-			45
+			38,
+			33,
+			38,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1147,
-			555,
-			58,
-			47
+			1506,
+			1469,
+			116,
+			92
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0040"
 		}
 	},
 	dust_cryptid_dust_fx_0041 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			96,
-			108
+			192,
+			216
 		},
 		trim = {
-			19,
-			17,
-			19,
-			45
+			39,
+			34,
+			38,
+			91
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1339,
-			555,
-			58,
-			46
+			1506,
+			2382,
+			115,
+			91
 		},
 		alias = {
 			"dust_cryptid_dust_fx_0042"
 		}
 	},
 	dust_cryptid_modifier_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			82,
-			54
+			164,
+			108
 		},
 		trim = {
-			15,
-			16,
-			50,
-			22
+			31,
+			33,
+			101,
+			45
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			853,
-			198,
-			17,
-			16
+			255,
+			340,
+			32,
+			30
 		},
 		alias = {
 			"dust_cryptid_modifier_0002"
 		}
 	},
 	dust_cryptid_modifier_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			82,
-			54
+			164,
+			108
 		},
 		trim = {
-			14,
-			16,
-			46,
-			17
+			28,
+			33,
+			92,
+			35
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1484,
-			22,
-			21
+			243,
+			1837,
+			44,
+			40
 		},
 		alias = {
 			"dust_cryptid_modifier_0004"
 		}
 	},
 	dust_cryptid_modifier_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			82,
-			54
+			164,
+			108
 		},
 		trim = {
-			14,
-			16,
-			40,
-			15
+			28,
+			33,
+			80,
+			30
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1785,
-			1323,
-			28,
-			23
+			3638,
+			2371,
+			56,
+			45
 		},
 		alias = {
 			"dust_cryptid_modifier_0006"
 		}
 	},
 	dust_cryptid_modifier_0007 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			82,
-			54
+			164,
+			108
 		},
 		trim = {
-			18,
-			21,
-			32,
-			14
+			36,
+			43,
+			65,
+			28
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1813,
-			32,
-			19
+			2381,
+			1520,
+			63,
+			37
 		},
 		alias = {
 			"dust_cryptid_modifier_0008"
 		}
 	},
 	dust_cryptid_modifier_0009 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			82,
-			54
+			164,
+			108
 		},
 		trim = {
-			24,
-			21,
-			26,
-			14
+			48,
+			42,
+			53,
+			29
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1838,
-			32,
-			19
+			2481,
+			1521,
+			63,
+			37
 		},
 		alias = {
 			"dust_cryptid_modifier_0010"
 		}
 	},
 	dust_cryptid_modifier_0011 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			82,
-			54
+			164,
+			108
 		},
 		trim = {
-			28,
-			18,
-			21,
-			14
+			57,
+			37,
+			43,
+			28
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1925,
-			1246,
-			33,
-			22
+			3978,
+			830,
+			64,
+			43
 		},
 		alias = {
 			"dust_cryptid_modifier_0012"
 		}
 	},
 	dust_cryptid_modifier_0013 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			82,
-			54
+			164,
+			108
 		},
 		trim = {
-			30,
-			15,
-			15,
-			16
+			60,
+			31,
+			31,
+			32
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			1430,
-			37,
-			23
+			4023,
+			651,
+			73,
+			45
 		},
 		alias = {
 			"dust_cryptid_modifier_0014"
 		}
 	},
 	dust_cryptid_modifier_0015 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			82,
-			54
+			164,
+			108
 		},
 		trim = {
-			40,
-			12,
-			14,
-			18
+			80,
+			25,
+			30,
+			37
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1751,
-			1323,
-			28,
-			24
+			3821,
+			2371,
+			54,
+			46
 		},
 		alias = {
 			"dust_cryptid_modifier_0016"
 		}
 	},
 	dust_cryptid_modifier_0017 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			82,
-			54
+			164,
+			108
 		},
 		trim = {
-			47,
-			11,
-			17,
-			22
+			95,
+			23,
+			34,
+			45
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			111,
-			2010,
-			18,
-			21
+			247,
+			1144,
+			35,
+			40
 		},
 		alias = {
 			"dust_cryptid_modifier_0018"
 		}
 	},
 	dust_cryptid_modifier_0019 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			82,
-			54
+			164,
+			108
 		},
 		trim = {
-			47,
-			11,
-			21,
-			30
+			94,
+			22,
+			43,
+			61
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			410,
-			201,
-			14,
-			13
+			255,
+			409,
+			27,
+			25
 		},
 		alias = {
 			"dust_cryptid_modifier_0020"
 		}
 	},
 	dust_cryptid_modifier_0021 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			82,
-			54
+			164,
+			108
 		},
 		trim = {
 			0,
 			0,
-			80,
-			52
+			162,
+			106
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			538,
-			40,
+			284,
+			481,
 			2,
 			2
 		},
@@ -13893,26 +13893,26 @@ local a = {
 		}
 	},
 	harvester_harvester_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			52,
-			40,
-			92
+			71,
+			106,
+			81,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1475,
-			960,
-			43,
-			50
+			3293,
+			1686,
+			84,
+			97
 		},
 		alias = {
 			"harvester_harvester_0002",
@@ -13927,78 +13927,78 @@ local a = {
 		}
 	},
 	harvester_harvester_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			53,
-			40,
-			92
+			71,
+			107,
+			81,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1671,
-			960,
-			43,
-			49
+			3563,
+			1686,
+			84,
+			96
 		},
 		alias = {
 			"harvester_harvester_0027"
 		}
 	},
 	harvester_harvester_0004 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			52,
-			40,
-			92
+			71,
+			106,
+			81,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1524,
-			960,
-			43,
-			50
+			3383,
+			1686,
+			84,
+			97
 		},
 		alias = {
 			"harvester_harvester_0028"
 		}
 	},
 	harvester_harvester_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			53,
-			40,
-			92
+			71,
+			107,
+			81,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1720,
-			960,
-			43,
-			49
+			3653,
+			1686,
+			84,
+			96
 		},
 		alias = {
 			"harvester_harvester_0006",
@@ -14007,26 +14007,26 @@ local a = {
 		}
 	},
 	harvester_harvester_0007 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			51,
-			40,
-			92
+			71,
+			104,
+			81,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			1422,
-			43,
-			51
+			3023,
+			1686,
+			84,
+			99
 		},
 		alias = {
 			"harvester_harvester_0008",
@@ -14035,26 +14035,26 @@ local a = {
 		}
 	},
 	harvester_harvester_0009 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			51,
-			40,
-			92
+			71,
+			102,
+			80,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			1479,
-			43,
-			51
+			2569,
+			1686,
+			85,
+			101
 		},
 		alias = {
 			"harvester_harvester_0010",
@@ -14063,26 +14063,26 @@ local a = {
 		}
 	},
 	harvester_harvester_0011 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			50,
-			40,
-			92
+			71,
+			101,
+			80,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			1248,
-			43,
-			52
+			2476,
+			2997,
+			85,
+			102
 		},
 		alias = {
 			"harvester_harvester_0012",
@@ -14091,26 +14091,26 @@ local a = {
 		}
 	},
 	harvester_harvester_0013 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			50,
-			40,
-			92
+			71,
+			101,
+			80,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			1306,
-			43,
-			52
+			2476,
+			3105,
+			85,
+			102
 		},
 		alias = {
 			"harvester_harvester_0014",
@@ -14119,26 +14119,26 @@ local a = {
 		}
 	},
 	harvester_harvester_0015 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			49,
-			40,
-			92
+			71,
+			100,
+			81,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2005,
-			431,
-			43,
-			53
+			2569,
+			1903,
+			84,
+			103
 		},
 		alias = {
 			"harvester_harvester_0016",
@@ -14147,26 +14147,26 @@ local a = {
 		}
 	},
 	harvester_harvester_0017 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			49,
-			40,
-			92
+			71,
+			99,
+			81,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			1130,
-			43,
-			53
+			2569,
+			1793,
+			84,
+			104
 		},
 		alias = {
 			"harvester_harvester_0018",
@@ -14175,26 +14175,26 @@ local a = {
 		}
 	},
 	harvester_harvester_0019 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			50,
-			40,
-			92
+			71,
+			101,
+			81,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			1364,
-			43,
-			52
+			2569,
+			2012,
+			84,
+			102
 		},
 		alias = {
 			"harvester_harvester_0020",
@@ -14203,26 +14203,26 @@ local a = {
 		}
 	},
 	harvester_harvester_0021 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			51,
-			40,
-			92
+			71,
+			104,
+			81,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			1536,
-			43,
-			51
+			3113,
+			1686,
+			84,
+			99
 		},
 		alias = {
 			"harvester_harvester_0022",
@@ -14231,26 +14231,26 @@ local a = {
 		}
 	},
 	harvester_harvester_0023 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			52,
-			40,
-			92
+			71,
+			105,
+			81,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1573,
-			960,
-			43,
-			50
+			3203,
+			1686,
+			84,
+			98
 		},
 		alias = {
 			"harvester_harvester_0024",
@@ -14259,3556 +14259,3556 @@ local a = {
 		}
 	},
 	harvester_harvester_0049 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			45,
-			52,
-			35,
-			92
+			91,
+			106,
+			71,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1295,
-			1189,
-			38,
-			50
+			3475,
+			2174,
+			74,
+			97
 		},
 		alias = {
 			"harvester_harvester_0050"
 		}
 	},
 	harvester_harvester_0051 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			45,
-			53,
-			35,
-			92
+			91,
+			107,
+			71,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1471,
-			1189,
-			38,
-			49
+			3635,
+			2174,
+			74,
+			96
 		},
 		alias = {}
 	},
 	harvester_harvester_0052 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			45,
-			53,
-			35,
-			92
+			91,
+			107,
+			71,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1515,
-			1189,
-			38,
-			49
+			3715,
+			2174,
+			74,
+			96
 		},
 		alias = {}
 	},
 	harvester_harvester_0053 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			45,
-			53,
-			35,
-			92
+			91,
+			107,
+			71,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1559,
-			1189,
-			38,
-			49
+			3795,
+			2174,
+			74,
+			96
 		},
 		alias = {
 			"harvester_harvester_0054"
 		}
 	},
 	harvester_harvester_0055 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			45,
-			51,
-			35,
-			92
+			91,
+			104,
+			71,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			1889,
-			38,
-			51
+			3155,
+			2174,
+			74,
+			99
 		},
 		alias = {
 			"harvester_harvester_0056"
 		}
 	},
 	harvester_harvester_0057 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			45,
-			50,
-			35,
-			92
+			90,
+			102,
+			71,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			1425,
-			38,
-			52
+			2994,
+			2174,
+			75,
+			101
 		},
 		alias = {
 			"harvester_harvester_0058"
 		}
 	},
 	harvester_harvester_0059 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			45,
-			50,
-			35,
-			92
+			90,
+			101,
+			71,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			1483,
-			38,
-			52
+			2913,
+			2846,
+			75,
+			102
 		},
 		alias = {
 			"harvester_harvester_0060"
 		}
 	},
 	harvester_harvester_0061 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			45,
-			50,
-			35,
-			92
+			90,
+			101,
+			71,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			1541,
-			38,
-			52
+			2913,
+			2954,
+			75,
+			102
 		},
 		alias = {
 			"harvester_harvester_0062"
 		}
 	},
 	harvester_harvester_0063 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			45,
-			49,
-			35,
-			92
+			91,
+			99,
+			71,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			1189,
-			38,
-			53
+			2994,
+			2953,
+			74,
+			104
 		},
 		alias = {
 			"harvester_harvester_0064"
 		}
 	},
 	harvester_harvester_0065 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			45,
-			49,
-			35,
-			92
+			91,
+			99,
+			71,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			1248,
-			38,
-			53
+			2994,
+			3063,
+			74,
+			104
 		},
 		alias = {
 			"harvester_harvester_0066"
 		}
 	},
 	harvester_harvester_0067 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			45,
-			50,
-			35,
-			92
+			92,
+			101,
+			71,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			1599,
-			38,
-			52
+			3075,
+			2482,
+			73,
+			102
 		},
 		alias = {
 			"harvester_harvester_0068"
 		}
 	},
 	harvester_harvester_0069 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			45,
-			51,
-			35,
-			92
+			92,
+			104,
+			71,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			1946,
-			38,
-			51
+			3075,
+			2698,
+			73,
+			99
 		},
 		alias = {
 			"harvester_harvester_0070"
 		}
 	},
 	harvester_harvester_0071 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			45,
-			52,
-			35,
-			92
+			91,
+			105,
+			71,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1339,
-			1189,
-			38,
-			50
+			3315,
+			2174,
+			74,
+			98
 		},
 		alias = {
 			"harvester_harvester_0072"
 		}
 	},
 	harvester_harvester_0073 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			52,
-			45,
-			92
+			71,
+			106,
+			91,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1383,
-			1189,
-			38,
-			50
+			3555,
+			2174,
+			74,
+			97
 		},
 		alias = {
 			"harvester_harvester_0074"
 		}
 	},
 	harvester_harvester_0075 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			53,
-			45,
-			92
+			71,
+			107,
+			91,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1603,
-			1189,
-			38,
-			49
+			3875,
+			2174,
+			74,
+			96
 		},
 		alias = {}
 	},
 	harvester_harvester_0076 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			53,
-			45,
-			92
+			71,
+			107,
+			91,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1647,
-			1189,
-			38,
-			49
+			3955,
+			2174,
+			74,
+			96
 		},
 		alias = {}
 	},
 	harvester_harvester_0077 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			53,
-			45,
-			92
+			71,
+			107,
+			91,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1691,
-			1189,
-			38,
-			49
+			3075,
+			2284,
+			74,
+			96
 		},
 		alias = {
 			"harvester_harvester_0078"
 		}
 	},
 	harvester_harvester_0079 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			51,
-			45,
-			92
+			71,
+			104,
+			91,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			1189,
-			38,
-			51
+			3235,
+			2174,
+			74,
+			99
 		},
 		alias = {
 			"harvester_harvester_0080"
 		}
 	},
 	harvester_harvester_0081 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			50,
-			45,
-			92
+			71,
+			102,
+			90,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			1657,
-			38,
-			52
+			2994,
+			2281,
+			75,
+			101
 		},
 		alias = {
 			"harvester_harvester_0082"
 		}
 	},
 	harvester_harvester_0083 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			50,
-			45,
-			92
+			71,
+			101,
+			90,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			1715,
-			38,
-			52
+			2913,
+			3062,
+			75,
+			102
 		},
 		alias = {
 			"harvester_harvester_0084"
 		}
 	},
 	harvester_harvester_0085 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			50,
-			45,
-			92
+			71,
+			101,
+			90,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			1773,
-			38,
-			52
+			2913,
+			3170,
+			75,
+			102
 		},
 		alias = {
 			"harvester_harvester_0086"
 		}
 	},
 	harvester_harvester_0087 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			49,
-			45,
-			92
+			71,
+			99,
+			91,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			1307,
-			38,
-			53
+			2994,
+			3173,
+			74,
+			104
 		},
 		alias = {
 			"harvester_harvester_0088"
 		}
 	},
 	harvester_harvester_0089 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			49,
-			45,
-			92
+			71,
+			99,
+			91,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			1366,
-			38,
-			53
+			3075,
+			2174,
+			74,
+			104
 		},
 		alias = {
 			"harvester_harvester_0090"
 		}
 	},
 	harvester_harvester_0091 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			50,
-			45,
-			92
+			71,
+			101,
+			92,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			1831,
-			38,
-			52
+			3075,
+			2590,
+			73,
+			102
 		},
 		alias = {
 			"harvester_harvester_0092"
 		}
 	},
 	harvester_harvester_0093 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			51,
-			45,
-			92
+			71,
+			104,
+			92,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1251,
-			1189,
-			38,
-			51
+			3075,
+			2803,
+			73,
+			99
 		},
 		alias = {
 			"harvester_harvester_0094"
 		}
 	},
 	harvester_harvester_0095 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			52,
-			45,
-			92
+			71,
+			105,
+			91,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1427,
-			1189,
-			38,
-			50
+			3395,
+			2174,
+			74,
+			98
 		},
 		alias = {
 			"harvester_harvester_0096"
 		}
 	},
 	harvester_harvester_0099 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			34,
-			55,
-			39,
-			92
+			69,
+			111,
+			79,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1224,
-			960,
-			45,
-			47
+			3420,
+			1569,
+			88,
+			92
 		},
 		alias = {
 			"harvester_harvester_0100"
 		}
 	},
 	harvester_harvester_0101 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			28,
-			49,
-			46,
-			92
+			58,
+			100,
+			93,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2004,
-			689,
-			44,
-			53
+			2476,
+			2888,
+			85,
+			103
 		},
 		alias = {
 			"harvester_harvester_0102"
 		}
 	},
 	harvester_harvester_0103 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			26,
-			48,
-			46,
-			92
+			53,
+			98,
+			94,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			1466,
-			46,
-			54
+			2571,
+			1569,
+			89,
+			105
 		},
 		alias = {
 			"harvester_harvester_0104"
 		}
 	},
 	harvester_harvester_0105 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			26,
-			47,
-			46,
-			92
+			52,
+			95,
+			94,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			1283,
-			46,
-			55
+			2379,
+			2805,
+			90,
+			108
 		},
 		alias = {
 			"harvester_harvester_0106"
 		}
 	},
 	harvester_harvester_0107 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			29,
 			58,
-			38,
-			92
+			117,
+			77,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1776,
-			689,
-			51,
-			44
+			2733,
+			984,
+			101,
+			86
 		},
 		alias = {
 			"harvester_harvester_0108"
 		}
 	},
 	harvester_harvester_0109 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			46,
-			55,
-			9,
-			92
+			92,
+			112,
+			19,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			709,
-			431,
-			63,
-			47
+			2457,
+			152,
+			125,
+			91
 		},
 		alias = {
 			"harvester_harvester_0110"
 		}
 	},
 	harvester_harvester_0111 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			46,
-			42,
-			9,
-			92
+			92,
+			85,
+			19,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			1312,
-			63,
-			60
+			1514,
+			386,
+			125,
+			118
 		},
 		alias = {
 			"harvester_harvester_0112"
 		}
 	},
 	harvester_harvester_0113 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			46,
-			44,
-			9,
-			92
+			92,
+			89,
+			19,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			1506,
-			63,
-			58
+			1907,
+			386,
+			125,
+			114
 		},
 		alias = {
 			"harvester_harvester_0114"
 		}
 	},
 	harvester_harvester_0115 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			46,
-			46,
-			10,
-			92
+			92,
+			93,
+			21,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			762,
-			62,
-			56
+			1252,
+			891,
+			123,
+			110
 		},
 		alias = {
 			"harvester_harvester_0116"
 		}
 	},
 	harvester_harvester_0117 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			46,
-			44,
-			10,
-			92
+			92,
+			89,
+			21,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			698,
-			62,
-			58
+			1252,
+			771,
+			123,
+			114
 		},
 		alias = {
 			"harvester_harvester_0118"
 		}
 	},
 	harvester_harvester_0119 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			46,
-			44,
-			9,
-			92
+			92,
+			89,
+			19,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			1570,
-			63,
-			58
+			2038,
+			386,
+			125,
+			114
 		},
 		alias = {
 			"harvester_harvester_0120"
 		}
 	},
 	harvester_harvester_0121 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			46,
-			44,
-			9,
-			92
+			92,
+			89,
+			20,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			1634,
-			63,
-			58
+			3477,
+			386,
+			124,
+			114
 		},
 		alias = {
 			"harvester_harvester_0122"
 		}
 	},
 	harvester_harvester_0123 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			46,
-			56,
-			21,
-			92
+			92,
+			113,
+			43,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1605,
-			689,
-			51,
-			46
+			2626,
+			984,
+			101,
+			90
 		},
 		alias = {
 			"harvester_harvester_0124"
 		}
 	},
 	harvester_harvester_0125 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			43,
-			59,
-			32,
-			90
+			88,
+			119,
+			64,
+			181
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1700,
-			909,
-			43,
-			45
+			3923,
+			1686,
+			84,
+			88
 		},
 		alias = {
 			"harvester_harvester_0126"
 		}
 	},
 	harvester_harvester_0127 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			33,
-			54,
-			41,
-			92
+			67,
+			109,
+			84,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1325,
-			960,
-			44,
-			48
+			2660,
+			1686,
+			85,
+			94
 		},
 		alias = {
 			"harvester_harvester_0128"
 		}
 	},
 	harvester_harvester_0131 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			34,
-			55,
-			40,
-			92
+			68,
+			110,
+			80,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1375,
-			960,
-			44,
-			47
+			3326,
+			1569,
+			88,
+			93
 		},
 		alias = {
 			"harvester_harvester_0132"
 		}
 	},
 	harvester_harvester_0133 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			32,
-			56,
-			40,
-			92
+			64,
+			114,
+			81,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			1646,
-			46,
-			46
+			2379,
+			1796,
+			91,
+			89
 		},
 		alias = {
 			"harvester_harvester_0134"
 		}
 	},
 	harvester_harvester_0135 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			29,
-			58,
-			40,
-			92
+			59,
+			117,
+			80,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			1664,
-			49,
-			44
+			2077,
+			1894,
+			97,
+			86
 		},
 		alias = {
 			"harvester_harvester_0136"
 		}
 	},
 	harvester_harvester_0137 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			39,
-			54,
-			37,
-			92
+			78,
+			110,
+			75,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			1892,
-			42,
-			48
+			2569,
+			2595,
+			83,
+			93
 		},
 		alias = {
 			"harvester_harvester_0138"
 		}
 	},
 	harvester_harvester_0139 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			41,
-			46,
-			32,
-			92
+			83,
+			92,
+			64,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			1869,
-			45,
-			56
+			2476,
+			1569,
+			89,
+			111
 		},
 		alias = {
 			"harvester_harvester_0140"
 		}
 	},
 	harvester_harvester_0141 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			17,
-			37,
-			92
+			72,
+			34,
+			74,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			1052,
-			46,
-			85
+			2379,
+			2251,
+			90,
+			169
 		},
 		alias = {}
 	},
 	harvester_harvester_0142 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			16,
-			37,
-			92
+			72,
+			33,
+			74,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			960,
-			46,
-			86
+			2379,
+			2075,
+			90,
+			170
 		},
 		alias = {}
 	},
 	harvester_harvester_0143 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			34,
-			22,
-			36,
-			92
+			69,
+			45,
+			73,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			861,
-			1133,
-			48,
-			80
+			2180,
+			3102,
+			94,
+			158
 		},
 		alias = {
 			"harvester_harvester_0144"
 		}
 	},
 	harvester_harvester_0145 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			34,
-			22,
-			36,
-			92
+			70,
+			45,
+			72,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			861,
-			1219,
-			48,
-			80
+			2281,
+			1405,
+			94,
+			158
 		},
 		alias = {
 			"harvester_harvester_0146"
 		}
 	},
 	harvester_harvester_0147 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			22,
-			35,
-			92
+			71,
+			45,
+			70,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			861,
-			1305,
-			48,
-			80
+			2180,
+			2107,
+			95,
+			158
 		},
 		alias = {
 			"harvester_harvester_0148"
 		}
 	},
 	harvester_harvester_0149 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			22,
-			35,
-			92
+			72,
+			44,
+			70,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			861,
-			1391,
-			48,
-			80
+			2180,
+			2772,
+			94,
+			159
 		},
 		alias = {
 			"harvester_harvester_0150"
 		}
 	},
 	harvester_harvester_0151 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			36,
-			20,
-			34,
-			92
+			72,
+			41,
+			69,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			861,
-			1045,
-			48,
-			82
+			2180,
+			1939,
+			95,
+			162
 		},
 		alias = {
 			"harvester_harvester_0152"
 		}
 	},
 	harvester_harvester_0153 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			36,
-			19,
-			34,
-			92
+			73,
+			39,
+			68,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			1960,
-			48,
-			83
+			2180,
+			1769,
+			95,
+			164
 		},
 		alias = {
 			"harvester_harvester_0154"
 		}
 	},
 	harvester_harvester_0155 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			36,
-			18,
-			33,
-			92
+			73,
+			37,
+			67,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			1229,
-			49,
-			84
+			2077,
+			2710,
+			96,
+			166
 		},
 		alias = {
 			"harvester_harvester_0156"
 		}
 	},
 	harvester_harvester_0157 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			36,
-			17,
-			33,
-			92
+			73,
+			34,
+			66,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			1047,
-			49,
-			85
+			2077,
+			1302,
+			97,
+			169
 		},
 		alias = {
 			"harvester_harvester_0158"
 		}
 	},
 	harvester_harvester_0159 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			36,
-			17,
-			33,
-			92
+			73,
+			35,
+			67,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			1138,
-			49,
-			85
+			2077,
+			2536,
+			96,
+			168
 		},
 		alias = {
 			"harvester_harvester_0160"
 		}
 	},
 	harvester_harvester_0161 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			36,
-			22,
-			34,
-			92
+			74,
+			44,
+			68,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			861,
-			1477,
-			48,
-			80
+			2180,
+			2937,
+			94,
+			159
 		},
 		alias = {
 			"harvester_harvester_0162"
 		}
 	},
 	harvester_harvester_0163 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			41,
-			46,
-			32,
-			92
+			84,
+			92,
+			64,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			1931,
-			45,
-			56
+			2856,
+			1569,
+			88,
+			111
 		},
 		alias = {
 			"harvester_harvester_0164"
 		}
 	},
 	harvester_harvester_0165 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			39,
-			54,
-			37,
-			92
+			78,
+			108,
+			75,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			1946,
-			42,
-			48
+			4013,
+			1686,
+			83,
+			95
 		},
 		alias = {
 			"harvester_harvester_0166"
 		}
 	},
 	harvester_harvester_0167 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			55,
-			40,
-			92
+			70,
+			111,
+			81,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1867,
-			960,
-			43,
-			47
+			2842,
+			1686,
+			85,
+			92
 		},
 		alias = {
 			"harvester_harvester_0168"
 		}
 	},
 	harvester_harvester_0169 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			52,
-			40,
-			92
+			71,
+			106,
+			81,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1622,
-			960,
-			43,
-			50
+			3473,
+			1686,
+			84,
+			97
 		},
 		alias = {
 			"harvester_harvester_0170"
 		}
 	},
 	harvester_harvester_0173 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			36,
-			56,
-			39,
-			92
+			73,
+			114,
+			79,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1916,
-			960,
-			43,
-			46
+			3833,
+			1686,
+			84,
+			89
 		},
 		alias = {
 			"harvester_harvester_0174"
 		}
 	},
 	harvester_harvester_0175 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			36,
-			50,
-			43,
-			92
+			74,
+			102,
+			87,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1818,
-			39,
-			52
+			2994,
+			2388,
+			75,
+			101
 		},
 		alias = {
 			"harvester_harvester_0176"
 		}
 	},
 	harvester_harvester_0177 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			53,
-			41,
-			92
+			71,
+			107,
+			84,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			1837,
-			42,
-			49
+			3274,
+			1793,
+			81,
+			96
 		},
 		alias = {
 			"harvester_harvester_0178"
 		}
 	},
 	harvester_harvester_0179 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			36,
-			52,
-			42,
-			92
+			73,
+			104,
+			85,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1070,
+			2830,
 			1983,
-			40,
-			50
+			78,
+			99
 		},
 		alias = {
 			"harvester_harvester_0180"
 		}
 	},
 	harvester_harvester_0181 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			36,
-			52,
-			42,
-			92
+			73,
+			105,
+			85,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1301,
-			1063,
-			40,
-			50
+			2998,
+			1983,
+			78,
+			98
 		},
 		alias = {
 			"harvester_harvester_0182"
 		}
 	},
 	harvester_harvester_0183 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			36,
-			52,
-			42,
-			92
+			73,
+			106,
+			85,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1347,
-			1063,
-			40,
-			50
+			3082,
+			1983,
+			78,
+			97
 		},
 		alias = {
 			"harvester_harvester_0184"
 		}
 	},
 	harvester_harvester_0185 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			36,
-			52,
-			42,
-			92
+			73,
+			104,
+			85,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1393,
-			1063,
-			40,
-			50
+			2914,
+			1983,
+			78,
+			99
 		},
 		alias = {
 			"harvester_harvester_0186"
 		}
 	},
 	harvester_harvester_0187 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			36,
-			51,
-			39,
-			92
+			73,
+			103,
+			79,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			1593,
-			43,
-			51
+			2933,
+			1686,
+			84,
+			100
 		},
 		alias = {
 			"harvester_harvester_0188"
 		}
 	},
 	harvester_harvester_0189 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			32,
-			54,
-			35,
-			93
+			65,
+			109,
+			70,
+			186
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1548,
-			689,
-			51,
-			47
+			2519,
+			984,
+			101,
+			93
 		},
 		alias = {
 			"harvester_harvester_0190"
 		}
 	},
 	harvester_harvester_0191 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			29,
-			47,
-			33,
-			94
+			58,
+			95,
+			68,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1064,
-			622,
-			56,
-			53
+			1628,
+			2689,
+			110,
+			104
 		},
 		alias = {
 			"harvester_harvester_0192"
 		}
 	},
 	harvester_harvester_0193 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			28,
-			43,
-			32,
-			94
+			56,
+			87,
+			65,
+			189
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			891,
-			555,
-			58,
-			57
+			1506,
+			2157,
+			115,
+			112
 		},
 		alias = {
 			"harvester_harvester_0194"
 		}
 	},
 	harvester_harvester_0195 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			27,
-			41,
-			33,
-			95
+			56,
+			83,
+			67,
+			191
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			827,
-			555,
-			58,
-			58
+			1506,
+			2872,
+			113,
+			114
 		},
 		alias = {
 			"harvester_harvester_0196"
 		}
 	},
 	harvester_harvester_0197 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			27,
-			39,
-			33,
-			101
+			55,
+			80,
+			67,
+			203
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			955,
-			555,
-			58,
-			54
+			1506,
+			2665,
+			114,
+			105
 		},
 		alias = {
 			"harvester_harvester_0198"
 		}
 	},
 	harvester_harvester_0199 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			28,
-			40,
-			33,
-			102
+			56,
+			80,
+			68,
+			205
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1907,
-			555,
-			57,
-			52
+			1864,
+			724,
+			112,
+			103
 		},
 		alias = {
 			"harvester_harvester_0200"
 		}
 	},
 	harvester_harvester_0201 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			32,
-			40,
-			37,
-			106
+			64,
+			80,
+			75,
+			214
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			1610,
-			49,
-			48
+			2077,
+			1794,
+			97,
+			94
 		},
 		alias = {
 			"harvester_harvester_0202"
 		}
 	},
 	harvester_harvester_0203 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			40,
-			40,
-			38,
-			111
+			81,
+			81,
+			76,
+			223
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1669,
-			1063,
-			40,
-			43
+			2745,
+			2493,
+			79,
+			84
 		},
 		alias = {
 			"harvester_harvester_0204"
 		}
 	},
 	harvester_harvester_0205 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			50,
-			93,
-			50,
-			90
+			100,
+			187,
+			101,
+			182
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			111,
-			2037,
-			18,
-			11
+			247,
+			1072,
+			35,
+			19
 		},
 		alias = {
 			"harvester_harvester_0206"
 		}
 	},
 	harvester_harvester_0207 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			36,
-			84,
-			37,
-			86
+			72,
+			168,
+			74,
+			173
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1342,
-			6,
-			45,
-			24
+			3009,
+			651,
+			90,
+			47
 		},
 		alias = {
 			"harvester_harvester_0208"
 		}
 	},
 	harvester_harvester_0209 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			80,
-			36,
-			86
+			71,
+			160,
+			72,
+			172
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			980,
-			6,
-			47,
-			28
+			2712,
+			651,
+			93,
+			56
 		},
 		alias = {}
 	},
 	harvester_harvester_0210 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			80,
-			36,
-			86
+			71,
+			160,
+			72,
+			172
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1033,
-			6,
-			47,
-			28
+			2811,
+			651,
+			93,
+			56
 		},
 		alias = {}
 	},
 	harvester_harvester_0211 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			34,
-			68,
-			35,
-			85
+			69,
+			138,
+			71,
+			171
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1196,
-			805,
-			49,
-			41
+			2596,
+			1213,
+			96,
+			79
 		},
 		alias = {}
 	},
 	harvester_harvester_0212 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			34,
-			68,
-			35,
-			85
+			69,
+			138,
+			71,
+			171
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1251,
-			805,
-			49,
-			41
+			2698,
+			1213,
+			96,
+			79
 		},
 		alias = {}
 	},
 	harvester_harvester_0213 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			33,
-			63,
-			34,
-			85
+			67,
+			126,
+			69,
+			171
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1662,
-			689,
-			51,
-			46
+			3886,
+			1091,
+			100,
+			91
 		},
 		alias = {}
 	},
 	harvester_harvester_0214 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			33,
-			63,
-			34,
-			85
+			67,
+			126,
+			69,
+			171
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1719,
-			689,
-			51,
-			46
+			3992,
+			1091,
+			100,
+			91
 		},
 		alias = {}
 	},
 	harvester_harvester_0215 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			33,
-			51,
-			34,
-			85
+			66,
+			102,
+			68,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			978,
-			689,
-			51,
-			58
+			1860,
+			2726,
+			102,
+			116
 		},
 		alias = {}
 	},
 	harvester_harvester_0216 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			33,
-			51,
-			34,
-			85
+			66,
+			102,
+			68,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1035,
-			689,
-			51,
-			58
+			1860,
+			2848,
+			102,
+			116
 		},
 		alias = {}
 	},
 	harvester_harvester_0217 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			32,
-			41,
-			33,
-			85
+			65,
+			83,
+			66,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			764,
-			53,
-			68
+			1860,
+			1091,
+			105,
+			135
 		},
 		alias = {}
 	},
 	harvester_harvester_0218 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			32,
-			41,
-			33,
-			85
+			65,
+			83,
+			66,
+			170
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			838,
-			53,
-			68
+			1860,
+			1232,
+			105,
+			135
 		},
 		alias = {}
 	},
 	harvester_harvester_0219 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			31,
-			38,
-			32,
-			84
+			63,
+			76,
+			65,
+			169
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			854,
-			55,
-			72
+			1745,
+			2299,
+			108,
+			143
 		},
 		alias = {
 			"harvester_harvester_0220"
 		}
 	},
 	harvester_harvester_0221 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			30,
-			37,
-			32,
-			84
+			61,
+			75,
+			64,
+			168
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			1589,
-			56,
-			73
+			2808,
+			724,
+			111,
+			145
 		},
 		alias = {
 			"harvester_harvester_0222"
 		}
 	},
 	harvester_harvester_0223 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			31,
-			34,
-			32,
-			84
+			62,
+			70,
+			64,
+			169
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			772,
-			55,
-			76
+			1628,
+			1923,
+			110,
+			149
 		},
 		alias = {}
 	},
 	harvester_harvester_0224 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			30,
-			34,
-			31,
-			85
+			61,
+			70,
+			63,
+			169
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			622,
-			57,
-			75
+			1628,
+			724,
+			112,
+			149
 		},
 		alias = {}
 	},
 	harvester_harvester_0225 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			31,
-			32,
-			32,
-			85
+			62,
+			66,
+			64,
+			171
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			689,
-			55,
-			77
+			1628,
+			1766,
+			110,
+			151
 		},
 		alias = {}
 	},
 	harvester_harvester_0226 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			31,
-			32,
-			34,
-			87
+			64,
+			66,
+			69,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			1937,
-			53,
-			75
+			1860,
+			1961,
+			103,
+			147
 		},
 		alias = {}
 	},
 	harvester_harvester_0227 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			34,
-			46,
-			41,
-			93
+			68,
+			92,
+			83,
+			188
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2005,
-			48,
-			43,
-			55
+			2476,
+			2774,
+			85,
+			108
 		},
 		alias = {
 			"harvester_harvester_0228"
 		}
 	},
 	harvester_harvester_0229 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			34,
-			50,
-			41,
-			93
+			68,
+			101,
+			83,
+			188
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			1650,
-			43,
-			51
+			4011,
+			152,
+			85,
+			99
 		},
 		alias = {
 			"harvester_harvester_0230"
 		}
 	},
 	harvester_harvester_0231 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			34,
-			52,
-			40,
-			93
+			68,
+			104,
+			81,
+			188
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1275,
-			960,
-			44,
-			49
+			3890,
+			1569,
+			87,
+			96
 		},
 		alias = {
 			"harvester_harvester_0232"
 		}
 	},
 	harvester_harvester_0233 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			34,
-			51,
-			39,
-			93
+			70,
+			104,
+			80,
+			187
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			960,
-			45,
-			50
+			2476,
+			2246,
+			86,
+			97
 		},
 		alias = {
 			"harvester_harvester_0234"
 		}
 	},
 	harvester_harvester_0235 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			51,
-			42,
-			93
+			70,
+			104,
+			85,
+			187
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1070,
-			1200,
-			41,
-			50
+			3187,
+			1793,
+			81,
+			97
 		},
 		alias = {
 			"harvester_harvester_0236"
 		}
 	},
 	harvester_harvester_0237 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			118,
-			194
+			236,
+			388
 		},
 		trim = {
-			35,
-			54,
-			40,
-			92
+			71,
+			110,
+			80,
+			185
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1769,
-			960,
-			43,
-			48
+			2751,
+			1686,
+			85,
+			93
 		},
 		alias = {
 			"harvester_harvester_0238"
 		}
 	},
 	harvester_hit_fx_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			84,
-			80
+			168,
+			160
 		},
 		trim = {
-			29,
-			22,
-			27,
-			27
+			58,
+			44,
+			55,
+			55
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1981,
-			1286,
-			28,
-			31
+			3366,
+			2912,
+			55,
+			61
 		},
 		alias = {
 			"harvester_hit_fx_0002"
 		}
 	},
 	harvester_hit_fx_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			84,
-			80
+			168,
+			160
 		},
 		trim = {
-			25,
-			14,
-			19,
-			21
+			51,
+			29,
+			38,
+			43
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1577,
-			1063,
-			40,
-			45
+			2745,
+			2306,
+			79,
+			88
 		},
 		alias = {
 			"harvester_hit_fx_0004"
 		}
 	},
 	harvester_hit_fx_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			84,
-			80
+			168,
+			160
 		},
 		trim = {
-			21,
-			13,
-			15,
-			16
+			42,
+			27,
+			31,
+			32
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			861,
-			1900,
-			48,
-			51
+			2180,
+			2665,
+			95,
+			101
 		},
 		alias = {
 			"harvester_hit_fx_0006"
 		}
 	},
 	revenant_soulcaller_proy_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			19,
-			23,
-			21,
-			24
+			38,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1553,
-			412,
-			24,
-			13
+			240,
+			2261,
+			48,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0002 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			17,
-			23,
-			21,
-			24
+			36,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			557,
-			201,
-			26,
-			13
+			2137,
+			619,
+			50,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			17,
-			23,
-			21,
-			24
+			36,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			701,
-			201,
-			26,
-			13
+			2193,
+			619,
+			50,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0004 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			17,
-			23,
-			21,
-			24
+			34,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			733,
-			201,
-			26,
-			13
+			235,
+			2694,
+			52,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			17,
-			23,
-			21,
-			24
+			34,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1051,
-			201,
-			26,
-			13
+			3140,
+			118,
+			52,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0006 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			16,
-			23,
-			21,
-			24
+			33,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2005,
-			109,
-			27,
-			13
+			235,
+			2573,
+			53,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0007 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			16,
-			23,
-			21,
-			24
+			33,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			344,
-			201,
-			27,
-			13
+			235,
+			2603,
+			53,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0008 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			16,
-			23,
-			21,
-			24
+			32,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			377,
-			201,
-			27,
-			13
+			455,
+			3274,
+			54,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0009 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			16,
-			23,
-			21,
-			24
+			32,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			434,
-			201,
-			27,
-			13
+			2942,
+			118,
+			54,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0010 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			16,
-			23,
-			21,
-			24
+			32,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			467,
-			201,
-			27,
-			13
+			3002,
+			118,
+			54,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0011 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			16,
-			23,
-			21,
-			24
+			32,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			524,
-			201,
-			27,
-			13
+			3080,
+			118,
+			54,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0012 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			19,
-			23,
-			21,
-			24
+			38,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1583,
-			412,
-			24,
-			13
+			240,
+			2291,
+			48,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0013 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			19,
-			23,
-			21,
-			24
+			38,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1623,
-			411,
-			24,
-			13
+			240,
+			2321,
+			48,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0014 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			18,
-			23,
-			21,
-			24
+			37,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1339,
-			201,
-			25,
-			13
+			3263,
+			620,
+			49,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0015 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			18,
-			23,
-			21,
-			24
+			37,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			323,
-			2032,
-			25,
-			13
+			3318,
+			620,
+			49,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0016 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			17,
-			23,
-			21,
-			24
+			35,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1083,
-			201,
-			26,
-			13
+			3356,
+			116,
+			51,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0017 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			17,
-			23,
-			21,
-			24
+			35,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1307,
-			201,
-			26,
-			13
+			3413,
+			116,
+			51,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0018 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			19,
-			23,
-			21,
-			24
+			38,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1653,
-			411,
-			24,
-			13
+			240,
+			2373,
+			48,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0019 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			19,
-			23,
-			21,
-			24
+			38,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1693,
-			411,
-			24,
-			13
+			240,
+			2403,
+			48,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0020 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			19,
-			23,
-			21,
-			24
+			38,
+			47,
+			42,
+			49
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1723,
-			411,
-			24,
-			13
+			240,
+			2433,
+			48,
+			24
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0021 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			15,
-			11,
-			15,
-			15
+			32,
+			23,
+			31,
+			31
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1371,
-			1246,
-			34,
-			34
+			3231,
+			2429,
+			65,
+			66
 		},
 		alias = {
 			"revenant_soulcaller_proy_0022"
 		}
 	},
 	revenant_soulcaller_proy_0023 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			15,
-			14,
-			19,
-			19
+			31,
+			29,
+			38,
+			39
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1767,
-			1286,
-			30,
-			27
+			3509,
+			2371,
+			59,
+			52
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0024 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			15,
-			12,
-			19,
-			19
+			31,
+			25,
+			38,
+			39
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1731,
-			1286,
-			30,
-			29
+			3498,
+			2501,
+			59,
+			56
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0025 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			13,
-			12,
-			19,
-			17
+			26,
+			25,
+			38,
+			34
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1548,
-			32,
-			31
+			3726,
+			2429,
+			64,
+			61
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0026 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			13,
-			12,
-			19,
-			17
+			26,
+			24,
+			38,
+			34
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1585,
-			32,
-			31
+			3656,
+			2429,
+			64,
+			62
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0027 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			10,
-			12,
-			15,
-			14
+			22,
+			24,
+			31,
+			29
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1883,
-			1137,
-			39,
-			34
+			2830,
+			3232,
+			75,
+			67
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0028 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			10,
-			10,
-			15,
-			14
+			22,
+			22,
+			31,
+			29
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1838,
-			1137,
-			39,
-			36
+			3643,
+			2088,
+			75,
+			69
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0029 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			10,
-			10,
-			14,
-			14
+			21,
+			22,
+			29,
+			28
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1899,
-			1063,
-			40,
-			36
+			3670,
+			1983,
+			78,
+			70
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0030 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			10,
-			11,
-			14,
-			14
+			21,
+			24,
+			29,
+			28
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1991,
-			1063,
-			40,
-			35
+			3838,
+			1983,
+			78,
+			68
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0031 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			9,
-			11,
-			14,
-			13
+			20,
+			24,
+			29,
+			27
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1449,
-			1016,
-			41,
-			36
+			2745,
+			2828,
+			79,
+			69
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0032 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			9,
-			12,
-			14,
-			13
+			20,
+			25,
+			29,
+			27
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1731,
-			1016,
-			41,
-			35
+			2745,
+			2903,
+			79,
+			68
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0033 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			9,
-			12,
-			14,
-			13
+			20,
+			25,
+			29,
+			27
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1778,
-			1016,
-			41,
-			35
+			2745,
+			2977,
+			79,
+			68
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0034 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			9,
-			13,
-			14,
-			13
+			20,
+			27,
+			29,
+			27
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			861,
-			2014,
-			41,
-			34
+			2915,
+			1911,
+			79,
+			66
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0035 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			15,
-			13,
-			19,
-			20
+			31,
+			27,
+			39,
+			40
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1803,
-			1286,
-			30,
-			27
+			3563,
+			2501,
+			58,
+			53
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0036 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
-			20,
-			15,
-			19,
-			20
+			40,
+			31,
+			39,
+			40
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2015,
-			1323,
-			25,
-			25
+			4047,
+			2284,
+			49,
+			49
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_0037 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			60
+			128,
+			120
 		},
 		trim = {
 			0,
 			0,
-			62,
-			58
+			126,
+			118
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			546,
-			40,
+			284,
+			489,
 			2,
 			2
 		},
@@ -17817,170 +17817,170 @@ local a = {
 		}
 	},
 	revenant_soulcaller_proy_copy_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			44,
-			42
+			88,
+			84
 		},
 		trim = {
-			15,
-			14,
-			14,
-			14
+			31,
+			29,
+			30,
+			28
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1792,
-			411,
-			15,
-			14
+			257,
+			244,
+			27,
+			27
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_copy_0002 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			44,
-			42
+			88,
+			84
 		},
 		trim = {
-			15,
-			14,
-			14,
-			14
+			31,
+			29,
+			30,
+			28
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1833,
-			411,
-			15,
-			14
+			255,
+			376,
+			27,
+			27
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_copy_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			44,
-			42
+			88,
+			84
 		},
 		trim = {
-			15,
-			14,
-			14,
-			13
+			30,
+			28,
+			28,
+			27
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2033,
-			555,
-			15,
-			15
+			257,
+			120,
+			30,
+			29
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_copy_0004 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			44,
-			42
+			88,
+			84
 		},
 		trim = {
-			15,
-			14,
-			14,
-			13
+			30,
+			28,
+			28,
+			27
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2033,
-			576,
-			15,
-			15
+			257,
+			155,
+			30,
+			29
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_copy_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			44,
-			42
+			88,
+			84
 		},
 		trim = {
-			17,
-			15,
-			16,
-			15
+			34,
+			32,
+			32,
+			31
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			589,
-			201,
-			11,
-			12
+			254,
+			672,
+			22,
+			21
 		},
 		alias = {}
 	},
 	revenant_soulcaller_proy_copy_0006 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			44,
-			42
+			88,
+			84
 		},
 		trim = {
-			17,
-			15,
-			16,
-			15
+			34,
+			32,
+			32,
+			31
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			765,
-			201,
-			11,
-			12
+			254,
+			699,
+			22,
+			21
 		},
 		alias = {}
 	},
 	revenant_soulcaller_stuntower_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			130,
-			134
+			260,
+			268
 		},
 		trim = {
-			9,
-			20,
-			10,
-			49
+			19,
+			40,
+			21,
+			98
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			1660,
-			111,
-			65
+			2726,
+			220,
+			130
 		},
 		alias = {
 			"revenant_soulcaller_stuntower_0002",
@@ -17989,26 +17989,26 @@ local a = {
 		}
 	},
 	revenant_soulcaller_stuntower_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			130,
-			134
+			260,
+			268
 		},
 		trim = {
-			9,
-			12,
-			10,
-			49
+			20,
+			25,
+			21,
+			98
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			6,
-			1430,
-			111,
-			73
+			294,
+			1104,
+			219,
+			145
 		},
 		alias = {
 			"revenant_soulcaller_stuntower_0004",
@@ -18017,26 +18017,26 @@ local a = {
 		}
 	},
 	revenant_soulcaller_stuntower_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			130,
-			134
+			260,
+			268
 		},
 		trim = {
-			10,
-			10,
-			10,
-			49
+			20,
+			20,
+			21,
+			98
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			831,
-			48,
-			110,
-			75
+			294,
+			948,
+			219,
+			150
 		},
 		alias = {
 			"revenant_soulcaller_stuntower_0006",
@@ -18045,26 +18045,26 @@ local a = {
 		}
 	},
 	revenant_soulcaller_stuntower_0007 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			130,
-			134
+			260,
+			268
 		},
 		trim = {
-			10,
-			9,
-			10,
-			49
+			20,
+			19,
+			21,
+			98
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			1846,
-			110,
-			76
+			2862,
+			219,
+			151
 		},
 		alias = {
 			"revenant_soulcaller_stuntower_0008",
@@ -18073,26 +18073,26 @@ local a = {
 		}
 	},
 	revenant_soulcaller_stuntower_0009 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			130,
-			134
+			260,
+			268
 		},
 		trim = {
-			10,
-			9,
-			10,
-			49
+			20,
+			19,
+			21,
+			98
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			1928,
-			110,
-			76
+			3019,
+			219,
+			151
 		},
 		alias = {
 			"revenant_soulcaller_stuntower_0010",
@@ -18101,26 +18101,26 @@ local a = {
 		}
 	},
 	revenant_soulcaller_stuntower_0011 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			130,
-			134
+			260,
+			268
 		},
 		trim = {
-			10,
-			9,
-			10,
-			49
+			20,
+			19,
+			21,
+			98
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			48,
-			110,
-			76
+			294,
+			6,
+			219,
+			151
 		},
 		alias = {
 			"revenant_soulcaller_stuntower_0012",
@@ -18129,26 +18129,26 @@ local a = {
 		}
 	},
 	revenant_soulcaller_stuntower_0013 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			130,
-			134
+			260,
+			268
 		},
 		trim = {
-			10,
-			9,
-			10,
-			49
+			20,
+			19,
+			21,
+			98
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			251,
-			48,
-			110,
-			76
+			294,
+			163,
+			219,
+			151
 		},
 		alias = {
 			"revenant_soulcaller_stuntower_0014",
@@ -18157,26 +18157,26 @@ local a = {
 		}
 	},
 	revenant_soulcaller_stuntower_0015 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			130,
-			134
+			260,
+			268
 		},
 		trim = {
-			10,
-			9,
-			10,
-			49
+			20,
+			19,
+			21,
+			98
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			367,
-			48,
-			110,
-			76
+			294,
+			320,
+			219,
+			151
 		},
 		alias = {
 			"revenant_soulcaller_stuntower_0016",
@@ -18185,26 +18185,26 @@ local a = {
 		}
 	},
 	revenant_soulcaller_stuntower_0017 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			130,
-			134
+			260,
+			268
 		},
 		trim = {
-			10,
-			9,
-			10,
-			49
+			20,
+			19,
+			21,
+			98
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			483,
-			48,
-			110,
-			76
+			294,
+			477,
+			219,
+			151
 		},
 		alias = {
 			"revenant_soulcaller_stuntower_0018",
@@ -18213,26 +18213,26 @@ local a = {
 		}
 	},
 	revenant_soulcaller_stuntower_0019 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			130,
-			134
+			260,
+			268
 		},
 		trim = {
-			10,
-			9,
-			10,
-			49
+			20,
+			19,
+			21,
+			98
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			599,
-			48,
-			110,
-			76
+			294,
+			634,
+			219,
+			151
 		},
 		alias = {
 			"revenant_soulcaller_stuntower_0020",
@@ -18241,26 +18241,26 @@ local a = {
 		}
 	},
 	revenant_soulcaller_stuntower_0021 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			130,
-			134
+			260,
+			268
 		},
 		trim = {
-			10,
-			9,
-			10,
-			49
+			20,
+			19,
+			21,
+			98
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			715,
-			48,
-			110,
-			76
+			294,
+			791,
+			219,
+			151
 		},
 		alias = {
 			"revenant_soulcaller_stuntower_0022",
@@ -18272,488 +18272,488 @@ local a = {
 		}
 	},
 	revenant_soulcaller_stuntower_0048 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			130,
-			134
+			260,
+			268
 		},
 		trim = {
-			10,
 			20,
-			10,
-			49
+			40,
+			21,
+			98
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			947,
-			48,
-			110,
-			65
+			294,
+			1541,
+			219,
+			130
 		},
 		alias = {
 			"revenant_soulcaller_stuntower_0049"
 		}
 	},
 	revenant_soulcaller_stuntower_0050 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			130,
-			134
+			260,
+			268
 		},
 		trim = {
-			10,
 			20,
-			10,
-			49
+			40,
+			21,
+			98
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1063,
-			48,
-			110,
-			65
+			294,
+			1677,
+			219,
+			130
 		},
 		alias = {
 			"revenant_soulcaller_stuntower_0051"
 		}
 	},
 	revenant_soulcaller_stuntower_0052 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			130,
-			134
+			260,
+			268
 		},
 		trim = {
-			10,
-			20,
-			11,
-			49
+			21,
+			41,
+			22,
+			99
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1179,
-			48,
-			109,
-			65
+			294,
+			2037,
+			217,
+			128
 		},
 		alias = {
 			"revenant_soulcaller_stuntower_0053"
 		}
 	},
 	revenant_soulcaller_stuntower_0054 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			130,
-			134
+			260,
+			268
 		},
 		trim = {
-			11,
-			21,
-			13,
-			50
+			22,
+			43,
+			26,
+			101
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1294,
-			48,
-			106,
-			63
+			6,
+			3176,
+			212,
+			124
 		},
 		alias = {}
 	},
 	revenant_soulcaller_transform_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			144,
-			150
+			288,
+			300
 		},
 		trim = {
-			24,
-			9,
-			25,
-			58
+			49,
+			20,
+			50,
+			117
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			243,
-			130,
-			95,
-			83
+			294,
+			2576,
+			189,
+			163
 		},
 		alias = {}
 	},
 	revenant_soulcaller_transform_0002 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			144,
-			150
+			288,
+			300
 		},
 		trim = {
-			21,
-			9,
-			21,
-			57
+			43,
+			20,
+			43,
+			115
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			130,
-			102,
-			84
+			294,
+			2171,
+			202,
+			165
 		},
 		alias = {}
 	},
 	revenant_soulcaller_transform_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			144,
-			150
+			288,
+			300
 		},
 		trim = {
-			21,
-			27,
-			21,
-			55
+			43,
+			55,
+			43,
+			112
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1406,
-			48,
-			102,
-			68
+			294,
+			2342,
+			202,
+			133
 		},
 		alias = {}
 	},
 	revenant_soulcaller_transform_0004 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			144,
-			150
+			288,
+			300
 		},
 		trim = {
-			16,
-			27,
-			17,
-			53
+			34,
+			55,
+			35,
+			108
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			6,
-			1509,
-			111,
-			70
+			294,
+			1255,
+			219,
+			137
 		},
 		alias = {}
 	},
 	revenant_soulcaller_transform_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			144,
-			150
+			288,
+			300
 		},
 		trim = {
-			16,
-			28,
-			17,
-			53
+			34,
+			56,
+			35,
+			107
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			6,
-			1585,
-			111,
-			69
+			294,
+			1398,
+			219,
+			137
 		},
 		alias = {}
 	},
 	revenant_soulcaller_transform_0006 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			144,
-			150
+			288,
+			300
 		},
 		trim = {
-			14,
-			28,
-			15,
-			50
+			29,
+			56,
+			31,
+			102
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			1168,
-			115,
-			72
+			2225,
+			228,
+			142
 		},
 		alias = {}
 	},
 	revenant_soulcaller_transform_0007 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			144,
-			150
+			288,
+			300
 		},
 		trim = {
-			14,
-			38,
-			15,
-			50
+			29,
+			76,
+			31,
+			102
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			1246,
-			115,
-			62
+			2373,
+			228,
+			122
 		},
 		alias = {}
 	},
 	revenant_soulcaller_transform_0008 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			144,
-			150
+			288,
+			300
 		},
 		trim = {
-			13,
-			37,
-			14,
-			47
+			26,
+			75,
+			29,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			796,
-			117,
-			66
+			1512,
+			233,
+			130
 		},
 		alias = {}
 	},
 	revenant_soulcaller_transform_0009 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			144,
-			150
+			288,
+			300
 		},
 		trim = {
-			13,
-			37,
-			14,
-			47
+			26,
+			75,
+			29,
+			95
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			868,
-			117,
-			66
+			1648,
+			233,
+			130
 		},
 		alias = {}
 	},
 	revenant_soulcaller_transform_0010 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			144,
-			150
+			288,
+			300
 		},
 		trim = {
-			12,
-			36,
-			13,
-			46
+			25,
+			74,
+			28,
+			94
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			500,
-			119,
-			68
+			1236,
+			235,
+			132
 		},
 		alias = {}
 	},
 	revenant_soulcaller_transform_0011 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			144,
-			150
+			288,
+			300
 		},
 		trim = {
-			12,
-			36,
-			13,
-			46
+			25,
+			74,
+			28,
+			94
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			574,
-			119,
-			68
+			1374,
+			235,
+			132
 		},
 		alias = {}
 	},
 	revenant_soulcaller_transform_0012 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			144,
-			150
+			288,
+			300
 		},
 		trim = {
-			12,
-			37,
-			13,
-			45
+			25,
+			75,
+			28,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			648,
-			119,
-			68
+			958,
+			235,
+			133
 		},
 		alias = {}
 	},
 	revenant_soulcaller_transform_0013 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			144,
-			150
+			288,
+			300
 		},
 		trim = {
-			12,
-			37,
-			13,
-			45
+			25,
+			75,
+			28,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
 			6,
-			722,
-			119,
-			68
+			1097,
+			235,
+			133
 		},
 		alias = {}
 	},
 	revenant_soulcaller_transform_0014 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			144,
-			150
+			288,
+			300
 		},
 		trim = {
-			22,
-			59,
-			22,
-			45
+			46,
+			119,
+			46,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1514,
-			48,
-			100,
-			46
+			294,
+			2481,
+			196,
+			89
 		},
 		alias = {}
 	},
 	revenant_soulcaller_transform_0015 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			144,
-			150
+			288,
+			300
 		},
 		trim = {
-			27,
-			59,
-			38,
-			45
+			55,
+			119,
+			78,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1392,
-			130,
-			79,
-			46
+			294,
+			3200,
+			155,
+			89
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			48,
-			35,
-			87
+			80,
+			98,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1360,
-			47,
-			45
+			2281,
+			1665,
+			92,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0002",
@@ -18762,1970 +18762,1970 @@ local a = {
 		}
 	},
 	revenant_soulcaller_unit_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			48,
-			35,
-			87
+			80,
+			98,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1411,
-			47,
-			45
+			2281,
+			1758,
+			92,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0004"
 		}
 	},
 	revenant_soulcaller_unit_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			48,
-			35,
-			87
+			80,
+			98,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1462,
-			47,
-			45
+			2281,
+			1851,
+			92,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0006"
 		}
 	},
 	revenant_soulcaller_unit_0007 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			48,
-			35,
-			87
+			80,
+			98,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1513,
-			47,
-			45
+			2281,
+			1944,
+			92,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0008"
 		}
 	},
 	revenant_soulcaller_unit_0009 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			48,
-			35,
-			87
+			80,
+			98,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1564,
-			47,
-			45
+			2281,
+			2037,
+			92,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0010"
 		}
 	},
 	revenant_soulcaller_unit_0011 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			48,
-			35,
-			87
+			80,
+			98,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1615,
-			47,
-			45
+			2281,
+			2130,
+			92,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0012"
 		}
 	},
 	revenant_soulcaller_unit_0013 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			48,
-			35,
-			87
+			80,
+			98,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1666,
-			47,
-			45
+			2281,
+			2223,
+			92,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0014"
 		}
 	},
 	revenant_soulcaller_unit_0015 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			48,
-			35,
-			87
+			80,
+			98,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1717,
-			47,
-			45
+			2281,
+			2316,
+			92,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0016"
 		}
 	},
 	revenant_soulcaller_unit_0017 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			48,
-			35,
-			87
+			80,
+			98,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1768,
-			47,
-			45
+			2281,
+			2409,
+			92,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0018"
 		}
 	},
 	revenant_soulcaller_unit_0019 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			48,
-			35,
-			87
+			80,
+			98,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1819,
-			47,
-			45
+			2281,
+			2502,
+			92,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0020"
 		}
 	},
 	revenant_soulcaller_unit_0021 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			48,
-			35,
-			87
+			80,
+			98,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1870,
-			47,
-			45
+			2281,
+			2595,
+			92,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0022"
 		}
 	},
 	revenant_soulcaller_unit_0023 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			49,
-			36,
-			87
+			80,
+			98,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1233,
-			909,
-			47,
-			44
+			2281,
+			2688,
+			92,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0024"
 		}
 	},
 	revenant_soulcaller_unit_0025 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			48,
-			37,
-			87
+			77,
+			98,
+			75,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1921,
-			47,
-			45
+			2281,
+			2781,
+			92,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0026"
 		}
 	},
 	revenant_soulcaller_unit_0027 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			48,
-			36,
-			87
+			76,
+			98,
+			73,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1239,
-			853,
-			48,
-			45
+			2994,
+			1302,
+			95,
+			87
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0028 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			48,
-			36,
-			87
+			76,
+			98,
+			73,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1293,
-			853,
-			48,
-			45
+			3095,
+			1302,
+			95,
+			87
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0029 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			37,
-			49,
-			37,
-			87
+			74,
+			98,
+			74,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1563,
-			853,
-			48,
-			44
+			2282,
+			1302,
+			96,
+			87
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0030 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			37,
-			49,
-			37,
-			87
+			74,
+			98,
+			74,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1617,
-			853,
-			48,
-			44
+			2384,
+			1302,
+			96,
+			87
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0031 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			37,
-			49,
-			37,
-			87
+			74,
+			98,
+			74,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1671,
-			853,
-			48,
-			44
+			2486,
+			1302,
+			96,
+			87
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0032 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			37,
-			49,
-			37,
-			87
+			74,
+			98,
+			74,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1725,
-			853,
-			48,
-			44
+			2588,
+			1302,
+			96,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0033"
 		}
 	},
 	revenant_soulcaller_unit_0034 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			49,
-			36,
-			87
+			76,
+			98,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1779,
-			853,
-			48,
-			44
+			2690,
+			1302,
+			96,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0035"
 		}
 	},
 	revenant_soulcaller_unit_0036 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			41,
-			48,
-			22,
-			87
+			84,
+			98,
+			45,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			697,
-			555,
-			59,
-			45
+			1506,
+			2479,
+			115,
+			87
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0037 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			41,
-			48,
-			22,
-			87
+			84,
+			98,
+			45,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			762,
-			555,
-			59,
-			45
+			1506,
+			2572,
+			115,
+			87
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0038 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			43,
-			18,
-			87
+			76,
+			86,
+			37,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			748,
-			66,
-			50
+			519,
+			3200,
+			131,
+			99
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0039 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			43,
-			18,
-			87
+			76,
+			86,
+			37,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			804,
-			66,
-			50
+			843,
+			2519,
+			131,
+			99
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0040 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			35,
-			21,
-			87
+			76,
+			70,
+			43,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			1698,
-			63,
-			58
+			1645,
+			386,
+			125,
+			115
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0041 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			35,
-			21,
-			87
+			76,
+			70,
+			43,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			1762,
-			63,
-			58
+			1776,
+			386,
+			125,
+			115
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0042 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			22,
-			17,
-			87
+			77,
+			44,
+			36,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			1761,
-			67,
-			71
+			843,
+			1661,
+			131,
+			141
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0043 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			22,
-			17,
-			87
+			77,
+			44,
+			36,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			1838,
-			67,
-			71
+			843,
+			1808,
+			131,
+			141
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0044 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
+			78,
+			48,
 			38,
-			23,
-			19,
-			87
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			1054,
-			65,
-			70
+			984,
+			2743,
+			128,
+			137
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0045 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
+			78,
+			48,
 			38,
-			23,
-			19,
-			87
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			1130,
-			65,
-			70
+			984,
+			2886,
+			128,
+			137
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0046 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			23,
-			18,
-			87
+			78,
+			47,
+			37,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			1206,
-			65,
-			70
+			984,
+			440,
+			129,
+			138
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0047 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			23,
-			18,
-			87
+			78,
+			47,
+			37,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			1282,
-			65,
-			70
+			984,
+			584,
+			129,
+			138
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0048 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			21,
-			17,
-			87
+			79,
+			43,
+			34,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			464,
-			66,
-			72
+			843,
+			1365,
+			131,
+			142
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0049 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			21,
-			17,
-			87
+			79,
+			43,
+			34,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			542,
-			66,
-			72
+			843,
+			1513,
+			131,
+			142
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0050 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			21,
-			15,
-			87
+			79,
+			44,
+			31,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			905,
-			68,
-			72
+			843,
+			708,
+			134,
+			141
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0051 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			21,
-			15,
-			87
+			79,
+			44,
+			31,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			983,
-			68,
-			72
+			843,
+			855,
+			134,
+			141
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0052 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			22,
-			15,
-			87
+			79,
+			46,
+			30,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			1061,
-			68,
-			71
+			1127,
+			6,
+			135,
+			139
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0053 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			22,
-			15,
-			87
+			79,
+			46,
+			30,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			1138,
-			68,
-			71
+			1268,
+			6,
+			135,
+			139
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0054 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			22,
-			14,
-			87
+			78,
+			46,
+			29,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			1674,
-			70,
-			71
+			694,
+			2476,
+			137,
+			139
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0055 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			22,
-			14,
-			87
+			78,
+			46,
+			29,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			1751,
-			70,
-			71
+			694,
+			2621,
+			137,
+			139
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0056 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			22,
-			15,
-			87
+			77,
+			45,
+			31,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			318,
-			69,
-			71
+			843,
+			6,
+			136,
+			140
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0057 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			22,
-			15,
-			87
+			77,
+			45,
+			31,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			395,
-			69,
-			71
+			985,
+			6,
+			136,
+			140
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0058 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			23,
-			16,
-			87
+			77,
+			46,
+			33,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			1215,
-			68,
-			70
+			1691,
+			6,
+			134,
+			139
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0059 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			23,
-			16,
-			87
+			77,
+			46,
+			33,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			1291,
-			68,
-			70
+			1831,
+			6,
+			134,
+			139
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0060 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			29,
-			22,
-			87
+			80,
+			58,
+			45,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			1487,
-			61,
-			64
+			2388,
+			518,
+			119,
+			127
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0061 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			29,
-			22,
-			87
+			80,
+			58,
+			45,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			1557,
-			61,
-			64
+			2513,
+			518,
+			119,
+			127
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0062 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			29,
-			22,
-			87
+			80,
+			58,
+			45,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			1627,
-			61,
-			64
+			2638,
+			518,
+			119,
+			127
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0063 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			42,
-			30,
-			32,
-			87
+			84,
+			61,
+			65,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			861,
-			1703,
-			48,
-			63
+			2180,
+			2535,
+			95,
+			124
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0064 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			42,
-			30,
-			31,
-			87
+			84,
+			61,
+			64,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			1319,
-			49,
-			63
+			2077,
+			2882,
+			96,
+			124
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0065 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			43,
-			29,
-			33,
-			87
+			86,
+			59,
+			68,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			1143,
-			46,
-			64
+			2379,
+			2426,
+			90,
+			126
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0066 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			43,
-			29,
-			33,
-			87
+			86,
+			59,
+			68,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			1213,
-			46,
-			64
+			2379,
+			2558,
+			90,
+			126
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0067 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			29,
-			34,
-			87
+			78,
+			59,
+			68,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			805,
-			50,
-			64
+			1971,
+			2076,
+			98,
+			126
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0068 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			29,
-			33,
-			87
+			78,
+			59,
+			68,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			689,
-			51,
-			64
+			1971,
+			2208,
+			98,
+			126
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0069 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			29,
-			34,
-			87
+			81,
+			59,
+			68,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			861,
-			1563,
-			48,
-			64
+			2180,
+			2271,
+			95,
+			126
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0070 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			29,
-			34,
-			87
+			81,
+			59,
+			68,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			861,
-			1633,
-			48,
-			64
+			2180,
+			2403,
+			95,
+			126
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0073 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			49,
-			36,
-			87
+			79,
+			99,
+			74,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1286,
-			909,
-			47,
-			44
+			2379,
+			1891,
+			91,
+			86
 		},
 		alias = {
 			"revenant_soulcaller_unit_0074"
 		}
 	},
 	revenant_soulcaller_unit_0075 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			51,
-			37,
-			87
+			77,
+			103,
+			75,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1306,
-			805,
-			47,
-			42
+			3002,
+			1213,
+			92,
+			82
 		},
 		alias = {
 			"revenant_soulcaller_unit_0076"
 		}
 	},
 	revenant_soulcaller_unit_0077 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			35,
-			50,
-			39,
-			87
+			71,
+			101,
+			80,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1941,
-			853,
-			48,
-			43
+			3570,
+			1405,
+			93,
+			84
 		},
 		alias = {
 			"revenant_soulcaller_unit_0078"
 		}
 	},
 	revenant_soulcaller_unit_0079 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			32,
-			50,
-			40,
-			87
+			65,
+			102,
+			82,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1989,
-			50,
-			43
+			2493,
+			1213,
+			97,
+			83
 		},
 		alias = {
 			"revenant_soulcaller_unit_0080"
 		}
 	},
 	revenant_soulcaller_unit_0081 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			31,
-			51,
-			41,
-			87
+			63,
+			102,
+			83,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			805,
-			50,
-			42
+			2077,
+			1213,
+			98,
+			83
 		},
 		alias = {
 			"revenant_soulcaller_unit_0082"
 		}
 	},
 	revenant_soulcaller_unit_0083 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			31,
-			51,
-			41,
-			87
+			63,
+			102,
+			83,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			862,
-			805,
-			50,
-			42
+			2181,
+			1213,
+			98,
+			83
 		},
 		alias = {
 			"revenant_soulcaller_unit_0084"
 		}
 	},
 	revenant_soulcaller_unit_0085 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			31,
-			51,
-			41,
-			87
+			63,
+			102,
+			83,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			918,
-			805,
-			50,
-			42
+			2285,
+			1213,
+			98,
+			83
 		},
 		alias = {
 			"revenant_soulcaller_unit_0086"
 		}
 	},
 	revenant_soulcaller_unit_0087 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			31,
-			51,
-			41,
-			87
+			63,
+			102,
+			83,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			974,
-			805,
-			50,
-			42
+			2389,
+			1213,
+			98,
+			83
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0088 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			35,
-			51,
-			38,
-			87
+			71,
+			102,
+			78,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1086,
-			805,
-			49,
-			42
+			2800,
+			1213,
+			95,
+			83
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0089 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			35,
-			51,
-			38,
-			87
+			71,
+			102,
+			78,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1141,
-			805,
-			49,
-			42
+			2901,
+			1213,
+			95,
+			83
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0090 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
+			81,
+			99,
 			40,
-			49,
-			19,
-			87
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			916,
-			431,
-			63,
-			44
+			3241,
+			152,
+			123,
+			86
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0091 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
+			81,
+			99,
 			40,
-			49,
-			19,
-			87
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			985,
-			431,
-			63,
-			44
+			3370,
+			152,
+			123,
+			86
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0092 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
+			79,
+			99,
 			39,
-			49,
-			19,
-			87
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			537,
-			64,
-			44
+			2062,
+			152,
+			126,
+			86
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0093 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
+			79,
+			99,
 			39,
-			49,
-			19,
-			87
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			587,
-			64,
-			44
+			2194,
+			152,
+			126,
+			86
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0094 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			50,
-			19,
-			87
+			79,
+			101,
+			38,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			637,
-			64,
-			43
+			1664,
+			152,
+			127,
+			84
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0095 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			50,
-			19,
-			87
+			79,
+			101,
+			38,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			686,
-			64,
-			43
+			1797,
+			152,
+			127,
+			84
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0096 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			50,
-			18,
-			87
+			77,
+			101,
+			37,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			860,
-			66,
-			43
+			1392,
+			152,
+			130,
+			84
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0097 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			50,
-			18,
-			87
+			77,
+			101,
+			37,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			909,
-			66,
-			43
+			1528,
+			152,
+			130,
+			84
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0098 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			51,
-			20,
-			87
+			77,
+			103,
+			42,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			735,
-			64,
-			42
+			2588,
+			152,
+			125,
+			82
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0099 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			51,
-			20,
-			87
+			77,
+			103,
+			42,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			783,
-			64,
-			42
+			2719,
+			152,
+			125,
+			82
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0100 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			51,
-			19,
-			87
+			80,
+			103,
+			39,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1054,
-			431,
-			63,
-			42
+			2850,
+			152,
+			125,
+			82
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0101 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			51,
-			19,
-			87
+			80,
+			103,
+			39,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1123,
-			431,
-			63,
-			42
+			2981,
+			152,
+			125,
+			82
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0102 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			51,
-			32,
-			87
+			80,
+			103,
+			65,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1030,
-			805,
-			50,
-			42
+			1971,
+			1988,
+			99,
+			82
 		},
 		alias = {
 			"revenant_soulcaller_unit_0103"
 		}
 	},
 	revenant_soulcaller_unit_0104 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			48,
-			36,
-			87
+			78,
+			98,
+			73,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1347,
-			853,
-			48,
-			45
+			3174,
+			1405,
+			93,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0105"
 		}
 	},
 	revenant_soulcaller_unit_0106 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			47,
-			36,
-			87
+			81,
+			95,
+			74,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			1698,
-			46,
-			46
+			2666,
+			1569,
+			89,
+			90
 		},
 		alias = {
 			"revenant_soulcaller_unit_0107"
 		}
 	},
 	revenant_soulcaller_unit_0108 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			48,
-			35,
-			87
+			80,
+			98,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1972,
-			47,
-			45
+			2281,
+			2874,
+			92,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0109",
@@ -20734,1770 +20734,1770 @@ local a = {
 		}
 	},
 	revenant_soulcaller_unit_0110 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			48,
-			35,
-			87
+			80,
+			98,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			909,
-			47,
-			45
+			2281,
+			2967,
+			92,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0111"
 		}
 	},
 	revenant_soulcaller_unit_0112 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			49,
-			35,
-			87
+			80,
+			99,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1833,
-			853,
-			48,
-			44
+			2281,
+			3060,
+			92,
+			86
 		},
 		alias = {
 			"revenant_soulcaller_unit_0113"
 		}
 	},
 	revenant_soulcaller_unit_0114 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			49,
-			35,
-			87
+			80,
+			99,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1887,
-			853,
-			48,
-			44
+			2281,
+			3152,
+			92,
+			86
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0115 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			35,
-			49,
-			35,
-			87
+			72,
+			100,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1846,
-			52,
-			44
+			1971,
+			1213,
+			100,
+			85
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0116 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			35,
-			49,
-			35,
-			87
+			72,
+			100,
+			72,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1896,
-			52,
-			44
+			1971,
+			1304,
+			100,
+			85
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0117 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			35,
-			48,
-			37,
-			87
+			70,
+			97,
+			75,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1787,
-			50,
-			45
+			1971,
+			1800,
+			99,
+			88
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0118 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			35,
-			48,
-			37,
-			87
+			70,
+			97,
+			75,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1838,
-			50,
-			45
+			1971,
+			1894,
+			99,
+			88
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0119 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			35,
-			42,
-			43,
-			87
+			72,
+			84,
+			86,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			1016,
-			44,
-			51
+			4010,
+			518,
+			86,
+			101
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0120 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			35,
-			42,
-			43,
-			87
+			72,
+			84,
+			86,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			1073,
-			44,
-			51
+			2476,
+			2139,
+			86,
+			101
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0121 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			36,
-			30,
-			45,
-			87
+			73,
+			61,
+			92,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1070,
-			1063,
-			41,
-			63
+			2745,
+			2048,
+			79,
+			124
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0122 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			36,
-			31,
-			45,
-			87
+			73,
+			63,
+			92,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1070,
-			1132,
-			41,
-			62
+			2745,
+			2178,
+			79,
+			122
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0123 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			37,
-			26,
-			45,
-			87
+			74,
+			54,
+			91,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			1063,
-			40,
-			67
+			2659,
+			3146,
+			79,
+			131
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0124 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			37,
-			26,
-			45,
-			87
+			74,
+			54,
+			91,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1209,
-			1063,
-			40,
-			67
+			2745,
+			1911,
+			79,
+			131
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0125 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			37,
-			26,
-			45,
-			87
+			74,
+			53,
+			90,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1255,
-			1063,
-			40,
-			67
+			2659,
+			2050,
+			80,
+			132
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0126 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			37,
-			25,
-			45,
-			87
+			74,
+			52,
+			90,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1070,
-			1761,
-			40,
-			68
+			2659,
+			1911,
+			80,
+			133
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0127 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			37,
-			25,
-			45,
-			87
+			75,
+			52,
+			90,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1070,
-			1835,
-			40,
-			68
+			2659,
+			3007,
+			79,
+			133
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0128 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			37,
-			25,
-			45,
-			87
+			75,
+			51,
+			90,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1070,
-			1909,
-			40,
-			68
+			2659,
+			2727,
+			79,
+			134
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0129 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			37,
-			25,
-			45,
-			87
+			75,
+			51,
+			90,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1063,
-			40,
-			68
+			2659,
+			2867,
+			79,
+			134
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0130 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			37,
-			24,
-			45,
-			87
+			75,
+			49,
+			90,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1070,
-			1611,
-			40,
-			69
+			2659,
+			2443,
+			79,
+			136
 		},
 		alias = {
 			"revenant_soulcaller_unit_0131"
 		}
 	},
 	revenant_soulcaller_unit_0132 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			37,
-			24,
-			45,
-			87
+			75,
+			49,
+			90,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1070,
-			1686,
-			40,
-			69
+			2659,
+			2585,
+			79,
+			136
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0133 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			10,
-			9,
-			45,
-			87
+			20,
+			19,
+			91,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			216,
-			1671,
-			67,
-			84
+			843,
+			1002,
+			133,
+			166
 		},
 		alias = {
 			"revenant_soulcaller_unit_0134"
 		}
 	},
 	revenant_soulcaller_unit_0135 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			16,
-			15,
-			45,
-			87
+			33,
+			32,
+			91,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			885,
-			61,
-			78
+			1252,
+			2884,
+			120,
+			153
 		},
 		alias = {
 			"revenant_soulcaller_unit_0136"
 		}
 	},
 	revenant_soulcaller_unit_0137 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			16,
-			16,
-			45,
-			87
+			33,
+			32,
+			92,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			969,
-			61,
-			77
+			1381,
+			820,
+			119,
+			153
 		},
 		alias = {
 			"revenant_soulcaller_unit_0138"
 		}
 	},
 	revenant_soulcaller_unit_0139 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			16,
-			16,
-			45,
-			87
+			33,
+			32,
+			92,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			1052,
-			61,
-			77
+			1381,
+			979,
+			119,
+			153
 		},
 		alias = {
 			"revenant_soulcaller_unit_0140"
 		}
 	},
 	revenant_soulcaller_unit_0141 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			23,
-			24,
-			46,
-			87
+			47,
+			49,
+			93,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			689,
-			53,
-			69
+			1860,
+			1599,
+			104,
+			136
 		},
 		alias = {
 			"revenant_soulcaller_unit_0142"
 		}
 	},
 	revenant_soulcaller_unit_0143 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			24,
-			25,
-			45,
-			87
+			49,
+			51,
+			92,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			912,
-			53,
-			68
+			1860,
+			2114,
+			103,
+			134
 		},
 		alias = {
 			"revenant_soulcaller_unit_0144"
 		}
 	},
 	revenant_soulcaller_unit_0145 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			35,
-			47,
-			45,
-			87
+			71,
+			95,
+			91,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			2000,
-			42,
-			46
+			2747,
+			1793,
+			82,
+			90
 		},
 		alias = {
 			"revenant_soulcaller_unit_0146"
 		}
 	},
 	revenant_soulcaller_unit_0147 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			51,
-			29,
-			87
+			80,
+			103,
+			60,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1373,
-			53,
-			42
+			3442,
+			879,
+			104,
+			82
 		},
 		alias = {
 			"revenant_soulcaller_unit_0148"
 		}
 	},
 	revenant_soulcaller_unit_0149 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			48,
-			36,
-			87
+			78,
+			98,
+			73,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1401,
-			853,
-			48,
-			45
+			3273,
+			1405,
+			93,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0150"
 		}
 	},
 	revenant_soulcaller_unit_0151 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			47,
-			36,
-			87
+			81,
+			95,
+			74,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			1750,
-			46,
-			46
+			2761,
+			1569,
+			89,
+			90
 		},
 		alias = {
 			"revenant_soulcaller_unit_0152"
 		}
 	},
 	revenant_soulcaller_unit_0155 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			38,
-			48,
-			37,
-			87
+			76,
+			98,
+			74,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1021,
-			909,
-			47,
-			45
+			3696,
+			1302,
+			94,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0156"
 		}
 	},
 	revenant_soulcaller_unit_0157 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			36,
-			50,
-			37,
-			87
+			74,
+			100,
+			76,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			1764,
-			49,
-			43
+			3796,
+			1302,
+			94,
+			85
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0158 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			36,
-			50,
-			37,
-			87
+			74,
+			100,
+			76,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			1813,
-			49,
-			43
+			3896,
+			1302,
+			94,
+			85
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0159 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			35,
-			50,
-			38,
-			87
+			71,
+			100,
+			76,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			1862,
-			49,
-			43
+			2077,
+			1986,
+			97,
+			85
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0160 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			35,
-			50,
-			38,
-			87
+			71,
+			100,
+			76,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			1911,
-			49,
-			43
+			2077,
+			2077,
+			97,
+			85
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0161 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			34,
-			49,
-			38,
-			87
+			69,
+			100,
+			77,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1889,
-			50,
-			44
+			1971,
+			3070,
+			98,
+			85
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0162 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			34,
-			49,
-			38,
-			87
+			69,
+			100,
+			77,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1939,
-			50,
-			44
+			1971,
+			3161,
+			98,
+			85
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0163 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			34,
-			50,
-			25,
-			83
+			70,
+			100,
+			52,
+			167
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			778,
-			431,
-			63,
-			47
+			3883,
+			152,
+			122,
+			93
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0164 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			34,
-			50,
-			25,
-			83
+			70,
+			100,
+			52,
+			167
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			847,
-			431,
-			63,
-			47
+			1252,
+			1625,
+			122,
+			93
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0165 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			34,
-			50,
-			26,
-			84
+			69,
+			101,
+			53,
+			168
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1532,
-			431,
-			62,
-			46
+			1119,
+			3208,
+			122,
+			91
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0166 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			34,
-			50,
-			26,
-			84
+			69,
+			101,
+			53,
+			168
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1600,
-			431,
-			62,
-			46
+			1252,
+			1724,
+			122,
+			91
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0167 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			35,
-			50,
-			26,
-			82
+			71,
+			100,
+			52,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			568,
-			490,
-			61,
-			48
+			1252,
+			2394,
+			121,
+			95
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0168 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			35,
-			50,
-			26,
-			82
+			71,
+			100,
+			52,
+			165
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			635,
-			490,
-			61,
-			48
+			1252,
+			2495,
+			121,
+			95
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0169 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			34,
-			50,
-			26,
-			84
+			69,
+			102,
+			54,
+			169
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1668,
-			431,
-			62,
-			46
+			1252,
+			2694,
+			121,
+			89
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0170 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			34,
-			50,
-			26,
-			84
+			69,
+			102,
+			54,
+			169
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1736,
-			431,
-			62,
-			46
+			1252,
+			2789,
+			121,
+			89
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0171 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			35,
-			49,
-			24,
-			79
+			71,
+			99,
+			48,
+			160
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			571,
-			431,
-			63,
-			52
+			2955,
+			386,
+			125,
+			101
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0172 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			35,
-			49,
-			24,
-			79
+			71,
+			99,
+			48,
+			160
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			640,
-			431,
-			63,
-			52
+			3086,
+			386,
+			125,
+			101
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0173 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			34,
-			51,
-			22,
-			78
+			69,
+			102,
+			45,
+			158
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1955,
-			220,
-			66,
-			51
+			1120,
+			152,
+			130,
+			100
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0174 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			34,
-			51,
-			22,
-			78
+			69,
+			102,
+			45,
+			158
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			691,
-			66,
-			51
+			1256,
+			152,
+			130,
+			100
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0175 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			33,
-			41,
-			26,
-			76
+			66,
+			82,
+			52,
+			152
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			972,
-			63,
-			63
+			1119,
+			2326,
+			126,
+			126
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0176 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			33,
-			41,
-			26,
-			76
+			66,
+			82,
+			52,
+			152
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			363,
-			1041,
-			63,
-			63
+			1119,
+			2458,
+			126,
+			126
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0177 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			32,
-			46,
-			33,
-			83
+			66,
+			94,
+			67,
+			166
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			567,
-			1145,
-			57,
-			51
+			1628,
+			1091,
+			111,
+			100
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0178 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			32,
-			43,
-			33,
-			83
+			66,
+			87,
+			67,
+			166
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1655,
-			555,
-			57,
-			54
+			3744,
+			724,
+			111,
+			107
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0179 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			28,
-			43,
-			33,
-			78
+			57,
+			87,
+			67,
+			158
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			490,
-			61,
-			59
+			1759,
+			518,
+			120,
+			115
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0180 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			28,
-			42,
-			33,
-			78
+			57,
+			85,
+			67,
+			158
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			433,
-			1969,
-			61,
-			60
+			1633,
+			518,
+			120,
+			117
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0181 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			24,
-			42,
-			26,
-			73
+			48,
+			85,
+			53,
+			147
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			1220,
-			72,
-			65
+			694,
+			144,
+			143,
+			128
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0182 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			24,
-			40,
-			26,
-			73
+			48,
+			81,
+			53,
+			147
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			718,
-			72,
-			67
+			694,
+			6,
+			143,
+			132
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0183 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			23,
-			40,
-			24,
-			72
+			46,
+			81,
+			49,
+			145
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1888,
-			130,
-			75,
-			68
+			519,
+			2517,
+			149,
+			134
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0184 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			23,
-			42,
-			24,
-			72
+			46,
+			84,
+			49,
+			145
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			135,
-			220,
-			75,
-			66
+			519,
+			2657,
+			149,
+			131
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0185 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			22,
-			42,
-			24,
-			71
+			44,
+			84,
+			49,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1560,
-			130,
-			76,
-			67
+			519,
+			1972,
+			151,
+			133
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0186 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			22,
-			43,
-			24,
-			71
+			44,
+			87,
+			49,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1642,
-			130,
-			76,
-			66
+			519,
+			2248,
+			151,
+			130
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0187 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			22,
-			43,
-			24,
-			71
+			44,
+			87,
+			49,
+			142
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1724,
-			130,
-			76,
-			66
+			519,
+			2111,
+			151,
+			131
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0188 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			22,
-			45,
-			24,
-			71
+			44,
+			91,
+			49,
+			142
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1806,
-			130,
-			76,
-			64
+			519,
+			2384,
+			151,
+			127
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0189 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			33,
-			45,
-			34,
-			83
+			66,
+			91,
+			68,
+			167
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1866,
-			622,
-			55,
-			52
+			1628,
+			2907,
+			110,
+			102
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0190 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			49,
-			34,
-			83
+			81,
+			98,
+			68,
+			167
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			969,
-			853,
-			48,
-			48
+			2792,
+			1302,
+			95,
+			95
 		},
 		alias = {}
 	},
 	revenant_soulcaller_unit_0191 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			45,
-			76,
-			51,
-			87
+			91,
+			153,
+			103,
+			176
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2020,
-			530,
-			26,
-			17
+			3706,
+			113,
+			50,
+			31
 		},
 		alias = {
 			"revenant_soulcaller_unit_0192"
 		}
 	},
 	revenant_soulcaller_unit_0193 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			45,
-			76,
-			51,
-			87
+			91,
+			153,
+			103,
+			176
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1623,
-			1114,
-			26,
-			17
+			4044,
+			6,
+			50,
+			31
 		},
 		alias = {
 			"revenant_soulcaller_unit_0194"
 		}
 	},
 	revenant_soulcaller_unit_0195 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			45,
-			76,
-			51,
-			87
+			91,
+			153,
+			103,
+			176
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1951,
-			1323,
-			26,
-			17
+			4044,
+			43,
+			50,
+			31
 		},
 		alias = {
 			"revenant_soulcaller_unit_0196"
 		}
 	},
 	revenant_soulcaller_unit_0197 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			45,
-			76,
-			51,
-			87
+			91,
+			153,
+			103,
+			176
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1983,
-			1323,
-			26,
-			17
+			4044,
+			80,
+			50,
+			31
 		},
 		alias = {
 			"revenant_soulcaller_unit_0198"
 		}
 	},
 	revenant_soulcaller_unit_0199 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			45,
-			77,
-			51,
-			87
+			91,
+			155,
+			103,
+			176
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			789,
-			198,
-			26,
-			16
+			3494,
+			116,
+			50,
+			29
 		},
 		alias = {
 			"revenant_soulcaller_unit_0200"
 		}
 	},
 	revenant_soulcaller_unit_0201 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			47,
-			79,
-			52,
-			87
+			96,
+			159,
+			104,
+			176
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1763,
-			411,
-			23,
-			14
+			241,
+			2087,
+			44,
+			25
 		},
 		alias = {
 			"revenant_soulcaller_unit_0202"
 		}
 	},
 	revenant_soulcaller_unit_0203 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			47,
-			78,
-			52,
-			87
+			96,
+			157,
+			104,
+			176
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1890,
-			737,
-			23,
-			15
+			243,
+			1953,
+			44,
+			27
 		},
 		alias = {
 			"revenant_soulcaller_unit_0204",
@@ -22506,26 +22506,26 @@ local a = {
 		}
 	},
 	revenant_soulcaller_unit_0207 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			47,
-			78,
-			52,
-			87
+			96,
+			156,
+			104,
+			176
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1485,
-			1116,
-			23,
-			15
+			243,
+			1919,
+			44,
+			28
 		},
 		alias = {
 			"revenant_soulcaller_unit_0208",
@@ -22534,26 +22534,26 @@ local a = {
 		}
 	},
 	revenant_soulcaller_unit_0211 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			47,
-			77,
-			52,
-			87
+			96,
+			154,
+			104,
+			176
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1833,
-			737,
-			23,
-			16
+			243,
+			1883,
+			44,
+			30
 		},
 		alias = {
 			"revenant_soulcaller_unit_0212",
@@ -22561,104 +22561,104 @@ local a = {
 		}
 	},
 	revenant_soulcaller_unit_0214 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			47,
-			77,
-			49,
-			87
+			96,
+			154,
+			100,
+			176
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			821,
-			198,
-			26,
-			16
+			240,
+			2225,
+			48,
+			30
 		},
 		alias = {
 			"revenant_soulcaller_unit_0215"
 		}
 	},
 	revenant_soulcaller_unit_0216 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			50,
-			79,
-			46,
-			87
+			102,
+			159,
+			92,
+			176
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1806,
-			200,
-			26,
-			14
+			4044,
+			117,
+			50,
+			25
 		},
 		alias = {
 			"revenant_soulcaller_unit_0217"
 		}
 	},
 	revenant_soulcaller_unit_0218 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			51,
-			78,
-			45,
-			87
+			102,
+			157,
+			92,
+			176
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			291,
-			2032,
-			26,
-			15
+			3550,
+			116,
+			50,
+			27
 		},
 		alias = {
 			"revenant_soulcaller_unit_0219"
 		}
 	},
 	revenant_soulcaller_unit_0220 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			51,
-			79,
-			45,
-			87
+			102,
+			158,
+			91,
+			176
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1838,
-			200,
-			26,
-			14
+			3287,
+			116,
+			51,
+			26
 		},
 		alias = {
 			"revenant_soulcaller_unit_0221",
@@ -22666,1040 +22666,1040 @@ local a = {
 		}
 	},
 	revenant_soulcaller_unit_0223 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			48,
-			35,
-			87
+			81,
+			96,
+			70,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1074,
-			909,
-			47,
-			45
+			3996,
+			1302,
+			93,
+			89
 		},
 		alias = {
 			"revenant_soulcaller_unit_0224"
 		}
 	},
 	revenant_soulcaller_unit_0225 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			48,
-			35,
-			87
+			80,
+			97,
+			71,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1127,
-			909,
-			47,
-			45
+			3075,
+			1405,
+			93,
+			88
 		},
 		alias = {
 			"revenant_soulcaller_unit_0226"
 		}
 	},
 	revenant_soulcaller_unit_0227 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			48,
-			35,
-			87
+			79,
+			97,
+			71,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1455,
-			853,
-			48,
-			45
+			3496,
+			1302,
+			94,
+			88
 		},
 		alias = {
 			"revenant_soulcaller_unit_0228"
 		}
 	},
 	revenant_soulcaller_unit_0229 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			47,
-			35,
-			87
+			79,
+			96,
+			71,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1077,
-			853,
-			48,
-			46
+			3396,
+			1302,
+			94,
+			89
 		},
 		alias = {
 			"revenant_soulcaller_unit_0230"
 		}
 	},
 	revenant_soulcaller_unit_0231 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			46,
-			35,
-			87
+			79,
+			94,
+			71,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1023,
-			853,
-			48,
-			47
+			3196,
+			1302,
+			94,
+			91
 		},
 		alias = {
 			"revenant_soulcaller_unit_0232"
 		}
 	},
 	revenant_soulcaller_unit_0233 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			47,
-			35,
-			87
+			79,
+			94,
+			71,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1131,
-			853,
-			48,
-			46
+			3296,
+			1302,
+			94,
+			91
 		},
 		alias = {
 			"revenant_soulcaller_unit_0234"
 		}
 	},
 	revenant_soulcaller_unit_0235 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			47,
-			35,
-			87
+			80,
+			96,
+			71,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1204,
-			47,
-			46
+			2877,
+			1405,
+			93,
+			89
 		},
 		alias = {
 			"revenant_soulcaller_unit_0236"
 		}
 	},
 	revenant_soulcaller_unit_0237 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			48,
-			35,
-			87
+			81,
+			98,
+			70,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1180,
-			909,
-			47,
-			45
+			3372,
+			1405,
+			93,
+			87
 		},
 		alias = {
 			"revenant_soulcaller_unit_0238"
 		}
 	},
 	revenant_soulcaller_unit_0239 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			48,
-			34,
-			87
+			81,
+			97,
+			69,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1509,
-			853,
-			48,
-			45
+			3596,
+			1302,
+			94,
+			88
 		},
 		alias = {
 			"revenant_soulcaller_unit_0240"
 		}
 	},
 	revenant_soulcaller_unit_0241 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			41,
-			47,
-			34,
-			87
+			82,
+			96,
+			69,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1256,
-			47,
-			46
+			2976,
+			1405,
+			93,
+			89
 		},
 		alias = {
 			"revenant_soulcaller_unit_0242"
 		}
 	},
 	revenant_soulcaller_unit_0243 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			41,
-			47,
-			33,
-			87
+			84,
+			94,
+			68,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1185,
-			853,
-			48,
-			46
+			3963,
+			1405,
+			92,
+			91
 		},
 		alias = {
 			"revenant_soulcaller_unit_0244"
 		}
 	},
 	revenant_soulcaller_unit_0245 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			41,
-			47,
-			34,
-			87
+			83,
+			95,
+			69,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1308,
-			47,
-			46
+			2281,
+			1569,
+			92,
+			90
 		},
 		alias = {
 			"revenant_soulcaller_unit_0246"
 		}
 	},
 	revenant_soulcaller_unit_0247 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			43,
-			33,
-			87
+			80,
+			87,
+			66,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			1388,
-			49,
-			50
+			1971,
+			2448,
+			98,
+			98
 		},
 		alias = {
 			"revenant_soulcaller_unit_0248"
 		}
 	},
 	revenant_soulcaller_unit_0249 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			44,
-			33,
-			87
+			81,
+			88,
+			66,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			1500,
-			49,
-			49
+			2077,
+			1691,
+			97,
+			97
 		},
 		alias = {
 			"revenant_soulcaller_unit_0250"
 		}
 	},
 	revenant_soulcaller_unit_0251 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			40,
-			43,
-			33,
-			87
+			80,
+			87,
+			66,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			1444,
-			49,
-			50
+			1971,
+			2552,
+			98,
+			98
 		},
 		alias = {
 			"revenant_soulcaller_unit_0252"
 		}
 	},
 	revenant_soulcaller_unit_0253 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			43,
-			32,
-			87
+			79,
+			86,
+			65,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1206,
-			689,
-			51,
-			50
+			2720,
+			1091,
+			100,
+			99
 		},
 		alias = {
 			"revenant_soulcaller_unit_0254"
 		}
 	},
 	revenant_soulcaller_unit_0255 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			42,
-			32,
-			87
+			78,
+			86,
+			65,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1092,
-			689,
-			51,
-			51
+			3875,
+			879,
+			101,
+			99
 		},
 		alias = {
 			"revenant_soulcaller_unit_0256"
 		}
 	},
 	revenant_soulcaller_unit_0257 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			43,
-			32,
-			87
+			78,
+			86,
+			65,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1263,
-			689,
-			51,
-			50
+			3982,
+			879,
+			101,
+			99
 		},
 		alias = {
 			"revenant_soulcaller_unit_0258"
 		}
 	},
 	revenant_soulcaller_unit_0259 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			43,
-			33,
-			87
+			78,
+			88,
+			66,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1172,
-			50,
-			50
+			3568,
+			1091,
+			100,
+			97
 		},
 		alias = {
 			"revenant_soulcaller_unit_0260"
 		}
 	},
 	revenant_soulcaller_unit_0261 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			44,
-			33,
-			87
+			78,
+			88,
+			66,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1732,
-			50,
-			49
+			3674,
+			1091,
+			100,
+			97
 		},
 		alias = {
 			"revenant_soulcaller_unit_0262"
 		}
 	},
 	revenant_soulcaller_unit_0263 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			43,
-			33,
-			87
+			78,
+			87,
+			66,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1228,
-			50,
-			50
+			3462,
+			1091,
+			100,
+			98
 		},
 		alias = {
 			"revenant_soulcaller_unit_0264"
 		}
 	},
 	revenant_soulcaller_unit_0265 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			43,
-			32,
-			87
+			78,
+			86,
+			65,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1320,
-			689,
-			51,
-			50
+			2305,
+			984,
+			101,
+			99
 		},
 		alias = {
 			"revenant_soulcaller_unit_0266"
 		}
 	},
 	revenant_soulcaller_unit_0267 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			42,
-			32,
-			87
+			78,
+			86,
+			65,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1149,
-			689,
-			51,
-			51
+			2412,
+			984,
+			101,
+			99
 		},
 		alias = {
 			"revenant_soulcaller_unit_0268"
 		}
 	},
 	revenant_soulcaller_unit_0269 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			39,
-			43,
-			32,
-			87
+			79,
+			86,
+			65,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1377,
-			689,
-			51,
-			50
+			2826,
+			1091,
+			100,
+			99
 		},
 		alias = {
 			"revenant_soulcaller_unit_0270"
 		}
 	},
 	revenant_soulcaller_unit_0271 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			32,
-			43,
-			40,
-			87
+			64,
+			86,
+			81,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1284,
-			50,
-			50
+			1971,
+			1695,
+			99,
+			99
 		},
 		alias = {
 			"revenant_soulcaller_unit_0272"
 		}
 	},
 	revenant_soulcaller_unit_0273 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			32,
-			42,
-			40,
-			87
+			64,
+			86,
+			80,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1058,
-			50,
-			51
+			2932,
+			1091,
+			100,
+			99
 		},
 		alias = {
 			"revenant_soulcaller_unit_0274"
 		}
 	},
 	revenant_soulcaller_unit_0275 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			32,
-			43,
-			39,
-			87
+			64,
+			86,
+			80,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1434,
-			689,
-			51,
-			50
+			3038,
+			1091,
+			100,
+			99
 		},
 		alias = {
 			"revenant_soulcaller_unit_0276"
 		}
 	},
 	revenant_soulcaller_unit_0277 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			32,
-			43,
-			40,
-			87
+			66,
+			87,
+			80,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1340,
-			50,
-			50
+			1971,
+			2656,
+			98,
+			98
 		},
 		alias = {
 			"revenant_soulcaller_unit_0278"
 		}
 	},
 	revenant_soulcaller_unit_0279 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			32,
-			44,
-			39,
-			87
+			66,
+			88,
+			80,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1491,
-			689,
-			51,
-			49
+			1971,
+			2864,
+			98,
+			97
 		},
 		alias = {
 			"revenant_soulcaller_unit_0280"
 		}
 	},
 	revenant_soulcaller_unit_0281 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			32,
-			43,
-			40,
-			87
+			66,
+			88,
+			80,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1396,
-			50,
-			50
+			1971,
+			2967,
+			98,
+			97
 		},
 		alias = {
 			"revenant_soulcaller_unit_0282"
 		}
 	},
 	revenant_soulcaller_unit_0283 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			32,
-			43,
-			40,
-			87
+			64,
+			86,
+			80,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1452,
-			50,
-			50
+			3144,
+			1091,
+			100,
+			99
 		},
 		alias = {
 			"revenant_soulcaller_unit_0284"
 		}
 	},
 	revenant_soulcaller_unit_0285 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			32,
-			42,
-			40,
-			87
+			64,
+			86,
+			80,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1115,
-			50,
-			51
+			3250,
+			1091,
+			100,
+			99
 		},
 		alias = {
 			"revenant_soulcaller_unit_0286"
 		}
 	},
 	revenant_soulcaller_unit_0287 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			32,
-			43,
-			40,
-			87
+			64,
+			86,
+			80,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1508,
-			50,
-			50
+			3356,
+			1091,
+			100,
+			99
 		},
 		alias = {
 			"revenant_soulcaller_unit_0288"
 		}
 	},
 	revenant_soulcaller_unit_0289 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			32,
-			43,
-			40,
-			87
+			65,
+			87,
+			82,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1564,
-			50,
-			50
+			2077,
+			1587,
+			97,
+			98
 		},
 		alias = {
 			"revenant_soulcaller_unit_0290"
 		}
 	},
 	revenant_soulcaller_unit_0291 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			32,
-			44,
-			41,
-			87
+			65,
+			88,
+			83,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			1555,
-			49,
-			49
+			2180,
+			1302,
+			96,
+			97
 		},
 		alias = {
 			"revenant_soulcaller_unit_0292"
 		}
 	},
 	revenant_soulcaller_unit_0293 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			122,
-			180
+			244,
+			360
 		},
 		trim = {
-			32,
-			43,
-			40,
-			87
+			65,
+			87,
+			81,
+			175
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1620,
-			50,
-			50
+			1971,
+			2760,
+			98,
+			98
 		},
 		alias = {
 			"revenant_soulcaller_unit_0294"
 		}
 	},
 	spectre_fx_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			58
+			128,
+			116
 		},
 		trim = {
-			21,
-			15,
-			21,
-			19
+			43,
+			31,
+			42,
+			39
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1425,
-			22,
-			24
+			245,
+			1512,
+			43,
+			46
 		},
 		alias = {
 			"spectre_fx_0002"
 		}
 	},
 	spectre_fx_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			58
+			128,
+			116
 		},
 		trim = {
-			20,
-			11,
-			16,
-			15
+			40,
+			23,
+			32,
+			31
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2020,
-			759,
-			28,
-			32
+			3366,
+			2704,
+			56,
+			62
 		},
 		alias = {
 			"spectre_fx_0004"
 		}
 	},
 	spectre_fx_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			64,
-			58
+			128,
+			116
 		},
 		trim = {
-			17,
-			11,
-			14,
-			13
+			35,
+			22,
+			29,
+			27
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1691,
-			1246,
-			33,
-			34
+			3231,
+			2612,
+			64,
+			67
 		},
 		alias = {
 			"spectre_fx_0006"
 		}
 	},
 	spectre_specter_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			25,
-			32,
-			22,
-			66
+			51,
+			65,
+			44,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1613,
-			1137,
-			39,
-			40
+			2830,
+			2451,
+			77,
+			78
 		},
 		alias = {
 			"spectre_specter_0002",
@@ -23712,26 +23712,26 @@ local a = {
 		}
 	},
 	spectre_specter_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			26,
-			31,
-			23,
-			66
+			53,
+			63,
+			47,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2011,
-			1016,
-			37,
-			41
+			3724,
+			2088,
+			72,
+			80
 		},
 		alias = {
 			"spectre_specter_0004",
@@ -23740,26 +23740,26 @@ local a = {
 		}
 	},
 	spectre_specter_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			27,
-			30,
-			23,
-			66
+			54,
+			61,
+			48,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			1671,
-			36,
-			42
+			3155,
+			2460,
+			70,
+			82
 		},
 		alias = {
 			"spectre_specter_0006",
@@ -23768,26 +23768,26 @@ local a = {
 		}
 	},
 	spectre_specter_0007 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			26,
-			30,
-			24,
-			66
+			53,
+			60,
+			49,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			1719,
-			36,
-			42
+			3155,
+			2371,
+			70,
+			83
 		},
 		alias = {
 			"spectre_specter_0008",
@@ -23796,26 +23796,26 @@ local a = {
 		}
 	},
 	spectre_specter_0009 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			24,
-			29,
-			23,
-			66
+			49,
+			59,
+			46,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1388,
-			1137,
-			39,
-			43
+			2830,
+			2275,
+			77,
+			84
 		},
 		alias = {
 			"spectre_specter_0010",
@@ -23824,26 +23824,26 @@ local a = {
 		}
 	},
 	spectre_specter_0011 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			23,
-			28,
-			22,
-			66
+			47,
+			58,
+			44,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1070,
-			1462,
-			41,
-			44
+			3361,
+			1793,
+			81,
+			85
 		},
 		alias = {
 			"spectre_specter_0012",
@@ -23852,26 +23852,26 @@ local a = {
 		}
 	},
 	spectre_specter_0013 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			22,
-			32,
-			21,
-			66
+			44,
+			66,
+			43,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1769,
-			805,
-			43,
-			40
+			2476,
+			3213,
+			85,
+			77
 		},
 		alias = {
 			"spectre_specter_0014",
@@ -23880,26 +23880,26 @@ local a = {
 		}
 	},
 	spectre_specter_0015 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			22,
-			33,
-			20,
-			66
+			44,
+			68,
+			41,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1970,
-			759,
-			44,
-			39
+			2476,
+			1901,
+			87,
+			75
 		},
 		alias = {
 			"spectre_specter_0016",
@@ -23908,26 +23908,26 @@ local a = {
 		}
 	},
 	spectre_specter_0017 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			20,
-			33,
-			21,
-			66
+			42,
+			67,
+			42,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1766,
-			759,
-			45,
-			39
+			3702,
+			1569,
+			88,
+			76
 		},
 		alias = {
 			"spectre_specter_0018",
@@ -23936,26 +23936,26 @@ local a = {
 		}
 	},
 	spectre_specter_0019 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			20,
-			33,
-			21,
-			66
+			40,
+			66,
+			44,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1817,
-			759,
-			45,
-			39
+			3608,
+			1569,
+			88,
+			77
 		},
 		alias = {
 			"spectre_specter_0020",
@@ -23964,3060 +23964,3060 @@ local a = {
 		}
 	},
 	spectre_specter_0041 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			24,
-			28,
-			24,
-			66
+			48,
+			56,
+			49,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1779,
-			1189,
-			38,
-			44
+			2994,
+			2589,
+			75,
+			87
 		},
 		alias = {
 			"spectre_specter_0042"
 		}
 	},
 	spectre_specter_0043 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			25,
-			31,
-			25,
-			66
+			50,
+			63,
+			51,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			1767,
-			36,
-			41
+			3958,
+			2088,
+			71,
+			80
 		},
 		alias = {
 			"spectre_specter_0044"
 		}
 	},
 	spectre_specter_0045 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			25,
-			29,
-			26,
-			66
+			51,
+			60,
+			52,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			1356,
-			35,
-			43
+			3155,
+			2548,
+			69,
+			83
 		},
 		alias = {
 			"spectre_specter_0046"
 		}
 	},
 	spectre_specter_0047 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			25,
-			28,
-			26,
-			66
+			51,
+			58,
+			53,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			1306,
-			35,
-			44
+			3155,
+			3040,
+			68,
+			85
 		},
 		alias = {
 			"spectre_specter_0048"
 		}
 	},
 	spectre_specter_0049 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			25,
-			27,
-			25,
-			66
+			50,
+			54,
+			51,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			1569,
-			36,
-			45
+			3075,
+			3100,
+			71,
+			89
 		},
 		alias = {
 			"spectre_specter_0050"
 		}
 	},
 	spectre_specter_0051 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			24,
-			26,
-			24,
-			66
+			49,
+			53,
+			49,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1735,
-			1189,
-			38,
-			46
+			3075,
+			2386,
+			74,
+			90
 		},
 		alias = {
 			"spectre_specter_0052"
 		}
 	},
 	spectre_specter_0053 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			23,
-			25,
-			24,
-			66
+			47,
+			51,
+			48,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1931,
-			39,
-			47
+			4005,
+			1983,
+			77,
+			92
 		},
 		alias = {
 			"spectre_specter_0054"
 		}
 	},
 	spectre_specter_0055 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			23,
-			28,
-			22,
-			66
+			46,
+			58,
+			46,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1070,
-			1512,
-			41,
-			44
+			2659,
+			2188,
+			80,
+			85
 		},
 		alias = {
 			"spectre_specter_0056"
 		}
 	},
 	spectre_specter_0057 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			23,
-			27,
-			23,
-			66
+			46,
+			56,
+			47,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1623,
-			1063,
-			40,
-			45
+			2745,
+			2400,
+			79,
+			87
 		},
 		alias = {
 			"spectre_specter_0058"
 		}
 	},
 	spectre_specter_0059 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			23,
-			28,
-			24,
-			66
+			47,
+			57,
+			48,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1298,
-			1137,
-			39,
-			44
+			2830,
+			2183,
+			77,
+			86
 		},
 		alias = {
 			"spectre_specter_0060"
 		}
 	},
 	spectre_specter_0061 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			24,
-			32,
-			24,
-			66
+			48,
+			65,
+			49,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1911,
-			1189,
-			38,
-			40
+			3238,
+			2088,
+			75,
+			78
 		},
 		alias = {
 			"spectre_specter_0062"
 		}
 	},
 	spectre_specter_0063 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			25,
-			31,
-			25,
-			66
+			50,
+			62,
+			51,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			1814,
-			36,
-			41
+			3155,
+			2284,
+			71,
+			81
 		},
 		alias = {
 			"spectre_specter_0064"
 		}
 	},
 	spectre_specter_0065 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			25,
-			29,
-			26,
-			66
+			51,
+			60,
+			52,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			1405,
-			35,
-			43
+			3155,
+			2637,
+			69,
+			83
 		},
 		alias = {
 			"spectre_specter_0066"
 		}
 	},
 	spectre_specter_0067 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			25,
-			29,
-			26,
-			66
+			51,
+			59,
+			53,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1250,
-			1454,
-			35,
-			43
+			3155,
+			3131,
+			68,
+			84
 		},
 		alias = {
 			"spectre_specter_0068"
 		}
 	},
 	spectre_specter_0069 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			25,
-			27,
-			25,
-			66
+			50,
+			56,
+			51,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			1620,
-			36,
-			45
+			3075,
+			3195,
+			71,
+			87
 		},
 		alias = {
 			"spectre_specter_0070"
 		}
 	},
 	spectre_specter_0071 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			24,
-			27,
-			24,
-			66
+			48,
+			55,
+			49,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			2003,
-			38,
-			45
+			2994,
+			2495,
+			75,
+			88
 		},
 		alias = {
 			"spectre_specter_0072"
 		}
 	},
 	spectre_specter_0073 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			23,
-			28,
-			24,
-			66
+			46,
+			57,
+			48,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1343,
-			1137,
-			39,
-			44
+			3334,
+			1983,
+			78,
+			86
 		},
 		alias = {
 			"spectre_specter_0074"
 		}
 	},
 	spectre_specter_0075 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			23,
-			33,
-			22,
-			66
+			45,
+			67,
+			46,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1308,
-			1016,
-			41,
-			39
+			3622,
+			1793,
+			81,
+			76
 		},
 		alias = {
 			"spectre_specter_0076"
 		}
 	},
 	spectre_specter_0077 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			21,
-			32,
-			23,
-			66
+			44,
+			66,
+			47,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1118,
-			1016,
-			42,
-			40
+			3535,
+			1793,
+			81,
+			77
 		},
 		alias = {
 			"spectre_specter_0078"
 		}
 	},
 	spectre_specter_0079 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			20,
-			32,
-			24,
-			66
+			42,
+			65,
+			48,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1166,
-			1016,
-			42,
-			40
+			3011,
+			1793,
+			82,
+			78
 		},
 		alias = {
 			"spectre_specter_0080"
 		}
 	},
 	spectre_specter_0081 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			26,
-			27,
-			18,
-			66
+			53,
+			55,
+			36,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1847,
-			909,
-			42,
-			45
+			2569,
+			2791,
+			83,
+			88
 		},
 		alias = {
 			"spectre_specter_0082"
 		}
 	},
 	spectre_specter_0083 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			27,
-			25,
-			19,
-			66
+			55,
+			51,
+			39,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1485,
-			1063,
-			40,
-			47
+			3250,
+			1983,
+			78,
+			92
 		},
 		alias = {
 			"spectre_specter_0084"
 		}
 	},
 	spectre_specter_0085 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			27,
-			25,
-			19,
-			66
+			55,
+			50,
+			39,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1531,
-			1063,
-			40,
-			47
+			3166,
+			1983,
+			78,
+			93
 		},
 		alias = {
 			"spectre_specter_0086"
 		}
 	},
 	spectre_specter_0087 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			25,
-			24,
-			18,
-			66
+			51,
+			48,
+			37,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1818,
-			960,
-			43,
-			48
+			3743,
+			1686,
+			84,
+			95
 		},
 		alias = {
 			"spectre_specter_0088"
 		}
 	},
 	spectre_specter_0089 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			24,
-			24,
-			17,
-			66
+			48,
+			49,
+			36,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1173,
-			960,
-			45,
-			48
+			3232,
+			1569,
+			88,
+			94
 		},
 		alias = {
 			"spectre_specter_0090"
 		}
 	},
 	spectre_specter_0091 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			22,
-			28,
-			17,
-			66
+			45,
+			57,
+			34,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1339,
-			909,
-			47,
-			44
+			3471,
+			1405,
+			93,
+			86
 		},
 		alias = {
 			"spectre_specter_0092"
 		}
 	},
 	spectre_specter_0093 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			22,
-			28,
-			18,
-			66
+			45,
+			57,
+			36,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1392,
-			909,
-			46,
-			44
+			2379,
+			1983,
+			91,
+			86
 		},
 		alias = {
 			"spectre_specter_0094"
 		}
 	},
 	spectre_specter_0095 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			20,
-			34,
-			19,
-			66
+			42,
+			69,
+			39,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			6,
-			2010,
-			47,
-			38
+			3683,
+			1213,
+			91,
+			74
 		},
 		alias = {
 			"spectre_specter_0096"
 		}
 	},
 	spectre_specter_0097 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			19,
-			26,
-			19,
-			62
+			40,
+			53,
+			39,
+			125
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			853,
-			48,
-			50
+			2778,
+			1405,
+			93,
+			98
 		},
 		alias = {
 			"spectre_specter_0098"
 		}
 	},
 	spectre_specter_0099 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			17,
-			22,
-			16,
-			61
+			36,
+			45,
+			33,
+			123
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			986,
-			53,
-			55
+			1860,
+			2490,
+			103,
+			108
 		},
 		alias = {
 			"spectre_specter_0100"
 		}
 	},
 	spectre_specter_0101 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			16,
-			19,
-			15,
-			59
+			33,
+			40,
+			31,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1622,
-			622,
-			55,
-			60
+			1745,
+			2448,
+			108,
+			117
 		},
 		alias = {
 			"spectre_specter_0102"
 		}
 	},
 	spectre_specter_0103 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			15,
-			19,
-			15,
-			60
+			31,
+			40,
+			30,
+			121
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1002,
-			622,
-			56,
-			59
+			3627,
+			724,
+			111,
+			115
 		},
 		alias = {
 			"spectre_specter_0104"
 		}
 	},
 	spectre_specter_0105 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			16,
-			19,
-			15,
-			59
+			32,
+			39,
+			30,
+			120
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1683,
-			622,
-			55,
-			60
+			1628,
+			2326,
+			110,
+			117
 		},
 		alias = {
 			"spectre_specter_0106"
 		}
 	},
 	spectre_specter_0109 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			25,
-			31,
-			22,
-			66
+			51,
+			63,
+			45,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1568,
-			1137,
-			39,
-			41
+			2913,
+			2088,
+			76,
+			80
 		},
 		alias = {
 			"spectre_specter_0110"
 		}
 	},
 	spectre_specter_0111 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			23,
-			36,
-			23,
-			66
+			46,
+			72,
+			47,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1945,
-			1063,
-			40,
-			36
+			2745,
+			2751,
+			79,
+			71
 		},
 		alias = {
 			"spectre_specter_0112"
 		}
 	},
 	spectre_specter_0113 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			22,
-			31,
-			28,
-			66
+			44,
+			63,
+			56,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			1861,
-			36,
-			41
+			3802,
+			2088,
+			72,
+			80
 		},
 		alias = {
 			"spectre_specter_0114"
 		}
 	},
 	spectre_specter_0115 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			18,
-			29,
-			22,
-			66
+			37,
+			59,
+			45,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1496,
-			909,
-			46,
-			43
+			2379,
+			3032,
+			90,
+			84
 		},
 		alias = {
 			"spectre_specter_0116"
 		}
 	},
 	spectre_specter_0117 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			15,
-			26,
-			32,
-			66
+			31,
+			54,
+			64,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1984,
-			39,
-			46
+			2830,
+			2088,
+			77,
+			89
 		},
 		alias = {
 			"spectre_specter_0118"
 		}
 	},
 	spectre_specter_0119 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			13,
 			26,
-			34,
-			66
+			52,
+			70,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1163,
-			1137,
-			39,
-			46
+			2830,
+			3049,
+			76,
+			91
 		},
 		alias = {
 			"spectre_specter_0120"
 		}
 	},
 	spectre_specter_0121 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			11,
-			25,
-			34,
-			66
+			22,
+			51,
+			70,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1070,
-			1256,
-			41,
-			47
+			3796,
+			1793,
+			80,
+			92
 		},
 		alias = {
 			"spectre_specter_0122"
 		}
 	},
 	spectre_specter_0123 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			11,
-			26,
-			34,
-			66
+			23,
+			53,
+			70,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1070,
-			1309,
-			41,
-			46
+			4017,
+			984,
+			79,
+			90
 		},
 		alias = {
 			"spectre_specter_0124"
 		}
 	},
 	spectre_specter_0125 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			12,
-			28,
-			28,
-			66
+			25,
+			57,
+			58,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1444,
-			909,
-			46,
-			44
+			2379,
+			3212,
+			89,
+			86
 		},
 		alias = {
 			"spectre_specter_0126"
 		}
 	},
 	spectre_specter_0127 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			23,
-			41,
-			9,
-			58
+			46,
+			83,
+			20,
+			116
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			1892,
-			54,
-			39
+			2998,
+			879,
+			106,
+			77
 		},
 		alias = {
 			"spectre_specter_0128"
 		}
 	},
 	spectre_specter_0129 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			26,
-			38,
-			14,
-			57
+			52,
+			76,
+			30,
+			116
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1548,
-			909,
-			46,
-			43
+			2379,
+			3122,
+			90,
+			84
 		},
 		alias = {
 			"spectre_specter_0130"
 		}
 	},
 	spectre_specter_0131 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			24,
-			41,
-			23,
-			59
+			48,
+			83,
+			47,
+			120
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1703,
-			1137,
-			39,
-			38
+			2830,
+			2618,
+			77,
+			73
 		},
 		alias = {
 			"spectre_specter_0132"
 		}
 	},
 	spectre_specter_0133 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			23,
-			41,
-			23,
-			59
+			47,
+			83,
+			47,
+			120
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1761,
-			1063,
-			40,
-			38
+			3586,
+			1983,
+			78,
+			73
 		},
 		alias = {
 			"spectre_specter_0134"
 		}
 	},
 	spectre_specter_0135 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			24,
-			31,
-			26,
-			66
+			48,
+			63,
+			53,
+			132
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			1908,
-			36,
-			41
+			3232,
+			2284,
+			71,
+			81
 		},
 		alias = {
 			"spectre_specter_0136"
 		}
 	},
 	spectre_specter_0137 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			23,
-			31,
-			25,
-			66
+			47,
+			63,
+			50,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1867,
-			1189,
-			38,
-			41
+			2995,
+			2088,
+			75,
+			80
 		},
 		alias = {
 			"spectre_specter_0138"
 		}
 	},
 	spectre_specter_0139 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			22,
-			35,
-			21,
-			66
+			44,
+			72,
+			42,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1867,
-			805,
-			43,
-			37
+			2476,
+			2697,
+			86,
+			71
 		},
 		alias = {
 			"spectre_specter_0140"
 		}
 	},
 	spectre_specter_0141 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			20,
-			35,
-			20,
-			66
+			42,
+			71,
+			41,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			59,
-			2010,
-			46,
-			37
+			3972,
+			1213,
+			89,
+			72
 		},
 		alias = {
 			"spectre_specter_0142"
 		}
 	},
 	spectre_specter_0143 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			32,
-			63,
-			35,
-			64
+			64,
+			126,
+			71,
+			129
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			995,
-			202,
-			19,
-			11
+			250,
+			855,
+			37,
+			21
 		},
 		alias = {
 			"spectre_specter_0144"
 		}
 	},
 	spectre_specter_0145 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			22,
-			57,
-			29,
-			64
+			46,
+			115,
+			58,
+			130
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1947,
-			735,
-			35,
-			17
+			3632,
+			113,
+			68,
+			31
 		},
 		alias = {
 			"spectre_specter_0146"
 		}
 	},
 	spectre_specter_0147 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			21,
-			49,
-			27,
-			64
+			44,
+			99,
+			56,
+			130
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1991,
-			1104,
-			38,
-			25
+			2580,
+			1515,
+			72,
+			47
 		},
 		alias = {
 			"spectre_specter_0148"
 		}
 	},
 	spectre_specter_0149 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			19,
-			37,
-			25,
-			65
+			40,
+			76,
+			50,
+			130
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1740,
-			6,
-			42,
-			36
+			3099,
+			1793,
+			82,
+			70
 		},
 		alias = {
 			"spectre_specter_0150"
 		}
 	},
 	spectre_specter_0151 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			18,
-			31,
-			22,
-			65
+			36,
+			63,
+			45,
+			131
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1412,
-			805,
-			46,
-			42
+			3198,
+			1213,
+			91,
+			82
 		},
 		alias = {
 			"spectre_specter_0152"
 		}
 	},
 	spectre_specter_0153 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			16,
-			28,
-			21,
-			66
+			33,
+			56,
+			44,
+			132
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			806,
-			1714,
-			49,
-			44
+			2893,
+			1302,
+			95,
+			88
 		},
 		alias = {
 			"spectre_specter_0154"
 		}
 	},
 	spectre_specter_0155 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			16,
-			23,
-			20,
-			65
+			32,
+			47,
+			40,
+			132
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			1676,
-			50,
-			50
+			3780,
+			1091,
+			100,
+			97
 		},
 		alias = {
 			"spectre_specter_0156"
 		}
 	},
 	spectre_specter_0157 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			14,
-			27,
-			19,
-			66
+			30,
+			55,
+			38,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			691,
-			1274,
-			53,
-			45
+			3332,
+			879,
+			104,
+			88
 		},
 		alias = {
 			"spectre_specter_0158"
 		}
 	},
 	spectre_specter_0159 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			14,
-			30,
-			18,
-			66
+			29,
+			61,
+			38,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			630,
-			1797,
-			54,
-			42
+			3221,
+			879,
+			105,
+			82
 		},
 		alias = {
 			"spectre_specter_0160"
 		}
 	},
 	spectre_specter_0161 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			24,
-			35,
-			19,
-			66
+			48,
+			71,
+			38,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1916,
-			805,
-			43,
-			37
+			2476,
+			2619,
+			86,
+			72
 		},
 		alias = {
 			"spectre_specter_0162"
 		}
 	},
 	spectre_specter_0163 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			24,
-			33,
-			26,
-			65
+			49,
+			68,
+			52,
+			132
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1207,
-			1955,
-			36,
-			40
+			3309,
+			2284,
+			71,
+			76
 		},
 		alias = {
 			"spectre_specter_0164"
 		}
 	},
 	spectre_specter_0165 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			24,
-			30,
-			22,
-			66
+			48,
+			60,
+			46,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1715,
-			1063,
-			40,
-			42
+			3418,
+			1983,
+			78,
+			83
 		},
 		alias = {
 			"spectre_specter_0166"
 		}
 	},
 	spectre_specter_0167 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			22,
-			30,
-			22,
-			66
+			46,
+			61,
+			45,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1895,
-			909,
-			42,
-			42
+			3448,
+			1793,
+			81,
+			82
 		},
 		alias = {
 			"spectre_specter_0168"
 		}
 	},
 	spectre_specter_0169 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			22,
-			35,
-			21,
-			66
+			44,
+			70,
+			44,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1965,
-			805,
-			43,
-			37
+			2569,
+			2201,
+			84,
+			73
 		},
 		alias = {
 			"spectre_specter_0170"
 		}
 	},
 	spectre_specter_0171 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			22,
-			35,
-			21,
-			66
+			44,
+			71,
+			44,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1798,
-			909,
-			43,
-			37
+			2569,
+			2280,
+			84,
+			72
 		},
 		alias = {
 			"spectre_specter_0172"
 		}
 	},
 	spectre_specter_0173 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			20,
-			35,
-			21,
-			66
+			42,
+			71,
+			43,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			501,
-			2011,
-			45,
-			37
+			2476,
+			2061,
+			87,
+			72
 		},
 		alias = {
 			"spectre_specter_0174"
 		}
 	},
 	spectre_specter_0175 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			20,
-			34,
-			21,
-			66
+			40,
+			68,
+			44,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1919,
-			759,
-			45,
-			38
+			3796,
+			1569,
+			88,
+			75
 		},
 		alias = {
 			"spectre_specter_0176"
 		}
 	},
 	spectre_specter_0179 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			24,
-			34,
-			22,
-			66
+			48,
+			69,
+			44,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1807,
-			1063,
-			40,
-			38
+			2659,
+			2363,
+			80,
+			74
 		},
 		alias = {
 			"spectre_specter_0180"
 		}
 	},
 	spectre_specter_0181 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			23,
-			29,
-			20,
-			66
+			48,
+			60,
+			42,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1749,
-			909,
-			43,
-			43
+			2835,
+			1793,
+			82,
+			83
 		},
 		alias = {
 			"spectre_specter_0182"
 		}
 	},
 	spectre_specter_0183 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			21,
-			25,
-			18,
-			71
+			43,
+			51,
+			37,
+			143
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1359,
-			805,
-			47,
-			42
+			3100,
+			1213,
+			92,
+			82
 		},
 		alias = {
 			"spectre_specter_0184"
 		}
 	},
 	spectre_specter_0185 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			21,
-			20,
-			18,
-			70
+			43,
+			42,
+			37,
+			142
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			915,
-			1150,
-			47,
-			48
+			3865,
+			1405,
+			92,
+			92
 		},
 		alias = {
 			"spectre_specter_0186"
 		}
 	},
 	spectre_specter_0187 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			21,
-			17,
-			17,
-			70
+			43,
+			34,
+			36,
+			142
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			861,
-			1957,
-			48,
-			51
+			2679,
+			1405,
+			93,
+			100
 		},
 		alias = {
 			"spectre_specter_0188"
 		}
 	},
 	spectre_specter_0189 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			19,
-			13,
-			17,
-			72
+			39,
+			28,
+			35,
+			146
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			940,
-			50,
-			53
+			1971,
+			2340,
+			98,
+			102
 		},
 		alias = {
 			"spectre_specter_0190"
 		}
 	},
 	spectre_specter_0191 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			19,
-			12,
-			17,
-			73
+			39,
+			25,
+			36,
+			147
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			750,
-			999,
-			50,
-			53
+			2077,
+			1477,
+			97,
+			104
 		},
 		alias = {
 			"spectre_specter_0192"
 		}
 	},
 	spectre_specter_0193 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			25,
-			26,
-			18,
-			66
+			51,
+			52,
+			38,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1965,
-			960,
-			43,
-			46
+			2569,
+			2694,
+			83,
+			91
 		},
 		alias = {
 			"spectre_specter_0194"
 		}
 	},
 	spectre_specter_0195 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			27,
-			23,
-			20,
-			66
+			54,
+			46,
+			41,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1876,
-			39,
-			49
+			3922,
+			1983,
+			77,
+			97
 		},
 		alias = {
 			"spectre_specter_0196"
 		}
 	},
 	spectre_specter_0197 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			26,
-			22,
-			20,
-			66
+			54,
+			44,
+			42,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1439,
-			1063,
-			40,
-			50
+			2830,
+			2944,
+			76,
+			99
 		},
 		alias = {
 			"spectre_specter_0198"
 		}
 	},
 	spectre_specter_0199 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			21,
-			19,
-			22,
-			66
+			44,
+			39,
+			45,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			1189,
-			43,
-			53
+			2569,
+			2485,
+			83,
+			104
 		},
 		alias = {
 			"spectre_specter_0200"
 		}
 	},
 	spectre_specter_0201 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			19,
-			19,
-			22,
-			66
+			38,
+			38,
+			46,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			1993,
-			45,
-			53
+			2950,
+			1569,
+			88,
+			105
 		},
 		alias = {
 			"spectre_specter_0202"
 		}
 	},
 	spectre_specter_0203 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			17,
-			23,
-			22,
-			66
+			36,
+			47,
+			44,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1995,
-			853,
-			47,
-			49
+			3767,
+			1405,
+			92,
+			96
 		},
 		alias = {
 			"spectre_specter_0204"
 		}
 	},
 	spectre_specter_0205 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			17,
-			18,
-			23,
-			66
+			35,
+			37,
+			46,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			1526,
-			46,
-			54
+			2379,
+			1684,
+			91,
+			106
 		},
 		alias = {
 			"spectre_specter_0206"
 		}
 	},
 	spectre_specter_0207 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			21,
-			15,
-			23,
-			66
+			44,
+			31,
+			46,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			1774,
-			42,
-			57
+			2659,
+			1793,
+			82,
+			112
 		},
 		alias = {
 			"spectre_specter_0208"
 		}
 	},
 	spectre_specter_0209 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			23,
-			13,
-			24,
-			66
+			47,
+			26,
+			49,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1387,
-			39,
-			59
+			2830,
+			2821,
+			76,
+			117
 		},
 		alias = {
 			"spectre_specter_0210"
 		}
 	},
 	spectre_specter_0211 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			23,
-			12,
-			24,
-			66
+			46,
+			25,
+			50,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1117,
-			1321,
-			39,
-			60
+			2830,
+			2697,
+			76,
+			118
 		},
 		alias = {
 			"spectre_specter_0212"
 		}
 	},
 	spectre_specter_0213 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			21,
-			11,
-			23,
-			66
+			42,
+			22,
+			47,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1020,
-			1707,
-			42,
-			61
+			2569,
+			2358,
+			83,
+			121
 		},
 		alias = {
 			"spectre_specter_0214"
 		}
 	},
 	spectre_specter_0215 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			19,
-			11,
+			39,
 			22,
-			66
+			46,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			1802,
-			45,
-			61
+			2476,
+			1686,
+			87,
+			121
 		},
 		alias = {
 			"spectre_specter_0216"
 		}
 	},
 	spectre_specter_0217 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			18,
-			17,
-			22,
-			66
+			37,
+			34,
+			44,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			1344,
-			46,
-			55
+			2379,
+			1569,
+			91,
+			109
 		},
 		alias = {}
 	},
 	spectre_specter_0218 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			18,
-			18,
-			22,
-			66
+			37,
+			36,
+			45,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			1586,
-			46,
-			54
+			2379,
+			2919,
+			90,
+			107
 		},
 		alias = {}
 	},
 	spectre_specter_0219 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			86,
-			138
+			172,
+			276
 		},
 		trim = {
-			17,
-			17,
-			23,
-			66
+			36,
+			34,
+			46,
+			133
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			968,
-			1405,
-			46,
-			55
+			2379,
+			2690,
+			90,
+			109
 		},
 		alias = {
 			"spectre_specter_0220"
 		}
 	},
 	spectre_specter_rush_explosion_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			70,
-			96
+			140,
+			192
 		},
 		trim = {
-			21,
-			25,
-			21,
-			46
+			43,
+			51,
+			43,
+			93
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1717,
-			1323,
-			28,
-			25
+			3761,
+			2371,
+			54,
+			48
 		},
 		alias = {
 			"spectre_specter_rush_explosion_0002"
 		}
 	},
 	spectre_specter_rush_explosion_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			70,
-			96
+			140,
+			192
 		},
 		trim = {
-			18,
-			23,
-			20,
-			46
+			38,
+			47,
+			40,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1727,
-			32,
-			27
+			3231,
+			3091,
+			62,
+			53
 		},
 		alias = {
 			"spectre_specter_rush_explosion_0004"
 		}
 	},
 	spectre_specter_rush_explosion_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			70,
-			96
+			140,
+			192
 		},
 		trim = {
-			13,
-			15,
-			18,
-			44
+			28,
+			31,
+			37,
+			88
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1793,
-			1137,
-			39,
-			37
+			3400,
+			2088,
+			75,
+			73
 		},
 		alias = {
 			"spectre_specter_rush_explosion_0006"
 		}
 	},
 	spectre_specter_rush_explosion_0007 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			70,
-			96
+			140,
+			192
 		},
 		trim = {
-			13,
-			12,
-			17,
-			44
+			27,
+			26,
+			36,
+			89
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1965,
-			1016,
-			40,
-			40
+			2830,
+			2535,
+			77,
+			77
 		},
 		alias = {
 			"spectre_specter_rush_explosion_0008"
 		}
 	},
 	spectre_specter_rush_explosion_0009 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			70,
-			96
+			140,
+			192
 		},
 		trim = {
-			13,
-			10,
-			16,
-			46
+			28,
+			21,
+			34,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1261,
-			1016,
-			41,
-			40
+			3502,
+			1983,
+			78,
+			79
 		},
 		alias = {
 			"spectre_specter_rush_explosion_0010"
 		}
 	},
 	spectre_specter_rush_explosion_0011 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			70,
-			96
+			140,
+			192
 		},
 		trim = {
-			13,
-			9,
-			17,
-			46
+			28,
+			20,
+			35,
+			92
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1919,
-			1016,
-			40,
-			41
+			2830,
+			2365,
+			77,
+			80
 		},
 		alias = {
 			"spectre_specter_rush_explosion_0012"
 		}
 	},
 	spectre_specter_rush_explosion_0013 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			70,
-			96
+			140,
+			192
 		},
 		trim = {
-			14,
-			9,
-			17,
-			59
+			29,
+			20,
+			35,
+			119
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1973,
-			1137,
-			39,
-			28
+			2778,
+			1509,
+			76,
+			53
 		},
 		alias = {
 			"spectre_specter_rush_explosion_0014"
 		}
 	},
 	spectre_specter_rush_explosion_0015 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			70,
-			96
+			140,
+			192
 		},
 		trim = {
 			0,
 			0,
-			68,
-			94
+			138,
+			190
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			554,
-			40,
+			266,
+			503,
 			2,
 			2
 		},
 		alias = {}
 	},
 	spectre_specter_rush_particle_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			52,
-			54
+			104,
+			108
 		},
 		trim = {
-			15,
-			16,
-			17,
-			17
+			30,
+			33,
+			34,
+			34
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2028,
-			6,
-			20,
-			21
+			247,
+			1025,
+			40,
+			41
 		},
 		alias = {
 			"spectre_specter_rush_particle_0002"
 		}
 	},
 	spectre_specter_rush_particle_0003 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			52,
-			54
+			104,
+			108
 		},
 		trim = {
-			12,
-			14,
-			14,
-			14
+			26,
+			28,
+			29,
+			29
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1919,
-			1323,
-			26,
-			26
+			4047,
+			1502,
+			49,
+			51
 		},
 		alias = {
 			"spectre_specter_rush_particle_0004"
 		}
 	},
 	spectre_specter_rush_particle_0005 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			52,
-			54
+			104,
+			108
 		},
 		trim = {
-			13,
-			14,
-			15,
-			15
+			27,
+			29,
+			30,
+			30
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1364,
-			24,
-			25
+			241,
+			2005,
+			47,
+			49
 		},
 		alias = {
 			"spectre_specter_rush_particle_0006"
 		}
 	},
 	spectre_specter_rush_particle_0007 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			52,
-			54
+			104,
+			108
 		},
 		trim = {
-			13,
-			15,
-			15,
-			15
+			28,
+			30,
+			31,
+			31
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1395,
-			24,
-			24
+			243,
+			1784,
+			45,
+			47
 		},
 		alias = {
 			"spectre_specter_rush_particle_0008"
 		}
 	},
 	spectre_specter_rush_particle_0009 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			52,
-			54
+			104,
+			108
 		},
 		trim = {
-			14,
-			15,
-			16,
-			16
+			29,
+			31,
+			32,
+			32
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1455,
-			22,
-			23
+			245,
+			1564,
+			43,
+			45
 		},
 		alias = {
 			"spectre_specter_rush_particle_0010"
 		}
 	},
 	spectre_specter_rush_particle_0011 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			52,
-			54
+			104,
+			108
 		},
 		trim = {
-			14,
-			16,
-			17,
-			16
+			29,
+			32,
+			34,
+			33
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2027,
-			220,
-			21,
-			22
+			247,
+			958,
+			41,
+			43
 		},
 		alias = {
 			"spectre_specter_rush_particle_0012"
 		}
 	},
 	spectre_specter_rush_particle_0013 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			52,
-			54
+			104,
+			108
 		},
 		trim = {
-			15,
-			16,
-			17,
-			17
+			30,
+			33,
+			35,
+			34
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2027,
-			248,
-			20,
-			21
+			247,
+			1097,
+			39,
+			41
 		},
 		alias = {
 			"spectre_specter_rush_particle_0014"
 		}
 	},
 	spectre_specter_rush_particle_0015 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			52,
-			54
+			104,
+			108
 		},
 		trim = {
-			15,
-			17,
-			18,
-			17
+			31,
+			34,
+			36,
+			35
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1534,
-			19,
-			20
+			250,
+			737,
+			37,
+			39
 		},
 		alias = {
 			"spectre_specter_rush_particle_0016"
 		}
 	},
 	spectre_specter_rush_particle_0017 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			52,
-			54
+			104,
+			108
 		},
 		trim = {
-			16,
-			17,
-			18,
-			18
+			32,
+			35,
+			37,
+			37
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1655,
-			18,
-			19
+			247,
+			1190,
+			35,
+			36
 		},
 		alias = {
 			"spectre_specter_rush_particle_0018"
 		}
 	},
 	spectre_specter_rush_particle_0019 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			52,
-			54
+			104,
+			108
 		},
 		trim = {
-			17,
-			18,
-			18,
-			19
+			34,
+			36,
+			37,
+			38
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1727,
-			17,
-			17
+			255,
+			300,
+			33,
+			34
 		},
 		alias = {
 			"spectre_specter_rush_particle_0020"
 		}
 	},
 	spectre_specter_rush_particle_0021 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			52,
-			54
+			104,
+			108
 		},
 		trim = {
-			17,
-			18,
-			19,
-			19
+			34,
+			37,
+			39,
+			39
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1329,
-			1750,
-			16,
-			17
+			257,
+			82,
+			31,
+			32
 		},
 		alias = {
 			"spectre_specter_rush_particle_0022"
 		}
 	},
 	spectre_specter_rush_particle_0023 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			52,
-			54
+			104,
+			108
 		},
 		trim = {
-			18,
-			19,
-			20,
-			20
+			36,
+			38,
+			40,
+			40
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			2033,
-			597,
-			14,
-			15
+			257,
+			208,
+			28,
+			30
 		},
 		alias = {
 			"spectre_specter_rush_particle_0024"
 		}
 	},
 	spectre_specter_rush_particle_0025 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			52,
-			54
+			104,
+			108
 		},
 		trim = {
-			18,
-			20,
-			20,
-			20
+			37,
+			40,
+			41,
+			41
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1813,
-			411,
-			14,
-			14
+			255,
+			440,
+			26,
+			27
 		},
 		alias = {
 			"spectre_specter_rush_particle_0026"
 		}
 	},
 	spectre_specter_rush_particle_0027 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			52,
-			54
+			104,
+			108
 		},
 		trim = {
-			19,
-			21,
-			21,
-			21
+			38,
+			41,
+			43,
+			43
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			500,
-			201,
-			12,
-			12
+			255,
+			473,
+			23,
+			24
 		},
 		alias = {
 			"spectre_specter_rush_particle_0028"
 		}
 	},
 	spectre_specter_rush_particle_0029 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			52,
-			54
+			104,
+			108
 		},
 		trim = {
 			0,
 			0,
-			50,
-			52
+			102,
+			106
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			562,
-			40,
+			274,
+			503,
 			2,
 			2
 		},
 		alias = {}
 	},
 	spectre_trail_0001 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			42
+			160,
+			84
 		},
 		trim = {
-			13,
-			9,
-			38,
-			14
+			27,
+			20,
+			76,
+			29
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1946,
-			1286,
-			29,
-			19
+			231,
+			3081,
+			57,
+			35
 		},
 		alias = {
 			"spectre_trail_0012"
 		}
 	},
 	spectre_trail_0002 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			42
+			160,
+			84
 		},
 		trim = {
-			12,
-			10,
-			37,
-			13
+			25,
+			21,
+			75,
+			28
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1477,
-			1286,
-			31,
-			19
+			3099,
+			1869,
+			60,
+			35
 		},
 		alias = {
 			"spectre_trail_0003"
 		}
 	},
 	spectre_trail_0004 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			42
+			160,
+			84
 		},
 		trim = {
-			13,
-			10,
-			37,
-			14
+			28,
+			20,
+			75,
+			29
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1875,
-			1286,
-			30,
-			18
+			231,
+			3122,
+			57,
+			35
 		},
 		alias = {
 			"spectre_trail_0005"
 		}
 	},
 	spectre_trail_0006 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			42
+			160,
+			84
 		},
 		trim = {
-			11,
-			9,
-			37,
-			14
+			23,
+			20,
+			75,
+			30
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1291,
-			1863,
-			32,
-			19
+			3744,
+			837,
+			62,
+			34
 		},
 		alias = {
 			"spectre_trail_0007"
 		}
 	},
 	spectre_trail_0008 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			42
+			160,
+			84
 		},
 		trim = {
-			11,
-			9,
-			38,
-			15
+			23,
+			20,
+			76,
+			31
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1514,
-			1286,
-			31,
-			18
+			2613,
+			1173,
+			61,
+			33
 		},
 		alias = {
 			"spectre_trail_0009"
 		}
 	},
 	spectre_trail_0010 = {
-		a_name = "go_enemies_terrain_4-1.png",
+		a_name = "go_enemies_terrain_4-1.dds",
 		size = {
-			80,
-			42
+			160,
+			84
 		},
 		trim = {
-			10,
-			11,
-			38,
-			14
+			21,
+			24,
+			76,
+			30
 		},
 		a_size = {
-			2048,
-			2048
+			4096,
+			3300
 		},
 		f_quad = {
-			1577,
-			1114,
-			32,
-			17
+			3218,
+			116,
+			63,
+			30
 		},
 		alias = {
 			"spectre_trail_0011"
@@ -27026,7 +27026,7 @@ local a = {
 }
 
 for k, v in pairs(a) do
-	local rate = 45 / 32
+	local rate = 32 / 45
 	a[k]["size"][1] = math.ceil(a[k]["size"][1]*rate)
 	a[k]["size"][2] = math.ceil(a[k]["size"][2]*rate)
 

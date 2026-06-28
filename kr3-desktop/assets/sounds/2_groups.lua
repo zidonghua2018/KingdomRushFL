@@ -699,6 +699,7 @@ return {
 			"worm_dirtLoop.ogg",
 			"krf_toee_aliengoddess_screech[op3].ogg",
 			---食人花
+			"mermaid.ogg",
 			"carnivore_plant.ogg",
 		},
 		ids = {},

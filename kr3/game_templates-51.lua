@@ -1056,8 +1056,37 @@ tt.attacks.list[17].entities = {
 		}
 	}
 }
-tt.attacks.list[18] = nil
-tt.attacks.list[19] = nil
+tt.attacks.list[18].price = 150
+tt.attacks.list[18].entities = {
+	{
+		1,
+		{
+		"hero_dragon_sun_2"
+		}
+	}
+}
+--tt.attacks.list[19] = nil
+tt.attacks.list[19].price = 120
+tt.attacks.list[19].entities = {
+	{
+		1,
+		{
+		"hero_wukong_2"
+		}
+	}
+}
+
+tt.attacks.list[20] = table.deepclone(tt.attacks.list[19])
+
+tt.attacks.list[20].price = 300
+tt.attacks.list[20].entities = {
+	{
+		1,
+		{
+		"hero_douzhanshengfo_2"
+		}
+	}
+}
 
 tt = RT("tower_hero_buy_d", "tower_hero_buy")
 tt.tower.type = "hero_buy_d"
@@ -1092,22 +1121,22 @@ tt.attacks.list[3].entities = {
 	}
 }
 
-tt.attacks.list[4].price = 120
+tt.attacks.list[4].price = 110
 tt.attacks.list[4].entities = {
 	{
 		1,
 		{
-		"hero_wukong_2"
+		"hero_mammoth_2"
 		}
 	}
 }
 
-tt.attacks.list[5].price = 300
+tt.attacks.list[5].price = 100
 tt.attacks.list[5].entities = {
 	{
 		1,
 		{
-		"hero_douzhanshengfo_2"
+		"hero_isfet_2"
 		}
 	}
 }
@@ -1182,9 +1211,66 @@ tt.attacks.list[12].entities = {
 	}
 }
 
-for i = 13, 19 do
-	tt.attacks.list[i] = nil
-end
+tt.attacks.list[13].price = 120
+tt.attacks.list[13].entities = {
+	{
+		1,
+		{
+			"hero_naga_2",
+		}
+	}
+}
+
+tt.attacks.list[14].price = 100
+tt.attacks.list[14].entities = {
+	{
+		1,
+		{
+		"hero_tramin_2"
+		}
+	}
+}
+
+tt.attacks.list[15].price = 150
+tt.attacks.list[15].entities = {
+	{
+		1,
+		{
+		"hero_tramin_seventh_2"
+		}
+	}
+}
+
+tt.attacks.list[16].price = 100
+tt.attacks.list[16].entities = {
+	{
+		1,
+		{
+		"hero_jigou_2"
+		}
+	}
+}
+
+tt.attacks.list[17].price = 110
+tt.attacks.list[17].entities = {
+	{
+		1,
+		{
+		"hero_mortemis_2"
+		}
+	}
+}
+
+tt.attacks.list[18].price = 110
+tt.attacks.list[18].entities = {
+	{
+		1,
+		{
+		"hero_margosa_2"
+		}
+	}
+}
+tt.attacks.list[19] = nil
 
 
 tt = E:register_t("hero_vesper_2", "hero_vesper")
@@ -1306,6 +1392,8 @@ for i, aa in pairs(tt.hero.skills) do
 	aa.level = 3
 end
 
+
+
 tt = E:register_t("hero_eiskalt_2", "hero_eiskalt")
 tt.hero_insert = false
 tt.hero.level = 10
@@ -1376,6 +1464,61 @@ for i, aa in pairs(tt.hero.skills) do
 	aa.level = 3
 end
 
+tt = E:register_t("hero_jigou_2", "hero_jigou")
+tt.hero_insert = false
+tt.hero.level = 10
+for i, aa in pairs(tt.hero.skills) do
+	aa.level = 3
+end
+
+tt = E:register_t("hero_tramin_2", "hero_tramin")
+tt.hero_insert = false
+tt.hero.level = 10
+for i, aa in pairs(tt.hero.skills) do
+	aa.level = 3
+end
+
+tt = E:register_t("hero_tramin_seventh_2", "hero_tramin_seventh")
+tt.hero_insert = false
+tt.hero.level = 10
+for i, aa in pairs(tt.hero.skills) do
+	aa.level = 3
+end
+
+tt = E:register_t("hero_mortemis_2", "hero_mortemis")
+tt.hero_insert = false
+tt.hero.level = 10
+for i, aa in pairs(tt.hero.skills) do
+	aa.level = 3
+end
+
+tt = E:register_t("hero_margosa_2", "hero_margosa")
+tt.hero_insert = false
+tt.hero.level = 10
+for i, aa in pairs(tt.hero.skills) do
+	aa.level = 3
+end
+
+tt = E:register_t("hero_naga_2", "hero_naga")
+tt.hero_insert = false
+tt.hero.level = 10
+for i, aa in pairs(tt.hero.skills) do
+	aa.level = 3
+end
+
+tt = E:register_t("hero_mammoth_2", "hero_mammoth")
+tt.hero_insert = false
+tt.hero.level = 10
+for i, aa in pairs(tt.hero.skills) do
+	aa.level = 3
+end
+
+tt = E:register_t("hero_isfet_2", "hero_isfet")
+tt.hero_insert = false
+tt.hero.level = 10
+for i, aa in pairs(tt.hero.skills) do
+	aa.level = 3
+end
 
 tt = E:register_t("tower_stage_13_sunray_d", "tower_stage_13_sunray")
 tt.tower.type = "tower_stage_13_sunray_d"

@@ -5,6 +5,7 @@ local d4 = require("data.game_animations-1")
 local d2 = require("data.game_animations-2")
 local d3 = require("data.game_animations-3")
 local d5 = require("data.game_animations-5")
+local d8 = require("data.game_animations-v")
 --local dre = require("data.game_animations-4")
 
 local FS = love.filesystem
@@ -34,6 +35,7 @@ d1 = table.deepmerge(d1, d4)
 d1 = table.deepmerge(d1, d2)
 d1 = table.deepmerge(d1, d3)
 d1 = table.deepmerge(d1, d5)
+d1 = table.deepmerge(d1, d8)
 
 --[[
 local tower_royal_archers = require("data.animations.tower_royal_archers")

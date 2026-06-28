@@ -1173,5 +1173,155 @@ return {
 		},
 		alias = {},
 		textureRotated = false
-	}
+	},
+	["stage_thumbs_0136"] = {
+		a_name = "kr5_thumb_0136.png",
+		size = {
+			342,
+			246
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			342,
+			246
+		},
+		f_quad = {
+			1,
+			1,
+			342,
+			246
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["stage_thumbs_0137"] = {
+		a_name = "kr5_thumb_0137.png",
+		size = {
+			342,
+			246
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			342,
+			246
+		},
+		f_quad = {
+			1,
+			1,
+			342,
+			246
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["stage_thumbs_0138"] = {
+		a_name = "kr5_thumb_0138.png",
+		size = {
+			342,
+			246
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			342,
+			246
+		},
+		f_quad = {
+			1,
+			1,
+			342,
+			246
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["stage_thumbs_0139"] = {
+		a_name = "kr5_thumb_0139.png",
+		size = {
+			342,
+			246
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			342,
+			246
+		},
+		f_quad = {
+			1,
+			1,
+			342,
+			246
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["stage_thumbs_0140"] = {
+		a_name = "kr5_thumb_0140.png",
+		size = {
+			342,
+			246
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			342,
+			246
+		},
+		f_quad = {
+			1,
+			1,
+			342,
+			246
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["stage_thumbs_0141"] = {
+		a_name = "kr5_thumb_0136.png",
+		size = {
+			342,
+			246
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			342,
+			246
+		},
+		f_quad = {
+			1,
+			1,
+			342,
+			246
+		},
+		alias = {},
+		textureRotated = false
+	},
 }

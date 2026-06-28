@@ -194,6 +194,11 @@ return {
 							class = "KEButton"
 						},
 						{
+							id = "tools_recover",
+							title = "recover",
+							class = "KEButton"
+						},
+						{
 							class = "KESep",
 							title = "Tools"
 						},
@@ -941,6 +946,21 @@ return {
 									id = "paint_flag_flying_nw",
 									class = "KEButton",
 									title = "flying-nw",
+									size = {
+										x = 88,
+										y = 20
+									}
+								}
+							}
+						},
+						{
+							style = "horizontal",
+							class = "KELayout",
+							children = {
+								{
+									id = "paint_flag_no_shadow",
+									class = "KEButton",
+									title = "no-shadow",
 									size = {
 										x = 88,
 										y = 20

@@ -801,5 +801,35 @@ function path_db:generate_paths(pi)
 
 	return paths
 end
+---腐毒菇林
+function path_db:get_all_valid_pos_v(x, y, min_distance, max_distance, valid_terrains, filter_func, flags, any_spi, banned_pi)
+	valid_terrains = valid_terrains or TERRAIN_ALL_MASK
 
+	local nodes = {}
+
+	for pi = 1, #self.paths do
+		if not banned_pi or not table.contains(banned_pi, pi) then
+			for spi = 1, 3 do
+				local sp 
+				if any_spi then
+					sp = self.paths[pi][spi]
+				else
+					sp = self.paths[pi][1]
+				end
+
+				for ni = 1, #sp do
+					local o = sp[ni]
+					local d = V.dist(o.x, o.y, x, y)
+					local t = GR:cell_type(o.x, o.y)
+
+					if bit.band(bit.bnot(valid_terrains), t) == 0 and d < max_distance and min_distance < d and self:is_node_valid(pi, ni, flags) and (not filter_func or filter_func(o.x, o.y)) then
+						table.insert(nodes, o)
+					end
+				end
+			end
+		end
+	end
+
+	return nodes
+end
 return path_db

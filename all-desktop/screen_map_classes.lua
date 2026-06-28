@@ -8679,18 +8679,18 @@ function EncycTowerThumbView:select()
 		wid("encyclopedia_towers_info_barracks").hidden = false
 		wid("encyclopedia_towers_info_barracks_health").text = di.hp_max
 		wid("encyclopedia_towers_info_barracks_attack").text = di.damage_min .. "-" .. di.damage_max
-		wid("encyclopedia_towers_info_barracks_armor").text = GU.armor_value_desc(di.armor)
+		wid("encyclopedia_towers_info_barracks_armor").text = di.armor and string.format(_("%i%%"), di.armor * 100) .. "" .. GU.armor_value_desc(di.armor) or GU.armor_value_desc(di.armor)
 		wid("encyclopedia_towers_info_barracks_respawn").text = string.format(_("%i sec."), di.respawn)
 	elseif di.type == STATS_TYPE_TOWER_MAGE then
 		wid("encyclopedia_towers_info_magical").hidden = false
 		wid("encyclopedia_towers_info_magical_attack").text = di.damage_min .. "-" .. di.damage_max
-		wid("encyclopedia_towers_info_magical_reload").text = GU.cooldown_value_desc(di.cooldown)
-		wid("encyclopedia_towers_info_magical_range").text = GU.range_value_desc(di.range)
+		wid("encyclopedia_towers_info_magical_reload").text = di.cooldown and string.format(_("%s sec"), di.cooldown * 1) .. " / " .. GU.cooldown_value_desc(di.cooldown) or GU.cooldown_value_desc(di.cooldown)
+		wid("encyclopedia_towers_info_magical_range").text = di.range and string.format(_("%i"), di.range * 2) .. " / " .. GU.range_value_desc(di.range) or GU.range_value_desc(di.range)
 	else
 		wid("encyclopedia_towers_info").hidden = false
 		wid("encyclopedia_towers_info_attack").text = di.damage_min .. "-" .. di.damage_max
-		wid("encyclopedia_towers_info_reload").text = GU.cooldown_value_desc(di.cooldown)
-		wid("encyclopedia_towers_info_range").text = GU.range_value_desc(di.range)
+		wid("encyclopedia_towers_info_reload").text = di.cooldown and string.format(_("%s sec"), di.cooldown * 1) .. " / " .. GU.cooldown_value_desc(di.cooldown) or GU.cooldown_value_desc(di.cooldown)
+		wid("encyclopedia_towers_info_range").text = di.range and string.format(_("%i"), di.range * 2) .. " / " .. GU.range_value_desc(di.range) or GU.range_value_desc(di.range)
 	end
 
 	if dt.powers then

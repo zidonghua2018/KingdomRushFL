@@ -130,7 +130,7 @@ tt.render.sprites[3].offset.y = 62
 tt.render.sprites[4].offset.y = 62
 
 
-tt = E:register_t("tower_shaolin_lvl1", "tower")
+tt = E:register_t("tower_shaolin_lvl1", "tower_kr4")
 
 E:add_comps(tt, "attacks")
 tt.info.i18n_key = "TOWER_SHAOLIN_TEMPLE_LEVEL1"
@@ -711,8 +711,8 @@ tt.timed_attacks.list[3].xp_from_skill = "coldfury"
 
 
 tt = RT("mod_eiskalt_chill_lvl1", "mod_slow")
-tt.modifier.duration = 4
-tt.slow.factor = 0.7
+tt.modifier.duration = 3
+tt.slow.factor = 0.5
 
 tt = RT("mod_eiskalt_chill_lvl2", "mod_slow")
 tt.modifier.duration = fts(11)

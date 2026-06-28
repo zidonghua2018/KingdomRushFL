@@ -948,6 +948,16 @@ return {
 					ultimate = 1
 				}
 			},
+			hero_dragon_sun = {
+				xp = 0,
+				skills = {
+					solar_cleansing = 0,
+					overcharge = 0,
+					worthy_foe = 0,
+					solar_stones = 0,
+					ultimate = 1,
+				}
+			},
 			hero_orc = {
 				xp = 0,
 				skills = {
@@ -1115,6 +1125,16 @@ return {
 					fire_at_will = 0,
 					damned_crew = 0,
 					pirates_pillage = 0,
+					ultimate = 0,
+				}
+			},
+			hero_tramin_seventh = {
+				xp = 0,
+				skills = {
+					long_strike = 0,
+					suppression = 0,
+					grenade = 0,
+					shark_mouth_cannon = 0,
 					ultimate = 0,
 				}
 			},

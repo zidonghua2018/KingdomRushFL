@@ -12688,21 +12688,12 @@ end
 scripts.hero_wizard = {}
 
 function scripts.hero_wizard.get_info(this)
+	local t = scripts.hero_basic.get_info_ranged(this)
 	local m = E:get_template("mod_ray_wizard")
-	local min, max = m.damage_min, m.damage_max
-	local d_type = m.damage_type
-
-	return {
-		type = STATS_TYPE_SOLDIER,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		damage_type = DAMAGE_MAGICAL,
-		damage_type = d_type,
-		armor = this.health.armor,
-		respawn = this.health.dead_lifetime
-	}
+    	t.ranged_damage_max = m.damage_max * this.unit.damage_factor
+		t.ranged_damage_min = m.damage_min * this.unit.damage_factor
+		t.ranged_damage_type = m.damage_type
+	return t
 end
 --[[
 function scripts.hero_wizard.get_info(this)
@@ -14766,7 +14757,7 @@ scripts.mod_pirate_loot = {}
 function scripts.mod_pirate_loot.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
-	if not target or not target.health or target.health.dead then
+	if not target or not target.health or not target.enemy or target.health.dead then
 		return false
 	end
 
@@ -14918,9 +14909,6 @@ function scripts.hero_dragon.get_info(this)
     	t.ranged_damage_max = m.bullet.damage_max * this.unit.damage_factor
 		t.ranged_damage_min = m.bullet.damage_min * this.unit.damage_factor
 		t.ranged_damage_type = m.bullet.damage_type
-		t.damage_max = 0--m.bullet.damage_max
-		t.damage_min = 0--m.bullet.damage_min
-		t.damage_type = m.bullet.damage_type
 	return t
 end
 
@@ -16597,9 +16585,6 @@ function scripts.hero_dracolich.get_info(this)
     	t.ranged_damage_max = m.bullet.damage_max * this.unit.damage_factor
 		t.ranged_damage_min = m.bullet.damage_min * this.unit.damage_factor
 		t.ranged_damage_type = m.bullet.damage_type
-		t.damage_max = 0--m.bullet.damage_max
-		t.damage_min = 0--m.bullet.damage_min
-		t.damage_type = m.bullet.damage_type
 	return t
 end
 
@@ -19664,6 +19649,13 @@ function scripts.hero_steam_frigate.update(this, store, script)
 		end
 
 		if store.tick_ts - ma.ts > ma.cooldown and #mines_alive < ma.max_mines and #mine_targets > 0 then
+		
+		local steam_mine = E:create_entity(ma.bullet)	
+		local nearest, _, target_pos = U.find_foremost_enemy(store.entities, this.pos, 0, ma.max_range, ma.shoot_time + steam_mine.bullet.flight_time, ma.vis_flags, ma.vis_bans, function(e)
+				return  math.abs(this.pos.x - e.pos.x) > 20
+			end)	        
+		if not target_pos then
+					
 			local start_ts = store.tick_ts
 			local target_pos = mine_targets[math.random(1, #mine_targets)]
 			local an, af = U.animation_name_facing_point(this, ma.animation, target_pos)
@@ -19713,6 +19705,59 @@ function scripts.hero_steam_frigate.update(this, store, script)
 
 				coroutine.yield()
 			end
+					
+		else
+			local start_ts = store.tick_ts
+			local an, af = U.animation_name_facing_point(this, ma.animation, V.vclone(target_pos))
+
+			U.animation_start(this, an, af, store.tick_ts, false)
+
+			while store.tick_ts - start_ts < ma.shoot_time do
+				if this.nav_rally.new then
+					goto label_451_0
+				end
+
+				if this.health.dead then
+					goto label_451_0
+				end
+
+				if this.unit.is_stunned then
+					goto label_451_0
+				end
+
+				coroutine.yield()
+			end
+
+			ma.ts = start_ts
+
+			local m = E:create_entity(ma.bullet)
+			local offset = ma.bullet_start_offset[1]
+
+			m.pos.x, m.pos.y = this.pos.x + (af and -1 or 1) * offset.x, this.pos.y + offset.y
+			m.bullet.from = V.vclone(m.pos)
+			m.bullet.to = V.vclone(target_pos)--target_pos
+			m.main_script.update = scripts.steam_frigate_mine.update_2
+
+			queue_insert(store, m)
+			table.insert(mines_alive, m)
+
+			while not U.animation_finished(this) do
+				if this.nav_rally.new then
+					goto label_451_0
+				end
+
+				if this.health.dead then
+					goto label_451_0
+				end
+
+				if this.unit.is_stunned then
+					goto label_451_0
+				end
+
+				coroutine.yield()
+			end
+		end
+		
 		end
 
 		U.animation_start(this, "idle", nil, store.tick_ts, true)
@@ -19791,7 +19836,74 @@ function scripts.steam_frigate_mine.update(this, store, script)
 	U.y_animation_play(this, "sink", nil, store.tick_ts, 1, 2)
 	queue_remove(store, this)
 end
+---
+function scripts.steam_frigate_mine.update_2(this, store, script)
+	local b = this.bullet
 
+	this.lifespan.ts = store.tick_ts
+
+	while store.tick_ts - b.ts < b.flight_time do
+		b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
+		this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+		this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * store.tick_length
+
+		coroutine.yield()
+	end
+
+	this.pos.x, this.pos.y = b.to.x, b.to.y
+
+	S:queue("SpecialMermaid")
+
+	this.render.sprites[1].hidden = true
+	this.render.sprites[2].hidden = false
+
+--	U.y_animation_play(this, "splash", nil, store.tick_ts, 1, 2)
+--	U.animation_start(this, "idle", nil, store.tick_ts, -1, 2)
+
+	while store.tick_ts - this.lifespan.ts < this.lifespan.duration do
+		coroutine.yield()
+
+		if U.find_enemies_in_range(store.entities, this.pos, 0, this.trigger_radius * 2, b.vis_flags, b.vis_bans) then
+			local fx
+
+			if GR:cell_is(this.pos.x, this.pos.y, TERRAIN_WATER) then
+				S:queue(this.sound_events.hit_water)
+
+				fx = E:create_entity("fx_explosion_water")
+			else
+				S:queue(this.sound_events.hit)
+
+				fx = E:create_entity("fx_explosion_fragment")
+			end
+
+			fx.pos = V.vclone(this.pos)
+			fx.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, fx)
+
+			local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, b.damage_radius, b.damage_flags, b.damage_bans)
+
+			for _, enemy in pairs(enemies) do
+				local d = E:create_entity("damage")
+
+				d.damage_type = b.damage_type
+				d.value = math.ceil(U.frandom(b.damage_min, b.damage_max))
+				d.source_id = this.id
+				d.target_id = enemy.id
+
+				queue_damage(store, d)
+			end
+
+			queue_remove(store, this)
+
+			return
+		end
+	end
+
+	U.y_animation_play(this, "sink", nil, store.tick_ts, 1, 2)
+	queue_remove(store, this)
+end
+---
 scripts.hero_vampiress = {}
 
 function scripts.hero_vampiress.insert(this, store, script)

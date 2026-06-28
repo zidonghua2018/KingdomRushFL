@@ -12846,7 +12846,7 @@ return {
 			42,
 			32
 		},
-		alias = {},
+		alias = {"hero_lady_margosa_myst_form_effect_0034"},
 		textureRotated = false
 	},
 	["hero_lady_margosa_myst_form_effect_0002"] = {
@@ -12871,7 +12871,7 @@ return {
 			42,
 			32
 		},
-		alias = {},
+		alias = {"hero_lady_margosa_myst_form_effect_0033"},
 		textureRotated = false
 	},
 	["hero_lady_margosa_myst_form_effect_0003"] = {
@@ -12896,7 +12896,7 @@ return {
 			60,
 			44
 		},
-		alias = {},
+		alias = {"hero_lady_margosa_myst_form_effect_0032"},
 		textureRotated = false
 	},
 	["hero_lady_margosa_myst_form_effect_0004"] = {
@@ -12921,7 +12921,7 @@ return {
 			60,
 			44
 		},
-		alias = {},
+		alias = {"hero_lady_margosa_myst_form_effect_0031"},
 		textureRotated = false
 	},
 	["hero_lady_margosa_myst_form_effect_0005"] = {
@@ -12946,7 +12946,7 @@ return {
 			67,
 			56
 		},
-		alias = {},
+		alias = {"hero_lady_margosa_myst_form_effect_0030"},
 		textureRotated = false
 	},
 	["hero_lady_margosa_myst_form_effect_0006"] = {
@@ -12971,7 +12971,7 @@ return {
 			67,
 			56
 		},
-		alias = {},
+		alias = {"hero_lady_margosa_myst_form_effect_0029"},
 		textureRotated = false
 	},
 	["hero_lady_margosa_myst_form_effect_0007"] = {
@@ -12996,7 +12996,7 @@ return {
 			66,
 			60
 		},
-		alias = {},
+		alias = {"hero_lady_margosa_myst_form_effect_0028"},
 		textureRotated = false
 	},
 	["hero_lady_margosa_myst_form_effect_0008"] = {
@@ -13021,7 +13021,7 @@ return {
 			66,
 			60
 		},
-		alias = {},
+		alias = {"hero_lady_margosa_myst_form_effect_0027"},
 		textureRotated = false
 	},
 	["hero_lady_margosa_myst_form_effect_0009"] = {

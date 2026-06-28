@@ -1,4 +1,598 @@
 return {
+	hero_wilburg_box = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1746,
+			645,
+			51,
+			51
+		},
+		alias = {}
+	},
+	hero_wilburg_box_hit_0001 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			113,
+			90
+		},
+		trim = {
+			27,
+			19,
+			32,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1576,
+			644,
+			54,
+			57
+		},
+		alias = {}
+	},
+	hero_wilburg_box_hit_0002 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			113,
+			90
+		},
+		trim = {
+			27,
+			19,
+			32,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1489,
+			644,
+			54,
+			58
+		},
+		alias = {}
+	},
+	hero_wilburg_box_hit_0003 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			113,
+			90
+		},
+		trim = {
+			25,
+			27,
+			25,
+			11
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			270,
+			1981,
+			63,
+			52
+		},
+		alias = {}
+	},
+	hero_wilburg_box_hit_0004 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			113,
+			90
+		},
+		trim = {
+			23,
+			27,
+			24,
+			11
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			6,
+			1989,
+			66,
+			52
+		},
+		alias = {}
+	},
+	hero_wilburg_box_hit_0005 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			113,
+			90
+		},
+		trim = {
+			23,
+			24,
+			24,
+			11
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1972,
+			180,
+			66,
+			55
+		},
+		alias = {}
+	},
+	hero_wilburg_box_hit_0006 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			113,
+			90
+		},
+		trim = {
+			23,
+			24,
+			23,
+			11
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1724,
+			178,
+			67,
+			55
+		},
+		alias = {}
+	},
+	hero_wilburg_box_hit_0007 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			113,
+			90
+		},
+		trim = {
+			23,
+			25,
+			23,
+			11
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1797,
+			178,
+			67,
+			54
+		},
+		alias = {}
+	},
+	hero_wilburg_box_hit_0008 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			113,
+			90
+		},
+		trim = {
+			23,
+			25,
+			24,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			78,
+			1989,
+			66,
+			51
+		},
+		alias = {
+			"hero_wilburg_box_hit_0009"
+		}
+	},
+	hero_wilburg_box_hit_0010 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			113,
+			90
+		},
+		trim = {
+			23,
+			25,
+			23,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1899,
+			180,
+			67,
+			51
+		},
+		alias = {}
+	},
+	hero_wilburg_box_hit_0011 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			113,
+			90
+		},
+		trim = {
+			16,
+			31,
+			22,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			916,
+			190,
+			75,
+			45
+		},
+		alias = {}
+	},
+	hero_wilburg_box_hit_0012 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			113,
+			90
+		},
+		trim = {
+			16,
+			31,
+			22,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			997,
+			190,
+			75,
+			45
+		},
+		alias = {}
+	},
+	hero_wilburg_box_hit_0013 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			113,
+			90
+		},
+		trim = {
+			9,
+			40,
+			14,
+			4
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1533,
+			160,
+			90,
+			46
+		},
+		alias = {}
+	},
+	hero_wilburg_box_hit_smoke_a_0001 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			39,
+			28
+		},
+		trim = {
+			0,
+			1,
+			15,
+			3
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2023,
+			574,
+			24,
+			24
+		},
+		alias = {}
+	},
+	hero_wilburg_box_hit_smoke_a_0002 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			39,
+			28
+		},
+		trim = {
+			0,
+			1,
+			2,
+			2
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			690,
+			1679,
+			37,
+			25
+		},
+		alias = {}
+	},
+	hero_wilburg_box_hit_smoke_a_0003 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			39,
+			28
+		},
+		trim = {
+			0,
+			0,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			738,
+			1567,
+			38,
+			27
+		},
+		alias = {
+			"hero_wilburg_box_hit_smoke_a_0004"
+		}
+	},
+	hero_wilburg_box_hit_smoke_a_0005 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			39,
+			28
+		},
+		trim = {
+			0,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			432,
+			2017,
+			39,
+			27
+		},
+		alias = {
+			"hero_wilburg_box_hit_smoke_a_0006"
+		}
+	},
+	hero_wilburg_box_hit_smoke_a_0007 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			39,
+			28
+		},
+		trim = {
+			9,
+			6,
+			1,
+			4
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1333,
+			216,
+			29,
+			18
+		},
+		alias = {
+			"hero_wilburg_box_hit_smoke_a_0008"
+		}
+	},
+	hero_wilburg_box_hit_smoke_a_0009 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			39,
+			28
+		},
+		trim = {
+			10,
+			6,
+			0,
+			5
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1368,
+			216,
+			29,
+			17
+		},
+		alias = {
+			"hero_wilburg_box_hit_smoke_a_0010"
+		}
+	},
+	hero_wilburg_box_hit_smoke_a_0011 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			39,
+			28
+		},
+		trim = {
+			0,
+			0,
+			37,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			249,
+			233,
+			2,
+			2
+		},
+		alias = {}
+	},
+	hero_wilburg_box_hit_smoke_b_0001 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			42,
+			31
+		},
+		trim = {
+			0,
+			4,
+			3,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			693,
+			1522,
+			39,
+			26
+		},
+		alias = {
+			"hero_wilburg_box_hit_smoke_b_0002"
+		}
+	},
+	hero_wilburg_box_hit_smoke_b_0003 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			42,
+			31
+		},
+		trim = {
+			0,
+			2,
+			0,
+			3
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1282,
+			204,
+			42,
+			26
+		},
+		alias = {
+			"hero_wilburg_box_hit_smoke_b_0004"
+		}
+	},
+	hero_wilburg_box_hit_smoke_b_0005 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			42,
+			31
+		},
+		trim = {
+			1,
+			1,
+			1,
+			5
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			341,
+			2017,
+			40,
+			25
+		},
+		alias = {
+			"hero_wilburg_box_hit_smoke_b_0006"
+		}
+	},
+	hero_wilburg_box_hit_smoke_b_0007 = {
+		a_name = "go_hero_wilbur-1.png",
+		size = {
+			42,
+			31
+		},
+		trim = {
+			1,
+			1,
+			2,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			690,
+			1598,
+			39,
+			24
+		},
+		alias = {
+			"hero_wilburg_box_hit_smoke_b_0008"
+		}
+	},
 	["hero_tramin_0001"] = {
 		a_name = "go_hero_tramin.dds",
 		size = {
@@ -7825,6 +8419,31 @@ return {
 		textureRotated = false
 	},
 	["hero_tramin_0314"] = {
+		a_name = "go_hero_tramin.dds",
+		size = {
+			260,
+			192
+		},
+		trim = {
+			92,
+            55,
+            91,
+            64
+		},
+		a_size = {
+			2044,
+			1375
+		},
+		f_quad = {
+			1543,
+			949,
+			77,
+			73
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["hero_tramin_1314"] = {
 		a_name = "go_hero_tramin.dds",
 		size = {
 			260,

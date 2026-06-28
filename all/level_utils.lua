@@ -520,7 +520,7 @@ function LU.insert_hero(store, name, pos)
 end
 
 --双英雄专用加载函数，name1必须提供参数
-function LU.insert_double_hero(store, name1, name2, pos)
+function LU.insert_double_hero(store, name1, name2, pos, pos2)
 	if store.level.locked_hero then
 		log.debug("hero locked for level. will not insert")
 		return
@@ -561,7 +561,11 @@ function LU.insert_double_hero(store, name1, name2, pos)
 		end
 	end
 
+	if not store.level.locations.exits[2] or store.level_idx == 39 or store.level_idx == 40 or store.level_idx == 9 or store.level_idx == 136 or store.level_idx == 141 then
+	hero.pos = V.v(pos.x - 20, pos.y)
+	else
 	hero.pos = V.vclone(pos)
+	end
 	hero.nav_rally.center = V.vclone(hero.pos)
 	hero.nav_rally.pos = hero.nav_rally.center
 		
@@ -635,21 +639,57 @@ function LU.insert_double_hero(store, name1, name2, pos)
 		return
 	end
 
-	if not pos then
+	if not pos2 then
+		if not store.level.locations.exits[2] or store.level_idx == 39 or store.level_idx == 40 or store.level_idx == 9 or store.level_idx == 136 or store.level_idx == 141 then
+			pos2 = pos	
+		else
+			if hero.hero.use_custom_spawn_point and store.level.custom_spawn_pos then
+				if store.level.custom_spawn_pos.x then
+					pos2 = store.level.custom_spawn_pos
+				else
+				    if store.level.locations.exits[2].pos then
+				        pos2 = store.level.locations.exits[2].pos
+				    else
+					    pos2 = store.level.locations.exits[1].pos
+				    end	
+				end
+			else
+				if store.level.locations.exits[2].pos then
+				    pos2 = store.level.locations.exits[2].pos
+				else
+					pos2 = store.level.locations.exits[1].pos
+				end	
+			end		
+		end	
+	end	
+--[[	
+	if not pos or store.level_idx == 140 then
 		if hero.hero.use_custom_spawn_point and store.level.custom_spawn_pos then
 			if store.level.custom_spawn_pos.x then
 				pos = store.level.custom_spawn_pos
 			else
-				pos = store.level.custom_spawn_pos[1].pos
+				if store.level_idx == 140 then
+					pos = store.level.custom_spawn_pos[2].pos
+				else
+					pos = store.level.custom_spawn_pos[1].pos
+				end
 			end
 		else
-			pos = store.level.locations.exits[1].pos
+			if store.level_idx == 140 then
+				pos = store.level.locations.exits[2].pos
+			else
+				pos = store.level.locations.exits[1].pos
+			end
 		end
 	end
-
+]]--
 	store.main_hero = hero
 
-	hero.pos = V.vclone(pos)
+	if not store.level.locations.exits[2] or store.level_idx == 39 or store.level_idx == 40 or store.level_idx == 9 or store.level_idx == 136 or store.level_idx == 141 then
+	hero.pos = V.v(pos2.x + 20, pos2.y)
+	else
+	hero.pos = V.vclone(pos2)
+	end
 	hero.nav_rally.center = V.vclone(hero.pos)
 	hero.nav_rally.pos = hero.nav_rally.center
 
@@ -713,6 +753,230 @@ function LU.insert_double_hero(store, name1, name2, pos)
 	return hero
 end
 
+--双英雄专用加载函数，name1必须提供参数，返回2个英雄
+function LU.insert_double_hero_return2(store, name1, name2, pos, pos2)
+	if store.level.locked_hero then
+		log.debug("hero locked for level. will not insert")
+		return
+	end
+
+	map_data = require("data.map_data")
+	local hero_data = map_data.hero_data
+
+	if not name1 then
+		log.debug("name1 error")
+		print("name1 error")
+		return
+	end
+
+	if not name2 then
+		log.debug("name2 error")
+		print("name2 error")
+		return
+	end
+	local template_name = name1
+
+	local hero = E:create_entity(template_name)
+
+	if not hero then
+		log.error("Could not create hero named %s", template_name)
+		return
+	end
+
+	if not pos then
+		if hero.hero.use_custom_spawn_point and store.level.custom_spawn_pos then
+			if store.level.custom_spawn_pos.x then
+				pos = store.level.custom_spawn_pos
+			else
+				pos = store.level.custom_spawn_pos[1].pos
+			end
+		else
+			pos = store.level.locations.exits[1].pos
+		end
+	end
+
+	if not store.level.locations.exits[2] or store.level_idx == 39 or store.level_idx == 40 or store.level_idx == 9 or store.level_idx == 136 or store.level_idx == 141 then
+	hero.pos = V.v(pos.x - 20, pos.y)
+	else
+	hero.pos = V.vclone(pos)
+	end
+	hero.nav_rally.center = V.vclone(hero.pos)
+	hero.nav_rally.pos = hero.nav_rally.center
+		
+	if name1 then		
+		local slot = storage:load_slot(nil, true)
+		
+		local status = slot.heroes.status[hero_data[screen_map.user_data.liuhui_hero.herolist[1]].name]
+
+		if status and status.skills and status.xp then
+			--changed
+			local hero_list ={
+				"hero_gerald",
+				"hero_alleria",
+				"hero_bolin",
+				"hero_magnus",
+				"hero_ignus",
+				"hero_malik",
+				"hero_denas",
+				"hero_ingvar",
+				"hero_elora",
+				"hero_oni",
+				"hero_hacksaw",
+				"hero_thor",
+				"hero_10yr",
+				"hero_voltaire",
+				"hero_viper"
+			}
+			
+			if table.contains(hero_list, hero.template_name) then
+				hero.hero.xp = (screen_map.user_data.liuhui~=nil and screen_map.user_data.liuhui.g1_level10 == true) and 28000 or 4800 
+				hero.hero.level = (screen_map.user_data.liuhui~=nil and screen_map.user_data.liuhui.g1_level10 == true) and 10 or 5
+			else
+				hero.hero.xp = status.xp
+				hero.hero.level = 10
+			end
+			-- print("main_hero: %s, h.level:%d", hero.template_name, hero.hero.level)
+			for i, th in ipairs(GS.hero_xp_thresholds) do
+				if th > hero.hero.xp then
+					hero.hero.level = i
+					break
+				end
+			end
+
+			for k, v in pairs(status.skills) do
+				if not hero.hero.skills[k] then
+					log.error("hero %s status missing skill %s", hero.template_name, k)
+				else
+					hero.hero.skills[k].level = v
+				end
+			end
+		else
+			log.error("Active slot has no hero status or xp info for %s", template_name)
+		end
+	end
+
+	if not (name2 == name1) then
+		store.main1_hero = hero
+		print("load main1 hero")
+	end
+
+	LU.queue_insert(store, hero)
+	signal.emit("hero-added", hero)	
+
+	local template_name = name2
+
+	local hero2 = E:create_entity(template_name)
+
+	if not hero2 then
+		log.error("Could not create hero named %s", template_name)
+		return
+	end
+	if not pos2 then
+		if not store.level.locations.exits[2] or store.level_idx == 39 or store.level_idx == 40 or store.level_idx == 9 or store.level_idx == 136 or store.level_idx == 141 then
+			pos2 = pos	
+		else
+			if hero.hero.use_custom_spawn_point and store.level.custom_spawn_pos then
+				if store.level.custom_spawn_pos.x then
+					pos2 = store.level.custom_spawn_pos
+				else
+				    if store.level.locations.exits[2].pos then
+				        pos2 = store.level.locations.exits[2].pos
+				    else
+					    pos2 = store.level.locations.exits[1].pos
+				    end	
+				end
+			else
+				if store.level.locations.exits[2].pos then
+				    pos2 = store.level.locations.exits[2].pos
+				else
+					pos2 = store.level.locations.exits[1].pos
+				end	
+			end		
+		end	
+	end		
+--[[
+	if not pos then
+		if hero2.hero.use_custom_spawn_point and store.level.custom_spawn_pos then
+			if store.level.custom_spawn_pos.x then
+				pos = store.level.custom_spawn_pos
+			else
+				pos = store.level.custom_spawn_pos[1].pos
+			end
+		else
+			pos = store.level.locations.exits[1].pos
+		end
+	end
+]]--
+	store.main_hero = hero2
+
+	if not store.level.locations.exits[2] or store.level_idx == 39 or store.level_idx == 40 or store.level_idx == 9 or store.level_idx == 136 or store.level_idx == 141 then
+	hero2.pos = V.v(pos2.x + 20, pos2.y)
+	else
+	hero2.pos = V.vclone(pos2)
+	end
+	hero2.nav_rally.center = V.vclone(hero2.pos)
+	hero2.nav_rally.pos = hero2.nav_rally.center
+
+	if name2 then		
+		
+		local slot = storage:load_slot(nil, true)
+		local status = slot.heroes.status[hero_data[screen_map.user_data.liuhui_hero.herolist[2]].name]
+
+		if status and status.skills and status.xp then
+			--changed
+			local hero_list ={
+				"hero_gerald",
+				"hero_alleria",
+				"hero_bolin",
+				"hero_magnus",
+				"hero_ignus",
+				"hero_malik",
+				"hero_denas",
+				"hero_ingvar",
+				"hero_elora",
+				"hero_oni",
+				"hero_hacksaw",
+				"hero_thor",
+				"hero_10yr",
+				"hero_voltaire",
+				"hero_viper"
+			}
+			
+			if table.contains(hero_list, hero2.template_name) then
+				hero2.hero.xp = (screen_map.user_data.liuhui~=nil and screen_map.user_data.liuhui.g1_level10 == true) and 28000 or 4800 
+				hero2.hero.level = (screen_map.user_data.liuhui~=nil and screen_map.user_data.liuhui.g1_level10 == true) and 10 or 5
+			else
+				hero2.hero.xp = status.xp
+				hero2.hero.level = 10
+			end
+			-- print("main_hero: %s, h.level:%d", hero.template_name, hero.hero.level)
+			for i, th in ipairs(GS.hero_xp_thresholds) do
+				if th > hero2.hero.xp then
+					hero2.hero.level = i
+					break
+				end
+			end
+
+			for k, v in pairs(status.skills) do
+				if not hero2.hero.skills[k] then
+					log.error("hero %s status missing skill %s", hero2.template_name, k)
+				else
+					hero2.hero.skills[k].level = v
+				end
+			end
+		else
+			log.error("Active slot has no hero status or xp info for %s", template_name)
+		end
+	end
+	
+	LU.queue_insert(store, hero2)
+	signal.emit("hero-added", hero2)
+	print("add hero done")
+
+
+	return hero, hero2
+end
+
 function LU.list_entities(t, template_name, tag)
 	return table.filter(t, function(_, e)
 		return (not template_name or e.template_name == template_name) and (not tag or e.editor and e.editor.tag == tag)
@@ -721,7 +985,7 @@ end
 
 function LU.has_alive_enemies(store, excluded_templates)
 	local store_enemies = table.filter(store.entities, function(_, e)
-		return e.main_script and (e.main_script.co or e.main_script.runs > 0) and (e.enemy and e.health and not e.health.dead or e.enemy and e.death_spawns or e.spawner and not e.spawner.eternal or e.picked_enemies and #e.picked_enemies > 0 or e.tunnel and #e.tunnel.picked_enemies > 0 or e.template_name == "nav_faerie") and (not excluded_templates or not table.contains(excluded_templates, e.template_name))
+		return e.main_script and (e.main_script.co or e.main_script.runs > 0) and (e.enemy and e.health and not e.health.dead or e.enemy and e.death_spawns or e.spawner and not e.spawner.eternal or e.picked_enemies and #e.picked_enemies > 0 or e.tunnel and #e.tunnel.picked_enemies > 0 or e.template_name == "nav_faerie") and (not excluded_templates or not table.contains(excluded_templates, e.template_name)) and e.template_name ~= "bullywag_spawner"
 	end)
 	local pending_enemies = table.filter(store.pending_inserts, function(_, e)
 		return e.enemy or e.template_name == "nav_faerie"

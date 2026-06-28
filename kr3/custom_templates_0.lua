@@ -93,6 +93,10 @@ tt.start_ts = nil
 tt.delays = nil
 tt.entities = nil
 
+tt = E:register_t("controller_bullet_hit_payload_delay", "entities_delay_controller")
+tt.bullet = nil
+tt.main_script.update = scripts.controller_bullet_hit_payload_delay.update
+
 tt = E:register_t_10086("controller_spawn_on_path", "entities_delay_controller")
 tt.main_script.update = scripts.controller_spawn_on_path.update
 tt.path_index = 1

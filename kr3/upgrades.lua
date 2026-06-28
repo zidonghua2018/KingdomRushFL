@@ -12,7 +12,11 @@ require("constants")
 local function T(name)
 	return E:get_template(name)
 end
-
+--征服
+local function DP(desktop, phone)
+	return not (KR_TARGET ~= "phone" and KR_TARGET ~= "tablet") and phone or desktop
+end
+--
 local epsilon = 1e-09
 local upgrades = {}
 
@@ -351,6 +355,7 @@ upgrades.list = {
 	mage_arcane_shatter = {
 		mod = "mod_arcane_shatter",
 		class = "mages",
+		chance = 0.1,
 		price = 1,
 		level = 2,
 		icon = 12
@@ -365,6 +370,7 @@ upgrades.list = {
 	mage_empowered_magic = {
 		damage_factor = 1.15,
 		class = "mages",
+		chance = 0.1,
 		price = 2,
 		level = 4,
 		icon = 14
@@ -587,7 +593,159 @@ upgrades.list = {
 		icon = 30,
 		price = 4,
 		level = 5
-	}
+	},	
+}
+upgrades.list_v = {
+	archer_salvage_v = {
+		range_factor = 1.1,
+		class = "archers",
+		price = 1,
+		level = 1,
+		icon = 1,--DP(13, 6)
+	},
+	archer_eagle_eye_v = {
+		damage_factor = 1.1,
+		class = "archers",
+		price = 1,
+		level = 2,
+		icon = 2,--DP(14, 7)
+	},
+	archer_piercing_v = {
+		class = "archers",
+		reduce_armor_factor = 0.03,
+		max_reduction = 0.25,
+		price = 2,
+		level = 3,
+		icon = 3,--DP(15, 8)
+	},
+	archer_far_shots_v = {
+		speed_factor = 1.1,
+		class = "archers",
+		price = 2,
+		level = 4,
+		icon = 4,--DP(16, 9)
+	},
+	archer_precision_v = {
+		damage_factor = 2,
+		bounce_range = 120,
+		class = "archers",
+		chance = 0.15,
+		bullet = "dark_shard",
+		price = 3,
+		level = 5,
+		icon = 5,--DP(17, 10)
+	},
+	barrack_survival_v = {
+		rally_range_factor = 1.1,
+		armor_increase = 0.15,
+		class = "barracks",
+		price = 1,
+		level = 1,
+		icon = 6,--DP(8, 1)
+	},
+	barrack_better_armor_v = {
+		class = "barracks",
+		health_factor = 1.3,
+		price = 2,
+		level = 4,
+		icon = 7,--DP(9, 2)
+	},
+	barrack_improved_deployment_v = {
+		pickpocket_chance = 0.1,
+		pickpocket_amount = 2,
+		class = "barracks",
+		price = 2,
+		level = 3,
+		icon = 8,--DP(10, 3)
+	},
+	barrack_survival_2_v = {
+		damage_factor = 1.1,
+		class = "barracks",
+		price = 1,
+		level = 2,
+		icon = 9,--DP(11, 4)
+	},
+	barrack_barbed_armor_v = {
+		true_armor = 10,
+		class = "barracks",
+		price = 3,
+		level = 5,
+		icon = 10,--DP(12, 5)
+	},
+	mage_spell_reach_v = {
+		damage_factor = 1.15,
+		class = "mages",
+		price = 1,
+		level = 1,
+		icon = 11,--DP(18, 11)
+	},
+	mage_arcane_shatter_v = {
+		mod = "mod_v_shatter",
+		chance = 0.1,
+		class = "mages",
+		price = 1,
+		level = 2,
+		icon = 12,--DP(19, 12)
+	},
+	mage_hermetic_study_v = {
+		class = "mages",
+		range_factor = 1.15,
+		price = 2,
+		level = 3,
+		icon = 13,--DP(20, 13)
+	},
+	mage_empowered_magic_v = {
+		damage_factor = 2,
+		chance = 0.1,
+		class = "mages",
+		price = 2,
+		level = 4,
+		icon = 14,--DP(21, 14)
+	},
+	mage_slow_curse_v = {
+		mod = "mod_slow_curse_v",
+		class = "mages",
+		price = 3,
+		level = 5,
+		icon = 15,--DP(22, 15)
+	},
+	engineer_concentrated_fire_v = {
+		area_factor = 1.2,
+		class = "rocks",
+		price = 1,
+		level = 1,
+		icon = 16,--DP(23, 16)
+	},
+	engineer_range_finder_v = {
+		damage_factor = 1.1,
+		class = "rocks",
+		price = 1,
+		level = 2,
+		icon = 17,--DP(24, 17)
+	},
+	engineer_field_logistics_v = {
+		count = 3,
+		damage_factor = 0.2,
+		class = "rocks",
+		price = 2,
+		level = 3,
+		icon = 18,--DP(25, 18)
+	},
+	engineer_industrialization_v = {
+		class = "rocks",
+		cost_factor = 0.85,
+		price = 3,
+		level = 4,
+		icon = 19,--DP(26, 19)
+	},
+	engineer_efficiency_v = {
+		price = 3,
+		bonus = 0.05,
+		max_bonus = 1.25,
+		class = "rocks",
+		level = 5,
+		icon = 20,--DP(27, 20)
+	},
 }
 
 function upgrades:set_levels(levels)
@@ -610,6 +768,10 @@ function upgrades:get_upgrade(name)
 	else
 		return u
 	end
+end
+
+function upgrades:get_upgrade_info(name)
+	return self.list_v[name]
 end
 
 function upgrades:get_total_stars()
@@ -648,6 +810,7 @@ function upgrades:enhance_hero5()
 		"hero_spider",
 		"hero_wukong",
 		"hero_douzhanshengfo",
+		"hero_dragon_sun",
 	}
 	for k, hero in ipairs(hero_list) do
 		for i= 1,10 do
@@ -687,25 +850,241 @@ function upgrades:patch_templates(max_level)
 --4代原始范围
 	user_data = storage:load_slot()
 	local upgrades_FL = require("upgrades_FL")
-	if user_data.liuhui.g4range_balance~= nil and user_data.liuhui.g4range_balance == false then --这个开关默认是打开的
+	if user_data.liuhui and user_data.liuhui.g4range_balance~= nil and user_data.liuhui.g4range_balance == false then --这个开关默认是打开的
 		upgrades_FL:range_g4()
 	end
 --平衡性调整
 	
-	local upgrades_lockson = require("upgrades_lockson")
-	if user_data.liuhui.balance and user_data.liuhui.balance == true then
+	--local upgrades_lockson = require("upgrades_lockson")
+	if user_data.liuhui and user_data.liuhui.balance and user_data.liuhui.balance == true then
 		upgrades_FL:enhance1()
 		upgrades_FL:enhance2()
 		upgrades_FL:enhance3()
 		upgrades_FL:enhance4()
 		upgrades_FL:enhance5()
-		upgrades_lockson:enhancecreeps()
+		--upgrades_lockson:enhancecreeps()
 	end
-	
+	if user_data.xingyu.balance and user_data.xingyu.balance == true then
+		upgrades_FL:enhance11()
+--		upgrades_FL:enhance12()
+--		upgrades_FL:enhance13()
+--		upgrades_FL:enhance4()
+--		upgrades_FL:enhance5()
+	end			
 	--5代英雄折算科技
 	upgrades:enhance_hero5()
 
 	local u
+	--征服科技
+	local archer_towers = {
+		"tower_archer_1_v",
+		"tower_archer_2_v",
+		"tower_archer_3_v",
+		"tower_deathcoil"
+	}
+		
+	u = self:get_upgrade("archer_salvage")
+
+	if u then
+		u = self:get_upgrade_info("archer_salvage_v")
+		for _, n in pairs(archer_towers) do
+			T(n).attacks.range = T(n).attacks.range * u.range_factor
+		end
+	end
+
+	u = self:get_upgrade("archer_eagle_eye")
+
+	if u then
+		u = self:get_upgrade_info("archer_eagle_eye_v")
+		for _, n in pairs({
+			"arrow_1_v",
+			"arrow_2_v",
+			"arrow_3_v",
+			"bolt_sniper_deathcoil"
+		}) do
+			T(n).bullet.damage_min = math.ceil(T(n).bullet.damage_min * u.damage_factor)
+			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
+		end
+	end
+
+	u = self:get_upgrade("archer_piercing")
+
+	if u then
+		u = self:get_upgrade_info("archer_piercing_v")
+		for _, n in pairs({
+			"arrow_1_v",
+			"arrow_2_v",
+			"arrow_3_v",
+			"bolt_sniper_deathcoil"
+		}) do
+			T(n).bullet.reduce_armor = u.reduce_armor_factor
+			T(n).bullet.armor_damage_inc = u.reduce_armor_factor
+			T(n).bullet.armor_damage_max = u.max_reduction
+		end
+	end
+
+	u = self:get_upgrade("archer_far_shots")
+
+	if u then
+		u = self:get_upgrade_info("archer_far_shots_v")
+		for _, n in pairs(archer_towers) do
+			T(n).attacks.list[1].cooldown = (math.floor((T(n).attacks.list[1].cooldown / u.speed_factor) * 10))/10
+		end
+		
+		T("tower_deathcoil").attacks.list[1].charge_tick = (math.floor((T("tower_deathcoil").attacks.list[1].charge_tick / u.speed_factor) * 10))/10
+	end
+
+	local barrack_soldiers = {
+		"soldier_thug",
+		"soldier_bandit",
+		"soldier_brigand",
+		"soldier_redcap"
+	}
+	local barrack_towers = {
+		"tower_barrack_1_v",
+		"tower_barrack_2_v",
+		"tower_barrack_3_v",
+		"tower_redcap"
+	}
+
+	u = self:get_upgrade("barrack_survival")
+
+	if u then
+		u = self:get_upgrade_info("barrack_survival_v")
+		for _, n in pairs(barrack_soldiers) do
+			T(n).health.armor = T(n).health.armor + u.armor_increase
+		end
+		for _, n in pairs(barrack_towers) do
+			T(n).barrack.rally_range = T(n).barrack.rally_range * u.rally_range_factor
+		end
+--		T("soldier_skeleton_graveyard").health.armor = T("soldier_skeleton_graveyard").health.armor + u.armor_increase
+	end
+
+	u = self:get_upgrade("barrack_better_armor")
+
+	if u then
+		u = self:get_upgrade_info("barrack_better_armor_v")
+		for _, n in pairs(barrack_soldiers) do
+			T(n).health.hp_max = km.round(T(n).health.hp_max * u.health_factor)
+		end
+--		T("soldier_skeleton_graveyard").health.hp_max = km.round(T("soldier_skeleton_graveyard").health.hp_max * u.health_factor)
+	end
+
+	u = self:get_upgrade("barrack_improved_deployment")
+
+	if u then
+		u = self:get_upgrade_info("barrack_improved_deployment_v")
+		for _, n in pairs(barrack_soldiers) do
+			T(n).pickpocket.chance = u.pickpocket_chance
+			T(n).pickpocket.steal_max = u.pickpocket_amount
+			T(n).pickpocket.steal_min = u.pickpocket_amount
+		end
+	end
+
+	u = self:get_upgrade("barrack_survival_2")
+
+	if u then
+		u = self:get_upgrade_info("barrack_survival_2_v")
+		for _, n in pairs(barrack_soldiers) do
+			T(n).melee.attacks[1].damage_min = math.floor(T(n).melee.attacks[1].damage_min * u.damage_factor)
+			T(n).melee.attacks[1].damage_max = math.floor(T(n).melee.attacks[1].damage_max * u.damage_factor)
+			T(n).melee.attacks[1].track_damage = true
+		end
+--		T("soldier_skeleton_graveyard").melee.attacks[1].damage_min = math.floor(T("soldier_skeleton_graveyard").melee.attacks[1].damage_min * u.damage_factor)
+--		T("soldier_skeleton_graveyard").melee.attacks[1].damage_max = math.floor(T("soldier_skeleton_graveyard").melee.attacks[1].damage_max * u.damage_factor)
+--		T("soldier_skeleton_graveyard").melee.attacks[1].track_damage = true
+	end
+
+	u = self:get_upgrade("barrack_barbed_armor")
+
+	if u then
+		u = self:get_upgrade_info("barrack_barbed_armor_v")
+		for _, n in pairs(barrack_soldiers) do
+			T(n).health.true_armor = u.true_armor
+		end
+--		T("soldier_skeleton_graveyard").health.true_armor = u.true_armor
+--		T("hero_goblin").health.true_armor = u.true_armor
+	end
+
+	local mage_towers = {
+		"tower_mage_1_v",
+		"tower_mage_2_v",
+		"tower_mage_3_v",
+		"tower_shaman"
+	}
+
+	u = self:get_upgrade("mage_spell_reach")
+
+	if u then
+		u = self:get_upgrade_info("mage_spell_reach_v")
+		for _, n in pairs({
+			"bolt_1_v",
+			"bolt_2_v",
+			"bolt_3_v",
+			"bolt_shaman_totem"
+		}) do
+			T(n).bullet.damage_min = math.ceil(T(n).bullet.damage_min * u.damage_factor)
+			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
+		end
+	end
+
+	u = self:get_upgrade("mage_hermetic_study")
+
+	if u then
+		u = self:get_upgrade_info("mage_hermetic_study_v")
+		for _, n in pairs(mage_towers) do
+			T(n).attacks.range = math.ceil(T(n).attacks.range * u.range_factor)
+		end
+	end
+
+	local engineer_towers = {
+		"tower_artillery_1",
+		"tower_artillery_2",
+		"tower_artillery_3"
+	}
+	local engineer_bombs = {
+		"bomb_v",
+		"bomb_dynamite_v",
+		"bomb_black_v"
+	}
+
+	u = self:get_upgrade("engineer_concentrated_fire")
+
+	if u then
+		u = self:get_upgrade_info("engineer_concentrated_fire_v")
+		for _, n in pairs(engineer_bombs) do
+			T(n).bullet.damage_radius = math.ceil(T(n).bullet.damage_radius * u.area_factor)
+		end
+		T("decal_rotshroom_mine").damage_radius =  math.ceil(T("decal_rotshroom_mine").damage_radius * u.area_factor)
+		T("decal_rotshroom_mine_mini").damage_radius =  math.ceil(T("decal_rotshroom_mine_mini").damage_radius * u.area_factor)
+	end
+
+	u = self:get_upgrade("engineer_range_finder")
+
+	if u then
+		u = self:get_upgrade_info("engineer_range_finder_v")
+		for _, n in pairs(engineer_bombs) do
+			T(n).bullet.damage_min = math.ceil(T(n).bullet.damage_min * u.damage_factor)
+			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
+		end
+		T("decal_rotshroom_mine").damage_min =  math.ceil(T("decal_rotshroom_mine").damage_min * u.damage_factor)
+		T("decal_rotshroom_mine").damage_max =  math.ceil(T("decal_rotshroom_mine").damage_max * u.damage_factor)
+	end
+
+	u = self:get_upgrade("engineer_industrialization")
+
+	if u then
+		u = self:get_upgrade_info("engineer_industrialization_v")
+		for _, n in pairs({
+			"tower_rotshroom",
+--			"tower_tesla"
+		}) do
+			for pk, pv in pairs(T(n).powers) do
+				pv.price_base = math.floor(pv.price_base * u.cost_factor)
+				pv.price_inc = math.floor(pv.price_inc * u.cost_factor)
+			end
+		end
+	end	
 --3代射手科技
 	u = self:get_upgrade("archer_el_master_shooter")
 
@@ -718,8 +1097,7 @@ function upgrades:patch_templates(max_level)
 			"tower_silver",
 			"tower_ground_archer",
 			"tower_green_archer",			
-			"tower_ewok_archer_re",			
-			"tower_ewok_archer"		
+			"tower_ewok_archer_re","tower_ewok_archer"		
 		}) do
 			T(n).tower.damage_factor = T(n).tower.damage_factor * u.damage_factor
 		end
@@ -736,8 +1114,7 @@ function upgrades:patch_templates(max_level)
 			"tower_silver",
 			"tower_ground_archer",
 			"tower_green_archer",			
-			"tower_ewok_archer_re",			
-			"tower_ewok_archer"					
+			"tower_ewok_archer_re","tower_ewok_archer"					
 		}) do
 			T(n).attacks.range = math.ceil(T(n).attacks.range * u.range_factor)
 		end
@@ -761,17 +1138,10 @@ function upgrades:patch_templates(max_level)
 			"arrow_1",
 			"arrow_2",
 			"arrow_3",
-			"arrow_arcane",
-			"arrow_arcane_burst",
-			"arrow_arcane_slumber",
-			"arrow_silver",
-			"arrow_silver_long",
-			"arrow_silver_mark",
-			"arrow_silver_mark_long",
+			"arrow_arcane","arrow_arcane_burst","arrow_arcane_slumber",
+			"arrow_silver","arrow_silver_long","arrow_silver_mark","arrow_silver_mark_long",
 			"arrow_ground_archer",
-			"arrow_green_archer",
-			"arrow_green_burst",
-			"arrow_green_sentence",
+			"arrow_green_archer","arrow_green_burst","arrow_green_sentence",
 			"spear_ewok",								
 		}) do
 			T(n).bullet.damage_min = math.ceil(T(n).bullet.damage_min * u.damage_factor)
@@ -786,17 +1156,10 @@ function upgrades:patch_templates(max_level)
 			"arrow_1",
 			"arrow_2",
 			"arrow_3",
-			"arrow_arcane",
-			"arrow_arcane_burst",
-			"arrow_arcane_slumber",
-			"arrow_silver",
-			"arrow_silver_long",
-			"arrow_silver_mark",
-			"arrow_silver_mark_long",
+			"arrow_arcane","arrow_arcane_burst","arrow_arcane_slumber",
+			"arrow_silver","arrow_silver_long","arrow_silver_mark","arrow_silver_mark_long",
 			"arrow_ground_archer",
-			"arrow_green_archer",
-			"arrow_green_burst",
-			"arrow_green_sentence",
+			"arrow_green_archer","arrow_green_burst","arrow_green_sentence",
 			"spear_ewok",				
 		}) do
 			local b = T(n).bullet
@@ -823,13 +1186,10 @@ function upgrades:patch_templates(max_level)
 			"g2_tower_archer_3",
 			"tower_totem",
 			"tower_crossbow",
-			"tower_archer_hammerhold",
-			"tower_archer_hammerhold_1",
+			"tower_archer_hammerhold","tower_archer_hammerhold_1",
 			"tower_hammerhold_elite",
-			"tower_archer_dwarf",
-			"tower_pirate_watchtower",
-			"tower_archer_dwarf_d",
-			"tower_pirate_watchtower_d",			
+			"tower_archer_dwarf","tower_archer_dwarf_d",
+			"tower_pirate_watchtower","tower_pirate_watchtower_d",			
 		}) do
 			T(n).attacks.range = math.ceil(T(n).attacks.range * u.range_factor)
 		end
@@ -859,9 +1219,7 @@ function upgrades:patch_templates(max_level)
 			"arrow_crossbow",
 			"axe_totem",			
 			"arrow_hammerhold_elite",
-			"arrow_hammerhold",
-			"arrow_hammerhold_1",
-
+			"arrow_hammerhold","arrow_hammerhold_1",
 			"dwarf_shotgun",
 			"pirate_watchtower_shotgun",	
 		}) do
@@ -879,13 +1237,10 @@ function upgrades:patch_templates(max_level)
 			"g2_tower_archer_3",
 			"tower_totem",
 			"tower_crossbow",
-			"tower_archer_dwarf_d",
-			"tower_pirate_watchtower_d",
-			"tower_archer_hammerhold",
-			"tower_archer_hammerhold_1",
+			"tower_archer_dwarf","tower_archer_dwarf_d",
+			"tower_pirate_watchtower","tower_pirate_watchtower_d",			
+			"tower_archer_hammerhold","tower_archer_hammerhold_1",
 			"tower_hammerhold_elite",
-			"tower_archer_dwarf",
-			"tower_pirate_watchtower",			
 		}) do
 			T(n).attacks.range = math.ceil(T(n).attacks.range * u.range_factor)
 		end
@@ -897,8 +1252,7 @@ function upgrades:patch_templates(max_level)
 			"arrow_crossbow",
 			"axe_totem",			
 			"arrow_hammerhold_elite",
-			"arrow_hammerhold",
-			"arrow_hammerhold_1",
+			"arrow_hammerhold","arrow_hammerhold_1",
 			"dwarf_shotgun",
 			"pirate_watchtower_shotgun",			
 		}) do
@@ -984,20 +1338,13 @@ function upgrades:patch_templates(max_level)
 			"tower_barrack_1",
 			"tower_barrack_2",
 			"tower_barrack_3",
-			"tower_barrack_3_a",
-			"tower_barrack_3_b",			
 			"tower_blade",
 			"tower_forest",
-			"tower_drow",
-			"tower_drow_d",
-			"tower_baby_ashbite",
-			"tower_baby_ashbite_d",							
-			"tower_ewok",
-			"tower_ewok_d",
-			"tower_ewok_archer_re",					
-			"tower_ewok_rework",
-			"tower_elf_kr1",
-			"tower_elf_1",					
+			"tower_drow","tower_drow_d",
+			"tower_baby_ashbite","tower_baby_ashbite_d",							
+			"tower_ewok","tower_ewok_d",
+			"tower_ewok_rework","tower_ewok_archer_re",	
+			"tower_elf_1","tower_elf_kr1",					
 		}) do
 			T(n).barrack.rally_range = math.ceil(T(n).barrack.rally_range * u.rally_range_factor)
 		end
@@ -1015,8 +1362,7 @@ function upgrades:patch_templates(max_level)
 			"soldier_drow",
 			"soldier_baby_ashbite",			
 			"soldier_ewok",
-			"soldier_ewok_re",
-			"soldier_ewok_re_1",			
+			"soldier_ewok_re","soldier_ewok_re_1",			
 		}) do
 			T(n).health.armor = T(n).health.armor + u.armor_increase
 		end
@@ -1052,11 +1398,9 @@ function upgrades:patch_templates(max_level)
 			"soldier_drow",
 			"soldier_baby_ashbite",			
 			"soldier_ewok",
-			"soldier_ewok_re",
-			"soldier_ewok_re_1",			
-			"soldier_druid_bear",
-			"soldier_elf_kr1",	
-			"soldier_elf_1"		
+			"soldier_ewok_re","soldier_ewok_re_1",			
+			"soldier_elf_1","soldier_elf_kr1",
+			"soldier_druid_bear",					
 		}) do
 			T(n).revive.disabled = nil
 		end
@@ -1072,18 +1416,13 @@ function upgrades:patch_templates(max_level)
 			"soldier_knight",
 			"soldier_templar",
 			"soldier_assassin",
-			"soldier_pirate_captain",
-			"soldier_pirate_flamer",
-			"soldier_pirate_anchor",
-			"soldier_pirate_captain_2",
-			"soldier_pirate_flamer_2",
-			"soldier_pirate_anchor_2",
+			"soldier_pirate_captain","soldier_pirate_flamer","soldier_pirate_anchor",
+			"soldier_pirate_captain_2","soldier_pirate_flamer_2","soldier_pirate_anchor_2",
 			"soldier_amazona",
 			"soldier_amazona_re",			
-			"soldier_legionnaire",
-			"soldier_djinn",
-			"soldier_legionnaire_2",
-			"soldier_djinn_2",
+			"soldier_legionnaire","soldier_djinn",
+			"soldier_legionnaire_2","soldier_djinn_2",
+			"soldier_dwarf",
 			"soldier_cannibal"
 		}) do
 			T(n).health.armor = T(n).health.armor + u.armor_increase
@@ -1099,18 +1438,12 @@ function upgrades:patch_templates(max_level)
 			"soldier_knight",
 			"soldier_templar",
 			"soldier_assassin",
-			"soldier_pirate_captain",
-			"soldier_pirate_flamer",
-			"soldier_pirate_anchor",
-			"soldier_pirate_captain_2",
-			"soldier_pirate_flamer_2",
-			"soldier_pirate_anchor_2",
+			"soldier_pirate_captain","soldier_pirate_flamer","soldier_pirate_anchor",
+			"soldier_pirate_captain_2","soldier_pirate_flamer_2","soldier_pirate_anchor_2",
 			"soldier_amazona",
 			"soldier_amazona_re",			
-			"soldier_legionnaire",
-			"soldier_djinn",
-			"soldier_legionnaire_2",
-			"soldier_djinn_2",
+			"soldier_legionnaire","soldier_djinn",
+			"soldier_legionnaire_2","soldier_djinn_2",
 			"soldier_dwarf",	
 			"soldier_cannibal"		
 		}) do
@@ -1127,19 +1460,14 @@ function upgrades:patch_templates(max_level)
 			"soldier_knight",
 			"soldier_templar",
 			"soldier_assassin",
-			"soldier_pirate_captain",
-			"soldier_pirate_flamer",
-			"soldier_pirate_anchor",
-			"soldier_pirate_captain_2",
-			"soldier_pirate_flamer_2",
-			"soldier_pirate_anchor_2",
+			"soldier_pirate_captain","soldier_pirate_flamer","soldier_pirate_anchor",
+			"soldier_pirate_captain_2","soldier_pirate_flamer_2","soldier_pirate_anchor_2",
 			"soldier_amazona",
 			"soldier_amazona_re",			
-			"soldier_legionnaire",
-			"soldier_djinn",
-			"soldier_legionnaire_2",
-			"soldier_djinn_2",
+			"soldier_legionnaire","soldier_djinn",
+			"soldier_legionnaire_2","soldier_djinn_2",
 			"soldier_dwarf",
+			"soldier_cannibal"	
 		}) do
 			T(n).regen.health = math.ceil(T(n).regen.health * u.regen_factor)
 		end
@@ -1148,26 +1476,15 @@ function upgrades:patch_templates(max_level)
 			"g2_tower_barrack_1",
 			"g2_tower_barrack_2",
 			"g2_tower_barrack_3",
-			"g2_tower_barrack_3_a",
-			"g2_tower_barrack_3_b",
 			"tower_templar",
 			"tower_assassin",
-			"tower_barrack_dwarf",
-			"tower_barrack_dwarf_d",			
-			"tower_barrack_pirates",
-			"tower_barrack_pirates_d",			
-			"tower_barrack_pirate_captain",
-			"tower_barrack_pirate_captain_2",  
-			"tower_barrack_pirate_flamer_2",  
-			"tower_barrack_pirate_anchor_2", 
-			"tower_barrack_amazonas",
-			"tower_barrack_amazonas_d",
+			"tower_barrack_dwarf","tower_barrack_dwarf_d",			
+			"tower_barrack_pirates","tower_barrack_pirates_d",			
+			"tower_barrack_pirate_captain","tower_barrack_pirate_captain_2",  "tower_barrack_pirate_flamer_2",  "tower_barrack_pirate_anchor_2", 
+			"tower_barrack_amazonas","tower_barrack_amazonas_d",
 			"tower_barrack_amazonas_re",						
-			"tower_barrack_mercenaries",
-			"tower_barrack_mercenaries_d",
-			"tower_barrack_mercenaries_2",
-			"tower_barrack_legion_2",
-			"tower_barrack_djinn_2",
+			"tower_barrack_mercenaries","tower_barrack_mercenaries_d",
+			"tower_barrack_mercenaries_2","tower_barrack_legion_2","tower_barrack_djinn_2",
 			"tower_barrack_canibal"
 		}) do
 			T(n).barrack.rally_range = math.ceil(T(n).barrack.rally_range * u.rally_range_factor)
@@ -1183,18 +1500,12 @@ function upgrades:patch_templates(max_level)
 			"soldier_knight",
 			"soldier_templar",
 			"soldier_assassin",
-			"soldier_pirate_captain",
-			"soldier_pirate_flamer",
-			"soldier_pirate_anchor",
-			"soldier_pirate_captain_2",
-			"soldier_pirate_flamer_2",
-			"soldier_pirate_anchor_2",
+			"soldier_pirate_captain","soldier_pirate_flamer","soldier_pirate_anchor",
+			"soldier_pirate_captain_2","soldier_pirate_flamer_2","soldier_pirate_anchor_2",
 			"soldier_amazona",
 			"soldier_amazona_re",			
-			"soldier_legionnaire",
-			"soldier_djinn",
-			"soldier_legionnaire_2",
-			"soldier_djinn_2",
+			"soldier_legionnaire","soldier_djinn",
+			"soldier_legionnaire_2","soldier_djinn_2",
 			"soldier_dwarf",
 			"soldier_cannibal"
 		}) do
@@ -1212,13 +1523,11 @@ function upgrades:patch_templates(max_level)
 		"soldier_barbarian",
 		"soldier_steam_troop",		
 		"soldier_elf",
-		"soldier_elf_kr1",
-		"soldier_elf_1",		
+		"soldier_elf_kr1","soldier_elf_1",		
 		"soldier_sasquash",
 		"soldier_sasquash_2",
 		"soldier_s6_imperial_guard",
-		"soldier_imperial_guard",
-		"soldier_s6_imperial_guard_2",		
+		"soldier_imperial_guard","soldier_s6_imperial_guard_2",		
 		"soldier_paladin_rider"
 	}
 	local barrack_towers = {
@@ -1228,16 +1537,12 @@ function upgrades:patch_templates(max_level)
 		"tower_paladin",
 		"tower_barbarian",
 		"tower_steam_troop",		
-		"tower_elf",
-		"tower_elf_d",
-		"tower_elf_kr1",
-		"tower_elf_1",		
-		"tower_sasquash",
-		"tower_sasquash_d",
+		"tower_elf","tower_elf_d",
+		"tower_elf_kr1","tower_elf_1",		
+		"tower_sasquash","tower_sasquash_d",
 		"tower_sasquash_rework",		
 	    "tower_imperial_patrol",
-		"tower_imperial_patrol_2",
-		"tower_imperialguard",		
+		"tower_imperial_patrol_2","tower_imperialguard",		
 		"tower_paladin_rider"
 	}
 
@@ -1327,13 +1632,11 @@ function upgrades:patch_templates(max_level)
 			"soldier_barbarian",
 			"soldier_steam_troop",		
 			"soldier_elf",
-			"soldier_elf_kr1",
-			"soldier_elf_1",		
+			"soldier_elf_1","soldier_elf_kr1",		
 			"soldier_sasquash",
 			"soldier_sasquash_2",
 			"soldier_s6_imperial_guard",
-			"soldier_imperial_guard",
-			"soldier_s6_imperial_guard_2",		
+			"soldier_imperial_guard","soldier_s6_imperial_guard_2",		
 			"soldier_paladin_rider"
 		}) do
 			T(n).health.spiked_armor = u.spiked_armor_factor
@@ -1351,12 +1654,8 @@ function upgrades:patch_templates(max_level)
 			"tower_mage_3",
 			"tower_wild_magus",
 			"tower_high_elven",
-			"tower_pixie",
-			"tower_faerie_dragon",
-			"tower_pixie_d",
-			"tower_pixie_re",
-			"tower_faerie_dragon_d",
-			"tower_faerie_dragon_re",
+			"tower_faerie_dragon","tower_faerie_dragon_d","tower_faerie_dragon_re",
+			"tower_pixie","tower_pixie_d","tower_pixie_re",
 		}) do
 			T(n).attacks.range = math.ceil(T(n).attacks.range * u.range_factor)
 		end
@@ -1370,11 +1669,9 @@ function upgrades:patch_templates(max_level)
 			"bolt_elves_2",
 			"bolt_elves_3",
 			"bolt_wild_magus",
-			"bolt_high_elven_strong",
+			"bolt_high_elven_strong",--"bolt_high_elven_weak","ray_high_elven_sentinel",
 			"bolt_faerie_dragon",
-			--
 			"fireball_baby_ashbite",
-			"ray_high_elven_sentinel",
 		}) do
 			T(n).bullet.damage_min = math.ceil(T(n).bullet.damage_min * u.damage_factor)
 			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
@@ -1390,12 +1687,8 @@ function upgrades:patch_templates(max_level)
 			"tower_mage_3",
 			"tower_wild_magus",
 			"tower_high_elven",
-			"tower_pixie",
-			"tower_faerie_dragon",
-			"tower_pixie_d",
-			"tower_pixie_re",
-			"tower_faerie_dragon_d",
-			"tower_faerie_dragon_re",
+			"tower_pixie","tower_pixie_d","tower_pixie_re",
+			"tower_faerie_dragon","tower_faerie_dragon_d","tower_faerie_dragon_re",
 		}) do
 			T(n).attacks.range = math.ceil(T(n).attacks.range * u.range_factor)
 		end
@@ -1480,10 +1773,8 @@ function upgrades:patch_templates(max_level)
 			"bolt_sorcerer",
 			"ray_arcane",
 			"bolt_time_wizard",			
-			"bolt_elora_freeze",
-			"bolt_elora_slow",
-			"bolt_magnus",
-			"bolt_magnus_illusion",
+			"bolt_elora_freeze","bolt_elora_slow",
+			"bolt_magnus","bolt_magnus_illusion",
 			"ray_sunray"
 		}) do
 			local mods = {
@@ -1542,11 +1833,9 @@ function upgrades:patch_templates(max_level)
 			"g1_bolt_3",
 			"bolt_sorcerer",
 			"ray_arcane",
-			"bolt_elora_freeze",
-			"bolt_elora_slow",
-			"bolt_magnus",
-			"bolt_magnus_illusion",			
 			"bolt_time_wizard",
+			"bolt_elora_freeze","bolt_elora_slow",
+			"bolt_magnus","bolt_magnus_illusion",			
 			"ray_sunray"
 		}) do
 			local mods = {
@@ -1577,8 +1866,7 @@ function upgrades:patch_templates(max_level)
 			"rock_2",
 			"rock_3",
 			"rock_druid",
-			"rock_entwood",
-			"rock_firey_nut"			
+			"rock_entwood","rock_firey_nut"			
 		}) do
 			T(n).bullet.damage_radius = math.ceil(T(n).bullet.damage_radius * u.damage_area_factor)
 		end
@@ -1596,8 +1884,7 @@ function upgrades:patch_templates(max_level)
 			"tower_rock_thrower_3",
 			"tower_druid",
 			"tower_entwood",
-			"tower_bastion",
-			"tower_bastion_d"
+			"tower_bastion","tower_bastion_d"
 		}) do
 			T(n).attacks.range = math.ceil(T(n).attacks.range * u.range_factor)
 		end
@@ -1611,8 +1898,7 @@ function upgrades:patch_templates(max_level)
 			"rock_2",
 			"rock_3",
 			"rock_druid",
-			"rock_entwood",
-			"rock_firey_nut"
+			"rock_entwood","rock_firey_nut"
 		}) do
 			T(n).bullet.damage_type = bit.bor(DAMAGE_TRUE, DAMAGE_FX_EXPLODE)
 		end
@@ -1626,8 +1912,7 @@ function upgrades:patch_templates(max_level)
 			"rock_2",
 			"rock_3",
 			"rock_druid",
-			"rock_entwood",
-			"rock_firey_nut"
+			"rock_entwood","rock_firey_nut"
 		}) do
 			T(n).bullet.mod = "mod_shocking_impact"
 		end
@@ -1662,7 +1947,7 @@ function upgrades:patch_templates(max_level)
 			"g2_tower_engineer_3",
 			"tower_dwaarp",
 			"tower_sandworm",
-			"tower_frankenstein"
+			"tower_frankenstein","tower_frankenstein_d"
 		}) do
 			T(n).attacks.range = math.ceil(T(n).attacks.range * u.range_factor)
 		end
@@ -1675,9 +1960,9 @@ function upgrades:patch_templates(max_level)
 
 	if u then
 		for _, n in pairs({
-			"bomb",
-			"bomb_dynamite",
-			"bomb_black",
+			"g2_bomb",
+			"g2_bomb_dynamite",
+			"g2_bomb_black",
 			"bomb_mecha",
 			"bomb_pirate_camp"
 		}) do
@@ -1691,9 +1976,9 @@ function upgrades:patch_templates(max_level)
 
 	if u then
 		for _, n in pairs({
-			"bomb",
-			"bomb_dynamite",
-			"bomb_black",
+			"g2_bomb",
+			"g2_bomb_dynamite",
+			"g2_bomb_black",
 			"bomb_mecha",
 			"bomb_pirate_camp"
 		}) do
@@ -1705,9 +1990,8 @@ function upgrades:patch_templates(max_level)
 		T("tower_dwaarp").attacks.list[1].damage_max = T("tower_dwaarp").attacks.list[1].damage_max * u.damage_factor
 		T("mod_teeth").dps.damage_min = T("mod_teeth").dps.damage_min * u.damage_factor
 		T("mod_teeth").dps.damage_max = T("mod_teeth").dps.damage_max * u.damage_factor
-		--T("mod_ray_frankenstein").dps.damage_min = math.ceil(T("mod_ray_frankenstein").dps.damage_min * u.damage_factor)
-		--T("mod_ray_frankenstein").dps.damage_max = math.ceil(T("mod_ray_frankenstein").dps.damage_max * u.damage_factor)
-		--T("mod_ray_frankenstein").dps.damage_inc = math.ceil(T("mod_ray_frankenstein").dps.damage_inc * u.damage_factor)			
+		T("mod_ray_frankenstein").dps.damage_min = math.ceil(T("mod_ray_frankenstein").dps.damage_min * u.damage_factor)
+		T("mod_ray_frankenstein").dps.damage_max = math.ceil(T("mod_ray_frankenstein").dps.damage_max * u.damage_factor)		
 	end
 
 	u = self:get_upgrade("engineer_gnomish_tinkering")
@@ -1720,7 +2004,8 @@ function upgrades:patch_templates(max_level)
 			T("soldier_mecha").attacks.list[3],
 			T("tower_sandworm").attacks.list[1],
 			T("tower_sandworm").attacks.list[2],
-			T("tower_frankenstein").attacks.list[1],	
+			T("tower_frankenstein").attacks.list[1],
+			T("tower_frankenstein_d").attacks.list[1],		
 			T("soldier_frankenstein").melee.attacks[2]
 		}) do
 			a.cooldown = a.cooldown * u.cooldown_factor
@@ -1733,11 +2018,10 @@ function upgrades:patch_templates(max_level)
 
 	if u then
 		for _, n in pairs({
-			"bomb",
-			"bomb_dynamite",
-			"bomb_black",
-			"bomb_mecha",
-			"missile_mecha",
+			"g2_bomb",
+			"g2_bomb_dynamite",
+			"g2_bomb_black",
+			"bomb_mecha","missile_mecha",
 			"bomb_teeth",		
 			"pirate_watchtower_bomb",
 			"dwarf_barrel",
@@ -1746,6 +2030,7 @@ function upgrades:patch_templates(max_level)
 			T(n).up_shock_and_awe_chance = u.chance
 		end
 		T("soldier_frankenstein").melee.attacks[2].mod = "mod_frankenstein_pound"
+		T("soldier_frankenstein").melee.attacks[2].damage_type = DAMAGE_ELECTRICAL
 	end
 --1代巨炮科技
 	local engineer_towers = {
@@ -1765,20 +2050,12 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("engineer_efficiency")
 	if u then
---		T("bomb_bfg").bullet.damage_min = T("bomb_bfg").bullet.damage_max
-		T("bomb_musketeer").bullet.damage_min_inc = T("bomb_musketeer").bullet.damage_max_inc
---		T("g1_bomb").bullet.damage_min = T("g1_bomb").bullet.damage_max
---		T("g1_bomb_dynamite").bullet.damage_min = T("g1_bomb_dynamite").bullet.damage_max
---		T("g1_bomb_black").bullet.damage_min = T("g1_bomb_black").bullet.damage_max
 		T("missile_bfg").bullet.damage_min = T("missile_bfg").bullet.damage_max
-		T("bomb_bfg_fragment").bullet.damage_min = T("bomb_bfg_fragment").bullet.damage_max
 		T("ray_tesla").bounce_damage_factor = 1
 		T("ray_tesla").bounce_damage_factor_min = 1
 		T("b_tesla").bounce_damage_factor = 1
 		T("b_tesla").bounce_damage_factor_min = 1
-		T("bomb_steam_troop").bullet.damage_min = T("bomb_steam_troop").bullet.damage_max
 		T("airstrike_steam_troop").bullet.damage_min = T("airstrike_steam_troop").bullet.damage_max		
-		T("denas_catapult_rock").bullet.damage_min = T("denas_catapult_rock").bullet.damage_max
 		T("bomb_mine_bolin").bullet.damage_min = T("bomb_mine_bolin").bullet.damage_max		
 	end
 
@@ -1959,6 +2236,7 @@ function upgrades:patch_templates(max_level)
 		"tower_dwarf_lvl",
 		"tower_sparking_geode_lvl",
 		"tower_pandas_lvl",
+		"tower_dragons_lvl",
 	}
 
 	-- towers_war_rations 我方单位加血10%->20%
@@ -1974,8 +2252,9 @@ function upgrades:patch_templates(max_level)
 			for i = 1, 4 do
 				if T(n .. i).barrack then
 					local st = T(T(n .. i).barrack.soldier_type)
-
-					st.health.hp_max = km.round(st.health.hp_max * b_towers_war_rations_hp_factor)
+					if st then
+						st.health.hp_max = km.round(st.health.hp_max * b_towers_war_rations_hp_factor)
+					end
 				end
 			end
 		end
@@ -2123,6 +2402,7 @@ function upgrades:patch_templates(max_level)
 		"tower_dwarf_lvl4",
 		"tower_sparking_geode_lvl4",
 		"tower_pandas_lvl4",
+		"tower_dragons_lvl4",
 			--"tower_entwood"
 		}) do
 			for pk, pv in pairs(T(n).powers) do
@@ -2170,8 +2450,9 @@ function upgrades:patch_templates(max_level)
 				for i = 1, 4 do
 					if T(n .. i).barrack then
 						local st = T(T(n .. i).barrack.soldier_type)
-
-						st.health.dead_lifetime = st.health.dead_lifetime - b.towers_royal_training.reduce_cooldown
+						if st then
+							st.health.dead_lifetime = st.health.dead_lifetime - b.towers_royal_training.reduce_cooldown
+						end
 					end
 				end
 			end
@@ -2186,7 +2467,7 @@ function upgrades:patch_templates(max_level)
 
 	u = true --self:get_upgrade("alliance_shady_company")
 
-	if u then
+	if u and user_data.liuhui then
 		local heroes = user_data.liuhui.g5_hero_dark_count
 		--local heroes = 0
 
@@ -2368,12 +2649,19 @@ function upgrades:patch_templates(max_level)
 					soldier_t.melee.attacks[1].damage_max = math.ceil(soldier_t.melee.attacks[1].damage_max * d_mult)
 				end
 			end
+
+			for i = 1, 4 do
+				tower_t = T("faerie_dragon_lvl" .. i)
+				bullet_t = T(tower_t.custom_attack.bullet)
+				bullet_t.bullet.damage_min = math.ceil(bullet_t.bullet.damage_min * d_mult)
+				bullet_t.bullet.damage_max = math.ceil(bullet_t.bullet.damage_max * d_mult)
+			end
 		end
 	end
 
 	u = true --self:get_upgrade("alliance_friends_of_the_crown")
 
-	if u then
+	if u and user_data.liuhui then
 		--local cost_red = 0
 
 		--for _, h in ipairs(slot.heroes.team) do
@@ -2425,7 +2713,7 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("reinforcement_level_3")
 
-	if u and user_data.liuhui.reinforcement_5 ~= "dark"  and game and game.store and game.store.level_idx and game.store.level_idx >= 101  then
+	if u and user_data.liuhui and user_data.liuhui.reinforcement_5 ~= "dark"  and game and game.store and game.store.level_idx and game.store.level_idx >= 101  then
 		for i = 1, 2 do
 			local num = km.zmod(i, 2)
 
@@ -2435,7 +2723,7 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("reinforcement_level_3")
 
-	if u and user_data.liuhui.reinforcement_5 == "dark" and game and game.store and game.store.level_idx and game.store.level_idx >= 101  then
+	if u and user_data.liuhui and user_data.liuhui.reinforcement_5 == "dark" and game and game.store and game.store.level_idx and game.store.level_idx >= 101  then
 		for i = 1, 1 do
 			local num = km.zmod(i, 2)
 
@@ -2451,7 +2739,7 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("reinforcement_level_4")
 
-	if u and user_data.liuhui.reinforcement_5 ~= "dark" and game and game.store and game.store.level_idx and game.store.level_idx >= 101 and  game.store.level_idx <= 150 then
+	if u and user_data.liuhui and user_data.liuhui.reinforcement_5 ~= "dark" and game and game.store and game.store.level_idx and game.store.level_idx >= 101 and  game.store.level_idx <= 150 then
 		local portrait_idxs = {
 			31,
 			33
@@ -2470,7 +2758,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("reinforcement_level_4")
 
 	-- 只有5代关卡能生效
-	if u and user_data.liuhui.reinforcement_5 == "dark" and game and game.store and game.store.level_idx and game.store.level_idx >= 101 and game.store.level_idx <= 150 then
+	if u and user_data.liuhui and user_data.liuhui.reinforcement_5 == "dark" and game and game.store and game.store.level_idx and game.store.level_idx >= 101 and game.store.level_idx <= 149 then
 		for i = 1, 1 do
 			local num = km.zmod(i, 2)
 			local t = T("soldier_reinforcement_shadow_archer_0" .. num)
@@ -2487,7 +2775,7 @@ function upgrades:patch_templates(max_level)
 	end
 
 	--出口科技
-	if game and game.store and game.store.level_idx and game.store.level_idx >= 101 and game.store.level_idx <= 159 then
+	if game and game.store and game.store.level_idx and game.store.level_idx >= 101 and game.store.level_idx <= 149 then
 			c_upg = E:create_entity("controller_upgrades_alliance")
 			c_upg.seal = "decal_upgrade_alliance_seal_of_punishment"
 			c_upg.coil = "decal_upgrade_alliance_flux_altering_coils"
@@ -2496,7 +2784,7 @@ function upgrades:patch_templates(max_level)
 	
 
 	--所有科技结算完之后：refund_factor在随机塔模式下降低到0.6
-	if user_data.liuhui.rand_tower and user_data.liuhui.rand_tower > 0 then
+	if user_data.liuhui and user_data.liuhui.rand_tower and user_data.liuhui.rand_tower > 0 then
 		for _, t in pairs(E:filter_templates("tower")) do
 			t.tower.refund_factor = 0.6
 		end

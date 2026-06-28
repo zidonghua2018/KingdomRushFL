@@ -1067,25 +1067,42 @@ function U.predict_damage(entity, damage)
 		return entity.health.hp
 	end
 
-	local protection
+	local protection, vulnerable
 
 	if band(d.damage_type, DAMAGE_POISON) ~= 0 then
 		protection = e.health.poison_armor
-	elseif band(d.damage_type, bor(DAMAGE_TRUE, DAMAGE_DISINTEGRATE)) ~= 0 then
-		protection = 0
+	elseif band(d.damage_type, bor(DAMAGE_TRUE, DAMAGE_DISINTEGRATE, DAMAGE_FIREBALL)) ~= 0 then
+		protection = 0	
 	elseif band(d.damage_type, DAMAGE_PHYSICAL) ~= 0 then
 		protection = e.health.armor - d.reduce_armor
 	elseif band(d.damage_type, DAMAGE_MAGICAL) ~= 0 then
 		protection = e.health.magic_armor - d.reduce_magic_armor
 	elseif band(d.damage_type, bor(DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL)) ~= 0 then
 		protection = (e.health.armor - d.reduce_armor) / 2
+	elseif band(d.damage_type, DAMAGE_SHOT) ~= 0 then
+		protection = (e.health.armor - d.reduce_armor) * 2 / 3			
 	elseif band(d.damage_type, DAMAGE_DWAARP) ~= 0 then
 		protection = (e.health.armor - d.reduce_armor) / 4
 	elseif d.damage_type == DAMAGE_NONE then
 		protection = 1
 	end
 
+	if band(d.damage_type, bor(DAMAGE_FIREBALL)) ~= 0 then
+		if math.random() < 0.1 then
+			vulnerable = 2
+		else
+			vulnerable = 1
+		end		
+	elseif band(d.damage_type, bor(DAMAGE_ELECTRICAL)) ~= 0 then
+		if math.random() < 0.1 then
+			vulnerable = 2
+		else
+			vulnerable = 1
+		end				
+	end	
+	
 	protection = protection or 0
+	vulnerable = vulnerable or 1
 
 	local rounded_damage = d.value
 
@@ -1105,6 +1122,12 @@ function U.predict_damage(entity, damage)
 
 	if band(d.damage_type, DAMAGE_NO_KILL) ~= 0 and e.health and actual_damage >= e.health.hp then
 		actual_damage = e.health.hp - 1
+	end
+
+	if entity.soldier and band(d.damage_type, bor(DAMAGE_FIREBALL, DAMAGE_ELECTRICAL)) ~= 0 then
+		actual_damage = km.round((rounded_damage - math.floor(rounded_damage * km.clamp(0, 1, protection))) * km.clamp(1, 2, vulnerable))
+	else
+		actual_damage = math.floor(rounded_damage * km.clamp(0, 1, 1 - protection) * km.clamp(1, 2, vulnerable))
 	end
 
 	return actual_damage

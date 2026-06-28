@@ -400,6 +400,22 @@ shotgun.bullet.pop_chance = 1
 shotgun.bullet.pop_conds = DR_KILL
 shotgun.bullet.max_track_distance = REF_H / 6
 shotgun.bullet.hide_radius = 25
+shotgun.bullet.damage_type = DAMAGE_SHOT
+---3.11
+local shotgun_krf = E:register_t("shotgun_kr", "bullet")
+
+shotgun_krf.main_script.insert = scripts.shotgun_kr.insert
+shotgun_krf.main_script.update = scripts.shotgun_kr.update
+shotgun_krf.render.sprites[1].name = "bullet"
+shotgun_krf.render.sprites[1].animated = false
+shotgun_krf.bullet.pop = {
+	"pop_aack"
+}
+shotgun_krf.bullet.pop_chance = 1
+shotgun_krf.bullet.pop_conds = DR_KILL
+shotgun_krf.bullet.max_track_distance = REF_H / 6
+shotgun_krf.bullet.hide_radius = 25
+shotgun_krf.bullet.damage_type = DAMAGE_SHOT
 
 local bomb = E:register_t("bomb", "bullet")
 
@@ -422,10 +438,36 @@ bomb.bullet.hide_radius = 8
 bomb.render.sprites[1].name = "bombs_0001"
 bomb.render.sprites[1].animated = false
 bomb.main_script.insert = scripts.bomb.insert
-bomb.main_script.update = scripts.bomb_krf.update
+bomb.main_script.update = scripts.bomb.update
 bomb.sound_events.insert = "BombShootSound"
 bomb.sound_events.hit = "BombExplosionSound"
 bomb.sound_events.hit_water = "RTWaterExplosion"
+
+local bomb_krf = E:register_t("bomb_krf", "bullet")
+
+E:add_comps(bomb_krf, "sound_events")
+
+bomb_krf.bullet.flight_time = fts(31)
+bomb_krf.bullet.rotation_speed = 20 * FPS * math.pi / 180
+bomb_krf.bullet.hit_fx = "fx_explosion_small"
+bomb_krf.bullet.hit_decal = "decal_bomb_crater"
+bomb_krf.bullet.hit_fx_water = "fx_explosion_water"
+bomb_krf.bullet.damage_type = DAMAGE_EXPLOSION
+bomb_krf.bullet.damage_min = 8
+bomb_krf.bullet.damage_max = 15
+bomb_krf.bullet.damage_radius = 62.400000000000006
+bomb_krf.bullet.pop = {
+	"pop_kboom"
+}
+bomb_krf.bullet.damage_flags = F_AREA
+bomb_krf.bullet.hide_radius = 8
+bomb_krf.render.sprites[1].name = "bombs_0001"
+bomb_krf.render.sprites[1].animated = false
+bomb_krf.main_script.insert = scripts.bomb.insert
+bomb_krf.main_script.update = scripts.bomb_krf.update
+bomb_krf.sound_events.insert = "BombShootSound"
+bomb_krf.sound_events.hit = "BombExplosionSound"
+bomb_krf.sound_events.hit_water = "RTWaterExplosion"
 
 local bomb_dynamite = E:register_t("bomb_dynamite", "bomb")
 
@@ -962,6 +1004,34 @@ ps_water_trail.particle_system.scale_var = {
 }
 ps_water_trail.particle_system.emission_rate = 30
 ps_water_trail.particle_system.z = Z_OBJECTS
+---4.12
+local ps_water_trail = E:register_t("ps_water_trail2", "particle_system")
+
+ps_water_trail.particle_system.name = "Underwater_Particle2"
+ps_water_trail.particle_system.animated = false
+ps_water_trail.particle_system.particle_lifetime = {
+	0.3,
+	1.2
+}
+ps_water_trail.particle_system.alphas = {
+	255,
+	10
+}
+ps_water_trail.particle_system.scales_x = {
+	1,
+	0.05
+}
+ps_water_trail.particle_system.scales_y = {
+	1,
+	0.05
+}
+ps_water_trail.particle_system.scale_var = {
+	0.9,
+	1.1
+}
+ps_water_trail.particle_system.emission_rate = 30
+ps_water_trail.particle_system.z = Z_OBJECTS
+
 tt = E:register_t("ps_missile")
 
 E:add_comps(tt, "pos", "particle_system")
@@ -1204,6 +1274,7 @@ local tower = E:register_t("tower")
 E:add_comps(tower, "tower", "pos", "render", "main_script", "ui", "info", "sound_events", "editor", "editor_script","tower_upgrade_persistent_data","vis")
 
 tower.tower.level = 1
+tower.tower.team = TEAM_LINIREA
 tower.render.sprites[1].z = Z_TOWER_BASES
 tower.ui.click_rect = r(-40, -12, 80, 70)
 tower.info.fn = scripts.tower_common.get_info

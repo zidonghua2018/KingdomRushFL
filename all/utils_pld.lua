@@ -9,11 +9,17 @@ local band = bit.band
 local bnot = bit.bnot
 local V = require("klua.vector")
 local P = require("path_db")
+local SSO = require("klove.sso")
 local GS = require("game_settings")
 
 require("constants")
 
 local U = {}
+
+U.jump_type = {
+	parabola = 1,
+	linear = 2,
+}
 
 function U.frandom(from, to)
 	return math.random() * (to - from) + from
@@ -82,67 +88,11 @@ function U.y_ease_key(store, key_table, key_name, from, to, duration, easing, fn
 end
 
 function U.ease_value(from, to, phase, easing)
-	return from + (to - from) * U.ease_phase(phase, easing)
+	return km.ease_value(from, to, phase, easing)
 end
 
 function U.ease_phase(phase, easing)
-	phase = km.clamp(0, 1, phase)
-	easing = easing or ""
-
-	local function rotate_fn(f)
-		return function(s, ...)
-			return 1 - f(1 - s, ...)
-		end
-	end
-
-	local easing_functions = {
-		linear = function(s)
-			return s
-		end,
-		quad = function(s)
-			return s * s
-		end,
-		cubic = function(s)
-			return s * s * s
-		end,
-		quart = function(s)
-			return s * s * s * s
-		end,
-		quint = function(s)
-			return s * s * s * s * s
-		end,
-		sine = function(s)
-			return 1 - math.cos(s * math.pi / 2)
-		end,
-		expo = function(s)
-			return 2^(10 * (s - 1))
-		end,
-		circ = function(s)
-			return 1 - math.sqrt(1 - s * s)
-		end
-	}
-	local fn_name, first_ease = string.match(easing, "([^-]+)%-([^-]+)")
-	local fn = easing_functions[fn_name]
-
-	fn = fn or easing_functions.linear
-
-	if first_ease == "outin" then
-		if phase <= 0.5 then
-			return fn(phase * 2) / 2
-		else
-			return 0.5 + rotate_fn(fn)((phase - 0.5) * 2) / 2
-		end
-	elseif first_ease == "inout" then
-		if phase <= 0.5 then
-			return rotate_fn(fn)(phase * 2) / 2
-		else
-			return 0.5 + fn((phase - 0.5) * 2) / 2
-		end
-	elseif first_ease == "in" then
-		return rotate_fn(fn)(phase)
-	else
-		return fn(phase)
-	end
+	return km.ease_phase(phase, easing)
 end
 
 function U.hover_pulse_alpha(t)
@@ -151,13 +101,26 @@ function U.hover_pulse_alpha(t)
 	return min + (max - min) * 0.5 * (1 + math.sin(t * km.twopi / per))
 end
 
-function U.is_inside_ellipse(p, center, radius, aspect)
+function U.is_inside_ellipse_old(p, center, radius, aspect)
 	aspect = aspect or 0.7
 
 	local a = radius
 	local b = radius * aspect
 
 	return math.pow((p.x - center.x) / a, 2) + math.pow((p.y - center.y) / b, 2) <= 1
+end
+
+function U.is_inside_ellipse(p, center, radius, aspect)
+	aspect = aspect or 0.7
+
+	local dx = p.x - center.x
+	local dy = p.y - center.y
+	local aspect2 = aspect * aspect
+	local dx2 = dx * dx
+	local dy2 = dy * dy
+	local r2 = radius * radius
+
+	return aspect2 * dx2 + dy2 <= r2 * aspect2
 end
 
 function U.point_on_ellipse(center, radius, angle, aspect)
@@ -346,7 +309,7 @@ function U.animation_name_facing_point(e, group, point, idx, offset, use_path)
 	local fx, fy
 
 	if e.nav_path and use_path then
-		local npos = P:node_pos(e.nav_path)
+		local npos = P:node_pos(e.nav_path, nil, nil, true)
 
 		fx, fy = npos.x, npos.y
 	else
@@ -615,14 +578,95 @@ function U.find_nearest_soldier(entities, origin, min_range, max_range, flags, b
 end
 
 function U.find_soldiers_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
-	local soldiers = table.filter(entities, function(k, v)
-		return not v.pending_removal and v.soldier and v.vis and v.health and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
-	end)
+	local l_entities = entities
+	local soldiers
+
+	if SSO and SSO:is_all_entities(entities) then
+		soldiers = {}
+
+		SSO:filter(soldiers, "targets", origin.x, origin.y, max_range, function(k, v)
+			return v.soldier and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
+		end)
+	else
+		soldiers = table.filter(l_entities, function(k, v)
+			return not v.pending_removal and v.soldier and v.vis and v.health and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
+		end)
+	end
 
 	if not soldiers or #soldiers == 0 then
 		return nil
 	else
 		return soldiers
+	end
+end
+
+function U.find_targets_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
+	local targets
+
+	if SSO and SSO:is_all_entities(entities) then
+		targets = {}
+
+		SSO:filter(targets, "targets", origin.x, origin.y, max_range, function(k, v)
+			return (v.enemy or v.soldier) and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and (not v.nav_path or P:is_node_valid(v.nav_path.pi, v.nav_path.ni)) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
+		end)
+	else
+		targets = table.filter(entities, function(k, v)
+			return not v.pending_removal and v.vis and (v.enemy or v.soldier) and v.health and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and (not v.nav_path or P:is_node_valid(v.nav_path.pi, v.nav_path.ni)) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
+		end)
+	end
+
+	if not targets or #targets == 0 then
+		return nil
+	else
+		return targets
+	end
+end
+
+function U.find_first_target(entities, origin, min_range, max_range, flags, bans, filter_func)
+	flags = flags or 0
+	bans = bans or 0
+
+	local l_entities = entities
+
+	if SSO and SSO:is_all_entities(entities) then
+		l_entities = {}
+
+		SSO:filter(l_entities, "targets", origin.x, origin.y, max_range)
+	end
+
+	for _, v in pairs(l_entities) do
+		if not v.pending_removal and v.health and not v.health.dead and v.vis and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin)) then
+			return v
+		end
+	end
+
+	return nil
+end
+
+function U.find_random_target(entities, origin, min_range, max_range, flags, bans, filter_func)
+	flags = flags or 0
+	bans = bans or 0
+
+	local targets
+
+	if SSO and SSO:is_all_entities(entities) then
+		targets = {}
+
+		SSO:filter(targets, "targets", origin.x, origin.y, max_range, function(k, v)
+			return v.health and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
+		end)
+	else
+		targets = table.filter(entities, function(k, v)
+			return not v.pending_removal and v.health and not v.health.dead and v.vis and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
+		end)
+	end
+
+	if not targets or #targets == 0 then
+		return nil
+	else
+		local idx = math.random(1, #targets)
+
+		return targets[idx]
 	end
 end
 
@@ -637,6 +681,20 @@ function U.find_nearest_enemy(entities, origin, min_range, max_range, flags, ban
 		end)
 
 		return targets[1], targets
+	end
+end
+
+function U.find_nearest_crystal(entities, origin, min_range, max_range, flags, bans, filter_func)
+	local targets = U.find_crystals_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
+
+	if not targets or #targets == 0 then
+		return nil, nil, nil
+	else
+		table.sort(targets, function(e1, e2)
+			return V.dist(e1.pos.x, e1.pos.y, origin.x, origin.y) < V.dist(e2.pos.x, e2.pos.y, origin.x, origin.y)
+		end)
+
+		return targets[1], targets, targets[1].pos
 	end
 end
 
@@ -686,9 +744,7 @@ function U.find_random_enemy(entities, origin, min_range, max_range, flags, bans
 	flags = flags or 0
 	bans = bans or 0
 
-	local enemies = table.filter(entities, function(k, v)
-		return not v.pending_removal and v.enemy and v.vis and v.nav_path and v.health and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and P:is_node_valid(v.nav_path.pi, v.nav_path.ni) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
-	end)
+	local enemies = U.find_enemies_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
 
 	if not enemies or #enemies == 0 then
 		return nil, nil
@@ -700,8 +756,31 @@ function U.find_random_enemy(entities, origin, min_range, max_range, flags, bans
 end
 
 function U.find_enemies_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
-	local enemies = table.filter(entities, function(k, v)
-		return not v.pending_removal and v.enemy and v.vis and v.nav_path and v.health and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and P:is_node_valid(v.nav_path.pi, v.nav_path.ni) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
+	local enemies
+
+	if SSO and SSO:is_all_entities(entities) then
+		enemies = {}
+
+		SSO:filter(enemies, "targets", origin.x, origin.y, max_range, function(k, v)
+			return v.enemy and v.nav_path and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and P:is_node_valid(v.nav_path.pi, v.nav_path.ni) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
+		end)
+	else
+		enemies = table.filter(entities, function(k, v)
+			return not v.pending_removal and v.enemy and v.vis and v.nav_path and v.health and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and P:is_node_valid(v.nav_path.pi, v.nav_path.ni) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
+		end)
+	end
+
+	if not enemies or #enemies == 0 then
+		return nil
+	else
+		return enemies
+	end
+end
+
+function U.find_crystals_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
+	local enemies
+	enemies = table.filter(entities, function(k, v)
+		return v.crystal and v.charging_stage == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
 	end)
 
 	if not enemies or #enemies == 0 then
@@ -755,10 +834,24 @@ function U.find_foremost_enemy(entities, origin, min_range, max_range, predictio
 	bans = bans or 0
 	min_override_flags = min_override_flags or 0
 
+	local l_entities = entities
+
+	if SSO and SSO:is_all_entities(entities) then
+		local range = max_range
+
+		if prediction_time and prediction_time ~= false then
+			range = range + (prediction_time == true and 1 or prediction_time) * 150
+		end
+
+		l_entities = {}
+
+		SSO:filter(l_entities, "targets", origin.x, origin.y, range)
+	end
+
 	local enemies = {}
 
-	for _, e in pairs(entities) do
-		if e.pending_removal or not e.enemy or not e.nav_path or not e.vis or e.health and e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or filter_func and not filter_func(e, origin) then
+	for _, e in pairs(l_entities) do
+		if not SSO and (e.pending_removal or not e.enemy or not e.nav_path or not e.vis) or not e.enemy or not e.nav_path or e.health and e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or filter_func and not filter_func(e, origin) then
 			-- block empty
 		else
 			local e_pos, e_ni
@@ -1108,23 +1201,42 @@ function U.predict_damage(entity, damage)
 		return entity.health.hp
 	end
 
-	local protection
+	local protection, vulnerable
 
 	if band(d.damage_type, DAMAGE_POISON) ~= 0 then
 		protection = e.health.poison_armor
-	elseif band(d.damage_type, bor(DAMAGE_TRUE, DAMAGE_DISINTEGRATE)) ~= 0 then
-		protection = 0
+	elseif band(d.damage_type, bor(DAMAGE_TRUE, DAMAGE_DISINTEGRATE, DAMAGE_FIREBALL)) ~= 0 then
+		protection = 0	
 	elseif band(d.damage_type, DAMAGE_PHYSICAL) ~= 0 then
 		protection = e.health.armor - d.reduce_armor
 	elseif band(d.damage_type, DAMAGE_MAGICAL) ~= 0 then
 		protection = e.health.magic_armor - d.reduce_magic_armor
 	elseif band(d.damage_type, bor(DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL)) ~= 0 then
 		protection = (e.health.armor - d.reduce_armor) / 2
+	elseif band(d.damage_type, DAMAGE_SHOT) ~= 0 then
+		protection = (e.health.armor - d.reduce_armor) * 2 / 3			
+	elseif band(d.damage_type, DAMAGE_DWAARP) ~= 0 then
+		protection = (e.health.armor - d.reduce_armor) / 4
 	elseif d.damage_type == DAMAGE_NONE then
 		protection = 1
 	end
 
+	if band(d.damage_type, bor(DAMAGE_FIREBALL)) ~= 0 then
+		if math.random() < 0.1 then
+			vulnerable = 2
+		else
+			vulnerable = 1
+		end		
+	elseif band(d.damage_type, bor(DAMAGE_ELECTRICAL)) ~= 0 then
+		if math.random() < 0.1 then
+			vulnerable = 2
+		else
+			vulnerable = 1
+		end				
+	end	
+
 	protection = protection or 0
+	vulnerable = vulnerable or 1
 
 	local rounded_damage = d.value
 
@@ -1144,6 +1256,12 @@ function U.predict_damage(entity, damage)
 
 	if band(d.damage_type, DAMAGE_NO_KILL) ~= 0 and e.health and actual_damage >= e.health.hp then
 		actual_damage = e.health.hp - 1
+	end
+
+	if entity.soldier and band(d.damage_type, bor(DAMAGE_FIREBALL, DAMAGE_ELECTRICAL)) ~= 0 then
+		actual_damage = km.round((rounded_damage - math.floor(rounded_damage * km.clamp(0, 1, protection))) * km.clamp(1, 2, vulnerable))
+	else
+		actual_damage = math.floor(rounded_damage * km.clamp(0, 1, 1 - protection) * km.clamp(1, 2, vulnerable))
 	end
 
 	return actual_damage
@@ -1235,6 +1353,30 @@ function U.find_next_level_in_ranges(ranges, cur)
 	return nex
 end
 
+function U.get_expansion_index(name)
+	local index = 1
+
+	for i, v in ipairs(GS.level_range_names) do
+		if v == "base" then
+			-- block empty
+		else
+			local first_level = GS.level_ranges[i][1]
+
+			if U.is_dlc_level(first_level) then
+				-- block empty
+			else
+				if v == name then
+					return index
+				end
+
+				index = index + 1
+			end
+		end
+	end
+
+	log.error("error finding expansion with name %s", name)
+end
+
 function U.get_dlc_index(dlc)
 	for i, v in ipairs(GS.dlc_names) do
 		if v.id == dlc then
@@ -1243,6 +1385,16 @@ function U.get_dlc_index(dlc)
 	end
 
 	log.error("error finding dlc index! dlc: " .. dlc)
+end
+
+function U.get_dlc_id(name)
+	for _, v in pairs(GS.dlc_names) do
+		if v.name == name then
+			return v.id
+		end
+	end
+
+	log.error("error finding dlc id! dlc name: %s", name)
 end
 
 function U.get_dlc_level_range(dlc)
@@ -1273,13 +1425,42 @@ function U.is_dlc_level(level_idx)
 	return false
 end
 
+function U.get_bundle_override_value(bundle_id, value)
+	if type(value) == "table" then
+		if value[bundle_id] then
+			return value[bundle_id]
+		else
+			return value[1]
+		end
+	else
+		return value
+	end
+end
+
+function U.get_dlcs_unlock_level(game_settings)
+	local dul = game_settings.dlcs_unlock_level
+
+	return U.get_bundle_override_value(version.bundle_id, dul)
+end
+
+function U.get_expansions_unlock_level(game_settings)
+	local eul = game_settings.expansions_unlock_level
+
+	if eul.default then
+		return eul
+	end
+
+	return U.get_bundle_override_value(version.bundle_id, eul)
+end
+
 function U.unlock_next_levels_in_ranges(unlock_data, levels, game_settings, unlocked_dlcs)
 	local level_ranges = game_settings.level_ranges
 	local level_range_names = game_settings.level_range_names
 	local main_campaing_last_level = game_settings.main_campaign_levels
-	local expansions_unlock_level = game_settings.expansions_unlock_level or {
+	local expansions_unlock_level = U.get_expansions_unlock_level(game_settings) or {
 		default = main_campaing_last_level
 	}
+	local dlcs_unlock_level = U.get_dlcs_unlock_level(game_settings) or 1
 	local dirty = false
 
 	local function sanitize_unlock(idx)
@@ -1314,7 +1495,7 @@ function U.unlock_next_levels_in_ranges(unlock_data, levels, game_settings, unlo
 		for _, dlc in pairs(unlocked_dlcs) do
 			local dlc_first_level = U.get_dlc_level_range(dlc)[1]
 
-			if not levels[dlc_first_level] then
+			if levels[dlcs_unlock_level] and levels[dlcs_unlock_level][GAME_MODE_CAMPAIGN] and not levels[dlc_first_level] then
 				if not unlock_data.unlocked_levels then
 					unlock_data.unlocked_levels = {}
 				end
@@ -1505,7 +1686,8 @@ function U.get_hero_level(xp, thresholds)
 end
 
 function U.get_modifiers(store, entity, list)
-	local mods = table.filter(store.entities, function(k, v)
+	local l_entities = SSO and SSO:get_p_list("modifiers") or store.entities
+	local mods = table.filter(l_entities, function(k, v)
 		return v.modifier and v.modifier.target_id == entity.id and (not list or table.contains(list, v.template_name))
 	end)
 
@@ -1513,7 +1695,8 @@ function U.get_modifiers(store, entity, list)
 end
 
 function U.has_modifiers(store, entity, mod_name)
-	local mods = table.filter(store.entities, function(k, v)
+	local l_entities = SSO and SSO:get_p_list("modifiers") or store.entities
+	local mods = table.filter(l_entities, function(k, v)
 		return v.modifier and v.modifier.target_id == entity.id and (not mod_name or mod_name == v.template_name)
 	end)
 
@@ -1521,7 +1704,9 @@ function U.has_modifiers(store, entity, mod_name)
 end
 
 function U.has_modifier_in_list(store, entity, list)
-	for _, e in pairs(store.entities) do
+	local l_entities = SSO and SSO:get_p_list("modifiers") or store.entities
+
+	for _, e in pairs(l_entities) do
 		if e.modifier and e.modifier.target_id == entity.id and table.contains(list, e.template_name) then
 			return true
 		end
@@ -1531,14 +1716,42 @@ function U.has_modifier_in_list(store, entity, list)
 end
 
 function U.has_modifier_types(store, entity, ...)
+	local l_entities = SSO and SSO:get_p_list("modifiers") or store.entities
 	local types = {
 		...
 	}
-	local mods = table.filter(store.entities, function(k, v)
+	local mods = table.filter(l_entities, function(k, v)
 		return v.modifier and v.modifier.target_id == entity.id and table.contains(types, v.modifier.type)
 	end)
 
 	return #mods > 0, mods
+end
+
+---将非表的变量放入表中
+---@param variable any 变量
+---@param white_type|string? table 白名单
+---@param black_type|string? table 黑名单
+---@return table 转化后的表, boolean 是否被ban
+function U.put_to_table(variable, white_type, black_type)
+	if type(variable) == "table" then
+		return variable
+	end
+	
+	if white_type and black_type then
+		white_type = type(white_type) == "table" and white_type or { white_type }
+		black_type = type(black_type) == "table" and black_type or { black_type }
+	else
+		white_type = white_type or {}
+		black_type = black_type or {}
+	end
+
+	if not white_type and not black_type or table.contains(white_type, type(variable)) and not table.contains(black_type, type(variable)) then
+		return { variable }
+	else
+		log.warning("The type be already ban")
+
+		return variable, true
+	end
 end
 
 function U.balance_format(s, b)
@@ -1704,9 +1917,7 @@ function U.find_strongest_enemy_in_range(entities, origin, min_range, max_range,
 	end
 
 	--[[returns the first strongest enemy, which makes it so that among equal hp strong enemies, it chooses the one closest to the goal]]
-	if(valid_enemies and #valid_enemies > 0) then
-		valid_enemies = U.sort_by_strongest_enemy(valid_enemies, origin)
-	end
+	valid_enemies = U.sort_by_strongest_enemy(valid_enemies, origin)
 
 	return valid_enemies[1], valid_enemies, valid_enemies[1].__ffe_pos
 end
@@ -1721,18 +1932,106 @@ function U.find_weakest_enemy_in_range(entities, origin, min_range, max_range, p
 		return nil, nil, nil
 	end
 
-	if(valid_enemies and #valid_enemies > 0) then
-		table.sort(valid_enemies, function(enemy1, enemy2)
-			local hp1 = enemy1.health.hp
-			local hp2 = enemy2.health.hp
-			if hp1 == hp2 then
-				return V.dist(enemy1.pos.x, enemy1.pos.y, origin.x, origin.y) < V.dist(enemy2.pos.x, enemy2.pos.y, origin.x, origin.y)
-			end
-			return hp1 < hp2
-		end)
-	end
+	table.sort(valid_enemies, function(enemy1, enemy2)
+		local hp1 = enemy1.health.hp
+		local hp2 = enemy2.health.hp
+		if hp1 == hp2 then
+			return V.dist(enemy1.pos.x, enemy1.pos.y, origin.x, origin.y) < V.dist(enemy2.pos.x, enemy2.pos.y, origin.x, origin.y)
+		end
+		return hp1 < hp2
+	end)
  
 	return valid_enemies[1], valid_enemies, valid_enemies[1].__ffe_pos
+end
+
+function U.find_initial_strongest_enemy(entities, origin, min_range, max_range, prediction_time, flags, bans, filter_func, min_override_flags)
+	flags = flags or 0
+	bans = bans or 0
+	min_override_flags = min_override_flags or 0
+ 
+	local _, valid_enemies = U.find_foremost_enemy(entities, origin, min_range, max_range, prediction_time, flags, bans, filter_func, min_override_flags)
+	if not valid_enemies or #valid_enemies == 0 then
+		return nil, nil, nil
+	end
+
+	table.sort(valid_enemies, function(enemy1, enemy2)
+		local hp1 = enemy1.health.hp_max
+		local hp2 = enemy2.health.hp_max
+		if hp1 == hp2 then
+			return V.dist(enemy1.pos.x, enemy1.pos.y, origin.x, origin.y) < V.dist(enemy2.pos.x, enemy2.pos.y, origin.x, origin.y)
+		end
+		return hp1 > hp2
+	end)
+ 
+	return valid_enemies[1], valid_enemies, valid_enemies[1].__ffe_pos
+end
+
+function U.find_initial_weakest_enemy(entities, origin, min_range, max_range, prediction_time, flags, bans, filter_func, min_override_flags)
+	flags = flags or 0
+	bans = bans or 0
+	min_override_flags = min_override_flags or 0
+ 
+	local _, valid_enemies = U.find_foremost_enemy(entities, origin, min_range, max_range, prediction_time, flags, bans, filter_func, min_override_flags)
+	if not valid_enemies or #valid_enemies == 0 then
+		return nil, nil, nil
+	end
+
+	table.sort(valid_enemies, function(enemy1, enemy2)
+		local hp1 = enemy1.health.hp_max
+		local hp2 = enemy2.health.hp_max
+		if hp1 == hp2 then
+			return V.dist(enemy1.pos.x, enemy1.pos.y, origin.x, origin.y) < V.dist(enemy2.pos.x, enemy2.pos.y, origin.x, origin.y)
+		end
+		return hp1 < hp2
+	end)
+ 
+	return valid_enemies[1], valid_enemies, valid_enemies[1].__ffe_pos
+end
+
+function U.find_custom_enemy(entities, origin, min_range, max_range, prediction_time, flags, bans, filter_func, min_override_flags, sort_func)
+	flags = flags or 0
+	bans = bans or 0
+	min_override_flags = min_override_flags or 0
+
+	local enemies = {}
+	for _, e in pairs(entities) do
+		if e.pending_removal or not e.enemy or not e.nav_path or not e.vis or e.health and e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or filter_func and not filter_func(e, origin) then
+			-- block empty
+		else
+			local e_pos, e_ni
+
+			if prediction_time and e.motion and e.motion.speed and (e.motion.speed.x ~= 0 or e.motion.speed.y ~= 0) then
+				if e.motion.forced_waypoint then
+					local dt = prediction_time == true and 1 or prediction_time
+
+					e_pos = V.v(e.pos.x + dt * e.motion.speed.x, e.pos.y + dt * e.motion.speed.y)
+					e_ni = e.nav_path.ni
+				else
+					local node_offset = P:predict_enemy_node_advance(e, prediction_time)
+
+					e_ni = e.nav_path.ni + node_offset
+					e_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
+				end
+			else
+				e_pos = e.pos
+				e_ni = e.nav_path.ni
+			end
+
+			if U.is_inside_ellipse(e_pos, origin, max_range) and P:is_node_valid(e.nav_path.pi, e_ni) and (min_range == 0 or band(e.vis.flags, min_override_flags) ~= 0 or not U.is_inside_ellipse(e_pos, origin, min_range)) then
+				e.__ffe_pos = V.vclone(e_pos)
+
+				table.insert(enemies, e)
+			end
+		end
+	end
+
+	if not enemies or #enemies == 0 then
+		return nil, nil, nil
+	end
+
+	table.sort(enemies, sort_func)
+ 
+	return enemies[1], enemies, enemies[1].__ffe_pos
 end
 
 function U.find_farthest_enemy(entities, origin, min_range, max_range, flags, bans, filter_func)
@@ -1992,9 +2291,18 @@ U.search_type = {
 	close_to_exit = 6,-- 最接近终点
 	far_from_exit = 7,-- 最远离终点
 	find_max_crowd = 8,-- 最密集
+	max_initial_health = 9,-- 最大生命值最多
+	min_initial_health = 10,-- 最大生命值最少
+	custom = 32,-- 自定义
 }
 
-function U.find_enemy_with_search_type(entities, origin, min_range, max_range, prediction_time, flags, bans, filter_func, min_override_flags, search_type, crowd_range, min_targets)
+U.search_stream = {
+	only_upstream = 1,
+	only_downstream = 2,
+}
+
+function U.find_enemy_with_search_type(entities, origin, min_range, max_range, prediction_time, flags, bans, filter_func, min_override_flags, search_type, 
+	crowd_range, min_targets, sort_func)
 	flags = flags or 0
 	bans = bans or 0
 	min_override_flags = min_override_flags or 0
@@ -2041,9 +2349,17 @@ function U.find_enemy_with_search_type(entities, origin, min_range, max_range, p
 		else
 			return nil, nil, nil
 		end
+	elseif search_type == U.search_type.max_initial_health then
+		return U.find_initial_strongest_enemy(entities, origin, min_range, max_range, prediction_time, flags, bans, filter_func, min_override_flags)
+	elseif search_type == U.search_type.min_initial_health then
+		return U.find_initial_weakest_enemy(entities, origin, min_range, max_range, prediction_time, flags, bans, filter_func, min_override_flags)
+	elseif search_type == U.search_type.custom then
+		return U.find_custom_enemy(entities, origin, min_range, max_range, prediction_time, flags, bans, filter_func, min_override_flags, sort_func)
 	end
 	return U.find_foremost_enemy(entities, origin, min_range, max_range, prediction_time, flags, bans, filter_func, min_override_flags)
 end
+
+
 
 function U.find_random_soldier(entities, origin, min_range, max_range, flags, bans, filter_func)
 	local soldiers = U.find_soldiers_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
@@ -2090,29 +2406,85 @@ function U.find_weakest_soldier_in_range(entities, origin, min_range, max_range,
 	return soldier, soldiers, V.vclone(soldier.pos)
 end
 
-function U.find_soldier_with_search_type(entities, origin, min_range, max_range, flags, bans, filter_func, search_type, crowd_range, min_targets)
+function U.find_initial_strongest_soldier_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
+	local soldiers = U.find_soldiers_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
+	if not soldiers or #soldiers == 0 then
+		return nil, nil
+	end
+	table.sort(soldiers, function(soldier1, soldier2)
+		local hp1 = soldier1.health.hp_max
+		local hp2 = soldier2.health.hp_max
+		if hp1 == hp2 then
+			return V.dist(soldier1.pos.x, soldier1.pos.y, origin.x, origin.y) < V.dist(soldier2.pos.x, soldier2.pos.y, origin.x, origin.y)
+		end
+		return hp1 > hp2
+	end)
+	local soldier = soldiers[1]
+	return soldier, soldiers, V.vclone(soldier.pos)
+end
+
+function U.find_initial_weakest_soldier_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
+	local soldiers = U.find_soldiers_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
+	if not soldiers or #soldiers == 0 then
+		return nil, nil
+	end
+	table.sort(soldiers, function(soldier1, soldier2)
+		local hp1 = soldier1.health.hp_max
+		local hp2 = soldier2.health.hp_max
+		if hp1 == hp2 then
+			return V.dist(soldier1.pos.x, soldier1.pos.y, origin.x, origin.y) < V.dist(soldier2.pos.x, soldier2.pos.y, origin.x, origin.y)
+		end
+		return hp1 < hp2
+	end)
+	local soldier = soldiers[1]
+	return soldier, soldiers, V.vclone(soldier.pos)
+end
+
+function U.find_custom_soldier_in_range(entities, origin, min_range, max_range, flags, bans, filter_func, sort_func)
+	local soldiers = U.find_soldiers_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
+	if not soldiers or #soldiers == 0 then
+		return nil, nil
+	end
+	table.sort(soldiers, sort_func)
+	local soldier = soldiers[1]
+	return soldier, soldiers, V.vclone(soldier.pos)
+end
+
+function U.find_soldier_with_search_type(entities, origin, min_range, max_range, prediction_time, flags, bans, filter_func, search_type, crowd_range, min_targets, sort_func)
 	flags = flags or 0
 	bans = bans or 0
-	search_type = search_type or U.search_type.nearest
+	local soldier, soldiers, soldier_pos
 
 	if search_type == U.search_type.nearest then
-		return U.find_nearest_soldier(entities, origin, min_range, max_range, flags, bans, filter_func)
+		soldier, soldiers, soldier_pos = U.find_nearest_soldier(entities, origin, min_range, max_range, flags, bans, filter_func)
 	elseif search_type == U.search_type.random then
-		return U.find_random_soldier(entities, origin, min_range, max_range, flags, bans, filter_func)
+		soldier, soldiers, soldier_pos = U.find_random_soldier(entities, origin, min_range, max_range, flags, bans, filter_func)
 	elseif search_type == U.search_type.max_health then
-		return U.find_strongest_soldier_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
+		soldier, soldiers, soldier_pos = U.find_strongest_soldier_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
 	elseif search_type == U.search_type.min_health then
-		return U.find_weakest_soldier_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
+		soldier, soldiers, soldier_pos = U.find_weakest_soldier_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
 	elseif search_type == U.search_type.find_max_crowd then
-		local pos, crowd = U.find_soldier_crowd_position(entities, origin, min_range, max_range, flags, bans, filter_func, crowd_range or 60, min_targets or 1, 
+		local soldier_pos, crowd = U.find_soldier_crowd_position(entities, origin, min_range, max_range, flags, bans, filter_func, crowd_range or 60, min_targets or 1, 
 		true, U.position_type.average)
 		if crowd then
-			local soldier = crowd.center_unit
-			return soldier, crowd.crowd, pos
-		else
-			return nil, nil, nil
+			soldier = crowd.center_unit
+			soldiers = crowd.crowd
 		end
+	elseif search_type == U.search_type.max_initial_health then
+		soldier, soldiers, soldier_pos = U.find_initial_strongest_soldier_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
+	elseif search_type == U.search_type.min_initial_health then
+		soldier, soldiers, soldier_pos = U.find_initial_weakest_soldier_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
+	elseif search_type == U.search_type.custom then
+		soldier, soldiers, soldier_pos = U.find_custom_soldier_in_range(entities, origin, min_range, max_range, flags, bans, filter_func, sort_func)
+	else
+		soldier, soldiers, soldier_pos = U.find_nearest_soldier(entities, origin, min_range, max_range, flags, bans, filter_func)
 	end
+
+	if soldier and prediction_time then
+		local offset = U.get_prediction_offset(soldier, prediction_time)
+		soldier_pos.x, soldier_pos.y = soldier_pos.x + offset.x, soldier_pos.y + offset.y
+	end
+	return soldier, soldiers, soldier_pos
 end
 
 return U

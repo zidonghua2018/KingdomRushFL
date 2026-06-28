@@ -11,6 +11,7 @@ entity_db.last_id = 1
 entity_db.debug_info = true
 
 function entity_db:load()
+	self.loaded = true
 	self.last_id = 1
 	self.components = {}
 	self.entities = {}
@@ -24,6 +25,14 @@ function entity_db:load()
 	require("components")
 	require("templates")
 	require("game_templates")
+end
+
+function entity_db:ensure_loaded()
+	if not self.loaded then
+		self:load()
+		return true
+	end
+	return false
 end
 
 function entity_db:register_t(name, base)
@@ -172,7 +181,9 @@ function entity_db:create_entity(t)
 	end
 
 	if not tpl then
-		log.error("template %s not found", t)
+		if #t >= 2 then
+			log.error("template %s not found", t)
+		end
 
 		return nil
 	end
@@ -207,7 +218,9 @@ function entity_db:append_templates(entity, ...)
 		local tpl = self.entities[tn]
 
 		if not tpl then
-			log.error("template %s not found", tn)
+			if #t >= 2 then
+			log.error("template %s not found", t)
+		end
 
 			return
 		end
@@ -246,7 +259,9 @@ function entity_db:get_template(t)
 	end
 
 	if not tpl then
-		log.error("template %s not found", t)
+		if #t >= 2 then
+			log.error("template %s not found", t)
+		end
 
 		return nil
 	end

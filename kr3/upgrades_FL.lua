@@ -8,6 +8,7 @@ local balance = require("balance/balance")
 local storage = require("storage")
 local bor = bit.bor
 local scripts = require("upgrade_scripts3")
+local scripts_rebbborn = require("game_scripts-1-rebbborn")
 
 require("constants")
 
@@ -17,6 +18,20 @@ end
 
 local function fts(v)
 	return v / FPS
+end
+
+local function v(v1, v2)
+	return {
+		x = v1,
+		y = v2
+	}
+end
+
+local function r(x, y, w, h)
+	return {
+		pos = v(x, y),
+		size = v(w, h)
+	}
 end
 
 local epsilon = 1e-09
@@ -252,6 +267,7 @@ function upgrades_FL:enhance1()
 --108 电塔
 	T("ray_tesla").bounce_range = 125
 	T("mod_ray_tesla").dps.cocos_cycles = 15
+	T("mod_ray_tesla").modifier.allows_duplicates = true
 	T("aura_tesla_overcharge").aura.radius = 181.5
 end
 
@@ -299,6 +315,7 @@ function upgrades_FL:enhance2()
 	T("soldier_templar").health.hp_max = 500
 	T("soldier_templar").health.armor = 0
 	T("soldier_templar").regen.health = 80
+	T("soldier_templar").melee.attacks[2].mods = {"mod_tower_rotten_forest_fog_miss_2", "mod_bolverk_scream_2"}
 --205 死灵
 	T("g2_tower_mage_1").tower.price = 90
 	T("g2_tower_mage_2").tower.price = 144
@@ -320,12 +337,17 @@ function upgrades_FL:enhance2()
 	T("twister").damage_max = 80
 	T("twister").damage_inc = 80
 --207 地震
-	T("tower_dwaarp").attacks.list[1].damage_min = 32
-	T("tower_dwaarp").attacks.list[1].damage_max = 54
-	T("tower_dwaarp").attacks.list[2].cooldown = 15
+	T("tower_dwaarp").attacks.list[1].damage_min = 36
+	T("tower_dwaarp").attacks.list[1].damage_max = 58
+	T("tower_dwaarp").attacks.list[2].cooldown = 12
 	T("tower_dwaarp").powers.drill.price_inc = 100
+	T("tower_dwaarp").powers.lava.price_base = 320
+	T("tower_dwaarp").powers.lava.price_inc = 280
 	T("tower_dwaarp").main_script.update = scripts.tower_dwaarp99.update
 	T("lava").aura.radius = 95
+	T("mod_lava").dps.damage_min = 2
+	T("mod_lava").dps.damage_max = 2
+	T("mod_lava").dps.damage_inc = 3
 	T("mod_slow_dwaarp").modifier.duration = fts(30)
 --208 高达
 	--EMPTY BLOCK
@@ -335,12 +357,17 @@ function upgrades_FL:enhance2()
 end
 
 function upgrades_FL:enhance3()
+	local scripts_rebbborn = require("game_scripts-1-rebbborn")
 --301 蓝箭
-	T("tower_arcane").powers.slumber.price_base = 80
-	T("tower_arcane").powers.slumber.price_inc = 60
+	T("tower_arcane").powers.slumber.price_base = 180
+	T("tower_arcane").powers.slumber.price_inc = 160
 	T("mod_arrow_arcane").damage_min = 0.07
 	T("mod_arrow_arcane").damage_max = 0.07
 	T("aura_arcane_burst").aura.damage_inc = 110
+	T("tower_arcane").main_script.update = scripts_rebbborn.tower_green_archer.update
+	T("arrow_arcane_slumber").main_script.insert = scripts_rebbborn.arrow_green.insert
+	T("arrow_arcane_slumber").extra_arrow = 2
+	T("arrow_arcane_slumber").extra_arrows_range = 150
 --302 金弓
 	T("arrow_silver_long").bullet.damage_max = 87
 	T("arrow_silver_long").bullet.damage_min = 33
@@ -355,10 +382,12 @@ function upgrades_FL:enhance3()
 --303 红兵
 	T("tower_blade").tower.price = 248
 	T("tower_blade").powers.swirling.price_base = 300
-	T("tower_blade").powers.perfect_parry.price_base = 175
-	T("tower_blade").powers.perfect_parry.price_inc = 105
+	T("tower_blade").powers.perfect_parry.price_base = 50
+	T("tower_blade").powers.perfect_parry.price_inc = 200
 	T("soldier_blade").health.dead_lifetime = 13
 	T("soldier_blade").health.hp_max = 225
+	T("soldier_blade").dodge.chance_inc = 0.125
+
 	--T("soldier_blade").health.dead_lifetime = 13
 	T("soldier_blade").dodge.counter_attack.damage_max = 3
 	T("soldier_blade").dodge.counter_attack.damage_min = 3
@@ -397,6 +426,10 @@ function upgrades_FL:enhance3()
 	T("bolt_elves_1").bullet.damage_max = 12
 --306 高冷
 	T("bolt_high_elven_weak").bullet.damage_max = 42
+	T("tower_high_elven").main_script.update = scripts.tower_high_elven99.update
+	T("tower_high_elven").main_script.remove = scripts.tower_high_elven99.remove
+	T("tower_high_elven").powers.timelapse.price_base = 400
+	T("tower_high_elven").powers.timelapse.price_inc = 240
 	T("bolt_high_elven_weak").bullet.damage_min = 21
 	T("high_elven_sentinel").ranged.attacks[1].max_shots = 20
 	T("ray_high_elven_sentinel").bullet.damage_max = 44
@@ -428,7 +461,7 @@ function upgrades_FL:enhance3()
 	T("rock_entwood").bullet.damage_radius = 67.5
 	T("rock_firey_nut").bullet.damage_radius = 80
 	T("rock_firey_nut").bullet.damage_max_inc = 162
-	T("tower_entwood").attacks.list[2].cooldown = 12.75
+	T("tower_entwood").attacks.list[2].cooldown = 16
 	T("tower_entwood").powers.clobber.damage_values = {80,140,200}
 	T("rock_firey_nut").bullet.damage_type = DAMAGE_TRUE
 end
@@ -453,6 +486,8 @@ function upgrades_FL:enhance4()
 	T("bolt_shock").bullet.damage_inc_min = {4,9,14}
 	T("bolt_shock").bullet.damage_inc_max = {38,76,114}
 	T("bolt_shock").bullet.damage_type = DAMAGE_ELECTRICAL
+	T("aura_orc_shaman_vines").aura.radius = 105
+	T("tower_orc_shaman_lvl4").attacks.list[2].target_range = 105
 --402 兽人
 	T("soldier_orc_warrior_lvl1").melee.attacks[1].damage_max = 11
 	T("soldier_orc_warrior_lvl1").melee.attacks[1].damage_min = 7
@@ -485,10 +520,14 @@ function upgrades_FL:enhance4()
 	T("tower_goblirang_lvl4").attacks.list[3].cooldown = 14
 	T("tower_goblirang_lvl4").powers.stun.mod_chance = {0.07,0.14,0.20}
 --404 火骑
-	T("bomb_rr_lvl1").bullet.damage_radius = 84
-	T("bomb_rr_lvl2").bullet.damage_radius = 84
-	T("bomb_rr_lvl3").bullet.damage_radius = 84
-	T("bomb_rr_lvl4").bullet.damage_radius = 84
+	T("bomb_rr_lvl1").bullet.damage_radius = 67.5
+	T("bomb_rr_lvl2").bullet.damage_radius = 67.5
+	T("bomb_rr_lvl3").bullet.damage_radius = 67.5
+	T("bomb_rr_lvl4").bullet.damage_radius = 67.5
+	T("bomb_rr_lvl1").bullet.hit_payload = "bomb_rr_lvl1_payload"
+	T("bomb_rr_lvl2").bullet.hit_payload = "bomb_rr_lvl2_payload"
+	T("bomb_rr_lvl3").bullet.hit_payload = "bomb_rr_lvl3_payload"
+	T("bomb_rr_lvl4").bullet.hit_payload = "bomb_rr_lvl4_payload"
 	T("bomb_rr_lvl1").bullet.hit_fx = "fx_explosion_big"
 	T("bomb_rr_lvl2").bullet.hit_fx = "fx_explosion_big"
 	T("bomb_rr_lvl3").bullet.hit_fx = "fx_explosion_big"
@@ -699,24 +738,24 @@ end
 function upgrades_FL:enhance5()
 --501 圣巢
 	T("tower_paladin_covenant_lvl1").tower.price = 60
-	T("tower_paladin_covenant_lvl2").tower.price = 90
-	T("tower_paladin_covenant_lvl3").tower.price = 120
-	T("tower_paladin_covenant_lvl4").tower.price = 150
+	T("tower_paladin_covenant_lvl2").tower.price = 80
+	T("tower_paladin_covenant_lvl3").tower.price = 110
+	T("tower_paladin_covenant_lvl4").tower.price = 140
 	T("tower_paladin_covenant_lvl4").powers.lead.price_base = 175
 	T("tower_paladin_covenant_lvl4").powers.healing_prayer.price_base = 120
 	T("tower_paladin_covenant_lvl4").powers.healing_prayer.price_inc = 105
-	T("tower_paladin_covenant_soldier_lvl4").powers.healing_prayer.cooldown = {27,21,15}
+	T("tower_paladin_covenant_soldier_lvl4").powers.healing_prayer.cooldown = {23,17,11}
 --502 皇弓
 	T("tower_royal_archers_lvl1").tower.price = 60
 	T("tower_royal_archers_lvl2").tower.price = 100
 	T("tower_royal_archers_lvl3").tower.price = 150
 	T("tower_royal_archers_lvl4").tower.price = 180
-	T("tower_royal_archers_lvl4").powers.rapacious_hunter.price_base = 100
-	T("tower_royal_archers_lvl4").powers.rapacious_hunter.price_inc = 80
+	T("tower_royal_archers_lvl4").powers.rapacious_hunter.price_base = 150
+	T("tower_royal_archers_lvl4").powers.rapacious_hunter.price_inc = 120
 	T("tower_royal_archers_lvl4").powers.armor_piercer.price_inc = 120
 	T("tower_royal_archers_lvl4").powers.armor_piercer.cooldown = {8, 8, 8}
-	--T("tower_royal_archers_pow_rapacious_hunter_eagle").attacks.list[1].damage_min = {22,46,70}
-	--T("tower_royal_archers_pow_rapacious_hunter_eagle").attacks.list[1].damage_max = {44,92,140}
+	T("tower_royal_archers_pow_rapacious_hunter_eagle").attacks.list[1].damage_min = {34,66,98}
+	T("tower_royal_archers_pow_rapacious_hunter_eagle").attacks.list[1].damage_max = {67,133,199}
 	--T("tower_royal_archers_lvl4").powers.rapacious_hunter.price_base = 120
 	--T("tower_royal_archers_lvl4").powers.rapacious_hunter.price_inc = 120
 --503 奥术
@@ -725,9 +764,15 @@ function upgrades_FL:enhance5()
 	T("tower_arcane_wizard_lvl2").attacks.list[1].cooldown = 1.9
 	T("tower_arcane_wizard_lvl3").attacks.list[1].cooldown = 1.9
 	T("tower_arcane_wizard_lvl4").attacks.list[1].cooldown = 1.9
+	T("tower_arcane_wizard_lvl4").attacks.list[3].max_range = 232.5
+	T("tower_arcane_wizard_lvl4").attacks.list[3].min_range = 80
 	T("tower_arcane_wizard_lvl4").main_script.update = scripts.tower_arcane_wizard599.update
 --504 三管
-	T("tower_tricannon_overheat_scorch_aura_mod").dps.damage_config = {8,13,18}
+	T("tower_tricannon_overheat_scorch_aura_mod").dps.damage_config = {3,6,9}
+	T("tower_tricannon_lvl1").main_script.update = scripts.tower_tricannon99.update
+	T("tower_tricannon_lvl2").main_script.update = scripts.tower_tricannon99.update
+	T("tower_tricannon_lvl3").main_script.update = scripts.tower_tricannon99.update
+	T("tower_tricannon_lvl4").main_script.update = scripts.tower_tricannon99.update
 --505 树灵
 	T("mod_tower_arborean_emissary_basic_attack").modifier_duration = {5,6,7,9}
 	T("tower_arborean_emissary_bolt_lvl1").bullet.damage_max = 15
@@ -786,9 +831,11 @@ function upgrades_FL:enhance5()
 	T("bullet_tower_ballista_lvl4").bullet.damage_min = 37
 	T("tower_ballista_lvl4").attacks.list[2].damage_min = {200,325,450}
 	T("tower_ballista_lvl4").attacks.list[2].damage_max = {200,325,450}
+	T("tower_ballista_lvl4").powers.skill_final_shot.damage_factor_config = {1.2,1.6,2.0}
 	T("bullet_tower_ballista_skill_bomb").bullet.damage_min_config = {200,325,450}
 	T("bullet_tower_ballista_skill_bomb").bullet.damage_max_config = {200,325,450}
-	T("mod_bullet_tower_ballista_skill_final_shot_stun").modifier.duration = fts(90)
+	T("mod_bullet_tower_ballista_skill_final_shot_stun").modifier.duration = fts(33)
+	T("tower_ballista_lvl4").powers.skill_final_shot.bullet = "bullet_tower_ballista_skill_final_shot_area"
 --510 死灵
 	T("bullet_tower_necromancer_lvl1").bullet.damage_max = 11
 	T("bullet_tower_necromancer_lvl1").bullet.damage_min = 4
@@ -887,6 +934,24 @@ function upgrades_FL:enhance5()
 	--T("soldier_tower_pandas_red_lvl4").powers.teleport.nodes_offset_min = {-20,-28}
 	--T("soldier_tower_pandas_red_lvl4").powers.teleport.nodes_offset_max = {-24,-32}
 	--T("soldier_tower_pandas_blue_lvl4").powers.thunder.cooldown = {15,9}
+	--521 龙巢
+	T("tower_dragons_lvl1").attacks.max_dragons = 2
+	T("tower_dragons_lvl2").attacks.max_dragons = 3
+	T("tower_dragons_lvl3").attacks.max_dragons = 4
+	T("tower_dragons_lvl4").attacks.max_dragons = 4
+	T("bolt_faerie_dragon_lvl1").bullet.damage_min = 7
+	T("bolt_faerie_dragon_lvl1").bullet.damage_max = 9
+	T("bolt_faerie_dragon_lvl2").bullet.damage_min = 10
+	T("bolt_faerie_dragon_lvl2").bullet.damage_max = 16
+	T("bolt_faerie_dragon_lvl3").bullet.damage_min = 13
+	T("bolt_faerie_dragon_lvl3").bullet.damage_max = 18
+	T("bolt_faerie_dragon_lvl4").bullet.damage_min = 20
+	T("bolt_faerie_dragon_lvl4").bullet.damage_max = 34
+	T("mod_faerie_dragon_lvl1").slow.factor = 0.6
+	T("mod_faerie_dragon_lvl2").slow.factor = 0.5
+	T("mod_faerie_dragon_lvl3").slow.factor = 0.4
+	T("mod_faerie_dragon_lvl4").slow.factor = 0.3
+	T("tower_dragons_lvl4").attacks.list[2].damage_config = 45
 end
 
 --双英雄模式前3代英雄需要削弱
@@ -1040,7 +1105,8 @@ function upgrades_FL:enhance_hero5()
 		"hero_lava",
 		"hero_spider",
 		"hero_wukong",
-		"hero_douzhanshengfo"
+		"hero_douzhanshengfo",
+		"hero_dragon_sun"
 	}
 	for k, hero in ipairs(hero_list) do
 		for i= 1,10 do
@@ -1125,7 +1191,30 @@ function upgrades_FL:deenhance_barrack5()
 				}
 			}
 end
-
+---怪物增强
+function upgrades_FL:enhance11()
+---毁灭者
+	T("eb_juggernaut").health.armor = 0.8
+	T("eb_juggernaut").auras.list[1] = E.clone_c(E, "aura_attack")
+	T("eb_juggernaut").auras.list[1].name = "juggernaut_spawner_aura"
+	T("eb_juggernaut").auras.list[1].cooldown = 0	
+---大雪怪
+	T("eb_jt").auras.list[2] = E:clone_c("aura_attack")
+	T("eb_jt").auras.list[2].name = "aura_troll_chieftain_regen"
+	T("eb_jt").auras.list[2].cooldown = 0
+	T("eb_jt").melee.attacks[1].mod = "mod_jt_lifesteal"
+---维兹南
+	T("eb_veznan").ranged.attacks[1].disabled = false
+	T("eb_veznan").health.magic_armor = 0.8
+---萨雷格兹
+	T("eb_sarelgaz").auras.list[1] = E:clone_c("aura_attack")
+	T("eb_sarelgaz").auras.list[1].name = "sarelgaz_spawner_aura"
+	T("eb_sarelgaz").auras.list[1].cooldown = 0
+	T("eb_sarelgaz").melee.attacks[1].mod = "mod_jt_lifesteal"
+	T("eb_sarelgaz").health.armor = 0.6
+	T("eb_sarelgaz").health.magic_armor = 0.3
+end
+---
 function upgrades_FL:enhance()
     user_data = storage:load_slot()
 	if user_data.liuhui.balance and user_data.liuhui.balance == true then
@@ -1135,6 +1224,13 @@ function upgrades_FL:enhance()
 		upgrades_FL:enhance4()
 		upgrades_FL:enhance5()
 	end
+	if user_data.xingyu.balance and user_data.xingyu.balance == true then
+		upgrades_FL:enhance11()
+--		upgrades_FL:enhance12()
+--		upgrades_FL:enhance13()
+--		upgrades_FL:enhance4()
+--		upgrades_FL:enhance5()
+	end		
 end
 
 

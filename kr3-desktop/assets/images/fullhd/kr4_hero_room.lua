@@ -424,6 +424,31 @@ return {
 		alias = {},
 		textureRotated = false
 	},
+	["hero_room_portraits_big_hero_tramin_seventh_0001"] = {
+		a_name = "kr4_hero_room.dds",
+		size = {
+			272,
+			408
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			1450,
+			1966
+		},
+		f_quad = {
+			1097,
+			411,
+			272,
+			408
+		},
+		alias = {},
+		textureRotated = false
+	},
 	["hero_room_portraits_small_button_hero__0001"] = {
 		a_name = "kr4_hero_room.dds",
 		size = {
@@ -874,6 +899,31 @@ return {
 		alias = {},
 		textureRotated = false
 	},
+	["hero_room_portraits_small_button_hero_tramin_seventh_0001"] = {
+		a_name = "kr4_hero_room.dds",
+		size = {
+			90,
+			90
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			1450,
+			1966
+		},
+		f_quad = {
+			1107,
+			1290,
+			90,
+			90
+		},
+		alias = {},
+		textureRotated = false
+	},
 	["hero_room_portraits_small_thumb_hero_asra_0001"] = {
 		a_name = "kr4_hero_room.dds",
 		size = {
@@ -1275,6 +1325,31 @@ return {
 		textureRotated = false
 	},
 	["hero_room_portraits_small_thumb_hero_tramin_0001"] = {
+		a_name = "kr4_hero_room.dds",
+		size = {
+			94,
+			93
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			1450,
+			1966
+		},
+		f_quad = {
+			97,
+			1831,
+			94,
+			93
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["hero_room_portraits_small_thumb_hero_tramin_seventh_0001"] = {
 		a_name = "kr4_hero_room.dds",
 		size = {
 			94,
@@ -3400,6 +3475,131 @@ return {
 		textureRotated = false
 	},
 	["hero_room_skill_icons_hero_tramin_0005"] = {
+		a_name = "kr4_hero_room.dds",
+		size = {
+			78,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			1450,
+			1966
+		},
+		f_quad = {
+			765,
+			1889,
+			78,
+			76
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["hero_room_skill_icons_hero_tramin_seventh_0001"] = {
+		a_name = "kr4_hero_room.dds",
+		size = {
+			78,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			1450,
+			1966
+		},
+		f_quad = {
+			1321,
+			1772,
+			78,
+			76
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["hero_room_skill_icons_hero_tramin_seventh_0002"] = {
+		a_name = "kr4_hero_room.dds",
+		size = {
+			78,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			1450,
+			1966
+		},
+		f_quad = {
+			1321,
+			1850,
+			78,
+			76
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["hero_room_skill_icons_hero_tramin_seventh_0003"] = {
+		a_name = "kr4_hero_room.dds",
+		size = {
+			78,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			1450,
+			1966
+		},
+		f_quad = {
+			1331,
+			1538,
+			78,
+			76
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["hero_room_skill_icons_hero_tramin_seventh_0004"] = {
+		a_name = "kr4_hero_room.dds",
+		size = {
+			78,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			1450,
+			1966
+		},
+		f_quad = {
+			765,
+			1811,
+			78,
+			76
+		},
+		alias = {},
+		textureRotated = false
+	},
+	["hero_room_skill_icons_hero_tramin_seventh_0005"] = {
 		a_name = "kr4_hero_room.dds",
 		size = {
 			78,

@@ -536,12 +536,18 @@ function director:queue_load_item_named(name, force_reload)
 				local rank2 = table.find(map_data.tower_3_data, function(k, v)
 					return v.name == map_data.random.archer[tower_id]
 				end)
+				local rank3 = table.find(map_data.tower_4_data, function(k, v)
+					return v.name == map_data.random.archer[tower_id]
+				end)
 				--加入template
 				local template_name = ""
 				local template_json = {}
 				if rank2 then
 					template_name = T(map_data.tower3_menu_json[1][rank2].action_arg).build_name
 					template_json = table.deepclone(map_data.tower3_menu_json[1][rank2])
+				elseif rank3 then
+					template_name = T(map_data.tower4_menu_json[1][rank3].action_arg).build_name
+					template_json = table.deepclone(map_data.tower4_menu_json[1][rank2])
 				else
 					template_name = T(map_data.tower_menu_json[rank1].action_arg).build_name
 					template_json = table.deepclone(map_data.tower_menu_json[rank1])
@@ -570,12 +576,18 @@ function director:queue_load_item_named(name, force_reload)
 				local rank2 = table.find(map_data.tower_3_data, function(k, v)
 					return v.name == map_data.random.barrack[tower_id]
 				end)
+				local rank3 = table.find(map_data.tower_4_data, function(k, v)
+					return v.name == map_data.random.barrack[tower_id]
+				end)
 				--加入template
 				local template_name = ""
 				local template_json = {}
 				if rank2 then
 					template_name = T(map_data.tower3_menu_json[1][rank2].action_arg).build_name
 					template_json = table.deepclone(map_data.tower3_menu_json[1][rank2])
+				elseif rank3 then
+					template_name = T(map_data.tower4_menu_json[1][rank3].action_arg).build_name
+					template_json = table.deepclone(map_data.tower4_menu_json[1][rank3])
 				else
 					template_name = T(map_data.tower_menu_json[rank1].action_arg).build_name
 					template_json = table.deepclone(map_data.tower_menu_json[rank1])
@@ -604,12 +616,18 @@ function director:queue_load_item_named(name, force_reload)
 				local rank2 = table.find(map_data.tower_3_data, function(k, v)
 					return v.name == map_data.random.mage[tower_id]
 				end)
+				local rank3 = table.find(map_data.tower_4_data, function(k, v)
+					return v.name == map_data.random.mage[tower_id]
+				end)
 				--加入template
 				local template_name = ""
 				local template_json = {}
 				if rank2 then
 					template_name = T(map_data.tower3_menu_json[1][rank2].action_arg).build_name
 					template_json = table.deepclone(map_data.tower3_menu_json[1][rank2])
+				elseif rank3 then
+					template_name = T(map_data.tower4_menu_json[1][rank3].action_arg).build_name
+					template_json = table.deepclone(map_data.tower4_menu_json[1][rank3])
 				else
 					template_name = T(map_data.tower_menu_json[rank1].action_arg).build_name
 					template_json = table.deepclone(map_data.tower_menu_json[rank1])
@@ -638,12 +656,18 @@ function director:queue_load_item_named(name, force_reload)
 				local rank2 = table.find(map_data.tower_3_data, function(k, v)
 					return v.name == map_data.random.engineer[tower_id]
 				end)
+				local rank3 = table.find(map_data.tower_4_data, function(k, v)
+					return v.name == map_data.random.engineer[tower_id]
+				end)
 				--加入template
 				local template_name = ""
 				local template_json = {}
 				if rank2 then
 					template_name = T(map_data.tower3_menu_json[1][rank2].action_arg).build_name
 					template_json = table.deepclone(map_data.tower3_menu_json[1][rank2])
+				elseif rank3 then
+					template_name = T(map_data.tower4_menu_json[1][rank3].action_arg).build_name
+					template_json = table.deepclone(map_data.tower4_menu_json[1][rank3])
 				else
 					template_name = T(map_data.tower_menu_json[rank1].action_arg).build_name
 					template_json = table.deepclone(map_data.tower_menu_json[rank1])
@@ -681,6 +705,7 @@ function director:queue_load_item_named(name, force_reload)
 				"go_reinforcement_skin_1",
 				"go_reinforcement_skin_2",
 				"go_reinforcement_skin_3",
+				"kr4_sapos",
 				--"ultimate45",
 				--"kr4_herogui",
 				"kr4_hero_power",
@@ -691,6 +716,10 @@ function director:queue_load_item_named(name, force_reload)
 				"go_hero_alleria_g3",
 				"go_hero_bolverk",
 				"go_hero_vampiress",
+				--征服
+				"gui_common_v",
+				"gui_portraits_v",
+				"go_towers_v",
 			}
 			game.scale_required_textures = {
 				"go_towers",
@@ -760,12 +789,15 @@ function director:queue_load_item_named(name, force_reload)
 			
 			if user_data.liuhui.cheat5 == true then
 				table.insert(game.scale_required_textures, "go_g5_stage528")
+				table.insert(game.scale_required_textures, "go_stage137")
 				table.insert(game.required_textures, "go_stage104")
 				table.insert(game.required_textures, "go_stage113")
 				table.insert(game.required_textures, "go_stage117")
 				table.insert(game.required_textures, "go_stage118")
 				table.insert(game.required_textures, "go_stage120")
 				table.insert(game.required_textures, "go_stage122")
+				table.insert(game.required_textures, "gui_common_5_D")
+				
 				for i = HERO_5_START, #map_data.hero_data do
 					if map_data.hero_data[i].transplanting == nil then
 						table.insert(game.scale_required_textures, "go_"..map_data.hero_data[i].name)
@@ -824,6 +856,7 @@ function director:queue_load_item_named(name, force_reload)
 					table.insert(game.required_sounds, map_data.hero_data[i].name)
 				end
 			end
+			table.insert(game.required_sounds, "stage_137")
 		end
 		local hero_data = map_data.hero_data
 		local ht1 = hero_data[user_data.liuhui_hero.herolist[1]].name

@@ -2407,6 +2407,16 @@ return {
         f_quad = {7,7,1048,736},
         alias = {}
     },
+    --[[
+    heroroom_001_notxt = {
+        a_name = "screen_map-3.png",
+        size = {math.ceil(1078*1.1),math.ceil(770*1.1)},
+        trim = {math.ceil(21*1.1),math.ceil(6*1.1),math.ceil(9*1.1),math.ceil(28*1.1)},
+        a_size = {math.ceil(2048*1.1),math.ceil(2048*1.1)},
+        f_quad = {math.ceil(7*1.1),math.ceil(7*1.1),math.ceil(1048*1.1),math.ceil(736*1.1)},
+        alias = {}
+    },
+    ]]
     heroroom_007 = {
         a_name = "screen_map-3.png",
         size = {120,132},

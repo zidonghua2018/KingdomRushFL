@@ -221,14 +221,14 @@ function GGLabel:_draw_self()
 		G.setColor(new_c)
 	end
 
-	G.printf(self.text, self.text_offset.x, self.text_offset.y + voff, self.text_size.x * font_scale, self.text_align, 0, 1 / font_scale)
+	G.printf(self.text or " ", self.text_offset.x, self.text_offset.y + voff, self.text_size.x * font_scale, self.text_align, 0, 1 / font_scale)
 	G.setColor(pr, pg, pb, pa)
 end
 
 function GGLabel:get_wrap_lines()
 	self:_load_font()
 
-	local width, wrapped = self.font:getWrap(self.text, self.text_size.x * self._font_scale)
+	local width, wrapped = self.font:getWrap(self.text or " ", self.text_size.x * self._font_scale)
 
 	width = width / self._font_scale
 

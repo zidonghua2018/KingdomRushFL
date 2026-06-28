@@ -34,6 +34,7 @@ for k, v in pairs(z3) do
 end
 
 z["BUTTON_NEXT_PAGE"] = "下一頁"
+z["BUTTON_PREV_PAGE"] = "上一頁"
 z["Rush"] = "守衛軍"
 z["Frontier"] = "前線"
 z["Origin"] = "起源"

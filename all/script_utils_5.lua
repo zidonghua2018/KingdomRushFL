@@ -514,7 +514,7 @@ local function parabola_y(phase, from_y, to_y, max_y)
 end
 
 local function soldier_interrupted(this)
-	return this.nav_rally.new or this.health.dead or this.unit.is_stunned
+	return (this.nav_rally and this.nav_rally.new) or this.health.dead or this.unit.is_stunned
 end
 
 local function y_soldier_wait(store, this, time)
@@ -2562,7 +2562,7 @@ local function soldier_regen(store, this)
 		this.regen.ts_counter = this.regen.ts_counter + store.tick_length
 
 		if this.regen.ts_counter > this.regen.cooldown then
-			if this.health.hp < this.health.hp_max then
+			if this.health.hp < this.health.hp_max or this.regen.health < 0 then
 				this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + this.regen.health)
 
 				signal.emit("health-regen", this, this.regen.health)

@@ -4540,10 +4540,6 @@ function scripts.hero_faustus.get_info(this)
     	t.ranged_damage_max = 3 * m.bullet.damage_max * this.unit.damage_factor
 		t.ranged_damage_min = 3 * m.bullet.damage_min * this.unit.damage_factor
 		t.ranged_damage_type = m.bullet.damage_type
-		t.damage_max = 0--3 * m.bullet.damage_max
-		t.damage_min = 0--3 * m.bullet.damage_min
-		t.damage_type = m.bullet.damage_type
-
 	return t
 end
 
@@ -8540,10 +8536,6 @@ function scripts.hero_wilbur.get_info(this)
     	t.ranged_damage_max = 3 * m.bullet.damage_max * this.unit.damage_factor
 		t.ranged_damage_min = 3 * m.bullet.damage_min * this.unit.damage_factor
 		t.ranged_damage_type = m.bullet.damage_type		
-		t.damage_max = 0--3 * m.bullet.damage_max
-		t.damage_min = 0--3 * m.bullet.damage_min
-		t.damage_type = m.bullet.damage_type
-
 	return t
 end
 
@@ -21962,26 +21954,128 @@ function scripts.tower_baby_ashbite.get_info(this)
 end
 ]]--
 function scripts.tower_baby_ashbite.get_info(this)
-	local e = E:get_template("soldier_baby_ashbite")
-	local b = E:get_template(e.ranged.attacks[1].bullet)
-	local ranged_min, ranged_max = b.bullet.damage_min, b.bullet.damage_max
-	local ranged_damage_type = b.bullet.damage_type
-	local min, max = b.bullet.damage_min, b.bullet.damage_max
+	local s = E:get_template("soldier_baby_ashbite")
 
-	return {
-		type = STATS_TYPE_TOWER_BARRACK,
-		hp_max = e.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		damage_icon = this.info.damage_icon,		
+	if this.powers then
+		for pn, p in pairs(this.powers) do
+			for i = 1, p.level do
+				SU.soldier_power_upgrade(s, pn)
+			end
+		end
+	end
+
+	local s_info = s.info.fn(s)
+    local attacks, damage_type
+    local min, max
+	local yes_melee = true
+    local no_ranged = true
+	local dodge_chance
+	local dodge = nil
+
+    if s.melee and s.melee.attacks then
+        attacks = s.melee.attacks
+        for _, a in pairs(attacks) do
+            if a.damage_min then
+                min, max = a.damage_min, a.damage_max
+                damage_type = a.damage_type
+                break
+            end
+        end
+        if s.unit and min then
+            min, max = min * s.unit.damage_factor, max * s.unit.damage_factor
+        end
+
+        if min and max then
+            min, max = math.ceil(min), math.ceil(max)
+        end
+    end
+
+    local ranged_min, ranged_max
+    local ranged_damage_type
+	local ranged_damage_type
+    if s.ranged and s.ranged.attacks then
+		ranged_attacks = s.ranged.attacks
+        for _, a in pairs(ranged_attacks) do
+            if not a.disabled and a.bullet then
+                local b = E:get_template(a.bullet)
+                local level = a.level
+                if b and b.bullet.damage_min and b.bullet.damage_max then
+                    if level and b.bullet.damage_inc then
+                        ranged_min, ranged_max = b.bullet.damage_min + (b.bullet.damage_inc * level),
+                            b.bullet.damage_max + (b.bullet.damage_inc * level)
+                    else
+                        ranged_min, ranged_max = b.bullet.damage_min,b.bullet.damage_max
+                    end
+                    ranged_damage_type = b.bullet.damage_type
+                    break
+                end
+            end
+        end
+
+        if s.unit and ranged_min then
+            ranged_min, ranged_max = ranged_min * s.unit.damage_factor, ranged_max * s.unit.damage_factor
+        end
+
+        if ranged_min and ranged_max then
+            ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+        end
+    end
+
+    if ranged_damage_type then
+        no_ranged = false
+    end
+
+    local melee_count = 0
+    if s.melee and s.melee.attacks then
+        melee_count = #s.melee.attacks
+    end
+
+    if no_ranged and melee_count > 1 then
+        while melee_count > 1 do
+            local a = s.melee.attacks[melee_count]
+            if a.damage_min and not a.disabled then
+                ranged_min, ranged_max = a.damage_min, a.damage_max
+                ranged_damage_type = a.damage_type
+                if s.unit then
+                    ranged_min, ranged_max = ranged_min * s.unit.damage_factor, ranged_max * s.unit.damage_factor
+                end
+                ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+                break
+            end
+            melee_count = melee_count - 1
+        end
+    end
+
+	if s.dodge then
+		dodge = true
+		dodge_chance = s.dodge.chance
+	end
+
+	local armor = band(s.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or s.health.armor
+	local magic_armor = band(s.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or s.health.magic_armor
+
+    return {
+        type = STATS_TYPE_TOWER_BARRACK,
+        hp_max = s.health.hp_max,
+
+        damage_min = min,
+        damage_max = max,
+        damage_type = damage_type,
+		damage_icon = s.info.damage_icon,
+
         ranged_damage_min = ranged_min,
         ranged_damage_max = ranged_max,
         ranged_damage_type = ranged_damage_type,
-		ranged_damage_icon = this.info.ranged_damage_icon,
-        armor = e.health.armor,
-        magic_armor = e.health.magic_armor,
-		respawn = e.health.dead_lifetime
-	}
+		ranged_damage_icon = s.info.ranged_damage_icon,
+
+        armor = armor,
+        magic_armor = magic_armor,
+		dodge = dodge,
+		dodge_chance = dodge_chance,			
+        respawn = s.health.dead_lifetime,
+        no_ranged = no_ranged,
+		yes_melee = yes_melee
+    }
 end
 
 function scripts.tower_baby_ashbite.update(this, store)
@@ -23071,5 +23165,274 @@ function scripts.decal_catapult_endless.update(this, store)
 		U.y_ease_key(store, this.pos, "x", this.x_inside, this.x_outside, this.transit_time)
 	end
 end
+
+scripts.force_shield = {}
+
+function scripts.force_shield.update(this, store, script)
+	this.intercepted = {}
+	local radius = this.radius
+	local ts = store.tick_ts
+	this.center_pos = this.pos
+
+	local function get_random_reflect_point(from, angle_var_deg, extend_ratio, aspect)
+		angle_var_deg = angle_var_deg or 15
+		angle_var_deg = U.frandom(-angle_var_deg, angle_var_deg)
+		extend_ratio = extend_ratio or 1.5
+		aspect = aspect or 0.7
+
+		local dx = from.x - this.center_pos.x
+		local dy = from.y - this.center_pos.y
+		local base_angle = math.atan2(dy, dx)
+		local reflect_angle = base_angle + math.rad(angle_var_deg)
+		local reflect_radius = radius * U.frandom(1.25, extend_ratio)
+
+		return U.point_on_ellipse(this.center_pos, reflect_radius, reflect_angle)
+	end
+
+	U.animation_start(this, "in", nil, store.tick_ts, false, 1)
+
+	U.y_wait(store, fts(8))
+
+	U.animation_start(this, "loop", nil, store.tick_ts, true, 1)
+
+	while true do		
+		--[[
+		if not this.primed then
+			local items = LU.list_entities(store.entities, "fx_power_thunder_explosion")
+
+			if #items > 0 then
+				this.primed = true
+				U.sprites_hide(this, 1, 6)
+
+				this.render.sprites[7].hidden = nil
+				this.tween.ts = store.tick_ts
+				U.y_animation_play(this, nil, nil, store.tick_ts, nil, 7)
+				this.render.sprites[7].hidden = true
+
+				for i = 1, 6 do
+					this.render.sprites[i].hidden = i == 2
+				end
+				this.render.sprites[1].alpha = 255
+				this.tween.props[1].disabled = true
+				this.tween.props[2].disabled = nil
+			end		
+				
+		end
+		]]
+
+		local bullet_targets = table.filter(store.entities, function(k, b)
+						return b and b.bullet and ((b.bullet.target_id and store.entities[b.bullet.target_id] and band(store.entities[b.bullet.target_id].vis.flags, bor(F_FRIEND)) ~= 0) or (b.bullet.damage_bans and band(b.bullet.damage_bans, F_ENEMY) ~= 0)) and (not b.is_bullet_tower_pandas_spawn_soldier == true)
+					end)
+		
+		for _, b in pairs(bullet_targets) do
+			--if b and b.bullet and b.bullet.hostile == true then
+				local bpos = V.vclone(b.pos)
+				local pfrom = V.vclone(b.bullet.from)
+				local pto = V.vclone(b.bullet.to)
+				if U.is_inside_ellipse(bpos, this.center_pos, radius) and not U.is_inside_ellipse(pfrom, this.center_pos, this.ground_raidus) then
+					local h = 0
+					local dx = pto.x - pfrom.x
+					local dy = pto.y - pfrom.y
+					local len = math.sqrt(dx * dx + dy * dy)
+					if len > 1e-6 then
+						h = ((bpos.x - pfrom.x) * dy - (bpos.y - pfrom.y) * dx) / len
+						h = h / 0.7
+					end
+					h = math.max(h, 0)
+					local dx_o = bpos.x - this.center_pos.x
+					local dy_o = bpos.y - this.center_pos.y
+					local ground_ratio = (dx_o*dx_o)/(radius*radius) + (dy_o*dy_o)/(radius*radius*0.7*0.7)
+					local h_sphere = radius * math.sqrt(1 - ground_ratio)
+
+					if h <= h_sphere or (h <= h_sphere + 35 and U.is_inside_ellipse(bpos, this.center_pos, this.ground_raidus)) then
+						table.insert(this.intercepted, {
+							bullet = b,
+							from = V.vclone(pfrom)
+						})
+
+						local fx = E:create_entity(this.shield_fx)
+						fx.pos = bpos
+						fx.render.sprites[1].ts = store.tick_ts
+
+						queue_insert(store, fx)
+
+						if this.level >= 2 then
+							this.tween.props[1].ts = store.tick_ts
+						end
+					end
+				end
+			--end
+		end
+		
+		for _, b in ipairs(this.intercepted) do
+			local bullet = b.bullet
+
+			if this.level == 1 and bullet.bullet.hit_fx then
+				local fx = E:create_entity(bullet.bullet.hit_fx)
+				fx.pos = V.vclone(bullet.pos)
+				fx.render.sprites[1].ts = store.tick_ts
+
+				queue_insert(store, fx)
+			else
+				local new_bullet = E:create_entity(bullet.template_name)
+				new_bullet.pos = V.vclone(bullet.pos)
+				new_bullet.bullet.from = V.vclone(new_bullet.pos)
+				new_bullet.bullet.to = get_random_reflect_point(b.from, 150, 1.7) -- 一般取20, 1.7
+
+				if this.level >= 2 and not bullet.bullet.disperse_when_intercepted then
+					local target
+					target = U.find_random_enemy(store.entities, b.from, 0, 1200, F_RANGED, F_FRIEND)
+					
+					-- local targets = U.find_enemies_in_range(store.entities, b.from, 0, 120, F_RANGED, F_FRIEND)
+					-- if targets then
+					-- 	table.sort(targets, function (e1, e2)
+					-- 		return e2.health.hp_max < e1.health.hp_max
+					-- 	end)
+						
+					-- 	target = targets[1]
+					-- end
+
+
+					if target and target.unit then
+						new_bullet.bullet.target_id = target.id
+						-- new_bullet.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+						new_bullet.bullet.to = V.vclone(target.pos)
+					end
+				elseif not bullet.bullet.hit_fx then
+					new_bullet.bullet.rotation_speed = this.rotation_speed
+				end
+				new_bullet.bullet.damage_factor = this.damage_factor[this.level]
+				new_bullet.bullet.damage_bans = bor(U.flag_clear(bullet.damage_bans or 0, F_ENEMY), F_FRIEND)
+
+				queue_insert(store, new_bullet)
+			end
+
+			queue_remove(store, bullet)
+		end
+		this.intercepted = {}
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.tower_high_elven99 = {}
+function scripts.tower_high_elven99.update(this, store)
+	local shooter_sid = 3
+	local a = this.attacks
+	local ba = this.attacks.list[1]
+	local ta = this.attacks.list[2]
+	local sa = this.attacks.list[3]
+	local pow_t, pow_s = this.powers.timelapse, this.powers.sentinel
+
+	this.sentinels = {}
+	this.shield = {}
+	ba.ts = store.tick_ts
+
+	while true do
+		if this.tower.blocked then
+			coroutine.yield()
+		else
+			if pow_t.changed then
+				if #this.shield == 0 then
+					local a = E:create_entity(ta.custom_aura)
+					a.pos = this.pos
+					ta.ts = store.tick_ts
+					table.insert(this.shield, a)
+					queue_insert(store, a)
+				end
+				this.shield[1].level = pow_t.level
+			end
+
+			if pow_s.changed then
+				pow_s.changed = nil
+			end
+
+			SU.tower_update_silenced_powers(store, this)
+
+			if pow_s.level > 0 and not sa.silence_ts then
+				for i = 1, pow_s.level - #this.sentinels do
+					local s = E:create_entity("high_elven_sentinel")
+
+					s.pos = V.vclone(this.pos)
+
+					queue_insert(store, s)
+					table.insert(this.sentinels, s)
+
+					s.owner = this
+					s.owner_idx = #this.sentinels
+				end
+			end
+
+			if store.tick_ts - ba.ts > ba.cooldown then
+				local enemy, enemies = U.find_foremost_enemy(store.entities, tpos(this), 0, a.range, false, ba.vis_flags, ba.vis_bans)
+
+				if enemy then
+					ba.ts = store.tick_ts
+
+					local bo = ba.bullet_start_offset
+					local an, af = U.animation_name_facing_point(this, ba.animation, enemy.pos, shooter_sid, bo)
+
+					U.animation_start(this, an, af, store.tick_ts, false, shooter_sid)
+
+					this.tween.props[1].ts = store.tick_ts
+
+					U.y_wait(store, ba.shoot_time)
+
+					enemy, enemies = U.find_foremost_enemy(store.entities, tpos(this), 0, a.range, false, ba.vis_flags, ba.vis_bans)
+
+					if enemy then
+						local eidx = 1
+
+						for i, bn in ipairs(ba.bullets) do
+							enemy = enemies[km.zmod(eidx, #enemies)]
+							eidx = eidx + 1
+
+							if V.dist(tpos(this).x, tpos(this).y, enemy.pos.x, enemy.pos.y) <= a.range * 1.1 then
+								local b = E:create_entity(bn)
+
+								b.bullet.shot_index = i
+								b.bullet.damage_factor = this.tower.damage_factor
+								b.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
+								b.bullet.target_id = enemy.id
+								b.bullet.from = V.v(this.pos.x + bo.x, this.pos.y + bo.y)
+								b.pos = V.vclone(b.bullet.from)
+
+								queue_insert(store, b)
+							end
+
+							if i == 1 then
+								table.sort(enemies, function(e1, e2)
+									return e1.health.hp < e2.health.hp
+								end)
+
+								eidx = 1
+							end
+						end
+					end
+
+					U.y_animation_wait(this, shooter_sid)
+				end
+			end
+
+			if store.tick_ts - ba.ts > this.tower.long_idle_cooldown then
+				local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos, shooter_sid)
+
+				U.animation_start(this, an, af, store.tick_ts, true, shooter_sid)
+			end
+
+			coroutine.yield()
+		end
+	end
+end
+
+function scripts.tower_high_elven99.remove(this, store)
+	if #this.shield > 0 then
+		queue_remove(store, this.shield[1])
+	end
+	return true
+end
+
 
 return scripts

@@ -8,6 +8,7 @@ local z4h = require("assets.strings." .. "zh-Hans_4h")
 local z5 = require("assets.strings." .. "zh-Hans_5")
 local z0 = require("assets.strings." .. "zh-Hans_0")
 local z5sp = require("assets.strings." .. "zh-Hans_5sp")
+local zv4 = require("assets.strings." .. "zh-Hans_v")
 local z4local = require("assets.strings." .. "Localized_zh-cn")
 
 
@@ -75,10 +76,19 @@ for k, v in pairs(z5sp) do
 	z[k] = v
 end
 
+for k, v in pairs(zv4) do
+	if z[k] and z[k] ~=v then
+		count=count+1
+	end
+	z[k] = v
+end
 
 z["START HERE!!"] = "按Tab隐藏UI,可上下滑动"
+z["START HERE!!!"] = "当前仅移植8关，其他关卡敬请期待"
 
 z["BUTTON_NEXT_PAGE"] = "下一页"
+z["BUTTON_PREV_PAGE"] = "上一页"
+z["MAP_DOUBLE_HERO_ROOM_SELECT"] = "选择双英雄"
 z["Rush"] = "初代"
 z["Frontier"] = "前线"
 z["Origin"] = "起源"
@@ -96,7 +106,7 @@ z["PICK3"]= "携带前3代"
 z["UNPICK3"]= "不携带前3代"
 z["G3_STANDARD"]= "标准不可能"
 z["G3_CALRATE"]= "计算倍率"
-z["G3_IMPOSSIBLE"] = "3/5代不可能难度血量"
+z["G3_IMPOSSIBLE"] = "3代不可能难度血量"
 z["IS_CHEAT"]= "设置启用金手指与局内召唤"
 z["IS_RAND"]= "设置随机模式（详细介绍可见新手教程）"
 z["MAGIC_ARMOR_DESC"] = "魔抗"
@@ -169,7 +179,54 @@ z["LH349_REINFORCEMENT_SKIN_3"] = "街头霸王"
 z["TOWER_G45_PICK"] = "携带%i塔"
 z["HERO_G1_LEVEL10_ON"] = "1代初始满级"
 z["HERO_G1_LEVEL10_OFF"] = "1代初始1级"
+z["HERO_BALANCE_ON"] = "英雄补强已开启"
+z["HERO_BALANCE_OFF"] = "英雄补强已关闭"
 z["TRANSPLANTING"] = "移植中\n敬请期待"
+z["REINFORCEMENT_0"] = "三援兵(关)"
+z["REINFORCEMENT_1"] = "三援兵(开)"
+z["FLBALANCE_1"] = "怪物增强(开)"
+z["FLSTANDARD_2"] = "怪物增强(关)"
+z["BUTTON_MELEE_RANGE"] = "显示拦截"
+z["MAP_EDITOR"] = "地图编辑器"
+z["USE3TOOWER_COUNT_0"] = "全代"
+z["USE3TOOWER_COUNT_1"] = "前三代"
+z["USE3TOOWER_COUNT_2"] = "四五代"
 
-
+z["FLBALANCE_ENEMY"] = "怪物增强"
+z["THIS_YES_0"] = "否"
+z["THIS_YES_1"] = "是"
+z["THIS_YES"] = "是"
+z["THIS_NO"] = "否"
+z["G5_KINGDOM_DARK"] = "5代英雄羁绊"
+z["G5_KINGDOM_DARK_REINFORCE"] = "王国援兵/黑暗援兵"
+z["G5_KINGDOM_DARK_REINFORCEMENT_1"] = "王国援兵"
+z["G5_KINGDOM_DARK_REINFORCEMENT_2"] = "黑暗援兵"
+z["LH349_REINFORCEMENT_COUNT"] = "前三代援兵数量"
+z["LH349_REINFORCEMENT_COUNT_0"] = "二"
+z["LH349_REINFORCEMENT_COUNT_1"] = "三"
+z["G123PICK"]= "携带几代的防御塔"
+z["TOWER_G45_PICK_COUNT"] = "四五代塔携带数量"
+z["TOWER_45_PICK_COUNT"] = "%i"
+z["BALANCE_MODE_BETTER"] = "防御塔补强"
+z["BALANCE_MODE_BETTER_4"] = "四代索敌范围"
+z["FL_RANGE_BALANCE_RANGE"] = "调整"
+z["FL_RANGE_STD_RANGE"] = "原版"
+z["IS_CHEAT_GOLD"]= "启用金手指"
+z["IS_CHEAT_LOONG"]= "启用龙魂"
+z["IS_CHEAT_HERO"]= "一二三代英雄召唤"
+z["IS_CHEAT_HERO_5"]= "四五代英雄召唤"
+z["IS_RAND_ENEMY"]= "随机怪物等级"
+z["IS_RAND_TOWER"]= "随机防御塔数量"
+z["IS_RAND_MODE"]= "防御塔随机等级"
+z["IS_RAND_HERO"]= "随机英雄"
+z["RAND_CREEP_ENEMY_0"]= "关闭"
+z["RAND_CREEP_ENEMY_1"]= "小幅随机"
+z["RAND_CREEP_ENEMY_2"]= "中幅随机"
+z["RAND_CREEP_ENEMY_3"]= "大幅随机"
+z["RAND_TOWER_COUNT_0"]= "关闭"
+z["RAND_TOWER_COUNT_1"]= "随机4塔"
+z["RAND_TOWER_COUNT_2"]= "随机8塔"
+z["RAND_TOWER_COUNT_3"]= "随机12塔"
+z["RAND_TOWER_COUNT_4"]= "随机16塔"
+z["RAND_TOWER_COUNT_5"]= "随机20塔"
 return z

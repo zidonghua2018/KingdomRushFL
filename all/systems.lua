@@ -205,11 +205,11 @@ function sys.level:init(store)
 	store.selected_hero = slot.heroes.selected
 	store.selected_hero_status = slot.heroes.status[slot.heroes.selected]
 
-	--for _, v in pairs(slot.towers) do
-	--	if GS.towers_required_exoskeletons[v] then
-	--		EXO:load(GS.towers_required_exoskeletons[v])
-	--	end
-	--end
+	for _, v in pairs(slot.towers) do
+		if GS.towers_required_exoskeletons[v] then
+			EXO:load(GS.towers_required_exoskeletons[v])
+		end
+	end
 	local hero_dianyun = {
 		"hero_dianyun",
 		"hero_dianyun_health_rain",
@@ -221,9 +221,29 @@ function sys.level:init(store)
 		"ignis_altar_lvl4",
 		"ignis_altar_decal",
 		"ignis_altar_decal_lava",
-		--"hero_beresad_ultimate_particles_animations",
+		"hero_beresad_ultimate_particles_animations",
 	}
 	EXO:load(hero_dianyun)
+
+	local hero_mammoth_exoskeletons = {
+		"hero_mammoth",
+		"hero_mammoth_ancestral_back",
+		"hero_mammoth_ancestral_decal",
+		"hero_mammoth_ancestral_force_fear",
+		"hero_mammoth_ancestral_front",
+		"hero_mammoth_ancestral_hit",
+		"hero_mammoth_frency_fire",
+		"hero_mammoth_legacy_back_1",
+		"hero_mammoth_legacy_back_2",
+		"hero_mammoth_legacy_floor",
+		"hero_mammoth_legacy_front",
+		"hero_mammoth_legacy_middle",
+		"hero_mammoth_lone_wolf_decal",
+		"hero_mammoth_ultimate_back",
+		"hero_mammoth_ultimate_front",
+		"hero_mammoth_whirlwind_hit"
+	}
+	EXO:load(hero_mammoth_exoskeletons)
 
 	local enemy_table_stage3 = {
 		"BKtentacle_S15Def",
@@ -269,6 +289,7 @@ function sys.level:init(store)
 	EXO:load(enemy_table_stage3)
 	EXO:load(enemy_table_stage4)
 	EXO:load(enemy_table_stage5)
+	--需要检查特殊塔
 
 	local dragon_table = {
 		"stage31_wood_holder_cuernosDef",
@@ -1735,6 +1756,8 @@ function sys.game_upgrades:on_insert(entity, store)
 		"necromancer5",
 		"elven_stargazers",
 		"ray",
+		"dragons",
+		"hermit_toad",
 
 		"arcane",
 		"wild_magus",
@@ -1788,6 +1811,7 @@ end
 function sys.game_upgrades:on_remove(entity, store)
 	local mage_tower_types = {
 		"mage",
+		"g1_mage",
 		"g2_mage",
 		"archmage",
 		"necromancer",
@@ -1804,6 +1828,8 @@ function sys.game_upgrades:on_remove(entity, store)
 		"necromancer5",
 		"elven_stargazers",
 		"ray",
+		"dragons",
+		"hermit_toad",
 
 		"arcane",
 		"wild_magus",
@@ -2798,10 +2824,21 @@ typedef struct
     int    draw_order;
     int    lua_index;
 } RenderFrameFFI;
-//void ffi_sort(RenderFrameFFI* arr, RenderFrameFFI* tmp, int n);
+void ffi_sort(RenderFrameFFI* arr, RenderFrameFFI* tmp, int n);
 ]]
 
 --local lib_render_sort = ffi.load("render_timsort.dll")
+
+local lib_render_sort
+
+local osname = love.system and love.system.getOS and love.system.getOS() or ""
+if osname == "Windows" then
+    lib_render_sort = ffi.load("render_timsort.dll")
+elseif osname == "Android" then
+    lib_render_sort = ffi.load("render_timsort")
+else
+    lib_render_sort = ffi.load("render_timsort")
+end
 
 function sys.render:init(store)
 	store.render_frames = {}
@@ -2824,7 +2861,7 @@ function sys.render:init(store)
 			1,
 			1
 		},
-		atlas = "gui_portraits_20251001"
+		atlas = "gui_portraits_20260307"
 	}
 	self._hb_sizes = HEALTH_BAR_SIZES[store.texture_size] or HEALTH_BAR_SIZES.default
 	self._hb_colors = HEALTH_BAR_COLORS
@@ -2889,9 +2926,9 @@ function sys.render:init(store)
         end
     end
 
-    self.ffi_sort = ffi_merge_sort
+    --self.ffi_sort = ffi_merge_sort
 	self.ffi_cmp = ffi_cmp
-	--self.ffi_sort = ULH.ffi_timsort
+	self.ffi_sort = ULH.ffi_timsort
 end
 
 function sys.render:on_insert(entity, store)
@@ -3306,9 +3343,10 @@ function sys.render:on_update(dt, ts, store)
             n = n + 1
         end
     end
-    self.ffi_sort(store.render_frames_ffi, store.render_frames_ffi_tmp, 0, n)
+	--此前用的是第1条
+    --self.ffi_sort(store.render_frames_ffi, store.render_frames_ffi_tmp, 0, n)
 	--self.ffi_sort(store.render_frames_ffi, n, self.ffi_cmp)
-	--lib_render_sort.ffi_sort(render_frames_ffi, store.render_frames_ffi_tmp, n)
+	lib_render_sort.ffi_sort(render_frames_ffi, store.render_frames_ffi_tmp, n)
     local new_frames = {}
     for i = 0, n - 1 do
         local ffi_f = render_frames_ffi[i]
@@ -3362,7 +3400,7 @@ function sys.render:init(store)
 			1,
 			1
 		},
-		atlas = "gui_portraits_20251001"
+		atlas = "gui_portraits_20260307"
 	}
 	self._hb_sizes = HEALTH_BAR_SIZES[store.texture_size] or HEALTH_BAR_SIZES.default
 	self._hb_colors = HEALTH_BAR_COLORS

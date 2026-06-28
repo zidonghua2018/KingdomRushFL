@@ -1921,6 +1921,19 @@ local function y_soldier_do_single_melee_attack(store, this, target, attack)
 			queue_insert(store, mod)
 		end
 
+		if attack.mods then
+			for i, m in pairs(attack.mods) do 
+				local mod = E:create_entity(m)
+
+				mod.modifier.ts = store.tick_ts
+				mod.modifier.target_id = target.id
+				mod.modifier.source_id = this.id
+				mod.modifier.level = attack.level
+
+				queue_insert(store, mod)
+			end
+		end
+
 		local hit_pos = V.vclone(this.pos)
 
 		if attack.hit_offset then
@@ -2363,18 +2376,12 @@ local function soldier_courage_upgrade(store, this)
 			"soldier_knight",
 			"soldier_templar",
 			"soldier_assassin",
-			"soldier_pirate_captain",
-			"soldier_pirate_flamer",
-			"soldier_pirate_anchor",
-			"soldier_pirate_captain_2",
-			"soldier_pirate_flamer_2",
-			"soldier_pirate_anchor_2",
+			"soldier_pirate_captain","soldier_pirate_flamer","soldier_pirate_anchor",
+			"soldier_pirate_captain_2","soldier_pirate_flamer_2","soldier_pirate_anchor_2",
 			"soldier_amazona",
 			"soldier_amazona_re",			
-			"soldier_legionnaire",
-			"soldier_djinn",
-			"soldier_legionnaire_2",
-			"soldier_djinn_2",
+			"soldier_legionnaire","soldier_djinn",
+			"soldier_legionnaire_2","soldier_djinn_2",
 			"soldier_dwarf",
 			"soldier_frankenstein",
 			"soldier_death_rider",
@@ -2787,7 +2794,7 @@ local function y_enemy_walk_until_blocked(store, this, ignore_soldiers, func)
 		end
 
 		local node_valid = P:is_node_valid(this.nav_path.pi, this.nav_path.ni)
-
+--[[
 		if node_valid and not ignore_soldiers and this.ranged then
 			for _, a in pairs(this.ranged.attacks) do
 				if not a.disabled and (not a.requires_magic or this.enemy.can_do_magic) and (a.hold_advance or store.tick_ts - a.ts > a.cooldown) then
@@ -2799,7 +2806,21 @@ local function y_enemy_walk_until_blocked(store, this, ignore_soldiers, func)
 				end
 			end
 		end
+]]--
+		if node_valid and not ignore_soldiers and this.ranged then
+			for _, a in pairs(this.ranged.attacks) do
+				if not a.disabled and (not a.requires_magic or this.enemy.can_do_magic) and (a.hold_advance or store.tick_ts - a.ts > a.cooldown) then
+					ranged = U.find_nearest_soldier(store.entities, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans, function(e)
+						return not a.excluded_templates or (a.excluded_templates and not table.contains(a.excluded_templates, e.template_name))
+					end)
 
+					if ranged ~= nil then
+						break
+					end
+				end
+			end
+		end
+		
 		if node_valid and not ignore_soldiers and #this.enemy.blockers > 0 then
 			U.cleanup_blockers(store, this)
 

@@ -74,6 +74,7 @@ return {
 		alias = {}
 	},
 	]]
+	--[[
 	MapBackground_kr5 = {
 		a_name = "screen_map_bg_20250925-resize.png",
 		size = {
@@ -92,6 +93,27 @@ return {
 			0,
 			0,
 			2432,1922
+		},
+		alias = {}
+	},]]
+	MapBackground_kr5 = {
+		a_name = "screen_map_bg_20260305.dds",
+		size = {
+			2432,2400
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2432,2400
+		},
+		f_quad = {
+			0,
+			0,
+			2432,2400
 		},
 		alias = {}
 	},

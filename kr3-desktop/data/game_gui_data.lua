@@ -2127,6 +2127,8 @@ return {
 		[DAMAGE_MAGICAL] = "base_info_icons_0002",
 		[DAMAGE_EXPLOSION] = "base_info_icons_0019",
         [DAMAGE_ELECTRICAL] = "base_info_icons_0018",
+		[DAMAGE_SHOT] = "base_info_icons_0011",
+		[DAMAGE_FIREBALL] = "base_info_icons_0012",
 	},	
 	power_button_block_styles = {
 		drow_queen = {

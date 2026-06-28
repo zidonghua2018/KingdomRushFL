@@ -112,7 +112,7 @@ end
 function kart:get_install_dir()
 	local o = love.filesystem.getSourceBaseDirectory()
 
-	if KR_PLATFORM == "win32" then
+	if KR_PLATFORM == "win" then
 		return o
 	elseif KR_PLATFORM == "mac" then
 		local parts = string.split(o, "/")

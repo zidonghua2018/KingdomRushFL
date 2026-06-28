@@ -18,7 +18,7 @@ return {
 		{
 			template = "decal_background",
 			["render.sprites[1].z"] = 1000,
-			["render.sprites[1].name"] = "stage_418",
+			["render.sprites[1].name"] = "Stage_168",
 			pos = {
 				x = 512,
 				y = 384
@@ -26,7 +26,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 527,
 				y = 515
@@ -40,7 +40,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 337,
 				y = 597
@@ -54,7 +54,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 357,
 				y = 436
@@ -68,7 +68,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 152,
 				y = 490
@@ -82,7 +82,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 520,
 				y = 168
@@ -96,7 +96,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 670,
 				y = 616
@@ -110,7 +110,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 699,
 				y = 461
@@ -124,7 +124,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 646,
 				y = 102
@@ -138,7 +138,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 179,
 				y = 207
@@ -152,7 +152,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 892,
 				y = 476
@@ -166,7 +166,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 732,
 				y = 148
@@ -180,7 +180,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 764,
 				y = 300
@@ -194,7 +194,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 657,
 				y = 334
@@ -208,7 +208,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 472,
 				y = 332
@@ -222,17 +222,20 @@ return {
 		},
 		{
 			template = "overcharge_crystal",
-			["tower.terrain_style"] = 405,
+			
 			pos = {
 				x = 368,
 				y = 290
 			},
+			--[[
 			["tower.default_rally_pos"] = {
 				x = 502,
 				y = 266
 			},
+			["tower.terrain_style"] = 2,
 			["ui.nav_mesh_id"] = "15",
 			["tower.holder_id"] = "15",
+			]]
 		},
 		{
 			["editor.r"] = 1.5791294672350324,
@@ -428,6 +431,7 @@ return {
 				y = 353
 			},
 		},
+		--[[
 		{
 			template = "hypnotoad",
 			pos = {
@@ -436,6 +440,7 @@ return {
 			},
 			["render.sprites[1].z"] = Z_DECALS,
 		},
+		]]
 	},
 	nav_mesh = {
 		{ 6, nil, 3, 14 },
@@ -453,5 +458,24 @@ return {
 		{ 12, 7, 14, 11 },
 		{ 13, 1, 15, 5 },
 		{ 14, 3, 9, nil },
+	},
+	level_mode_overrides = {
+        [3] = {
+            locked_hero = false,
+            locked_towers = {
+            },
+            max_upgrade_level = 5
+        }
+    },
+	required_sounds = {
+		"sounds_stage168",
+		"enemy_sapos"
+	},
+	required_textures = {
+	},
+	scale_required_textures = {
+		"kr4_sapos",
+		"go_stage_168",
+		"go_towers_pandas",
 	}
 }

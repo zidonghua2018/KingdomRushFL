@@ -3996,7 +3996,7 @@ function scripts.mod_enemy_dust_cryptid.insert(this, store, script)
 		this.old_on_damage = target.health.on_damage
 
 		function target.health.on_damage(hero, store, damage)
-			if U.flag_has(damage.damage_type, bit.bor(DAMAGE_INSTAKILL, DAMAGE_DISINTEGRATE, DAMAGE_EAT, DAMAGE_IGNORE_SHIELD, DAMAGE_NO_DODGE, DAMAGE_POISON, DAMAGE_MODIFIER, DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL)) then
+			if U.flag_has(damage.damage_type, bit.bor(DAMAGE_INSTAKILL, DAMAGE_DISINTEGRATE, DAMAGE_EAT, DAMAGE_IGNORE_SHIELD, DAMAGE_NO_DODGE, DAMAGE_POISON, DAMAGE_MODIFIER, DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL, DAMAGE_SHOT)) then
 				return true
 			end
 
@@ -15390,7 +15390,7 @@ function scripts.mod_hero_space_elf_ultimate.queue(this, store, insertion)
 
 			target.health.ignore_damage = false
 		else
-			U.pop_bans(target.vis, bor(DAMAGE_PHYSICAL, DAMAGE_MAGICAL, DAMAGE_EXPLOSION, DAMAGE_TRUE, DAMAGE_ELECTRICAL))
+			U.pop_bans(target.vis, bor(DAMAGE_PHYSICAL, DAMAGE_MAGICAL, DAMAGE_EXPLOSION, DAMAGE_TRUE, DAMAGE_ELECTRICAL, DAMAGE_SHOT))
 			target.health.ignore_damage = false
 		end
 
@@ -31535,7 +31535,7 @@ function scripts.tower_big_bertha.update(this, store, script)
 end
 
 scripts.tower_ghost = {}
-
+--[[
 function scripts.tower_ghost.get_info(this)
 	local s = E:create_entity(this.barrack.soldier_type)
 
@@ -31580,6 +31580,131 @@ function scripts.tower_ghost.get_info(this)
 		armor = s.health.armor,
 		respawn = s.health.dead_lifetime
 	}
+end
+]]--
+function scripts.tower_ghost.get_info(this)
+	local s = E:create_entity(this.barrack.soldier_type)
+
+	if this.powers then
+		for pn, p in pairs(this.powers) do
+			for i = 1, p.level do
+				SU.soldier_power_upgrade(s, pn)
+			end
+		end
+	end
+
+	local s_info = s.info.fn(s)
+    local attacks, damage_type
+    local min, max
+	local yes_melee = true
+    local no_ranged = true
+	local dodge_chance
+	local dodge = nil
+
+    if s.melee and s.melee.attacks then
+        attacks = s.melee.attacks
+        for _, a in pairs(attacks) do
+            if a.damage_min then
+                min, max = a.damage_min, a.damage_max
+                damage_type = a.damage_type
+                break
+            end
+        end
+        if s.unit and min then
+            min, max = min * s.unit.damage_factor, max * s.unit.damage_factor
+        end
+
+        if min and max then
+            min, max = math.ceil(min), math.ceil(max)
+        end
+    end
+
+    local ranged_min, ranged_max
+    local ranged_damage_type
+	local ranged_damage_type
+    if s.ranged and s.ranged.attacks then
+		ranged_attacks = s.ranged.attacks
+        for _, a in pairs(ranged_attacks) do
+            if not a.disabled and a.bullet then
+                local b = E:get_template(a.bullet)
+                local level = a.level
+                if b and b.bullet.damage_min and b.bullet.damage_max then
+                    if level and b.bullet.damage_inc then
+                        ranged_min, ranged_max = b.bullet.damage_min + (b.bullet.damage_inc * level),
+                            b.bullet.damage_max + (b.bullet.damage_inc * level)
+                    else
+                        ranged_min, ranged_max = b.bullet.damage_min,b.bullet.damage_max
+                    end
+                    ranged_damage_type = b.bullet.damage_type
+                    break
+                end
+            end
+        end
+
+        if s.unit and ranged_min then
+            ranged_min, ranged_max = ranged_min * s.unit.damage_factor, ranged_max * s.unit.damage_factor
+        end
+
+        if ranged_min and ranged_max then
+            ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+        end
+    end
+
+    if ranged_damage_type then
+        no_ranged = false
+    end
+
+    local melee_count = 0
+    if s.melee and s.melee.attacks then
+        melee_count = #s.melee.attacks
+    end
+
+    if no_ranged and melee_count > 1 then
+        while melee_count > 1 do
+            local a = s.melee.attacks[melee_count]
+            if a.damage_min and not a.disabled then
+                ranged_min, ranged_max = a.damage_min, a.damage_max
+                ranged_damage_type = a.damage_type
+                if s.unit then
+                    ranged_min, ranged_max = ranged_min * s.unit.damage_factor, ranged_max * s.unit.damage_factor
+                end
+                ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+                break
+            end
+            melee_count = melee_count - 1
+        end
+    end
+
+	if s.dodge then
+		dodge = true
+		dodge_chance = s.dodge.chance
+	end
+
+	local armor = band(s.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or s.health.armor
+	local magic_armor = band(s.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or s.health.magic_armor
+
+    return {
+        type = STATS_TYPE_TOWER_BARRACK,
+        hp_max = s.health.hp_max,
+
+        damage_min = min,
+        damage_max = max,
+        damage_type = damage_type,
+		damage_icon = s.info.damage_icon,
+
+        ranged_damage_min = ranged_min,
+        ranged_damage_max = ranged_max,
+        ranged_damage_type = ranged_damage_type,
+		ranged_damage_icon = s.info.ranged_damage_icon,
+
+        armor = armor,
+        magic_armor = magic_armor,
+		dodge = dodge,
+		dodge_chance = dodge_chance,			
+        respawn = s.health.dead_lifetime,
+        no_ranged = no_ranged,
+		yes_melee = yes_melee
+    }
 end
 
 function scripts.tower_ghost.update(this, store, script)
@@ -32272,6 +32397,7 @@ end
 
 scripts.tower_paladin_covenant = {}
 
+--[[
 function scripts.tower_paladin_covenant.get_info(this)
 	local s = E:create_entity(this.barrack.soldier_type)
 
@@ -32316,6 +32442,131 @@ function scripts.tower_paladin_covenant.get_info(this)
 		armor = s.health.armor,
 		respawn = s.health.dead_lifetime
 	}
+end
+]]--
+function scripts.tower_paladin_covenant.get_info(this)
+	local s = E:create_entity(this.barrack.soldier_type)
+
+	if this.powers then
+		for pn, p in pairs(this.powers) do
+			for i = 1, p.level do
+				SU.soldier_power_upgrade(s, pn)
+			end
+		end
+	end
+
+	local s_info = s.info.fn(s)
+    local attacks, damage_type
+    local min, max
+	local yes_melee = true
+    local no_ranged = true
+	local dodge_chance
+	local dodge = nil
+
+    if s.melee and s.melee.attacks then
+        attacks = s.melee.attacks
+        for _, a in pairs(attacks) do
+            if a.damage_min then
+                min, max = a.damage_min, a.damage_max
+                damage_type = a.damage_type
+                break
+            end
+        end
+        if s.unit and min then
+            min, max = min * s.unit.damage_factor, max * s.unit.damage_factor
+        end
+
+        if min and max then
+            min, max = math.ceil(min), math.ceil(max)
+        end
+    end
+
+    local ranged_min, ranged_max
+    local ranged_damage_type
+	local ranged_damage_type
+    if s.ranged and s.ranged.attacks then
+		ranged_attacks = s.ranged.attacks
+        for _, a in pairs(ranged_attacks) do
+            if not a.disabled and a.bullet then
+                local b = E:get_template(a.bullet)
+                local level = a.level
+                if b and b.bullet.damage_min and b.bullet.damage_max then
+                    if level and b.bullet.damage_inc then
+                        ranged_min, ranged_max = b.bullet.damage_min + (b.bullet.damage_inc * level),
+                            b.bullet.damage_max + (b.bullet.damage_inc * level)
+                    else
+                        ranged_min, ranged_max = b.bullet.damage_min,b.bullet.damage_max
+                    end
+                    ranged_damage_type = b.bullet.damage_type
+                    break
+                end
+            end
+        end
+
+        if s.unit and ranged_min then
+            ranged_min, ranged_max = ranged_min * s.unit.damage_factor, ranged_max * s.unit.damage_factor
+        end
+
+        if ranged_min and ranged_max then
+            ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+        end
+    end
+
+    if ranged_damage_type then
+        no_ranged = false
+    end
+
+    local melee_count = 0
+    if s.melee and s.melee.attacks then
+        melee_count = #s.melee.attacks
+    end
+
+    if no_ranged and melee_count > 1 then
+        while melee_count > 1 do
+            local a = s.melee.attacks[melee_count]
+            if a.damage_min and not a.disabled then
+                ranged_min, ranged_max = a.damage_min, a.damage_max
+                ranged_damage_type = a.damage_type
+                if s.unit then
+                    ranged_min, ranged_max = ranged_min * s.unit.damage_factor, ranged_max * s.unit.damage_factor
+                end
+                ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+                break
+            end
+            melee_count = melee_count - 1
+        end
+    end
+
+	if s.dodge then
+		dodge = true
+		dodge_chance = s.dodge.chance
+	end
+
+	local armor = band(s.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or s.health.armor
+	local magic_armor = band(s.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or s.health.magic_armor
+
+    return {
+        type = STATS_TYPE_TOWER_BARRACK,
+        hp_max = s.health.hp_max,
+
+        damage_min = min,
+        damage_max = max,
+        damage_type = damage_type,
+		damage_icon = s.info.damage_icon,
+
+        ranged_damage_min = ranged_min,
+        ranged_damage_max = ranged_max,
+        ranged_damage_type = ranged_damage_type,
+		ranged_damage_icon = s.info.ranged_damage_icon,
+
+        armor = armor,
+        magic_armor = magic_armor,
+		dodge = dodge,
+		dodge_chance = dodge_chance,			
+        respawn = s.health.dead_lifetime,
+        no_ranged = no_ranged,
+		yes_melee = yes_melee
+    }
 end
 
 function scripts.tower_paladin_covenant.soldier_insert(this, store)
@@ -32685,7 +32936,7 @@ function scripts.tower_paladin_covenant_soldier_lvl4_healing_mod.remove(this, st
 end
 
 scripts.tower_demon_pit = {}
-
+--[[
 function scripts.tower_demon_pit.get_info(this)
 	local b = E:create_entity(this.attacks.list[1].bullet)
 	local d = E:create_entity(b.bullet.hit_payload)
@@ -32731,6 +32982,132 @@ function scripts.tower_demon_pit.get_info(this)
 		armor = d.health.armor,
 		respawn = d.health.dead_lifetime
 	}
+end
+]]--
+function scripts.tower_demon_pit.get_info(this)
+	local b = E:create_entity(this.attacks.list[1].bullet)
+	local s = E:create_entity(b.bullet.hit_payload)
+
+	if this.powers then
+		for pn, p in pairs(this.powers) do
+			for i = 1, p.level do
+				SU.soldier_power_upgrade(s, pn)
+			end
+		end
+	end
+
+	local s_info = s.info.fn(s)
+    local attacks, damage_type
+    local min, max
+	local yes_melee = true
+    local no_ranged = true
+	local dodge_chance
+	local dodge = nil
+
+    if s.melee and s.melee.attacks then
+        attacks = s.melee.attacks
+        for _, a in pairs(attacks) do
+            if a.damage_min then
+                min, max = a.damage_min, a.damage_max
+                damage_type = a.damage_type
+                break
+            end
+        end
+        if s.unit and min then
+            min, max = min * s.unit.damage_factor, max * s.unit.damage_factor
+        end
+
+        if min and max then
+            min, max = math.ceil(min), math.ceil(max)
+        end
+    end
+
+    local ranged_min, ranged_max
+    local ranged_damage_type
+	local ranged_damage_type
+    if s.ranged and s.ranged.attacks then
+		ranged_attacks = s.ranged.attacks
+        for _, a in pairs(ranged_attacks) do
+            if not a.disabled and a.bullet then
+                local b = E:get_template(a.bullet)
+                local level = a.level
+                if b and b.bullet.damage_min and b.bullet.damage_max then
+                    if level and b.bullet.damage_inc then
+                        ranged_min, ranged_max = b.bullet.damage_min + (b.bullet.damage_inc * level),
+                            b.bullet.damage_max + (b.bullet.damage_inc * level)
+                    else
+                        ranged_min, ranged_max = b.bullet.damage_min,b.bullet.damage_max
+                    end
+                    ranged_damage_type = b.bullet.damage_type
+                    break
+                end
+            end
+        end
+
+        if s.unit and ranged_min then
+            ranged_min, ranged_max = ranged_min * s.unit.damage_factor, ranged_max * s.unit.damage_factor
+        end
+
+        if ranged_min and ranged_max then
+            ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+        end
+    end
+
+    if ranged_damage_type then
+        no_ranged = false
+    end
+
+    local melee_count = 0
+    if s.melee and s.melee.attacks then
+        melee_count = #s.melee.attacks
+    end
+
+    if no_ranged and melee_count > 1 then
+        while melee_count > 1 do
+            local a = s.melee.attacks[melee_count]
+            if a.damage_min and not a.disabled then
+                ranged_min, ranged_max = a.damage_min, a.damage_max
+                ranged_damage_type = a.damage_type
+                if s.unit then
+                    ranged_min, ranged_max = ranged_min * s.unit.damage_factor, ranged_max * s.unit.damage_factor
+                end
+                ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+                break
+            end
+            melee_count = melee_count - 1
+        end
+    end
+
+	if s.dodge then
+		dodge = true
+		dodge_chance = s.dodge.chance
+	end
+
+	local armor = band(s.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or s.health.armor
+	local magic_armor = band(s.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or s.health.magic_armor
+
+    return {
+        type = STATS_TYPE_TOWER_BARRACK,
+        hp_max = s.health.hp_max,
+
+        damage_min = min,
+        damage_max = max,
+        damage_type = damage_type,
+		damage_icon = s.info.damage_icon,
+
+        ranged_damage_min = ranged_min,
+        ranged_damage_max = ranged_max,
+        ranged_damage_type = ranged_damage_type,
+		ranged_damage_icon = s.info.ranged_damage_icon,
+
+        armor = armor,
+        magic_armor = magic_armor,
+		dodge = dodge,
+		dodge_chance = dodge_chance,			
+        respawn = s.health.dead_lifetime,
+        no_ranged = no_ranged,
+		yes_melee = yes_melee
+    }
 end
 
 function scripts.tower_demon_pit.update(this, store, script)
@@ -34399,38 +34776,73 @@ function scripts.tower_rocket_gunners.get_info(this)
 	end
 
 	local s_info = s.info.fn(s)
-	local attacks
+    local attacks, damage_type
+    local min, max
+	local yes_melee = true
+    local no_ranged = true
+	local dodge_chance
+	local dodge = nil
 
-	if s.melee and s.melee.attacks then
-		attacks = s.melee.attacks
-	elseif s.ranged and s.ranged.attacks then
-		attacks = s.ranged.attacks
+    if s.melee and s.melee.attacks then
+        attacks = s.melee.attacks
+        for _, a in pairs(attacks) do
+            if a.damage_min then
+                min, max = a.damage_min, a.damage_max
+                damage_type = a.damage_type
+                break
+            end
+        end
+        if s.unit and min then
+            min, max = min * s.unit.damage_factor, max * s.unit.damage_factor
+        end
+
+        if min and max then
+            min, max = math.ceil(min), math.ceil(max)
+        end
+    end
+
+    local ranged_min, ranged_max
+    local ranged_damage_type = DAMAGE_PHYSICAL
+
+	local ar = s.ranged.attacks[1]
+	local b = E:get_template(ar.bullet)
+	ranged_min = b.bullet.damage_min_config[this.tower.level or 1]
+	ranged_max = b.bullet.damage_max_config[this.tower.level or 1]
+
+    if ranged_damage_type then
+        no_ranged = false
+    end
+
+	if s.dodge then
+		dodge = true
+		dodge_chance = s.dodge.chance
 	end
 
-	local min, max
+	local armor = band(s.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or s.health.armor
+	local magic_armor = band(s.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or s.health.magic_armor
 
-	for _, a in pairs(attacks) do
-		if a.damage_min then
-			local damage_factor = this.tower.damage_factor
+    return {
+        type = STATS_TYPE_TOWER_BARRACK,
+        hp_max = s.health.hp_max,
 
-			min, max = a.damage_min * damage_factor, a.damage_max * damage_factor
+        damage_min = min,
+        damage_max = max,
+        damage_type = damage_type,
+		damage_icon = s.info.damage_icon,
 
-			break
-		end
-	end
+        ranged_damage_min = ranged_min,
+        ranged_damage_max = ranged_max,
+        ranged_damage_type = ranged_damage_type,
+		ranged_damage_icon = s.info.ranged_damage_icon,
 
-	if min and max then
-		min, max = math.ceil(min), math.ceil(max)
-	end
-
-	return {
-		type = STATS_TYPE_TOWER_BARRACK,
-		hp_max = s.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		armor = s.health.armor,
-		respawn = s.health.dead_lifetime
-	}
+        armor = armor,
+        magic_armor = magic_armor,
+		dodge = dodge,
+		dodge_chance = dodge_chance,			
+        respawn = s.health.dead_lifetime,
+        no_ranged = no_ranged,
+		yes_melee = yes_melee
+    }
 end
 
 function scripts.tower_rocket_gunners.update(this, store, script)
@@ -34586,6 +34998,87 @@ function scripts.tower_rocket_gunners.update(this, store, script)
 end
 
 scripts.soldier_tower_rocket_gunners = {}
+
+function scripts.soldier_tower_rocket_gunners.get_info(this, store)
+
+	--[[
+	if this.powers then
+		for pn, p in pairs(store.entities[this.soldier.tower_id].powers) do
+			for i = 1, p.level do
+				SU.soldier_power_upgrade(s, pn)
+			end
+		end
+	end
+	]]--
+
+    local attacks, damage_type
+    local min, max
+	local yes_melee = true
+    local no_ranged = true
+	local dodge_chance
+	local dodge = nil
+
+    if this.melee and this.melee.attacks then
+        attacks = this.melee.attacks
+        for _, a in pairs(attacks) do
+            if a.damage_min then
+                min, max = a.damage_min, a.damage_max
+                damage_type = a.damage_type
+                break
+            end
+        end
+        if this.unit and min then
+            min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
+        end
+
+        if min and max then
+            min, max = math.ceil(min), math.ceil(max)
+        end
+    end
+
+    local ranged_min, ranged_max
+    local ranged_damage_type = DAMAGE_PHYSICAL
+
+	local ar = this.ranged.attacks[1]
+	local b = E:get_template(ar.bullet)
+	ranged_min = b.bullet.damage_min_config[tonumber(string.sub(this.template_name,-1))]
+	ranged_max = b.bullet.damage_max_config[tonumber(string.sub(this.template_name,-1))]
+
+    if ranged_damage_type then
+        no_ranged = false
+    end
+
+	if this.dodge then
+		dodge = true
+		dodge_chance = this.dodge.chance
+	end
+
+	local armor = band(this.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or this.health.armor
+	local magic_armor = band(this.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or this.health.magic_armor
+
+    return {
+        type = STATS_TYPE_TOWER_BARRACK,
+        hp_max = this.health.hp_max,
+
+        damage_min = min,
+        damage_max = max,
+        damage_type = damage_type,
+		damage_icon = this.info.damage_icon,
+
+        ranged_damage_min = ranged_min,
+        ranged_damage_max = ranged_max,
+        ranged_damage_type = ranged_damage_type,
+		ranged_damage_icon = this.info.ranged_damage_icon,
+
+        armor = armor,
+        magic_armor = magic_armor,
+		dodge = dodge,
+		dodge_chance = dodge_chance,			
+        respawn = this.health.dead_lifetime,
+        no_ranged = no_ranged,
+		yes_melee = yes_melee
+    }
+end
 
 function scripts.soldier_tower_rocket_gunners.insert(this, store, script)
 	local tower = store.entities[this.soldier.tower_id]
@@ -37604,6 +38097,139 @@ function scripts.tower_ballista.update(this, store)
 		end
 	end
 end
+
+scripts.bullet_tower_ballista_skill_final_shot = {
+	update = function(this, store)
+
+		function find_enemies_around_line(x1, y1, x2, y2, d, flags, bans)
+
+			local function enemy_filter_simple(e, flags, bans)
+				return e.enemy and not e.health.dead and band(e.vis.bans, flags) == 0 and band(e.vis.flags, bans) == 0 and P:is_node_valid(e.nav_path.pi, e.nav_path.ni)
+			end
+			local result = {}
+			local dx = x2 - x1
+			local dy = y2 - y1
+			local theta = math.atan2(dy, dx)
+			local cos_theta = math.cos(theta)
+			local sin_theta = math.sin(theta)
+
+			local x1_ = sin_theta * x1 - cos_theta * y1
+			local y1_ = cos_theta * x1 + sin_theta * y1
+			local y2_ = cos_theta * x2 + sin_theta * y2
+
+			-- 确保 y1_ <= y2_
+			if y1_ > y2_ then
+				local tmp = y1_
+				y1_ = y2_
+				y2_ = tmp
+			end
+			local count = 0
+
+			for _, e in pairs(store.entities) do
+				if enemy_filter_simple(e, flags, bans) then
+					local hit_pos_x = e.pos.x + e.unit.hit_offset.x
+					local hit_pos_y = e.pos.y + e.unit.hit_offset.y
+					local hit_pos_x_ = sin_theta * hit_pos_x - cos_theta * hit_pos_y
+					local hit_pos_y_ = cos_theta * hit_pos_x + sin_theta * hit_pos_y
+
+					if hit_pos_y_ >= y1_ - d and hit_pos_y_ <= y2_ + d and hit_pos_x_ >= x1_ - d and hit_pos_x_ <= x1_ + d then
+						count = count + 1
+						result[count] = e
+					end
+				end
+			end
+
+			if count == 0 then
+				return nil
+			end
+
+			return result
+		end
+		local b = this.bullet
+		local s = this.render.sprites[1]
+		local source = store.entities[b.source_id]
+		local dest = b.to
+		local angle = math.atan2(dest.y - b.from.y, dest.x - b.from.x)
+
+		s.r = angle
+
+		local mods
+
+		if b.mod then
+			mods = type(b.mod) == "table" and b.mod or {b.mod}
+		elseif b.mods then
+			mods = b.mods
+		end
+
+		local radius = b.damage_radius
+		local dist = V.dist(dest.x, dest.y, b.from.x, b.from.y)
+
+		s.scale = V.v(dist / this.image_width, 1.35)
+
+		local function hit_target(target)
+			local d = SU.create_bullet_damage(b, target.id, this.id)
+
+			queue_damage(store, d)
+
+			for _, mod_name in ipairs(mods) do
+				local mod = E:create_entity(mod_name)
+
+				mod.modifier.source_id = this.id
+				mod.modifier.target_id = target.id
+				mod.modifier.level = b.level
+				mod.modifier.source_damage = d
+				mod.modifier.damage_factor = b.damage_factor
+
+				queue_insert(store, mod)
+			end
+
+			local fx = E:create_entity(b.hit_fx)
+
+			fx.pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+			fx.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, fx)
+
+			fx.render.sprites[1].r = angle
+		end
+
+		-- local targets = {}
+
+		s.ts = store.tick_ts
+
+		while store.tick_ts - s.ts < b.hit_time do
+			coroutine.yield()
+		end
+
+		local already_hit_target = false
+
+		while store.tick_ts - s.ts < this.ray_duration do
+			if source and not store.entities[source.id] then
+				queue_remove(store, this)
+
+				break
+			end
+
+			if not already_hit_target and store.tick_ts - s.ts > this.hit_delay then
+				local targets = find_enemies_around_line(b.from.x, b.from.y, dest.x, dest.y, radius, F_RANGED, F_NONE)
+
+				if targets then
+					for _, target in ipairs(targets) do
+						hit_target(target)
+					end
+				end
+
+				already_hit_target = true
+			end
+
+			coroutine.yield()
+
+			s.hidden = false
+		end
+
+		queue_remove(store, this)
+	end
+}
 
 scripts.bullet_tower_ballista = {}
 
@@ -61891,6 +62517,17 @@ function scripts.power_reinforcements_control_KR5.insert(this, store, script)
 
 		queue_insert(store, e)
 
+		if store.user_data.reinforcement_count and store.user_data.reinforcement_count ~= 0 then 
+			local e = E:create_entity("soldier_reinforcement_special_linirea")
+			local spawn_pos = U.point_on_ellipse(V.v(x, y), special_spawn_radius, math.pi / 2 - special_angle_offset)
+
+			e.pos = V.vclone(spawn_pos)
+			e.nav_rally.center = V.v(x, y)
+			e.nav_rally.pos = V.vclone(e.pos)
+			e.reinforcement.squad_id = this.id
+			queue_insert(store, e)
+		end
+
 		spawned_special = true
 	end
 
@@ -61906,6 +62543,17 @@ function scripts.power_reinforcements_control_KR5.insert(this, store, script)
 		e.reinforcement.squad_id = this.id
 
 		queue_insert(store, e)
+
+		if store.user_data.reinforcement_count and store.user_data.reinforcement_count ~= 0 then 
+			local e = E:create_entity("soldier_reinforcement_special_dark_army")
+			local spawn_pos = U.point_on_ellipse(V.v(x, y), special_spawn_radius, math.pi / 2 - special_angle_offset)
+
+			e.pos = V.vclone(spawn_pos)
+			e.nav_rally.center = V.v(x, y)
+			e.nav_rally.pos = V.vclone(e.pos)
+			e.reinforcement.squad_id = this.id
+			queue_insert(store, e)
+		end
 
 		spawned_special = true
 	end
@@ -62362,6 +63010,87 @@ end
 
 scripts.tower_dwarf = {}
 
+function scripts.tower_dwarf.get_info(this)
+	local s = E:create_entity(this.barrack.soldier_type)
+
+	if this.powers then
+		for pn, p in pairs(this.powers) do
+			for i = 1, p.level do
+				SU.soldier_power_upgrade(s, pn)
+			end
+		end
+	end
+
+	local s_info = s.info.fn(s)
+    local attacks, damage_type
+    local min, max
+	local yes_melee = true
+    local no_ranged = true
+	local dodge_chance
+	local dodge = nil
+
+    if s.melee and s.melee.attacks then
+        attacks = s.melee.attacks
+        for _, a in pairs(attacks) do
+            if a.damage_min then
+                min, max = a.damage_min, a.damage_max
+                damage_type = a.damage_type
+                break
+            end
+        end
+        if s.unit and min then
+            min, max = min * s.unit.damage_factor, max * s.unit.damage_factor
+        end
+
+        if min and max then
+            min, max = math.ceil(min), math.ceil(max)
+        end
+    end
+
+    local ranged_min, ranged_max
+    local ranged_damage_type = DAMAGE_PHYSICAL
+
+	local ar = s.ranged.attacks[1]
+	local b = E:get_template(ar.bullet)
+	ranged_min = b.bullet.damage_min_config[this.tower.level or 1]
+	ranged_max = b.bullet.damage_max_config[this.tower.level or 1]
+
+    if ranged_damage_type then
+        no_ranged = false
+    end
+
+	if s.dodge then
+		dodge = true
+		dodge_chance = s.dodge.chance
+	end
+
+	local armor = band(s.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or s.health.armor
+	local magic_armor = band(s.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or s.health.magic_armor
+
+    return {
+        type = STATS_TYPE_TOWER_BARRACK,
+        hp_max = s.health.hp_max,
+
+        damage_min = min,
+        damage_max = max,
+        damage_type = damage_type,
+		damage_icon = s.info.damage_icon,
+
+        ranged_damage_min = ranged_min,
+        ranged_damage_max = ranged_max,
+        ranged_damage_type = ranged_damage_type,
+		ranged_damage_icon = s.info.ranged_damage_icon,
+
+        armor = armor,
+        magic_armor = magic_armor,
+		dodge = dodge,
+		dodge_chance = dodge_chance,			
+        respawn = s.health.dead_lifetime,
+        no_ranged = no_ranged,
+		yes_melee = yes_melee
+    }
+end
+
 function scripts.tower_dwarf.update(this, store, script)
 	local tower_sid = 2
 	local door_sid = 3
@@ -62478,6 +63207,87 @@ function scripts.tower_dwarf.update(this, store, script)
 end
 
 scripts.soldier_tower_dwarf = {}
+
+function scripts.soldier_tower_dwarf.get_info(this, store)
+
+	--[[
+	if this.powers then
+		for pn, p in pairs(store.entities[this.soldier.tower_id].powers) do
+			for i = 1, p.level do
+				SU.soldier_power_upgrade(s, pn)
+			end
+		end
+	end
+	]]--
+
+    local attacks, damage_type
+    local min, max
+	local yes_melee = true
+    local no_ranged = true
+	local dodge_chance
+	local dodge = nil
+
+    if this.melee and this.melee.attacks then
+        attacks = this.melee.attacks
+        for _, a in pairs(attacks) do
+            if a.damage_min then
+                min, max = a.damage_min, a.damage_max
+                damage_type = a.damage_type
+                break
+            end
+        end
+        if this.unit and min then
+            min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
+        end
+
+        if min and max then
+            min, max = math.ceil(min), math.ceil(max)
+        end
+    end
+
+    local ranged_min, ranged_max
+    local ranged_damage_type = DAMAGE_PHYSICAL
+
+	local ar = this.ranged.attacks[1]
+	local b = E:get_template(ar.bullet)
+	ranged_min = b.bullet.damage_min_config[tonumber(string.sub(this.template_name,-1))]
+	ranged_max = b.bullet.damage_max_config[tonumber(string.sub(this.template_name,-1))]
+
+    if ranged_damage_type then
+        no_ranged = false
+    end
+
+	if this.dodge then
+		dodge = true
+		dodge_chance = this.dodge.chance
+	end
+
+	local armor = band(this.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or this.health.armor
+	local magic_armor = band(this.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or this.health.magic_armor
+
+    return {
+        type = STATS_TYPE_TOWER_BARRACK,
+        hp_max = this.health.hp_max,
+
+        damage_min = min,
+        damage_max = max,
+        damage_type = damage_type,
+		damage_icon = this.info.damage_icon,
+
+        ranged_damage_min = ranged_min,
+        ranged_damage_max = ranged_max,
+        ranged_damage_type = ranged_damage_type,
+		ranged_damage_icon = this.info.ranged_damage_icon,
+
+        armor = armor,
+        magic_armor = magic_armor,
+		dodge = dodge,
+		dodge_chance = dodge_chance,			
+        respawn = this.health.dead_lifetime,
+        no_ranged = no_ranged,
+		yes_melee = yes_melee
+    }
+end
 
 function scripts.soldier_tower_dwarf.insert(this, store)
 	if scripts.soldier_barrack.insert(this, store) then
@@ -62903,7 +63713,7 @@ end
 scripts.kr4_elven_warrior = {}
 function scripts.kr4_elven_warrior.on_damage(this, store, damage)
 	if not this.dodge or this.dodge.chance <= 0 or this.unit.is_stunned or this.health.dead or 
-	band(damage.damage_type, DAMAGE_ALL_TYPES, bnot(bor(DAMAGE_PHYSICAL, DAMAGE_MAGICAL, DAMAGE_TRUE, DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL))) ~= 0 or 
+	band(damage.damage_type, DAMAGE_ALL_TYPES, bnot(bor(DAMAGE_PHYSICAL, DAMAGE_MAGICAL, DAMAGE_TRUE, DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL, DAMAGE_SHOT))) ~= 0 or 
 	band(damage.damage_type, DAMAGE_NO_DODGE) ~= 0 or this.dodge.chance < math.random() then
 		return true
 	end

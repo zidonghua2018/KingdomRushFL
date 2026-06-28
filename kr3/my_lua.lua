@@ -1103,11 +1103,12 @@ function scripts.mod_denas_tower99.insert(this, store)
 		return false
 	end
 
-	if this.range_factor then
+	---
+	if this.range_factor and target.attacks then
 		target.attacks.range = target.attacks.range * this.range_factor
 	end
 
-	if this.cooldown_factor and target.attacks.list[1] and target.attacks.list[1].cooldown then
+	if this.cooldown_factor and target.attacks and target.attacks.list[1] and target.attacks.list[1].cooldown then
 		target.attacks.list[1].cooldown = target.attacks.list[1].cooldown * this.cooldown_factor
 
 		if target.attacks.min_cooldown then
@@ -2018,6 +2019,10 @@ function scripts.ray_tesla99.update(this, store)
 					log.paranoid("ray_tesla bounce from %s to %s dist:%s", target.id, bounce_target.id, V.dist(dest.x, dest.y, bounce_target.pos.x, bounce_target.pos.y))
 
 					local r = E:create_entity(this.template_name)
+					if UP:get_upgrade("engineer_efficiency") then
+						this.bounce_damage_factor_inc = 0
+						this.bounce_damage_factor_min = 1
+					end
 
 					r.pos = V.vclone(dest)
 					r.bullet.to = V.vclone(bounce_target.pos)

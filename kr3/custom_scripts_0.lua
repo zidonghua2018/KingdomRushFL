@@ -228,6 +228,86 @@ local function y_hero_ranged_attacks(store, hero)
 	end
 end
 
+scripts.basic_spawner = {}
+function scripts.basic_spawner.update(this, store, script)
+	local sp = this.spawner
+
+	while true do
+		SU.mixed_entity_play_animation(this, sp.animations[1], store.tick_ts,
+		sp.facing_point, true)
+		if sp.spawn_data then
+
+			sp.spawn_data = nil
+
+			SU.mixed_entity_play_animation(this, sp.animations[2], store.tick_ts,
+				sp.facing_point)
+			SU.mixed_entity_play_animation(this, sp.animations[3], store.tick_ts,
+				sp.facing_point)
+		else
+			SU.mixed_entity_animation_wait(this, sp.animations[1])
+		end
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.controller_bullet_hit_payload_delay = {}
+function scripts.controller_bullet_hit_payload_delay.update(this, store, script)
+	if not this.delays or not this.entities or #this.delays ~= #this.entities then
+		queue_remove(store, this)
+		return
+	end
+
+	local b = this.bullet
+	local start_ts = this.start_ts or store.tick_ts
+	local function insert_entity()
+		local delay = this.delays[1]
+		if delay + start_ts <= store.tick_ts then
+			local entity = this.entities[1]
+			table.remove(this.delays, 1)
+			table.remove(this.entities, 1)
+			if entity.render then
+				for i, s in pairs(entity.render.sprites) do
+					s.ts = store.tick_ts
+				end
+			end
+			if entity.tween and not entity.tween.disabled then
+				entity.tween.ts = store.tick_ts
+			end
+			if entity.pos and entity.pos.x == 0 and entity.pos.y == 0 then
+				entity.pos.x, entity.pos.y = this.pos.x, this.pos.y
+			end
+			SU.set_entity_level(entity, b.level)
+			if entity.aura then
+				entity.aura.target_id = b.target_id
+				entity.aura.source_id = b.source_id
+			else
+				entity.target_id = b.target_id
+				entity.source_id = b.source_id
+			end
+			if entity.nav_rally and entity.pos then
+				local npos = V.vclone(entity.pos)
+				entity.nav_rally.center = npos
+				entity.nav_rally.pos = npos
+				entity.nav_rally.new = false
+			end
+			queue_insert(store, entity)
+			if #this.delays > 0 then
+				this.delays[1] = delay + this.delays[1]
+				insert_entity()
+			end
+		end
+	end
+
+	while #this.delays > 0 do
+		insert_entity()
+		coroutine.yield()
+	end
+	queue_remove(store, this)
+end
+
 scripts.entities_delay_controller = {}
 function scripts.entities_delay_controller.update(this, store, script)
 	if not this.delays or not this.entities or #this.delays ~= #this.entities then
@@ -1707,9 +1787,9 @@ end
 
 scripts.kr4_enemy_mixed = {}
 function scripts.kr4_enemy_mixed.update(this, store, script)
-	local function check_unit_attack(store, this, a)
+	local function check_unit_attack(store, this, a, aaaa)
 		if SU.check_unit_attack_available(store, this, a) then
-			return SU.entity_attacks(store, this, a)
+			return SU.entity_attacks(store, this, a, aaaa)
 		end
 		return false
 	end
@@ -1717,7 +1797,9 @@ function scripts.kr4_enemy_mixed.update(this, store, script)
 	local walk_break_fn = function(store, this)
 		if this.timed_attacks then
 			for i, a in ipairs(this.timed_attacks.list) do
-				return check_unit_attack(store, this, a)
+				if check_unit_attack(store, this, a, i) then
+					return true
+				end
 			end
 		end
 		return false
@@ -1737,7 +1819,7 @@ function scripts.kr4_enemy_mixed.update(this, store, script)
 	local ranged_break_fn = function(store, this)
 		if this.timed_attacks then
 			for i, a in ipairs(this.timed_attacks.list) do
-				if a.ranged_break and check_unit_attack(store, this, a) then
+				if a.ranged_break and check_unit_attack(store, this, a, aaaa) then
 					return true
 				end
 			end

@@ -46,7 +46,8 @@ return {
         a_size = {2048,2048},
         f_quad = {849,1482,60,51},
         alias = {}
-    },
+    }, 
+--[[   
     base = {
         a_name = "gui_common-0.png",
         size = {740,90},
@@ -55,6 +56,15 @@ return {
         f_quad = {675,517,686,86},
         alias = {}
     },
+  ]]-- 
+    base = {
+        a_name = "gui_common-2.dds",
+        size = {1022,90},
+        trim = {40,4,14,0},
+        a_size = {2048,2048},
+        f_quad = {425,1812,968,86},
+        alias = {}
+    }, 
     base_info_bar = {
         a_name = "gui_common-0.png",
         size = {150,18},
@@ -106,14 +116,14 @@ return {
 	base_info_icons_0014 = {
 		a_name = "gui_common-1.png",
 		size = {
-			22,
+			28,
 			22
 		},
 		trim = {
-			1,
-            1,
-            1,
-            1
+			0,
+            -3,
+            0,
+            -3
 		},
 		a_size = {
 			2048,
@@ -122,22 +132,22 @@ return {
 		f_quad = {
 			2015,
 			1130,
-			20,
-			20
+			28,
+			28
 		},
 		alias = {},
 	},
-	base_info_icons_0015 = {
+	base_info_icons_0018 = {
 		a_name = "gui_common-1.png",
 		size = {
-			22,
+			28,
 			22
 		},
 		trim = {
-			1,
-            1,
-            1,
-            0
+			0,
+            -3,
+            0,
+            -3
 		},
 		a_size = {
 			2048,
@@ -145,23 +155,23 @@ return {
 		},
 		f_quad = {
 			2015,
-			1155,
-			20,
-			21
+			1305,
+			28,
+			28
 		},
 		alias = {},
 	},        
 	base_info_icons_0016 = {
 		a_name = "gui_common-1.png",
 		size = {
-			22,
+			28,
 			22
 		},
 		trim = {
-			1,
-            1,
-            1,
-            1
+			0,
+            -3,
+            0,
+            -3
 		},
 		a_size = {
 			2048,
@@ -169,9 +179,9 @@ return {
 		},
 		f_quad = {
 			2015,
-			1180,
-			20,
-			20
+			1190,
+			28,
+			28
 		},
 		alias = {},
 	}, 
@@ -199,7 +209,7 @@ return {
 		},
 		alias = {},
 	},
-	base_info_icons_0018 = {
+	base_info_icons_0015 = {
 		a_name = "gui_common-1.png",
 		size = {
 			22,
@@ -250,14 +260,14 @@ return {
 	base_info_icons_0020 = {
 		a_name = "gui_common-1.png",
 		size = {
-			22,
+			28,
 			22
 		},
 		trim = {
-			1,
+			0,
+            -3,
             0,
-            1,
-            0
+            -3
 		},
 		a_size = {
 			2048,
@@ -265,12 +275,36 @@ return {
 		},
 		f_quad = {
 			2015,
-			1202,
-			20,
-			22
+			1160,
+			28,
+			28
 		},
 		alias = {},
-	},                       
+	},
+	base_info_icons_0021 = {
+		a_name = "gui_common-1.png",
+		size = {
+			28,
+			22
+		},
+		trim = {
+			4,
+			-2,
+			5,
+			-3
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2015,
+			1340,
+			19,
+			27
+		},
+		alias = {}
+	},                           
     button_continue_chains = {
         a_name = "gui_common-0.png",
         size = {220,124},

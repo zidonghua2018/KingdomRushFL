@@ -1,4 +1,1660 @@
 local a = {
+	goblin_0001 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			12,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			660,
+			570,
+			24,
+			28
+		},
+		alias = {
+			"goblin_0002"
+		}
+	},
+	goblin_0003 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			21,
+			9,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			539,
+			652,
+			25,
+			31
+		},
+		alias = {
+			"goblin_0004"
+		}
+	},
+	goblin_0005 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			8,
+			21,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			503,
+			961,
+			25,
+			32
+		},
+		alias = {
+			"goblin_0006"
+		}
+	},
+	goblin_0007 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			21,
+			8,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			539,
+			538,
+			25,
+			32
+		},
+		alias = {}
+	},
+	goblin_0008 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			21,
+			9,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			539,
+			689,
+			25,
+			31
+		},
+		alias = {
+			"goblin_0009"
+		}
+	},
+	goblin_0010 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			13,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			780,
+			570,
+			24,
+			27
+		},
+		alias = {
+			"goblin_0011"
+		}
+	},
+	goblin_0012 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			12,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			690,
+			570,
+			24,
+			28
+		},
+		alias = {
+			"goblin_0013"
+		}
+	},
+	goblin_0014 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			21,
+			9,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			539,
+			726,
+			25,
+			31
+		},
+		alias = {
+			"goblin_0015"
+		}
+	},
+	goblin_0016 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			8,
+			21,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			539,
+			576,
+			25,
+			32
+		},
+		alias = {
+			"goblin_0017"
+		}
+	},
+	goblin_0018 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			23,
+			8,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1001,
+			351,
+			23,
+			32
+		},
+		alias = {}
+	},
+	goblin_0019 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			9,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			570,
+			763,
+			24,
+			31
+		},
+		alias = {
+			"goblin_0020"
+		}
+	},
+	goblin_0021 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			13,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			810,
+			570,
+			24,
+			27
+		},
+		alias = {
+			"goblin_0022"
+		}
+	},
+	goblin_0023 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			13,
+			21,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			539,
+			940,
+			25,
+			27
+		},
+		alias = {
+			"goblin_0024"
+		}
+	},
+	goblin_0025 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			11,
+			21,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			539,
+			836,
+			25,
+			29
+		},
+		alias = {
+			"goblin_0026"
+		}
+	},
+	goblin_0027 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			10,
+			21,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			539,
+			800,
+			25,
+			30
+		},
+		alias = {
+			"goblin_0028"
+		}
+	},
+	goblin_0029 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			9,
+			21,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			539,
+			763,
+			25,
+			31
+		},
+		alias = {}
+	},
+	goblin_0030 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			12,
+			21,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			539,
+			906,
+			25,
+			28
+		},
+		alias = {
+			"goblin_0031"
+		}
+	},
+	goblin_0032 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			15,
+			21,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			503,
+			999,
+			25,
+			25
+		},
+		alias = {
+			"goblin_0033"
+		}
+	},
+	goblin_0034 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			13,
+			21,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			539,
+			973,
+			25,
+			27
+		},
+		alias = {
+			"goblin_0035"
+		}
+	},
+	goblin_0036 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			9,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			570,
+			800,
+			24,
+			31
+		},
+		alias = {
+			"goblin_0037"
+		}
+	},
+	goblin_0038 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			21,
+			8,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			539,
+			614,
+			25,
+			32
+		},
+		alias = {
+			"goblin_0039"
+		}
+	},
+	goblin_0040 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			8,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			570,
+			649,
+			24,
+			32
+		},
+		alias = {}
+	},
+	goblin_0041 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			21,
+			11,
+			21,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			503,
+			926,
+			26,
+			29
+		},
+		alias = {
+			"goblin_0042"
+		}
+	},
+	goblin_0043 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			21,
+			14,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			570,
+			538,
+			25,
+			26
+		},
+		alias = {
+			"goblin_0044"
+		}
+	},
+	goblin_0045 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			12,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			720,
+			570,
+			24,
+			28
+		},
+		alias = {
+			"goblin_0046"
+		}
+	},
+	goblin_0047 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			11,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			570,
+			910,
+			24,
+			29
+		},
+		alias = {
+			"goblin_0048"
+		}
+	},
+	goblin_0049 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			10,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			570,
+			874,
+			24,
+			30
+		},
+		alias = {
+			"goblin_0050"
+		}
+	},
+	goblin_0051 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			8,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			570,
+			687,
+			24,
+			32
+		},
+		alias = {}
+	},
+	goblin_0052 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			11,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			570,
+			945,
+			24,
+			29
+		},
+		alias = {
+			"goblin_0053"
+		}
+	},
+	goblin_0054 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			14,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			632,
+			538,
+			24,
+			26
+		},
+		alias = {
+			"goblin_0055"
+		}
+	},
+	goblin_0056 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			12,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			750,
+			570,
+			24,
+			28
+		},
+		alias = {
+			"goblin_0057"
+		}
+	},
+	goblin_0058 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			9,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			570,
+			837,
+			24,
+			31
+		},
+		alias = {
+			"goblin_0059"
+		}
+	},
+	goblin_0060 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			8,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			570,
+			725,
+			24,
+			32
+		},
+		alias = {
+			"goblin_0061"
+		}
+	},
+	goblin_0062 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			7,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			570,
+			610,
+			24,
+			33
+		},
+		alias = {}
+	},
+	goblin_0063 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			21,
+			11,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			539,
+			871,
+			25,
+			29
+		},
+		alias = {
+			"goblin_0064"
+		}
+	},
+	goblin_0065 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			21,
+			14,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			601,
+			538,
+			25,
+			26
+		},
+		alias = {
+			"goblin_0066"
+		}
+	},
+	goblin_0067 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			11,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			570,
+			980,
+			24,
+			29
+		},
+		alias = {
+			"goblin_0068",
+			"goblin_0069"
+		}
+	},
+	goblin_0070 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			11,
+			7,
+			23,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			547,
+			403,
+			34,
+			33
+		},
+		alias = {
+			"goblin_0071"
+		}
+	},
+	goblin_0072 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			10,
+			7,
+			23,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			920,
+			351,
+			35,
+			33
+		},
+		alias = {
+			"goblin_0073"
+		}
+	},
+	goblin_0074 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			9,
+			7,
+			23,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			343,
+			852,
+			36,
+			33
+		},
+		alias = {
+			"goblin_0075",
+			"goblin_0076"
+		}
+	},
+	goblin_0077 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			17,
+			4,
+			13,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			835,
+			302,
+			38,
+			36
+		},
+		alias = {
+			"goblin_0078"
+		}
+	},
+	goblin_0079 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			17,
+			4,
+			13,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			879,
+			302,
+			38,
+			36
+		},
+		alias = {}
+	},
+	goblin_0080 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			24,
+			17,
+			17,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			973,
+			497,
+			27,
+			23
+		},
+		alias = {}
+	},
+	goblin_0081 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			24,
+			16,
+			17,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			995,
+			51,
+			27,
+			24
+		},
+		alias = {}
+	},
+	goblin_0082 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			11,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			600,
+			570,
+			24,
+			29
+		},
+		alias = {}
+	},
+	goblin_0083 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			11,
+			17,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			834,
+			497,
+			29,
+			35
+		},
+		alias = {}
+	},
+	goblin_0084 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			11,
+			17,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			503,
+			842,
+			29,
+			36
+		},
+		alias = {}
+	},
+	goblin_0085 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			6,
+			14,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			694,
+			447,
+			32,
+			41
+		},
+		alias = {
+			"goblin_0086"
+		}
+	},
+	goblin_0087 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			19,
+			4,
+			13,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			923,
+			302,
+			36,
+			43
+		},
+		alias = {
+			"goblin_0088"
+		}
+	},
+	goblin_0089 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			19,
+			6,
+			13,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			343,
+			760,
+			36,
+			41
+		},
+		alias = {}
+	},
+	goblin_0090 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			18,
+			6,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			523,
+			302,
+			39,
+			41
+		},
+		alias = {}
+	},
+	goblin_0091 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			18,
+			4,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			343,
+			302,
+			39,
+			43
+		},
+		alias = {}
+	},
+	goblin_0092 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			4,
+			14,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			504,
+			447,
+			32,
+			43
+		},
+		alias = {}
+	},
+	goblin_0093 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			5,
+			14,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			542,
+			447,
+			32,
+			42
+		},
+		alias = {
+			"goblin_0094",
+			"goblin_0095",
+			"goblin_0096",
+			"goblin_0097",
+			"goblin_0098",
+			"goblin_0099",
+			"goblin_0100",
+			"goblin_0101"
+		}
+	},
+	goblin_0102 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			3,
+			14,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			427,
+			844,
+			32,
+			44
+		},
+		alias = {
+			"goblin_0103"
+		}
+	},
+	goblin_0104 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			11,
+			17,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			503,
+			884,
+			29,
+			36
+		},
+		alias = {}
+	},
+	goblin_0105 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			11,
+			22,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			570,
+			570,
+			24,
+			34
+		},
+		alias = {}
+	},
+	goblin_0106 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			22,
+			11,
+			22,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			630,
+			570,
+			24,
+			29
+		},
+		alias = {}
+	},
+	goblin_0107 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			6,
+			8,
+			30,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			897,
+			403,
+			32,
+			31
+		},
+		alias = {}
+	},
+	goblin_0108 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			4,
+			7,
+			33,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			651,
+			497,
+			31,
+			32
+		},
+		alias = {}
+	},
+	goblin_0109 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			2,
+			9,
+			36,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			798,
+			497,
+			30,
+			30
+		},
+		alias = {}
+	},
+	goblin_0110 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			4,
+			20,
+			33,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			427,
+			994,
+			31,
+			27
+		},
+		alias = {}
+	},
+	goblin_0111 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			2,
+			27,
+			33,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			744,
+			403,
+			33,
+			19
+		},
+		alias = {
+			"goblin_0112"
+		}
+	},
+	goblin_0113 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			1,
+			24,
+			33,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			587,
+			403,
+			34,
+			23
+		},
+		alias = {
+			"goblin_0114",
+			"goblin_0115",
+			"goblin_0116",
+			"goblin_0117",
+			"goblin_0118",
+			"goblin_0119"
+		}
+	},
+	goblin_0120 = {
+		a_name = "go_enemies_grass-1.png",
+		size = {
+			68,
+			48
+		},
+		trim = {
+			1,
+			24,
+			35,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			935,
+			403,
+			32,
+			23
+		},
+		alias = {}
+	},
 	["warmongers_rocket_shooter_proyectile_lvl1"] = {
 		a_name = "go_towers_rocket_riders.dds",
 		size = {

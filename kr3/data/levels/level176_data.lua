@@ -477,7 +477,7 @@ return {
 	},
 	required_sounds = {
 		--"kr1_common",
-		"sounds_stage186",
+		"sounds_stage176",
 		"HalloweenSounds",
 	},
 	required_textures = {

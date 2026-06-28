@@ -3517,6 +3517,17 @@ local sounds = {
 			"kr1_sfx_tenshi_teleport_v1_15db.ogg",
 		},
 	},
+	NetSound = {
+		source_group = "BULLETS",
+		loop = false,
+		files = {
+			"Sound_ArrowRelease3.ogg"
+		},
+		gain = {
+			0.65,
+			0.8
+		}
+	},	
 }
 
 return {

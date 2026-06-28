@@ -1175,6 +1175,11 @@ local a = {
 		to = 22,
 		from = 1
 	},
+	goblin_running = {
+		prefix = "goblin",
+		to = 22,
+		from = 1
+	},
 	goblin_walkingUp = {
 		prefix = "goblin",
 		to = 44,

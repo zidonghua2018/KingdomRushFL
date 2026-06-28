@@ -2781,7 +2781,23 @@ tt.tower_holder.preview_items = {
 		name = "g1_tower_preview_mage",
 		offset = v(0, 30)
 	},
-
+	--征服	
+	archer_v = {
+		name = "tower_archer_v_preview",
+		offset = v(0, 37)
+	},
+	engineer_v = {
+		name = "tower_artillery_v_preview",
+		offset = v(0, 41)
+	},
+	barrack_v = {
+		name = "tower_barrack_v_preview",
+		offset = v(0, 38)
+	},
+	mage_v = {
+		name = "tower_mage_v_preview",
+		offset = v(0, 30)
+	},
 	-- 五代塔
 	royal_archers = {
 		name = "royal_archer_tower_preview",
@@ -2862,6 +2878,10 @@ tt.tower_holder.preview_items = {
 	pandas = {
 		name = "tower_pandas_tower_preview",
 		offset = v(0, 10),
+	},
+	dragons = {
+		name = "tower_dragons_preview",
+		offset = v(0, 10)
 	},
 	-- 四代塔
 	twilight_elves_barrack = {
@@ -3065,7 +3085,7 @@ tt.render.sprites[3].angles.shoot = {
 tt.render.sprites[3].offset = v(0, 42)
 tt.main_script.insert = scripts.tower_archer_kro.insert
 tt.main_script.update = scripts.tower_archer_kro.update
-tt.main_script.remove = scripts.tower_archer_kro.remove
+tt.main_script.remove = scripts.tower_archer.remove
 tt.attacks.range = 160
 tt.attacks.list[1] = E:clone_c("bullet_attack")
 tt.attacks.list[1].bullet = "arrow_1"
@@ -3126,11 +3146,13 @@ tt.powers.burst = E:clone_c("power")
 tt.powers.burst.price_base = 200
 tt.powers.burst.price_inc = 200
 tt.powers.burst.attack_idx = 2
+tt.powers.burst.extra_arrows = {1,1,1}
 tt.powers.burst.enc_icon = 2
 tt.powers.slumber = E:clone_c("power")
 tt.powers.slumber.price_base = 180
 tt.powers.slumber.price_inc = 180
 tt.powers.slumber.attack_idx = 3
+tt.powers.slumber.extra_arrows = {2,4,6}
 tt.powers.slumber.enc_icon = 1
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrains_%04i"
@@ -3775,6 +3797,45 @@ for i = 1, 10 do
 	tt.tween.props[#tt.tween.props + 1] = t
 end
 
+tt = E:register_t("aura_timelapse", "decal_scripted")
+
+E:add_comps(tt, "render", "tween")
+tt.level = 1
+tt.damage_factor = {0, 1, 3}
+tt.radius = 180
+tt.ground_raidus = 30
+tt.shield_fx = "fx_bolt_high_elven_strong_hit"
+
+tt.render.sprites[1].prefix = "warden_shield"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].scale = v(4,4)
+tt.render.sprites[1].offset = v(0,25)
+tt.render.sprites[1].sort_y_offset = -1
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "mage_highElven_energyBall_shadow"
+tt.render.sprites[2].z = Z_DECALS
+tt.render.sprites[2].anchor.y = 0.16666666666666666
+tt.tween.remove = false
+tt.tween.props[1].keys = {
+	{
+		0,
+		0
+	},
+	{
+		fts(10),
+		0
+	},
+	{
+		fts(15),
+		127
+	}
+}
+tt.tween.props[1].sprite_id = 2
+tt.main_script.update = scripts.force_shield.update
+tt.duration = 6
+
 tt = E:register_t("tower_high_elven", "tower")
 
 E:add_comps(tt, "attacks", "powers", "tween")
@@ -3805,6 +3866,7 @@ tt.attacks.list[1].shoot_time = fts(30)
 tt.attacks.list[2] = E:clone_c("spell_attack")
 tt.attacks.list[2].animation = "timelapse"
 tt.attacks.list[2].spell = "mod_timelapse"
+tt.attacks.list[2].custom_aura = "aura_timelapse"
 tt.attacks.list[2].cooldown = 16
 tt.attacks.list[2].shoot_time = fts(5)
 tt.attacks.list[2].vis_flags = bor(F_RANGED)
@@ -3813,6 +3875,7 @@ tt.attacks.list[2].sound = "TowerHighMageTimecast"
 tt.attacks.list[3] = E:clone_c("custom_attack")
 tt.powers.timelapse = E:clone_c("power")
 tt.powers.timelapse.attack_idx = 2
+tt.powers.timelapse.duration = {6,11,16}
 tt.powers.timelapse.price_base = 225
 tt.powers.timelapse.price_inc = 225
 tt.powers.timelapse.target_count = {
@@ -4282,18 +4345,6 @@ tt.render.sprites[2].name = "barracks_towers_layer1_0051"
 tt.render.sprites[3].prefix = "tower_barrack_3_door"
 tt.tower.level = 3
 tt.tower.price = 250
-tt = E:register_t("tower_barrack_3_a", "tower_barrack_3")
-tt.tower.price = 0
-tt.tower.level = 1
-tt.tower.type = "tower_barrack_3_a"
-tt.tower.kind = TOWER_KIND_BARRACK
-tt.barrack.rally_range = 160
-tt = E:register_t("tower_barrack_3_b", "tower_barrack_3")
-tt.tower.price = 0
-tt.tower.level = 1
-tt.tower.type = "tower_barrack_3_b"
-tt.tower.kind = TOWER_KIND_BARRACK
-tt.barrack.rally_range = 160
 
 tt = E:register_t("tower_blade", "tower_barrack_1")
 
@@ -5155,6 +5206,7 @@ tt.unit.hide_after_death = true
 tt.vis.flags = bor(tt.vis.flags, F_HERO)
 --tt.vis.bans = bor(F_POISON, F_NET, F_STUN, F_BURN, F_DRIDER_POISON)
 tt.vis.bans = bor(F_POISON, F_NET, F_STUN, F_BURN, F_DRIDER_POISON, F_DRILL, F_INSTAKILL, F_DISINTEGRATED) --新增免疫秒杀
+
 tt = RT("rabbit_kamihare", "decal_scripted")
 
 AC(tt, "nav_path", "motion", "custom_attack")
@@ -6379,7 +6431,8 @@ tt.health_bar.offset = v(0, 39)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_arivan.level_up
 tt.hero.tombstone_show_time = fts(90)
---tt.info.damage_icon = "magic"
+tt.info.damage_icon = "sword"
+tt.info.ranged_damage_icon = "magic"
 tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.i18n_key = "HERO_ELVES_ELEMENTALIST"
 tt.info.hero_portrait = "hero_portraits_0002"
@@ -6991,7 +7044,7 @@ tt.delay_per_idx = 0.13
 tt.hit_time = fts(4)
 tt.main_script.update = scripts.mod_regson_slash.update
 tt.modifier.duration = fts(11)
-tt.render.sprites[1].name = "fx_regson_slash"
+tt.render.sprites[1].name = "hero_jigou_special_effect_run"
 tt.render.sprites[1].sort_y_offset = -2
 tt.render.sprites[1].loop = false
 tt = E:register_t("hero_regson_ultimate")
@@ -7214,7 +7267,8 @@ tt.hero.tombstone_show_time = nil
 tt.hero.use_custom_spawn_point = true
 tt.idle_flip.cooldown = 10
 tt.drag_line_origin_offset = v(0, 127)
---tt.info.damage_icon = "magic"
+tt.info.damage_icon = "sword"
+tt.info.ranged_damage_icon = "magic"
 tt.info.fn = scripts.hero_faustus.get_info
 tt.info.hero_portrait = "hero_portraits_0009"
 tt.info.i18n_key = "HERO_ELVES_FAUSTUS"
@@ -8168,7 +8222,8 @@ tt.health_bar.offset = v(0, 45)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_catha.level_up
 tt.hero.tombstone_show_time = fts(90)
---tt.info.damage_icon = "arrow"
+tt.info.damage_icon = "sword"
+tt.info.ranged_damage_icon = "arrow"
 tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.hero_portrait = "hero_portraits_0003"
 tt.info.portrait = "info_portraits_heroes_0003"
@@ -8823,7 +8878,8 @@ tt.health_bar.offset = v(0, 41)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_veznan.level_up
 tt.hero.tombstone_show_time = fts(90)
---tt.info.damage_icon = "magic"
+tt.info.damage_icon = "sword"
+tt.info.ranged_damage_icon = "magic"
 tt.info.fn = scripts.hero_basic.get_info_ranged
 tt.info.hero_portrait = "hero_portraits_0006"
 tt.info.i18n_key = "HERO_ELVES_VEZNAN"
@@ -10379,6 +10435,7 @@ tt.hero.use_custom_spawn_point = true
 tt.idle_flip.cooldown = 10
 tt.drag_line_origin_offset = v(0, 107)
 tt.info.damage_icon = "fireball"
+tt.info.ranged_damage_icon = "fireball"
 tt.info.fn = scripts.hero_phoenix.get_info
 tt.info.hero_portrait = "hero_portraits_0011"
 tt.info.i18n_key = "HERO_ELVES_PHOENIX"
@@ -10468,7 +10525,7 @@ tt.timed_attacks.list[2].enemies_vis_flags = F_RANGED
 tt.timed_attacks.list[2].enemies_vis_bans = bor(F_FLYING)
 tt.selfdestruct.animation = "suicide"
 tt.selfdestruct.damage_radius = 80
-tt.selfdestruct.damage_type = DAMAGE_PHYSICAL
+tt.selfdestruct.damage_type = DAMAGE_FIREBALL
 tt.selfdestruct.damage_max = nil
 tt.selfdestruct.damage_min = nil
 tt.selfdestruct.disabled = true
@@ -10491,7 +10548,7 @@ tt.aura.damage_vis_bans = 0
 tt.aura.radius = 50
 tt.aura.hit_fx = "fx_phoenix_explosion"
 tt.aura.hit_decal = "decal_phoenix_ultimate"
-tt.aura.damage_type = DAMAGE_TRUE
+tt.aura.damage_type = DAMAGE_FIREBALL
 tt.aura.damage_max = nil
 tt.aura.damage_min = nil
 tt.can_fire_fn = scripts.hero_phoenix_ultimate.can_fire_fn
@@ -10722,7 +10779,8 @@ tt.hero.tombstone_show_time = nil
 tt.hero.use_custom_spawn_point = true
 tt.idle_flip.cooldown = 10
 tt.drag_line_origin_offset = v(0, 77)
---tt.info.damage_icon = "arrow"
+tt.info.damage_icon = "sword"
+tt.info.ranged_damage_icon = "rangedtrue"
 tt.info.fn = scripts.hero_wilbur.get_info
 tt.info.hero_portrait = "hero_portraits_0017"
 tt.info.i18n_key = "HERO_ELVES_GYRO"
@@ -10874,7 +10932,8 @@ tt.info.fn = scripts.hero_basic.get_info_melee
 tt.info.hero_portrait = "hero_portraits_0019"
 tt.info.i18n_key = "HERO_ARCHER"
 tt.info.portrait = "portraits_sc_0064"
---tt.info.damage_icon = "arrow"
+tt.info.damage_icon = "sword"
+tt.info.ranged_damage_icon = "arrow"
 tt.fixed_mode = nil
 tt.main_script.insert = scripts.hero_alleria.insert
 tt.main_script.update = mylua.hero_alleria99.update
@@ -15751,6 +15810,7 @@ tt.bullet.hit_fx = "fx_fiery_nut_explosion"
 tt.bullet.hit_decal = nil
 tt.render.sprites[1].name = "artillery_tree_proys_0002"
 tt.sound_events.hit = "TowerEntwoodFieryExplote"
+
 tt = E:register_t("arrow_soldier_barrack_2", "arrow")
 tt.bullet.damage_max = 7
 tt.bullet.damage_min = 3
@@ -16044,7 +16104,7 @@ tt.bullet.acceleration_factor = 0.05
 tt.bullet.damage_max = nil
 tt.bullet.damage_min = nil
 tt.bullet.damage_radius = nil
-tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.damage_type = DAMAGE_FIREBALL
 tt.bullet.first_retarget_range = 300
 tt.bullet.hit_fx = "fx_ray_phoenix_hit"
 tt.bullet.hit_fx_ignore_hit_offset = true
@@ -16665,7 +16725,7 @@ tt.custom_attack = CC("custom_attack")
 tt.custom_attack.radius = 90
 tt.custom_attack.damage_max = nil
 tt.custom_attack.damage_min = nil
-tt.custom_attack.damage_type = DAMAGE_TRUE
+tt.custom_attack.damage_type = DAMAGE_FIREBALL
 tt.custom_attack.vis_flags = F_RANGED
 tt.custom_attack.hit_fx = "fx_phoenix_explosion"
 tt = RT("aura_phoenix_purification", "aura")
@@ -16687,7 +16747,7 @@ tt.aura.cycles = 1
 tt.aura.damage_min = nil
 tt.aura.damage_max = nil
 tt.aura.damage_inc = nil
-tt.aura.damage_type = DAMAGE_TRUE
+tt.aura.damage_type = DAMAGE_FIREBALL
 tt.aura.radius = 45
 tt.aura.vis_bans = bor(F_FRIEND)
 tt.aura.mod = "mod_veznan_demon_fire"
@@ -18068,7 +18128,7 @@ tt.tween.props[2].sprite_id = 2
 tt.tween.remove = false
 tt = RT("mod_phoenix_egg", "mod_lava")
 tt.modifier.duration = 2
-tt.dps.damage_type = DAMAGE_TRUE
+tt.dps.damage_type = DAMAGE_FIREBALL
 tt.dps.damage_min = nil
 tt.dps.damage_max = nil
 tt.dps.damage_inc = 0
@@ -18088,7 +18148,7 @@ tt.custom_attack.fx_end = "fx_flaming_path_end"
 tt.custom_attack.hit_time = 0.1
 tt.custom_attack.mod = "mod_veznan_demon_fire"
 tt.custom_attack.radius = 125
-tt.custom_attack.damage_type = DAMAGE_TRUE
+tt.custom_attack.damage_type = DAMAGE_FIREBALL
 tt.custom_attack.sound = "ElvesHeroPhoenixRingOfFireExplode"
 tt.custom_attack.vis_flags = F_RANGED
 tt.custom_attack.vis_bans = F_FLYING
@@ -18167,6 +18227,9 @@ tt.render.sprites[1].size_names = {
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_DECALS
+
+tt = RT("mod_bolverk_scream_2", "mod_bolverk_scream")
+tt.modifier.duration = 12.15
 tt = E:register_t("mod_gnoll_burner", "modifier")
 
 E:add_comps(tt, "dps", "render", "mark_flags")
@@ -22294,6 +22357,7 @@ tt.info.fn = scripts.tower_baby_ashbite.get_info
 tt.info.portrait =  "info_portraits_towers_0019"
 tt.info.i18n_key = "ELVES_BABY_ASHBITE_TOWER"
 tt.info.damage_icon = "fireball"
+tt.info.ranged_damage_icon = "fireball"
 tt.render.sprites[1].name = "babyAshbite_tower_layer1_0001"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].offset = v(0, 26)
@@ -22351,7 +22415,8 @@ tt.tower.price = 250
 tt.info.fn = scripts.tower_baby_ashbite.get_info
 tt.info.portrait =  "info_portraits_towers_0019"
 tt.info.i18n_key = "ELVES_BABY_ASHBITE_TOWER"
-tt.info.damage_icon = "fireball"
+--tt.info.damage_icon = "fireball"
+--tt.info.ranged_damage_icon = "fireball"
 tt.render.sprites[1].name = "babyAshbite_tower_layer1_0001"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].offset = v(0, 26)
@@ -22405,7 +22470,8 @@ tt.drag_line_origin_offset = v(0, 85)
 tt.info.fn = scripts.soldier_baby_ashbite.get_info
 tt.info.portrait = "info_portraits_towers_0014"
 tt.info.i18n_key = "ELVES_BABY_ASHBITE"
-tt.info.damage_icon = "fireball"
+--tt.info.damage_icon = "fireball"
+--tt.info.ranged_damage_icon = "fireball"
 tt.main_script.insert = scripts.soldier_baby_ashbite.insert
 tt.main_script.update = scripts.soldier_baby_ashbite.update
 tt.motion.max_speed = 90
@@ -22487,7 +22553,7 @@ tt.render.sprites[1].name = "fireball_baby_ashbite"
 tt.render.sprites[1].z = Z_BULLETS
 tt.bullet.damage_min = 83
 tt.bullet.damage_max = 125
-tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.damage_type = DAMAGE_FIREBALL
 tt.bullet.damage_radius = 30
 tt.bullet.min_speed = 240
 tt.bullet.max_speed = 240
@@ -22537,7 +22603,7 @@ tt.aura.duration = fts(30)
 tt.aura.damage_inc = 16.666666666666668
 tt.aura.damage_min = 8.333333333333334
 tt.aura.damage_max = 8.333333333333334
-tt.aura.damage_type = DAMAGE_TRUE
+tt.aura.damage_type = DAMAGE_FIREBALL
 tt.aura.radius = 60
 tt.aura.cycle_time = fts(5)
 tt.aura.vis_bans = bor(F_FRIEND)
@@ -22578,7 +22644,7 @@ tt.aura.cycle_time = 0.25
 tt.aura.damage_inc = 25 * tt.aura.cycle_time / tt.aura.duration
 tt.aura.damage_min = 75 * tt.aura.cycle_time / tt.aura.duration
 tt.aura.damage_max = 75 * tt.aura.cycle_time / tt.aura.duration
-tt.aura.damage_type = DAMAGE_TRUE
+tt.aura.damage_type = DAMAGE_FIREBALL
 tt.aura.radius = 50
 tt.aura.vis_bans = bor(F_FRIEND)
 tt = E:register_t("mod_slow_baby_ashbite", "mod_slow")
@@ -24889,7 +24955,7 @@ tt.render.sprites[4] = table.deepclone(tt.render.sprites[3])
 tt.render.sprites[4].offset = v(-10, 10)
 tt.main_script.insert = scripts.tower_archer_kro.insert
 tt.main_script.update = scripts.tower_archer_kro.update
-tt.main_script.remove = scripts.tower_archer_kro.remove
+tt.main_script.remove = scripts.tower_archer.remove
 tt.attacks.range = 189
 tt.attacks.list[1] = E:clone_c("bullet_attack")
 tt.attacks.list[1].bullet = "arrow_ground_archer"
@@ -25113,7 +25179,7 @@ tt.render.sprites[4] = table.deepclone(tt.render.sprites[3])
 tt.render.sprites[4].offset = v(25, 52)
 tt.main_script.insert = scripts.tower_archer_kro.insert
 tt.main_script.update = scripts.tower_archer_kro.update
-tt.main_script.remove = scripts.tower_archer_kro.remove
+tt.main_script.remove = scripts.tower_archer.remove
 tt.attacks.range = 200
 tt.attacks.list[1] = E:clone_c("bullet_attack")
 tt.attacks.list[1].bullet = "spear_ewok"

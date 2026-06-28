@@ -18,7 +18,7 @@ return {
 		{
 			template = "decal_background",
 			["render.sprites[1].z"] = 1000,
-			["render.sprites[1].name"] = "stage_419",
+			["render.sprites[1].name"] = "Stage_169",
 			pos = {
 				x = 512,
 				y = 384
@@ -26,7 +26,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 475,
 				y = 588
@@ -40,7 +40,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 308,
 				y = 585
@@ -54,7 +54,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 357,
 				y = 447
@@ -68,7 +68,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 400,
 				y = 250
@@ -82,7 +82,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 669,
 				y = 586
@@ -96,7 +96,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 892,
 				y = 531
@@ -110,7 +110,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 569,
 				y = 178
@@ -124,7 +124,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 284,
 				y = 225
@@ -138,7 +138,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 845,
 				y = 466
@@ -152,7 +152,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 722,
 				y = 264
@@ -166,7 +166,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 878,
 				y = 255
@@ -180,7 +180,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 496,
 				y = 377
@@ -194,7 +194,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 645,
 				y = 437
@@ -208,7 +208,7 @@ return {
 		},
 		{
 			template = "tower_holder",
-			["tower.terrain_style"] = 405,
+			["tower.terrain_style"] = 2,
 			pos = {
 				x = 707,
 				y = 122
@@ -222,31 +222,36 @@ return {
 		},
 		{
 			template = "overcharge_crystal",
-			["tower.terrain_style"] = 405,
+			
 			pos = {
 				x = 287,
 				y = 407
 			},
+			--[[
+			["tower.terrain_style"] = 2,
 			["tower.default_rally_pos"] = {
 				x = 502,
 				y = 266
 			},
 			["ui.nav_mesh_id"] = "15",
 			["tower.holder_id"] = "15",
+			]]
 		},
 		{
 			template = "overcharge_crystal",
-			["tower.terrain_style"] = 405,
 			pos = {
 				x = 575,
 				y = 447
 			},
+			--[[
+			["tower.terrain_style"] = 2,
 			["tower.default_rally_pos"] = {
 				x = 502,
 				y = 266
 			},
 			["ui.nav_mesh_id"] = "16",
 			["tower.holder_id"] = "16",
+			]]
 		},
 		{
 			["editor.r"] = 1.5707963267948966,
@@ -409,6 +414,7 @@ return {
 			["render.sprites[1].name"] = "stage_19_mask_1",
 			["render.sprites[1].animated"] = false,
 		},
+		--[[
 		{
 			template = "touch",
 			pos = {
@@ -417,6 +423,7 @@ return {
 			},
 			["render.sprites[1].z"] = Z_DECALS,
 		},
+		]]
 	},
 	nav_mesh = {
 		{ 5, nil, 2, 16 },
@@ -435,5 +442,24 @@ return {
 		{ 11, 10, 7, nil },
 		{ 3, 2, nil, 8 },
 		{ 13, 5, 12, 10 },
+	},
+	level_mode_overrides = {
+        [3] = {
+            locked_hero = false,
+            locked_towers = {
+            },
+            max_upgrade_level = 5
+        }
+    },
+	required_sounds = {
+		"sounds_stage169",
+		"enemy_sapos"
+	},
+	required_textures = {
+	},
+	scale_required_textures = {
+		"kr4_sapos",
+		"go_stage_169",
+		"go_towers_pandas"
 	}
 }

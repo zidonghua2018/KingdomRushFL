@@ -5,6 +5,7 @@ local bor = bit.bor
 local band = bit.band
 local bnot = bit.bnot
 local E = require("entity_db")
+local U = require("utils_pld")
 
 require("constants")
 
@@ -239,6 +240,43 @@ click_play.required_clicks = 1
 click_play.achievement = nil
 click_play.achievement_flag = nil
 click_play.play_once = false
+
+local basic_skill_c = E:register_c("basic_skill_c")
+basic_skill_c.skill = nil
+basic_skill_c.level = 1
+basic_skill_c.basic_attack = false
+basic_skill_c.xp_gain_factor = nil
+basic_skill_c.cooldown = nil
+basic_skill_c.chance = 1
+basic_skill_c.min_range = 0
+basic_skill_c.max_range = 0
+basic_skill_c.min_targets = 1
+basic_skill_c.node_limit = 0
+basic_skill_c.node_limit_offset = 0
+basic_skill_c.animations = nil
+basic_skill_c.sounds = nil
+basic_skill_c.sound_args = nil
+basic_skill_c.vis_flags = 0
+basic_skill_c.vis_bans = 0
+basic_skill_c.ts = 0
+basic_skill_c.power_name = nil
+basic_skill_c.melee_break = false
+basic_skill_c.ranged_break = false
+basic_skill_c.cast_time = 0
+basic_skill_c.can_be_silenced = false
+basic_skill_c.ignore_flip_x = false
+basic_skill_c.skill_id = nil
+basic_skill_c.skills_interval = 0
+basic_skill_c.reset_partners_skill = false
+basic_skill_c.extra_cooldowns = {}
+basic_skill_c.search_type = U.search_type.nearest
+basic_skill_c.crowd_range = 0
+basic_skill_c.sort_func = nil
+basic_skill_c.search_stream = nil
+basic_skill_c.stream_offset = 0
+
+local death = E:register_c("death")
+death.death_fn = nil
 
 local sprite = E:register_c("sprite")
 
@@ -551,7 +589,7 @@ hero.stage_hero = nil
 hero.tombstone_show_time = nil
 hero.tombstone_decal = "decal_hero_tombstone"
 hero.respawn_point = nil
-hero.use_custom_spawn_point = nil
+--hero.use_custom_spawn_point = true
 
 local hero_skill = E:register_c("hero_skill")
 
@@ -790,6 +828,33 @@ ranged.forced_ts = 0
 local timed_attacks = E:register_c("timed_attacks")
 
 timed_attacks.list = {}
+
+local jump_attack = E:register_c("jump_attack", "basic_skill_c")
+jump_attack.skill = "jump_target"
+jump_attack.type = "jump"
+jump_attack.animations = {
+	"jumpIn",
+	"loop",
+	"jumpOut"
+}
+jump_attack.g = -1 / (fts(1) * fts(1))
+jump_attack.flight_time = fts(20)
+jump_attack.speed = nil
+jump_attack.need_back = false
+jump_attack.backed_attack = false
+jump_attack.loops = 1
+jump_attack.jump_type = U.jump_type.parabola
+jump_attack.damage_max = nil
+jump_attack.damage_min = nil
+jump_attack.damage_factor = 1
+jump_attack.damage_type = DAMAGE_PHYSICAL
+jump_attack.prediction_time = 0
+jump_attack.mods = nil
+jump_attack.hit_payload = nil
+jump_attack.damage_radius = nil
+jump_attack.xp_gain_factor = nil
+
+jump_attack.filter_fn = nil
 
 local timed_actions = E:register_c("timed_actions")
 

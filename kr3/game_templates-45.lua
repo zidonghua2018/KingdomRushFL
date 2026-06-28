@@ -434,8 +434,8 @@ tt.bullet.reset_to_target_pos = true
 tt.bullet.use_unit_damage_factor = true
 
 tt = E:register_t("elves_soldier_harasser_arrow_lvl1", "elves_soldier_harasser_arrow_lvl2")
-tt.bullet.damage_max = 5
-tt.bullet.damage_min = 7
+tt.bullet.damage_max = 7
+tt.bullet.damage_min = 5
 
 tt = E:register_t("elves_soldier_harasser_arrow_lvl3", "elves_soldier_harasser_arrow_lvl2")
 tt.bullet.damage_max = 27
@@ -473,7 +473,7 @@ E:add_comps(tt, "attacks", "vis")
 tt.attack_stage = 1
 tt.tower.type = "blazing_watcher"
 tt.tower.kind = TOWER_KIND_MAGE
-tt.tower.team = TEAM_LINIREA
+tt.tower.team = TEAM_DARK_ARMY
 tt.tower.level = 1
 tt.tower.price = 140
 tt.tower.menu_offset = v(0, 20)
@@ -796,7 +796,7 @@ E:add_comps(tt, "attacks", "vis")
 --防御塔基本信息
 tt.tower.type = "ignis_altar"
 tt.tower.kind = TOWER_KIND_ENGINEER
-tt.tower.team = TEAM_LINIREA
+tt.tower.team = TEAM_DARK_ARMY
 tt.tower.level = 1
 tt.tower.price = 120
 tt.tower.menu_offset = v(0, 20)
@@ -2386,6 +2386,10 @@ tt.main_script.insert = scripts.mod_bullet_tower_barrel.insert
 tt.main_script.remove = scripts.mod_bullet_tower_barrel.remove
 tt.main_script.update = scripts.mod_track_target.update
 
+tt = E:register_t("mod_tower_rotten_forest_fog_miss_2", "mod_tower_rotten_forest_fog_miss")
+tt.damage_reduction = 0.25
+tt.modifier.duration = 7.29
+
 
 tt = E:register_t("mod_tower_rotten_forest_burst_slow", "mod_slow")
 --b = balance.towers.sparking_geode.spike_burst
@@ -3178,6 +3182,7 @@ tt.info.enc_icon = 7
 tt.info.i18n_key = "TOWER_WICKED_SISTERS_LEVEL1"
 tt.tower.type = "wicked_sisters"
 tt.tower.kind = TOWER_KIND_MAGE
+tt.tower.team = TEAM_DARK_ARMY
 tt.tower.level = 1
 tt.tower.price = 120
 tt.info.fn = kr4_scripts.tower_wicked_sisters.get_info
@@ -3729,7 +3734,7 @@ tt.render.sprites[2].offset = v(0, 30)--v(0, 30)
 tt.render.sprites[3].offset.y = 62
 tt.render.sprites[4].offset.y = 62
 
-tt = E:register_t("tower_balloon_lvl1", "tower")
+tt = E:register_t("tower_balloon_lvl1", "tower_kr4")
 E:add_comps(tt, "barrack")
 
 tt.tower.type = "balloon"
@@ -4795,7 +4800,7 @@ E:add_comps(tt, "attacks", "vis")
 --防御塔基本信息
 tt.tower.type = "sandworm"
 tt.tower.kind = TOWER_KIND_ENGINEER
-tt.tower.team = TEAM_LINIREA
+tt.tower.team = TEAM_DARK_ARMY
 tt.tower.level = 1
 tt.tower.price = 130
 tt.tower.menu_offset = v(0, 20)

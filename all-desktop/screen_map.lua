@@ -40,12 +40,13 @@ require("gg_views_custom")
 
 local IS_KR1 = KR_GAME == "kr1"
 local IS_KR3 = KR_GAME == "kr3"
-local CREEP_1235_NUM = 283
+local CREEP_1235_NUM = 311
 local global_icon_idx = {   1,   2,   3,   4,--圣巢/皇弓/奥术/三管
 						    6,   7,   8,   9,  --树灵/澡堂/观星/火箭
 						   10,  11,  12,  13,  --巨弩/死灵/喷火/沙镖
 						   16,  17,  18,  32,--幽魂/酒桶/诡术/暮弓/
 						   34,  39,  42,  49,--蛤蟆/炮兵/巨像/熊猫
+						   51, --龙巢
 						  417, 414, 421, 408, 411,--骚扰/红钻/火山/黑弓/黑骑
 						  407, 409, 404, 423, 410,--火法/熔炉/回旋/沉船/死墓
 						  415, 419, 420, 416, 406, -- 腐森/少林/沼巨/女巫/飞艇
@@ -185,19 +186,38 @@ local function get_hero_stats(p)
 	out.taunt = h.sound_events.change_rally_point .. "Select"
 	out.hero_class = _(string.upper(out.name_i18n) .. "_CLASS")
 	out.health = info.hp_max
+	if info.no_ranged then
+		out.damage = info.damage_min .. " - " .. info.damage_max	
+	elseif info.ranged_damage_min and info.map_melee then
+		out.damage = info.damage_min .. " - " .. info.damage_max
+	elseif info.ranged_damage_min then
+		out.damage = info.ranged_damage_min .. " - " .. info.ranged_damage_max
+	else
+		out.damage = info.damage_min .. " - " .. info.damage_max	
+	end
+--[[
 	if info.ranged_damage_min then
 		out.damage = info.ranged_damage_min .. " - " .. info.ranged_damage_max
 	else
 		out.damage = info.damage_min .. " - " .. info.damage_max
 	end
-	
-	out.armor = GU.armor_value_desc(info.armor)
-	out.magic_armor = GU.armor_value_desc(info.magic_armor)
+]]--	
+	out.armor = info.armor and string.format(_("%i%%"), info.armor * 100) .. "" .. GU.armor_value_desc(info.armor)
+	out.magic_armor = info.magic_armor and string.format(_("%i%%"), info.magic_armor * 100) .. "" .. GU.armor_value_desc(info.magic_armor)
 	if info.armor == 0 and info.magic_armor and info.magic_armor >= 0.01 then
 		out.armor = out.magic_armor.._("MAGIC_ARMOR_DESC")
 	end
 	out.attack_rate = _(string.upper(out.name_i18n) .. "_ATTACKRATE")
-	out.damage_icon = h.info.damage_icon or 1
+--	out.damage_icon = h.info.damage_icon or 1
+	if info.no_ranged then
+		out.damage_icon = h.info.damage_icon or 1	
+	elseif info.ranged_damage_min and info.map_melee then
+		out.damage_icon = h.info.damage_icon or 1
+	elseif info.ranged_damage_min then
+		out.damage_icon = h.info.ranged_damage_icon or 1
+	else
+		out.damage_icon = h.info.damage_icon or 1
+	end	
 	out.skills = h.hero.skills
 	out.remaining_points = GS.skill_points_for_hero_level[h.hero.level] - used_points
 
@@ -589,6 +609,7 @@ function screen_map:init(w, h, done_callback)
 	change_button2.label.fit_lines = 1
 
 	self.window:add_child(change_button2)
+	
 
 	local change_button4 = GGButton:new("mapButtons-notxt_0400", "mapButtons-notxt_0401")
 
@@ -681,13 +702,14 @@ function screen_map:init(w, h, done_callback)
 	change_button3.label.vertical_align = CJK("middle", "top", nil, "top")
 	change_button3.label.text = _("Origin")
 	change_button3.label.fit_lines = 1
+	self.window:add_child(change_button3)
 
 	self.change_button1 = change_button1
 	self.change_button2 = change_button2
 	self.change_button3 = change_button3
 	self.change_button4 = change_button4
 	self.change_button5 = change_button5
-	self.window:add_child(change_button3)
+	
 
 	local tower5_room = GGButton:new("screen_map_button_map_towers_0001", "screen_map_button_map_towers_0001")
 	tower5_room.anchor = v(tower5_room.size.x / 2, tower5_room.size.y / 2)
@@ -700,6 +722,7 @@ function screen_map:init(w, h, done_callback)
 	self.tower5_room = tower5_room
 	self.window:add_child(tower5_room)
 
+	--[[
 	local double_hero_room = GGButton:new("screen_map_button_map_heroes_0001", "screen_map_button_map_heroes_0001")
 	double_hero_room.anchor = v(double_hero_room.size.x / 2, double_hero_room.size.y / 2)
 	double_hero_room.pos = v(100, sh - 250)
@@ -710,7 +733,21 @@ function screen_map:init(w, h, done_callback)
 	end
 	self.double_hero_room = double_hero_room
 	self.window:add_child(double_hero_room)
+	]]
+	------多种选项
+	local more_button = KImageButton:new("map_configBtn_0001", "map_configBtn_0002", "map_configBtn_0003")
 
+	more_button.anchor = v(more_button.size.x / 2, more_button.size.y / 2)
+	more_button.pos = v(80, 160)
+
+	function more_button.on_click(this, button, x, y)
+		S:queue("GUIButtonCommon")
+		self.more_option_panel:show()
+	end
+	self.more_button = more_button
+
+	self.window:add_child(more_button)	
+	------
 	local u_button = GGButton:new("mapButtons-notxt_0010", "mapButtons-notxt_0011")
 
 	u_button.anchor = v(u_button.size.x / 2, u_button.size.y / 2)
@@ -1010,7 +1047,11 @@ function screen_map:init(w, h, done_callback)
 	self.hero5_room = Hero5SelectView:new(sw, sh)
 	self.hero5_room.pos = v(0, 0)
 	self.window:add_child(self.hero5_room)
-
+	-------多种选项
+	self.more_option_panel = MoreOptionsView:new(sw, sh)
+	self.more_option_panel.pos = v(0, 0)
+	self.window:add_child(self.more_option_panel)
+	-------
 	self.difficulty_view = DifficultyView:new(sw, sh)
 	self.difficulty_view.pos = v(0, 0)
 	self.window:add_child(self.difficulty_view)
@@ -1096,10 +1137,13 @@ function screen_map:keypressed(key, isrepeat)
 			self.achievements:hide()
 		elseif not self.tower_room.hidden then
 			self.tower_room:hide();
-		elseif not self.hero5_room.hidden then
-			self.hero5_room:hide();
+		--elseif not self.hero5_room.hidden then
+		--	self.hero5_room:hide();
 		elseif not self.difficulty_view.hidden then
 			-- block empty
+		elseif not self.more_option_panel.hidden then
+			-- block empty
+			self.more_option_panel:hide()
 		elseif not self.option_panel.hidden then
 			self.option_panel:hide()
 		else
@@ -1107,10 +1151,86 @@ function screen_map:keypressed(key, isrepeat)
 		end
 	end
 
+	if key == "f1" or key == "o" then
+		if not self.more_option_panel.hidden then
+			self.more_option_panel:hide()
+		else
+			self.more_option_panel:show()
+		end
+	end
+
+	if key == "f2" or key == "h" then
+		if not self.hero_room.hidden then
+			self.hero_room:hide()
+		else
+			self.hero_room:show()
+		end
+	end
+
+	if key == "f3" or key == "t" then
+		if not self.tower_room.hidden then
+			self.tower_room:hide()
+		else
+			self.tower_room:show()
+		end
+	end
+	
+	if key == "f4" or key == "u" then
+		if not self.upgrades.hidden then
+			self.upgrades:hide()
+		else
+			self.upgrades:show()
+		end
+	end
+
+	if key == "f5" or key == "d" then
+		if not self.difficulty_view.hidden then
+			self.difficulty_view:hide()
+		else
+			self.difficulty_view:show()
+		end
+	end
+
+	if key == "f6" or key == "e" then
+		if not self.encyclopedia.hidden then
+			self.encyclopedia:hide()
+		else
+			self.encyclopedia:show()
+		end
+	end
+
+	if key == "f7" or key == "a" then
+		if not self.achievements.hidden then
+			self.achievements:hide()
+		else
+			self.achievements:show()
+		end
+	end
+
+	if key == "1" then
+		self.change_button1:on_click()
+	end
+
+	if key == "2" then
+		self.change_button2:on_click()
+	end
+
+	if key == "3" then
+		self.change_button3:on_click()
+	end
+
+	if key == "4" then
+		self.change_button4:on_click()
+	end
+
+	if key == "5" then
+		self.change_button5:on_click()
+	end
+
 	if key == "tab" then
 		if not self.button_hidden then
 			self.window:remove_child(self.tower5_room)
-			self.window:remove_child(self.double_hero_room)
+			--self.window:remove_child(self.double_hero_room)
 			self.window:remove_child(self.a_button)
 			self.window:remove_child(self.u_button)
 			self.window:remove_child(self.o_button)
@@ -1125,10 +1245,12 @@ function screen_map:keypressed(key, isrepeat)
 			self.window:remove_child(self.skill_star)
 			self.window:remove_child(self.upgrade_star)
 			self.window:remove_child(self.stars_banner)
+			self.window:remove_child(self.more_button)
+
 			self.button_hidden = true
 		elseif self.button_hidden then
 			self.window:add_child(self.tower5_room)
-			self.window:add_child(self.double_hero_room)
+			--self.window:add_child(self.double_hero_room)
 			self.window:add_child(self.a_button)
 			self.window:add_child(self.u_button)
 			self.window:add_child(self.o_button)
@@ -1143,7 +1265,8 @@ function screen_map:keypressed(key, isrepeat)
 			self.window:add_child(self.skill_star)
 			self.window:add_child(self.upgrade_star)
 			self.window:add_child(self.stars_banner)
-			
+			self.window:add_child(self.more_button)
+
 			self.button_hidden = false
 		end
 	end
@@ -2278,7 +2401,7 @@ function MapView:show_flags(num)
 
 		self.show_flags_in_progress = nil
 
-		if DBG_SHOW_BALLOONS or #screen_map.user_data.levels == 1 or screen_map.kr5_map then
+		if DBG_SHOW_BALLOONS or #screen_map.user_data.levels == 1 or screen_map.kr5_map or screen_map.kr4_map then
 			local start_here = KImageView:new("mapBalloon_starthere_notxt")
 
 			start_here.anchor = v(start_here.size.x / 2, start_here.size.y)
@@ -2304,7 +2427,7 @@ function MapView:show_flags(num)
 			l.pos = v(8, 8)
 			l.font_name = "body"
 			l.font_size = 18
-			l.text = screen_map.kr5_map and _("START HERE!!") or _("START HERE!")  
+			l.text = screen_map.kr5_map and _("START HERE!!") or (screen_map.kr4_map and _("START HERE!!!") or _("START HERE!"))
 			l.text_align = "center"
 			l.vertical_align = "middle"
 			l.colors.text = {
@@ -3300,7 +3423,7 @@ LevelSelectView = class("LevelSelectView", PopUpView)
 
 function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot_data)
 	PopUpView.initialize(self, V.v(sw, sh))
-	local level_list_gen4 = {[1]=0,[2]=1,[3]=2,[4]=17,[5]=26,[6]=27}
+	local level_list_gen4 = {[1]=0,[2]=1,[3]=2,[4]=17,[5]=18,[6]=19,[7]=26,[8]=27}
 	local local_generation = 3
 
 	local local_level_num = level_num
@@ -3316,11 +3439,6 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 			level_num = level_num + 60
 		end
 		local_generation = 2
-	elseif screen_map.kr3_map then
-		if level_num >= 23 then
-			level_num = 86
-		end
-		local_generation = 3
 	elseif screen_map.kr5_map then
 		level_num = level_num + 100
 		local_generation = 5
@@ -3328,6 +3446,11 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 		local_level_num = level_list_gen4[level_num]
 		level_num = local_level_num + 150
 		local_generation = 4
+	else--if screen_map.kr3_map then
+		if level_num >= 23 then
+			level_num = 86
+		end
+		local_generation = 3
 	end
 	local level_string = string.format("%02i", level_num)
 	local level_data = screen_map.level_data[level_num]
@@ -4720,7 +4843,8 @@ function EncyclopediaView:load_towers(index)
 		self.towers:add_child(st2)
 	end
 	local tower_pre = (index - 1) * 20
-	for i = 1, 20 do
+	local page_count = (index == 13 and 4 or 20)
+	for i = 1, page_count do
 		local num = tower_pre + i
 		local icon_idx = screen_map.tower_data[num].icon or num
 		local icon = string.format(GS.encyclopedia_tower_thumb_fmt, icon_idx)
@@ -4741,7 +4865,7 @@ function EncyclopediaView:load_towers(index)
 	self.towers:add_child(self.select_sprite)
 
 	self.page_buttons = {}
-	local total_pages = 12
+	local total_pages = 13
 	local boffset = 36
 	local bx, by = 192 - boffset * (total_pages - 1) / 2, 572
 
@@ -4981,15 +5105,15 @@ function EncyclopediaView:detail_tower(index)
 		if v == "health" then
 			label.text = di.hp_max
 		elseif v == "armor" then
-			label.text = GU.armor_value_desc(di.armor)
+			label.text = di.armor and string.format(_("%i%%"), di.armor * 100) .. "" .. GU.armor_value_desc(di.armor) or GU.armor_value_desc(di.armor)
 		elseif v == "dmg" or v == "mdmg" then
 			label.text = di.damage_min .. "-" .. di.damage_max
 		elseif v == "respawn" then
 			label.text = string.format(_("%i sec."), di.respawn)
 		elseif v == "reload" then
-			label.text = GU.cooldown_value_desc(di.cooldown)
+			label.text = di.cooldown and string.format(_("%s sec"), di.cooldown * 1) .. " / " .. GU.cooldown_value_desc(di.cooldown) or GU.cooldown_value_desc(di.cooldown)
 		elseif v == "range" then
-			label.text = GU.range_value_desc(di.range)
+			label.text = di.range and string.format(_("%i"), di.range * 2) .. " / " .. GU.range_value_desc(di.range) or GU.range_value_desc(di.range)
 		end
 
 		label.fit_lines = 2
@@ -5384,12 +5508,60 @@ function EncyclopediaView:detail_creep(index)
 	local skill_table = {
 		ci.hp_max,
 		GU.damage_value_desc(ci.damage_min, ci.damage_max),
-		GU.armor_value_desc(ci.armor),
-		GU.armor_value_desc(ci.magic_armor),
-		GU.speed_value_desc(ce.moton and ce.motion.max_speed or 0),
+		ci.armor and string.format(_("%i%%"), ci.armor * 100) .. "" .. GU.armor_value_desc(ci.armor),
+		ci.magic_armor and string.format(_("%i%%"), ci.magic_armor * 100) .. "" .. GU.armor_value_desc(ci.magic_armor),
+		GU.speed_value_desc(ce.motion and (ce.motion.max_speed or 0) or 0),
 		(GU.lives_desc(ci.lives))
 	}
-
+	if ci.no_ranged then
+		skill_table = {
+		ci.hp_max,
+		GU.damage_value_desc(ci.damage_min, ci.damage_max),
+		ci.armor and string.format(_("%i%%"), ci.armor * 100) .. "" .. GU.armor_value_desc(ci.armor),
+		ci.magic_armor and string.format(_("%i%%"), ci.magic_armor * 100) .. "" .. GU.armor_value_desc(ci.magic_armor),
+		GU.speed_value_desc(ce.motion and (ce.motion.max_speed or 0) or 0),
+		(GU.lives_desc(ci.lives))
+	}
+	elseif ci.ranged_damage_min and ci.damage_max then
+		if ci.ranged_damage_max < ci.damage_max then
+			skill_table = {
+				ci.hp_max,
+				GU.damage_value_desc(ci.damage_min, ci.damage_max),
+				ci.armor and string.format(_("%i%%"), ci.armor * 100) .. "" .. GU.armor_value_desc(ci.armor),
+				ci.magic_armor and string.format(_("%i%%"), ci.magic_armor * 100) .. "" .. GU.armor_value_desc(ci.magic_armor),
+				GU.speed_value_desc(ce.motion and (ce.motion.max_speed or 0) or 0),
+				(GU.lives_desc(ci.lives))
+			}
+		else
+			skill_table = {
+				ci.hp_max,
+				GU.damage_value_desc(ci.ranged_damage_min, ci.ranged_damage_max),
+				ci.armor and string.format(_("%i%%"), ci.armor * 100) .. "" .. GU.armor_value_desc(ci.armor),
+				ci.magic_armor and string.format(_("%i%%"), ci.magic_armor * 100) .. "" .. GU.armor_value_desc(ci.magic_armor),
+				GU.speed_value_desc(ce.motion and (ce.motion.max_speed or 0) or 0),
+				(GU.lives_desc(ci.lives))
+			}			
+		end	
+	elseif ci.ranged_damage_min then
+		skill_table = {
+		ci.hp_max,
+		GU.damage_value_desc(ci.ranged_damage_min, ci.ranged_damage_max),
+		ci.armor and string.format(_("%i%%"), ci.armor * 100) .. "" .. GU.armor_value_desc(ci.armor),
+		ci.magic_armor and string.format(_("%i%%"), ci.magic_armor * 100) .. "" .. GU.armor_value_desc(ci.magic_armor),
+		GU.speed_value_desc(ce.motion and (ce.motion.max_speed or 0) or 0),
+		(GU.lives_desc(ci.lives))
+	}
+	else
+		skill_table = {
+		ci.hp_max,
+		GU.damage_value_desc(ci.damage_min, ci.damage_max),
+		ci.armor and string.format(_("%i%%"), ci.armor * 100) .. "" .. GU.armor_value_desc(ci.armor),
+		ci.magic_armor and string.format(_("%i%%"), ci.magic_armor * 100) .. "" .. GU.armor_value_desc(ci.magic_armor),
+		GU.speed_value_desc(ce.motion and (ce.motion.max_speed or 0) or 0),
+		(GU.lives_desc(ci.lives))
+	}
+	end
+	--ce.moton and
 	for i = 1, 6 do
 		local desc_label = GGLabel:new(V.v(90, 50))
 
@@ -5424,6 +5596,16 @@ function EncyclopediaView:detail_creep(index)
 
 	if special_extra_key == special_extra then
 		--empty
+		if t.info and t.info.i18n_key then
+			special_extra = t.info.i18n_key .. "_EXTRA"
+			special_extra_key = _(special_extra)
+			if special_extra_key == special_extra then
+				--empty
+			else
+				special = special..special_extra_key
+			special = string.gsub(special, "\n", "；")
+			end
+		end
 	else
 		special = special..special_extra_key
 		special = string.gsub(special, "\n", "；")
@@ -5538,6 +5720,8 @@ end
 
 function Hero5SelectView:initialize(sw, sh)
 	PopUpView.initialize(self, V.v(sw, sh))
+
+	local user_data = storage:load_slot()
 
 	self.back = KImageView:new("heroroom_001_notxt")
 	self.back.pos = v(0, 0)
@@ -6151,10 +6335,35 @@ function Hero5SelectView:initialize(sw, sh)
 
 	self.next_page_button = next_page_button
 
+	local prev_page_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+
+	prev_page_button.anchor = v(math.floor(done_button.size.x / 2), done_button.size.y / 2)
+	prev_page_button.pos = v(self.back.size.x - 498 - done_button.size.x - 20, self.back.size.y - 32)
+	prev_page_button.label.size = v(100, 34)
+	prev_page_button.label.text_size = done_button.label.size
+	prev_page_button.label.pos = v(20, 19)
+	prev_page_button.label.font_size = 24
+	prev_page_button.label.vertical_align = CJK("middle-caps", "middle", "middle", "middle")
+	prev_page_button.label.text = _("BUTTON_PREV_PAGE")
+	prev_page_button.label.fit_lines = 1
+
+	function prev_page_button.on_click()
+		switch_hero_room_page()
+		switch_hero_room_page()
+		switch_hero_room_page()
+		switch_hero_room_page()
+		switch_hero_room_page()
+		S:queue("GUIButtonCommon")
+	end
+
+	self.back:add_child(prev_page_button)
+
+	self.prev_page_button = prev_page_button
+
 	local over_done_button = KImageView:new("heroroom_014_large")
 
 	over_done_button.anchor = v(math.floor(over_done_button.size.x / 2), over_done_button.size.y / 2)
-	over_done_button.pos = v(self.back.size.x - 168, self.back.size.y - 34)
+	over_done_button.pos = v(self.back.size.x - 498, self.back.size.y - 34)
 
 	self.back:add_child(over_done_button)
 
@@ -6205,9 +6414,18 @@ function TowerSelectView:initialize(sw, sh)
 	if screen_map.user_data.liuhui == nil then
 		screen_map.user_data.liuhui = {}
 	end
+	if screen_map.user_data.xingyu == nil then
+		screen_map.user_data.xingyu = {}
+	end	
+	if screen_map.user_data.xingyu.balance == nil then
+		screen_map.user_data.xingyu.balance = false
+	end	
 	if screen_map.user_data.liuhui.use3tower == nil then
 		screen_map.user_data.liuhui.use3tower = true
 	end
+	if screen_map.user_data.liuhui.use3tower_count == nil then
+		screen_map.user_data.liuhui.use3tower_count = 0
+	end	
 	if screen_map.user_data.liuhui.impossiblerate == nil then
 		screen_map.user_data.liuhui.impossiblerate = 1.5
 	end
@@ -6229,15 +6447,15 @@ function TowerSelectView:initialize(sw, sh)
 	end
 	if screen_map.user_data.liuhui.balance == nil then
 		screen_map.user_data.liuhui.balance = false
-	end
+	end	
 	if screen_map.user_data.liuhui.enemy_count == nil then
 		screen_map.user_data.liuhui.enemy_count = 1
 	end	
 	if screen_map.user_data.liuhui.reinforcement_skins == nil then
 		screen_map.user_data.liuhui.reinforcement_skins = 0		
 	end
-	if screen_map.reinforcement_count == nil then
-		screen_map.reinforcement_count = 0		
+	if screen_map.user_data.reinforcement_count == nil then
+		screen_map.user_data.reinforcement_count = 0		
 	end
 	if screen_map.user_data.liuhui.g5_hero_dark_count == nil then
 		screen_map.user_data.liuhui.g5_hero_dark_count = 2
@@ -6266,7 +6484,7 @@ function TowerSelectView:initialize(sw, sh)
 	end
 --需要确定并加载防御塔数据，当前联盟共移植(20)塔，复仇共移植(22)塔，局内最多携带(12)塔。
 	local MAX_TOWER = 12
-	self.alliance_num = 20
+	self.alliance_num = 21
 	self.vegnance_num = 22
 	self.max_tower = MAX_TOWER
 	local tower_status = screen_map.user_data.towers
@@ -6359,6 +6577,32 @@ function TowerSelectView:initialize(sw, sh)
 	self.count_button = count_button
 	self.backback:add_child(self.count_button)
 
+	local c_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	c_button.anchor = v(math.floor(select_button.size.x / 2), select_button.size.y / 2)
+	c_button.pos = v(bg_middle + 200, 585) --(非点选的位置)v(self.sw / 2 - 2, 268)
+	c_button.scale = v(0.8, 0.8)
+	c_button.label.size = v(100, 34)
+	c_button.label.text_size = select_button.label.size
+	c_button.label.pos = v(20, 19)
+	c_button.label.font_size = 18
+	c_button.label.font_name = "sans_bold"
+	c_button.label.vertical_align = CJK("middle-caps", "middle", "middle", "middle")
+	c_button.label.text = _("USE3TOOWER_COUNT_"..screen_map.user_data.liuhui.use3tower_count)--screen_map.user_data.liuhui.use3tower and _("PICK3") or _("UNPICK3")
+	c_button.label.fit_lines = 1
+	function c_button.on_click()
+--		screen_map.user_data.liuhui.use3tower = not screen_map.user_data.liuhui.use3tower
+		screen_map.user_data.liuhui.use3tower_count = screen_map.user_data.liuhui.use3tower_count + 1
+		if screen_map.user_data.liuhui.use3tower_count >= 3 then
+			screen_map.user_data.liuhui.use3tower_count = 0
+		end				
+		storage:save_slot(screen_map.user_data)
+		self:update_selected_tower()
+		S:queue("GUIButtonCommon")
+	end
+	self.c_button = c_button
+	self.backback:add_child(self.c_button)
+
+	--[[
 --设置出怪数量
 	local ecound_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
 	ecound_button.anchor = v(math.floor(select_button.size.x / 2), select_button.size.y / 2)
@@ -6398,7 +6642,28 @@ function TowerSelectView:initialize(sw, sh)
 	}
 	ecount.text = _("LH349_ENEMY_COUNT")
 	self.backback:add_child(ecount)
-
+---怪物增强
+	local xingyu_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	xingyu_button.anchor = v(math.floor(select_button.size.x / 2), select_button.size.y / 2)
+	xingyu_button.pos = v(bg_middle + 470, 308)
+	xingyu_button.scale = v(0.8, 0.8)
+	xingyu_button.label.size = v(100, 34)
+	xingyu_button.label.text_size = select_button.label.size
+	xingyu_button.label.pos = v(20, 19)
+	xingyu_button.label.font_size = 24
+	xingyu_button.label.font_name = "sans_bold"
+	xingyu_button.label.vertical_align = "middle"
+	xingyu_button.label.text = screen_map.user_data.xingyu.balance and _("FLBALANCE_1") or _("FLSTANDARD_2")
+	xingyu_button.label.fit_lines = 1
+	function xingyu_button.on_click()
+		screen_map.user_data.xingyu.balance = not screen_map.user_data.xingyu.balance
+		storage:save_slot(screen_map.user_data)
+		self:update_selected_tower()
+		S:queue("GUIButtonCommon")
+	end
+	self.xingyu_button = xingyu_button
+	self.backback:add_child(self.xingyu_button)
+---	
 --设置5代科技
 	local g5_hero_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
 	g5_hero_button.anchor = v(math.floor(select_button.size.x / 2), select_button.size.y / 2)
@@ -6488,10 +6753,10 @@ function TowerSelectView:initialize(sw, sh)
 	self.reinforcement_skin_button = reinforcement_skin_button
 	self.backback:add_child(self.reinforcement_skin_button)
 --援兵数量
-	--[[
+
 	local reinforcement_count_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
 	reinforcement_count_button.anchor = v(math.floor(select_button.size.x / 2), select_button.size.y / 2)
-	reinforcement_count_button.pos = v(bg_middle + 510, 98)
+	reinforcement_count_button.pos = v(bg_middle + 470, 358)
 	reinforcement_count_button.scale = v(0.8, 0.8)
 	reinforcement_count_button.label.size = v(100, 34)
 	reinforcement_count_button.label.text_size = select_button.label.size
@@ -6499,12 +6764,12 @@ function TowerSelectView:initialize(sw, sh)
 	reinforcement_count_button.label.font_size = 24
 	reinforcement_count_button.label.font_name = "sans_bold"
 	reinforcement_count_button.label.vertical_align = "middle"
-	reinforcement_count_button.label.text = screen_map.reinforcement_count and _("REINFORCEMENT_2") or _("REINFORCEMENT_3")
+	reinforcement_count_button.label.text = _("REINFORCEMENT_"..screen_map.user_data.reinforcement_count)
 	reinforcement_count_button.label.fit_lines = 1
 	function reinforcement_count_button.on_click()
-		screen_map.reinforcement_count = screen_map.reinforcement_count + 1
-		if screen_map.reinforcement_count >= 2 then
-			screen_map.reinforcement_count = 0
+		screen_map.user_data.reinforcement_count = screen_map.user_data.reinforcement_count + 1
+		if screen_map.user_data.reinforcement_count >= 2 then
+			screen_map.user_data.reinforcement_count = 0
 		end
 		storage:save_slot(screen_map.user_data)
 		self:update_selected_tower()
@@ -6512,9 +6777,8 @@ function TowerSelectView:initialize(sw, sh)
 	end
 	self.reinforcement_count_button = reinforcement_count_button
 	self.backback:add_child(self.reinforcement_count_button)
-	]]
 
-	screen_map.reinforcement_count = 0
+--	screen_map.reinforcement_count = 0
 	local g5_hero_txt = GGLabel:new(V.v(bg_middle - 80, 24))
 	g5_hero_txt.pos.x = bg_middle - 75
 	g5_hero_txt.pos.y = 40
@@ -6547,7 +6811,7 @@ function TowerSelectView:initialize(sw, sh)
 	stim.text = _("ImpossibleHPRate")..string.format("%.2f", screen_map.user_data.liuhui.impossiblerate)
 	self.stim = stim
 	self.backback:add_child(stim)
-	--[[
+	--以下为注释
 	local st_rate = GGLabel:new(V.v(bg_middle - 80, 24))
 	st_rate.pos.x = bg_middle + 30
 	st_rate.pos.y = 178
@@ -6561,7 +6825,7 @@ function TowerSelectView:initialize(sw, sh)
 		255
 	}
 	self.st_rate = st_rate
-	self.backback:add_child(st_rate)]]--
+	self.backback:add_child(st_rate)
 
 	local minus_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
 	minus_button.anchor = v(math.floor(select_button.size.x / 2), select_button.size.y / 2)
@@ -6593,7 +6857,7 @@ function TowerSelectView:initialize(sw, sh)
 	self.minus_button = minus_button
 	self.backback:add_child(self.minus_button)
 
-	--[[
+	--以下为注释
 	local stg5 = GGLabel:new(V.v(bg_middle - 80, 24))
 	stg5.pos.x = bg_middle - 50
 	stg5.pos.y = 238
@@ -6608,7 +6872,6 @@ function TowerSelectView:initialize(sw, sh)
 	}
 	stg5.text = _("G5_SPECIAL")
 	self.backback:add_child(stg5)
-	]]--
 
 
 --设置3代血量模式
@@ -6740,63 +7003,6 @@ function TowerSelectView:initialize(sw, sh)
 
 
 
---设置携带防御塔
-	--[[
-	local st_tower = GGLabel:new(V.v(bg_middle - 80, 24))
-	st_tower.pos.x = bg_middle + 30
-	st_tower.pos.y = 208
-	st_tower.font_name = "body"
-	st_tower.font_size = 15
-	st_tower.font_align = "center"
-	st_tower.colors.text = {
-			100,
-			89,
-			51,
-			255
-		}
-	st_tower.text = _("PICK123")
-	self.backback:add_child(st_tower)
-
-	local ab_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
-	ab_button.anchor = v(math.floor(select_button.size.x / 2), select_button.size.y / 2)
-	ab_button.pos = v(bg_middle + 200, 268)--v(self.back.size.x - 166 - select_button.size.x - 20, self.back.size.y - 32)
-	ab_button.scale = v(0.8, 0.8)
-	ab_button.label.size = v(100, 34)
-	ab_button.label.text_size = select_button.label.size
-	ab_button.label.pos = v(20, 19)
-	ab_button.label.font_size = 18
-	ab_button.label.vertical_align = CJK("middle-caps", "middle", "middle", "middle")
-	ab_button.label.text = screen_map.user_data.liuhui.use2tower and _("PICK12") or _("UNPICK12")
-	ab_button.label.fit_lines = 1
-	function ab_button.on_click()
-		screen_map.user_data.liuhui.use2tower = not screen_map.user_data.liuhui.use2tower
-		storage:save_slot(screen_map.user_data)
-		self:update_selected_tower()
-		S:queue("GUIButtonCommon")
-	end
-	self.ab_button = ab_button
-	self.backback:add_child(self.ab_button)
-	]]--
-	local c_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
-	c_button.anchor = v(math.floor(select_button.size.x / 2), select_button.size.y / 2)
-	c_button.pos = v(bg_middle + 200, 585) --(非点选的位置)v(self.sw / 2 - 2, 268)
-	c_button.scale = v(0.8, 0.8)
-	c_button.label.size = v(100, 34)
-	c_button.label.text_size = select_button.label.size
-	c_button.label.pos = v(20, 19)
-	c_button.label.font_size = 18
-	c_button.label.font_name = "sans_bold"
-	c_button.label.vertical_align = CJK("middle-caps", "middle", "middle", "middle")
-	c_button.label.text = screen_map.user_data.liuhui.use3tower and _("PICK3") or _("UNPICK3")
-	c_button.label.fit_lines = 1
-	function c_button.on_click()
-		screen_map.user_data.liuhui.use3tower = not screen_map.user_data.liuhui.use3tower
-		storage:save_slot(screen_map.user_data)
-		self:update_selected_tower()
-		S:queue("GUIButtonCommon")
-	end
-	self.c_button = c_button
-	self.backback:add_child(self.c_button)
 --设置金手指
 	local st_cheat = GGLabel:new(V.v(bg_middle - 80, 24))
 	st_cheat.pos.x = bg_middle + 30
@@ -7015,7 +7221,7 @@ function TowerSelectView:initialize(sw, sh)
 	end
 	self.rand_button_3 = rand_button_3
 	self.backback:add_child(self.rand_button_3)
-
+	]]--
 	--关闭按钮
 	local close_button = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
 
@@ -7029,6 +7235,7 @@ function TowerSelectView:initialize(sw, sh)
 		self:hide()
 	end
 	self:update_selected_tower()
+
 end
 
 --起始和每次刷新都需要调用一次本函数
@@ -7068,9 +7275,10 @@ function TowerSelectView:update_selected_tower()
 		end
 		self.selected_panel:add_child(portrait)
 	end
+	self.c_button.label.text = _("USE3TOOWER_COUNT_"..screen_map.user_data.liuhui.use3tower_count)--screen_map.user_data.liuhui.use3tower and _("PICK3") or _("UNPICK3")
+	--[[
 	self.cheat_hero_button.label.text = screen_map.user_data.liuhui.cheathero and _("CHEAT_HERO") or _("NO_CHEAT_HERO")
 	self.cheat_button.label.text = screen_map.user_data.liuhui.cheat and _("CHEAT_GOLD") or _("NO_CHEAT_GOLD")
-	self.c_button.label.text = screen_map.user_data.liuhui.use3tower and _("PICK3") or _("UNPICK3")
 	self.g3_hprate_button.label.text = screen_map.user_data.liuhui.g3_hprate and _("G3_CALRATE") or _("G3_STANDARD")
 	self.g5_button.label.text = screen_map.user_data.liuhui.cheat5 and _("G5_SELECT") or _("G5_DESELECT")
 	self.g5_dragon_button.label.text = screen_map.user_data.liuhui.cheat5_dragon and _("G5_DRAGON_SPECIAL") or _("G5_DRAGON_DESELECT")
@@ -7078,13 +7286,16 @@ function TowerSelectView:update_selected_tower()
 	self.g5_hero_button.label.text = _("G5_HERO_DARK_COUNT_"..screen_map.user_data.liuhui.g5_hero_dark_count or 2)
 	self.g5_reinforcement_button.label.text = _("G5_REINFORCEMENT_"..((screen_map.user_data.liuhui.reinforcement_5=="dark")and 2 or 1))
 	self.reinforcement_skin_button.label.text =  _("LH349_REINFORCEMENT_SKIN_"..screen_map.user_data.liuhui.reinforcement_skins or 0)
+	self.reinforcement_count_button.label.text = _("REINFORCEMENT_"..screen_map.user_data.reinforcement_count or 0)
 	self.balance_button.label.text = screen_map.user_data.liuhui.balance and _("FLBALANCE") or _("FLSTANDARD")
+	--self.xingyu_button.label.text = screen_map.user_data.xingyu.balance and _("FLBALANCE_1") or _("FLSTANDARD_2")
 	self.g4range_balance_button.label.text = screen_map.user_data.liuhui.g4range_balance and _("FL_RANGE_BALANCE") or _("FL_RANGE_STD")
 	self.stim.text = _("ImpossibleHPRate")..string.format("%.2f", screen_map.user_data.liuhui.impossiblerate)
 	self.rand_button_1.label.text = _("RAND_CREEP_"..(screen_map.user_data.liuhui.rand_creep or 0))
 	self.rand_button_2.label.text = _("RAND_TOWER_"..(screen_map.user_data.liuhui.rand_tower or 0))
 	self.rand_button_22.label.text = _("RAND_TOWER_MODE_"..(screen_map.user_data.liuhui.rand_tower_mode or 0))
 	self.rand_button_3.label.text = _("RAND_HERO_"..(screen_map.user_data.liuhui.rand_hero or 0))
+	]]
 
 end
 
@@ -7462,15 +7673,15 @@ function TowerSelectView:detail_tower(index)
 		if v == "health" then
 			label.text = di.hp_max
 		elseif v == "armor" then
-			label.text = GU.armor_value_desc(di.armor)
+			label.text = di.armor and string.format(_("%i%%"), di.armor * 100) .. "" .. GU.armor_value_desc(di.armor) or GU.armor_value_desc(di.armor)
 		elseif v == "dmg" or v == "mdmg" then
 			label.text = di.damage_min .. "-" .. di.damage_max
 		elseif v == "respawn" then
 			label.text = string.format(_("%i sec."), di.respawn)
 		elseif v == "reload" then
-			label.text = GU.cooldown_value_desc(di.cooldown)
+			label.text = di.cooldown and string.format(_("%s sec"), di.cooldown * 1) .. " / " .. GU.cooldown_value_desc(di.cooldown) or GU.cooldown_value_desc(di.cooldown)
 		elseif v == "range" then
-			label.text = GU.range_value_desc(di.range)
+			label.text = di.range and string.format(_("%i"), di.range * 2) .. " / " .. GU.range_value_desc(di.range) or GU.range_value_desc(di.range)
 		end
 
 		label.fit_lines = 2
@@ -7564,7 +7775,1027 @@ function TowerSelectView:detail_tower(index)
 		end
 	end
 end
+-------多种选项
+MoreOptionsView = class("OptionsView", PopUpView)
 
+function MoreOptionsView:initialize(sw, sh)
+	PopUpView.initialize(self, V.v(sw, sh))
+	--
+	self.back = KImageView:new("heroroom_001_notxt")
+	self.pos = v(0, 0)
+	self.back.pos = v(sw / 2, sh / 2 - 50)
+	self.back.pos = v(0, 0)
+	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
+
+	self:add_child(self.back)
+	self.back.alpha = 1
+	--
+	local mx = 100
+	local y = 130
+	---
+	--新增一个liuhui的数据table
+	if screen_map.user_data.liuhui == nil then
+		screen_map.user_data.liuhui = {}
+	end
+	if screen_map.user_data.xingyu == nil then
+		screen_map.user_data.xingyu = {}
+	end	
+	if screen_map.user_data.xingyu.balance == nil then
+		screen_map.user_data.xingyu.balance = false
+	end		
+	if screen_map.user_data.liuhui.use3tower == nil then
+		screen_map.user_data.liuhui.use3tower = true
+	end
+	if screen_map.user_data.liuhui.use3tower_count == nil then
+		screen_map.user_data.liuhui.use3tower_count = 0
+	end	
+	if screen_map.user_data.liuhui.impossiblerate == nil then
+		screen_map.user_data.liuhui.impossiblerate = 1.5
+	end
+	GS.difficulty_enemy_hp_max_factor[4] = screen_map.user_data.liuhui.impossiblerate
+	if screen_map.user_data.liuhui.cheat == nil then
+		screen_map.user_data.liuhui.cheat = false
+	end
+	if screen_map.user_data.liuhui.cheat5 == nil then
+		screen_map.user_data.liuhui.cheat5 = false
+	end
+	if screen_map.user_data.liuhui.cheat5_dragon == nil then
+		screen_map.user_data.liuhui.cheat5_dragon = false
+	end
+	if screen_map.user_data.liuhui.cheathero == nil then
+		screen_map.user_data.liuhui.cheathero = false
+	end
+	if screen_map.user_data.liuhui.g3_hprate == nil then
+		screen_map.user_data.liuhui.g3_hprate = false
+	end
+	if screen_map.user_data.liuhui.balance == nil then
+		screen_map.user_data.liuhui.balance = false
+	end	
+	if screen_map.user_data.liuhui.enemy_count == nil then
+		screen_map.user_data.liuhui.enemy_count = 1
+	end	
+	if screen_map.user_data.liuhui.reinforcement_skins == nil then
+		screen_map.user_data.liuhui.reinforcement_skins = 0		
+	end
+	if screen_map.user_data.reinforcement_count == nil then
+		screen_map.user_data.reinforcement_count = 0		
+	end
+	if screen_map.user_data.liuhui.g5_hero_dark_count == nil then
+		screen_map.user_data.liuhui.g5_hero_dark_count = 2
+	end
+	if screen_map.user_data.liuhui.reinforcement_5 == nil then
+		screen_map.user_data.liuhui.reinforcement_5 = "royal" 
+	end
+	--废案
+	if screen_map.user_data.liuhui.cp_mode == nil or screen_map.user_data.liuhui.cp_mode == true then
+		screen_map.user_data.liuhui.cp_mode = false
+	end
+	if screen_map.user_data.liuhui.rand_creep == nil then
+		screen_map.user_data.liuhui.rand_creep = 0
+	end
+	if screen_map.user_data.liuhui.rand_tower == nil then
+		screen_map.user_data.liuhui.rand_tower = 0
+	end
+	if screen_map.user_data.liuhui.rand_tower_mode == nil then
+		screen_map.user_data.liuhui.rand_tower_mode = 0
+	end
+	if screen_map.user_data.liuhui.rand_hero == nil then
+		screen_map.user_data.liuhui.rand_hero = 0
+	end
+	if screen_map.user_data.liuhui.g4range_balance == nil then
+		screen_map.user_data.liuhui.g4range_balance = 1
+	end	
+	-----
+	local header_bg = KImageView("kr3_title_bg")
+
+	header_bg.anchor.x = km.round(header_bg.size.x / 2)
+	header_bg.pos = v(km.round(self.back.size.x / 2), -36)
+
+	self.back:add_child(header_bg)	
+
+	local header = GGPanelHeader:new(_("OPTIONS"), 274)
+
+	header.pos = V.v(397, CJK(26, 24, nil, 24) - 36)
+
+	self.back:add_child(header)	
+	local bg_middle = self.back.size.x / 2
+
+--设置出怪数量
+	local ecound_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	ecound_button.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	ecound_button.pos = v(bg_middle - 120, 208)
+	ecound_button.scale = v(0.8, 0.8)
+	ecound_button.label.size = v(100, 34)
+	ecound_button.label.text_size = ecound_button.label.size
+	ecound_button.label.pos = v(20, 19)
+	ecound_button.label.font_size = 24
+	ecound_button.label.font_name = "sans_bold"
+	ecound_button.label.vertical_align = "middle"
+	ecound_button.label.text = _("LH349_ENEMY_COUNT_"..screen_map.user_data.liuhui.enemy_count)
+	ecound_button.label.fit_lines = 1
+	function ecound_button.on_click()
+		screen_map.user_data.liuhui.enemy_count = screen_map.user_data.liuhui.enemy_count + 1
+		if screen_map.user_data.liuhui.enemy_count >= 4 then
+			screen_map.user_data.liuhui.enemy_count = 1
+		end
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.ecound_button = ecound_button
+	self.back:add_child(self.ecound_button)
+
+	local ecount = GGLabel:new(V.v(bg_middle - 80, 24))
+	ecount.pos.x = bg_middle - 570
+	ecount.pos.y = 188--288
+	ecount.font_name = "sans_bold"
+	ecount.font_size = 20
+	ecount.font_align = "center"
+	ecount.colors.text = {
+		200,
+		89,
+		51,
+		255
+	}
+	ecount.text = _("LH349_ENEMY_COUNT")
+	self.back:add_child(ecount)
+
+---怪物增强
+
+	local xingyu_ecount = GGLabel:new(V.v(bg_middle - 80, 24))
+	xingyu_ecount.pos.x = bg_middle - 100
+	xingyu_ecount.pos.y = 188--288
+	xingyu_ecount.font_name = "sans_bold"
+	xingyu_ecount.font_size = 20
+	xingyu_ecount.font_align = "center"
+	xingyu_ecount.colors.text = {
+		200,
+		89,
+		51,
+		255
+	}
+	xingyu_ecount.text = _("FLBALANCE_ENEMY")
+	self.back:add_child(xingyu_ecount)
+
+	local xingyu_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	xingyu_button.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	xingyu_button.pos = v(bg_middle + 350, 208)
+	xingyu_button.scale = v(0.8, 0.8)
+	xingyu_button.label.size = v(100, 34)
+	xingyu_button.label.text_size = ecound_button.label.size
+	xingyu_button.label.pos = v(20, 19)
+	xingyu_button.label.font_size = 24
+	xingyu_button.label.font_name = "sans_bold"
+	xingyu_button.label.vertical_align = "middle"
+	xingyu_button.label.text = screen_map.user_data.xingyu.balance and _("THIS_YES") or _("THIS_NO")
+	xingyu_button.label.fit_lines = 1
+	function xingyu_button.on_click()
+		screen_map.user_data.xingyu.balance = not screen_map.user_data.xingyu.balance
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.xingyu_button = xingyu_button
+	self.back:add_child(self.xingyu_button)
+---	
+--设置5代科技
+	local g5_hero_txt = GGLabel:new(V.v(bg_middle - 80, 24))
+	g5_hero_txt.pos.x = bg_middle - 570
+	g5_hero_txt.pos.y = 238
+	g5_hero_txt.font_name = "sans_bold"
+	g5_hero_txt.font_size = 20
+	g5_hero_txt.font_align = "center"
+	g5_hero_txt.colors.text = {
+		100,
+		200,
+		51,
+		255
+	}
+	g5_hero_txt.text = _("G5_KINGDOM_DARK")
+	self.back:add_child(g5_hero_txt)
+
+	local g5_reinforce_txt = GGLabel:new(V.v(bg_middle - 80, 24))
+	g5_reinforce_txt.pos.x = bg_middle - 100
+	g5_reinforce_txt.pos.y = 238
+	g5_reinforce_txt.font_name = "sans_bold"
+	g5_reinforce_txt.font_size = 20
+	g5_reinforce_txt.font_align = "center"
+	g5_reinforce_txt.colors.text = {
+		100,
+		200,
+		51,
+		255
+	}
+	g5_reinforce_txt.text = _("G5_KINGDOM_DARK_REINFORCE")
+	self.back:add_child(g5_reinforce_txt)
+
+	local g5_hero_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	g5_hero_button.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	g5_hero_button.pos = v(bg_middle -120, 258)
+	g5_hero_button.scale = v(0.8, 0.8)
+	g5_hero_button.label.size = v(100, 34)
+	g5_hero_button.label.text_size = ecound_button.label.size
+	g5_hero_button.label.pos = v(20, 19)
+	g5_hero_button.label.font_size = 24
+	g5_hero_button.label.font_name = "sans_bold"
+	g5_hero_button.label.vertical_align = "middle"
+	g5_hero_button.label.text = _("G5_HERO_DARK_COUNT_"..screen_map.user_data.liuhui.g5_hero_dark_count)
+	g5_hero_button.label.fit_lines = 1
+	function g5_hero_button.on_click()
+		screen_map.user_data.liuhui.g5_hero_dark_count = screen_map.user_data.liuhui.g5_hero_dark_count + 1
+		if screen_map.user_data.liuhui.g5_hero_dark_count >= 3 then
+			screen_map.user_data.liuhui.g5_hero_dark_count = 0
+		end
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.g5_hero_button = g5_hero_button
+	self.back:add_child(self.g5_hero_button)
+
+	local g5_reinforcement_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	g5_reinforcement_button.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	g5_reinforcement_button.pos = v(bg_middle + 350, 258)
+	g5_reinforcement_button.scale = v(0.8, 0.8)
+	g5_reinforcement_button.label.size = v(100, 34)
+	g5_reinforcement_button.label.text_size = ecound_button.label.size
+	g5_reinforcement_button.label.pos = v(20, 19)
+	g5_reinforcement_button.label.font_size = 24
+	g5_reinforcement_button.label.font_name = "sans_bold"
+	g5_reinforcement_button.label.vertical_align = "middle"
+	g5_reinforcement_button.label.text = _("G5_KINGDOM_DARK_REINFORCEMENT_"..((screen_map.user_data.liuhui.reinforcement_5=="dark")and 2 or 1))
+	g5_reinforcement_button.label.fit_lines = 1
+	function g5_reinforcement_button.on_click()
+		if screen_map.user_data.liuhui.reinforcement_5 == "dark" then
+			screen_map.user_data.liuhui.reinforcement_5 = "royal" 
+		else
+			screen_map.user_data.liuhui.reinforcement_5 = "dark" 
+		end
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.g5_reinforcement_button = g5_reinforcement_button
+	self.back:add_child(self.g5_reinforcement_button)
+--援兵皮肤
+	local reinforcement_skin = GGLabel:new(V.v(bg_middle - 80, 24))
+	reinforcement_skin.pos.x = bg_middle - 570
+	reinforcement_skin.pos.y = 288
+	reinforcement_skin.font_name = "sans_bold"
+	reinforcement_skin.font_size = 20
+	reinforcement_skin.font_align = "center"
+	reinforcement_skin.colors.text = {
+		100,
+		200,
+		51,
+		255
+	}
+	reinforcement_skin.text = _("LH349_REINFORCEMENT_SKIN")
+	self.back:add_child(reinforcement_skin)
+
+	local reinforce_count = GGLabel:new(V.v(bg_middle - 80, 24))
+	reinforce_count.pos.x = bg_middle - 100
+	reinforce_count.pos.y = 288
+	reinforce_count.font_name = "sans_bold"
+	reinforce_count.font_size = 20
+	reinforce_count.font_align = "center"
+	reinforce_count.colors.text = {
+		100,
+		200,
+		51,
+		255
+	}
+	reinforce_count.text = _("LH349_REINFORCEMENT_COUNT")
+	self.back:add_child(reinforce_count)
+
+	local reinforcement_skin_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	reinforcement_skin_button.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	reinforcement_skin_button.pos = v(bg_middle - 120, 308)
+	reinforcement_skin_button.scale = v(0.8, 0.8)
+	reinforcement_skin_button.label.size = v(100, 34)
+	reinforcement_skin_button.label.text_size = ecound_button.label.size
+	reinforcement_skin_button.label.pos = v(20, 19)
+	reinforcement_skin_button.label.font_size = 24
+	reinforcement_skin_button.label.font_name = "sans_bold"
+	reinforcement_skin_button.label.vertical_align = "middle"
+	reinforcement_skin_button.label.text =  _("LH349_REINFORCEMENT_SKIN_"..screen_map.user_data.liuhui.reinforcement_skins)
+	reinforcement_skin_button.label.fit_lines = 1
+	function reinforcement_skin_button.on_click()
+		screen_map.user_data.liuhui.reinforcement_skins = screen_map.user_data.liuhui.reinforcement_skins + 1
+		if screen_map.user_data.liuhui.reinforcement_skins >= 4 then
+			screen_map.user_data.liuhui.reinforcement_skins = 0
+		end
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.reinforcement_skin_button = reinforcement_skin_button
+	self.back:add_child(self.reinforcement_skin_button)
+--援兵数量
+
+	local reinforcement_count_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	reinforcement_count_button.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	reinforcement_count_button.pos = v(bg_middle + 350, 308)
+	reinforcement_count_button.scale = v(0.8, 0.8)
+	reinforcement_count_button.label.size = v(100, 34)
+	reinforcement_count_button.label.text_size = ecound_button.label.size
+	reinforcement_count_button.label.pos = v(20, 19)
+	reinforcement_count_button.label.font_size = 24
+	reinforcement_count_button.label.font_name = "sans_bold"
+	reinforcement_count_button.label.vertical_align = "middle"
+	reinforcement_count_button.label.text = _("LH349_REINFORCEMENT_COUNT_"..screen_map.user_data.reinforcement_count)
+	reinforcement_count_button.label.fit_lines = 1
+	function reinforcement_count_button.on_click()
+		screen_map.user_data.reinforcement_count = screen_map.user_data.reinforcement_count + 1
+		if screen_map.user_data.reinforcement_count >= 2 then
+			screen_map.user_data.reinforcement_count = 0
+		end
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.reinforcement_count_button = reinforcement_count_button
+	self.back:add_child(self.reinforcement_count_button)
+
+--设置携带防御塔
+
+	local c_button_text = GGLabel:new(V.v(bg_middle - 80, 24))
+	c_button_text.pos.x = bg_middle - 570
+	c_button_text.pos.y = 338
+	c_button_text.font_name = "sans_bold"
+	c_button_text.font_size = 20
+	c_button_text.font_align = "center"
+	c_button_text.colors.text = {
+		100,
+		200,
+		51,
+		255
+	}
+	c_button_text.text = _("G123PICK")
+	self.back:add_child(c_button_text)
+
+	local count_button_text = GGLabel:new(V.v(bg_middle - 80, 24))
+	count_button_text.pos.x = bg_middle - 100
+	count_button_text.pos.y = 338
+	count_button_text.font_name = "sans_bold"
+	count_button_text.font_size = 20
+	count_button_text.font_align = "center"
+	count_button_text.colors.text = {
+		100,
+		200,
+		51,
+		255
+	}
+	count_button_text.text = _("TOWER_G45_PICK_COUNT")
+	self.back:add_child(count_button_text)
+
+	local c_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	c_button.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	c_button.pos = v(bg_middle - 120, 358) --(非点选的位置)v(self.sw / 2 - 2, 268)
+	c_button.scale = v(0.8, 0.8)
+	c_button.label.size = v(100, 34)
+	c_button.label.text_size = ecound_button.label.size
+	c_button.label.pos = v(20, 19)
+	c_button.label.font_size = 24
+	c_button.label.font_name = "sans_bold"
+	c_button.label.vertical_align = CJK("middle-caps", "middle", "middle", "middle")
+	c_button.label.text = _("USE3TOOWER_COUNT_"..screen_map.user_data.liuhui.use3tower_count)--screen_map.user_data.liuhui.use3tower and _("THIS_YES") or _("THIS_NO")
+	c_button.label.fit_lines = 1
+	function c_button.on_click()
+--		screen_map.user_data.liuhui.use3tower = not screen_map.user_data.liuhui.use3tower
+		screen_map.user_data.liuhui.use3tower_count = screen_map.user_data.liuhui.use3tower_count + 1
+		if screen_map.user_data.liuhui.use3tower_count >= 3 then
+			screen_map.user_data.liuhui.use3tower_count = 0
+		end				
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.c_button = c_button
+	self.back:add_child(self.c_button)
+--选择防御塔的携带数量
+	local MAX_TOWER = 12
+	self.alliance_num = 21
+	self.vegnance_num = 22
+	self.max_tower = MAX_TOWER
+	local count_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+
+	count_button.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	count_button.pos = v(bg_middle + 350, 358)--v(self.back.size.x - 166 - select_button.size.x - 20, self.back.size.y - 32)
+	count_button.scale = v(0.8, 0.8)
+	count_button.label.size = v(100, 34)
+	count_button.label.text_size = ecound_button.label.size
+	count_button.label.pos = v(20, 19)
+	count_button.label.font_size = 24
+	count_button.label.font_name = "sans_bold"
+	count_button.label.vertical_align = "middle"
+	count_button.label.text = string.format(_("TOWER_45_PICK_COUNT"), screen_map.user_data.tower_pick)
+	count_button.label.fit_lines = 1
+	function count_button.on_click()
+		local tower_pick = screen_map.user_data.tower_pick
+		if tower_pick == 1 then
+			tower_pick = MAX_TOWER
+			self.count_button.label.text = string.format(_("TOWER_45_PICK_COUNT"), tower_pick)
+		else
+			tower_pick = tower_pick - 1
+			self.count_button.label.text = string.format(_("TOWER_45_PICK_COUNT"), tower_pick)
+		end
+		screen_map.user_data.tower_pick = tower_pick
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.count_button = count_button
+	self.back:add_child(self.count_button)
+
+--设置最大血量
+	local stim = GGLabel:new(V.v(bg_middle - 80, 24))
+	stim.pos.x = bg_middle - 570
+	stim.pos.y = 138
+	stim.font_name = "sans_bold"
+	stim.font_size = 20
+	stim.font_align = "center"
+	stim.colors.text = {
+		200,
+		89,
+		51,
+		255
+	}
+	stim.text = _("ImpossibleHPRate")--..string.format("%.2f", screen_map.user_data.liuhui.impossiblerate)
+	self.stim = stim
+	self.back:add_child(stim)
+
+	local stim_count = GGLabel:new(V.v(bg_middle - 80, 24))
+	stim_count.pos.x = bg_middle - 350
+	stim_count.pos.y = 98
+	stim_count.font_name = "sans_bold"
+	stim_count.font_size = 20
+	stim_count.font_align = "center"
+	stim_count.colors.text = {
+		200,
+		89,
+		51,
+		255
+	}
+	stim_count.text = string.format("%.2f", screen_map.user_data.liuhui.impossiblerate)
+	self.stim_count = stim_count
+	self.back:add_child(stim_count)
+
+	local minus_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	minus_button.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	minus_button.pos = v(bg_middle  -170, 158)--v(self.back.size.x - 166 - select_button.size.x - 20, self.back.size.y - 32)
+	minus_button.scale = v(0.8, 0.8)
+	minus_button.label.size = v(100, 34)
+	minus_button.label.text_size = ecound_button.label.size
+	minus_button.label.pos = v(20, 19)
+	minus_button.label.font_size = 24
+	minus_button.label.font_name = "sans_bold"
+	minus_button.label.vertical_align = "middle"
+	minus_button.label.text = "-"
+	minus_button.label.fit_lines = 1
+	function minus_button.on_click()
+		local impossiblerate = screen_map.user_data.liuhui.impossiblerate
+		if impossiblerate and impossiblerate >= 2.51 then
+			impossiblerate = impossiblerate - 0.25
+		elseif impossiblerate and impossiblerate >= 1.14 then
+			impossiblerate = impossiblerate - 0.05
+		else
+			impossiblerate = 1.10
+		end
+		screen_map.user_data.liuhui.impossiblerate = impossiblerate
+		GS.difficulty_enemy_hp_max_factor[4] = screen_map.user_data.liuhui.impossiblerate
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.minus_button = minus_button
+	self.back:add_child(self.minus_button)
+
+	local plus_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	plus_button.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	plus_button.pos = v(bg_middle - 70, 158)--v(self.back.size.x - 166 - select_button.size.x - 20, self.back.size.y - 32)
+	plus_button.scale = v(0.8, 0.8)
+	plus_button.label.size = v(100, 34)
+	plus_button.label.text_size = ecound_button.label.size
+	plus_button.label.pos = v(20, 19)
+	plus_button.label.font_size = 24
+	plus_button.label.font_name = "sans_bold"
+	plus_button.label.vertical_align = "middle"
+	plus_button.label.text = "+"
+	plus_button.label.fit_lines = 1
+	function plus_button.on_click()
+		local impossiblerate = screen_map.user_data.liuhui.impossiblerate
+		if impossiblerate and impossiblerate <= 2.49 then
+			impossiblerate = impossiblerate + 0.05
+		elseif impossiblerate and impossiblerate <= 19.99 then
+			impossiblerate = impossiblerate + 0.25
+		else
+			impossiblerate = 20
+		end
+		screen_map.user_data.liuhui.impossiblerate = impossiblerate
+		GS.difficulty_enemy_hp_max_factor[4] = screen_map.user_data.liuhui.impossiblerate
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.plus_button = plus_button
+	self.back:add_child(self.plus_button)
+
+--设置3代血量模式
+	local stg3 = GGLabel:new(V.v(bg_middle - 80, 24))
+	stg3.pos.x = bg_middle - 100
+	stg3.pos.y = 138
+	stg3.font_name = "sans_bold"
+	stg3.font_size = 20
+	stg3.font_align = "center"
+	stg3.colors.text = {
+		200,
+		89,
+		51,
+		255
+	}
+	stg3.text = _("G3_IMPOSSIBLE")
+	self.back:add_child(stg3)
+
+
+	local g3_hprate_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	g3_hprate_button.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	g3_hprate_button.pos = v(bg_middle + 350, 158)
+	g3_hprate_button.scale = v(0.8, 0.8)
+	g3_hprate_button.label.size = v(100, 34)
+	g3_hprate_button.label.text_size = ecound_button.label.size
+	g3_hprate_button.label.pos = v(20, 19)
+	g3_hprate_button.label.font_size = 20
+	g3_hprate_button.label.font_name = "sans_bold"
+	g3_hprate_button.label.vertical_align = "middle"
+	g3_hprate_button.label.text = screen_map.user_data.liuhui.g3_hprate and _("G3_CALRATE") or _("G3_STANDARD")
+	g3_hprate_button.label.fit_lines = 1
+	function g3_hprate_button.on_click()
+		screen_map.user_data.liuhui.g3_hprate = not screen_map.user_data.liuhui.g3_hprate
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.g3_hprate_button = g3_hprate_button
+	self.back:add_child(self.g3_hprate_button)
+--设置平衡性开关
+	local stbalance = GGLabel:new(V.v(bg_middle - 80, 24))
+	stbalance.pos.x = bg_middle - 570
+	stbalance.pos.y = 388
+	stbalance.font_name = "sans_bold"
+	stbalance.font_size = 20
+	stbalance.font_align = "center"
+	stbalance.colors.text = {
+		100,
+		200,
+		51,
+		255
+	}
+	stbalance.text = _("BALANCE_MODE_BETTER")
+	self.back:add_child(stbalance)
+
+	local stbalance_4 = GGLabel:new(V.v(bg_middle - 80, 24))
+	stbalance_4.pos.x = bg_middle - 100
+	stbalance_4.pos.y = 388
+	stbalance_4.font_name = "sans_bold"
+	stbalance_4.font_size = 20
+	stbalance_4.font_align = "center"
+	stbalance_4.colors.text = {
+		100,
+		200,
+		51,
+		255
+	}
+	stbalance_4.text = _("BALANCE_MODE_BETTER_4")
+	self.back:add_child(stbalance_4)
+
+	local balance_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	balance_button.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	balance_button.pos = v(bg_middle - 120, 408)
+	balance_button.scale = v(0.8, 0.8)
+	balance_button.label.size = v(100, 34)
+	balance_button.label.text_size = ecound_button.label.size
+	balance_button.label.pos = v(20, 19)
+	balance_button.label.font_size = 24
+	balance_button.label.font_name = "sans_bold"
+	balance_button.label.vertical_align = "middle"
+	balance_button.label.text = screen_map.user_data.liuhui.balance and _("THIS_YES") or _("THIS_NO")
+	balance_button.label.fit_lines = 1
+	function balance_button.on_click()
+		screen_map.user_data.liuhui.balance = not screen_map.user_data.liuhui.balance
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.balance_button = balance_button
+	self.back:add_child(self.balance_button)
+
+	local g4range_balance_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	g4range_balance_button.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	g4range_balance_button.pos = v(bg_middle + 350, 408)
+	g4range_balance_button.scale = v(0.8, 0.8)
+	g4range_balance_button.label.size = v(100, 34)
+	g4range_balance_button.label.text_size = ecound_button.label.size
+	g4range_balance_button.label.pos = v(20, 19)
+	g4range_balance_button.label.font_size = 24
+	g4range_balance_button.label.font_name = "sans_bold"
+	g4range_balance_button.label.vertical_align = "middle"
+	g4range_balance_button.label.text = screen_map.user_data.liuhui.g4range_balance and _("FL_RANGE_BALANCE_RANGE") or _("FL_RANGE_STD_RANGE")
+	g4range_balance_button.label.fit_lines = 1
+	function g4range_balance_button.on_click()
+		screen_map.user_data.liuhui.g4range_balance = not screen_map.user_data.liuhui.g4range_balance
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.g4range_balance_button = g4range_balance_button
+	self.back:add_child(self.g4range_balance_button)
+--设置金手指
+	local st_cheat = GGLabel:new(V.v(bg_middle - 80, 24))
+	st_cheat.pos.x = bg_middle - 570
+	st_cheat.pos.y = 438
+	st_cheat.font_name = "sans_bold"--"body"
+	st_cheat.font_size = 20
+	st_cheat.font_align = "center"
+	st_cheat.colors.text = {
+		255,
+		240,
+		80,
+		255
+	}
+	st_cheat.text = _("IS_CHEAT_GOLD")
+	self.back:add_child(st_cheat)
+
+	local st_cheat = GGLabel:new(V.v(bg_middle - 80, 24))
+	st_cheat.pos.x = bg_middle - 100
+	st_cheat.pos.y = 438
+	st_cheat.font_name = "sans_bold"--"body"
+	st_cheat.font_size = 20
+	st_cheat.font_align = "center"
+	st_cheat.colors.text = {
+		255,
+		240,
+		80,
+		255
+	}
+	st_cheat.text = _("IS_CHEAT_LOONG")
+	self.back:add_child(st_cheat)
+
+	local st_cheat_hero = GGLabel:new(V.v(bg_middle - 80, 24))
+	st_cheat_hero.pos.x = bg_middle - 570
+	st_cheat_hero.pos.y = 488
+	st_cheat_hero.font_name = "sans_bold"--"body"
+	st_cheat_hero.font_size = 20
+	st_cheat_hero.font_align = "center"
+	st_cheat_hero.colors.text = {
+		255,
+		240,
+		80,
+		255
+	}
+	st_cheat_hero.text = _("IS_CHEAT_HERO")
+	self.back:add_child(st_cheat_hero)
+
+	local st_cheat = GGLabel:new(V.v(bg_middle - 80, 24))
+	st_cheat.pos.x = bg_middle - 100
+	st_cheat.pos.y = 488
+	st_cheat.font_name = "sans_bold"--"body"
+	st_cheat.font_size = 20
+	st_cheat.font_align = "center"
+	st_cheat.colors.text = {
+		255,
+		240,
+		80,
+		255
+	}
+	st_cheat.text = _("IS_CHEAT_HERO_5")
+	self.back:add_child(st_cheat)
+
+	local cheat_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	cheat_button.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	cheat_button.pos = v(bg_middle - 120, 458)
+	cheat_button.scale = v(0.8, 0.8)
+	cheat_button.label.size = v(100, 34)
+	cheat_button.label.text_size = ecound_button.label.size
+	cheat_button.label.pos = v(20, 19)
+	cheat_button.label.font_size = 24
+	cheat_button.label.font_name = "sans_bold"
+	cheat_button.label.vertical_align = CJK("middle-caps", "middle", "middle", "middle")
+	cheat_button.label.text = screen_map.user_data.liuhui.cheat and _("THIS_YES") or _("THIS_NO")
+	cheat_button.label.fit_lines = 1
+	function cheat_button.on_click()
+		screen_map.user_data.liuhui.cheat = not screen_map.user_data.liuhui.cheat
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.cheat_button = cheat_button
+	self.back:add_child(self.cheat_button)
+
+	local cheat_hero_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	cheat_hero_button.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	cheat_hero_button.pos = v(bg_middle - 120, 508)--v(self.back.size.x - 166 - select_button.size.x - 20, self.back.size.y - 32)
+	cheat_hero_button.scale = v(0.8, 0.8)
+	cheat_hero_button.label.size = v(100, 34)
+	cheat_hero_button.label.text_size = ecound_button.label.size
+	cheat_hero_button.label.pos = v(20, 19)
+	cheat_hero_button.label.font_size = 24
+	cheat_hero_button.label.font_name = "sans_bold"
+	cheat_hero_button.label.vertical_align = CJK("middle-caps", "middle", "middle", "middle")
+	cheat_hero_button.label.text = screen_map.user_data.liuhui.cheathero and _("THIS_YES") or _("THIS_NO")
+	cheat_hero_button.label.fit_lines = 1
+	function cheat_hero_button.on_click()
+		screen_map.user_data.liuhui.cheathero = not screen_map.user_data.liuhui.cheathero
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.cheat_hero_button = cheat_hero_button
+	self.back:add_child(self.cheat_hero_button)
+
+	local g5_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	g5_button.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	g5_button.pos = v(bg_middle + 350, 508)
+	g5_button.scale = v(0.8, 0.8)
+	g5_button.label.size = v(100, 34)
+	g5_button.label.text_size = ecound_button.label.size
+	g5_button.label.pos = v(20, 19)
+	g5_button.label.font_size = 24
+	g5_button.label.font_name = "sans_bold"
+	g5_button.label.vertical_align = "middle"
+	g5_button.label.text = screen_map.user_data.liuhui.cheat5 and _("THIS_YES") or _("THIS_NO")
+	g5_button.label.fit_lines = 1
+	function g5_button.on_click()
+		screen_map.user_data.liuhui.cheat5 = not screen_map.user_data.liuhui.cheat5
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.g5_button = g5_button
+	self.back:add_child(self.g5_button)
+
+	local g5_dragon_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	g5_dragon_button.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	g5_dragon_button.pos = v(bg_middle + 350, 458)
+	g5_dragon_button.scale = v(0.8, 0.8)
+	g5_dragon_button.label.size = v(100, 34)
+	g5_dragon_button.label.text_size = ecound_button.label.size
+	g5_dragon_button.label.pos = v(20, 19)
+	g5_dragon_button.label.font_size = 24
+	g5_dragon_button.label.font_name = "sans_bold"
+	g5_dragon_button.label.vertical_align = "middle"
+	g5_dragon_button.label.text = screen_map.user_data.liuhui.cheat5_dragon and _("THIS_YES") or _("THIS_NO")
+	g5_dragon_button.label.fit_lines = 1
+	function g5_dragon_button.on_click()
+		screen_map.user_data.liuhui.cheat5_dragon = not screen_map.user_data.liuhui.cheat5_dragon
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.g5_dragon_button = g5_dragon_button
+	self.back:add_child(self.g5_dragon_button)
+---随机模式
+	local st_rand = GGLabel:new(V.v(bg_middle - 80, 24))
+	st_rand.pos.x = bg_middle - 570
+	st_rand.pos.y = 538
+	st_rand.font_name = "sans_bold"
+	st_rand.font_size = 20
+	st_rand.font_align = "center"
+	st_rand.colors.text = {
+		93,
+		156,
+		252,
+		255
+	}
+	st_rand.text = _("IS_RAND_ENEMY")
+	self.back:add_child(st_rand)
+
+	local st_rand = GGLabel:new(V.v(bg_middle - 80, 24))
+	st_rand.pos.x = bg_middle - 100
+	st_rand.pos.y = 538
+	st_rand.font_name = "sans_bold"
+	st_rand.font_size = 20
+	st_rand.font_align = "center"
+	st_rand.colors.text = {
+		93,
+		156,
+		252,
+		255
+	}
+	st_rand.text = _("IS_RAND_TOWER")
+	self.back:add_child(st_rand)
+
+	local st_rand = GGLabel:new(V.v(bg_middle - 80, 24))
+	st_rand.pos.x = bg_middle - 570
+	st_rand.pos.y = 588
+	st_rand.font_name = "sans_bold"
+	st_rand.font_size = 20
+	st_rand.font_align = "center"
+	st_rand.colors.text = {
+		93,
+		156,
+		252,
+		255
+	}
+	st_rand.text = _("IS_RAND_MODE")
+	self.back:add_child(st_rand)
+
+	local st_rand = GGLabel:new(V.v(bg_middle - 80, 24))
+	st_rand.pos.x = bg_middle - 100
+	st_rand.pos.y = 588
+	st_rand.font_name = "sans_bold"
+	st_rand.font_size = 20
+	st_rand.font_align = "center"
+	st_rand.colors.text = {
+		93,
+		156,
+		252,
+		255
+	}
+	st_rand.text = _("IS_RAND_HERO")
+	self.back:add_child(st_rand)
+
+	local rand_button_1 = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	rand_button_1.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	rand_button_1.pos = v(bg_middle - 120, 558)
+	rand_button_1.scale = v(0.8, 0.8)
+	rand_button_1.label.size = v(100, 34)
+	rand_button_1.label.text_size = ecound_button.label.size
+	rand_button_1.label.pos = v(20, 19)
+	rand_button_1.label.font_size = 24
+	rand_button_1.label.font_name = "sans_bold"
+	rand_button_1.label.vertical_align = CJK("middle-caps", "middle", "middle", "middle")
+	rand_button_1.label.text = _("RAND_CREEP_ENEMY_"..(screen_map.user_data.liuhui.rand_creep or 0))
+	rand_button_1.label.fit_lines = 1
+	function rand_button_1.on_click()
+		screen_map.user_data.liuhui.rand_creep = screen_map.user_data.liuhui.rand_creep + 1
+		if screen_map.user_data.liuhui.rand_creep >= 4 then
+			screen_map.user_data.liuhui.rand_creep = 0
+		end
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.rand_button_1 = rand_button_1
+	self.back:add_child(self.rand_button_1)
+
+	local rand_button_2 = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	rand_button_2.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	rand_button_2.pos = v(bg_middle + 350, 558)--v(self.back.size.x - 166 - select_button.size.x - 20, self.back.size.y - 32)
+	rand_button_2.scale = v(0.8, 0.8)
+	rand_button_2.label.size = v(100, 34)
+	rand_button_2.label.text_size = ecound_button.label.size
+	rand_button_2.label.pos = v(20, 19)
+	rand_button_2.label.font_size = 24
+	rand_button_2.label.font_name = "sans_bold"
+	rand_button_2.label.vertical_align = CJK("middle-caps", "middle", "middle", "middle")
+	rand_button_2.label.text = _("RAND_TOWER_COUNT_"..(screen_map.user_data.liuhui.rand_tower or 0))
+	rand_button_2.label.fit_lines = 1
+	function rand_button_2.on_click()
+		screen_map.user_data.liuhui.rand_tower = screen_map.user_data.liuhui.rand_tower + 1
+
+		if screen_map.user_data.liuhui.rand_tower >= 6 then
+			screen_map.user_data.liuhui.rand_tower = 0
+		end
+		if screen_map.user_data.liuhui.rand_tower >= 4 and screen_map.user_data.liuhui.rand_tower_mode == 4 then
+			screen_map.user_data.liuhui.rand_tower = 0
+		end
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.rand_button_2 = rand_button_2
+	self.back:add_child(self.rand_button_2)
+
+	local rand_button_22 = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	rand_button_22.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	rand_button_22.pos = v(bg_middle - 120, 608)--v(self.back.size.x - 166 - select_button.size.x - 20, self.back.size.y - 32)
+	rand_button_22.scale = v(0.8, 0.8)
+	rand_button_22.label.size = v(100, 34)
+	rand_button_22.label.text_size = ecound_button.label.size
+	rand_button_22.label.pos = v(20, 19)
+	rand_button_22.label.font_size = 24
+	rand_button_22.label.font_name = "sans_bold"
+	rand_button_22.label.vertical_align = CJK("middle-caps", "middle", "middle", "middle")
+	rand_button_22.label.text = _("RAND_TOWER_MODE_"..(screen_map.user_data.liuhui.rand_tower_mode or 0))
+	rand_button_22.label.fit_lines = 1
+	function rand_button_22.on_click()
+		screen_map.user_data.liuhui.rand_tower_mode = screen_map.user_data.liuhui.rand_tower_mode + 1
+		if screen_map.user_data.liuhui.rand_tower_mode == 4 and screen_map.user_data.liuhui.rand_tower >= 3 then
+			screen_map.user_data.liuhui.rand_tower = 3
+		end
+		if screen_map.user_data.liuhui.rand_tower_mode >= 5 then
+			screen_map.user_data.liuhui.rand_tower_mode = 0
+		end
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.rand_button_22 = rand_button_22
+	self.back:add_child(self.rand_button_22)
+
+	local rand_button_3 = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	rand_button_3.anchor = v(math.floor(ecound_button.size.x / 2), ecound_button.size.y / 2)
+	rand_button_3.pos = v(bg_middle + 350, 608)--v(self.back.size.x - 166 - select_button.size.x - 20, self.back.size.y - 32)
+	rand_button_3.scale = v(0.8, 0.8)
+	rand_button_3.label.size = v(100, 34)
+	rand_button_3.label.text_size = ecound_button.label.size
+	rand_button_3.label.pos = v(20, 19)
+	rand_button_3.label.font_size = 24
+	rand_button_3.label.font_name = "sans_bold"
+	rand_button_3.label.vertical_align = CJK("middle-caps", "middle", "middle", "middle")
+	rand_button_3.label.text = _("THIS_YES_"..(screen_map.user_data.liuhui.rand_hero or 0))
+	rand_button_3.label.fit_lines = 1
+	function rand_button_3.on_click()
+		screen_map.user_data.liuhui.rand_hero = screen_map.user_data.liuhui.rand_hero + 1
+		if screen_map.user_data.liuhui.rand_hero >= 2 then
+			screen_map.user_data.liuhui.rand_hero = 0
+		end
+		storage:save_slot(screen_map.user_data)
+		self:update_selected()
+		S:queue("GUIButtonCommon")
+	end
+	self.rand_button_3 = rand_button_3
+	self.back:add_child(self.rand_button_3)
+
+	--关闭按钮
+	local close_button = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
+
+	close_button.pos = v(self.back.size.x - 53, 19)
+	self.close_button = close_button
+
+	self.back:add_child(close_button)
+
+	function self.close_button.on_click()
+		S:queue("GUIButtonCommon")
+		self:hide()
+	end
+	self:update_selected()
+
+end
+
+function MoreOptionsView:update_selected()
+	if self.selected_panel then
+		self.back:remove_child(self.selected_panel)
+
+		self.selected_panel = nil
+	end
+
+	self.selected_panel = KView:new(V.v(600, 700))
+	self.selected_panel.pos = v(self.sw / 2 - 400, 270) --v(self.sw / 2 - 30, 200)
+	self.selected_panel.propagate_on_click = true
+	self.back:add_child(self.selected_panel)
+
+	for i = 1, 12 do
+		local num = screen_map.user_data.towers[i]
+		local icon_idx_1 = global_icon_idx[num]
+		local icon = ""
+		local scales = 0
+		if icon_idx_1 > 400 then
+			icon = string.format("towerselect_quickmenu_icons_%04i", icon_idx_1 - 400)
+			scales = 0.36
+		else
+			icon = string.format(GS.tower_room_tower_thumb_fmt, icon_idx_1)
+			scales = 0.88
+		end
+		log.debug(icon)
+	end
+	self.cheat_hero_button.label.text = screen_map.user_data.liuhui.cheathero and _("THIS_YES") or _("THIS_NO")
+	self.cheat_button.label.text = screen_map.user_data.liuhui.cheat and _("THIS_YES") or _("THIS_NO")
+	self.c_button.label.text = _("USE3TOOWER_COUNT_"..screen_map.user_data.liuhui.use3tower_count)--screen_map.user_data.liuhui.use3tower and _("THIS_YES") or _("THIS_NO")
+	self.g3_hprate_button.label.text = screen_map.user_data.liuhui.g3_hprate and _("G3_CALRATE") or _("G3_STANDARD")
+	self.g5_button.label.text = screen_map.user_data.liuhui.cheat5 and _("THIS_YES") or _("THIS_NO")
+	self.g5_dragon_button.label.text = screen_map.user_data.liuhui.cheat5_dragon and _("THIS_YES") or _("THIS_NO")
+	self.ecound_button.label.text = _("LH349_ENEMY_COUNT_"..(screen_map.user_data.liuhui.enemy_count or 1))
+	self.g5_hero_button.label.text = _("G5_HERO_DARK_COUNT_"..screen_map.user_data.liuhui.g5_hero_dark_count or 2)
+	self.g5_reinforcement_button.label.text = _("G5_KINGDOM_DARK_REINFORCEMENT_"..((screen_map.user_data.liuhui.reinforcement_5=="dark")and 2 or 1))
+	self.reinforcement_skin_button.label.text =  _("LH349_REINFORCEMENT_SKIN_"..screen_map.user_data.liuhui.reinforcement_skins or 0)
+	self.reinforcement_count_button.label.text = _("LH349_REINFORCEMENT_COUNT_"..screen_map.user_data.reinforcement_count or 0)
+	self.balance_button.label.text = screen_map.user_data.liuhui.balance and _("THIS_YES") or _("THIS_NO")
+	self.xingyu_button.label.text = screen_map.user_data.xingyu.balance and _("THIS_YES") or _("THIS_NO")
+	self.g4range_balance_button.label.text = screen_map.user_data.liuhui.g4range_balance and _("FL_RANGE_BALANCE_RANGE") or _("FL_RANGE_STD_RANGE")
+	self.stim.text = _("ImpossibleHPRate")--..string.format("%.2f", screen_map.user_data.liuhui.impossiblerate)
+	self.stim_count.text = string.format("%.2f", screen_map.user_data.liuhui.impossiblerate)
+	self.rand_button_1.label.text = _("RAND_CREEP_ENEMY_"..(screen_map.user_data.liuhui.rand_creep or 0))
+	self.rand_button_2.label.text = _("RAND_TOWER_COUNT_"..(screen_map.user_data.liuhui.rand_tower or 0))
+	self.rand_button_22.label.text = _("RAND_TOWER_MODE_"..(screen_map.user_data.liuhui.rand_tower_mode or 0))
+	self.rand_button_3.label.text = _("THIS_YES_"..(screen_map.user_data.liuhui.rand_hero or 0))
+end
+
+function MoreOptionsView:show()
+	MoreOptionsView.super.show(self)
+
+	self.difficulty_idx = screen_map.user_data.difficulty
+
+	if not self.difficulty_idx then
+		self.difficulty_idx = 1
+	end
+end
+
+function MoreOptionsView:hide()
+	MoreOptionsView.super.hide(self)
+end
+------
 HeroNameLabel = class("HeroNameLabel", KView)
 
 function HeroNameLabel:initialize(size)
@@ -7694,6 +8925,7 @@ function HeroRoomView:initialize(sw, sh)
 
 	self.back = KImageView:new("heroroom_001_notxt")
 	self.back.pos = v(0, 0)
+	
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
 
 	self:add_child(self.back)
@@ -7720,6 +8952,16 @@ function HeroRoomView:initialize(sw, sh)
 	self.hero_select.mouse_over.propagate_on_click = true
 	self.hero_select.mouse_over.hidden = true
 	self.hero_select.mouse_over.scale = v(hrvt_size.x / self.hero_select.mouse_over.size.x, hrvt_size.y / self.hero_select.mouse_over.size.y)
+
+	if screen_map.user_data.liuhui_hero == nil then
+		screen_map.user_data.liuhui_hero = {}
+	end
+	if screen_map.user_data.liuhui_hero.usedoublehero == nil then
+		screen_map.user_data.liuhui_hero.usedoublehero = false
+	end
+	if screen_map.user_data.liuhui_hero.herolist == nil then
+		screen_map.user_data.liuhui_hero.herolist = {[1] = 48; [2] = 49}
+	end
 
 	if screen_map.user_data.heroes.selected then
 		for i, hd in ipairs(screen_map.hero_data) do
@@ -8192,8 +9434,6 @@ function HeroRoomView:initialize(sw, sh)
 			self.help_select.hidden = true
 		end
 
-		
-
 		screen_map.skill_label.text = self.skills.points.text
 
 		if tonumber(self.skills.points.text) == 0 then
@@ -8257,11 +9497,12 @@ function HeroRoomView:initialize(sw, sh)
 	if screen_map.user_data.liuhui.g1_level10 == nil then
 		screen_map.user_data.liuhui.g1_level10 = false
 	end
+
 	self.g1_level_but = GGButton:new("heroroom_btnSelect_0001", "heroroom_btnSelect_0002", "heroroom_btnSelect_0002")
 	--self.g1_level_but.anchor = v(0, 0)
 	self.g1_level_but.on_down_scale = nil
 	self.g1_level_but.label.size = v(114, 38)
-	self.g1_level_but.pos = v(self.back.size.x - 332 - self.g1_level_but.size.x - 20, self.back.size.y - 32)
+	self.g1_level_but.pos = v(self.back.size.x - 700 - self.g1_level_but.size.x - 20, self.back.size.y - 112)--v(self.back.size.x - 498 - self.g1_level_but.size.x - 20, self.back.size.y - 32)--v(self.back.size.x - 498 - self.g1_level_but.size.x - 20, self.back.size.y - 32)
 	self.g1_level_but.label.text_size = self.g1_level_but.label.size
 	self.g1_level_but.label.pos = v(25, 16)
 	self.g1_level_but.label.font_size = 24
@@ -8277,6 +9518,12 @@ function HeroRoomView:initialize(sw, sh)
 	end
 
 	self.back:add_child(self.g1_level_but)
+
+	self.selected_hero1 = KImageView:new("heroroom_014_large")
+	self.selected_hero2 = KImageView:new("heroroom_014_large")
+	self.back:add_child(self.selected_hero1)
+	self.back:add_child(self.selected_hero2)
+	self:update_selected_hero()
 
 	if not IS_KR3 then
 		local header = GGPanelHeader:new(_("HERO ROOM"), 274)
@@ -8413,6 +9660,71 @@ function HeroRoomView:initialize(sw, sh)
 
 	self.done_button = done_button
 
+	local select_button_double = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+
+	select_button_double.anchor = v(math.floor(done_button.size.x / 2), done_button.size.y / 2)
+	select_button_double.pos = v(self.back.size.x - 860 - done_button.size.x - 20, self.back.size.y - 32)
+	select_button_double.label.size = v(100, 34)
+	select_button_double.label.text_size = done_button.label.size
+	select_button_double.label.pos = v(20, 19)
+	select_button_double.label.font_size = 24
+	select_button_double.label.vertical_align = CJK("middle-caps", "middle", "middle", "middle")
+	select_button_double.label.text = _("MAP_DOUBLE_HERO_ROOM_SELECT")
+	select_button_double.label.fit_lines = 1
+
+	--选择英雄
+	function select_button_double.on_click()
+		S:queue("GUIButtonCommon")
+		local i = self.selected_index --注意不能和icon值弄混了
+		local hd = screen_map.hero_data[i]
+		if hd.transplanting == true then
+			return
+		end
+		screen_map.user_data.liuhui_hero.herolist[2] = screen_map.user_data.liuhui_hero.herolist[1]
+		screen_map.user_data.liuhui_hero.herolist[1] = self.selected_index
+		local ht = E:get_template(hd.name)
+		S:queue(ht.sound_events.hero_room_select)
+
+		local h_status = screen_map.user_data.heroes.status[hd.name]
+		local starting_xp = hd.starting_level < 2 and 0 or GS.hero_xp_thresholds[hd.starting_level - 1]
+
+		h_status.xp = math.min(math.max(h_status.xp, starting_xp), 1153000)
+
+		--storage:save_slot(screen_map.user_data)
+
+		storage:save_slot(screen_map.user_data)
+		self:update_selected_hero()
+	end
+
+	self.back:add_child(select_button_double)
+
+	self.select_button_double = select_button_double
+
+	local switch_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+	switch_button.size.x = 200
+	switch_button.anchor = v(math.floor(done_button.size.x / 2), done_button.size.y / 2)
+	switch_button.pos = v(self.back.size.x - 694 - done_button.size.x - 20, self.back.size.y - 32)
+	switch_button.label.size = v(100, 34)
+	switch_button.label.text_size = done_button.label.size
+	switch_button.label.pos = v(20, 19)
+	switch_button.label.font_size = 24
+	switch_button.label.vertical_align = CJK("middle-caps", "middle", "middle", "middle")
+	switch_button.label.text = screen_map.user_data.liuhui_hero.usedoublehero and _("HERO5_MODE_ON") or _("HERO5_MODE_OFF")
+	switch_button.label.fit_lines = 1
+
+	function switch_button.on_click()
+		S:queue("GUIButtonCommon")
+		screen_map.user_data.liuhui_hero.usedoublehero = not screen_map.user_data.liuhui_hero.usedoublehero
+		switch_button.label.text = screen_map.user_data.liuhui_hero.usedoublehero and _("HERO5_MODE_ON") or _("HERO5_MODE_OFF")
+		storage:save_slot(screen_map.user_data)
+	end
+
+	self.back:add_child(switch_button)
+
+	self.switch_button = switch_button
+
+	self:update_selected_hero()
+
 	--英雄界面切换按钮
 	switch_hero_room_page()
 	if self.real_selected > 16 and self.real_selected <= 32 then
@@ -8436,6 +9748,7 @@ function HeroRoomView:initialize(sw, sh)
 		switch_hero_room_page()
 		switch_hero_room_page()
 	end
+
 	local next_page_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
 
 	next_page_button.anchor = v(math.floor(done_button.size.x / 2), done_button.size.y / 2)
@@ -8467,6 +9780,39 @@ function HeroRoomView:initialize(sw, sh)
 
 	self.next_page_button = next_page_button
 
+	local prev_page_button = GGButton:new("heroroom_btnDone_large_0001", "heroroom_btnDone_large_0002")
+
+	prev_page_button.anchor = v(math.floor(done_button.size.x / 2), done_button.size.y / 2)
+	prev_page_button.pos = v(self.back.size.x - 332 - done_button.size.x - 20, self.back.size.y - 32)
+	prev_page_button.label.size = v(100, 34)
+	prev_page_button.label.text_size = done_button.label.size
+	prev_page_button.label.pos = v(20, 19)
+	prev_page_button.label.font_size = 24
+	prev_page_button.label.vertical_align = CJK("middle-caps", "middle", "middle", "middle")
+	prev_page_button.label.text = _("BUTTON_PREV_PAGE")
+	prev_page_button.label.fit_lines = 1
+
+	function prev_page_button.on_click()
+		for jt = 1, 5 do
+			for i, v in ipairs(self.hero_views) do
+				if (i >= self.hero_viewing and i - self.hero_viewing < 16) then
+					v.hidden = false
+				else
+					v.hidden = true
+				end
+			end
+			self.hero_viewing = self.hero_viewing + 16
+			if self.hero_viewing > #self.hero_views then
+				self.hero_viewing = 1
+			end
+		end
+		S:queue("GUIButtonCommon")
+	end
+
+	self.back:add_child(prev_page_button)
+
+	self.prev_page_button = prev_page_button
+
 	local over_done_button = KImageView:new("heroroom_014_large")
 
 	over_done_button.anchor = v(math.floor(over_done_button.size.x / 2), over_done_button.size.y / 2)
@@ -8475,6 +9821,29 @@ function HeroRoomView:initialize(sw, sh)
 	self.back:add_child(over_done_button)
 
 	over_done_button.propagate_on_click = true
+end
+
+function HeroRoomView:update_selected_hero()
+
+	local i = screen_map.user_data.liuhui_hero.herolist[1]
+	local hd = screen_map.hero_data[i]
+	if i <= 47 then--加载前3代英雄
+		self.selected_hero1:set_image(string.format("heroroom_portraits_%04i", hd.thumb))
+	else--加载5代英雄
+		self.selected_hero1:set_image(string.format("hero_room_portraits_small_thumb_%s_0001", hd.name))
+	end
+	self.selected_hero1.pos =  i <= 47 and self:hero_thumb_pos(1, -120, 0) or self:hero_thumb_pos(49, -120, 0)
+	self.selected_hero1.scale = i <= 47 and hrvt_scale or v(1, 1)
+
+	local i = screen_map.user_data.liuhui_hero.herolist[2]
+	local hd = screen_map.hero_data[i]
+	if i <= 47 then--加载前3代英雄
+		self.selected_hero2:set_image(string.format("heroroom_portraits_%04i", hd.thumb))
+	else--加载5代英雄
+		self.selected_hero2:set_image(string.format("hero_room_portraits_small_thumb_%s_0001", hd.name))
+	end
+	self.selected_hero2.pos = i <= 47 and self:hero_thumb_pos(9, -120, 0) or self:hero_thumb_pos(57, -120, 0)
+	self.selected_hero2.scale = i <= 47 and hrvt_scale or v(1, 1)
 end
 
 function HeroRoomView:show()
@@ -8602,7 +9971,14 @@ function HeroRoomView:construct_hero(index)
             sword = "heroroom_attackIcons_0001",
             fireball = "heroroom_attackIcons_0004",
             arrow = "heroroom_attackIcons_0003",
-            shot = "heroroom_attackIcons_0001"
+            shot = "heroroom_attackIcons_0001",
+			meleemagic = "heroroom_attackIcons_0002",
+			electrical = "heroroom_attackIcons_0002",
+			meleeelectrical = "heroroom_attackIcons_0002",
+			explosion = "heroroom_attackIcons_0004",
+			meleeexplosion = "heroroom_attackIcons_0004",
+			meleetrue = "heroroom_attackIcons_0002",
+			rangedtrue = "heroroom_attackIcons_0002",				
         }
         
         self.bio_class_label.text = hero_data.hero_class
@@ -9232,7 +10608,14 @@ function HeroSkills:load_hero(index)
 		sword = "heroroom_attackIcons_0001",
 		fireball = "heroroom_attackIcons_0004",
 		arrow = "heroroom_attackIcons_0003",
-		shot = "heroroom_attackIcons_0001"
+		shot = "heroroom_attackIcons_0001",
+		meleemagic = "heroroom_attackIcons_0002",
+		electrical = "heroroom_attackIcons_0002",
+		meleeelectrical = "heroroom_attackIcons_0002",
+		explosion = "heroroom_attackIcons_0004",
+		meleeexplosion = "heroroom_attackIcons_0004",
+		meleetrue = "heroroom_attackIcons_0002",
+		rangedtrue = "heroroom_attackIcons_0002",			
 	}
 	local hero_data = get_hero_stats(index)
 
@@ -9515,6 +10898,22 @@ function OptionsView:initialize(sw, sh)
 	self.resume = b
 
 	self.back:add_child(b)
+	--英雄距离显示
+	local btrue_melee_range
+	btrue_melee_range = GGOptionsButton:new(_("BUTTON_MELEE_RANGE"))
+	btrue_melee_range.anchor.x = btrue_melee_range.size.x
+	btrue_melee_range.pos = V.v(self.back.size.x / 2 - 2*mx, y)
+
+	function btrue_melee_range.on_click()
+		S:queue("GUIButtonCommon")
+		screen_map.user_data.true_melee_range =  not screen_map.user_data.true_melee_range
+		storage:save_slot(screen_map.user_data)
+	end
+
+	self.melee_range = btrue_melee_range
+
+	self.back:add_child(btrue_melee_range)
+	--
 
 	local settings = storage:load_settings()
 
