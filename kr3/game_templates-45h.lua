@@ -6928,13 +6928,14 @@ tt.main_script.update = kr4_scripts.aura_isfet_necromancy.update
 tt = RT("hero_isfet_mummy", "soldier_militia")
 AC(tt, "melee", "nav_path")
 tt.main_script.update = kr4_scripts.hero_isfet_mummy.update
+--tt.main_script.insert = kr4_scripts.hero_isfet_mummy.insert
 tt.health.hp_max = 180
 tt.health.armor = 0
 tt.health.dead_lifetime = 0
 tt.health_bar.offset = v(0, 32)
 tt.health_bar.type = HEALTH_BAR_SIZE_SMALL
 tt.info.fn = scripts.soldier_barrack.get_info
-tt.lifetime = 50
+tt.lifetime = 15
 tt.motion.max_speed = 20
 tt.nav_path.dir = -1
 tt.render.sprites[1].anchor = v(0.5, 0.065)
@@ -6951,7 +6952,8 @@ tt.render.sprites[2].animated = false
 tt.render.sprites[2].is_shadow = true
 tt.render.sprites[2].name = "hero_isfet_mummy_shadow"
 tt.render.sprites[2].z = Z_DECALS + 1
-tt.melee.range = 60
+tt.render.sprites[2].offset = v(0,13)
+tt.melee.range = 75
 tt.melee.attacks[1].cooldown = 1
 tt.melee.attacks[1].damage_min = 8
 tt.melee.attacks[1].damage_max = 12
@@ -6997,7 +6999,7 @@ tt.aura.mods = {
 	"mod_isfet_locust_silence"
 }
 tt.aura.vis_flags = bor(F_RANGED, F_MOD)
-tt.aura.vis_bans = F_FLYING
+tt.aura.vis_bans = bor(F_FRIEND)
 
 tt = RT("mod_isfet_locust_damage", "modifier")
 AC(tt, "dps")

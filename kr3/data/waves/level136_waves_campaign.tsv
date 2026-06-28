@@ -1,13 +1,13 @@
 #	COMANDOS					1	Por abajo salida 1				2	Por abajo salida 2				3	Por arriba salida 1				4	Por arriba salida 2
 	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3
 #	level properties
-	description	rodri
-	lives	20
-	gold	500
-	gems	150
-	enemy_prefix	enemy_
-	default_increment	1
-	default_interval	20
+	description	rodri																											
+	lives	20																											
+	gold	500																											
+	gems	150																											
+	enemy_prefix	enemy_																											
+	default_increment	1																											
+	default_interval	20																											
 #	expected gold
 #	stage total gold	6610
 #	stage gold curve

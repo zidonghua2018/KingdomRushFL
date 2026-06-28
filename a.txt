@@ -31,3 +31,57 @@ git add . && git commit -m "6.8.0" && git push -u origin main
 *在被动和科技加成下，满级格罗什实际造成的伤害为106-133/136-163/166-193，平均一下就是6秒一次旋风斩。
 4技能 远古遗恨 格罗什阵亡2秒后在阵亡地点产生一片能够持续到自己复活的骨刺阵，对120范围内敌人每0.5秒造成15/20/25点物伤，并且降低他们30/35/40%移速   技能点2/2/2
 5技能 骸骨之浪 在指定路径点按技能，从防守点开始出现一大片骸骨刺阵冲向出怪口，每0.5秒对110范围沿线碰到的所有单位造成20/40/60/80点物伤和3秒晕眩   CD50（40）秒  技能点4/4/4
+
+
+好的。再结合KR4目录下的代码，完成海盗王怪物与地图的移植。目前4代地图我已经完成了0、1、2、17、18、19、26、27共8关，请参照17、18、19的移植方式，将海盗王支线的5关（37/38/39/40/41）移植到前代。
+海盗王支线的怪物机制可以参考这个网站：https://www.bilibili.com/opus/977183232577503235
+海盗王支线的场景机制可以参考这个网站：https://www.bilibili.com/opus/977335313068195879
+KR4当中，海盗支线的怪物名字与技能名字：
+
+海盗无赖  freebooter  
+海盗水手 bucaneer  bucaneer_dot（点燃）
+海盗头子 notification  corsair_grog_healing（喝酒）
+炸弹鹦鹉  bomber_parrot    modify_on_finish（投弹并加速）
+海盗水手长 boatswain   
+boss黑胡子船长  black_corsair     extra_hits   boss_black_corsair_cannons（加农炮）
+冲锋猴  rushing_monkey  rushing_monkey_speed
+叠罗猴 filibusters    spawn_unit_on_death（死亡分裂） filibusters_mini（小型叠罗猴）
+爆桶猴  boom_baboon   explode_on_death（死亡自爆）
+尾刃狒狒  tailblade  tailblade_proy（附加中毒）  dodge（闪避）
+巨型金刚鹦鹉  great_macaw   spawn_unit_on_death（死亡分裂）
+猿大副  apemate   multiple_targets_on_area（增益）
+滚石  monkey_ball
+Boss猢狲船长  macaque   boss_mac_aque_cutscene_end（踩踏）  
+macaque_fruit_splash（遮挡屏幕）   spawn（生成猿大副）
+弯刀柠檬鲨  lemonshark   healing_self（攻击回血）
+冲刺牛鲨  bullshark_dasher  healing_self（攻击回血）   buried（地下冲刺）
+暴怒虎鲨   tigershark_rager   healing_self（攻击回血） damage_multiplier（聚众狂暴）
+锤头鲨法师 hammermage  healing_self（攻击回血）tower_modifier（封塔）
+multiple_targets_on_area（范围击晕） 
+巨齿鲨   megalodon  healing_self（攻击回血）  melee_instakill（攻击秒杀）
+Boss深海王  deep_king_throne   healing_self（攻击回血）  spawner（召唤鲨鱼）
+boss_deep_king_instakill_towers（跳入水下拆塔）
+回魂割喉者  risen_cutthroat  pirates_fog_speed（在雾中加速）
+还魂师  corpse_recruiter   area_spawn（复活友军）
+腐臭鹦鹉 cursed_sailor 
+绞刑船长  hanged_captain   spawner（召唤紫雾）  pirates_fog
+幽灵摆渡人   ghostly_barge   ghostly_barge_armor（抗性光环）
+Boss斯派克  flying_ghost_ship     boss_flying_ghost_ship_disable_power（封锁技能）
+ object_on_target（炮轰）   pirates_fog_immortality（在雾中免疫）
+（四个小boss的技能名同上，此处省略）
+小boss黑胡子  black_corsair_last_stage
+小boss猢狲船长   boss_macaque_last_stage
+小bossoss深海王  deep_king_throne_last_stage
+小boss  斯派克  flying_ghost_ship_last_stage
+Boss黑棘船长   blackthorne   shoot_position_flipped（群簇轰炸）  fly（鹦鹉带飞）
+ boss_blackthorne_steal_gold（窃贼鹦鹉）    
+boss_blackthorne_kraken（克拉肯之怒）   force_tower_idle
+场景的名字：stage37_ship_water_blackcorsair
+stage38_boss_macaque
+boss_macaque_block_tower
+pirates_fog
+在移植的过程中，注意以下几个规则：
+（1）KR4的代码的近战攻击/远程攻击范围、爆炸尺寸都是直径，而移植到lua用的是半径。所有敌人都应当增加"enemy_"的前缀（参考game_templates-45e），boss应当有F_BOSS标签，小boss应当有F_MINIBOSS标签。
+（2）关卡场景元素、出怪列表已经在kr3/data/level和kr3/data/waves当中列出，分为了战役、英雄、钢铁三种关卡，这些已经基本实现，主要需要在game_templates-45e定义模板，并在game-scripts-45h实现脚本。同时在sound/groups文件定义音效。
+（3）所有敌人的内容、关卡场景的模板移植到game_templates-45e，脚本内容移植到game_scripts-45h。脚本能复用的一定要注意复用。
+（4）4代关卡的数值在移植后集体增加了150。例如原本第37关对应到这便是187关。但是你只需要注意关卡的编号即可，在定义template时，只要没有和现有的template冲突，该是多少还是多少。

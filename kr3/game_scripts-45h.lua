@@ -8388,9 +8388,9 @@ function scripts.aura_isfet_necromancy.update(this, store)
 							local mummy = E:create_entity(this.entity)
 
 							mummy.pos = V.vclone(dead.pos)
-							mummy.default_rally_pos = V.vclone(dead.pos)
-							mummy.nav_rally.center = V.vclone(dead.pos)
-							mummy.nav_rally.pos = V.vclone(dead.pos)
+							--mummy.default_rally_pos = V.vclone(dead.pos)
+							--mummy.nav_rally.center = V.vclone(dead.pos)
+							--mummy.nav_rally.pos = V.vclone(dead.pos)
 							mummy.owner_id = source.id
 							mummy.health.hp = mummy.health.hp_max
 							queue_insert(store, mummy)
@@ -8411,7 +8411,115 @@ end
 
 scripts.hero_isfet_mummy = {}
 
-function scripts.hero_isfet_mummy.update(this, store)
+function scripts.hero_isfet_mummy.get_info(this)
+	local t = scripts.soldier_barrack.get_info(this)
+
+	t.respawn = nil
+
+	return t
+end
+
+function scripts.hero_isfet_mummy.insert(this, store, script)
+	this.melee.order = U.attack_order(this.melee.attacks)
+
+	local node_offset = math.random(3, 6)
+
+	this.nav_path.ni = this.nav_path.ni + node_offset
+	if not P:is_path_active(this.nav_path.pi) then
+	this.nav_path.pi = 9
+	end
+	this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
+
+	if not this.pos then
+		return false
+	end
+
+	return true
+end
+
+function scripts.hero_isfet_mummy.update(this, store, script)
+	local attack = this.melee.attacks[1]
+	local target
+	local expired = false
+	local next_pos = V.vclone(this.pos)
+	local brk, sta, nearest
+
+	local spawn_ts = store.tick_ts
+	local nearest = P:nearest_nodes(this.pos.x, this.pos.y)
+
+	if nearest and nearest[1] then
+		this.nav_path.pi, this.nav_path.spi, this.nav_path.ni = unpack(nearest[1])
+	end
+
+	U.y_animation_play(this, "spawn", nil, store.tick_ts, 1)
+
+	while true do
+		if this.health.dead then
+			this.health.hp = 0
+
+			SU.y_soldier_death(store, this)
+			queue_remove(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			U.animation_start(this, "idle", nil, store.tick_ts, -1)
+		else
+			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+			if brk or sta ~= A_NO_TARGET then
+				-- block empty
+			else
+				nearest = P:nearest_nodes(this.pos.x, this.pos.y, {
+					this.nav_path.pi
+				}, {
+					this.nav_path.spi
+				})
+
+				if nearest and nearest[1] and nearest[1][3] < this.nav_path.ni then
+					this.nav_path.ni = nearest[1][3]
+				end
+
+				while next_pos and not target and not this.health.dead and not this.unit.is_stunned do
+					U.set_destination(this, next_pos)
+
+					local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
+
+					U.animation_start(this, an, af, store.tick_ts, -1)
+					U.walk(this, store.tick_length)
+					coroutine.yield()
+
+					target = U.find_foremost_enemy(store.entities, this.pos, 0, this.melee.range, false, attack.vis_flags, attack.vis_bans)
+					next_pos = P:next_entity_node(this, store.tick_length)
+
+					if not next_pos then
+						next_pos = nil
+					end
+				end
+
+				target = nil
+
+				if this.health.dead or not next_pos then
+					this.health.hp = 0
+
+					U.y_animation_play(this, "death", nil, store.tick_ts, 1)
+					queue_remove(store, this)
+				end
+			end
+		end
+
+		if false then
+			-- block empty
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.hero_isfet_mummy2 = {}
+
+function scripts.hero_isfet_mummy2.update(this, store)
 	local spawn_ts = store.tick_ts
 	local nearest = P:nearest_nodes(this.pos.x, this.pos.y)
 
